@@ -1,10 +1,11 @@
 import { useContext, useMemo } from "react";
-import { useLogin } from "hooks/login";
-import AsyncButton from "element/async-button";
-import { Login } from "index";
-import { MUTED } from "const";
 import { FormattedMessage } from "react-intl";
 import { SnortContext } from "@snort/system-react";
+
+import { useLogin } from "@/hooks/login";
+import AsyncButton from "./async-button";
+import { Login } from "@/index";
+import { MUTED } from "@/const";
 
 export function useMute(pubkey: string) {
   const system = useContext(SnortContext);
@@ -54,8 +55,12 @@ export function LoggedInMuteButton({ pubkey }: { pubkey: string }) {
   const { isMuted, mute, unmute } = useMute(pubkey);
 
   return (
-    <AsyncButton type="button" className="btn delete-button" onClick={() => (isMuted ? unmute() : mute())}>
-      {isMuted ? <FormattedMessage defaultMessage="Unmute" /> : <FormattedMessage defaultMessage="Mute" />}
+    <AsyncButton onClick={() => (isMuted ? unmute() : mute())} className="font-bold">
+      {isMuted ? (
+        <FormattedMessage defaultMessage="Unmute" id="W9355R" />
+      ) : (
+        <FormattedMessage defaultMessage="Mute" id="x82IOl" />
+      )}
     </AsyncButton>
   );
 }

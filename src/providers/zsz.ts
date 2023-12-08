@@ -7,14 +7,17 @@ import {
   StreamProviders,
 } from ".";
 import { EventKind, EventPublisher, NostrEvent, SystemInterface } from "@snort/system";
-import { Login, StreamState } from "index";
-import { getPublisher } from "login";
-import { findTag } from "utils";
+import { Login, StreamState } from "@/index";
+import { getPublisher } from "@/login";
+import { extractStreamInfo } from "@/utils";
 
-export class Nip103StreamProvider implements StreamProvider {
+export class NostrStreamProvider implements StreamProvider {
   #publisher?: EventPublisher;
 
   constructor(readonly name: string, readonly url: string, pub?: EventPublisher) {
+    if (!url.endsWith("/")) {
+      this.url = `${url}/`;
+    }
     this.#publisher = pub;
   }
 
@@ -43,6 +46,7 @@ export class Nip103StreamProvider implements StreamProvider {
           capabilities: a.capabilities,
         } as StreamProviderEndpoint;
       }),
+      forwards: rsp.forwards,
     } as StreamProviderInfo;
   }
 
@@ -53,13 +57,8 @@ export class Nip103StreamProvider implements StreamProvider {
     };
   }
 
-  async updateStreamInfo(system: SystemInterface, ev: NostrEvent): Promise<void> {
-    const title = findTag(ev, "title");
-    const summary = findTag(ev, "summary");
-    const image = findTag(ev, "image");
-    const tags = ev?.tags.filter(a => a[0] === "t").map(a => a[1]);
-    const contentWarning = findTag(ev, "content-warning");
-    const goal = findTag(ev, "goal");
+  async updateStreamInfo(_: SystemInterface, ev: NostrEvent): Promise<void> {
+    const { title, summary, image, tags, contentWarning, goal } = extractStreamInfo(ev);
     await this.#getJson("PATCH", "event", {
       title,
       summary,
@@ -81,7 +80,22 @@ export class Nip103StreamProvider implements StreamProvider {
     });
   }
 
-  async #getJson<T>(method: "GET" | "POST" | "PATCH", path: string, body?: unknown): Promise<T> {
+  async addForward(name: string, target: string): Promise<void> {
+    await this.#getJson("POST", "account/forward", {
+      name,
+      target,
+    });
+  }
+
+  async removeForward(id: string): Promise<void> {
+    await this.#getJson("DELETE", `account/forward/${id}`);
+  }
+
+  async createClip(id: string) {
+    return await this.#getJson<{ url: string }>("POST", `clip/${id}`);
+  }
+
+  async #getJson<T>(method: "GET" | "POST" | "PATCH" | "DELETE", path: string, body?: unknown): Promise<T> {
     const pub = (() => {
       if (this.#publisher) {
         return this.#publisher;
@@ -120,6 +134,12 @@ interface AccountResponse {
     accepted: boolean;
     link: string;
   };
+  forwards: Array<ForwardDest>;
+}
+
+interface ForwardDest {
+  id: string;
+  name: string;
 }
 
 interface IngestEndpoint {

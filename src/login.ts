@@ -2,7 +2,7 @@ import { bytesToHex } from "@noble/curves/abstract/utils";
 import { schnorr } from "@noble/curves/secp256k1";
 import { ExternalStore, unwrap } from "@snort/shared";
 import { EventPublisher, Nip7Signer, PrivateKeySigner } from "@snort/system";
-import type { EmojiPack, Tags } from "types";
+import type { EmojiPack, Tags } from "@/types";
 
 export enum LoginType {
   Nip7 = "nip7",
@@ -23,6 +23,7 @@ export interface LoginSession {
   muted: ReplaceableTags;
   cards: ReplaceableTags;
   emojis: Array<EmojiPack>;
+  color?: string;
 }
 
 const initialState = {
@@ -111,6 +112,12 @@ export class LoginStore extends ExternalStore<LoginSession | undefined> {
     }
     this.#session.cards.tags = cards;
     this.#session.cards.timestamp = ts;
+    this.#save();
+  }
+
+  setColor(color: string) {
+    if (!this.#session) return;
+    this.#session.color = color;
     this.#save();
   }
 

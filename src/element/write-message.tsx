@@ -1,17 +1,17 @@
-import { NostrLink, EventKind } from "@snort/system";
-import React, { useContext, useRef, useState } from "react";
+import { EventKind, NostrLink } from "@snort/system";
+import React, { Suspense, lazy, useContext, useRef, useState } from "react";
 import { FormattedMessage } from "react-intl";
-
-import { useLogin } from "hooks/login";
-import AsyncButton from "element/async-button";
-import { Icon } from "element/icon";
-import { Textarea } from "element/textarea";
-import { EmojiPicker } from "element/emoji-picker";
-import type { EmojiPack, Emoji } from "types";
-import { LIVE_STREAM_CHAT } from "const";
 import { SnortContext } from "@snort/system-react";
 import { unixNowMs } from "@snort/shared";
-import { TimeSync } from "index";
+
+const EmojiPicker = lazy(() => import("./emoji-picker"));
+import { useLogin } from "@/hooks/login";
+import AsyncButton from "./async-button";
+import { Icon } from "./icon";
+import { Textarea } from "./textarea";
+import type { Emoji, EmojiPack } from "@/types";
+import { LIVE_STREAM_CHAT } from "@/const";
+import { TimeSync } from "@/index";
 
 export function WriteMessage({ link, emojiPacks }: { link: NostrLink; emojiPacks: EmojiPack[] }) {
   const system = useContext(SnortContext);
@@ -69,7 +69,7 @@ export function WriteMessage({ link, emojiPacks }: { link: NostrLink; emojiPacks
   }
 
   async function onKeyDown(e: React.KeyboardEvent) {
-    if (e.code === "Enter") {
+    if (e.code === "Enter" && !e.nativeEvent.isComposing) {
       e.preventDefault();
       await sendChatMessage();
     }
@@ -83,23 +83,25 @@ export function WriteMessage({ link, emojiPacks }: { link: NostrLink; emojiPacks
   return (
     <>
       <div className="paper" ref={ref}>
-        <Textarea emojis={emojis} value={chat} onKeyDown={onKeyDown} onChange={e => setChat(e.target.value)} />
+        <Textarea emojis={emojis} value={chat} onKeyDown={onKeyDown} onChange={e => setChat(e.target.value)} rows={2} />
         <div onClick={pickEmoji}>
           <Icon name="face" className="write-emoji-button" />
         </div>
         {showEmojiPicker && (
-          <EmojiPicker
-            topOffset={topOffset ?? 0}
-            leftOffset={leftOffset ?? 0}
-            emojiPacks={emojiPacks}
-            onEmojiSelect={onEmojiSelect}
-            onClickOutside={() => setShowEmojiPicker(false)}
-            ref={emojiRef}
-          />
+          <Suspense>
+            <EmojiPicker
+              topOffset={topOffset ?? 0}
+              leftOffset={leftOffset ?? 0}
+              emojiPacks={emojiPacks}
+              onEmojiSelect={onEmojiSelect}
+              onClickOutside={() => setShowEmojiPicker(false)}
+              ref={emojiRef}
+            />
+          </Suspense>
         )}
       </div>
       <AsyncButton onClick={sendChatMessage} className="btn btn-border">
-        <FormattedMessage defaultMessage="Send" />
+        <FormattedMessage defaultMessage="Send" id="9WRlF4" />
       </AsyncButton>
     </>
   );

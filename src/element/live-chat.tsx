@@ -1,29 +1,29 @@
 import "./live-chat.css";
 import { FormattedMessage } from "react-intl";
-import { EventKind, NostrLink, ParsedZap, NostrEvent } from "@snort/system";
-import { useEventReactions } from "@snort/system-react";
-import { unixNow } from "@snort/shared";
+import { EventKind, NostrEvent, NostrLink, ParsedZap, TaggedNostrEvent } from "@snort/system";
+import { useEventReactions, useUserProfile } from "@snort/system-react";
+import { unixNow, unwrap } from "@snort/shared";
 import { useMemo } from "react";
-import uniqBy from "lodash.uniqby";
 
-import { Icon } from "element/icon";
-import Spinner from "element/spinner";
-import { Text } from "element/text";
-import { Profile } from "element/profile";
-import { ChatMessage } from "element/chat-message";
-import { Goal } from "element/goal";
-import { Badge } from "element/badge";
-import { WriteMessage } from "element/write-message";
-import useEmoji, { packId } from "hooks/emoji";
-import { useLiveChatFeed } from "hooks/live-chat";
-import { useMutedPubkeys } from "hooks/lists";
-import { useBadges } from "hooks/badges";
-import { useLogin } from "hooks/login";
-import { useAddress } from "hooks/event";
-import { formatSats } from "number";
-import { WEEK, LIVE_STREAM_CHAT } from "const";
-import { findTag, getTagValues, getHost } from "utils";
-import { TopZappers } from "element/top-zappers";
+import { Icon } from "./icon";
+import Spinner from "./spinner";
+import { Text } from "./text";
+import { Profile } from "./profile";
+import { ChatMessage } from "./chat-message";
+import { Goal } from "./goal";
+import { Badge } from "./badge";
+import { WriteMessage } from "./write-message";
+import useEmoji, { packId } from "@/hooks/emoji";
+import { useLiveChatFeed } from "@/hooks/live-chat";
+import { useMutedPubkeys } from "@/hooks/lists";
+import { useBadges } from "@/hooks/badges";
+import { useLogin } from "@/hooks/login";
+import { useAddress, useEvent } from "@/hooks/event";
+import { formatSats } from "@/number";
+import { LIVE_STREAM_CHAT, LIVE_STREAM_CLIP, LIVE_STREAM_RAID, WEEK } from "@/const";
+import { findTag, getHost, getTagValues, uniqBy } from "@/utils";
+import { TopZappers } from "./top-zappers";
+import { Link } from "react-router-dom";
 
 export interface LiveChatOptions {
   canWrite?: boolean;
@@ -81,9 +81,16 @@ export function LiveChat({
 
   const reactions = useEventReactions(link, feed.reactions);
   const events = useMemo(() => {
-    return [...feed.messages, ...feed.reactions, ...awards]
-      .filter(a => a.created_at > started)
-      .sort((a, b) => b.created_at - a.created_at);
+    const extra = [];
+    const starts = findTag(ev, "starts");
+    if (starts) {
+      extra.push({ kind: -1, created_at: Number(starts) } as TaggedNostrEvent);
+    }
+    const ends = findTag(ev, "ends");
+    if (ends) {
+      extra.push({ kind: -2, created_at: Number(ends) } as TaggedNostrEvent);
+    }
+    return [...feed.messages, ...feed.reactions, ...awards, ...extra].sort((a, b) => b.created_at - a.created_at);
   }, [feed.messages, feed.reactions, awards]);
 
   const filteredEvents = useMemo(() => {
@@ -95,7 +102,7 @@ export function LiveChat({
       {(options?.showHeader ?? true) && (
         <div className="header">
           <h2 className="title">
-            <FormattedMessage defaultMessage="Stream Chat" />
+            <FormattedMessage defaultMessage="Stream Chat" id="BGxpTN" />
           </h2>
           <Icon
             name="link"
@@ -108,7 +115,7 @@ export function LiveChat({
       {reactions.zaps.length > 0 && (
         <div className="top-zappers">
           <h3>
-            <FormattedMessage defaultMessage="Top zappers" />
+            <FormattedMessage defaultMessage="Top zappers" id="wzWWzV" />
           </h3>
           <div className="top-zappers-container">
             <TopZappers zaps={reactions.zaps} />
@@ -119,8 +126,20 @@ export function LiveChat({
       <div className="messages">
         {filteredEvents.map(a => {
           switch (a.kind) {
+            case -1:
+            case -2: {
+              return (
+                <b className="border px-3 py-2 text-center border-gray-2 rounded-xl bg-primary uppercase">
+                  {a.kind === -1 ? (
+                    <FormattedMessage defaultMessage="Stream Started" id="5tM0VD" />
+                  ) : (
+                    <FormattedMessage defaultMessage="Stream Ended" id="jkAQj5" />
+                  )}
+                </b>
+              );
+            }
             case EventKind.BadgeAward: {
-              return <BadgeAward ev={a} />;
+              return <BadgeAward ev={a} key={a.id} />;
             }
             case LIVE_STREAM_CHAT: {
               return (
@@ -133,6 +152,12 @@ export function LiveChat({
                   related={feed.reactions}
                 />
               );
+            }
+            case LIVE_STREAM_RAID: {
+              return <ChatRaid ev={a} link={link} key={a.id} />;
+            }
+            case LIVE_STREAM_CLIP: {
+              return <ChatClip ev={a} key={a.id} />;
             }
             case EventKind.ZapReceipt: {
               const zap = reactions.zaps.find(b => b.id === a.id && b.receiver === host);
@@ -151,7 +176,7 @@ export function LiveChat({
             <WriteMessage emojiPacks={allEmojiPacks} link={link} />
           ) : (
             <p>
-              <FormattedMessage defaultMessage="Please login to write messages!" />
+              <FormattedMessage defaultMessage="Please login to write messages!" id="RXQdxR" />
             </p>
           )}
         </div>
@@ -162,7 +187,7 @@ export function LiveChat({
 
 const BIG_ZAP_THRESHOLD = 50_000;
 
-function ChatZap({ zap }: { zap: ParsedZap }) {
+export function ChatZap({ zap }: { zap: ParsedZap }) {
   if (!zap.valid) {
     return null;
   }
@@ -170,17 +195,18 @@ function ChatZap({ zap }: { zap: ParsedZap }) {
 
   return (
     <div className={`zap-container ${isBig ? "big-zap" : ""}`}>
-      <div className="zap">
-        <Icon name="zap-filled" className="zap-icon" />
+      <div className="flex gap-1 items-center">
+        <Icon name="zap-filled" className="text-zap" />
         <FormattedMessage
-          defaultMessage="{person} zapped {amount} sats"
+          defaultMessage="<s>{person}</s> zapped <s>{amount}</s> sats"
+          id="q+zTWM"
           values={{
+            s: c => <span className="text-zap">{c}</span>,
             person: (
               <Profile
-                pubkey={zap.anonZap ? "anon" : zap.sender ?? "anon"}
+                pubkey={zap.anonZap ? "anon" : zap.sender ?? ""}
                 options={{
                   showAvatar: !zap.anonZap,
-                  overrideName: zap.anonZap ? "Anon" : undefined,
                 }}
               />
             ),
@@ -188,11 +214,62 @@ function ChatZap({ zap }: { zap: ParsedZap }) {
           }}
         />
       </div>
-      {zap.content && (
-        <div className="zap-content">
-          <Text content={zap.content} tags={[]} />
-        </div>
-      )}
+      {zap.content && <Text content={zap.content} tags={[]} />}
+    </div>
+  );
+}
+
+export function ChatRaid({ link, ev }: { link: NostrLink; ev: TaggedNostrEvent }) {
+  const from = ev.tags.find(a => a[0] === "a" && a[3] === "root");
+  const to = ev.tags.find(a => a[0] === "a" && a[3] === "mention");
+  const isRaiding = link.toEventTag()?.at(1) === from?.at(1);
+  const otherLink = NostrLink.fromTag(unwrap(isRaiding ? to : from));
+  const otherEvent = useEvent(otherLink);
+  const otherProfile = useUserProfile(getHost(otherEvent));
+
+  if (isRaiding) {
+    return (
+      <Link
+        to={`/${otherLink.encode()}`}
+        className="px-3 py-2 text-center rounded-xl bg-primary uppercase pointer font-bold">
+        <FormattedMessage
+          defaultMessage="Raiding {name}"
+          id="j/jueq"
+          values={{
+            name: otherProfile?.name,
+          }}
+        />
+      </Link>
+    );
+  }
+  return (
+    <div className="px-3 py-2 text-center rounded-xl bg-primary uppercase pointer font-bold">
+      <FormattedMessage
+        defaultMessage="Raid from {name}"
+        id="69hmpj"
+        values={{
+          name: otherProfile?.name,
+        }}
+      />
+    </div>
+  );
+}
+
+function ChatClip({ ev }: { ev: TaggedNostrEvent }) {
+  const profile = useUserProfile(ev.pubkey);
+  const rTag = useMemo(() => findTag(ev, "r"), [ev]);
+  return (
+    <div className="px-3 py-2 text-center rounded-xl bg-primary uppercase pointer font-bold flex flex-col gap-2">
+      <div>
+        <FormattedMessage
+          defaultMessage="{name} created a clip"
+          id="BD0vyn"
+          values={{
+            name: profile?.name,
+          }}
+        />
+      </div>
+      {rTag && <video src={rTag} controls playsInline={true} muted={true} />}
     </div>
   );
 }

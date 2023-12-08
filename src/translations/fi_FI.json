@@ -5,6 +5,9 @@
   "+AcVD+": {
     "defaultMessage": "Ei sähköposteja, pelkästään mahtavuutta!"
   },
+  "+sdKx8": {
+    "defaultMessage": "Livenä nyt"
+  },
   "+vVZ/G": {
     "defaultMessage": "Yhdistä"
   },
@@ -26,8 +29,14 @@
   "0VV/sK": {
     "defaultMessage": "Tavoite"
   },
+  "0hNxBy": {
+    "defaultMessage": "Alkaa"
+  },
   "1EYCdR": {
     "defaultMessage": "Tunnisteet"
+  },
+  "1q4BO/": {
+    "defaultMessage": "Virheellinen URL"
   },
   "1qsXCO": {
     "defaultMessage": "esim. nimi@lompakko.com"
@@ -35,8 +44,8 @@
   "2/2yg+": {
     "defaultMessage": "Lisää"
   },
-  "2CGh/0": {
-    "defaultMessage": "live"
+  "37mth/": {
+    "defaultMessage": "Katsojaa"
   },
   "3HwrQo": {
     "defaultMessage": "Zap!"
@@ -50,6 +59,9 @@
   "47FYwb": {
     "defaultMessage": "Peruuta"
   },
+  "4iBdw1": {
+    "defaultMessage": "Rynnäkkö"
+  },
   "4l69eO": {
     "defaultMessage": "Hmm, lightning-oitteesi näyttää väärältä"
   },
@@ -58,6 +70,9 @@
   },
   "4uI538": {
     "defaultMessage": "Tarkkuudet"
+  },
+  "50+/JW": {
+    "defaultMessage": "Suoratoistoavain on pakollinen"
   },
   "5JcXdV": {
     "defaultMessage": "Luo tili"
@@ -68,11 +83,26 @@
   "5kx+2v": {
     "defaultMessage": "Palvelimen URL"
   },
+  "5tM0VD": {
+    "defaultMessage": "Suoratoisto aloitettu"
+  },
+  "69hmpj": {
+    "defaultMessage": "{name}:n rynnäkkö"
+  },
   "6Z2pvJ": {
     "defaultMessage": "Streamaustarjoajat"
   },
   "6pr6hJ": {
     "defaultMessage": "Vähimmäismäärä teksti puheelle"
+  },
+  "7+bCC1": {
+    "defaultMessage": "Suoratoisto url-osoitteen on alettava rtmp://"
+  },
+  "79lLl+": {
+    "defaultMessage": "Musiikki"
+  },
+  "7UOvbT": {
+    "defaultMessage": "Offline-tilassa"
   },
   "8YT6ja": {
     "defaultMessage": "Lisää teksti puheeksi"
@@ -83,12 +113,6 @@
   "9a9+ww": {
     "defaultMessage": "Otsikko"
   },
-  "9anxhq": {
-    "defaultMessage": "Alkaa"
-  },
-  "AIHaPH": {
-    "defaultMessage": "{person} zappasi {amount} satsia"
-  },
   "Atr2p4": {
     "defaultMessage": "NSFW-sisältöä"
   },
@@ -97,6 +121,9 @@
   },
   "AyGauy": {
     "defaultMessage": "Kirjaudu sisään"
+  },
+  "BD0vyn": {
+    "defaultMessage": "{name} loi leikkeen"
   },
   "BGxpTN": {
     "defaultMessage": "Stream-keskustelu"
@@ -107,6 +134,9 @@
   "C81/uG": {
     "defaultMessage": "Kirjaudu ulos"
   },
+  "CsCUYo": {
+    "defaultMessage": "{n} satsia"
+  },
   "D3idYv": {
     "defaultMessage": "Asetukset"
   },
@@ -115,6 +145,9 @@
   },
   "Dn82AL": {
     "defaultMessage": "Live"
+  },
+  "E9APoR": {
+    "defaultMessage": "SuoratoistoURL-osoitetta ei voitu luoda"
   },
   "ESyhzp": {
     "defaultMessage": "Kommenttisi kohteelle {name}"
@@ -128,8 +161,17 @@
   "G/yZLu": {
     "defaultMessage": "Poista"
   },
+  "GGaJMU": {
+    "defaultMessage": "Eniten Keskusteluja"
+  },
+  "Gmiwnd": {
+    "defaultMessage": "Päivitä sivu käyttääksesi uusinta versiota"
+  },
   "Gq6x9o": {
     "defaultMessage": "Kansikuva"
+  },
+  "Gvxoji": {
+    "defaultMessage": "Nimi on pakollinen"
   },
   "H/bNs9": {
     "defaultMessage": "Tallenna tämä ja pidä se tallessa! Jos menetät tämän avaimen, et pääse koskaan enää tilillesi. Kyllä, se on niin vakavaa!"
@@ -152,6 +194,9 @@
   "INlWvJ": {
     "defaultMessage": "TAI"
   },
+  "J/+m9y": {
+    "defaultMessage": "Suoratoiston kesto {duration} minuuttia"
+  },
   "JEsxDw": {
     "defaultMessage": "Ladataan..."
   },
@@ -161,17 +206,20 @@
   "K3r6DQ": {
     "defaultMessage": "Poista"
   },
-  "K3uH1C": {
-    "defaultMessage": "offline"
-  },
   "K7AkdL": {
     "defaultMessage": "Näytä"
+  },
+  "KdYELp": {
+    "defaultMessage": "Hanki lähetysavain"
   },
   "KkIL3s": {
     "defaultMessage": "Ei, olen alle 18"
   },
   "LknBsU": {
     "defaultMessage": "Streamin avain"
+  },
+  "MTHO1W": {
+    "defaultMessage": "Aloita rynnäkkö"
   },
   "My6HwN": {
     "defaultMessage": "Ok, se on turvassa"
@@ -191,6 +239,12 @@
   "Oxqtyf": {
     "defaultMessage": "Sait lightning-lompakon, jotta voit saada heti maksuja katsojilta!"
   },
+  "PA0ej4": {
+    "defaultMessage": "Luo leike"
+  },
+  "Pe0ogR": {
+    "defaultMessage": "Teema"
+  },
   "Q3au2v": {
     "defaultMessage": "Tietoja {estimate}"
   },
@@ -200,20 +254,32 @@
   "QRRCp0": {
     "defaultMessage": "Streamin URL"
   },
+  "QWlMq9": {
+    "defaultMessage": "Lähetysavain"
+  },
   "QceMQZ": {
     "defaultMessage": "Tavoite: {amount}"
   },
   "Qe1MJu": {
     "defaultMessage": "{name} määrällä {amount}"
   },
+  "RJ2VxG": {
+    "defaultMessage": "Uusi versio on havaittu"
+  },
   "RJOmzk": {
     "defaultMessage": "Olen lukenut ja hyväksynyt {provider}:n {terms}."
+  },
+  "RS6smY": {
+    "defaultMessage": "Rynnäkkö-viesti"
   },
   "RXQdxR": {
     "defaultMessage": "Kirjaudu sisään kirjoittaaksesi viestejä!"
   },
   "RrCui3": {
     "defaultMessage": "Yhteenveto"
+  },
+  "RtYNX5": {
+    "defaultMessage": "Chat-käyttäjät"
   },
   "TP/cMX": {
     "defaultMessage": "Päättynyt"
@@ -233,15 +299,24 @@
   "VA/Z1S": {
     "defaultMessage": "Piilota"
   },
+  "W7DNWx": {
+    "defaultMessage": "Lähetyksen edelleenlähetys"
+  },
   "W9355R": {
     "defaultMessage": "Poista mykistys"
   },
   "X2PZ7D": {
     "defaultMessage": "Luo tavoite"
   },
+  "XgWvGA": {
+    "defaultMessage": "Reaktiot"
+  },
   "YPh5Nq": {
     "defaultMessage": "@ {rate}",
     "description": "Showing zap amount in USD @ rate"
+  },
+  "YagVIe": {
+    "defaultMessage": "{n}p"
   },
   "Z8ZOEY": {
     "defaultMessage": "Tämä menetelmä ei ole turvallinen. Suosittelemme käyttämään {nostrlink}"
@@ -249,8 +324,17 @@
   "ZmqxZs": {
     "defaultMessage": "Voit muuttaa tätä myöhemmin"
   },
+  "Zse7yG": {
+    "defaultMessage": "Rynnäkön kohde"
+  },
   "acrOoz": {
     "defaultMessage": "Jatka"
+  },
+  "aqjZxs": {
+    "defaultMessage": "Rynnäkkö!"
+  },
+  "bfvyfs": {
+    "defaultMessage": "Anon"
   },
   "cPIKU2": {
     "defaultMessage": "Seuraa"
@@ -263,6 +347,9 @@
   },
   "d5zWyh": {
     "defaultMessage": "Testiääni"
+  },
+  "dOQCL8": {
+    "defaultMessage": "Näyttönimi"
   },
   "dVD/AR": {
     "defaultMessage": "Parhaat Zapparit"
@@ -282,14 +369,23 @@
   "feZ/kG": {
     "defaultMessage": "Kirjaudu sisään yksityisellä avaimella (turvaton)"
   },
+  "gzsn7k": {
+    "defaultMessage": "{n} viestiä"
+  },
   "hGQqkW": {
     "defaultMessage": "Aikataulu"
+  },
+  "hMzcSq": {
+    "defaultMessage": "Viestit"
   },
   "heyxZL": {
     "defaultMessage": "Käytä tekstiä puheeksi"
   },
   "hpl4BP": {
     "defaultMessage": "Keskusteluwidgetti"
+  },
+  "hzSNj4": {
+    "defaultMessage": "Hallintapaneeli"
   },
   "ieGrWo": {
     "defaultMessage": "Seuraa"
@@ -299,6 +395,18 @@
   },
   "izWS4J": {
     "defaultMessage": "Älä seuraa"
+  },
+  "j/jueq": {
+    "defaultMessage": "Rynnäköidään {name}"
+  },
+  "jctiUc": {
+    "defaultMessage": "Eniten Katsojia"
+  },
+  "jgOqxt": {
+    "defaultMessage": "Vimpaimet"
+  },
+  "jkAQj5": {
+    "defaultMessage": "Lähetys päättyi"
   },
   "jr4+vD": {
     "defaultMessage": "Markdown"
@@ -318,6 +426,9 @@
   "ljmS5P": {
     "defaultMessage": "Loppupiste"
   },
+  "miQKuZ": {
+    "defaultMessage": "Lähetyksen aika"
+  },
   "mnJYBQ": {
     "defaultMessage": "Ääni"
   },
@@ -333,17 +444,23 @@
   "nwA8Os": {
     "defaultMessage": "Lisää kortti"
   },
+  "o8pHw3": {
+    "defaultMessage": "AUTO"
+  },
   "oHPB8Q": {
     "defaultMessage": "Zap {name}"
   },
   "oZrFyI": {
     "defaultMessage": "Streamin tyyppi tulisi olla HLS"
   },
-  "pO/lPX": {
-    "defaultMessage": "Ajoitettu {date}"
+  "q+zTWM": {
+    "defaultMessage": "<s>{person}</s> zappasi <s>{amount}</s> satsia"
   },
   "r2Jjms": {
     "defaultMessage": "Kirjaudu sisään"
+  },
+  "rELDbB": {
+    "defaultMessage": "Päivitä"
   },
   "rWBFZA": {
     "defaultMessage": "Seksuaalisesti paljastavaa materiaalia tulossa!"

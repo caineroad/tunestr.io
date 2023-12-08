@@ -1,24 +1,26 @@
 import "./note.css";
-import { type NostrEvent, NostrPrefix } from "@snort/system";
+import { Suspense, lazy } from "react";
+import { type NostrEvent, NostrLink } from "@snort/system";
 
-import { Markdown } from "element/markdown";
-import { ExternalIconLink } from "element/external-link";
-import { Profile } from "element/profile";
-import { hexToBech32 } from "@snort/shared";
+const Markdown = lazy(() => import("./markdown"));
+import { ExternalIconLink } from "./external-link";
+import { Profile } from "./profile";
 
 export function Note({ ev }: { ev: NostrEvent }) {
   return (
     <div className="surface note">
       <div className="note-header">
-        <Profile avatarClassname="note-avatar" pubkey={ev.pubkey} />
+        <Profile pubkey={ev.pubkey} />
         <ExternalIconLink
           size={24}
           className="note-link-icon"
-          href={`https://snort.social/e/${hexToBech32(NostrPrefix.Event, ev.id)}`}
+          href={`https://snort.social/e/${NostrLink.fromEvent(ev).encode()}`}
         />
       </div>
       <div className="note-content">
-        <Markdown tags={ev.tags} content={ev.content} />
+        <Suspense>
+          <Markdown tags={ev.tags} content={ev.content} />
+        </Suspense>
       </div>
     </div>
   );

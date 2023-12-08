@@ -1,20 +1,21 @@
-import { useUserProfile, SnortContext, useEventReactions } from "@snort/system-react";
+import { SnortContext, useEventReactions, useUserProfile } from "@snort/system-react";
 import { EventKind, NostrLink, TaggedNostrEvent } from "@snort/system";
-import React, { useRef, useState, useMemo, useContext } from "react";
-import { useMediaQuery, useHover, useOnClickOutside, useIntersectionObserver } from "usehooks-ts";
+import React, { Suspense, lazy, useContext, useMemo, useRef, useState } from "react";
+import { useHover, useIntersectionObserver, useMediaQuery, useOnClickOutside } from "usehooks-ts";
 import { dedupe } from "@snort/shared";
 
-import { EmojiPicker } from "element/emoji-picker";
-import { Icon } from "element/icon";
-import { Emoji as EmojiComponent } from "element/emoji";
+const EmojiPicker = lazy(() => import("./emoji-picker"));
+import { Icon } from "./icon";
+import { Emoji as EmojiComponent } from "./emoji";
 import { Profile } from "./profile";
-import { Text } from "element/text";
-import { useMute } from "element/mute-button";
-import { SendZapsDialog } from "element/send-zap";
-import { CollapsibleEvent } from "element/collapsible";
-import { useLogin } from "hooks/login";
-import { formatSats } from "number";
-import type { Badge, Emoji, EmojiPack } from "types";
+import { Text } from "./text";
+import { useMute } from "./mute-button";
+import { SendZapsDialog } from "./send-zap";
+import { CollapsibleEvent } from "./collapsible";
+
+import { useLogin } from "@/hooks/login";
+import { formatSats } from "@/number";
+import type { Badge, Emoji, EmojiPack } from "@/types";
 
 function emojifyReaction(reaction: string) {
   if (reaction === "+") {
@@ -128,6 +129,7 @@ export function ChatMessage({
     <>
       <div className={`message${streamer === ev.pubkey ? " streamer" : ""}`} ref={ref}>
         <Profile
+          className="text-secondary"
           icon={
             ev.pubkey === streamer ? (
               <Icon name="signal" size={16} />
@@ -140,14 +142,14 @@ export function ChatMessage({
             )
           }
           pubkey={ev.pubkey}
-          profile={profile}
         />
+        &nbsp;
         <Text tags={ev.tags} content={ev.content} eventComponent={CollapsibleEvent} />
         {(hasReactions || hasZaps) && (
           <div className="message-reactions">
             {hasZaps && (
               <div className="zap-pill">
-                <Icon name="zap-filled" className="zap-pill-icon" />
+                <Icon name="zap-filled" className="text-zap" size={12} />
                 <span className="zap-pill-amount">{formatSats(totalZaps)}</span>
               </div>
             )}
@@ -156,7 +158,7 @@ export function ChatMessage({
               const emojiName = e.replace(/:/g, "");
               const emoji = isCustomEmojiReaction && getEmojiById(emojiName);
               return (
-                <div className="message-reaction-container">
+                <div className="message-reaction-container" key={`${ev.id}-${emojiName}`}>
                   {isCustomEmojiReaction && emoji ? (
                     <span className="message-reaction">
                       <EmojiComponent name={emoji[1]} url={emoji[2]} />
@@ -210,14 +212,16 @@ export function ChatMessage({
         )}
       </div>
       {showEmojiPicker && (
-        <EmojiPicker
-          topOffset={topOffset ?? 0}
-          leftOffset={leftOffset ?? 0}
-          emojiPacks={emojiPacks}
-          onEmojiSelect={onEmojiSelect}
-          onClickOutside={() => setShowEmojiPicker(false)}
-          ref={emojiRef}
-        />
+        <Suspense>
+          <EmojiPicker
+            topOffset={topOffset ?? 0}
+            leftOffset={leftOffset ?? 0}
+            emojiPacks={emojiPacks}
+            onEmojiSelect={onEmojiSelect}
+            onClickOutside={() => setShowEmojiPicker(false)}
+            ref={emojiRef}
+          />
+        </Suspense>
       )}
     </>
   );

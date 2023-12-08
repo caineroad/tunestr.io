@@ -2,30 +2,31 @@ import "@szhsin/react-menu/dist/index.css";
 import "./index.css";
 import "./fonts/outfit/outfit.css";
 
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import { NostrSystem } from "@snort/system";
 import { SnortContext } from "@snort/system-react";
 import { SnortSystemDb } from "@snort/system-web";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-
-import { RootPage } from "pages/root";
-import { TagPage } from "pages/tag";
-import { LayoutPage } from "pages/layout";
-import { ProfilePage } from "pages/profile-page";
-import { StreamPageHandler } from "pages/stream-page";
-import { ChatPopout } from "pages/chat-popout";
-import { LoginStore } from "login";
-import { StreamProvidersPage } from "pages/providers";
-import { defaultRelays } from "const";
-import { CatchAllRoutePage } from "pages/catch-all";
-import { SettingsPage } from "pages/settings-page";
-import { register } from "serviceWorker";
-import { IntlProvider } from "intl";
-import { WidgetsPage } from "pages/widgets";
-import { AlertsPage } from "pages/alerts";
 import { unixNowMs } from "@snort/shared";
-import { StreamSummaryPage } from "pages/summary";
+
+import { RootPage } from "@/pages/root";
+import { TagPage } from "@/pages/tag";
+import { LayoutPage } from "@/pages/layout";
+import { ProfilePage } from "@/pages/profile-page";
+import { StreamPageHandler } from "@/pages/stream-page";
+import { ChatPopout } from "@/pages/chat-popout";
+import { LoginStore } from "@/login";
+import { StreamProvidersPage } from "@/pages/providers";
+import { defaultRelays } from "@/const";
+import { CatchAllRoutePage } from "@/pages/catch-all";
+import { SettingsPage } from "@/pages/settings-page";
+import { register } from "@/serviceWorker";
+import { IntlProvider } from "@/intl";
+import { WidgetsPage } from "@/pages/widgets";
+import { AlertsPage } from "@/pages/alerts";
+import { StreamSummaryPage } from "@/pages/summary";
+const DashboardPage = lazy(() => import("./pages/dashboard"));
 
 export enum StreamState {
   Live = "live",
@@ -98,6 +99,14 @@ const router = createBrowserRouter([
       {
         path: "/summary/:id",
         element: <StreamSummaryPage />,
+      },
+      {
+        path: "/dashboard",
+        element: (
+          <Suspense>
+            <DashboardPage />
+          </Suspense>
+        ),
       },
       {
         path: "*",

@@ -5,6 +5,9 @@
   "+AcVD+": {
     "defaultMessage": "Inga e-post, bara fantastiskt!"
   },
+  "+sdKx8": {
+    "defaultMessage": "Live now"
+  },
   "+vVZ/G": {
     "defaultMessage": "Anslut"
   },
@@ -26,8 +29,14 @@
   "0VV/sK": {
     "defaultMessage": "Mål"
   },
+  "0hNxBy": {
+    "defaultMessage": "Starts"
+  },
   "1EYCdR": {
     "defaultMessage": "Taggar"
+  },
+  "1q4BO/": {
+    "defaultMessage": "Not a valid URL"
   },
   "1qsXCO": {
     "defaultMessage": "t.ex namn@wallet.com"
@@ -35,8 +44,8 @@
   "2/2yg+": {
     "defaultMessage": "Lägg till"
   },
-  "2CGh/0": {
-    "defaultMessage": "live"
+  "37mth/": {
+    "defaultMessage": "Viewers"
   },
   "3HwrQo": {
     "defaultMessage": "Zap!"
@@ -50,6 +59,9 @@
   "47FYwb": {
     "defaultMessage": "Avbryt"
   },
+  "4iBdw1": {
+    "defaultMessage": "Raid"
+  },
   "4l69eO": {
     "defaultMessage": "Hmm, din lightning adress ser fel ut"
   },
@@ -58,6 +70,9 @@
   },
   "4uI538": {
     "defaultMessage": "Upplösningar"
+  },
+  "50+/JW": {
+    "defaultMessage": "Stream Key is required"
   },
   "5JcXdV": {
     "defaultMessage": "Skapa konto"
@@ -68,11 +83,26 @@
   "5kx+2v": {
     "defaultMessage": "Server Url"
   },
+  "5tM0VD": {
+    "defaultMessage": "Stream Started"
+  },
+  "69hmpj": {
+    "defaultMessage": "Raid from {name}"
+  },
   "6Z2pvJ": {
     "defaultMessage": "Stream Leverantörer"
   },
   "6pr6hJ": {
     "defaultMessage": "Minsta belopp för text till tal"
+  },
+  "7+bCC1": {
+    "defaultMessage": "Stream url must start with rtmp://"
+  },
+  "79lLl+": {
+    "defaultMessage": "Music"
+  },
+  "7UOvbT": {
+    "defaultMessage": "Offline"
   },
   "8YT6ja": {
     "defaultMessage": "Infoga text att prata"
@@ -83,12 +113,6 @@
   "9a9+ww": {
     "defaultMessage": "Titel"
   },
-  "9anxhq": {
-    "defaultMessage": "Startar"
-  },
-  "AIHaPH": {
-    "defaultMessage": "{person} zapped {amount} sats"
-  },
   "Atr2p4": {
     "defaultMessage": "NSFW-innehåll"
   },
@@ -97,6 +121,9 @@
   },
   "AyGauy": {
     "defaultMessage": "Logga in"
+  },
+  "BD0vyn": {
+    "defaultMessage": "{name} created a clip"
   },
   "BGxpTN": {
     "defaultMessage": "Stream Chat"
@@ -107,6 +134,9 @@
   "C81/uG": {
     "defaultMessage": "Logga ut"
   },
+  "CsCUYo": {
+    "defaultMessage": "{n} sats"
+  },
   "D3idYv": {
     "defaultMessage": "Inställningar"
   },
@@ -115,6 +145,9 @@
   },
   "Dn82AL": {
     "defaultMessage": "Live"
+  },
+  "E9APoR": {
+    "defaultMessage": "Could not create stream URL"
   },
   "ESyhzp": {
     "defaultMessage": "Din kommentar till {name}"
@@ -128,8 +161,17 @@
   "G/yZLu": {
     "defaultMessage": "Ta bort"
   },
+  "GGaJMU": {
+    "defaultMessage": "Top Chatters"
+  },
+  "Gmiwnd": {
+    "defaultMessage": "Refresh the page to use the latest version"
+  },
   "Gq6x9o": {
     "defaultMessage": "Omslagsbild"
+  },
+  "Gvxoji": {
+    "defaultMessage": "Name is required"
   },
   "H/bNs9": {
     "defaultMessage": "Spara detta och håll det säkert! Om du förlorar denna nyckel kommer du inte att kunna komma åt ditt konto någonsin igen. Japp, det är så allvarligt!"
@@ -152,6 +194,9 @@
   "INlWvJ": {
     "defaultMessage": "ELLER"
   },
+  "J/+m9y": {
+    "defaultMessage": "Stream Duration {duration} mins"
+  },
   "JEsxDw": {
     "defaultMessage": "Laddar upp..."
   },
@@ -161,17 +206,20 @@
   "K3r6DQ": {
     "defaultMessage": "Radera"
   },
-  "K3uH1C": {
-    "defaultMessage": "offline"
-  },
   "K7AkdL": {
     "defaultMessage": "Visa"
+  },
+  "KdYELp": {
+    "defaultMessage": "Get stream key"
   },
   "KkIL3s": {
     "defaultMessage": "Nej, jag är under 18 år"
   },
   "LknBsU": {
     "defaultMessage": "Stream nyckel"
+  },
+  "MTHO1W": {
+    "defaultMessage": "Start Raid"
   },
   "My6HwN": {
     "defaultMessage": "Ok, det är säkert"
@@ -191,6 +239,12 @@
   "Oxqtyf": {
     "defaultMessage": "Vi fixade en lightning plånbok till dig så att du kan få betalt av tittarna direkt!"
   },
+  "PA0ej4": {
+    "defaultMessage": "Create Clip"
+  },
+  "Pe0ogR": {
+    "defaultMessage": "Theme"
+  },
   "Q3au2v": {
     "defaultMessage": "Om {estimate}"
   },
@@ -200,20 +254,32 @@
   "QRRCp0": {
     "defaultMessage": "Stream URL"
   },
+  "QWlMq9": {
+    "defaultMessage": "Stream key"
+  },
   "QceMQZ": {
     "defaultMessage": "Mål: {amount}"
   },
   "Qe1MJu": {
     "defaultMessage": "{name} med {amount}"
   },
+  "RJ2VxG": {
+    "defaultMessage": "A new version has been detected"
+  },
   "RJOmzk": {
     "defaultMessage": "Jag har läst och godkänner {provider}'s {terms}."
+  },
+  "RS6smY": {
+    "defaultMessage": "Raid Message"
   },
   "RXQdxR": {
     "defaultMessage": "Vänligen logga in för att skriva meddelanden!"
   },
   "RrCui3": {
     "defaultMessage": "Summering"
+  },
+  "RtYNX5": {
+    "defaultMessage": "Chat Users"
   },
   "TP/cMX": {
     "defaultMessage": "Avslutade"
@@ -233,15 +299,24 @@
   "VA/Z1S": {
     "defaultMessage": "Göm"
   },
+  "W7DNWx": {
+    "defaultMessage": "Stream Forwarding"
+  },
   "W9355R": {
     "defaultMessage": "Avtysta"
   },
   "X2PZ7D": {
     "defaultMessage": "Skapa mål"
   },
+  "XgWvGA": {
+    "defaultMessage": "Reactions"
+  },
   "YPh5Nq": {
     "defaultMessage": "@ {rate}",
     "description": "Showing zap amount in USD @ rate"
+  },
+  "YagVIe": {
+    "defaultMessage": "{n}p"
   },
   "Z8ZOEY": {
     "defaultMessage": "Denna metod är osäker. Vi rekommenderar att du använder en {nostrlink}"
@@ -249,8 +324,17 @@
   "ZmqxZs": {
     "defaultMessage": "Du kan ändra detta senare"
   },
+  "Zse7yG": {
+    "defaultMessage": "Raid target"
+  },
   "acrOoz": {
     "defaultMessage": "Fortsätt"
+  },
+  "aqjZxs": {
+    "defaultMessage": "Raid!"
+  },
+  "bfvyfs": {
+    "defaultMessage": "Anon"
   },
   "cPIKU2": {
     "defaultMessage": "Följer"
@@ -263,6 +347,9 @@
   },
   "d5zWyh": {
     "defaultMessage": "Testa röst"
+  },
+  "dOQCL8": {
+    "defaultMessage": "Display name"
   },
   "dVD/AR": {
     "defaultMessage": "Topp Zappers"
@@ -282,14 +369,23 @@
   "feZ/kG": {
     "defaultMessage": "Logga in med privat nyckel (osäkra)"
   },
+  "gzsn7k": {
+    "defaultMessage": "{n} messages"
+  },
   "hGQqkW": {
     "defaultMessage": "Schemalagd"
+  },
+  "hMzcSq": {
+    "defaultMessage": "Messages"
   },
   "heyxZL": {
     "defaultMessage": "Aktivera text till tal"
   },
   "hpl4BP": {
     "defaultMessage": "Chatt widget"
+  },
+  "hzSNj4": {
+    "defaultMessage": "Dashboard"
   },
   "ieGrWo": {
     "defaultMessage": "Följ"
@@ -299,6 +395,18 @@
   },
   "izWS4J": {
     "defaultMessage": "Sluta följa"
+  },
+  "j/jueq": {
+    "defaultMessage": "Raiding {name}"
+  },
+  "jctiUc": {
+    "defaultMessage": "Highest Viewers"
+  },
+  "jgOqxt": {
+    "defaultMessage": "Widgets"
+  },
+  "jkAQj5": {
+    "defaultMessage": "Stream Ended"
   },
   "jr4+vD": {
     "defaultMessage": "Markdown"
@@ -318,6 +426,9 @@
   "ljmS5P": {
     "defaultMessage": "Slutpunkt"
   },
+  "miQKuZ": {
+    "defaultMessage": "Stream Time"
+  },
   "mnJYBQ": {
     "defaultMessage": "Röst"
   },
@@ -333,17 +444,23 @@
   "nwA8Os": {
     "defaultMessage": "Lägg till kort"
   },
+  "o8pHw3": {
+    "defaultMessage": "AUTO"
+  },
   "oHPB8Q": {
     "defaultMessage": "Zap {name}"
   },
   "oZrFyI": {
     "defaultMessage": "Stream typ bör vara HLS"
   },
-  "pO/lPX": {
-    "defaultMessage": "Schemalagd för {date}"
+  "q+zTWM": {
+    "defaultMessage": "<s>{person}</s> zapped <s>{amount}</s> sats"
   },
   "r2Jjms": {
     "defaultMessage": "Logga In"
+  },
+  "rELDbB": {
+    "defaultMessage": "Refresh"
   },
   "rWBFZA": {
     "defaultMessage": "Sexuellt explicit material framöver!"

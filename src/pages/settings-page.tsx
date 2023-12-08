@@ -1,12 +1,16 @@
-import "./settings-page.css";
-import { useEffect, useState } from "react";
+import { Suspense, lazy, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
-import { Button as AlbyZapsButton } from "@getalby/bitcoin-connect-react";
-import { hexToBech32 } from "@snort/shared";
+import { hexToBech32, unwrap } from "@snort/shared";
 
-import { useLogin } from "hooks/login";
-import Copy from "element/copy";
+const AlbyButton = lazy(() => import("@/element/alby-button"));
+import { useLogin } from "@/hooks/login";
+import Copy from "@/element/copy";
+import { NostrProviderDialog } from "@/element/nostr-provider-dialog";
+import { useStreamProvider } from "@/hooks/stream-provider";
+import { Login, StreamState } from "..";
+import { StatePill } from "@/element/state-pill";
+import { NostrStreamProvider } from "@/providers";
 
 const enum Tab {
   Account,
@@ -17,6 +21,7 @@ export function SettingsPage() {
   const navigate = useNavigate();
   const login = useLogin();
   const [tab, setTab] = useState(Tab.Account);
+  const providers = useStreamProvider();
 
   useEffect(() => {
     if (!login) {
@@ -30,12 +35,12 @@ export function SettingsPage() {
         return (
           <>
             <h1>
-              <FormattedMessage defaultMessage="Account" />
+              <FormattedMessage defaultMessage="Account" id="TwyMau" />
             </h1>
             {login?.pubkey && (
               <div className="public-key">
                 <p>
-                  <FormattedMessage defaultMessage="Logged in as" />
+                  <FormattedMessage defaultMessage="Logged in as" id="DZKuuP" />
                 </p>
                 <Copy text={hexToBech32("npub", login.pubkey)} />
               </div>
@@ -43,33 +48,69 @@ export function SettingsPage() {
             {login?.privateKey && (
               <div className="private-key">
                 <p>
-                  <FormattedMessage defaultMessage="Private key" />
+                  <FormattedMessage defaultMessage="Private key" id="Bep/gA" />
                 </p>
                 <Copy text={hexToBech32("nsec", login.privateKey)} />
               </div>
             )}
             <h1>
-              <FormattedMessage defaultMessage="Zaps" />
+              <FormattedMessage defaultMessage="Theme" id="Pe0ogR" />
             </h1>
-            <AlbyZapsButton />
+            <div>
+              <StatePill state={StreamState.Live} />
+            </div>
+            <div className="flex gap-2">
+              {["#7F006A", "#E206BF", "#7406E2", "#3F06E2", "#393939", "#ff563f", "#ff8d2b", "#34d2fe"].map(a => (
+                <div
+                  className={`w-4 h-4 pointer${login?.color === a ? " border" : ""}`}
+                  title={a}
+                  style={{ backgroundColor: a }}
+                  onClick={() => Login.setColor(a)}></div>
+              ))}
+            </div>
+            <h1>
+              <FormattedMessage defaultMessage="Zaps" id="OEW7yJ" />
+            </h1>
+            <Suspense>
+              <AlbyButton />
+            </Suspense>
+            <h1>
+              <FormattedMessage defaultMessage="Stream Key" id="LknBsU" />
+            </h1>
+            <NostrProviderDialog
+              provider={unwrap(providers.find(a => a.name === "zap.stream")) as NostrStreamProvider}
+              showEndpoints={true}
+              showEditor={false}
+              showForwards={true}
+            />
           </>
         );
       }
     }
   }
+
+  function tabName(t: Tab) {
+    switch (t) {
+      case Tab.Account:
+        return <FormattedMessage defaultMessage="Account" id="TwyMau" />;
+    }
+  }
+
   return (
-    <div className="settings-page">
-      <div className="flex f-col g48">
+    <div className="rounded-2xl p-3 md:w-[700px] mx-auto w-full">
+      <div className="flex flex-col gap-2">
         <h1>
-          <FormattedMessage defaultMessage="Settings" />
+          <FormattedMessage defaultMessage="Settings" id="D3idYv" />
         </h1>
-        <div className="flex g24 f-col-mobile">
-          <div className="flex f-col g24 tab-options">
-            <div onClick={() => setTab(Tab.Account)}>
-              <FormattedMessage defaultMessage="Account" />
-            </div>
+        <div className="flex flex-col gap-2">
+          <div className="flex gap-2">
+            {[Tab.Account].map(t => (
+              <button onClick={() => setTab(t)} className="rounded-xl px-3 py-2 bg-gray-2 hover:bg-gray-1">
+                {tabName(t)}
+              </button>
+            ))}
           </div>
-          <div className="tab-content">{tabContent()}</div>
+          <div className="p-5 bg-gray-2 rounded-3xl flex flex-col gap-3">{tabContent()}</div>
         </div>
       </div>
     </div>

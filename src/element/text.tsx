@@ -41,10 +41,16 @@ export function Text({ content, tags, eventComponent }: TextProps) {
             }
           }
         }
-        return <HyperText link={f.content}>{f.content}</HyperText>;
+        return (
+          <span className="text">
+            <HyperText link={f.content}>{f.content}</HyperText>
+          </span>
+        );
       }
       case "mention":
         return <Mention pubkey={f.content} />;
+      case "hashtag":
+        return <Link to={`/t/${f.content}`}>#{f.content}</Link>;
       default: {
         if (f.content.startsWith("lnurlp:")) {
           // LUD-17: https://github.com/lnurl/luds/blob/luds/17.md

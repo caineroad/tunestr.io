@@ -2,33 +2,34 @@ import "./stream-page.css";
 import { NostrLink, TaggedNostrEvent } from "@snort/system";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
-
-import { LiveVideoPlayer } from "element/live-video-player";
-import { findTag, getEventFromLocationState, getHost } from "utils";
-import { Profile, getName } from "element/profile";
-import { LiveChat } from "element/live-chat";
-import AsyncButton from "element/async-button";
-import { useLogin } from "hooks/login";
-import { useZapGoal } from "hooks/goals";
-import { StreamState } from "index";
-import { SendZapsDialog } from "element/send-zap";
 import { NostrEvent } from "@snort/system";
 import { SnortContext, useUserProfile } from "@snort/system-react";
-import { NewStreamDialog } from "element/new-stream";
-import { Tags } from "element/tags";
-import { StatePill } from "element/state-pill";
-import { StreamCards } from "element/stream-cards";
-import { formatSats } from "number";
-import { StreamTimer } from "element/stream-time";
-import { ShareMenu } from "element/share-menu";
-import { ContentWarningOverlay, isContentWarningAccepted } from "element/content-warning";
-import { useCurrentStreamFeed } from "hooks/current-stream-feed";
-import { useStreamLink } from "hooks/stream-link";
 import { FormattedMessage } from "react-intl";
-import { useContext } from "react";
-import { FollowButton } from "element/follow-button";
+import { Suspense, lazy, useContext } from "react";
 
-function ProfileInfo({ ev, goal }: { ev?: NostrEvent; goal?: TaggedNostrEvent }) {
+const LiveVideoPlayer = lazy(() => import("@/element/live-video-player"));
+import { extractStreamInfo, findTag, getEventFromLocationState, getHost } from "@/utils";
+import { Profile, getName } from "@/element/profile";
+import { LiveChat } from "@/element/live-chat";
+import AsyncButton from "@/element/async-button";
+import { useLogin } from "@/hooks/login";
+import { useZapGoal } from "@/hooks/goals";
+import { StreamState } from "@/index";
+import { SendZapsDialog } from "@/element/send-zap";
+import { NewStreamDialog } from "@/element/new-stream";
+import { Tags } from "@/element/tags";
+import { StatePill } from "@/element/state-pill";
+import { StreamCards } from "@/element/stream-cards";
+import { formatSats } from "@/number";
+import { StreamTimer } from "@/element/stream-time";
+import { ShareMenu } from "@/element/share-menu";
+import { ContentWarningOverlay, isContentWarningAccepted } from "@/element/content-warning";
+import { useCurrentStreamFeed } from "@/hooks/current-stream-feed";
+import { useStreamLink } from "@/hooks/stream-link";
+import { FollowButton } from "@/element/follow-button";
+import { ClipButton } from "@/element/clip-button";
+
+function ProfileInfo({ ev, goal }: { ev?: TaggedNostrEvent; goal?: TaggedNostrEvent }) {
   const system = useContext(SnortContext);
   const login = useLogin();
   const navigate = useNavigate();
@@ -36,7 +37,7 @@ function ProfileInfo({ ev, goal }: { ev?: NostrEvent; goal?: TaggedNostrEvent })
   const profile = useUserProfile(host);
   const zapTarget = profile?.lud16 ?? profile?.lud06;
 
-  const status = findTag(ev, "status") ?? "";
+  const { status, participants, title, summary } = extractStreamInfo(ev);
   const isMine = ev?.pubkey === login?.pubkey;
 
   async function deleteStream() {
@@ -49,22 +50,20 @@ function ProfileInfo({ ev, goal }: { ev?: NostrEvent; goal?: TaggedNostrEvent })
     }
   }
 
-  const viewers = Number(findTag(ev, "current_participants") ?? "0");
+  const viewers = Number(participants ?? "0");
   return (
     <>
-      <div className="flex f-center info">
-        <div className="f-grow stream-info">
-          <h1>{findTag(ev, "title")}</h1>
-          <p>{findTag(ev, "summary")}</p>
+      <div className="flex items-center info">
+        <div className="grow stream-info">
+          <h1>{title}</h1>
+          <p>{summary}</p>
           <div className="tags">
             <StatePill state={status as StreamState} />
-            {viewers > 0 && (
-              <span className="pill viewers">
-                <FormattedMessage defaultMessage="{n} viewers" values={{ n: formatSats(viewers) }} />
-              </span>
-            )}
+            <span className="pill bg-gray-1">
+              <FormattedMessage defaultMessage="{n} viewers" id="3adEeb" values={{ n: formatSats(viewers) }} />
+            </span>
             {status === StreamState.Live && (
-              <span className="pill">
+              <span className="pill bg-gray-1">
                 <StreamTimer ev={ev} />
               </span>
             )}
@@ -74,19 +73,20 @@ function ProfileInfo({ ev, goal }: { ev?: NostrEvent; goal?: TaggedNostrEvent })
             <div className="actions">
               {ev && <NewStreamDialog text="Edit" ev={ev} btnClassName="btn" />}
               <AsyncButton type="button" className="btn btn-warning" onClick={deleteStream}>
-                <FormattedMessage defaultMessage="Delete" />
+                <FormattedMessage defaultMessage="Delete" id="K3r6DQ" />
               </AsyncButton>
             </div>
           )}
         </div>
         <div className="profile-info">
           <Profile pubkey={host ?? ""} />
-          <div className="flex g12">
+          <div className="flex gap-2">
             <div className="hide-on-mobile">
               <FollowButton pubkey={host} />
             </div>
             {ev && (
               <>
+                <ClipButton ev={ev} />
                 <ShareMenu ev={ev} />
                 {zapTarget && (
                   <SendZapsDialog
@@ -120,15 +120,18 @@ export function StreamPage({ link, evPreload }: { evPreload?: NostrEvent; link: 
   const ev = useCurrentStreamFeed(link, true, evPreload);
   const host = getHost(ev);
   const evLink = ev ? NostrLink.fromEvent(ev) : undefined;
-  const goal = useZapGoal(findTag(ev, "goal"));
-
-  const title = findTag(ev, "title");
-  const summary = findTag(ev, "summary");
-  const image = findTag(ev, "image");
-  const status = findTag(ev, "status");
-  const stream = status === StreamState.Live ? findTag(ev, "streaming") : findTag(ev, "recording");
-  const contentWarning = findTag(ev, "content-warning");
-  const tags = ev?.tags.filter(a => a[0] === "t").map(a => a[1]) ?? [];
+  const {
+    title,
+    summary,
+    image,
+    status,
+    tags,
+    contentWarning,
+    stream,
+    recording,
+    goal: goalTag,
+  } = extractStreamInfo(ev);
+  const goal = useZapGoal(goalTag);
 
   if (contentWarning && !isContentWarningAccepted()) {
     return <ContentWarningOverlay />;
@@ -136,7 +139,7 @@ export function StreamPage({ link, evPreload }: { evPreload?: NostrEvent; link: 
 
   const descriptionContent = [title, (summary?.length ?? 0) > 0 ? summary : "Nostr live streaming", ...tags].join(", ");
   return (
-    <div className="stream-page">
+    <div className="stream-page full-page-height">
       <Helmet>
         <title>{`${title} - zap.stream`}</title>
         <meta name="description" content={descriptionContent} />
@@ -147,11 +150,20 @@ export function StreamPage({ link, evPreload }: { evPreload?: NostrEvent; link: 
         <meta property="og:image" content={image ?? ""} />
       </Helmet>
       <div className="video-content">
-        <LiveVideoPlayer stream={stream} poster={image} status={status} />
+        <Suspense>
+          <LiveVideoPlayer stream={status === StreamState.Live ? stream : recording} poster={image} status={status} />
+        </Suspense>
         <ProfileInfo ev={ev} goal={goal} />
         <StreamCards host={host} />
       </div>
-      <LiveChat link={evLink ?? link} ev={ev} goal={goal} />
+      <LiveChat
+        link={evLink ?? link}
+        ev={ev}
+        goal={goal}
+        options={{
+          canWrite: status === StreamState.Live,
+        }}
+      />
     </div>
   );
 }

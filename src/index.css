@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: "Outfit", sans-serif;
@@ -13,7 +17,9 @@ body {
   --gap-s: 16px;
   --header-height: 48px;
   --text-muted: #797979;
-  --text-link: #f838d9;
+  --primary: #f838d9;
+  --secondary: #34d2fe;
+  --zap: #ff8d2b;
   --text-danger: #ff563f;
   --surface: #222;
   --border: #171717;
@@ -31,6 +37,22 @@ body {
   }
 }
 
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+h3 {
+  font-size: 21px;
+  font-weight: 500;
+}
+h4 {
+  font-size: 18px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
@@ -44,39 +66,7 @@ a {
   outline: none;
 }
 
-.flex {
-  display: flex;
-}
-
-.f-1 {
-  flex: 1;
-}
-
-.f-grow {
-  flex-grow: 1;
-}
-
-.f-col {
-  flex-direction: column;
-}
-
-.f-center {
-  align-items: center;
-  justify-content: center;
-}
-
-.f-space {
-  justify-content: space-between;
-}
-
-@media (max-width: 1020px) {
-  .f-col-mobile {
-    flex-direction: column;
-  }
-}
-
 .pill {
-  background: #171717;
   padding: 4px 8px;
   border-radius: 9px;
   font-weight: 700;
@@ -86,32 +76,10 @@ a {
   user-select: none;
 }
 
-.pill.live {
-  background: #f838d9;
-  color: white;
-}
-
-.g8 {
-  gap: 8px;
-}
-.g12 {
-  gap: 12px;
-}
-.g24 {
-  gap: 24px;
-}
-.g48 {
-  gap: 48px;
-}
-
 .w-max {
   width: stretch;
   width: -webkit-fill-available;
   width: -moz-available;
-}
-
-.uppercase {
-  text-transform: uppercase;
 }
 
 .pointer {
@@ -131,6 +99,8 @@ a {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  background: white;
+  color: black;
 }
 
 .btn-block {
@@ -279,14 +249,16 @@ div.paper {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90vw;
-  max-width: 450px;
+  max-width: 550px;
   max-height: 85vh;
   overflow-y: auto;
 }
+
 .dialog-content .header-image {
   width: 100%;
   height: auto;
 }
+
 .dialog-content .content-inner {
   width: 100%;
   display: flex;
@@ -383,4 +355,20 @@ div.paper {
 .or-divider hr {
   width: 135px;
   border-color: var(--border-2);
+}
+
+.full-page-height {
+  height: calc(100vh - var(--header-page-padding) - var(--header-height) - var(--gap-s));
+  overflow: hidden;
+}
+
+.full-page-height .live-chat {
+  padding: 24px 16px 8px 24px;
+  border: 1px solid #171717;
+  border-radius: 24px;
+  height: inherit;
+}
+
+.h-inhreit {
+  height: inherit;
 }

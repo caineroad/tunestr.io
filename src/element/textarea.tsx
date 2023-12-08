@@ -1,5 +1,5 @@
 import "./textarea.css";
-import { type KeyboardEvent, type ChangeEvent, useContext } from "react";
+import { useContext } from "react";
 import ReactTextareaAutocomplete, { TriggerType } from "@webscopeio/react-textarea-autocomplete";
 import "@webscopeio/react-textarea-autocomplete/style.css";
 import uniqWith from "lodash/uniqWith";
@@ -9,9 +9,9 @@ import { hexToBech32 } from "@snort/shared";
 import { SnortContext } from "@snort/system-react";
 import { MetadataCache, NostrPrefix, UserProfileCache } from "@snort/system";
 
-import { Emoji } from "element/emoji";
-import { Avatar } from "element/avatar";
-import type { EmojiTag } from "types";
+import { Emoji } from "./emoji";
+import { Avatar } from "./avatar";
+import type { EmojiTag } from "@/types";
 
 interface EmojiItemProps {
   name: string;
@@ -33,19 +33,13 @@ const UserItem = (metadata: MetadataCache) => {
   const { pubkey, display_name, ...rest } = metadata;
   return (
     <div key={pubkey} className="user-item">
-      <Avatar avatarClassname="user-image" user={metadata} />
+      <Avatar className="user-image" user={metadata} pubkey={pubkey} />
       <div className="user-details">{display_name || rest.name}</div>
     </div>
   );
 };
 
-interface TextareaProps {
-  emojis: EmojiTag[];
-  value: string;
-  onChange: (e: ChangeEvent<HTMLTextAreaElement>) => void;
-  onKeyDown: (e: KeyboardEvent<Element>) => void;
-  rows?: number;
-}
+type TextareaProps = { emojis: EmojiTag[] } & React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 
 export function Textarea({ emojis, ...props }: TextareaProps) {
   const system = useContext(SnortContext);

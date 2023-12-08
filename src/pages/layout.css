@@ -9,19 +9,10 @@
   gap: var(--gap-s);
 }
 
-.page.stream {
-  height: calc(100vh - var(--header-page-padding));
-  overflow: hidden;
-}
-
 @media (max-width: 1020px) {
   .page {
     --page-pad-tb: 8px;
     --page-pad-lr: 0;
-  }
-  .page.stream {
-    display: flex;
-    flex-direction: column;
   }
   header {
     padding: 0 16px;
@@ -31,15 +22,6 @@
 header {
   display: flex;
   gap: 24px;
-}
-
-header .logo {
-  background: url("public/logo.png") no-repeat #171717;
-  background-size: cover;
-  border-radius: 16px;
-  width: 48px;
-  height: 48px;
-  cursor: pointer;
 }
 
 header .btn-header {
@@ -85,11 +67,6 @@ header button {
   gap: 8px;
 }
 
-header .profile img {
-  width: 48px;
-  height: 48px;
-}
-
 @media (max-width: 1020px) {
   header .header-right {
     gap: 8px;
@@ -118,10 +95,6 @@ header .profile img {
   }
 }
 
-.zap-icon {
-  color: #ff8d2b;
-}
-
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -148,7 +121,7 @@ header .profile img {
 
 .age-check::after {
   content: " ";
-  background: url("public/zap-stream.svg") no-repeat;
+  background: url("/zap-stream.svg") no-repeat;
   background-position: center;
   background-size: contain;
   position: absolute;

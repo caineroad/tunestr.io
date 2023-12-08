@@ -1,19 +1,19 @@
 import "./new-stream.css";
 import * as Dialog from "@radix-ui/react-dialog";
-
-import { Icon } from "element/icon";
-import { useStreamProvider } from "hooks/stream-provider";
-import { StreamProvider, StreamProviders } from "providers";
 import { useContext, useEffect, useState } from "react";
-import { StreamEditor, StreamEditorProps } from "./stream-editor";
 import { useNavigate } from "react-router-dom";
-import { eventLink, findTag } from "utils";
-import { NostrProviderDialog } from "./nostr-provider-dialog";
 import { unwrap } from "@snort/shared";
 import { FormattedMessage } from "react-intl";
 import { SnortContext } from "@snort/system-react";
 
-function NewStream({ ev, onFinish }: StreamEditorProps) {
+import { Icon } from "./icon";
+import { useStreamProvider } from "@/hooks/stream-provider";
+import { NostrStreamProvider, StreamProvider, StreamProviders } from "@/providers";
+import { StreamEditor, StreamEditorProps } from "./stream-editor";
+import { eventLink, findTag } from "@/utils";
+import { NostrProviderDialog } from "./nostr-provider-dialog";
+
+function NewStream({ ev, onFinish }: Omit<StreamEditorProps, "onFinish"> & { onFinish: () => void }) {
   const system = useContext(SnortContext);
   const providers = useStreamProvider();
   const [currentProvider, setCurrentProvider] = useState<StreamProvider>();
@@ -43,10 +43,10 @@ function NewStream({ ev, onFinish }: StreamEditorProps) {
                   navigate(`/${eventLink(ex)}`, {
                     state: ex,
                   });
-                  onFinish?.(ex);
+                  onFinish?.();
                 }
               } else {
-                onFinish?.(ev);
+                onFinish?.();
               }
             }}
             ev={ev}
@@ -54,7 +54,26 @@ function NewStream({ ev, onFinish }: StreamEditorProps) {
         );
       }
       case StreamProviders.NostrType: {
-        return <NostrProviderDialog provider={currentProvider} onFinish={onFinish} ev={ev} />;
+        return (
+          <>
+            <button
+              className="btn btn-secondary"
+              onClick={() => {
+                navigate("/settings");
+                onFinish?.();
+              }}>
+              <FormattedMessage defaultMessage="Get stream key" id="KdYELp" />
+            </button>
+            <NostrProviderDialog
+              provider={currentProvider as NostrStreamProvider}
+              onFinish={onFinish}
+              ev={ev}
+              showEndpoints={false}
+              showEditor={true}
+              showForwards={false}
+            />
+          </>
+        );
       }
       case StreamProviders.Owncast: {
         return;
@@ -65,9 +84,9 @@ function NewStream({ ev, onFinish }: StreamEditorProps) {
   return (
     <>
       <p>
-        <FormattedMessage defaultMessage="Stream Providers" />
+        <FormattedMessage defaultMessage="Stream Providers" id="6Z2pvJ" />
       </p>
-      <div className="flex g12">
+      <div className="flex gap-2">
         {providers.map(v => (
           <span className={`pill${v === currentProvider ? " active" : ""}`} onClick={() => setCurrentProvider(v)}>
             {v.name}
@@ -94,7 +113,7 @@ export function NewStreamDialog(props: NewStreamDialogProps & StreamEditorProps)
           {!props.text && (
             <>
               <span className="hide-on-mobile">
-                <FormattedMessage defaultMessage="Stream" />
+                <FormattedMessage defaultMessage="Stream" id="uYw2LD" />
               </span>
               <Icon name="signal" />
             </>

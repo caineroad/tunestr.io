@@ -1,12 +1,12 @@
 import "./root.css";
 import { FormattedMessage } from "react-intl";
-import { useCallback } from "react";
+import { useCallback, useMemo } from "react";
 import type { NostrEvent } from "@snort/system";
 
-import { VideoTile } from "element/video-tile";
-import { useLogin } from "hooks/login";
-import { getHost, getTagValues } from "utils";
-import { useStreamsFeed } from "hooks/live-streams";
+import { VideoTile } from "@/element/video-tile";
+import { useLogin } from "@/hooks/login";
+import { getHost, getTagValues } from "@/utils";
+import { useStreamsFeed } from "@/hooks/live-streams";
 
 export function RootPage() {
   const login = useLogin();
@@ -28,12 +28,26 @@ export function RootPage() {
   const plannedEvents = planned.filter(e => !mutedHosts.has(getHost(e))).filter(followsHost);
   const endedEvents = ended.filter(e => !mutedHosts.has(getHost(e)));
 
+  const liveByHashtag = useMemo(() => {
+    return hashtags
+      .map(t => ({
+        tag: t,
+        live: live
+          .filter(e => !mutedHosts.has(getHost(e)))
+          .filter(e => {
+            const evTags = getTagValues(e.tags, "t");
+            return evTags.includes(t);
+          }),
+      }))
+      .filter(t => t.live.length > 0);
+  }, [live, hashtags]);
+
   return (
     <div className="homepage">
       {hasFollowingLive && (
         <>
           <h2 className="divider line one-line">
-            <FormattedMessage defaultMessage="Following" />
+            <FormattedMessage defaultMessage="Following" id="cPIKU2" />
           </h2>
           <div className="video-grid">
             {following.map(e => (
@@ -51,26 +65,20 @@ export function RootPage() {
             ))}
         </div>
       )}
-      {hashtags.map(t => (
+      {liveByHashtag.map(t => (
         <>
-          <h2 className="divider line one-line">#{t}</h2>
+          <h2 className="divider line one-line">#{t.tag}</h2>
           <div className="video-grid">
-            {live
-              .filter(e => !mutedHosts.has(getHost(e)))
-              .filter(e => {
-                const evTags = getTagValues(e.tags, "t");
-                return evTags.includes(t);
-              })
-              .map(e => (
-                <VideoTile ev={e} key={e.id} />
-              ))}
+            {t.live.map(e => (
+              <VideoTile ev={e} key={e.id} />
+            ))}
           </div>
         </>
       ))}
       {hasFollowingLive && liveNow.length > 0 && (
         <>
           <h2 className="divider line one-line">
-            <FormattedMessage defaultMessage="Live" />
+            <FormattedMessage defaultMessage="Live" id="Dn82AL" />
           </h2>
           <div className="video-grid">
             {liveNow
@@ -84,7 +92,7 @@ export function RootPage() {
       {plannedEvents.length > 0 && (
         <>
           <h2 className="divider line one-line">
-            <FormattedMessage defaultMessage="Planned" />
+            <FormattedMessage defaultMessage="Planned" id="kp0NPF" />
           </h2>
           <div className="video-grid">
             {plannedEvents.map(e => (
@@ -96,7 +104,7 @@ export function RootPage() {
       {endedEvents.length > 0 && (
         <>
           <h2 className="divider line one-line">
-            <FormattedMessage defaultMessage="Ended" />
+            <FormattedMessage defaultMessage="Ended" id="TP/cMX" />
           </h2>
           <div className="video-grid">
             {endedEvents.map(e => (

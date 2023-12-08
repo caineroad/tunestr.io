@@ -1,10 +1,11 @@
-import AsyncButton from "element/async-button";
-import { StatePill } from "element/state-pill";
-import { StreamState } from "index";
-import { StreamProviderInfo, StreamProviderStore } from "providers";
-import { OwncastProvider } from "providers/owncast";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
+import AsyncButton from "@/element/async-button";
+import { StatePill } from "@/element/state-pill";
+import { StreamState } from "@/index";
+import { StreamProviderInfo, StreamProviderStore } from "@/providers";
+import { OwncastProvider } from "@/providers/owncast";
 
 export function ConfigureOwncast() {
   const [url, setUrl] = useState("");
@@ -69,7 +70,7 @@ export function ConfigureOwncast() {
 
   return (
     <div className="owncast-config">
-      <div className="flex f-col g24">
+      <div className="flex flex-col gap-3">
         <div>
           <p>Owncast instance url</p>
           <div className="paper">

@@ -5,6 +5,9 @@
   "+AcVD+": {
     "defaultMessage": "No emails, just awesomeness!"
   },
+  "+sdKx8": {
+    "defaultMessage": "Live now"
+  },
   "+vVZ/G": {
     "defaultMessage": "اتصال"
   },
@@ -26,8 +29,14 @@
   "0VV/sK": {
     "defaultMessage": "Goal"
   },
+  "0hNxBy": {
+    "defaultMessage": "Starts"
+  },
   "1EYCdR": {
     "defaultMessage": "برچسب‌ها"
+  },
+  "1q4BO/": {
+    "defaultMessage": "Not a valid URL"
   },
   "1qsXCO": {
     "defaultMessage": "eg. name@wallet.com"
@@ -35,8 +44,8 @@
   "2/2yg+": {
     "defaultMessage": "افزودن"
   },
-  "2CGh/0": {
-    "defaultMessage": "زنده"
+  "37mth/": {
+    "defaultMessage": "Viewers"
   },
   "3HwrQo": {
     "defaultMessage": "زَپ!"
@@ -50,6 +59,9 @@
   "47FYwb": {
     "defaultMessage": "لغو"
   },
+  "4iBdw1": {
+    "defaultMessage": "Raid"
+  },
   "4l69eO": {
     "defaultMessage": "Hmm, your lightning address looks wrong"
   },
@@ -58,6 +70,9 @@
   },
   "4uI538": {
     "defaultMessage": "وضوح"
+  },
+  "50+/JW": {
+    "defaultMessage": "Stream Key is required"
   },
   "5JcXdV": {
     "defaultMessage": "ساخت حساب کاربری"
@@ -68,11 +83,26 @@
   "5kx+2v": {
     "defaultMessage": "آدرس سرور"
   },
+  "5tM0VD": {
+    "defaultMessage": "Stream Started"
+  },
+  "69hmpj": {
+    "defaultMessage": "Raid from {name}"
+  },
   "6Z2pvJ": {
     "defaultMessage": "ارائه دهندگان پخش زنده"
   },
   "6pr6hJ": {
     "defaultMessage": "Minimum amount for text to speech"
+  },
+  "7+bCC1": {
+    "defaultMessage": "Stream url must start with rtmp://"
+  },
+  "79lLl+": {
+    "defaultMessage": "Music"
+  },
+  "7UOvbT": {
+    "defaultMessage": "Offline"
   },
   "8YT6ja": {
     "defaultMessage": "Insert text to speak"
@@ -83,12 +113,6 @@
   "9a9+ww": {
     "defaultMessage": "عنوان"
   },
-  "9anxhq": {
-    "defaultMessage": "آغاز"
-  },
-  "AIHaPH": {
-    "defaultMessage": "{person} {amount} ساتوشی زپ زد"
-  },
   "Atr2p4": {
     "defaultMessage": "محتوای نامناسب برای کودکان و محل کار"
   },
@@ -97,6 +121,9 @@
   },
   "AyGauy": {
     "defaultMessage": "ورود"
+  },
+  "BD0vyn": {
+    "defaultMessage": "{name} created a clip"
   },
   "BGxpTN": {
     "defaultMessage": "گپ پخش زنده"
@@ -107,6 +134,9 @@
   "C81/uG": {
     "defaultMessage": "خروج"
   },
+  "CsCUYo": {
+    "defaultMessage": "{n} sats"
+  },
   "D3idYv": {
     "defaultMessage": "Settings"
   },
@@ -115,6 +145,9 @@
   },
   "Dn82AL": {
     "defaultMessage": "زنده"
+  },
+  "E9APoR": {
+    "defaultMessage": "Could not create stream URL"
   },
   "ESyhzp": {
     "defaultMessage": "نظر شما درباره {name}"
@@ -128,8 +161,17 @@
   "G/yZLu": {
     "defaultMessage": "حذف"
   },
+  "GGaJMU": {
+    "defaultMessage": "Top Chatters"
+  },
+  "Gmiwnd": {
+    "defaultMessage": "Refresh the page to use the latest version"
+  },
   "Gq6x9o": {
     "defaultMessage": "تصویر جلد"
+  },
+  "Gvxoji": {
+    "defaultMessage": "Name is required"
   },
   "H/bNs9": {
     "defaultMessage": "Save this and keep it safe! If you lose this key, you won't be able to access your account ever again. Yep, it's that serious!"
@@ -152,6 +194,9 @@
   "INlWvJ": {
     "defaultMessage": "OR"
   },
+  "J/+m9y": {
+    "defaultMessage": "Stream Duration {duration} mins"
+  },
   "JEsxDw": {
     "defaultMessage": "در حال بارگذاری..."
   },
@@ -161,17 +206,20 @@
   "K3r6DQ": {
     "defaultMessage": "حذف"
   },
-  "K3uH1C": {
-    "defaultMessage": "آفلاین"
-  },
   "K7AkdL": {
     "defaultMessage": "نمایش"
+  },
+  "KdYELp": {
+    "defaultMessage": "Get stream key"
   },
   "KkIL3s": {
     "defaultMessage": "نه، من زیر ۱۸ سال هستم"
   },
   "LknBsU": {
     "defaultMessage": "کلید پخش زنده"
+  },
+  "MTHO1W": {
+    "defaultMessage": "Start Raid"
   },
   "My6HwN": {
     "defaultMessage": "باشه، امن است"
@@ -191,6 +239,12 @@
   "Oxqtyf": {
     "defaultMessage": "We hooked you up with a lightning wallet so you can get paid by viewers right away!"
   },
+  "PA0ej4": {
+    "defaultMessage": "Create Clip"
+  },
+  "Pe0ogR": {
+    "defaultMessage": "Theme"
+  },
   "Q3au2v": {
     "defaultMessage": "حدود {estimate}"
   },
@@ -200,20 +254,32 @@
   "QRRCp0": {
     "defaultMessage": "آدرس پخش زنده"
   },
+  "QWlMq9": {
+    "defaultMessage": "Stream key"
+  },
   "QceMQZ": {
     "defaultMessage": "هدف: {amount}"
   },
   "Qe1MJu": {
     "defaultMessage": "{name} با {amount}"
   },
+  "RJ2VxG": {
+    "defaultMessage": "A new version has been detected"
+  },
   "RJOmzk": {
     "defaultMessage": "من {terms} {provider} را خوانده و با آن موافقم."
+  },
+  "RS6smY": {
+    "defaultMessage": "Raid Message"
   },
   "RXQdxR": {
     "defaultMessage": "لطفا برای نوشتن پیام وارد شوید!"
   },
   "RrCui3": {
     "defaultMessage": "چکیده"
+  },
+  "RtYNX5": {
+    "defaultMessage": "Chat Users"
   },
   "TP/cMX": {
     "defaultMessage": "به پایان رسید"
@@ -233,15 +299,24 @@
   "VA/Z1S": {
     "defaultMessage": "پنهان کردن"
   },
+  "W7DNWx": {
+    "defaultMessage": "Stream Forwarding"
+  },
   "W9355R": {
     "defaultMessage": "صداردار کردن"
   },
   "X2PZ7D": {
     "defaultMessage": "ایجاد هدف"
   },
+  "XgWvGA": {
+    "defaultMessage": "Reactions"
+  },
   "YPh5Nq": {
     "defaultMessage": "@ {rate}",
     "description": "Showing zap amount in USD @ rate"
+  },
+  "YagVIe": {
+    "defaultMessage": "{n}p"
   },
   "Z8ZOEY": {
     "defaultMessage": "This method is insecure. We recommend using a {nostrlink}"
@@ -249,8 +324,17 @@
   "ZmqxZs": {
     "defaultMessage": "بعدا می توانید این را تغییر دهید"
   },
+  "Zse7yG": {
+    "defaultMessage": "Raid target"
+  },
   "acrOoz": {
     "defaultMessage": "ادامه"
+  },
+  "aqjZxs": {
+    "defaultMessage": "Raid!"
+  },
+  "bfvyfs": {
+    "defaultMessage": "Anon"
   },
   "cPIKU2": {
     "defaultMessage": "بعدی"
@@ -263,6 +347,9 @@
   },
   "d5zWyh": {
     "defaultMessage": "Test voice"
+  },
+  "dOQCL8": {
+    "defaultMessage": "Display name"
   },
   "dVD/AR": {
     "defaultMessage": "بزرگترین زپ ها"
@@ -282,14 +369,23 @@
   "feZ/kG": {
     "defaultMessage": "Login with Private Key (insecure)"
   },
+  "gzsn7k": {
+    "defaultMessage": "{n} messages"
+  },
   "hGQqkW": {
     "defaultMessage": "زمان‌بندی"
+  },
+  "hMzcSq": {
+    "defaultMessage": "Messages"
   },
   "heyxZL": {
     "defaultMessage": "Enable text to speech"
   },
   "hpl4BP": {
     "defaultMessage": "ویجت گپ"
+  },
+  "hzSNj4": {
+    "defaultMessage": "Dashboard"
   },
   "ieGrWo": {
     "defaultMessage": "دنبال کردن"
@@ -299,6 +395,18 @@
   },
   "izWS4J": {
     "defaultMessage": "لغو دنبال کردن"
+  },
+  "j/jueq": {
+    "defaultMessage": "Raiding {name}"
+  },
+  "jctiUc": {
+    "defaultMessage": "Highest Viewers"
+  },
+  "jgOqxt": {
+    "defaultMessage": "Widgets"
+  },
+  "jkAQj5": {
+    "defaultMessage": "Stream Ended"
   },
   "jr4+vD": {
     "defaultMessage": "مارک‌داون"
@@ -318,6 +426,9 @@
   "ljmS5P": {
     "defaultMessage": "نقطه انتها"
   },
+  "miQKuZ": {
+    "defaultMessage": "Stream Time"
+  },
   "mnJYBQ": {
     "defaultMessage": "Voice"
   },
@@ -333,17 +444,23 @@
   "nwA8Os": {
     "defaultMessage": "افزودن کارت"
   },
+  "o8pHw3": {
+    "defaultMessage": "AUTO"
+  },
   "oHPB8Q": {
     "defaultMessage": "زپ کردن {name}"
   },
   "oZrFyI": {
     "defaultMessage": "نوع پخش باید HLS باشد"
   },
-  "pO/lPX": {
-    "defaultMessage": "زمان‌بندی شده برای {date}"
+  "q+zTWM": {
+    "defaultMessage": "<s>{person}</s> zapped <s>{amount}</s> sats"
   },
   "r2Jjms": {
     "defaultMessage": "Log In"
+  },
+  "rELDbB": {
+    "defaultMessage": "Refresh"
   },
   "rWBFZA": {
     "defaultMessage": "محتوای نمایان جنسی در پیش است!"

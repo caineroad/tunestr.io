@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
-import AsyncButton from "element/async-button";
-import { StatePill } from "element/state-pill";
-import { StreamState } from "index";
-import { StreamProviderInfo, StreamProviderStore } from "providers";
-import { Nip103StreamProvider } from "providers/zsz";
 import { FormattedMessage } from "react-intl";
+
+import AsyncButton from "@/element/async-button";
+import { StatePill } from "@/element/state-pill";
+import { StreamState } from "@/index";
+import { StreamProviderInfo, StreamProviderStore } from "@/providers";
+import { NostrStreamProvider } from "@/providers/zsz";
 
 export function ConfigureNostrType() {
   const [url, setUrl] = useState("");
@@ -15,7 +15,7 @@ export function ConfigureNostrType() {
 
   async function tryConnect() {
     try {
-      const api = new Nip103StreamProvider(new URL(url).host, url);
+      const api = new NostrStreamProvider(new URL(url).host, url);
       const inf = await api.info();
       setInfo(inf);
     } catch (e) {
@@ -58,10 +58,10 @@ export function ConfigureNostrType() {
           <button
             className="btn btn-border"
             onClick={() => {
-              StreamProviderStore.add(new Nip103StreamProvider(new URL(url).host, url));
+              StreamProviderStore.add(new NostrStreamProvider(new URL(url).host, url));
               navigate("/");
             }}>
-            <FormattedMessage defaultMessage="Save" />
+            <FormattedMessage defaultMessage="Save" id="jvo0vs" />
           </button>
         </div>
       </>
@@ -70,7 +70,7 @@ export function ConfigureNostrType() {
 
   return (
     <div className="owncast-config">
-      <div className="flex f-col g24">
+      <div className="flex flex-col gap-3">
         <div>
           <p>Nostr streaming provider URL</p>
           <div className="paper">
@@ -78,7 +78,7 @@ export function ConfigureNostrType() {
           </div>
         </div>
         <AsyncButton className="btn btn-primary" onClick={tryConnect}>
-          <FormattedMessage defaultMessage="Connect" />
+          <FormattedMessage defaultMessage="Connect" id="+vVZ/G" />
         </AsyncButton>
       </div>
       <div>{status()}</div>

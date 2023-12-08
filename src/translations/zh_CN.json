@@ -5,6 +5,9 @@
   "+AcVD+": {
     "defaultMessage": "没有电子邮件，只是最棒！"
   },
+  "+sdKx8": {
+    "defaultMessage": "Live now"
+  },
   "+vVZ/G": {
     "defaultMessage": "连接"
   },
@@ -26,8 +29,14 @@
   "0VV/sK": {
     "defaultMessage": "目标"
   },
+  "0hNxBy": {
+    "defaultMessage": "Starts"
+  },
   "1EYCdR": {
     "defaultMessage": "标签"
+  },
+  "1q4BO/": {
+    "defaultMessage": "Not a valid URL"
   },
   "1qsXCO": {
     "defaultMessage": "例如 name@wallet.com"
@@ -35,8 +44,8 @@
   "2/2yg+": {
     "defaultMessage": "添加"
   },
-  "2CGh/0": {
-    "defaultMessage": "在线"
+  "37mth/": {
+    "defaultMessage": "Viewers"
   },
   "3HwrQo": {
     "defaultMessage": "打闪!"
@@ -50,6 +59,9 @@
   "47FYwb": {
     "defaultMessage": "取消"
   },
+  "4iBdw1": {
+    "defaultMessage": "Raid"
+  },
   "4l69eO": {
     "defaultMessage": "嗯，看起来你的闪电地址不对"
   },
@@ -58,6 +70,9 @@
   },
   "4uI538": {
     "defaultMessage": "分辨率"
+  },
+  "50+/JW": {
+    "defaultMessage": "Stream Key is required"
   },
   "5JcXdV": {
     "defaultMessage": "创建帐户"
@@ -68,11 +83,26 @@
   "5kx+2v": {
     "defaultMessage": "服务器 URL"
   },
+  "5tM0VD": {
+    "defaultMessage": "Stream Started"
+  },
+  "69hmpj": {
+    "defaultMessage": "Raid from {name}"
+  },
   "6Z2pvJ": {
     "defaultMessage": "直播流來源"
   },
   "6pr6hJ": {
     "defaultMessage": "文字转语音的最小金额"
+  },
+  "7+bCC1": {
+    "defaultMessage": "Stream url must start with rtmp://"
+  },
+  "79lLl+": {
+    "defaultMessage": "Music"
+  },
+  "7UOvbT": {
+    "defaultMessage": "Offline"
   },
   "8YT6ja": {
     "defaultMessage": "输入要转为语音的文本"
@@ -83,12 +113,6 @@
   "9a9+ww": {
     "defaultMessage": "标题"
   },
-  "9anxhq": {
-    "defaultMessage": "开始"
-  },
-  "AIHaPH": {
-    "defaultMessage": "{person}已打闪{amount}聪"
-  },
   "Atr2p4": {
     "defaultMessage": "NSFW 内容"
   },
@@ -97,6 +121,9 @@
   },
   "AyGauy": {
     "defaultMessage": "登录"
+  },
+  "BD0vyn": {
+    "defaultMessage": "{name} created a clip"
   },
   "BGxpTN": {
     "defaultMessage": "直播流聊天室"
@@ -107,6 +134,9 @@
   "C81/uG": {
     "defaultMessage": "登出"
   },
+  "CsCUYo": {
+    "defaultMessage": "{n} sats"
+  },
   "D3idYv": {
     "defaultMessage": "设置"
   },
@@ -115,6 +145,9 @@
   },
   "Dn82AL": {
     "defaultMessage": "在线"
+  },
+  "E9APoR": {
+    "defaultMessage": "Could not create stream URL"
   },
   "ESyhzp": {
     "defaultMessage": "你为{name}的留言"
@@ -128,8 +161,17 @@
   "G/yZLu": {
     "defaultMessage": "移除"
   },
+  "GGaJMU": {
+    "defaultMessage": "Top Chatters"
+  },
+  "Gmiwnd": {
+    "defaultMessage": "Refresh the page to use the latest version"
+  },
   "Gq6x9o": {
     "defaultMessage": "封面图像"
+  },
+  "Gvxoji": {
+    "defaultMessage": "Name is required"
   },
   "H/bNs9": {
     "defaultMessage": "请将它安全保存！如果你丢失了此密钥，你将无法无法再次访问你的帐户。对，很严肃！"
@@ -152,6 +194,9 @@
   "INlWvJ": {
     "defaultMessage": "或"
   },
+  "J/+m9y": {
+    "defaultMessage": "Stream Duration {duration} mins"
+  },
   "JEsxDw": {
     "defaultMessage": "正在上传..."
   },
@@ -161,17 +206,20 @@
   "K3r6DQ": {
     "defaultMessage": "删除"
   },
-  "K3uH1C": {
-    "defaultMessage": "离线"
-  },
   "K7AkdL": {
     "defaultMessage": "显示"
+  },
+  "KdYELp": {
+    "defaultMessage": "Get stream key"
   },
   "KkIL3s": {
     "defaultMessage": "不，我未满18岁"
   },
   "LknBsU": {
     "defaultMessage": "直播流密钥"
+  },
+  "MTHO1W": {
+    "defaultMessage": "Start Raid"
   },
   "My6HwN": {
     "defaultMessage": "好，是安全的"
@@ -191,6 +239,12 @@
   "Oxqtyf": {
     "defaultMessage": "我们已经为你设置了一个闪电钱包，因此你立即可以开始收取观众的付款！"
   },
+  "PA0ej4": {
+    "defaultMessage": "Create Clip"
+  },
+  "Pe0ogR": {
+    "defaultMessage": "Theme"
+  },
   "Q3au2v": {
     "defaultMessage": "大约{estimate}"
   },
@@ -200,20 +254,32 @@
   "QRRCp0": {
     "defaultMessage": "直播流链接"
   },
+  "QWlMq9": {
+    "defaultMessage": "Stream key"
+  },
   "QceMQZ": {
     "defaultMessage": "目标：{amount}"
   },
   "Qe1MJu": {
     "defaultMessage": "{amount}來自{name}"
   },
+  "RJ2VxG": {
+    "defaultMessage": "A new version has been detected"
+  },
   "RJOmzk": {
     "defaultMessage": "我已阅读并同意{provider}的{terms}。"
+  },
+  "RS6smY": {
+    "defaultMessage": "Raid Message"
   },
   "RXQdxR": {
     "defaultMessage": "请登录以撰写消息！"
   },
   "RrCui3": {
     "defaultMessage": "概要"
+  },
+  "RtYNX5": {
+    "defaultMessage": "Chat Users"
   },
   "TP/cMX": {
     "defaultMessage": "已结束"
@@ -233,15 +299,24 @@
   "VA/Z1S": {
     "defaultMessage": "隐藏"
   },
+  "W7DNWx": {
+    "defaultMessage": "Stream Forwarding"
+  },
   "W9355R": {
     "defaultMessage": "解除静音"
   },
   "X2PZ7D": {
     "defaultMessage": "创建目标"
   },
+  "XgWvGA": {
+    "defaultMessage": "Reactions"
+  },
   "YPh5Nq": {
     "defaultMessage": "@ {rate}",
     "description": "Showing zap amount in USD @ rate"
+  },
+  "YagVIe": {
+    "defaultMessage": "{n}p"
   },
   "Z8ZOEY": {
     "defaultMessage": "这个方式不安全。我们建议使用{nostrlink}"
@@ -249,8 +324,17 @@
   "ZmqxZs": {
     "defaultMessage": "你可以稍后更改它"
   },
+  "Zse7yG": {
+    "defaultMessage": "Raid target"
+  },
   "acrOoz": {
     "defaultMessage": "继续"
+  },
+  "aqjZxs": {
+    "defaultMessage": "Raid!"
+  },
+  "bfvyfs": {
+    "defaultMessage": "Anon"
   },
   "cPIKU2": {
     "defaultMessage": "已关注"
@@ -263,6 +347,9 @@
   },
   "d5zWyh": {
     "defaultMessage": "测试语音"
+  },
+  "dOQCL8": {
+    "defaultMessage": "Display name"
   },
   "dVD/AR": {
     "defaultMessage": "最高打闪用户"
@@ -282,14 +369,23 @@
   "feZ/kG": {
     "defaultMessage": "使用私钥登录 (不安全)"
   },
+  "gzsn7k": {
+    "defaultMessage": "{n} messages"
+  },
   "hGQqkW": {
     "defaultMessage": "时间表"
+  },
+  "hMzcSq": {
+    "defaultMessage": "Messages"
   },
   "heyxZL": {
     "defaultMessage": "启用文字转语音"
   },
   "hpl4BP": {
     "defaultMessage": "聊天小部件"
+  },
+  "hzSNj4": {
+    "defaultMessage": "Dashboard"
   },
   "ieGrWo": {
     "defaultMessage": "关注"
@@ -299,6 +395,18 @@
   },
   "izWS4J": {
     "defaultMessage": "取消关注"
+  },
+  "j/jueq": {
+    "defaultMessage": "Raiding {name}"
+  },
+  "jctiUc": {
+    "defaultMessage": "Highest Viewers"
+  },
+  "jgOqxt": {
+    "defaultMessage": "Widgets"
+  },
+  "jkAQj5": {
+    "defaultMessage": "Stream Ended"
   },
   "jr4+vD": {
     "defaultMessage": "Markdown"
@@ -318,6 +426,9 @@
   "ljmS5P": {
     "defaultMessage": "端点"
   },
+  "miQKuZ": {
+    "defaultMessage": "Stream Time"
+  },
   "mnJYBQ": {
     "defaultMessage": "语音"
   },
@@ -333,17 +444,23 @@
   "nwA8Os": {
     "defaultMessage": "添加卡片"
   },
+  "o8pHw3": {
+    "defaultMessage": "AUTO"
+  },
   "oHPB8Q": {
     "defaultMessage": "打闪 {name}"
   },
   "oZrFyI": {
     "defaultMessage": "直播流类型应该是 HLS"
   },
-  "pO/lPX": {
-    "defaultMessage": "预定于{date}"
+  "q+zTWM": {
+    "defaultMessage": "<s>{person}</s> zapped <s>{amount}</s> sats"
   },
   "r2Jjms": {
     "defaultMessage": "登录"
+  },
+  "rELDbB": {
+    "defaultMessage": "Refresh"
   },
   "rWBFZA": {
     "defaultMessage": "前方有色情内容！"
