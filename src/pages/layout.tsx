@@ -139,7 +139,7 @@ export function LayoutPage() {
           onClick={() => navigate("/")}>
           <img src="/logo.svg" width={130} />
         </div>
-        <div className="grow">{/* Future menu items go here */}</div>
+        <div className="grow flex justify-start items-center font-bold">{ <a href="https://welcome.tunestr.io" className="about-link">About</a>}</div>
         <div className="flex items-center gap-3">
           {langSelector()}
           {loggedIn()}
