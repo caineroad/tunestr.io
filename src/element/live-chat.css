@@ -95,14 +95,14 @@
   display: flex;
   flex-direction: column;
   gap: var(--gap-s);
-  border-bottom: 1px solid var(--border, #171717);
+  border-bottom: 1px solid #6d28d9;
   padding-bottom: var(--gap-s);
 }
 
 .top-zappers h3 {
   margin: 0;
   font-size: 16px;
-  font-family: Outfit;
+  font-family: Inter;
   font-weight: 600;
 }
 
@@ -117,12 +117,14 @@
 
 .top-zappers-container::-webkit-scrollbar {
   height: 8px;
+  width:24px;
 }
 
 @media (min-width: 1020px) {
   .top-zappers-container {
     display: flex;
     gap: 8px;
+    padding-bottom: 8px;
   }
 }
 
@@ -130,7 +132,7 @@
   position: relative;
   border-radius: 12px;
   border: 1px solid transparent;
-  background: #0a0a0a;
+  background: #1a1338;
   background-clip: padding-box;
   padding: 8px 12px;
 }
@@ -186,8 +188,8 @@
   align-items: flex-start;
   gap: 12px;
   border-radius: 12px;
-  border: 1px solid #303030;
-  background: #111;
+  border: 1px solid #3F2D86;
+  background: #2B1E5E;
   box-shadow: 0px 7px 4px 0px rgba(0, 0, 0, 0.25);
   margin-top: 4px;
   width: fit-content;
@@ -289,9 +291,8 @@
 }
 
 .badge-award {
-  border-radius: 12px;
-  border: 1px solid #303030;
-  background: #111;
+  border-radius: 8px;
+  background: rgb(255,255,255,0.05);
   padding: 8px 12px;
 }
 

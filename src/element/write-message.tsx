@@ -87,6 +87,9 @@ export function WriteMessage({ link, emojiPacks }: { link: NostrLink; emojiPacks
         <div onClick={pickEmoji}>
           <Icon name="face" className="write-emoji-button" />
         </div>
+        <AsyncButton onClick={sendChatMessage} className="btn">
+        <FormattedMessage defaultMessage="Send" id="9WRlF4" />
+      </AsyncButton>
         {showEmojiPicker && (
           <Suspense>
             <EmojiPicker
@@ -100,9 +103,7 @@ export function WriteMessage({ link, emojiPacks }: { link: NostrLink; emojiPacks
           </Suspense>
         )}
       </div>
-      <AsyncButton onClick={sendChatMessage} className="btn btn-border">
-        <FormattedMessage defaultMessage="Send" id="9WRlF4" />
-      </AsyncButton>
+
     </>
   );
 }

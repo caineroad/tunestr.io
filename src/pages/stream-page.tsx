@@ -59,11 +59,11 @@ function ProfileInfo({ ev, goal }: { ev?: TaggedNostrEvent; goal?: TaggedNostrEv
           <p>{summary}</p>
           <div className="tags">
             <StatePill state={status as StreamState} />
-            <span className="pill bg-gray-1">
+            <span className="pill bg-indigo-950">
               <FormattedMessage defaultMessage="{n} viewers" id="3adEeb" values={{ n: formatSats(viewers) }} />
             </span>
             {status === StreamState.Live && (
-              <span className="pill bg-gray-1">
+              <span className="pill bg-indigo-950">
                 <StreamTimer ev={ev} />
               </span>
             )}
@@ -141,7 +141,7 @@ export function StreamPage({ link, evPreload }: { evPreload?: NostrEvent; link: 
   return (
     <div className="stream-page full-page-height">
       <Helmet>
-        <title>{`${title} - zap.stream`}</title>
+        <title>{`${title} - Tunestr`}</title>
         <meta name="description" content={descriptionContent} />
         <meta property="og:url" content={`https://${window.location.host}/${link.encode()}`} />
         <meta property="og:type" content="video" />

@@ -110,7 +110,7 @@ export function LayoutPage() {
 
     return (
       <Dialog.Root open={showLogin} onOpenChange={setShowLogin}>
-        <button type="button" className="btn btn-border" onClick={handleLogin}>
+        <button type="button" className="btn" onClick={handleLogin}>
           <FormattedMessage defaultMessage="Login" id="AyGauy" />
           <Icon name="login" />
         </button>
@@ -135,9 +135,9 @@ export function LayoutPage() {
       </Helmet>
       <header>
         <div
-          className="bg-[#f1f0ff] flex items-center pointer rounded-2xl aspect-square px-1"
+          className="flex items-center pointer"
           onClick={() => navigate("/")}>
-          <img src="/zap-stream.svg" width={40} />
+          <img src="/logo.svg" width={130} />
         </div>
         <div className="grow">{/* Future menu items go here */}</div>
         <div className="flex items-center gap-3">

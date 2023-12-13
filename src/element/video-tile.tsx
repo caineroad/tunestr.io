@@ -36,12 +36,12 @@ export function VideoTile({
         state={ev}>
         <div
           style={{
-            backgroundImage: `url(${inView ? ((image?.length ?? 0) > 0 ? image : "/zap-stream.svg") : ""})`,
+            backgroundImage: `url(${inView ? ((image?.length ?? 0) > 0 ? image : "/logo.svg") : ""})`,
           }}></div>
         <span className="pill-box">
           {showStatus && <StatePill state={status as StreamState} />}
           {participants && (
-            <span className="pill viewers bg-gray-1">
+            <span className="pill viewers bg-indigo-950">
               <FormattedMessage
                 defaultMessage="{n} viewers"
                 id="3adEeb"

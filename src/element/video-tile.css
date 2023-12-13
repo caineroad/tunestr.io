@@ -18,12 +18,12 @@
 }
 
 .video-tile > div:nth-child(1) {
-  border-radius: 16px;
   width: 100%;
   aspect-ratio: 16 / 10;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  background-color:#181036;
 }
 
 .video-tile h3 {

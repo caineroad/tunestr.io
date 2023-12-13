@@ -21,7 +21,7 @@ export function ShareMenu({ ev }: { ev: NostrEvent }) {
   const login = useLogin();
 
   const naddr = encodeTLV(NostrPrefix.Address, unwrap(findTag(ev, "d")), undefined, ev.kind, ev.pubkey);
-  const link = `https://zap.stream/${naddr}`;
+  const link = `https://tunestr.io/${naddr}`;
 
   async function sendMessage() {
     const pub = login?.publisher();
@@ -40,13 +40,13 @@ export function ShareMenu({ ev }: { ev: NostrEvent }) {
         gap={5}
         menuClassName="ctx-menu"
         menuButton={
-          <button type="button" className="btn btn-secondary">
+          <button type="button" className="btn rounded-full">
             <FormattedMessage defaultMessage="Share" id="OKhRC6" />
           </button>
         }>
         <MenuItem
           onClick={() => {
-            setMessage(`Come check out my stream on zap.stream!\n\n${link}\n\nnostr:${naddr}`);
+            setMessage(`Come check out my stream on tunestr.io!\n\n${link}\n\nnostr:${naddr}`);
             setShare("nostr");
           }}>
           <Icon name="nostrich" size={24} />
@@ -72,7 +72,7 @@ export function ShareMenu({ ev }: { ev: NostrEvent }) {
                   rows={15}
                 />
               </div>
-              <AsyncButton className="btn btn-primary" onClick={sendMessage}>
+              <AsyncButton className="btn" onClick={sendMessage}>
                 <FormattedMessage defaultMessage="Send" id="9WRlF4" />
               </AsyncButton>
             </div>
