@@ -137,7 +137,7 @@ export function LayoutPage() {
         <div
           className="bg-white flex items-center pointer rounded-2xl aspect-square px-1"
           onClick={() => navigate("/")}>
-          <img src="/zap-stream.svg" width={40} />
+          <img src="/logo.svg" width={130} />
         </div>
         <div className="grow flex items-center gap-2"></div>
         <div className="flex items-center gap-3">

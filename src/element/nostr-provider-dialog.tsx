@@ -141,7 +141,7 @@ export function NostrProviderDialog({
             <div className="flex gap-2">
               {sortEndpoints(info.endpoints).map(a => (
                 <span
-                  className={`pill bg-gray-1${ep?.name === a.name ? " active" : ""}`}
+                  className={`pill bg-indigo-700${ep?.name === a.name ? " active" : ""}`}
                   onClick={() => setEndpoint(a)}>
                   {a.name}
                 </span>
@@ -405,7 +405,7 @@ function AddForwardInputs({
   }
 
   return (
-    <div className="flex flex-col p-4 gap-2 bg-gray-3 rounded-xl">
+    <div className="flex flex-col p-4 gap-2 bg-indigo-900 rounded-xl">
       <div className="flex gap-2">
         <div className="paper flex-1">
           <select value={svc} onChange={e => setService(e.target.value as ForwardService)} className="bg-gray-1">

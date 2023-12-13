@@ -11,7 +11,7 @@ export function StatePill({ state, ...props }: StatePillProps) {
       {...props}
       className={classNames(
         "uppercase font-white pill",
-        state === StreamState.Live ? "bg-primary" : "bg-gray-1",
+        state === StreamState.Live ? "bg-primary" : "bg-indigo-950",
         props.className
       )}>
       {state}

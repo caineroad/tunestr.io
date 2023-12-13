@@ -13,7 +13,7 @@
 
 .send-zap .pill {
   border-radius: 16px;
-  background: #262626;
+  background: #32275b;
 
   padding: 8px 12px;
   text-align: center;
@@ -21,7 +21,7 @@
 
 .send-zap .pill.active {
   color: inherit;
-  background: #353535;
+  background: #8777bd;
 }
 
 .send-zap p {

@@ -4,10 +4,10 @@
 
 body {
   margin: 0;
-  font-family: "Outfit", sans-serif;
+  font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #0a0a0a;
+  background-color: #090129;
   color: white;
 }
 
@@ -17,8 +17,8 @@ body {
   --gap-s: 16px;
   --header-height: 48px;
   --text-muted: #797979;
-  --primary: #f838d9;
-  --secondary: #34d2fe;
+  --primary: #FFBF19;
+  --secondary: #FFBF19;
   --zap: #ff8d2b;
   --text-danger: #ff563f;
   --surface: #222;
@@ -93,8 +93,12 @@ a {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-  padding: 8px 16px;
-  border-radius: 16px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   background: white;
   color: black;
 }
@@ -122,7 +126,7 @@ a {
 
 .btn-primary {
   background: #fff;
-  color: #0a0a0a;
+  color: #090129;
 }
 
 .btn-primary:hover {
@@ -198,9 +202,9 @@ input[type="checkbox"]:checked:after {
 }
 
 div.paper {
-  background: #171717;
-  border-radius: 16px;
-  padding: 8px 16px;
+  background: #312E6A;
+  border-radius: 10px;
+  padding: 12px 16px;
   display: flex;
   gap: 10px;
   align-items: center;
@@ -231,14 +235,14 @@ div.paper {
   flex-direction: column;
   gap: 12px;
   z-index: 2;
-  background-color: #171717;
-  border-radius: 24px;
+  background-color: #181036;
+  border-radius: 12px;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
-  max-width: 90vw;
+  width: 90vw;
+  max-width: 480px;
   max-height: 85vh;
   overflow-y: auto;
   z-index: 100;
@@ -264,7 +268,7 @@ div.paper {
 }
 
 .dialog-content div.paper {
-  background: #262626;
+  background: #2d2353;
   width: 100%;
   box-sizing: border-box;
 }
@@ -292,7 +296,7 @@ div.paper {
   font-weight: 700;
   line-height: 20px;
   border-radius: 12px;
-  background: #434343;
+  background: #2B1E5E;
   padding: 12px 0px;
   color: white;
   display: flex;
@@ -306,7 +310,7 @@ div.paper {
 }
 
 .ctx-menu li:hover {
-  background: #505050;
+  background: #352670;
 }
 
 .szh-menu__item--hover {
@@ -354,9 +358,10 @@ div.paper {
 
 .full-page-height .live-chat {
   padding: 24px 16px 8px 24px;
-  border: 1px solid #171717;
-  border-radius: 24px;
+  border: none;
+  border-radius: 10px;
   height: inherit;
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .h-inhreit {
