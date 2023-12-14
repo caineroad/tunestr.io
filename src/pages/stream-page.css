@@ -48,6 +48,7 @@
 
   .stream-page .info {
     flex-direction: column;
+    gap: 4rem;
   }
 
   .stream-page .stream-info {
@@ -69,15 +70,13 @@
   gap: var(--gap-m);
 }
 
-.profile-info .btn {
-  padding: 12px 16px;
-}
 
 .info h1 {
   margin: 0 0 8px 0;
   font-weight: 600;
   font-size: 28px;
   line-height: 35px;
+  font-family: 'Inter Display', sans-serif;
 }
 
 .info p {

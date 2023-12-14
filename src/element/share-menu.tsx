@@ -72,7 +72,7 @@ export function ShareMenu({ ev }: { ev: NostrEvent }) {
                   rows={15}
                 />
               </div>
-              <AsyncButton className="btn" onClick={sendMessage}>
+              <AsyncButton className="btn rounded-lg" onClick={sendMessage}>
                 <FormattedMessage defaultMessage="Send" id="9WRlF4" />
               </AsyncButton>
             </div>

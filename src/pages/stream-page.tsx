@@ -72,7 +72,7 @@ function ProfileInfo({ ev, goal }: { ev?: TaggedNostrEvent; goal?: TaggedNostrEv
           </div>
           {isMine && (
             <div className="actions">
-              {ev && <NewStreamDialog text="Edit" ev={ev} btnClassName="btn" />}
+              {ev && <NewStreamDialog text="Edit" ev={ev} btnClassName="btn rounded-xl" />}
               <AsyncButton type="button" className="btn btn-warning" onClick={deleteStream}>
                 <FormattedMessage defaultMessage="Delete" id="K3r6DQ" />
               </AsyncButton>

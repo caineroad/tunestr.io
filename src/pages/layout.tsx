@@ -178,7 +178,7 @@ function NewVersionBanner() {
           <FormattedMessage defaultMessage="Refresh the page to use the latest version" id="Gmiwnd" />
         </p>
       </div>
-      <AsyncButton onClick={() => window.location.reload()} className="btn">
+      <AsyncButton onClick={() => window.location.reload()} className="btn rounded-xl">
         <FormattedMessage defaultMessage="Refresh" id="rELDbB" />
       </AsyncButton>
     </div>

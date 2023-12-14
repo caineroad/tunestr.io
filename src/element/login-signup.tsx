@@ -270,7 +270,7 @@ export function LoginSignup({ close }: { close: () => void }) {
                 <FormattedMessage defaultMessage="You can change this later" id="ZmqxZs" />
               </small>
             </div>
-            <AsyncButton type="button" className="btn btn-primary" onClick={setupProfile}>
+            <AsyncButton type="button" className="btn btn-primary w-full rounded-xl" onClick={setupProfile}>
               <FormattedMessage defaultMessage="Save" id="jvo0vs" />
             </AsyncButton>
           </div>
@@ -316,7 +316,7 @@ export function LoginSignup({ close }: { close: () => void }) {
               </small>
             </div>
             {error && <b className="error">{error}</b>}
-            <AsyncButton type="button" className="btn btn-primary" onClick={saveProfile}>
+            <AsyncButton type="button" className="btn btn-primary rounded-xl w-full" onClick={saveProfile}>
               <FormattedMessage defaultMessage="Amazing! Continue.." id="tM6fNW" />
             </AsyncButton>
           </div>
