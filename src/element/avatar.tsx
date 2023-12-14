@@ -10,7 +10,7 @@ export function Avatar({ pubkey, size, user, ...props }: AvatarProps) {
   return (
     <img
       {...props}
-      className={classNames("aspect-square rounded-full bg-gray-1", props.className)}
+      className={classNames("aspect-square rounded-full bg-indigo-800", props.className)}
       alt={user?.name || user?.pubkey}
       src={src}
       onError={() => setFailed(true)}

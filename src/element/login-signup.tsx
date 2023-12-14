@@ -163,7 +163,7 @@ export function LoginSignup({ close }: { close: () => void }) {
             <h3>
               <FormattedMessage defaultMessage="No emails, just awesomeness!" id="+AcVD+" />
             </h3>
-            <button type="button" className="btn btn-primary btn-block" onClick={createAccount}>
+            <button type="button" className="btn btn-primary rounded-xl btn-block" onClick={createAccount}>
               <FormattedMessage defaultMessage="Create Account" id="5JcXdV" />
             </button>
 
@@ -174,12 +174,12 @@ export function LoginSignup({ close }: { close: () => void }) {
             </div>
             {hasNostrExtension && (
               <>
-                <AsyncButton type="button" className="btn btn-primary btn-block" onClick={loginNip7}>
+                <AsyncButton type="button" className="btn btn-primary rounded-xl btn-block" onClick={loginNip7}>
                   <FormattedMessage defaultMessage="Nostr Extension" id="ebmhes" />
                 </AsyncButton>
               </>
             )}
-            <button type="button" className="btn btn-primary btn-block" onClick={() => setStage(Stage.LoginInput)}>
+            <button type="button" className="btn btn-primary rounded-xl btn-block" onClick={() => setStage(Stage.LoginInput)}>
               <FormattedMessage defaultMessage="Login with Private Key (insecure)" id="feZ/kG" />
             </button>
             {error && <b className="error">{error}</b>}
@@ -221,14 +221,14 @@ export function LoginSignup({ close }: { close: () => void }) {
               <div className="flex gap-1">
                 <button
                   type="button"
-                  className="btn btn-secondary"
+                  className="btn rounded-xl btn-primary"
                   onClick={() => {
                     setNewKey("");
                     setStage(Stage.Login);
                   }}>
                   <FormattedMessage defaultMessage="Cancel" id="47FYwb" />
                 </button>
-                <AsyncButton onClick={doLoginNsec} className="btn btn-primary">
+                <AsyncButton onClick={doLoginNsec} className="btn rounded-xl btn-primary">
                   <FormattedMessage defaultMessage="Log In" id="r2Jjms" />
                 </AsyncButton>
               </div>
@@ -271,7 +271,7 @@ export function LoginSignup({ close }: { close: () => void }) {
                 <FormattedMessage defaultMessage="You can change this later" id="ZmqxZs" />
               </small>
             </div>
-            <AsyncButton type="button" className="btn btn-primary" onClick={setupProfile}>
+            <AsyncButton type="button" className="btn btn-primary w-full rounded-xl" onClick={setupProfile}>
               <FormattedMessage defaultMessage="Save" id="jvo0vs" />
             </AsyncButton>
           </div>
@@ -317,7 +317,7 @@ export function LoginSignup({ close }: { close: () => void }) {
               </small>
             </div>
             {error && <b className="error">{error}</b>}
-            <AsyncButton type="button" className="btn btn-primary" onClick={saveProfile}>
+            <AsyncButton type="button" className="btn btn-primary rounded-xl w-full" onClick={saveProfile}>
               <FormattedMessage defaultMessage="Amazing! Continue.." id="tM6fNW" />
             </AsyncButton>
           </div>
@@ -341,7 +341,7 @@ export function LoginSignup({ close }: { close: () => void }) {
             <div className="paper">
               <Copy text={hexToBech32("nsec", key)} />
             </div>
-            <button type="button" className="btn btn-primary" onClick={loginWithKey}>
+            <button type="button" className="btn rounded-xl btn-primary" onClick={loginWithKey}>
               <FormattedMessage defaultMessage="Ok, it's safe" id="My6HwN" />
             </button>
           </div>

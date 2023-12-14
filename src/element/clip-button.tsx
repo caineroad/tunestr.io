@@ -39,7 +39,7 @@ export function ClipButton({ ev }: { ev: TaggedNostrEvent }) {
   }
 
   return (
-    <AsyncButton onClick={makeClip} className="btn btn-primary">
+    <AsyncButton onClick={makeClip} className="btn btn-primary rounded-xl">
       <Icon name="clapperboard" />
       <FormattedMessage defaultMessage="Create Clip" id="PA0ej4" />
     </AsyncButton>

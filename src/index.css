@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter var', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #090129;
@@ -27,6 +27,11 @@ body {
   --gradient-purple: linear-gradient(135deg, #882bff 0%, #f83838 100%);
   --gradient-yellow: linear-gradient(270deg, #adff27 0%, #ffd027 100%);
   --gradient-orange: linear-gradient(270deg, #ff5b27 0%, rgba(255, 182, 39, 0.99) 100%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family:'Inter Display', sans-serif;
+  font-weight: 700;
 }
 
 @media (max-width: 1020px) {
@@ -93,8 +98,7 @@ a {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-  padding: 12px 16px;
-  border-radius: 8px;
+  padding: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -266,6 +270,7 @@ div.paper {
   padding: 25px;
   box-sizing: border-box;
   gap: 16px;
+  align-items: center;
 }
 
 .dialog-content .username,
@@ -293,7 +298,7 @@ div.paper {
 
 .dialog-content small {
   display: block;
-  color: #868686;
+  color: #978ebb;
   margin: 6px;
 }
 

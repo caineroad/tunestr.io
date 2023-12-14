@@ -41,7 +41,7 @@ export function ShareMenu({ ev }: { ev: NostrEvent }) {
         menuClassName="ctx-menu"
         menuButton={
           <button type="button" className="btn rounded-full">
-            <FormattedMessage defaultMessage="Share" id="OKhRC6" />
+             <Icon name="share-filled" className="text-share" />
           </button>
         }>
         <MenuItem
@@ -72,7 +72,7 @@ export function ShareMenu({ ev }: { ev: NostrEvent }) {
                   rows={15}
                 />
               </div>
-              <AsyncButton className="btn" onClick={sendMessage}>
+              <AsyncButton className="btn rounded-lg" onClick={sendMessage}>
                 <FormattedMessage defaultMessage="Send" id="9WRlF4" />
               </AsyncButton>
             </div>

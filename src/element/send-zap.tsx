@@ -185,7 +185,7 @@ export function SendZaps({ lnurl, pubkey, aTag, eTag, targetName, onFinish }: Se
         <div className="flex items-center">
           <Copy text={invoice} />
         </div>
-        <button className="btn btn-primary wide" onClick={() => onFinish()}>
+        <button className="btn btn-primary rounded-xl wide" onClick={() => onFinish()}>
           <FormattedMessage defaultMessage="Back" id="cyR7Kh" />
         </button>
       </>
@@ -212,7 +212,7 @@ export function SendZapsDialog(props: Omit<SendZapsProps, "onFinish">) {
         {props.button ? (
           props.button
         ) : (
-          <button className="btn btn-primary zap">
+          <button className="btn btn-primary zap rounded-xl">
             <span className="hide-on-mobile">
               <FormattedMessage defaultMessage="Zap" id="fBI91o" />
             </span>

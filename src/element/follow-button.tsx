@@ -54,7 +54,7 @@ export function LoggedInFollowButton({ tag, value }: { tag: "p" | "t"; value: st
     <AsyncButton
       disabled={timestamp ? timestamp === 0 : true}
       type="button"
-      className="btn btn-primary"
+      className="btn btn-primary rounded-xl"
       onClick={isFollowing ? unfollow : follow}>
       {isFollowing ? (
         <FormattedMessage defaultMessage="Unfollow" id="izWS4J" />

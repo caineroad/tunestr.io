@@ -182,7 +182,7 @@ export default function LiveVideoPlayer({
                     }
                     setPosition(ct);
                   }}
-                  marker={<div className="w-[16px] h-[16px] mt-[-8px] rounded-full bg-white"></div>}
+                  marker={<div className="w-[16px] h-[16px] mt-[-8px] rounded-xl bg-white"></div>}
                   style={{ width: "100%", height: "4px" }}
                 />
               )}

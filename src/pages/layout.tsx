@@ -110,7 +110,7 @@ export function LayoutPage() {
 
     return (
       <Dialog.Root open={showLogin} onOpenChange={setShowLogin}>
-        <button type="button" className="btn" onClick={handleLogin}>
+        <button type="button" className="btn rounded-xl" onClick={handleLogin}>
           <FormattedMessage defaultMessage="Login" id="AyGauy" />
           <Icon name="login" />
         </button>
@@ -169,7 +169,7 @@ function NewVersionBanner() {
           <FormattedMessage defaultMessage="Refresh the page to use the latest version" id="Gmiwnd" />
         </p>
       </div>
-      <AsyncButton onClick={() => window.location.reload()} className="btn">
+      <AsyncButton onClick={() => window.location.reload()} className="btn rounded-xl">
         <FormattedMessage defaultMessage="Refresh" id="rELDbB" />
       </AsyncButton>
     </div>

@@ -27,11 +27,13 @@
 }
 
 .video-tile h3 {
-  font-size: 20px;
+  font-size: 19px;
   line-height: 25px;
   margin: 16px 0 6px 0;
   word-break: break-all;
   word-wrap: break-word;
+  font-family: 'Inter Display', sans-serif;
+  font-weight: 700;
 }
 
 .video-tile .pill-box {
