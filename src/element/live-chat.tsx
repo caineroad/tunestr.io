@@ -119,6 +119,8 @@ export function LiveChat({
           <h3>
             <FormattedMessage defaultMessage="Top zappers" id="wzWWzV" />
           </h3>
+          <small>100% of zaps to tunestr are passed on to the artist on stage when received
+</small>
           <div className="top-zappers-container">
             <TopZappers zaps={reactions.zaps} />
           </div>
