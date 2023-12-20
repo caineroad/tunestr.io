@@ -140,7 +140,7 @@ export function LayoutPage() {
           <img src="/logo.svg" width={130} />
         </div>
         <div className="grow flex justify-start items-center font-bold"><a href="https://welcome.tunestr.io" className="about-link">About</a></div>
-        <div className="grow flex justify-start items-center"><small>100% of zaps to tunestr are passed on to the artist on stage when received</small></div>
+        <div className="grow justify-start items-center hidden md:flex"><small>100% of zaps to tunestr are passed on to the artist on stage when received</small></div>
         <div className="flex items-center gap-3">
           <Link
             to="https://discord.gg/Wtg6NVDdbT"
