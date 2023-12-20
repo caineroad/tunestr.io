@@ -58,7 +58,7 @@ export function LayoutPage() {
     return (
       <>
         {(!__SINGLE_PUBLISHER || __SINGLE_PUBLISHER === login.pubkey) && (
-          <NewStreamDialog btnClassName="btn btn-primary" />
+          <NewStreamDialog btnClassName="btn rounded-xl btn-primary" />
         )}
         <Menu
           menuClassName="ctx-menu"
@@ -131,7 +131,7 @@ export function LayoutPage() {
   return (
     <div className="page" style={styles}>
       <Helmet>
-        <title>Home - zap.stream</title>
+        <title>Home - tunestr.io</title>
       </Helmet>
       <header>
         <div
@@ -139,9 +139,8 @@ export function LayoutPage() {
           onClick={() => navigate("/")}>
           <img src="/logo.svg" width={130} />
         </div>
-        <div className="grow flex justify-start items-center font-bold">
-          <a href="https://welcome.tunestr.io" className="about-link">About</a>
-        </div>
+        <div className="grow flex justify-start items-center font-bold"><a href="https://welcome.tunestr.io" className="about-link">About</a></div>
+        <div className="grow flex justify-start items-center"><small>100% of zaps to tunestr are passed on to the artist on stage when received</small></div>
         <div className="flex items-center gap-3">
           <Link
             to="https://discord.gg/Wtg6NVDdbT"

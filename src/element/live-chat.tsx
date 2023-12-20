@@ -100,7 +100,7 @@ export function LiveChat({
   }, [events, mutedPubkeys, hostMutedPubkeys]);
 
   return (
-    <div className="live-chat" style={height ? { height: `${height}px` } : {}}>
+    <div className="live-chat bg-indigo-950" style={height ? { height: `${height}px` } : {}}>
       {(options?.showHeader ?? true) && (
         <div className="header">
           <h2 className="title">
