@@ -57,8 +57,8 @@ export function LayoutPage() {
 
     return (
       <>
-        {(!__SINGLE_PUBLISHER || __SINGLE_PUBLISHER === login.pubkey) && (
-          <NewStreamDialog btnClassName="btn rounded-xl btn-primary" />
+        {(!import.meta.env.VITE_SINGLE_PUBLISHER || import.meta.env.VITE_SINGLE_PUBLISHER === login.pubkey) && (
+          <NewStreamDialog btnClassName="btn btn-primary" />
         )}
         <Menu
           menuClassName="ctx-menu"
