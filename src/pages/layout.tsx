@@ -135,20 +135,13 @@ export function LayoutPage() {
       </Helmet>
       <header>
         <div
-          className="bg-white flex items-center pointer rounded-2xl aspect-square px-1"
+          className="flex items-center pointer rounded-2xl px-1"
           onClick={() => navigate("/")}>
           <img src="/logo.svg" width={130} />
         </div>
         <div className="grow flex justify-start items-center font-bold"><a href="https://welcome.tunestr.io" className="about-link">About</a></div>
         <div className="grow justify-start items-center hidden md:flex"><small>100% of zaps to tunestr are passed on to the artist on stage when received</small></div>
         <div className="flex items-center gap-3">
-          <Link
-            to="https://discord.gg/Wtg6NVDdbT"
-            target="_blank"
-            className="flex items-center max-md:hidden gap-1 bg-gray-1 hover:bg-gray-2 font-bold p-2 rounded-xl">
-            <Icon name="link" />
-            Discord
-          </Link>
           {langSelector()}
           {loggedIn()}
           {loggedOut()}
