@@ -15,25 +15,27 @@ export function useStreamsFeed(tag?: string) {
     rb.withOptions({
       leaveOpen: true,
     });
-    for (const publisher of JSON.parse(import.meta.env.VITE_SINGLE_PUBLISHER)) {
-      if (publisher) {
-        if (tag) {
-          rb.withFilter().kinds([LIVE_STREAM]).tag("t", [tag]).authors([publisher]);
-          rb.withFilter().kinds([LIVE_STREAM]).tag("t", [tag]).tag("p", [publisher]);
-        } else {
-          rb.withFilter().kinds([LIVE_STREAM]).authors([publisher]);
-          rb.withFilter().kinds([LIVE_STREAM]).tag("p", [publisher]);
+    if (import.meta.env.VITE_SINGLE_PUBLISHER) {
+      JSON.parse(import.meta.env.VITE_SINGLE_PUBLISHER).map(
+        (publisher) => {
+          if (tag) {
+            rb.withFilter().kinds([LIVE_STREAM]).tag("t", [tag]).authors([publisher]);
+            rb.withFilter().kinds([LIVE_STREAM]).tag("t", [tag]).tag("p", [publisher]);
+          } else {
+            rb.withFilter().kinds([LIVE_STREAM]).authors([publisher]);
+            rb.withFilter().kinds([LIVE_STREAM]).tag("p", [publisher]);
+          }
         }
-      } else {
-        if (tag) {
-          rb.withFilter().kinds([LIVE_STREAM]).tag("t", [tag]).since(since);
-        } else {
-          rb.withFilter().kinds([LIVE_STREAM]).since(since);
-        }
-      }
-      return rb;
-    }
+      )
 
+    } else {
+      if (tag) {
+        rb.withFilter().kinds([LIVE_STREAM]).tag("t", [tag]).since(since);
+      } else {
+        rb.withFilter().kinds([LIVE_STREAM]).since(since);
+      }
+    }
+    return rb;
   }, [tag, since]);
 
   function sortCreatedAt(a: NostrEvent, b: NostrEvent) {
@@ -51,15 +53,11 @@ export function useStreamsFeed(tag?: string) {
     if (feed.data) {
       if (__XXX) {
         return [...feed.data].filter(
-          a => findTag(a, "content-warning") !== undefined && (!import.meta.env.VITE_SINGLE_PUBLISHER || JSON.parse(import.meta.env.VITE_SINGLE_PUBLISHER).map(
-            (publisher) => publisher === getHost(a)
-          ) )
+          a => findTag(a, "content-warning") !== undefined
         );
       } else {
         return [...feed.data].filter(
-          a => findTag(a, "content-warning") === undefined && (!import.meta.env.VITE_SINGLE_PUBLISHER || JSON.parse(import.meta.env.VITE_SINGLE_PUBLISHER).map(
-            (publisher) => publisher === getHost(a)
-          ) )
+          a => findTag(a, "content-warning") === undefined
         );
       }
     }
