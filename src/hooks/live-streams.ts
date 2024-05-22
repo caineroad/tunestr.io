@@ -16,13 +16,18 @@ export function useStreamsFeed(tag?: string) {
       leaveOpen: true,
     });
     if (import.meta.env.VITE_SINGLE_PUBLISHER) {
-      if (tag) {
-        rb.withFilter().kinds([LIVE_STREAM]).tag("t", [tag]).authors([import.meta.env.VITE_SINGLE_PUBLISHER]);
-        rb.withFilter().kinds([LIVE_STREAM]).tag("t", [tag]).tag("p", [import.meta.env.VITE_SINGLE_PUBLISHER]);
-      } else {
-        rb.withFilter().kinds([LIVE_STREAM]).authors([import.meta.env.VITE_SINGLE_PUBLISHER]);
-        rb.withFilter().kinds([LIVE_STREAM]).tag("p", [import.meta.env.VITE_SINGLE_PUBLISHER]);
-      }
+      JSON.parse(import.meta.env.VITE_SINGLE_PUBLISHER).map(
+        (publisher) => {
+          if (tag) {
+            rb.withFilter().kinds([LIVE_STREAM]).tag("t", [tag]).authors([publisher]);
+            rb.withFilter().kinds([LIVE_STREAM]).tag("t", [tag]).tag("p", [publisher]);
+          } else {
+            rb.withFilter().kinds([LIVE_STREAM]).authors([publisher]);
+            rb.withFilter().kinds([LIVE_STREAM]).tag("p", [publisher]);
+          }
+        }
+      )
+
     } else {
       if (tag) {
         rb.withFilter().kinds([LIVE_STREAM]).tag("t", [tag]).since(since);
@@ -48,11 +53,11 @@ export function useStreamsFeed(tag?: string) {
     if (feed.data) {
       if (__XXX) {
         return [...feed.data].filter(
-          a => findTag(a, "content-warning") !== undefined && (!import.meta.env.VITE_SINGLE_PUBLISHER || import.meta.env.VITE_SINGLE_PUBLISHER === getHost(a))
+          a => findTag(a, "content-warning") !== undefined
         );
       } else {
         return [...feed.data].filter(
-          a => findTag(a, "content-warning") === undefined && (!import.meta.env.VITE_SINGLE_PUBLISHER || import.meta.env.VITE_SINGLE_PUBLISHER === getHost(a))
+          a => findTag(a, "content-warning") === undefined
         );
       }
     }
