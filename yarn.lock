@@ -6193,6 +6193,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lucide-react@npm:^0.428.0":
+  version: 0.428.0
+  resolution: "lucide-react@npm:0.428.0"
+  peerDependencies:
+    react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0-rc
+  checksum: da9b9460cd957353d995a61e1a40f69c2ed991698a7c5f0a482ce38bb3bac8066671bd016a4000f69b4b4789269db6439641c62053f9360e5bd89e319738b515
+  languageName: node
+  linkType: hard
+
 "lz-string@npm:^1.5.0":
   version: 1.5.0
   resolution: "lz-string@npm:1.5.0"
@@ -7834,6 +7843,7 @@ __metadata:
     flag-icons: ^6.11.0
     hls.js: ^1.4.6
     lodash: ^4.17.21
+    lucide-react: ^0.428.0
     marked: ^9.1.2
     postcss: ^8.4.32
     prettier: ^2.8.8
