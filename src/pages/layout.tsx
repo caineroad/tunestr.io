@@ -57,19 +57,14 @@ export function LayoutPage() {
 
     return (
       <>
-        {(JSON.parse(import.meta.env.VITE_SINGLE_PUBLISHER).map(
-            (publisher) => {
-              console.log(publisher);
-              return !publisher
-            }
-          ) || JSON.parse(import.meta.env.VITE_SINGLE_PUBLISHER).map(
-          (publisher) => {
+        {(JSON.parse(import.meta.env.VITE_SINGLE_PUBLISHER).map(publisher => {
+          console.log(publisher);
+          return !publisher;
+        }) ||
+          JSON.parse(import.meta.env.VITE_SINGLE_PUBLISHER).map(publisher => {
             console.log(publisher);
-            return publisher === login.pubkey
-          }
-        ) ) && (
-          <NewStreamDialog btnClassName="btn btn-primary" />
-        )}
+            return publisher === login.pubkey;
+          })) && <NewStreamDialog btnClassName="btn btn-primary" />}
         <Menu
           menuClassName="ctx-menu"
           menuButton={
@@ -138,19 +133,58 @@ export function LayoutPage() {
   if (login?.color) {
     (styles as Record<string, string>)["--primary"] = login.color;
   }
+
+  const columns = [
+    {
+      title: "ESSENTIALS",
+      items: [
+        { name: "VALUE FOR VALUE", url: "https://value4value.info" },
+        { name: "PROTOCOL", url: "https://nostr.com" },
+      ],
+    },
+    {
+      title: "THANKS",
+      items: [
+        { name: "SANTOS", url: "#" },
+        { name: "KIERAN", url: "#" },
+        { name: "KARNAGE", url: "#" },
+        { name: "HODLBOD", url: "#" },
+        { name: "NABISMOPRIME", url: "#" },
+        { name: "SHAWN (YAEGER)", url: "#" },
+      ],
+    },
+    {
+      title: "ARTISTS",
+      items: [
+        { name: "TIP-NZ", url: "#" },
+        { name: "SARA JADE", url: "#" },
+        { name: "JOE MARTIN", url: "#" },
+        { name: "12 RODS", url: "#" },
+        { name: "MELLOW CASSETTE", url: "#" },
+        { name: "DR. ORANGE PILL", url: "#" },
+        { name: "DJ VALERIE B", url: "#" },
+        { name: "YOU?", url: "email:v4v@tunestr.io" },
+      ],
+    },
+  ];
+
   return (
     <div className="page" style={styles}>
       <Helmet>
         <title>Home - tunestr.io</title>
       </Helmet>
       <header>
-        <div
-          className="flex items-center pointer rounded-2xl px-1"
-          onClick={() => navigate("/")}>
+        <div className="flex items-center pointer rounded-2xl px-1" onClick={() => navigate("/")}>
           <img src="/logo.svg" width={130} />
         </div>
-        <div className="grow flex justify-start items-center font-bold"><a href="https://welcome.tunestr.io" className="about-link">About</a></div>
-        <div className="grow justify-start items-center hidden md:flex"><small>100% of zaps to tunestr are passed on to the artist on stage when received</small></div>
+        {/* <div className="grow flex justify-start items-center font-bold">
+          <a href="https://welcome.tunestr.io" className="about-link">
+            About
+          </a>
+        </div> */}
+        <div className="grow justify-start items-center hidden md:flex">
+          <small>100% of zaps to tunestr are passed on to the artist on stage when received</small>
+        </div>
         <div className="flex items-center gap-3">
           {langSelector()}
           {loggedIn()}
@@ -159,6 +193,26 @@ export function LayoutPage() {
       </header>
       <Outlet />
       {NewVersion && <NewVersionBanner />}
+      <footer className="py-12 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {columns.map((column, index) => (
+              <div key={index} className="space-y-4">
+                <h2 className="text-2xl font-bold">{column.title}</h2>
+                <ul className="space-y-2">
+                  {column.items.map((item, itemIndex) => (
+                    <li key={itemIndex} className="text-lg">
+                      <a href={item.url} className="hover:underline transition-colors duration-300 ease-in-out">
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
