@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Emoji } from "./emoji";
 import { Mention } from "./mention";
 import { HyperText } from "./hypertext";
-import { Event } from "./Event";
+import { EventEmbed } from "./event-embed";
 import { SendZapsDialog } from "./send-zap";
 
 export type EventComponent = FunctionComponent<{ link: NostrLink }>;
@@ -14,17 +14,19 @@ interface TextProps {
   content: string;
   tags: Array<Array<string>>;
   eventComponent?: EventComponent;
+  className?: string;
 }
 
-export function Text({ content, tags, eventComponent }: TextProps) {
+export function Text({ content, tags, eventComponent, className }: TextProps) {
   const frags = useMemo(() => {
     return transformText(content, tags);
   }, [content, tags]);
 
+  let ctr = 0;
   function renderFrag(f: ParsedFragment) {
     switch (f.type) {
       case "custom_emoji":
-        return <Emoji name={f.content} url={f.content} />;
+        return <Emoji name={f.content} url={f.content} key={ctr++} />;
       case "media":
       case "link": {
         if (f.content.startsWith("nostr:")) {
@@ -32,25 +34,29 @@ export function Text({ content, tags, eventComponent }: TextProps) {
           if (link) {
             if (
               link.type === NostrPrefix.Event ||
-              link?.type === NostrPrefix.Address ||
-              link?.type === NostrPrefix.Note
+              link.type === NostrPrefix.Address ||
+              link.type === NostrPrefix.Note
             ) {
-              return eventComponent?.({ link }) ?? <Event link={link} />;
+              return eventComponent?.({ link }) ?? <EventEmbed link={link} key={ctr++} />;
             } else {
-              return <Mention pubkey={link.id} />;
+              return <Mention pubkey={link.id} key={ctr++} />;
             }
           }
         }
         return (
-          <span className="text">
-            <HyperText link={f.content}>{f.content}</HyperText>
-          </span>
+          <HyperText link={f.content} key={ctr++}>
+            {f.content}
+          </HyperText>
         );
       }
       case "mention":
-        return <Mention pubkey={f.content} />;
+        return <Mention pubkey={f.content} key={ctr++} />;
       case "hashtag":
-        return <Link to={`/t/${f.content}`}>#{f.content}</Link>;
+        return (
+          <Link to={`/t/${f.content}`} key={ctr++}>
+            #{f.content}
+          </Link>
+        );
       default: {
         if (f.content.startsWith("lnurlp:")) {
           // LUD-17: https://github.com/lnurl/luds/blob/luds/17.md
@@ -58,10 +64,10 @@ export function Text({ content, tags, eventComponent }: TextProps) {
           url.protocol = "https:";
           return <SendZapsDialog pubkey={undefined} lnurl={url.toString()} button={<Link to={""}>{f.content}</Link>} />;
         }
-        return <span className="text">{f.content}</span>;
+        return f.content;
       }
     }
   }
 
-  return frags.map(renderFrag);
+  return <span className={className}>{frags.map(renderFrag)}</span>;
 }

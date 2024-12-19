@@ -1,416 +1,1021 @@
 {
   "+0zv6g": {
-    "defaultMessage": "Image"
+    "defaultMessage": "이미지"
   },
   "+AcVD+": {
-    "defaultMessage": "No emails, just awesomeness!"
+    "defaultMessage": "이메일은 필요 없고, 멋진 기능만 있습니다!"
+  },
+  "+sdKx8": {
+    "defaultMessage": "지금 라이브"
   },
   "+vVZ/G": {
-    "defaultMessage": "Connect"
+    "defaultMessage": "연결"
+  },
+  "+y6JUK": {
+    "defaultMessage": "레이드"
   },
   "/0TOL5": {
-    "defaultMessage": "Amount"
+    "defaultMessage": "금액"
+  },
+  "/563b0": {
+    "defaultMessage": "잔액: {n} sats"
   },
   "/EvlqN": {
-    "defaultMessage": "nostr signer extension"
+    "defaultMessage": "노스트르 서명자 확장"
   },
-  "/GCoTA": {
-    "defaultMessage": "Clear"
+  "/JkXBo": {
+    "defaultMessage": "{title}에서 스크랩"
+  },
+  "/Jp9pC": {
+    "defaultMessage": "합계: {amount} sats"
+  },
+  "/aFYQ5": {
+    "defaultMessage": "스트림 포워딩(선택 사항)"
+  },
+  "/w4RM6": {
+    "defaultMessage": "IRL"
+  },
+  "01iNut": {
+    "defaultMessage": "귀하의 주소는 귀하의 소유가 아닙니다."
   },
   "04lmFi": {
-    "defaultMessage": "Save Key"
-  },
-  "0GfNiL": {
-    "defaultMessage": "Stream Zap Goals"
+    "defaultMessage": "키 저장"
   },
   "0VV/sK": {
-    "defaultMessage": "Goal"
+    "defaultMessage": "목표"
+  },
+  "0hNxBy": {
+    "defaultMessage": "시작"
+  },
+  "0rVLjV": {
+    "defaultMessage": "아직 스트림이 없습니다."
   },
   "1EYCdR": {
-    "defaultMessage": "Tags"
+    "defaultMessage": "태그"
+  },
+  "1LBny5": {
+    "defaultMessage": "중지됨"
+  },
+  "1q4BO/": {
+    "defaultMessage": "유효한 URL이 아닙니다."
   },
   "1qsXCO": {
-    "defaultMessage": "eg. name@wallet.com"
+    "defaultMessage": "예: name@wallet.com"
   },
   "2/2yg+": {
-    "defaultMessage": "Add"
+    "defaultMessage": "추가"
   },
-  "2CGh/0": {
-    "defaultMessage": "live"
+  "2lVQYF": {
+    "defaultMessage": "...더 보기"
+  },
+  "2ukA4d": {
+    "defaultMessage": "{n} 시간"
+  },
+  "2wdFaB": {
+    "defaultMessage": "스트림 종료"
+  },
+  "37mth/": {
+    "defaultMessage": "시청자"
   },
   "3HwrQo": {
     "defaultMessage": "Zap!"
   },
   "3adEeb": {
-    "defaultMessage": "{n} viewers"
+    "defaultMessage": "{n} 시청자"
   },
   "3df560": {
-    "defaultMessage": "Login with private key"
+    "defaultMessage": "개인 키로 로그인"
+  },
+  "3kbIhS": {
+    "defaultMessage": "제목 없음"
+  },
+  "3yk8fB": {
+    "defaultMessage": "지갑"
   },
   "47FYwb": {
-    "defaultMessage": "Cancel"
+    "defaultMessage": "취소"
+  },
+  "4RhY4O": {
+    "defaultMessage": "OBS의 설정 예시(Apple M1 Mac)"
+  },
+  "4XfMux": {
+    "defaultMessage": "동영상"
+  },
+  "4iBdw1": {
+    "defaultMessage": "레이드"
   },
   "4l69eO": {
-    "defaultMessage": "Hmm, your lightning address looks wrong"
+    "defaultMessage": "라이트닝 주소가 잘못된 것 같습니다."
   },
   "4l6vz1": {
-    "defaultMessage": "Copy"
+    "defaultMessage": "복사"
   },
-  "4uI538": {
-    "defaultMessage": "Resolutions"
+  "50+/JW": {
+    "defaultMessage": "스트림 키가 필요합니다."
+  },
+  "58DXVG": {
+    "defaultMessage": "시작하려면 전달하려는 플랫폼에서 스트림 키를 받으면 됩니다."
   },
   "5JcXdV": {
-    "defaultMessage": "Create Account"
+    "defaultMessage": "계정 만들기"
+  },
+  "5L4ati": {
+    "defaultMessage": "Zap from"
+  },
+  "5LXWMX": {
+    "defaultMessage": "새로운 목표"
   },
   "5QYdPU": {
-    "defaultMessage": "Start Time"
+    "defaultMessage": "시작 시간"
+  },
+  "5Wwopw": {
+    "defaultMessage": "가격 책정"
   },
   "5kx+2v": {
-    "defaultMessage": "Server Url"
+    "defaultMessage": "서버 URL"
+  },
+  "5tM0VD": {
+    "defaultMessage": "스트림 시작"
+  },
+  "5vMmmR": {
+    "defaultMessage": "노스트르에서 사용자 아이디는 고유하지 않습니다. 노스트르 주소는 등록 시 부여되는 사람이 읽을 수 있는 고유한 주소로, 회원님에게만 부여됩니다."
+  },
+  "69hmpj": {
+    "defaultMessage": "{name}에서 레이드"
+  },
+  "6PK5Jy": {
+    "defaultMessage": "Past Stream"
   },
   "6Z2pvJ": {
-    "defaultMessage": "Stream Providers"
+    "defaultMessage": "스트림 공급자"
   },
   "6pr6hJ": {
-    "defaultMessage": "Minimum amount for text to speech"
+    "defaultMessage": "텍스트 음성 변환을 위한 최소 금액"
+  },
+  "7+bCC1": {
+    "defaultMessage": "스트림 URL은 rtmp://로 시작해야 합니다."
+  },
+  "74PejI": {
+    "defaultMessage": "상위 뷰어"
+  },
+  "79lLl+": {
+    "defaultMessage": "음악"
+  },
+  "7UOvbT": {
+    "defaultMessage": "오프라인"
+  },
+  "89UZph": {
+    "defaultMessage": "스트리밍 소프트웨어 구성"
   },
   "8YT6ja": {
-    "defaultMessage": "Insert text to speak"
+    "defaultMessage": "말할 텍스트 삽입"
+  },
+  "8aAwpp": {
+    "defaultMessage": "수동 호스팅의 경우 스트림 URL 필드에 HLS URL만 있으면 됩니다. 호스팅 설정에서 이를 쉽게 찾을 수 있을 것입니다."
+  },
+  "8xVdjn": {
+    "defaultMessage": "비디오 코덱"
   },
   "9WRlF4": {
-    "defaultMessage": "Send"
+    "defaultMessage": "보내기"
+  },
+  "9ZoFpI": {
+    "defaultMessage": "파일 삭제"
   },
   "9a9+ww": {
-    "defaultMessage": "Title"
+    "defaultMessage": "제목"
   },
-  "9anxhq": {
-    "defaultMessage": "Starts"
+  "9pMqYs": {
+    "defaultMessage": "노스트르 주소"
   },
-  "AIHaPH": {
-    "defaultMessage": "{person} zapped {amount} sats"
+  "9rmSgv": {
+    "defaultMessage": "OBS(오픈 방송사 소프트웨어)는 Windows, Mac, Linux에서 동영상 녹화 및 실시간 스트리밍을 위한 무료 오픈 소스 소프트웨어입니다. 스트리머들이 많이 사용하는 소프트웨어입니다. 동영상, 오디오 및 스트림에 추가하려는 다른 모든 것을 캡처하려면 이 소프트웨어를 설치해야 합니다. 설치하고 기본 설정에 맞게 구성한 후 스트림 설정에서 스트림 URL과 스트림 키를 OBS에 추가하여 tunestr.io과 연결합니다."
+  },
+  "A1zT+z": {
+    "defaultMessage": "검색 결과: {term}"
+  },
+  "A7K3S+": {
+    "defaultMessage": "Account Setup"
+  },
+  "ALdW69": {
+    "defaultMessage": "참고: {name}"
+  },
+  "ASKb16": {
+    "defaultMessage": "A description of the stream"
+  },
+  "AYIR/J": {
+    "defaultMessage": "이미지 제거"
   },
   "Atr2p4": {
-    "defaultMessage": "NSFW Content"
+    "defaultMessage": "NSFW 콘텐츠"
   },
   "AukrPM": {
-    "defaultMessage": "No viewer data available"
+    "defaultMessage": "사용 가능한 시청자 데이터 없음"
+  },
+  "Axo/o5": {
+    "defaultMessage": "과학 및 기술"
   },
   "AyGauy": {
-    "defaultMessage": "Login"
+    "defaultMessage": "로그인"
   },
-  "BGxpTN": {
-    "defaultMessage": "Stream Chat"
+  "BD0vyn": {
+    "defaultMessage": "{name} 클립 생성"
+  },
+  "Bd1yEX": {
+    "defaultMessage": "새로운 스트림 목표"
   },
   "Bep/gA": {
-    "defaultMessage": "Private key"
+    "defaultMessage": "개인 키"
+  },
+  "BzQPM+": {
+    "defaultMessage": "목적지"
   },
   "C81/uG": {
-    "defaultMessage": "Logout"
+    "defaultMessage": "로그아웃"
+  },
+  "CTgA2G": {
+    "defaultMessage": "아직 계정이 없는 경우 새 계정을 만드세요."
+  },
+  "CsCUYo": {
+    "defaultMessage": "{n} sats"
+  },
+  "CsS/fy": {
+    "defaultMessage": "{estimate} 남은 ({balance} 수능 @ {rate} 수능 / {unit})"
   },
   "D3idYv": {
-    "defaultMessage": "Settings"
+    "defaultMessage": "설정"
   },
   "DZKuuP": {
-    "defaultMessage": "Logged in as"
+    "defaultMessage": "다음 계정으로 로그인"
+  },
+  "DkgCAz": {
+    "defaultMessage": "tunestr.io에서 스트리밍하려면 어떻게 하나요?"
   },
   "Dn82AL": {
-    "defaultMessage": "Live"
+    "defaultMessage": "라이브"
+  },
+  "DqmiAe": {
+    "defaultMessage": "Dont have a nostr extension? Try {nos2x}, {nostore} or {alby}"
+  },
+  "E7n6zr": {
+    "defaultMessage": "현재 스트림 비용: {amount} sats/{unit} ( {x}1시간 스트림의 경우 약 {usd}/일)"
+  },
+  "E9APoR": {
+    "defaultMessage": "스트림 URL을 만들 수 없습니다."
   },
   "ESyhzp": {
-    "defaultMessage": "Your comment for {name}"
+    "defaultMessage": "{name}에 대한 귀하의 코멘트"
+  },
+  "EcglP9": {
+    "defaultMessage": "Key"
+  },
+  "FAUhZf": {
+    "defaultMessage": "수능이란 무엇인가요?"
+  },
+  "FIDK5Y": {
+    "defaultMessage": "역대 최고 재퍼"
+  },
+  "FXepR9": {
+    "defaultMessage": "{m}mo {ago}",
+    "description": "Number of month(s) relative to now"
   },
   "FjDlus": {
-    "defaultMessage": "You can always replace it with your own address later."
+    "defaultMessage": "나중에 언제든지 자신의 주소로 바꿀 수 있습니다."
   },
   "Fodi9+": {
-    "defaultMessage": "Get paid by viewers"
+    "defaultMessage": "시청자로부터 결제 받기"
   },
   "G/yZLu": {
-    "defaultMessage": "Remove"
+    "defaultMessage": "제거"
+  },
+  "G857ni": {
+    "defaultMessage": "LNURL 또는 송장"
+  },
+  "GGaJMU": {
+    "defaultMessage": "인기 채팅자"
+  },
+  "GSuQPh": {
+    "defaultMessage": "알 수 없는 이벤트 링크"
+  },
+  "GSye7T": {
+    "defaultMessage": "라이트닝 주소"
+  },
+  "GcozGF": {
+    "defaultMessage": "잘못된 라이트닝 주소"
   },
   "Gq6x9o": {
-    "defaultMessage": "Cover Image"
+    "defaultMessage": "표지 이미지"
+  },
+  "Gvxoji": {
+    "defaultMessage": "이름은 필수 입력 사항입니다."
+  },
+  "GwbTAz": {
+    "defaultMessage": "스트림"
   },
   "H/bNs9": {
-    "defaultMessage": "Save this and keep it safe! If you lose this key, you won't be able to access your account ever again. Yep, it's that serious!"
+    "defaultMessage": "이 키를 저장하여 안전하게 보관하세요! 이 키를 분실하면 다시는 계정에 액세스할 수 없습니다. 네, 그만큼 심각합니다!"
+  },
+  "H1fdc9": {
+    "defaultMessage": "썸네일을 추가하세요."
+  },
+  "H4hJvF": {
+    "defaultMessage": "카테고리 선택"
   },
   "H5+NAX": {
-    "defaultMessage": "Balance"
+    "defaultMessage": "잔액"
   },
   "HAlOn1": {
-    "defaultMessage": "Name"
+    "defaultMessage": "이름"
   },
-  "I/TubD": {
-    "defaultMessage": "Select a goal..."
+  "HDgXO/": {
+    "defaultMessage": "tunestr.io은 노스트르 프로토콜로 구동되는 오픈 소스 플랫폼입니다. 무료 스트리밍을 제공할 수 있는 거대 기업이나 거대 펀드가 없습니다."
+  },
+  "HsgeUk": {
+    "defaultMessage": "tunestr.io에서 제 스트리밍을 확인해 보세요! {link}"
+  },
+  "Ht231k": {
+    "defaultMessage": "전달"
+  },
+  "HvUhXt": {
+    "defaultMessage": "{n} 서버에 업로드"
   },
   "I1kjHI": {
-    "defaultMessage": "Supports {markdown}"
+    "defaultMessage": "지원 {markdown}"
+  },
+  "I2AKfn": {
+    "defaultMessage": "게임"
+  },
+  "IDqXmC": {
+    "defaultMessage": "미디어 서버 목록"
   },
   "IJDKz3": {
-    "defaultMessage": "Zap amount in {currency}"
+    "defaultMessage": "Zap 금액 {currency}"
   },
   "INlWvJ": {
-    "defaultMessage": "OR"
+    "defaultMessage": "또는"
   },
-  "JEsxDw": {
-    "defaultMessage": "Uploading..."
+  "IPXhUW": {
+    "defaultMessage": "마지막 스트림 요약"
+  },
+  "IqcyS0": {
+    "defaultMessage": "노스트란 무엇인가요?"
+  },
+  "J/+m9y": {
+    "defaultMessage": "스트리밍 시간 {duration} 분"
+  },
+  "JCIgkj": {
+    "defaultMessage": "사용자 이름"
+  },
+  "JO0kq9": {
+    "defaultMessage": "스트림 정보 편집"
+  },
+  "JkLHGw": {
+    "defaultMessage": "웹사이트"
   },
   "Jq3FDz": {
-    "defaultMessage": "Content"
+    "defaultMessage": "콘텐츠"
   },
   "K3r6DQ": {
-    "defaultMessage": "Delete"
-  },
-  "K3uH1C": {
-    "defaultMessage": "offline"
+    "defaultMessage": "삭제"
   },
   "K7AkdL": {
-    "defaultMessage": "Show"
+    "defaultMessage": "표시"
+  },
+  "KH2ayq": {
+    "defaultMessage": "비디오 업로드"
   },
   "KkIL3s": {
-    "defaultMessage": "No, I am under 18"
+    "defaultMessage": "아니요, 저는 18세 미만입니다."
+  },
+  "KtrGU6": {
+    "defaultMessage": "이미 계정이 있는 경우 nostr 확장자를 사용하여 로그인할 수 있습니다. 이미 nostr 확장 프로그램을 사용 중이라면 자동으로 로그인됩니다. nostr 확장 프로그램을 설정하지 않은 경우 nos2x 또는 Alby를 사용할 수 있습니다."
+  },
+  "KxfKnW": {
+    "defaultMessage": "자금 인출"
+  },
+  "LEmxc8": {
+    "defaultMessage": "Zap 목표"
+  },
+  "LUvSJB": {
+    "defaultMessage": "tunestr.io은 고화질로 최대 2시간, '소스' 화질로 최대 8시간까지 무료로 호스팅할 수 있습니다. 그 이후에는 선택한 화질에 따라 분당 5초 또는 분당 10초 동안 스트리밍할 수 있는 옵션이 있습니다. tunestr.io을 사용하여 호스팅하지 않는 경우 가격은 선택한 스트리밍 제공업체에 따라 달라집니다."
+  },
+  "Le+99Z": {
+    "defaultMessage": "스트리머는 운영 비용을 충당하기 위해 소정의 수수료를 지불합니다. 신규 스트리머에게는 시작할 수 있는 크레딧( {amount} sats, 약 {time_estimate} 스트리밍)을 지급합니다!"
+  },
+  "Lg2ye2": {
+    "defaultMessage": "Tunestr은 스트리밍을 시작하는 순간 비트코인(sats)을 얻을 수 있는 새로운 종류의 스트리밍 플랫폼입니다! 시청자는 원하는 금액만큼 스트리머에게 팁을 줄 수 있습니다. 팁은 즉시 비트코인(라이트닝) 지갑에 입금됩니다. tunestr.io은 수익에 절대 손을 대지 않습니다!"
   },
   "LknBsU": {
-    "defaultMessage": "Stream Key"
+    "defaultMessage": "스트림 키"
+  },
+  "LxSJOb": {
+    "defaultMessage": "대시보드로 이동"
+  },
+  "MTHO1W": {
+    "defaultMessage": "레이드 시작"
   },
   "My6HwN": {
-    "defaultMessage": "Ok, it's safe"
+    "defaultMessage": "좋아요, 안전합니다."
+  },
+  "NTpJIm": {
+    "defaultMessage": "녹화 사용"
+  },
+  "NnHu0L": {
+    "defaultMessage": "동영상 1개 이상 업로드하세요."
+  },
+  "Ntjkqd": {
+    "defaultMessage": "또는"
   },
   "O2Cy6m": {
-    "defaultMessage": "Yes, I am over 18"
+    "defaultMessage": "예, 18세 이상입니다."
+  },
+  "O7AeYh": {
+    "defaultMessage": "설명..."
   },
   "OEW7yJ": {
     "defaultMessage": "Zaps"
   },
   "OKhRC6": {
-    "defaultMessage": "Share"
+    "defaultMessage": "공유"
   },
-  "OWgHbg": {
-    "defaultMessage": "Edit card"
+  "ORGv1Q": {
+    "defaultMessage": "Created"
+  },
+  "OadZli": {
+    "defaultMessage": "서버 관리"
+  },
+  "ObZZEz": {
+    "defaultMessage": "아직 클립이 없습니다."
+  },
+  "OkXMLE": {
+    "defaultMessage": "최대 오디오 비트레이트"
+  },
+  "OumUwz": {
+    "defaultMessage": "{m}s {ago}",
+    "description": "Number of second(s) relative to now"
   },
   "Oxqtyf": {
-    "defaultMessage": "We hooked you up with a lightning wallet so you can get paid by viewers right away!"
+    "defaultMessage": "시청자로부터 바로 수익을 받을 수 있도록 라이트닝 월렛을 연결해 드렸습니다!"
+  },
+  "PDA8V2": {
+    "defaultMessage": "{m}h {ago}",
+    "description": "Number of hour(s) relative to now"
+  },
+  "PHE60k": {
+    "defaultMessage": "목표를 설정하지 않으려면 비워둡니다."
+  },
+  "PUymyQ": {
+    "defaultMessage": "tunestr.io에서 {name} 스트림을 확인하세요! {link}"
+  },
+  "PXAur5": {
+    "defaultMessage": "철회"
+  },
+  "Pc+tM3": {
+    "defaultMessage": "생성"
+  },
+  "Pe0ogR": {
+    "defaultMessage": "테마"
+  },
+  "PySFxG": {
+    "defaultMessage": "파일을 선택합니다."
   },
   "Q3au2v": {
-    "defaultMessage": "About {estimate}"
+    "defaultMessage": "{estimate}정보"
+  },
+  "Q8Qw5B": {
+    "defaultMessage": "설명"
+  },
+  "QNvtaq": {
+    "defaultMessage": "X에서 공유"
   },
   "QRHNuF": {
-    "defaultMessage": "What are we steaming today?"
+    "defaultMessage": "오늘은 무엇을 찌고 있나요?"
   },
   "QRRCp0": {
-    "defaultMessage": "Stream URL"
+    "defaultMessage": "스트림 URL"
+  },
+  "QWlMq9": {
+    "defaultMessage": "스트림 키"
   },
   "QceMQZ": {
-    "defaultMessage": "Goal: {amount}"
+    "defaultMessage": "목표: {amount}"
   },
   "Qe1MJu": {
-    "defaultMessage": "{name} with {amount}"
+    "defaultMessage": "{name} {amount}"
+  },
+  "Qf0ugr": {
+    "defaultMessage": "여기에는 사내 호스팅 또는 자체 호스팅(예: Cloudflare)을 사용하는 몇 가지 옵션이 있습니다."
+  },
+  "R72je0": {
+    "defaultMessage": "스트림 제목"
+  },
+  "RGYBjE": {
+    "defaultMessage": "썸네일"
   },
   "RJOmzk": {
-    "defaultMessage": "I have read and agree with {provider}''s {terms}."
+    "defaultMessage": "본인은 {provider}의 {terms}을 읽었으며 이에 동의합니다."
+  },
+  "RS6smY": {
+    "defaultMessage": "레이드 메시지"
   },
   "RXQdxR": {
-    "defaultMessage": "Please login to write messages!"
+    "defaultMessage": "메시지를 작성하려면 로그인하세요!"
   },
   "RrCui3": {
-    "defaultMessage": "Summary"
+    "defaultMessage": "요약"
+  },
+  "RtYNX5": {
+    "defaultMessage": "채팅 사용자"
+  },
+  "S39ba6": {
+    "defaultMessage": "OBS란 무엇인가요?"
+  },
+  "SC2nJT": {
+    "defaultMessage": "오디오 코덱"
+  },
+  "TDUfVk": {
+    "defaultMessage": "시작됨"
   },
   "TP/cMX": {
-    "defaultMessage": "Ended"
+    "defaultMessage": "종료"
   },
-  "TaTRKo": {
-    "defaultMessage": "Start Stream"
+  "TcDwEB": {
+    "defaultMessage": "Stream Keys"
   },
   "TwyMau": {
-    "defaultMessage": "Account"
+    "defaultMessage": "계정"
+  },
+  "UCDS65": {
+    "defaultMessage": "전",
+    "description": "Relative time, ie. 1s ago"
+  },
+  "UGFYV8": {
+    "defaultMessage": "tunestr.io에 오신 것을 환영합니다!"
   },
   "UJBFYK": {
-    "defaultMessage": "Add Card"
+    "defaultMessage": "카드 추가"
   },
   "UfSot5": {
-    "defaultMessage": "Past Streams"
+    "defaultMessage": "과거 스트림"
+  },
+  "Uo/DWG": {
+    "defaultMessage": "너무 오래"
   },
   "VA/Z1S": {
-    "defaultMessage": "Hide"
+    "defaultMessage": "숨기기"
+  },
+  "VDOpia": {
+    "defaultMessage": "잽이란 무엇인가요?"
+  },
+  "VKb1MS": {
+    "defaultMessage": "카테고리"
+  },
+  "W7DNWx": {
+    "defaultMessage": "스트림 포워딩"
+  },
+  "W7IRLs": {
+    "defaultMessage": "제목이 너무 짧습니다."
   },
   "W9355R": {
-    "defaultMessage": "Unmute"
+    "defaultMessage": "음소거 해제"
+  },
+  "WVJZ0U": {
+    "defaultMessage": "가치",
+    "description": "Config value column header"
+  },
+  "WcZM+B": {
+    "defaultMessage": "파일 목록"
+  },
+  "Wp4l7+": {
+    "defaultMessage": "더 많은 동영상"
+  },
+  "WsjXrZ": {
+    "defaultMessage": "로그인을 클릭합니다."
   },
   "X2PZ7D": {
-    "defaultMessage": "Create Goal"
+    "defaultMessage": "목표 만들기"
+  },
+  "XIvYvF": {
+    "defaultMessage": "인보이스를 받지 못했습니다."
+  },
+  "XMGfiA": {
+    "defaultMessage": "최근 클립"
+  },
+  "XgWvGA": {
+    "defaultMessage": "반응"
+  },
+  "XmQZr5": {
+    "defaultMessage": "No keys"
+  },
+  "Xq2sb0": {
+    "defaultMessage": "생방송을 시작하려면 아래의 서버 URL과 스트림 키를 복사하여 스트리밍 소프트웨어 설정에 붙여넣고 '스트리밍 시작'을 누릅니다. <a>OBS를</a> 추천합니다."
+  },
+  "Y0DXJb": {
+    "defaultMessage": "레코딩 URL"
+  },
+  "YPh5Nq": {
+    "defaultMessage": "{rate}",
+    "description": "Showing zap amount in USD @ rate"
+  },
+  "YjhNaf": {
+    "defaultMessage": "스트림 만들기"
+  },
+  "YwzT/0": {
+    "defaultMessage": "클립 제목"
+  },
+  "YyXVHf": {
+    "defaultMessage": "초안 지우기"
   },
   "Z8ZOEY": {
-    "defaultMessage": "This method is insecure. We recommend using a {nostrlink}"
+    "defaultMessage": "이 방법은 안전하지 않습니다. {nostrlink}"
+  },
+  "ZXp0z1": {
+    "defaultMessage": "특징"
+  },
+  "ZaNcK4": {
+    "defaultMessage": "아직 목표 없음"
+  },
+  "ZcgtZo": {
+    "defaultMessage": "소량의 비트코인을 구매하고 원하는 지갑으로 이체할 수 있는 사용하기 쉬운 거래소 목록을 정리해 보았습니다."
   },
   "ZmqxZs": {
-    "defaultMessage": "You can change this later"
+    "defaultMessage": "나중에 변경할 수 있습니다."
+  },
+  "ZsYhvh": {
+    "defaultMessage": "Zaps는 번개 결제로, 노스트르에 영수증으로 게시됩니다."
+  },
+  "Zse7yG": {
+    "defaultMessage": "레이드 대상"
+  },
+  "aB/rH0": {
+    "defaultMessage": "{m}h {ago}",
+    "description": "Number of minute(s) relative to now"
   },
   "acrOoz": {
-    "defaultMessage": "Continue"
+    "defaultMessage": "계속하기"
+  },
+  "aqjZxs": {
+    "defaultMessage": "레이드!"
+  },
+  "bD/ZwY": {
+    "defaultMessage": "카드 편집"
+  },
+  "bbUGS7": {
+    "defaultMessage": "권장 스트림 설정"
+  },
+  "bdH+0f": {
+    "defaultMessage": "Balance History"
+  },
+  "bfvyfs": {
+    "defaultMessage": "Anon"
+  },
+  "c3LlRO": {
+    "defaultMessage": "{n}KiB"
   },
   "cPIKU2": {
-    "defaultMessage": "Following"
+    "defaultMessage": "팔로잉"
+  },
+  "ccXLVi": {
+    "defaultMessage": "카테고리"
+  },
+  "cg1VJ2": {
+    "defaultMessage": "지갑 연결"
+  },
+  "cntHHJ": {
+    "defaultMessage": "이를 통해 스트림을 다른 플랫폼으로 전달하여 더 많은 시청자에게 도달할 수 있습니다."
   },
   "cvAsEh": {
-    "defaultMessage": "Streamed on {date}"
+    "defaultMessage": "{date}에서 스트리밍"
   },
   "cyR7Kh": {
-    "defaultMessage": "Back"
+    "defaultMessage": "뒤로"
   },
   "d5zWyh": {
-    "defaultMessage": "Test voice"
+    "defaultMessage": "음성 테스트"
+  },
+  "dOQCL8": {
+    "defaultMessage": "표시 이름"
   },
   "dVD/AR": {
-    "defaultMessage": "Top Zappers"
+    "defaultMessage": "최고의 재퍼"
+  },
+  "dkUMIH": {
+    "defaultMessage": "{name}클립"
+  },
+  "e011kf": {
+    "defaultMessage": "자주 묻는 질문",
+    "description": "Title: FAQ page"
   },
   "ebmhes": {
-    "defaultMessage": "Nostr Extension"
+    "defaultMessage": "Nostr 확장"
   },
   "f6biFA": {
-    "defaultMessage": "Oh, and you have {n} sats of free streaming on us! 💜"
+    "defaultMessage": "아, 그리고 저희에겐 {n} 무료 스트리밍이 있습니다! 💜"
   },
   "fBI91o": {
     "defaultMessage": "Zap"
   },
-  "fc2iho": {
-    "defaultMessage": "Add File"
-  },
   "feZ/kG": {
-    "defaultMessage": "Login with Private Key (insecure)"
+    "defaultMessage": "개인 키로 로그인(안전하지 않음)"
   },
-  "hGQqkW": {
-    "defaultMessage": "Schedule"
+  "g5pX+a": {
+    "defaultMessage": "정보"
+  },
+  "gQxxlw": {
+    "defaultMessage": "목표 이름"
+  },
+  "gt65Gg": {
+    "defaultMessage": "스트림 목표는 시청자가 기부를 통해 스트리머를 후원하도록 장려합니다."
+  },
+  "gzsn7k": {
+    "defaultMessage": "{n} 메시지"
+  },
+  "h6NRY6": {
+    "defaultMessage": "No Thanks!"
+  },
+  "h9mX2/": {
+    "defaultMessage": "가장 저렴하고 간편한 자체 tunestr.io 호스팅을 사용하는 경우 스트림 URL과 스트림 키를 OBS 설정에 복사하면 바로 사용할 수 있습니다."
+  },
+  "hMzcSq": {
+    "defaultMessage": "메시지"
   },
   "heyxZL": {
-    "defaultMessage": "Enable text to speech"
+    "defaultMessage": "텍스트 음성 변환 사용"
   },
   "hpl4BP": {
-    "defaultMessage": "Chat Widget"
+    "defaultMessage": "채팅 위젯"
+  },
+  "hzSNj4": {
+    "defaultMessage": "대시보드"
+  },
+  "iKlloU": {
+    "defaultMessage": "추천 서버"
   },
   "ieGrWo": {
-    "defaultMessage": "Follow"
+    "defaultMessage": "팔로우"
+  },
+  "ieKb+k": {
+    "defaultMessage": "스트리밍 비용은 얼마인가요?"
+  },
+  "ipTKP3": {
+    "defaultMessage": "채팅 팝아웃"
   },
   "itPgxd": {
-    "defaultMessage": "Profile"
+    "defaultMessage": "프로필"
   },
   "izWS4J": {
-    "defaultMessage": "Unfollow"
+    "defaultMessage": "언팔로우하기"
+  },
+  "j/jueq": {
+    "defaultMessage": "레이드 {name}"
+  },
+  "jDDeA0": {
+    "defaultMessage": "제목이 너무 길어 {n} 자 미만이어야 합니다."
+  },
+  "jJLRgo": {
+    "defaultMessage": "클립 게시"
+  },
+  "jgOqxt": {
+    "defaultMessage": "위젯"
+  },
+  "jkAQj5": {
+    "defaultMessage": "스트림 종료"
   },
   "jr4+vD": {
-    "defaultMessage": "Markdown"
+    "defaultMessage": "마크다운"
   },
   "jvo0vs": {
-    "defaultMessage": "Save"
+    "defaultMessage": "저장"
   },
   "k21gTS": {
-    "defaultMessage": "e.g. about me"
+    "defaultMessage": "예: 내 정보"
+  },
+  "kAEQyV": {
+    "defaultMessage": "확인"
+  },
+  "kGjqZ4": {
+    "defaultMessage": "최신 쇼트"
+  },
+  "kQAf2d": {
+    "defaultMessage": "선택"
+  },
+  "kc5EOy": {
+    "defaultMessage": "사용자 이름이 너무 깁니다."
+  },
+  "khJ51Q": {
+    "defaultMessage": "스트림 수익"
   },
   "kp0NPF": {
-    "defaultMessage": "Planned"
+    "defaultMessage": "계획된"
+  },
+  "lXbG97": {
+    "defaultMessage": "가장 많이 재핑된 스트리머"
   },
   "lZpRMR": {
-    "defaultMessage": "Check here if this stream contains nudity or pornographic content."
+    "defaultMessage": "이 스트림에 노출 또는 음란 콘텐츠가 포함되어 있는지 여기에서 확인하세요."
   },
   "ljmS5P": {
-    "defaultMessage": "Endpoint"
+    "defaultMessage": "엔드포인트"
+  },
+  "miQKuZ": {
+    "defaultMessage": "스트리밍 시간"
   },
   "mnJYBQ": {
-    "defaultMessage": "Voice"
+    "defaultMessage": "음성"
   },
-  "mtNGwh": {
-    "defaultMessage": "A short description of the content"
+  "mrwfXX": {
+    "defaultMessage": "공유"
+  },
+  "msjwph": {
+    "defaultMessage": "키프레임 간격"
+  },
+  "n19IQE": {
+    "defaultMessage": "권장 크기: 1920x1080(16:9)"
+  },
+  "n8k1SG": {
+    "defaultMessage": "{n}MiB"
   },
   "nBCvvJ": {
-    "defaultMessage": "Topup"
+    "defaultMessage": "충전"
   },
   "nOaArs": {
-    "defaultMessage": "Setup Profile"
+    "defaultMessage": "프로필 설정"
   },
   "nwA8Os": {
-    "defaultMessage": "Add card"
+    "defaultMessage": "카드 추가"
   },
   "oHPB8Q": {
     "defaultMessage": "Zap {name}"
   },
   "oZrFyI": {
-    "defaultMessage": "Stream type should be HLS"
+    "defaultMessage": "스트림 유형은 HLS여야 합니다."
   },
-  "pO/lPX": {
-    "defaultMessage": "Scheduled for {date}"
+  "p4N05H": {
+    "defaultMessage": "업로드"
+  },
+  "pOeEMx": {
+    "defaultMessage": "서버 추가"
+  },
+  "pxF+t0": {
+    "defaultMessage": "인기"
+  },
+  "q+zTWM": {
+    "defaultMessage": "<s>{person}</s> ZAPP <s>{amount}</s> SATS"
+  },
+  "q9ryv4": {
+    "defaultMessage": "표지 이미지 URL(선택 사항)"
+  },
+  "qx6bv2": {
+    "defaultMessage": "스트림 목표(선택 사항)"
   },
   "r2Jjms": {
-    "defaultMessage": "Log In"
+    "defaultMessage": "로그인"
+  },
+  "rJqhFR": {
+    "defaultMessage": "스트림 설정"
   },
   "rWBFZA": {
-    "defaultMessage": "Sexually explicit material ahead!"
-  },
-  "rbrahO": {
-    "defaultMessage": "Close"
-  },
-  "rfC1Zq": {
-    "defaultMessage": "Save card"
+    "defaultMessage": "성적으로 노골적인 자료를 미리 확인하세요!"
   },
   "rgsbu9": {
-    "defaultMessage": "Current Viewers"
+    "defaultMessage": "현재 시청자"
+  },
+  "rleUgy": {
+    "defaultMessage": "업로드 중..."
+  },
+  "s+ORFl": {
+    "defaultMessage": "{m}d {ago}",
+    "description": "Number of day(s) relative to now"
   },
   "s5ksS7": {
-    "defaultMessage": "Image Link"
+    "defaultMessage": "이미지 링크"
   },
   "s7V+5p": {
-    "defaultMessage": "Confirm your age"
+    "defaultMessage": "나이 확인"
   },
   "sInm1h": {
-    "defaultMessage": "Zap message"
+    "defaultMessage": "Zap 메시지"
+  },
+  "sj6WAe": {
+    "defaultMessage": "오른쪽 상단의 '스트림' 버튼을 클릭합니다."
+  },
+  "syEQFE": {
+    "defaultMessage": "게시"
   },
   "tG1ST3": {
-    "defaultMessage": "Incoming Zap"
+    "defaultMessage": "수신 Zap"
   },
   "tM6fNW": {
-    "defaultMessage": "Amazing! Continue.."
+    "defaultMessage": "놀랍습니다! 계속..."
+  },
+  "tNtB9I": {
+    "defaultMessage": "이름",
+    "description": "Config name column header"
+  },
+  "tTgdmx": {
+    "defaultMessage": "{n,selectordinal,one{@ #첫 번째 분} two{@ #두 번째 분} few{@ #세 번째 분} other{@ #세 번째 분}}"
+  },
+  "tVCC9m": {
+    "defaultMessage": "샛은 비트코인의 작은 단위입니다. tunestr.io에서 새트를 전송하는 것을 \"재핑\" 또는 재핑이라고 합니다."
   },
   "thsiMl": {
-    "defaultMessage": "terms and conditions"
+    "defaultMessage": "이용 약관"
+  },
+  "twCRVi": {
+    "defaultMessage": "예술"
   },
   "tzMNF3": {
-    "defaultMessage": "Status"
+    "defaultMessage": "상태"
   },
   "u6uD94": {
-    "defaultMessage": "Create an Account"
+    "defaultMessage": "계정 만들기"
   },
   "uYw2LD": {
-    "defaultMessage": "Stream"
+    "defaultMessage": "스트림"
+  },
+  "ug01Mk": {
+    "defaultMessage": "Time"
+  },
+  "uksRSi": {
+    "defaultMessage": "최신 동영상"
+  },
+  "vP4dFa": {
+    "defaultMessage": "{link} 방문하여 멋진 tunestr.io 굿즈를 받으세요!"
   },
   "vrTOHJ": {
     "defaultMessage": "{amount} sats"
   },
+  "w+2Vw7": {
+    "defaultMessage": "쇼츠"
+  },
   "w0Xm2F": {
-    "defaultMessage": "Start typing"
+    "defaultMessage": "입력 시작"
+  },
+  "w3btjR": {
+    "defaultMessage": "도박"
   },
   "wCIL7o": {
-    "defaultMessage": "Broadcast on Nostr"
+    "defaultMessage": "Nostr에서 방송"
+  },
+  "wCgTu5": {
+    "defaultMessage": "댓글"
   },
   "wEQDC6": {
-    "defaultMessage": "Edit"
+    "defaultMessage": "편집"
   },
   "wMKVFz": {
-    "defaultMessage": "Select voice..."
+    "defaultMessage": "음성 선택..."
   },
-  "wOy57k": {
-    "defaultMessage": "Add stream goal"
+  "wRGjPp": {
+    "defaultMessage": "nostr 확장 프로그램은 키를 저장하기만 하면 매번 키를 다시 입력할 필요 없이 안전하게 로그인할 수 있습니다. Tunestr은 확장 프로그램을 사용하여 사용자의 키 정보를 보지 않고도 사용자를 대신하여 작업을 승인합니다. 이는 웹사이트가 사용자의 자격 증명을 안전하게 처리한다고 믿어야 하는 것에 비해 상당한 이점이 있습니다."
   },
-  "wzWWzV": {
-    "defaultMessage": "Top zappers"
+  "wTwfnv": {
+    "defaultMessage": "잘못된 주소"
+  },
+  "we4Lby": {
+    "defaultMessage": "정보"
   },
   "x82IOl": {
-    "defaultMessage": "Mute"
+    "defaultMessage": "음소거"
+  },
+  "xhQMeQ": {
+    "defaultMessage": "Expires"
+  },
+  "xi3sgh": {
+    "defaultMessage": "수능 점수를 더 높이려면 어떻게 해야 하나요?"
+  },
+  "xmcVZ0": {
+    "defaultMessage": "검색"
   },
   "y867Vs": {
-    "defaultMessage": "Volume"
+    "defaultMessage": "볼륨"
+  },
+  "y8ogtp": {
+    "defaultMessage": "{m}w {ago}",
+    "description": "Number of week(s) relative to now"
+  },
+  "yLxIgl": {
+    "defaultMessage": "클립"
+  },
+  "yR0V+W": {
+    "defaultMessage": "tunestr.io에서 스트리밍을 시작하려면 다음 단계를 따르세요:"
+  },
+  "yj8NrY": {
+    "defaultMessage": "클립"
   },
   "yzKwBQ": {
-    "defaultMessage": "eg. nsec1xyz"
+    "defaultMessage": "예: nsec1xyz"
+  },
+  "z2qCcJ": {
+    "defaultMessage": "최대 비디오 비트레이트"
+  },
+  "zEYkgY": {
+    "defaultMessage": "Talk"
+  },
+  "zSYDJP": {
+    "defaultMessage": "나만의 스트림 호스트가 있습니다."
   },
   "zVDHAu": {
-    "defaultMessage": "Zap Alert"
+    "defaultMessage": "Zap 알림"
   }
 }

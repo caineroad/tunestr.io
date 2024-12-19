@@ -11,20 +11,35 @@
   "+vVZ/G": {
     "defaultMessage": "Yhdistä"
   },
+  "+y6JUK": {
+    "defaultMessage": "Ratsiat"
+  },
   "/0TOL5": {
     "defaultMessage": "Määrä"
+  },
+  "/563b0": {
+    "defaultMessage": "Tasapaino: {n} sats"
   },
   "/EvlqN": {
     "defaultMessage": "nostr-allekirjoituslaajennus"
   },
-  "/GCoTA": {
-    "defaultMessage": "Tyhjennä"
+  "/JkXBo": {
+    "defaultMessage": "Clip osoitteesta {title}"
+  },
+  "/Jp9pC": {
+    "defaultMessage": "Yhteensä: {amount} sats"
+  },
+  "/aFYQ5": {
+    "defaultMessage": "Stream Forwarding (valinnainen)"
+  },
+  "/w4RM6": {
+    "defaultMessage": "IRL"
+  },
+  "01iNut": {
+    "defaultMessage": "Nostr-osoite ei kuulu sinulle"
   },
   "04lmFi": {
     "defaultMessage": "Tallenna avain"
-  },
-  "0GfNiL": {
-    "defaultMessage": "Streamaa Zap-tavoitteet"
   },
   "0VV/sK": {
     "defaultMessage": "Tavoite"
@@ -32,8 +47,14 @@
   "0hNxBy": {
     "defaultMessage": "Alkaa"
   },
+  "0rVLjV": {
+    "defaultMessage": "Ei vielä virtauksia"
+  },
   "1EYCdR": {
     "defaultMessage": "Tunnisteet"
+  },
+  "1LBny5": {
+    "defaultMessage": "Pysähtyi"
   },
   "1q4BO/": {
     "defaultMessage": "Virheellinen URL"
@@ -43,6 +64,15 @@
   },
   "2/2yg+": {
     "defaultMessage": "Lisää"
+  },
+  "2lVQYF": {
+    "defaultMessage": "...lisää"
+  },
+  "2ukA4d": {
+    "defaultMessage": "{n} tuntia"
+  },
+  "2wdFaB": {
+    "defaultMessage": "End Stream"
   },
   "37mth/": {
     "defaultMessage": "Katsojaa"
@@ -56,8 +86,20 @@
   "3df560": {
     "defaultMessage": "Kirjaudu sisään yksityisellä avaimella"
   },
+  "3kbIhS": {
+    "defaultMessage": "Untitled"
+  },
+  "3yk8fB": {
+    "defaultMessage": "Lompakko"
+  },
   "47FYwb": {
     "defaultMessage": "Peruuta"
+  },
+  "4RhY4O": {
+    "defaultMessage": "Esimerkkiasetukset OBS:ssä (Apple M1 Mac)"
+  },
+  "4XfMux": {
+    "defaultMessage": "Videot"
   },
   "4iBdw1": {
     "defaultMessage": "Rynnäkkö"
@@ -68,17 +110,26 @@
   "4l6vz1": {
     "defaultMessage": "Kopioi"
   },
-  "4uI538": {
-    "defaultMessage": "Tarkkuudet"
-  },
   "50+/JW": {
     "defaultMessage": "Suoratoistoavain on pakollinen"
+  },
+  "58DXVG": {
+    "defaultMessage": "Aloita ottamalla stream-avain siltä alustalta, jolle haluat lähettää lähetyksen."
   },
   "5JcXdV": {
     "defaultMessage": "Luo tili"
   },
+  "5L4ati": {
+    "defaultMessage": "Zap from"
+  },
+  "5LXWMX": {
+    "defaultMessage": "Uusi tavoite"
+  },
   "5QYdPU": {
     "defaultMessage": "Aloitusaika"
+  },
+  "5Wwopw": {
+    "defaultMessage": "Hinnoittelu"
   },
   "5kx+2v": {
     "defaultMessage": "Palvelimen URL"
@@ -86,8 +137,14 @@
   "5tM0VD": {
     "defaultMessage": "Suoratoisto aloitettu"
   },
+  "5vMmmR": {
+    "defaultMessage": "Käyttäjätunnukset eivät ole ainutlaatuisia Nostrissa. Nostr-osoite on yksilöllinen ihmisen luettavissa oleva osoitteesi, joka on yksilöllinen sinulle rekisteröitymisen yhteydessä."
+  },
   "69hmpj": {
     "defaultMessage": "{name}:n rynnäkkö"
+  },
+  "6PK5Jy": {
+    "defaultMessage": "Past Stream"
   },
   "6Z2pvJ": {
     "defaultMessage": "Streamaustarjoajat"
@@ -98,20 +155,56 @@
   "7+bCC1": {
     "defaultMessage": "Suoratoisto url-osoitteen on alettava rtmp://"
   },
+  "74PejI": {
+    "defaultMessage": "Parhaat katsojat"
+  },
   "79lLl+": {
     "defaultMessage": "Musiikki"
   },
   "7UOvbT": {
     "defaultMessage": "Offline-tilassa"
   },
+  "89UZph": {
+    "defaultMessage": "Määritä suoratoisto-ohjelmisto"
+  },
   "8YT6ja": {
     "defaultMessage": "Lisää teksti puheeksi"
+  },
+  "8aAwpp": {
+    "defaultMessage": "Manuaalista isännöintiä varten tarvitset vain HLS-URL-osoitteen Stream URL -kenttään. Tämä pitäisi löytyä hosting-asetuksista."
+  },
+  "8xVdjn": {
+    "defaultMessage": "Videokoodekki"
   },
   "9WRlF4": {
     "defaultMessage": "Lähetä"
   },
+  "9ZoFpI": {
+    "defaultMessage": "Poista tiedosto"
+  },
   "9a9+ww": {
     "defaultMessage": "Otsikko"
+  },
+  "9pMqYs": {
+    "defaultMessage": "Nostr Osoite"
+  },
+  "9rmSgv": {
+    "defaultMessage": "OBS (Open Broadcaster Software) on ilmainen ja avoimen lähdekoodin ohjelmisto videotallennukseen ja suoratoistoon Windowsissa, Macissa ja Linuxissa. Se on suosittu valinta striimaajien keskuudessa. Sinun on asennettava tämä, jotta voit tallentaa videon, äänen ja kaiken muun, mitä haluat lisätä streamiin. Kun olet asentanut ja määrittänyt haluamasi, lisää Stream URL-osoite ja Stream Key Stream-asetuksista OBS:ään muodostaaksesi yhteyden tunestr.ioiin."
+  },
+  "A1zT+z": {
+    "defaultMessage": "Hakutulokset: {term}"
+  },
+  "A7K3S+": {
+    "defaultMessage": "Account Setup"
+  },
+  "ALdW69": {
+    "defaultMessage": "Muistio {name}"
+  },
+  "ASKb16": {
+    "defaultMessage": "A description of the stream"
+  },
+  "AYIR/J": {
+    "defaultMessage": "Poista kuva"
   },
   "Atr2p4": {
     "defaultMessage": "NSFW-sisältöä"
@@ -119,23 +212,35 @@
   "AukrPM": {
     "defaultMessage": "Katsojatietoja ei ole saatavilla"
   },
+  "Axo/o5": {
+    "defaultMessage": "Tiede & teknologia"
+  },
   "AyGauy": {
     "defaultMessage": "Kirjaudu sisään"
   },
   "BD0vyn": {
     "defaultMessage": "{name} loi leikkeen"
   },
-  "BGxpTN": {
-    "defaultMessage": "Stream-keskustelu"
+  "Bd1yEX": {
+    "defaultMessage": "Uusi virtaama Tavoite"
   },
   "Bep/gA": {
     "defaultMessage": "Yksityinen avain"
   },
+  "BzQPM+": {
+    "defaultMessage": "Kohde"
+  },
   "C81/uG": {
     "defaultMessage": "Kirjaudu ulos"
   },
+  "CTgA2G": {
+    "defaultMessage": "Luo uusi tili, jos sinulla ei vielä ole sellaista."
+  },
   "CsCUYo": {
     "defaultMessage": "{n} satsia"
+  },
+  "CsS/fy": {
+    "defaultMessage": "{estimate} jäljellä ({balance} sats @ {rate} sats / {unit})"
   },
   "D3idYv": {
     "defaultMessage": "Asetukset"
@@ -143,14 +248,36 @@
   "DZKuuP": {
     "defaultMessage": "Kirjautuneena nimellä"
   },
+  "DkgCAz": {
+    "defaultMessage": "Miten voin suoratoistaa tunestr.ioissa?"
+  },
   "Dn82AL": {
     "defaultMessage": "Live"
+  },
+  "DqmiAe": {
+    "defaultMessage": "Dont have a nostr extension? Try {nos2x}, {nostore} or {alby}"
+  },
+  "E7n6zr": {
+    "defaultMessage": "Nykyiset virtauskustannukset: {amount} satsit/{unit} (noin {usd}/päivä {x}tunnin virtauksessa)."
   },
   "E9APoR": {
     "defaultMessage": "SuoratoistoURL-osoitetta ei voitu luoda"
   },
   "ESyhzp": {
     "defaultMessage": "Kommenttisi kohteelle {name}"
+  },
+  "EcglP9": {
+    "defaultMessage": "Key"
+  },
+  "FAUhZf": {
+    "defaultMessage": "Mitä satsit ovat?"
+  },
+  "FIDK5Y": {
+    "defaultMessage": "Kaikkien aikojen Top Zappers"
+  },
+  "FXepR9": {
+    "defaultMessage": "{m}mo {ago}",
+    "description": "Number of month(s) relative to now"
   },
   "FjDlus": {
     "defaultMessage": "Voit aina vaihtaa sen omaksi osoitteeksesi myöhemmin."
@@ -161,11 +288,20 @@
   "G/yZLu": {
     "defaultMessage": "Poista"
   },
+  "G857ni": {
+    "defaultMessage": "LNURL tai lasku"
+  },
   "GGaJMU": {
     "defaultMessage": "Eniten Keskusteluja"
   },
-  "Gmiwnd": {
-    "defaultMessage": "Päivitä sivu käyttääksesi uusinta versiota"
+  "GSuQPh": {
+    "defaultMessage": "Tuntematon tapahtumalinkki"
+  },
+  "GSye7T": {
+    "defaultMessage": "Salama-osoite"
+  },
+  "GcozGF": {
+    "defaultMessage": "Virheellinen salaman osoite"
   },
   "Gq6x9o": {
     "defaultMessage": "Kansikuva"
@@ -173,8 +309,17 @@
   "Gvxoji": {
     "defaultMessage": "Nimi on pakollinen"
   },
+  "GwbTAz": {
+    "defaultMessage": "Virrat"
+  },
   "H/bNs9": {
     "defaultMessage": "Tallenna tämä ja pidä se tallessa! Jos menetät tämän avaimen, et pääse koskaan enää tilillesi. Kyllä, se on niin vakavaa!"
+  },
+  "H1fdc9": {
+    "defaultMessage": "Lisää pikkukuva"
+  },
+  "H4hJvF": {
+    "defaultMessage": "Valitse luokka"
   },
   "H5+NAX": {
     "defaultMessage": "Saldo"
@@ -182,11 +327,26 @@
   "HAlOn1": {
     "defaultMessage": "Nimi"
   },
-  "I/TubD": {
-    "defaultMessage": "Valitse tavoite..."
+  "HDgXO/": {
+    "defaultMessage": "tunestr.io on avoimen lähdekoodin alusta, joka perustuu nostr-protokollaan. Käytettävissä ei ole mitään jättiläisyhtiöitä tai jättiläisrahastoja, jotka tarjoaisivat ilmaista suoratoistoa."
+  },
+  "HsgeUk": {
+    "defaultMessage": "Tule katsomaan streamiani tunestr.ioiin! {link}"
+  },
+  "Ht231k": {
+    "defaultMessage": "Edelleenlähetys"
+  },
+  "HvUhXt": {
+    "defaultMessage": "Lataaminen {n} -palvelimille"
   },
   "I1kjHI": {
     "defaultMessage": "Tukee {markdown}"
+  },
+  "I2AKfn": {
+    "defaultMessage": "Pelaaminen"
+  },
+  "IDqXmC": {
+    "defaultMessage": "Mediapalvelinluettelo"
   },
   "IJDKz3": {
     "defaultMessage": "Zap-määrä valuuttassa {currency}"
@@ -194,11 +354,23 @@
   "INlWvJ": {
     "defaultMessage": "TAI"
   },
+  "IPXhUW": {
+    "defaultMessage": "Viimeisen virran yhteenveto"
+  },
+  "IqcyS0": {
+    "defaultMessage": "Mikä on nostr-laajennus?"
+  },
   "J/+m9y": {
     "defaultMessage": "Suoratoiston kesto {duration} minuuttia"
   },
-  "JEsxDw": {
-    "defaultMessage": "Ladataan..."
+  "JCIgkj": {
+    "defaultMessage": "Käyttäjätunnus"
+  },
+  "JO0kq9": {
+    "defaultMessage": "Muokkaa virran tietoja"
+  },
+  "JkLHGw": {
+    "defaultMessage": "Verkkosivusto"
   },
   "Jq3FDz": {
     "defaultMessage": "Sisältö"
@@ -209,11 +381,35 @@
   "K7AkdL": {
     "defaultMessage": "Näytä"
   },
+  "KH2ayq": {
+    "defaultMessage": "Lataa video"
+  },
   "KkIL3s": {
     "defaultMessage": "Ei, olen alle 18"
   },
+  "KtrGU6": {
+    "defaultMessage": "Jos sinulla on jo tili, voit käyttää nostr-laajennusta kirjautumiseen. Jos käytät jo nostr-laajennusta, kirjaudut sisään automaattisesti. Jos sinulla ei ole nostr-laajennusta, voit käyttää nos2x:ää tai Albya."
+  },
+  "KxfKnW": {
+    "defaultMessage": "Nosta varoja"
+  },
+  "LEmxc8": {
+    "defaultMessage": "Zap Tavoitteet"
+  },
+  "LUvSJB": {
+    "defaultMessage": "tunestr.io on ilmainen jopa 2 tuntia hosting korkealla laadulla ja jopa 8 tuntia \"lähde\" laatua. Sen jälkeen sinulla on mahdollisuus streamata 5 satsia minuutissa tai 10 satsia minuutissa valitsemastasi laadusta riippuen. Jos et käytä tunestr.ioia isännöintiin, hinnoittelu riippuu valitsemastasi suoratoistopalveluntarjoajasta."
+  },
+  "Le+99Z": {
+    "defaultMessage": "Streamerit maksavat pienen maksun, jolla katetaan juoksevia kulujamme. Annamme uusille striimaajille {amount} satsin (noin {time_estimate} striimausta) luottoa, jotta he pääsevät alkuun!"
+  },
+  "Lg2ye2": {
+    "defaultMessage": "Tunestr on uudenlainen suoratoistoalusta, jonka avulla voit ansaita bitcoinia (satsia) sillä hetkellä, kun aloitat suoratoiston! Katsojat voivat antaa striimaajille tippiä minkä tahansa valitsemansa summan. Vihjeet talletetaan välittömästi bitcoin (salama) -lompakkoosi. tunestr.io ei koskaan koske ansioihin!"
+  },
   "LknBsU": {
     "defaultMessage": "Streamin avain"
+  },
+  "LxSJOb": {
+    "defaultMessage": "Siirry kojelautaan"
   },
   "MTHO1W": {
     "defaultMessage": "Aloita rynnäkkö"
@@ -221,8 +417,20 @@
   "My6HwN": {
     "defaultMessage": "Ok, se on turvassa"
   },
+  "NTpJIm": {
+    "defaultMessage": "Ota tallennus käyttöön"
+  },
+  "NnHu0L": {
+    "defaultMessage": "Lataa vähintään 1 video"
+  },
+  "Ntjkqd": {
+    "defaultMessage": "tai"
+  },
   "O2Cy6m": {
     "defaultMessage": "Kyllä, olen yli 18"
+  },
+  "O7AeYh": {
+    "defaultMessage": "Kuvaus.."
   },
   "OEW7yJ": {
     "defaultMessage": "Zapit"
@@ -230,20 +438,55 @@
   "OKhRC6": {
     "defaultMessage": "Jaa"
   },
-  "OWgHbg": {
-    "defaultMessage": "Muokkaa korttia"
+  "ORGv1Q": {
+    "defaultMessage": "Created"
+  },
+  "OadZli": {
+    "defaultMessage": "Hallitse palvelimia"
+  },
+  "ObZZEz": {
+    "defaultMessage": "Ei vielä leikkeitä"
+  },
+  "OkXMLE": {
+    "defaultMessage": "Maksimi äänen bittinopeus"
+  },
+  "OumUwz": {
+    "defaultMessage": "{m}s {ago}",
+    "description": "Number of second(s) relative to now"
   },
   "Oxqtyf": {
     "defaultMessage": "Sait lightning-lompakon, jotta voit saada heti maksuja katsojilta!"
   },
-  "PA0ej4": {
-    "defaultMessage": "Luo leike"
+  "PDA8V2": {
+    "defaultMessage": "{m}h {ago}",
+    "description": "Number of hour(s) relative to now"
+  },
+  "PHE60k": {
+    "defaultMessage": "Jätä tyhjäksi, jos et halua asettaa mitään tavoitteita."
+  },
+  "PUymyQ": {
+    "defaultMessage": "Tule katsomaan {name} stream osoitteessa tunestr.io! {link}"
+  },
+  "PXAur5": {
+    "defaultMessage": "Peruuta"
+  },
+  "Pc+tM3": {
+    "defaultMessage": "Luo"
   },
   "Pe0ogR": {
     "defaultMessage": "Teema"
   },
+  "PySFxG": {
+    "defaultMessage": "Valitse tiedosto."
+  },
   "Q3au2v": {
     "defaultMessage": "Tietoja {estimate}"
+  },
+  "Q8Qw5B": {
+    "defaultMessage": "Kuvaus"
+  },
+  "QNvtaq": {
+    "defaultMessage": "Jaa X:ssä"
   },
   "QRHNuF": {
     "defaultMessage": "Mitä me tänään lähetetään?"
@@ -260,8 +503,14 @@
   "Qe1MJu": {
     "defaultMessage": "{name} määrällä {amount}"
   },
-  "RJ2VxG": {
-    "defaultMessage": "Uusi versio on havaittu"
+  "Qf0ugr": {
+    "defaultMessage": "Tässä sinulla on muutama vaihtoehto: voit käyttää sisäistä tai omaa (kuten Cloudflare) hosting-palvelua."
+  },
+  "R72je0": {
+    "defaultMessage": "Virran nimi"
+  },
+  "RGYBjE": {
+    "defaultMessage": "Pienoiskuva"
   },
   "RJOmzk": {
     "defaultMessage": "Olen lukenut ja hyväksynyt {provider}:n {terms}."
@@ -278,14 +527,30 @@
   "RtYNX5": {
     "defaultMessage": "Chat-käyttäjät"
   },
+  "S39ba6": {
+    "defaultMessage": "Mikä on OBS?"
+  },
+  "SC2nJT": {
+    "defaultMessage": "Audio Codec"
+  },
+  "TDUfVk": {
+    "defaultMessage": "Aloitettu"
+  },
   "TP/cMX": {
     "defaultMessage": "Päättynyt"
   },
-  "TaTRKo": {
-    "defaultMessage": "Aloita lähetys"
+  "TcDwEB": {
+    "defaultMessage": "Stream Keys"
   },
   "TwyMau": {
     "defaultMessage": "Tili"
+  },
+  "UCDS65": {
+    "defaultMessage": "sitten",
+    "description": "Relative time, ie. 1s ago"
+  },
+  "UGFYV8": {
+    "defaultMessage": "Tervetuloa tunestr.ioiin!"
   },
   "UJBFYK": {
     "defaultMessage": "Lisää kortti"
@@ -293,23 +558,57 @@
   "UfSot5": {
     "defaultMessage": "Aikaisemmat lähetykset"
   },
+  "Uo/DWG": {
+    "defaultMessage": "Noin liian kauan"
+  },
   "VA/Z1S": {
     "defaultMessage": "Piilota"
   },
-  "Vn2WiP": {
-    "defaultMessage": "Hae lähetysavain"
+  "VDOpia": {
+    "defaultMessage": "Mitä ovat zapsit?"
+  },
+  "VKb1MS": {
+    "defaultMessage": "Kategoriat"
   },
   "W7DNWx": {
     "defaultMessage": "Lähetyksen edelleenlähetys"
   },
+  "W7IRLs": {
+    "defaultMessage": "Otsikkosi on liian lyhyt"
+  },
   "W9355R": {
     "defaultMessage": "Poista mykistys"
+  },
+  "WVJZ0U": {
+    "defaultMessage": "Arvo",
+    "description": "Config value column header"
+  },
+  "WcZM+B": {
+    "defaultMessage": "Tiedostoluettelo"
+  },
+  "Wp4l7+": {
+    "defaultMessage": "Lisää videoita"
+  },
+  "WsjXrZ": {
+    "defaultMessage": "Klikkaa Kirjaudu sisään"
   },
   "X2PZ7D": {
     "defaultMessage": "Luo tavoite"
   },
+  "XIvYvF": {
+    "defaultMessage": "Laskun saaminen epäonnistui"
+  },
+  "XMGfiA": {
+    "defaultMessage": "Viimeisimmät klipit"
+  },
   "XgWvGA": {
     "defaultMessage": "Reaktiot"
+  },
+  "XmQZr5": {
+    "defaultMessage": "No keys"
+  },
+  "Xq2sb0": {
+    "defaultMessage": "Jos haluat siirtyä suoratoistoon, kopioi ja liitä palvelimen URL-osoite ja Stream Key alla oleviin suoratoisto-ohjelmistosi asetuksiin ja paina 'Start Streaming'. Suosittelemme <a>OBS:ää</a>."
   },
   "Y0DXJb": {
     "defaultMessage": "Tallennuksen URL-osoite"
@@ -318,20 +617,39 @@
     "defaultMessage": "@ {rate}",
     "description": "Showing zap amount in USD @ rate"
   },
-  "YagVIe": {
-    "defaultMessage": "{n}p"
+  "YjhNaf": {
+    "defaultMessage": "Luo virta"
   },
   "YwzT/0": {
     "defaultMessage": "Leikkeen nimi"
   },
+  "YyXVHf": {
+    "defaultMessage": "Selkeä luonnos"
+  },
   "Z8ZOEY": {
     "defaultMessage": "Tämä menetelmä ei ole turvallinen. Suosittelemme käyttämään {nostrlink}"
+  },
+  "ZXp0z1": {
+    "defaultMessage": "Ominaisuudet"
+  },
+  "ZaNcK4": {
+    "defaultMessage": "Ei vielä tavoitteita"
+  },
+  "ZcgtZo": {
+    "defaultMessage": "Olemme koonneet listan helppokäyttöisistä pörsseistä, joiden avulla voit ostaa pienen määrän bitcoineja (sats) ja siirtää ne haluamaasi lompakkoon."
   },
   "ZmqxZs": {
     "defaultMessage": "Voit muuttaa tätä myöhemmin"
   },
+  "ZsYhvh": {
+    "defaultMessage": "Zapsit ovat salamamaksuja, jotka julkaistaan nostrissa kuitteina."
+  },
   "Zse7yG": {
     "defaultMessage": "Rynnäkön kohde"
+  },
+  "aB/rH0": {
+    "defaultMessage": "{m}h {ago}",
+    "description": "Number of minute(s) relative to now"
   },
   "acrOoz": {
     "defaultMessage": "Jatka"
@@ -339,11 +657,32 @@
   "aqjZxs": {
     "defaultMessage": "Rynnäkkö!"
   },
+  "bD/ZwY": {
+    "defaultMessage": "Muokkaa kortteja"
+  },
+  "bbUGS7": {
+    "defaultMessage": "Suositellut Stream-asetukset"
+  },
+  "bdH+0f": {
+    "defaultMessage": "Balance History"
+  },
   "bfvyfs": {
     "defaultMessage": "Anon"
   },
+  "c3LlRO": {
+    "defaultMessage": "{n}KiB"
+  },
   "cPIKU2": {
     "defaultMessage": "Seuraa"
+  },
+  "ccXLVi": {
+    "defaultMessage": "Luokka"
+  },
+  "cg1VJ2": {
+    "defaultMessage": "Yhdistä lompakko"
+  },
+  "cntHHJ": {
+    "defaultMessage": "Näin voit lähettää suoratoistosi eteenpäin muille alustoille ja tavoittaa laajemman yleisön."
   },
   "cvAsEh": {
     "defaultMessage": "Lähetetty {date}"
@@ -360,6 +699,13 @@
   "dVD/AR": {
     "defaultMessage": "Parhaat Zapparit"
   },
+  "dkUMIH": {
+    "defaultMessage": "Clip by {name}"
+  },
+  "e011kf": {
+    "defaultMessage": "FAQ",
+    "description": "Title: FAQ page"
+  },
   "ebmhes": {
     "defaultMessage": "Nostr-laajennus"
   },
@@ -369,17 +715,26 @@
   "fBI91o": {
     "defaultMessage": "Zap"
   },
-  "fc2iho": {
-    "defaultMessage": "Lisää tiedosto"
-  },
   "feZ/kG": {
     "defaultMessage": "Kirjaudu sisään yksityisellä avaimella (turvaton)"
+  },
+  "g5pX+a": {
+    "defaultMessage": "Tietoja"
+  },
+  "gQxxlw": {
+    "defaultMessage": "Tavoite Nimi"
+  },
+  "gt65Gg": {
+    "defaultMessage": "Stream-tavoitteet kannustavat katsojia tukemaan striimaajia lahjoituksilla."
   },
   "gzsn7k": {
     "defaultMessage": "{n} viestiä"
   },
-  "hGQqkW": {
-    "defaultMessage": "Aikataulu"
+  "h6NRY6": {
+    "defaultMessage": "No Thanks!"
+  },
+  "h9mX2/": {
+    "defaultMessage": "Jos käytät sisäistä tunestr.io-hostingia (halvin ja helpoin), kopioi stream URL-osoite ja Stream Key OBS-asetuksiisi, ja sinun pitäisi olla valmis."
   },
   "hMzcSq": {
     "defaultMessage": "Viestit"
@@ -391,10 +746,19 @@
     "defaultMessage": "Keskusteluwidgetti"
   },
   "hzSNj4": {
-    "defaultMessage": "Hallintapaneeli"
+    "defaultMessage": "Kojelauta"
+  },
+  "iKlloU": {
+    "defaultMessage": "Ehdotetut tarjoilijat"
   },
   "ieGrWo": {
     "defaultMessage": "Seuraa"
+  },
+  "ieKb+k": {
+    "defaultMessage": "Mitä suoratoisto maksaa?"
+  },
+  "ipTKP3": {
+    "defaultMessage": "Ponnahdusikkuna chatissa"
   },
   "itPgxd": {
     "defaultMessage": "Profiili"
@@ -405,11 +769,11 @@
   "j/jueq": {
     "defaultMessage": "Rynnäköidään {name}"
   },
+  "jDDeA0": {
+    "defaultMessage": "Otsikkosi on hyvin pitkä, varmista, että se on alle {n} merkkiä."
+  },
   "jJLRgo": {
     "defaultMessage": "Julkaise leike"
-  },
-  "jctiUc": {
-    "defaultMessage": "Eniten Katsojia"
   },
   "jgOqxt": {
     "defaultMessage": "Vimpaimet"
@@ -426,8 +790,26 @@
   "k21gTS": {
     "defaultMessage": "esim. itsestäni"
   },
+  "kAEQyV": {
+    "defaultMessage": "OK"
+  },
+  "kGjqZ4": {
+    "defaultMessage": "Uusimmat lyhytelokuvat"
+  },
+  "kQAf2d": {
+    "defaultMessage": "Valitse"
+  },
+  "kc5EOy": {
+    "defaultMessage": "Käyttäjätunnus on liian pitkä"
+  },
+  "khJ51Q": {
+    "defaultMessage": "Stream Ansiotulot"
+  },
   "kp0NPF": {
     "defaultMessage": "Suunniteltu"
+  },
+  "lXbG97": {
+    "defaultMessage": "Eniten Zapped Streamers"
   },
   "lZpRMR": {
     "defaultMessage": "Ruksita tämä, jos lähetys sisältää alastomuutta tai pornografiaa."
@@ -441,8 +823,17 @@
   "mnJYBQ": {
     "defaultMessage": "Ääni"
   },
-  "mtNGwh": {
-    "defaultMessage": "Lyhyt kuvaus sisällöstä"
+  "mrwfXX": {
+    "defaultMessage": "Osakkeet"
+  },
+  "msjwph": {
+    "defaultMessage": "Näppäinkehyksen väli"
+  },
+  "n19IQE": {
+    "defaultMessage": "Suositeltava koko: 1920x1080 (16:9)"
+  },
+  "n8k1SG": {
+    "defaultMessage": "{n}MiB"
   },
   "nBCvvJ": {
     "defaultMessage": "Lataa saldoa"
@@ -453,35 +844,48 @@
   "nwA8Os": {
     "defaultMessage": "Lisää kortti"
   },
-  "o8pHw3": {
-    "defaultMessage": "AUTO"
-  },
   "oHPB8Q": {
     "defaultMessage": "Zap {name}"
   },
   "oZrFyI": {
     "defaultMessage": "Streamin tyyppi tulisi olla HLS"
   },
+  "p4N05H": {
+    "defaultMessage": "Lataa"
+  },
+  "pOeEMx": {
+    "defaultMessage": "Lisää palvelin"
+  },
+  "pxF+t0": {
+    "defaultMessage": "Suosittu"
+  },
   "q+zTWM": {
     "defaultMessage": "<s>{person}</s> zappasi <s>{amount}</s> satsia"
+  },
+  "q9ryv4": {
+    "defaultMessage": "Kansikuvan URL-osoite (valinnainen)"
+  },
+  "qx6bv2": {
+    "defaultMessage": "Stream Goal (valinnainen)"
   },
   "r2Jjms": {
     "defaultMessage": "Kirjaudu sisään"
   },
-  "rELDbB": {
-    "defaultMessage": "Päivitä"
+  "rJqhFR": {
+    "defaultMessage": "Stream-asetukset"
   },
   "rWBFZA": {
     "defaultMessage": "Seksuaalisesti paljastavaa materiaalia tulossa!"
   },
-  "rbrahO": {
-    "defaultMessage": "Sulje"
-  },
-  "rfC1Zq": {
-    "defaultMessage": "Tallenna kortti"
-  },
   "rgsbu9": {
     "defaultMessage": "Nykyiset katsojat"
+  },
+  "rleUgy": {
+    "defaultMessage": "Lataaminen.."
+  },
+  "s+ORFl": {
+    "defaultMessage": "{m}d {ago}",
+    "description": "Number of day(s) relative to now"
   },
   "s5ksS7": {
     "defaultMessage": "Kuvan linkki"
@@ -492,14 +896,33 @@
   "sInm1h": {
     "defaultMessage": "Zap-viesti"
   },
+  "sj6WAe": {
+    "defaultMessage": "Napsauta oikeassa yläkulmassa olevaa \"Stream\"-painiketta."
+  },
+  "syEQFE": {
+    "defaultMessage": "Julkaise"
+  },
   "tG1ST3": {
     "defaultMessage": "Saapuva Zap"
   },
   "tM6fNW": {
     "defaultMessage": "Mahtavaa! Jatka.."
   },
+  "tNtB9I": {
+    "defaultMessage": "Nimi",
+    "description": "Config name column header"
+  },
+  "tTgdmx": {
+    "defaultMessage": "{n,selectordinal,one{@ #st min} two{@ #nd min} few{@ #rd min} other{@ @ #th min}}"
+  },
+  "tVCC9m": {
+    "defaultMessage": "Satsit ovat pieniä Bitcoin-yksiköitä. Satsin lähettämistä tunestr.ioissa kutsutaan \"zappingiksi\" tai zapsiksi."
+  },
   "thsiMl": {
     "defaultMessage": "käyttöehdot"
+  },
+  "twCRVi": {
+    "defaultMessage": "Art"
   },
   "tzMNF3": {
     "defaultMessage": "Tila"
@@ -510,14 +933,32 @@
   "uYw2LD": {
     "defaultMessage": "Streamaa"
   },
+  "ug01Mk": {
+    "defaultMessage": "Time"
+  },
+  "uksRSi": {
+    "defaultMessage": "Uusimmat videot"
+  },
+  "vP4dFa": {
+    "defaultMessage": "Käy osoitteessa {link} saadaksesi makeaa tunestr.io-tavaraa!"
+  },
   "vrTOHJ": {
     "defaultMessage": "{amount} satsia"
+  },
+  "w+2Vw7": {
+    "defaultMessage": "Shortsit"
   },
   "w0Xm2F": {
     "defaultMessage": "Aloita kirjoittaminen"
   },
+  "w3btjR": {
+    "defaultMessage": "Uhkapelit"
+  },
   "wCIL7o": {
     "defaultMessage": "Lähetä Nostrissa"
+  },
+  "wCgTu5": {
+    "defaultMessage": "Kommentit"
   },
   "wEQDC6": {
     "defaultMessage": "Muokkaa"
@@ -525,20 +966,54 @@
   "wMKVFz": {
     "defaultMessage": "Valitse ääni..."
   },
-  "wOy57k": {
-    "defaultMessage": "Lisää stream-tavoite"
+  "wRGjPp": {
+    "defaultMessage": "Nostr-laajennus yksinkertaisesti tallentaa avaimesi, jotta voit turvallisesti kirjautua sisään ilman, että sinun tarvitsee syöttää niitä joka kerta uudelleen. Tunestr käyttää laajennusta valtuuttamaan toimintoja puolestasi näkemättä koskaan avaintietojasi. Tämä on merkittävä etu verrattuna siihen, että sinun pitäisi luottaa siihen, että verkkosivustot käsittelevät tunnuksiasi turvallisesti."
   },
-  "wzWWzV": {
-    "defaultMessage": "Parhaat Zapparit"
+  "wTwfnv": {
+    "defaultMessage": "Virheellinen nostr-osoite"
+  },
+  "we4Lby": {
+    "defaultMessage": "Info"
   },
   "x82IOl": {
     "defaultMessage": "Mykistä"
   },
+  "xhQMeQ": {
+    "defaultMessage": "Expires"
+  },
+  "xi3sgh": {
+    "defaultMessage": "Miten saan lisää satsia?"
+  },
+  "xmcVZ0": {
+    "defaultMessage": "Etsi"
+  },
   "y867Vs": {
     "defaultMessage": "Äänenvoimakkuus"
   },
+  "y8ogtp": {
+    "defaultMessage": "{m}w {ago}",
+    "description": "Number of week(s) relative to now"
+  },
+  "yLxIgl": {
+    "defaultMessage": "Klipsit"
+  },
+  "yR0V+W": {
+    "defaultMessage": "Voit aloittaa suoratoiston tunestr.ioissa noudattamalla seuraavia ohjeita:"
+  },
+  "yj8NrY": {
+    "defaultMessage": "Clip"
+  },
   "yzKwBQ": {
     "defaultMessage": "esim. nsec1xyz"
+  },
+  "z2qCcJ": {
+    "defaultMessage": "Maksimi videon bittinopeus"
+  },
+  "zEYkgY": {
+    "defaultMessage": "Puhu"
+  },
+  "zSYDJP": {
+    "defaultMessage": "Minulla on oma stream-isäntä"
   },
   "zVDHAu": {
     "defaultMessage": "Zap-hälytys"

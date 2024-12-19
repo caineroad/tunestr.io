@@ -13,7 +13,7 @@ export function useStreamLink() {
       if (parsedLink) {
         setLink(parsedLink);
       } else {
-        const [handle, domain] = (params.id.includes("@") ? params.id : `${params.id}@zap.stream`).split("@");
+        const [handle, domain] = (params.id.includes("@") ? params.id : `${params.id}@tunestr.io`).split("@");
         fetchNip05Pubkey(handle, domain).then(d => {
           if (d) {
             setLink(new NostrLink(NostrPrefix.PublicKey, d));

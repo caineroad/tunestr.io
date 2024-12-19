@@ -11,20 +11,35 @@
   "+vVZ/G": {
     "defaultMessage": "接続"
   },
+  "+y6JUK": {
+    "defaultMessage": "襲撃"
+  },
   "/0TOL5": {
     "defaultMessage": "金額"
+  },
+  "/563b0": {
+    "defaultMessage": "バランス： {n} サッツ"
   },
   "/EvlqN": {
     "defaultMessage": "ノストル・シグナー・エクステンション"
   },
-  "/GCoTA": {
-    "defaultMessage": "クリア"
+  "/JkXBo": {
+    "defaultMessage": "{title}より"
+  },
+  "/Jp9pC": {
+    "defaultMessage": "合計： {amount}"
+  },
+  "/aFYQ5": {
+    "defaultMessage": "ストリーム転送（オプション）"
+  },
+  "/w4RM6": {
+    "defaultMessage": "IRL"
+  },
+  "01iNut": {
+    "defaultMessage": "Nostrアドレスはあなたのものではありません"
   },
   "04lmFi": {
     "defaultMessage": "鍵の保存"
-  },
-  "0GfNiL": {
-    "defaultMessage": "ザップ目標額を配信"
   },
   "0VV/sK": {
     "defaultMessage": "ゴール"
@@ -32,8 +47,14 @@
   "0hNxBy": {
     "defaultMessage": "スタート"
   },
+  "0rVLjV": {
+    "defaultMessage": "ストリームはまだない"
+  },
   "1EYCdR": {
     "defaultMessage": "タグ"
+  },
+  "1LBny5": {
+    "defaultMessage": "停止"
   },
   "1q4BO/": {
     "defaultMessage": "有効なURLではない"
@@ -43,6 +64,15 @@
   },
   "2/2yg+": {
     "defaultMessage": "追加"
+  },
+  "2lVQYF": {
+    "defaultMessage": "...more"
+  },
+  "2ukA4d": {
+    "defaultMessage": "{n} 時間"
+  },
+  "2wdFaB": {
+    "defaultMessage": "エンドストリーム"
   },
   "37mth/": {
     "defaultMessage": "視聴者"
@@ -56,8 +86,20 @@
   "3df560": {
     "defaultMessage": "秘密鍵でログイン"
   },
+  "3kbIhS": {
+    "defaultMessage": "無題"
+  },
+  "3yk8fB": {
+    "defaultMessage": "財布"
+  },
   "47FYwb": {
     "defaultMessage": "キャンセル"
+  },
+  "4RhY4O": {
+    "defaultMessage": "OBSでの設定例（Apple M1 Mac）"
+  },
+  "4XfMux": {
+    "defaultMessage": "ビデオ"
   },
   "4iBdw1": {
     "defaultMessage": "襲撃"
@@ -68,17 +110,26 @@
   "4l6vz1": {
     "defaultMessage": "コピー"
   },
-  "4uI538": {
-    "defaultMessage": "解像度"
-  },
   "50+/JW": {
     "defaultMessage": "ストリームキーが必要"
+  },
+  "58DXVG": {
+    "defaultMessage": "まずは、転送したいプラットフォームからストリームキーを入手してください。"
   },
   "5JcXdV": {
     "defaultMessage": "アカウントを作成する"
   },
+  "5L4ati": {
+    "defaultMessage": "Zap from"
+  },
+  "5LXWMX": {
+    "defaultMessage": "新たな目標"
+  },
   "5QYdPU": {
     "defaultMessage": "開始時間"
+  },
+  "5Wwopw": {
+    "defaultMessage": "価格"
   },
   "5kx+2v": {
     "defaultMessage": "サーバー URL"
@@ -86,8 +137,14 @@
   "5tM0VD": {
     "defaultMessage": "ストリーム開始"
   },
+  "5vMmmR": {
+    "defaultMessage": "Nostrではユーザー名は一意ではありません。nostrのアドレスは、登録時にあなただけが持つ、人間が読めるアドレスです。"
+  },
   "69hmpj": {
     "defaultMessage": "{name}からの襲撃"
+  },
+  "6PK5Jy": {
+    "defaultMessage": "Past Stream"
   },
   "6Z2pvJ": {
     "defaultMessage": "配信の提供元"
@@ -98,20 +155,56 @@
   "7+bCC1": {
     "defaultMessage": "ストリームのURLはrtmp://で始まる必要があります。"
   },
+  "74PejI": {
+    "defaultMessage": "トップ・ビューアー"
+  },
   "79lLl+": {
     "defaultMessage": "音楽"
   },
   "7UOvbT": {
     "defaultMessage": "オフライン"
   },
+  "89UZph": {
+    "defaultMessage": "ストリーミング・ソフトウェアの設定"
+  },
   "8YT6ja": {
     "defaultMessage": "テキストを挿入して話す"
+  },
+  "8aAwpp": {
+    "defaultMessage": "手動ホスティングに必要なのは、ストリームURLフィールドのHLS URLだけです。これはホスティングのセットアップで見つけることができるはずです。"
+  },
+  "8xVdjn": {
+    "defaultMessage": "ビデオコーデック"
   },
   "9WRlF4": {
     "defaultMessage": "送信"
   },
+  "9ZoFpI": {
+    "defaultMessage": "ファイルの削除"
+  },
   "9a9+ww": {
     "defaultMessage": "タイトル"
+  },
+  "9pMqYs": {
+    "defaultMessage": "住所"
+  },
+  "9rmSgv": {
+    "defaultMessage": "OBS（Open Broadcaster Software）は、Windows、Mac、Linux上でビデオ録画とライブストリーミングを行うためのフリーでオープンソースのソフトウェアです。ストリーマーに人気がある。ビデオ、オーディオ、その他ストリームに追加したいものをキャプチャするために、これをインストールする必要があります。インストールして好みの設定にしたら、ストリーム設定からストリームURLとストリームキーをOBSに追加し、tunestr.ioとの接続を形成する。"
+  },
+  "A1zT+z": {
+    "defaultMessage": "検索結果 {term}"
+  },
+  "A7K3S+": {
+    "defaultMessage": "Account Setup"
+  },
+  "ALdW69": {
+    "defaultMessage": "{name}。"
+  },
+  "ASKb16": {
+    "defaultMessage": "A description of the stream"
+  },
+  "AYIR/J": {
+    "defaultMessage": "画像を削除"
   },
   "Atr2p4": {
     "defaultMessage": "不適切な内容"
@@ -119,23 +212,35 @@
   "AukrPM": {
     "defaultMessage": "視聴者データなし"
   },
+  "Axo/o5": {
+    "defaultMessage": "科学技術"
+  },
   "AyGauy": {
     "defaultMessage": "ログイン"
   },
   "BD0vyn": {
     "defaultMessage": "{name} クリップを作成"
   },
-  "BGxpTN": {
-    "defaultMessage": "チャット配信"
+  "Bd1yEX": {
+    "defaultMessage": "新しいストリーム・ゴール"
   },
   "Bep/gA": {
     "defaultMessage": "秘密鍵"
   },
+  "BzQPM+": {
+    "defaultMessage": "目的地"
+  },
   "C81/uG": {
     "defaultMessage": "ログアウト"
   },
+  "CTgA2G": {
+    "defaultMessage": "まだアカウントをお持ちでない場合は、新規アカウントを作成してください。"
+  },
   "CsCUYo": {
     "defaultMessage": "{n} 衛星"
+  },
+  "CsS/fy": {
+    "defaultMessage": "{estimate} 残り ({balance} sats @ {rate} sats / {unit})"
   },
   "D3idYv": {
     "defaultMessage": "設定"
@@ -143,14 +248,36 @@
   "DZKuuP": {
     "defaultMessage": "ログイン名"
   },
+  "DkgCAz": {
+    "defaultMessage": "tunestr.ioでストリーミングするには？"
+  },
   "Dn82AL": {
     "defaultMessage": "ライブ配信中"
+  },
+  "DqmiAe": {
+    "defaultMessage": "Dont have a nostr extension? Try {nos2x}, {nostore} or {alby}"
+  },
+  "E7n6zr": {
+    "defaultMessage": "現在のストリーム費用： {amount} sat/{unit} （ {x}hrのストリームで {usd}/日程度）"
   },
   "E9APoR": {
     "defaultMessage": "ストリームURLを作成できませんでした"
   },
   "ESyhzp": {
     "defaultMessage": "{name} へのコメント"
+  },
+  "EcglP9": {
+    "defaultMessage": "Key"
+  },
+  "FAUhZf": {
+    "defaultMessage": "サッツとは？"
+  },
+  "FIDK5Y": {
+    "defaultMessage": "歴代トップ・ザッパー"
+  },
+  "FXepR9": {
+    "defaultMessage": "{m}mo {ago}",
+    "description": "Number of month(s) relative to now"
   },
   "FjDlus": {
     "defaultMessage": "後でいつでも自分の住所に置き換えることができる。"
@@ -161,11 +288,20 @@
   "G/yZLu": {
     "defaultMessage": "削除"
   },
+  "G857ni": {
+    "defaultMessage": "LNURLまたは請求書"
+  },
   "GGaJMU": {
     "defaultMessage": "トップ・チャッター"
   },
-  "Gmiwnd": {
-    "defaultMessage": "ページを更新して最新バージョンを使用する"
+  "GSuQPh": {
+    "defaultMessage": "不明なイベントリンク"
+  },
+  "GSye7T": {
+    "defaultMessage": "ライトニングアドレス"
+  },
+  "GcozGF": {
+    "defaultMessage": "無効なライトニングアドレス"
   },
   "Gq6x9o": {
     "defaultMessage": "カバー画像"
@@ -173,8 +309,17 @@
   "Gvxoji": {
     "defaultMessage": "名前は必須"
   },
+  "GwbTAz": {
+    "defaultMessage": "ストリーム"
+  },
   "H/bNs9": {
     "defaultMessage": "これを保存し、安全に保管してください！このキーを紛失すると、二度とアカウントにアクセスできなくなります。そう、それほど深刻なのだ！"
+  },
+  "H1fdc9": {
+    "defaultMessage": "サムネイルを追加してください"
+  },
+  "H4hJvF": {
+    "defaultMessage": "カテゴリーを選ぶ"
   },
   "H5+NAX": {
     "defaultMessage": "残高"
@@ -182,11 +327,26 @@
   "HAlOn1": {
     "defaultMessage": "名前"
   },
-  "I/TubD": {
-    "defaultMessage": "ゴールを選択..."
+  "HDgXO/": {
+    "defaultMessage": "tunestr.ioはnostrプロトコルを採用したオープンソースのプラットフォームである。無料ストリーミングを提供するための巨大企業や巨大資金は存在しない。"
+  },
+  "HsgeUk": {
+    "defaultMessage": "tunestr.ioで僕のストリームをチェックしよう！ {link}"
+  },
+  "Ht231k": {
+    "defaultMessage": "転送"
+  },
+  "HvUhXt": {
+    "defaultMessage": "{n} サーバーへのアップロード"
   },
   "I1kjHI": {
     "defaultMessage": "{markdown} をサポート"
+  },
+  "I2AKfn": {
+    "defaultMessage": "ゲーミング"
+  },
+  "IDqXmC": {
+    "defaultMessage": "メディアサーバー一覧"
   },
   "IJDKz3": {
     "defaultMessage": "ザップ金額 ({currency})"
@@ -194,11 +354,23 @@
   "INlWvJ": {
     "defaultMessage": "または"
   },
+  "IPXhUW": {
+    "defaultMessage": "ラスト・ストリームの概要"
+  },
+  "IqcyS0": {
+    "defaultMessage": "ノストル・エクステンションとは何ですか？"
+  },
   "J/+m9y": {
     "defaultMessage": "ストリームの所要時間 {duration} 分"
   },
-  "JEsxDw": {
-    "defaultMessage": "アップロード中..."
+  "JCIgkj": {
+    "defaultMessage": "ユーザー名"
+  },
+  "JO0kq9": {
+    "defaultMessage": "ストリーム情報の編集"
+  },
+  "JkLHGw": {
+    "defaultMessage": "ウェブサイト"
   },
   "Jq3FDz": {
     "defaultMessage": "コンテンツ"
@@ -209,11 +381,35 @@
   "K7AkdL": {
     "defaultMessage": "表示"
   },
+  "KH2ayq": {
+    "defaultMessage": "ビデオのアップロード"
+  },
   "KkIL3s": {
     "defaultMessage": "いいえ、私は18歳以下です"
   },
+  "KtrGU6": {
+    "defaultMessage": "すでにアカウントをお持ちの方は、nostr拡張機能を使ってログインできます。すでにnostr拡張機能を使用している場合は、自動的にログインされます。nostr拡張機能を設定していない場合は、nos2xまたはAlbyを使用することができます。"
+  },
+  "KxfKnW": {
+    "defaultMessage": "資金の引き出し"
+  },
+  "LEmxc8": {
+    "defaultMessage": "ザップ・ゴール"
+  },
+  "LUvSJB": {
+    "defaultMessage": "tunestr.ioは高画質で2時間、「ソース」画質で8時間まで無料でホスティングできます。その後、選択した品質に応じて、1分あたり5サットまたは1分あたり10サットでストリーミングするオプションがあります。ホスティングにtunestr.ioを使用しない場合、価格は選択したストリーミングプロバイダーによって異なります。"
+  },
+  "Le+99Z": {
+    "defaultMessage": "ストリーマーは私たちの運営費をカバーするために少額の料金を支払います。新しいストリーマーには、 {amount} sats (ストリーミングの約 {time_estimate} ) のクレジットをお渡ししています！"
+  },
+  "Lg2ye2": {
+    "defaultMessage": "Tunestrは、ストリーミングを開始した瞬間にビットコイン（sats）を獲得できる新しいタイプのストリーミング・プラットフォームである！視聴者はストリーマーに好きなだけチップを渡すことができます。チップは即座にあなたのビットコイン（Lightning）ウォレットに入金されます。tunestr.ioがあなたの収益に触れることはありません！"
+  },
   "LknBsU": {
     "defaultMessage": "配信キー"
+  },
+  "LxSJOb": {
+    "defaultMessage": "ダッシュボードへ"
   },
   "MTHO1W": {
     "defaultMessage": "レイド開始"
@@ -221,8 +417,20 @@
   "My6HwN": {
     "defaultMessage": "はい、大丈夫です"
   },
+  "NTpJIm": {
+    "defaultMessage": "録音を有効にする"
+  },
+  "NnHu0L": {
+    "defaultMessage": "最低1本のビデオをアップロードしてください"
+  },
+  "Ntjkqd": {
+    "defaultMessage": "または"
+  },
   "O2Cy6m": {
     "defaultMessage": "はい、18歳以上です"
+  },
+  "O7AeYh": {
+    "defaultMessage": "説明..."
   },
   "OEW7yJ": {
     "defaultMessage": "ザップ"
@@ -230,20 +438,55 @@
   "OKhRC6": {
     "defaultMessage": "共有"
   },
-  "OWgHbg": {
-    "defaultMessage": "カードの編集"
+  "ORGv1Q": {
+    "defaultMessage": "Created"
+  },
+  "OadZli": {
+    "defaultMessage": "サーバーの管理"
+  },
+  "ObZZEz": {
+    "defaultMessage": "クリップはまだない"
+  },
+  "OkXMLE": {
+    "defaultMessage": "最大オーディオ・ビットレート"
+  },
+  "OumUwz": {
+    "defaultMessage": "{m}s {ago}",
+    "description": "Number of second(s) relative to now"
   },
   "Oxqtyf": {
     "defaultMessage": "私たちはあなたにライトニング・ウォレットを提供し、視聴者からすぐに支払いを受けることができるようにしました！"
   },
-  "PA0ej4": {
-    "defaultMessage": "クリップ作成"
+  "PDA8V2": {
+    "defaultMessage": "{m}h {ago}",
+    "description": "Number of hour(s) relative to now"
+  },
+  "PHE60k": {
+    "defaultMessage": "目標を設定しない場合は空欄のままにしてください。"
+  },
+  "PUymyQ": {
+    "defaultMessage": "tunestr.ioで {name} ！ {link}"
+  },
+  "PXAur5": {
+    "defaultMessage": "辞退"
+  },
+  "Pc+tM3": {
+    "defaultMessage": "生成する"
   },
   "Pe0ogR": {
     "defaultMessage": "テーマ"
   },
+  "PySFxG": {
+    "defaultMessage": "ファイルを選択してください。"
+  },
   "Q3au2v": {
     "defaultMessage": "{estimate} について"
+  },
+  "Q8Qw5B": {
+    "defaultMessage": "説明"
+  },
+  "QNvtaq": {
+    "defaultMessage": "Xで共有する"
   },
   "QRHNuF": {
     "defaultMessage": "今日は何を配信していますか？"
@@ -260,8 +503,14 @@
   "Qe1MJu": {
     "defaultMessage": "{name}：{amount}"
   },
-  "RJ2VxG": {
-    "defaultMessage": "新しいバージョンが検出されました"
+  "Qf0ugr": {
+    "defaultMessage": "ここで、いくつかのオプションがあります。弊社の社内ホスティングを使用するか、独自のホスティング（Cloudflareなど）を使用するかです。"
+  },
+  "R72je0": {
+    "defaultMessage": "ストリーム・タイトル"
+  },
+  "RGYBjE": {
+    "defaultMessage": "サムネイル"
   },
   "RJOmzk": {
     "defaultMessage": "{provider} の {terms} を読み、同意します。"
@@ -278,14 +527,30 @@
   "RtYNX5": {
     "defaultMessage": "チャットユーザー"
   },
+  "S39ba6": {
+    "defaultMessage": "OBSとは？"
+  },
+  "SC2nJT": {
+    "defaultMessage": "オーディオ・コーデック"
+  },
+  "TDUfVk": {
+    "defaultMessage": "スタート"
+  },
   "TP/cMX": {
     "defaultMessage": "終了しました"
   },
-  "TaTRKo": {
-    "defaultMessage": "配信開始"
+  "TcDwEB": {
+    "defaultMessage": "Stream Keys"
   },
   "TwyMau": {
     "defaultMessage": "アカウント"
+  },
+  "UCDS65": {
+    "defaultMessage": "前",
+    "description": "Relative time, ie. 1s ago"
+  },
+  "UGFYV8": {
+    "defaultMessage": "tunestr.ioへようこそ！"
   },
   "UJBFYK": {
     "defaultMessage": "カードを追加"
@@ -293,45 +558,98 @@
   "UfSot5": {
     "defaultMessage": "過去の配信"
   },
+  "Uo/DWG": {
+    "defaultMessage": "長すぎる"
+  },
   "VA/Z1S": {
     "defaultMessage": "非表示"
   },
-  "Vn2WiP": {
-    "defaultMessage": "Get Stream Key"
+  "VDOpia": {
+    "defaultMessage": "ザップとは何か？"
+  },
+  "VKb1MS": {
+    "defaultMessage": "カテゴリー"
   },
   "W7DNWx": {
     "defaultMessage": "ストリーム転送"
   },
+  "W7IRLs": {
+    "defaultMessage": "タイトルが短すぎる"
+  },
   "W9355R": {
     "defaultMessage": "ミュート解除"
+  },
+  "WVJZ0U": {
+    "defaultMessage": "価値",
+    "description": "Config value column header"
+  },
+  "WcZM+B": {
+    "defaultMessage": "ファイル一覧"
+  },
+  "Wp4l7+": {
+    "defaultMessage": "その他のビデオ"
+  },
+  "WsjXrZ": {
+    "defaultMessage": "ログインをクリック"
   },
   "X2PZ7D": {
     "defaultMessage": "目標を設定"
   },
+  "XIvYvF": {
+    "defaultMessage": "請求書の取得に失敗しました"
+  },
+  "XMGfiA": {
+    "defaultMessage": "最近のクリップ"
+  },
   "XgWvGA": {
     "defaultMessage": "反応"
   },
+  "XmQZr5": {
+    "defaultMessage": "No keys"
+  },
+  "Xq2sb0": {
+    "defaultMessage": "ライブを開始するには、以下のサーバーURLとストリーム・キーをコピーしてストリーミング・ソフトウェアの設定に貼り付け、「ストリーミング開始」を押してください。<a>OBSを</a>お勧めします。"
+  },
   "Y0DXJb": {
-    "defaultMessage": "Recording URL"
+    "defaultMessage": "録画URL"
   },
   "YPh5Nq": {
     "defaultMessage": "{rate}",
     "description": "Showing zap amount in USD @ rate"
   },
-  "YagVIe": {
-    "defaultMessage": "{n}p"
+  "YjhNaf": {
+    "defaultMessage": "ストリーム作成"
   },
   "YwzT/0": {
-    "defaultMessage": "Clip title"
+    "defaultMessage": "クリップのタイトル"
+  },
+  "YyXVHf": {
+    "defaultMessage": "クリアドラフト"
   },
   "Z8ZOEY": {
     "defaultMessage": "この方法は安全ではありません。 {nostrlink}。"
   },
+  "ZXp0z1": {
+    "defaultMessage": "特徴"
+  },
+  "ZaNcK4": {
+    "defaultMessage": "ゴールはまだない"
+  },
+  "ZcgtZo": {
+    "defaultMessage": "少量のビットコイン（sats）を購入し、希望のウォレットに送金できる使いやすい取引所のリストをまとめた。"
+  },
   "ZmqxZs": {
     "defaultMessage": "これはあとで変更することができます"
   },
+  "ZsYhvh": {
+    "defaultMessage": "ザップとはライトニングペイメントのことで、レシートとしてnostrに掲載される。"
+  },
   "Zse7yG": {
     "defaultMessage": "襲撃目標"
+  },
+  "aB/rH0": {
+    "defaultMessage": "{m}h {ago}",
+    "description": "Number of minute(s) relative to now"
   },
   "acrOoz": {
     "defaultMessage": "続ける"
@@ -339,11 +657,32 @@
   "aqjZxs": {
     "defaultMessage": "襲撃だ！"
   },
+  "bD/ZwY": {
+    "defaultMessage": "編集カード"
+  },
+  "bbUGS7": {
+    "defaultMessage": "推奨ストリーム設定"
+  },
+  "bdH+0f": {
+    "defaultMessage": "Balance History"
+  },
   "bfvyfs": {
     "defaultMessage": "アノン"
   },
+  "c3LlRO": {
+    "defaultMessage": "{n}キロバイト"
+  },
   "cPIKU2": {
     "defaultMessage": "フォロー中"
+  },
+  "ccXLVi": {
+    "defaultMessage": "カテゴリー"
+  },
+  "cg1VJ2": {
+    "defaultMessage": "コネクトウォレット"
+  },
+  "cntHHJ": {
+    "defaultMessage": "これにより、ストリームを他のプラットフォームに転送し、より多くの視聴者に届けることができる。"
   },
   "cvAsEh": {
     "defaultMessage": "{date} に配信されました"
@@ -360,6 +699,13 @@
   "dVD/AR": {
     "defaultMessage": "トップザッパー"
   },
+  "dkUMIH": {
+    "defaultMessage": "クリップ： {name}"
+  },
+  "e011kf": {
+    "defaultMessage": "よくあるご質問",
+    "description": "Title: FAQ page"
+  },
   "ebmhes": {
     "defaultMessage": "Nostr 拡張機能"
   },
@@ -369,17 +715,26 @@
   "fBI91o": {
     "defaultMessage": "ザップ"
   },
-  "fc2iho": {
-    "defaultMessage": "ファイルを追加"
-  },
   "feZ/kG": {
     "defaultMessage": "秘密鍵によるログイン（安全ではありません）"
+  },
+  "g5pX+a": {
+    "defaultMessage": "について"
+  },
+  "gQxxlw": {
+    "defaultMessage": "ゴール名"
+  },
+  "gt65Gg": {
+    "defaultMessage": "ストリーム・ゴールは、視聴者に寄付を通じてストリーマーを支援することを促す。"
   },
   "gzsn7k": {
     "defaultMessage": "{n} メッセージ"
   },
-  "hGQqkW": {
-    "defaultMessage": "配信予定"
+  "h6NRY6": {
+    "defaultMessage": "No Thanks!"
+  },
+  "h9mX2/": {
+    "defaultMessage": "社内のtunestr.ioホスティング（最も安くて簡単）をご利用の場合は、ストリームURLとストリームキーをOBSの設定にコピーしてください。"
   },
   "hMzcSq": {
     "defaultMessage": "メッセージ"
@@ -393,8 +748,17 @@
   "hzSNj4": {
     "defaultMessage": "ダッシュボード"
   },
+  "iKlloU": {
+    "defaultMessage": "推奨サーバー"
+  },
   "ieGrWo": {
     "defaultMessage": "フォロー"
+  },
+  "ieKb+k": {
+    "defaultMessage": "ストリーミングの料金は？"
+  },
+  "ipTKP3": {
+    "defaultMessage": "チャット・ポップアウト"
   },
   "itPgxd": {
     "defaultMessage": "プロフィール"
@@ -405,11 +769,11 @@
   "j/jueq": {
     "defaultMessage": "襲撃 {name}"
   },
-  "jJLRgo": {
-    "defaultMessage": "Publish Clip"
+  "jDDeA0": {
+    "defaultMessage": "タイトルが非常に長いので、 {n} 文字以下にしてください。"
   },
-  "jctiUc": {
-    "defaultMessage": "最高視聴者数"
+  "jJLRgo": {
+    "defaultMessage": "パブリッシュ・クリップ"
   },
   "jgOqxt": {
     "defaultMessage": "ウィジェット"
@@ -426,8 +790,26 @@
   "k21gTS": {
     "defaultMessage": "例：自己紹介"
   },
+  "kAEQyV": {
+    "defaultMessage": "OK"
+  },
+  "kGjqZ4": {
+    "defaultMessage": "最新ショートパンツ"
+  },
+  "kQAf2d": {
+    "defaultMessage": "選択"
+  },
+  "kc5EOy": {
+    "defaultMessage": "ユーザー名が長すぎる"
+  },
+  "khJ51Q": {
+    "defaultMessage": "ストリーム収益"
+  },
   "kp0NPF": {
     "defaultMessage": "予定あり"
+  },
+  "lXbG97": {
+    "defaultMessage": "最もザッピングされたストリーマー"
   },
   "lZpRMR": {
     "defaultMessage": "この配信にヌードやポルノコンテンツが含まれている場合は、ここをチェックしてください。"
@@ -441,8 +823,17 @@
   "mnJYBQ": {
     "defaultMessage": "声"
   },
-  "mtNGwh": {
-    "defaultMessage": "コンテンツの簡単な説明"
+  "mrwfXX": {
+    "defaultMessage": "株式"
+  },
+  "msjwph": {
+    "defaultMessage": "キーフレーム間隔"
+  },
+  "n19IQE": {
+    "defaultMessage": "推奨サイズ：1920x1080（16:9）"
+  },
+  "n8k1SG": {
+    "defaultMessage": "{n}MB"
   },
   "nBCvvJ": {
     "defaultMessage": "アカウントチャージ"
@@ -453,35 +844,48 @@
   "nwA8Os": {
     "defaultMessage": "カードを追加"
   },
-  "o8pHw3": {
-    "defaultMessage": "オート"
-  },
   "oHPB8Q": {
     "defaultMessage": "{name} をザップ"
   },
   "oZrFyI": {
     "defaultMessage": "配信タイプはHLSでなければなりません"
   },
+  "p4N05H": {
+    "defaultMessage": "アップロード"
+  },
+  "pOeEMx": {
+    "defaultMessage": "サーバーの追加"
+  },
+  "pxF+t0": {
+    "defaultMessage": "ポピュラー"
+  },
   "q+zTWM": {
     "defaultMessage": "<s>{person}</s> ザップ <s>{amount}</s> サッツ"
+  },
+  "q9ryv4": {
+    "defaultMessage": "カバー画像のURL（オプション）"
+  },
+  "qx6bv2": {
+    "defaultMessage": "ストリームゴール（オプション）"
   },
   "r2Jjms": {
     "defaultMessage": "ログイン"
   },
-  "rELDbB": {
-    "defaultMessage": "リフレッシュ"
+  "rJqhFR": {
+    "defaultMessage": "ストリーム・セットアップ"
   },
   "rWBFZA": {
     "defaultMessage": "性的に露骨な表現が含まれています！"
   },
-  "rbrahO": {
-    "defaultMessage": "終了"
-  },
-  "rfC1Zq": {
-    "defaultMessage": "カードを保存する"
-  },
   "rgsbu9": {
     "defaultMessage": "現在の視聴者数"
+  },
+  "rleUgy": {
+    "defaultMessage": "アップロード"
+  },
+  "s+ORFl": {
+    "defaultMessage": "{m}d {ago}",
+    "description": "Number of day(s) relative to now"
   },
   "s5ksS7": {
     "defaultMessage": "画像リンク"
@@ -492,14 +896,33 @@
   "sInm1h": {
     "defaultMessage": "ザップメッセージ"
   },
+  "sj6WAe": {
+    "defaultMessage": "右上の \"Stream \"ボタンをクリックする。"
+  },
+  "syEQFE": {
+    "defaultMessage": "出版"
+  },
   "tG1ST3": {
     "defaultMessage": "着金中のザップ"
   },
   "tM6fNW": {
     "defaultMessage": "驚いた！続けて..."
   },
+  "tNtB9I": {
+    "defaultMessage": "名称",
+    "description": "Config name column header"
+  },
+  "tTgdmx": {
+    "defaultMessage": "{n,selectordinal,one{@ #第1分} two{@ #第2分} few{@ #第3分} other{@ #第3分}}"
+  },
+  "tVCC9m": {
+    "defaultMessage": "サットはビットコインの小さな単位です。tunestr.ioでサットを送信することは、「ザッピング」またはザップと呼ばれます。"
+  },
   "thsiMl": {
     "defaultMessage": "利用規約"
+  },
+  "twCRVi": {
+    "defaultMessage": "アート"
   },
   "tzMNF3": {
     "defaultMessage": "ステータス"
@@ -510,14 +933,32 @@
   "uYw2LD": {
     "defaultMessage": "配信"
   },
+  "ug01Mk": {
+    "defaultMessage": "Time"
+  },
+  "uksRSi": {
+    "defaultMessage": "最新ビデオ"
+  },
+  "vP4dFa": {
+    "defaultMessage": "{link} 、tunestr.ioのグッズをゲットしよう！"
+  },
   "vrTOHJ": {
     "defaultMessage": "{amount} sats"
+  },
+  "w+2Vw7": {
+    "defaultMessage": "ショートパンツ"
   },
   "w0Xm2F": {
     "defaultMessage": "入力を開始"
   },
+  "w3btjR": {
+    "defaultMessage": "ギャンブル"
+  },
   "wCIL7o": {
     "defaultMessage": "Nostr で配信"
+  },
+  "wCgTu5": {
+    "defaultMessage": "コメント"
   },
   "wEQDC6": {
     "defaultMessage": "編集"
@@ -525,20 +966,54 @@
   "wMKVFz": {
     "defaultMessage": "音声を選択..."
   },
-  "wOy57k": {
-    "defaultMessage": "配信目標を追加"
+  "wRGjPp": {
+    "defaultMessage": "nostr拡張機能はキーを保存するだけで、毎回キーを再入力することなく安全にログインできる。Tunestrはこの拡張機能を使い、あなたのキー情報を見ることなく、あなたに代わってアクションを承認する。これは、ウェブサイトがあなたのクレデンシャルを安全に扱うことを信頼するよりも大きな利点があります。"
   },
-  "wzWWzV": {
-    "defaultMessage": "トップザッパー"
+  "wTwfnv": {
+    "defaultMessage": "無効なアドレス"
+  },
+  "we4Lby": {
+    "defaultMessage": "インフォメーション"
   },
   "x82IOl": {
     "defaultMessage": "ミュート"
   },
+  "xhQMeQ": {
+    "defaultMessage": "Expires"
+  },
+  "xi3sgh": {
+    "defaultMessage": "サッツを増やすには？"
+  },
+  "xmcVZ0": {
+    "defaultMessage": "検索"
+  },
   "y867Vs": {
     "defaultMessage": "ボリューム"
   },
+  "y8ogtp": {
+    "defaultMessage": "{m}w {ago}",
+    "description": "Number of week(s) relative to now"
+  },
+  "yLxIgl": {
+    "defaultMessage": "クリップス"
+  },
+  "yR0V+W": {
+    "defaultMessage": "tunestr.ioでストリーミングを開始するには、以下の手順に従ってください："
+  },
+  "yj8NrY": {
+    "defaultMessage": "クリップ"
+  },
   "yzKwBQ": {
     "defaultMessage": "例：nsec1xyz"
+  },
+  "z2qCcJ": {
+    "defaultMessage": "最大ビデオ・ビットレート"
+  },
+  "zEYkgY": {
+    "defaultMessage": "トーク"
+  },
+  "zSYDJP": {
+    "defaultMessage": "自分のストリームホストを持っている"
   },
   "zVDHAu": {
     "defaultMessage": "ザップアラート"

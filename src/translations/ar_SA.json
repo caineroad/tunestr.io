@@ -3,544 +3,1019 @@
     "defaultMessage": "صورة"
   },
   "+AcVD+": {
-    "defaultMessage": "No emails, just awesomeness!"
+    "defaultMessage": "لا رسائل بريد إلكتروني، فقط روعة!"
   },
   "+sdKx8": {
-    "defaultMessage": "Live now"
+    "defaultMessage": "بث مباشر الآن"
   },
   "+vVZ/G": {
-    "defaultMessage": "Connect"
+    "defaultMessage": "الاتصال"
+  },
+  "+y6JUK": {
+    "defaultMessage": "المداهمات"
   },
   "/0TOL5": {
-    "defaultMessage": "Amount"
+    "defaultMessage": "المبلغ"
+  },
+  "/563b0": {
+    "defaultMessage": "الرصيد: {n} ساتس"
   },
   "/EvlqN": {
-    "defaultMessage": "nostr signer extension"
+    "defaultMessage": "تمديد موقّع نوستر"
   },
-  "/GCoTA": {
-    "defaultMessage": "Clear"
+  "/JkXBo": {
+    "defaultMessage": "مقطع من {title}"
+  },
+  "/Jp9pC": {
+    "defaultMessage": "المجموع: {amount} ساتس"
+  },
+  "/aFYQ5": {
+    "defaultMessage": "إعادة توجيه الدفق (اختياري)"
+  },
+  "/w4RM6": {
+    "defaultMessage": "IRL"
+  },
+  "01iNut": {
+    "defaultMessage": "عنوان Nostr لا يخصك"
   },
   "04lmFi": {
-    "defaultMessage": "Save Key"
-  },
-  "0GfNiL": {
-    "defaultMessage": "Stream Zap Goals"
+    "defaultMessage": "مفتاح الحفظ"
   },
   "0VV/sK": {
-    "defaultMessage": "Goal"
+    "defaultMessage": "الهدف"
   },
   "0hNxBy": {
-    "defaultMessage": "Starts"
+    "defaultMessage": "البدء"
+  },
+  "0rVLjV": {
+    "defaultMessage": "لا توجد تدفقات بعد"
   },
   "1EYCdR": {
-    "defaultMessage": "Tags"
+    "defaultMessage": "الوسوم"
+  },
+  "1LBny5": {
+    "defaultMessage": "توقف"
   },
   "1q4BO/": {
-    "defaultMessage": "Not a valid URL"
+    "defaultMessage": "عنوان URL غير صالح"
   },
   "1qsXCO": {
-    "defaultMessage": "eg. name@wallet.com"
+    "defaultMessage": "على سبيل المثال: name@wallet.com"
   },
   "2/2yg+": {
-    "defaultMessage": "Add"
+    "defaultMessage": "إضافة"
+  },
+  "2lVQYF": {
+    "defaultMessage": "...المزيد"
+  },
+  "2ukA4d": {
+    "defaultMessage": "{n} ساعات"
+  },
+  "2wdFaB": {
+    "defaultMessage": "تيار النهاية"
   },
   "37mth/": {
-    "defaultMessage": "Viewers"
+    "defaultMessage": "المشاهدون"
   },
   "3HwrQo": {
-    "defaultMessage": "Zap!"
+    "defaultMessage": "انطلق!"
   },
   "3adEeb": {
-    "defaultMessage": "{n} viewers"
+    "defaultMessage": "{n} المشاهدون"
   },
   "3df560": {
-    "defaultMessage": "Login with private key"
+    "defaultMessage": "تسجيل الدخول بالمفتاح الخاص"
+  },
+  "3kbIhS": {
+    "defaultMessage": "بدون عنوان"
+  },
+  "3yk8fB": {
+    "defaultMessage": "المحفظة"
   },
   "47FYwb": {
-    "defaultMessage": "Cancel"
+    "defaultMessage": "إلغاء"
+  },
+  "4RhY4O": {
+    "defaultMessage": "مثال على الإعدادات في OBS (Apple M1 Mac)"
+  },
+  "4XfMux": {
+    "defaultMessage": "مقاطع الفيديو"
   },
   "4iBdw1": {
-    "defaultMessage": "Raid"
+    "defaultMessage": "الغارة"
   },
   "4l69eO": {
-    "defaultMessage": "Hmm, your lightning address looks wrong"
+    "defaultMessage": "يبدو عنوان البرق الخاص بك خاطئاً"
   },
   "4l6vz1": {
-    "defaultMessage": "Copy"
-  },
-  "4uI538": {
-    "defaultMessage": "Resolutions"
+    "defaultMessage": "نسخ"
   },
   "50+/JW": {
-    "defaultMessage": "Stream Key is required"
+    "defaultMessage": "مفتاح الدفق مطلوب"
+  },
+  "58DXVG": {
+    "defaultMessage": "للبدء، احصل على مفتاح البث من المنصة التي ترغب في إعادة التوجيه إليها."
   },
   "5JcXdV": {
-    "defaultMessage": "Create Account"
+    "defaultMessage": "إنشاء حساب"
+  },
+  "5L4ati": {
+    "defaultMessage": "Zap from"
+  },
+  "5LXWMX": {
+    "defaultMessage": "هدف جديد"
   },
   "5QYdPU": {
-    "defaultMessage": "Start Time"
+    "defaultMessage": "وقت البدء"
+  },
+  "5Wwopw": {
+    "defaultMessage": "التسعير"
   },
   "5kx+2v": {
-    "defaultMessage": "Server Url"
+    "defaultMessage": "عنوان الخادم"
   },
   "5tM0VD": {
-    "defaultMessage": "Stream Started"
+    "defaultMessage": "بدء البث"
+  },
+  "5vMmmR": {
+    "defaultMessage": "أسماء المستخدمين ليست فريدة على Nostr. فعنوان nostr هو عنوانك الفريد المقروء بشرياً والفريد الخاص بك عند التسجيل."
   },
   "69hmpj": {
-    "defaultMessage": "Raid from {name}"
+    "defaultMessage": "غارة من {name}"
+  },
+  "6PK5Jy": {
+    "defaultMessage": "Past Stream"
   },
   "6Z2pvJ": {
-    "defaultMessage": "Stream Providers"
+    "defaultMessage": "موفرو التدفق"
   },
   "6pr6hJ": {
-    "defaultMessage": "Minimum amount for text to speech"
+    "defaultMessage": "الحد الأدنى لمبلغ تحويل النص إلى كلام"
   },
   "7+bCC1": {
-    "defaultMessage": "Stream url must start with rtmp://"
+    "defaultMessage": "يجب أن يبدأ عنوان url البث ب rtmp://"
+  },
+  "74PejI": {
+    "defaultMessage": "أفضل المشاهدين"
   },
   "79lLl+": {
-    "defaultMessage": "Music"
+    "defaultMessage": "الموسيقى"
   },
   "7UOvbT": {
-    "defaultMessage": "Offline"
+    "defaultMessage": "غير متصل بالإنترنت"
+  },
+  "89UZph": {
+    "defaultMessage": "تكوين برنامج البث الخاص بك"
   },
   "8YT6ja": {
-    "defaultMessage": "Insert text to speak"
+    "defaultMessage": "إدراج نص للتحدث"
+  },
+  "8aAwpp": {
+    "defaultMessage": "بالنسبة للاستضافة اليدوية، كل ما تحتاجه هو عنوان URL الخاص ب HLS لحقل عنوان URL الخاص بالبث. يجب أن تكون قادرًا على العثور على هذا في إعداد الاستضافة."
+  },
+  "8xVdjn": {
+    "defaultMessage": "برنامج ترميز الفيديو"
   },
   "9WRlF4": {
-    "defaultMessage": "Send"
+    "defaultMessage": "إرسال"
+  },
+  "9ZoFpI": {
+    "defaultMessage": "حذف الملف"
   },
   "9a9+ww": {
-    "defaultMessage": "Title"
+    "defaultMessage": "العنوان"
+  },
+  "9pMqYs": {
+    "defaultMessage": "عنوان نوستر"
+  },
+  "9rmSgv": {
+    "defaultMessage": "OBS (برنامج Open Broadcaster Software) هو برنامج مجاني ومفتوح المصدر لتسجيل الفيديو والبث المباشر على أنظمة ويندوز وماك ولينكس. وهو خيار شائع لدى مشغلي البث المباشر. ستحتاج إلى تثبيته لالتقاط الفيديو والصوت وأي شيء آخر ترغب في إضافته إلى البث. بمجرد تثبيته وتهيئته حسب التفضيلات، أضف عنوان URL للبث ومفتاح البث من إعدادات البث إلى OBS لتشكيل اتصال مع tunestr.io."
+  },
+  "A1zT+z": {
+    "defaultMessage": "نتائج البحث {term}"
+  },
+  "A7K3S+": {
+    "defaultMessage": "Account Setup"
+  },
+  "ALdW69": {
+    "defaultMessage": "ملاحظة من {name}"
+  },
+  "ASKb16": {
+    "defaultMessage": "A description of the stream"
+  },
+  "AYIR/J": {
+    "defaultMessage": "إزالة الصورة"
   },
   "Atr2p4": {
-    "defaultMessage": "NSFW Content"
+    "defaultMessage": "محتوى غير لائق جنسيًا"
   },
   "AukrPM": {
-    "defaultMessage": "No viewer data available"
+    "defaultMessage": "لا تتوفر بيانات المشاهدين"
+  },
+  "Axo/o5": {
+    "defaultMessage": "العلوم والتكنولوجيا"
   },
   "AyGauy": {
-    "defaultMessage": "Login"
+    "defaultMessage": "تسجيل الدخول"
   },
   "BD0vyn": {
-    "defaultMessage": "{name} created a clip"
+    "defaultMessage": "{name} إنشاء مقطع"
   },
-  "BGxpTN": {
-    "defaultMessage": "Stream Chat"
+  "Bd1yEX": {
+    "defaultMessage": "هدف التدفق الجديد"
   },
   "Bep/gA": {
-    "defaultMessage": "Private key"
+    "defaultMessage": "المفتاح الخاص"
+  },
+  "BzQPM+": {
+    "defaultMessage": "الوجهة"
   },
   "C81/uG": {
-    "defaultMessage": "Logout"
+    "defaultMessage": "تسجيل الخروج"
+  },
+  "CTgA2G": {
+    "defaultMessage": "قم بإنشاء حساب جديد إذا لم يكن لديك حساب بالفعل."
   },
   "CsCUYo": {
-    "defaultMessage": "{n} sats"
+    "defaultMessage": "{n} ساتس"
+  },
+  "CsS/fy": {
+    "defaultMessage": "{estimate} متبقي ({balance} ساتس {rate} ساتس / {unit})"
   },
   "D3idYv": {
-    "defaultMessage": "Settings"
+    "defaultMessage": "الإعدادات"
   },
   "DZKuuP": {
-    "defaultMessage": "Logged in as"
+    "defaultMessage": "تم تسجيل الدخول باسم"
+  },
+  "DkgCAz": {
+    "defaultMessage": "كيف يمكنني البث على tunestr.io؟"
   },
   "Dn82AL": {
-    "defaultMessage": "Live"
+    "defaultMessage": "بث مباشر"
+  },
+  "DqmiAe": {
+    "defaultMessage": "Dont have a nostr extension? Try {nos2x}, {nostore} or {alby}"
+  },
+  "E7n6zr": {
+    "defaultMessage": "تكلفة التدفق الحالي: {amount} سات /{unit} (حوالي {usd}/ يوم للتدفق {x}ساعة)"
   },
   "E9APoR": {
-    "defaultMessage": "Could not create stream URL"
+    "defaultMessage": "تعذر إنشاء عنوان URL للبث"
   },
   "ESyhzp": {
-    "defaultMessage": "Your comment for {name}"
+    "defaultMessage": "تعليقك على {name}"
+  },
+  "EcglP9": {
+    "defaultMessage": "Key"
+  },
+  "FAUhZf": {
+    "defaultMessage": "ما هي ساتس؟"
+  },
+  "FIDK5Y": {
+    "defaultMessage": "أفضل الصاعقين في كل الأوقات"
+  },
+  "FXepR9": {
+    "defaultMessage": "{m}مو {ago}",
+    "description": "Number of month(s) relative to now"
   },
   "FjDlus": {
-    "defaultMessage": "You can always replace it with your own address later."
+    "defaultMessage": "يمكنك دائمًا استبداله بعنوانك الخاص لاحقًا."
   },
   "Fodi9+": {
-    "defaultMessage": "Get paid by viewers"
+    "defaultMessage": "الحصول على أموال من المشاهدين"
   },
   "G/yZLu": {
-    "defaultMessage": "Remove"
+    "defaultMessage": "إزالة"
+  },
+  "G857ni": {
+    "defaultMessage": "LNURL أو الفاتورة"
   },
   "GGaJMU": {
-    "defaultMessage": "Top Chatters"
+    "defaultMessage": "أفضل الدردشات"
   },
-  "Gmiwnd": {
-    "defaultMessage": "Refresh the page to use the latest version"
+  "GSuQPh": {
+    "defaultMessage": "رابط حدث غير معروف"
+  },
+  "GSye7T": {
+    "defaultMessage": "عنوان البرق"
+  },
+  "GcozGF": {
+    "defaultMessage": "عنوان البرق غير صالح"
   },
   "Gq6x9o": {
-    "defaultMessage": "Cover Image"
+    "defaultMessage": "صورة الغلاف"
   },
   "Gvxoji": {
-    "defaultMessage": "Name is required"
+    "defaultMessage": "الاسم مطلوب"
+  },
+  "GwbTAz": {
+    "defaultMessage": "الجداول"
   },
   "H/bNs9": {
-    "defaultMessage": "Save this and keep it safe! If you lose this key, you won't be able to access your account ever again. Yep, it's that serious!"
+    "defaultMessage": "احفظ هذا واحتفظ به في مكان آمن! إذا فقدت هذا المفتاح، فلن تتمكن من الوصول إلى حسابك مرة أخرى. نعم، الأمر بهذه الجدية!"
+  },
+  "H1fdc9": {
+    "defaultMessage": "يرجى إضافة صورة مصغرة"
+  },
+  "H4hJvF": {
+    "defaultMessage": "اختر فئة"
   },
   "H5+NAX": {
-    "defaultMessage": "Balance"
+    "defaultMessage": "الرصيد"
   },
   "HAlOn1": {
-    "defaultMessage": "Name"
+    "defaultMessage": "الاسم"
   },
-  "I/TubD": {
-    "defaultMessage": "Select a goal..."
+  "HDgXO/": {
+    "defaultMessage": "tunestr.io هي منصة مفتوحة المصدر مدعومة ببروتوكول nostr. لا توجد شركات عملاقة أو صناديق عملاقة متاحة لتوفير البث المجاني."
+  },
+  "HsgeUk": {
+    "defaultMessage": "تعال وشاهد البث الخاص بي على tunestr.io! {link}"
+  },
+  "Ht231k": {
+    "defaultMessage": "إعادة التوجيه"
+  },
+  "HvUhXt": {
+    "defaultMessage": "التحميل إلى خوادم {n}"
   },
   "I1kjHI": {
-    "defaultMessage": "Supports {markdown}"
+    "defaultMessage": "يدعم {markdown}"
+  },
+  "I2AKfn": {
+    "defaultMessage": "الألعاب"
+  },
+  "IDqXmC": {
+    "defaultMessage": "قائمة خوادم الوسائط"
   },
   "IJDKz3": {
-    "defaultMessage": "Zap amount in {currency}"
+    "defaultMessage": "مقدار Zap في {currency}"
   },
   "INlWvJ": {
-    "defaultMessage": "OR"
+    "defaultMessage": "أو"
+  },
+  "IPXhUW": {
+    "defaultMessage": "ملخص البث الأخير"
+  },
+  "IqcyS0": {
+    "defaultMessage": "ما هو امتداد نوستر؟"
   },
   "J/+m9y": {
-    "defaultMessage": "Stream Duration {duration} mins"
+    "defaultMessage": "مدة البث {duration} دقيقة"
   },
-  "JEsxDw": {
-    "defaultMessage": "Uploading..."
+  "JCIgkj": {
+    "defaultMessage": "اسم المستخدم"
+  },
+  "JO0kq9": {
+    "defaultMessage": "تحرير معلومات البث"
+  },
+  "JkLHGw": {
+    "defaultMessage": "الموقع الإلكتروني"
   },
   "Jq3FDz": {
-    "defaultMessage": "Content"
+    "defaultMessage": "المحتوى"
   },
   "K3r6DQ": {
-    "defaultMessage": "Delete"
+    "defaultMessage": "حذف"
   },
   "K7AkdL": {
-    "defaultMessage": "Show"
+    "defaultMessage": "عرض"
+  },
+  "KH2ayq": {
+    "defaultMessage": "تحميل الفيديو"
   },
   "KkIL3s": {
-    "defaultMessage": "No, I am under 18"
+    "defaultMessage": "لا، عمري أقل من 18 عاماً"
+  },
+  "KtrGU6": {
+    "defaultMessage": "إذا كان لديك حساب بالفعل، يمكنك استخدام امتداد nostr لتسجيل الدخول. إذا كنت تستخدم امتداد nostr بالفعل، فسيتم تسجيل دخولك تلقائيًا. إذا لم يكن لديك ملحق nostr مُعد، يمكنك استخدام nos2x أو Alby."
+  },
+  "KxfKnW": {
+    "defaultMessage": "سحب الأموال"
+  },
+  "LEmxc8": {
+    "defaultMessage": "أهداف Zap Goals"
+  },
+  "LUvSJB": {
+    "defaultMessage": "tunestr.io مجاني حتى ساعتين من الاستضافة بجودة عالية وحتى 8 ساعات من جودة \"المصدر\". بعد ذلك لديك خيار للبث مقابل 5 ساعات في الدقيقة أو 10 ساعات في الدقيقة حسب الجودة التي اخترتها. إذا كنت لا تستخدم tunestr.io للاستضافة، فستعتمد الأسعار على مزود البث الذي اخترته."
+  },
+  "Le+99Z": {
+    "defaultMessage": "يدفع القائمون على البث رسومًا رمزية لتغطية تكاليف التشغيل. نمنح مقدمي البث الجدد رصيداً قدره {amount} سات (حوالي {time_estimate} من البث) للبدء!"
+  },
+  "Lg2ye2": {
+    "defaultMessage": "Tunestr هو نوع جديد من من منصات البث التي تتيح لك كسب البيتكوين (sats) في اللحظة التي تبدأ فيها البث! يمكن للمشاهدين تقديم إكرامية للمشاهدين بأي مبلغ يختارونه. ويتم إيداع الإكراميات على الفور في محفظة البيتكوين (البرق) الخاصة بك."
   },
   "LknBsU": {
-    "defaultMessage": "Stream Key"
+    "defaultMessage": "مفتاح الدفق"
+  },
+  "LxSJOb": {
+    "defaultMessage": "الانتقال إلى لوحة التحكم"
   },
   "MTHO1W": {
-    "defaultMessage": "Start Raid"
+    "defaultMessage": "بدء الغارة"
   },
   "My6HwN": {
-    "defaultMessage": "Ok, it's safe"
+    "defaultMessage": "حسناً، إنه آمن"
+  },
+  "NTpJIm": {
+    "defaultMessage": "تمكين التسجيل"
+  },
+  "NnHu0L": {
+    "defaultMessage": "يُرجى تحميل فيديو واحد على الأقل"
+  },
+  "Ntjkqd": {
+    "defaultMessage": "أو"
   },
   "O2Cy6m": {
-    "defaultMessage": "Yes, I am over 18"
+    "defaultMessage": "نعم، عمري فوق 18 عاماً"
+  },
+  "O7AeYh": {
+    "defaultMessage": "الوصف .."
   },
   "OEW7yJ": {
-    "defaultMessage": "Zaps"
+    "defaultMessage": "الزابس"
   },
   "OKhRC6": {
-    "defaultMessage": "Share"
+    "defaultMessage": "شارك"
   },
-  "OWgHbg": {
-    "defaultMessage": "Edit card"
+  "ORGv1Q": {
+    "defaultMessage": "Created"
+  },
+  "OadZli": {
+    "defaultMessage": "إدارة الخوادم"
+  },
+  "ObZZEz": {
+    "defaultMessage": "لا توجد مقاطع بعد"
+  },
+  "OkXMLE": {
+    "defaultMessage": "الحد الأقصى لمعدل البت الصوتي"
+  },
+  "OumUwz": {
+    "defaultMessage": "{m}ق {ago}",
+    "description": "Number of second(s) relative to now"
   },
   "Oxqtyf": {
-    "defaultMessage": "We hooked you up with a lightning wallet so you can get paid by viewers right away!"
+    "defaultMessage": "لقد قمنا بتزويدك بمحفظة برق حتى تتمكن من الحصول على أموالك من قبل المشاهدين على الفور!"
   },
-  "PA0ej4": {
-    "defaultMessage": "Create Clip"
+  "PDA8V2": {
+    "defaultMessage": "{m}ح {ago}",
+    "description": "Number of hour(s) relative to now"
+  },
+  "PHE60k": {
+    "defaultMessage": "اتركها فارغة إذا كنت لا ترغب في إعداد أي أهداف."
+  },
+  "PUymyQ": {
+    "defaultMessage": "تعال وشاهد البث {name} على tunestr.io! {link}"
+  },
+  "PXAur5": {
+    "defaultMessage": "سحب"
+  },
+  "Pc+tM3": {
+    "defaultMessage": "توليد"
   },
   "Pe0ogR": {
-    "defaultMessage": "Theme"
+    "defaultMessage": "الموضوع"
+  },
+  "PySFxG": {
+    "defaultMessage": "اختر الملف."
   },
   "Q3au2v": {
-    "defaultMessage": "About {estimate}"
+    "defaultMessage": "حول {estimate}"
+  },
+  "Q8Qw5B": {
+    "defaultMessage": "الوصف"
+  },
+  "QNvtaq": {
+    "defaultMessage": "مشاركة على X"
   },
   "QRHNuF": {
-    "defaultMessage": "What are we steaming today?"
+    "defaultMessage": "ما الذي نتبخره اليوم؟"
   },
   "QRRCp0": {
-    "defaultMessage": "Stream URL"
+    "defaultMessage": "عنوان URL للبث"
   },
   "QWlMq9": {
-    "defaultMessage": "Stream key"
+    "defaultMessage": "مفتاح الدفق"
   },
   "QceMQZ": {
-    "defaultMessage": "Goal: {amount}"
+    "defaultMessage": "الهدف: {amount}"
   },
   "Qe1MJu": {
-    "defaultMessage": "{name} with {amount}"
+    "defaultMessage": "{name} مع {amount}"
   },
-  "RJ2VxG": {
-    "defaultMessage": "A new version has been detected"
+  "Qf0ugr": {
+    "defaultMessage": "لديك هنا بعض الخيارات، باستخدام استضافتنا الداخلية أو استضافتك الخاصة (مثل Cloudflare)."
+  },
+  "R72je0": {
+    "defaultMessage": "عنوان البث"
+  },
+  "RGYBjE": {
+    "defaultMessage": "الصورة المصغرة"
   },
   "RJOmzk": {
-    "defaultMessage": "I have read and agree with {provider}''s {terms}."
+    "defaultMessage": "لقد قرأت واتفق مع {provider}' {terms}."
   },
   "RS6smY": {
-    "defaultMessage": "Raid Message"
+    "defaultMessage": "رسالة الغارة"
   },
   "RXQdxR": {
-    "defaultMessage": "Please login to write messages!"
+    "defaultMessage": "يرجى تسجيل الدخول لكتابة الرسائل!"
   },
   "RrCui3": {
-    "defaultMessage": "Summary"
+    "defaultMessage": "الملخص"
   },
   "RtYNX5": {
-    "defaultMessage": "Chat Users"
+    "defaultMessage": "مستخدمو الدردشة"
+  },
+  "S39ba6": {
+    "defaultMessage": "ما هو الـ OBS؟"
+  },
+  "SC2nJT": {
+    "defaultMessage": "برنامج ترميز الصوت"
+  },
+  "TDUfVk": {
+    "defaultMessage": "بدأت"
   },
   "TP/cMX": {
-    "defaultMessage": "Ended"
+    "defaultMessage": "انتهى"
   },
-  "TaTRKo": {
-    "defaultMessage": "Start Stream"
+  "TcDwEB": {
+    "defaultMessage": "Stream Keys"
   },
   "TwyMau": {
-    "defaultMessage": "Account"
+    "defaultMessage": "الحساب"
+  },
+  "UCDS65": {
+    "defaultMessage": "منذ",
+    "description": "Relative time, ie. 1s ago"
+  },
+  "UGFYV8": {
+    "defaultMessage": "مرحباً بك في tunestr.io!"
   },
   "UJBFYK": {
-    "defaultMessage": "Add Card"
+    "defaultMessage": "إضافة بطاقة"
   },
   "UfSot5": {
-    "defaultMessage": "Past Streams"
+    "defaultMessage": "التدفقات السابقة"
+  },
+  "Uo/DWG": {
+    "defaultMessage": "عن فترة طويلة جداً"
   },
   "VA/Z1S": {
-    "defaultMessage": "Hide"
+    "defaultMessage": "إخفاء"
   },
-  "Vn2WiP": {
-    "defaultMessage": "Get Stream Key"
+  "VDOpia": {
+    "defaultMessage": "ما هي الزابس؟"
+  },
+  "VKb1MS": {
+    "defaultMessage": "الفئات"
   },
   "W7DNWx": {
-    "defaultMessage": "Stream Forwarding"
+    "defaultMessage": "إعادة توجيه الدفق"
+  },
+  "W7IRLs": {
+    "defaultMessage": "عنوانك قصير جداً"
   },
   "W9355R": {
-    "defaultMessage": "Unmute"
+    "defaultMessage": "إلغاء الكتم"
+  },
+  "WVJZ0U": {
+    "defaultMessage": "القيمة",
+    "description": "Config value column header"
+  },
+  "WcZM+B": {
+    "defaultMessage": "قائمة الملفات"
+  },
+  "Wp4l7+": {
+    "defaultMessage": "المزيد من مقاطع الفيديو"
+  },
+  "WsjXrZ": {
+    "defaultMessage": "انقر على تسجيل الدخول"
   },
   "X2PZ7D": {
-    "defaultMessage": "Create Goal"
+    "defaultMessage": "إنشاء هدف"
+  },
+  "XIvYvF": {
+    "defaultMessage": "فشل في الحصول على فاتورة"
+  },
+  "XMGfiA": {
+    "defaultMessage": "أحدث المقاطع"
   },
   "XgWvGA": {
-    "defaultMessage": "Reactions"
+    "defaultMessage": "ردود الفعل"
+  },
+  "XmQZr5": {
+    "defaultMessage": "No keys"
+  },
+  "Xq2sb0": {
+    "defaultMessage": "لبدء البث المباشر، انسخ والصق عنوان URL الخاص بالخادم ومفتاح البث أدناه في إعدادات برنامج البث واضغط على \"بدء البث\". نوصي باستخدام <a>OBS</a>."
   },
   "Y0DXJb": {
-    "defaultMessage": "Recording URL"
+    "defaultMessage": "عنوان URL للتسجيل"
   },
   "YPh5Nq": {
     "defaultMessage": "@ {rate}",
     "description": "Showing zap amount in USD @ rate"
   },
-  "YagVIe": {
-    "defaultMessage": "{n}p"
+  "YjhNaf": {
+    "defaultMessage": "إنشاء دفق"
   },
   "YwzT/0": {
-    "defaultMessage": "Clip title"
+    "defaultMessage": "عنوان المقطع"
+  },
+  "YyXVHf": {
+    "defaultMessage": "مسح المسودة"
   },
   "Z8ZOEY": {
-    "defaultMessage": "This method is insecure. We recommend using a {nostrlink}"
+    "defaultMessage": "هذه الطريقة غير آمنة. نوصي باستخدام {nostrlink}"
+  },
+  "ZXp0z1": {
+    "defaultMessage": "الميزات"
+  },
+  "ZaNcK4": {
+    "defaultMessage": "لا توجد أهداف بعد"
+  },
+  "ZcgtZo": {
+    "defaultMessage": "لقد قمنا بتجميع قائمة من البورصات سهلة الاستخدام التي تتيح لك شراء كمية صغيرة من البيتكوين (sats) وتحويلها إلى محفظتك التي تختارها."
   },
   "ZmqxZs": {
-    "defaultMessage": "You can change this later"
+    "defaultMessage": "يمكنك تغيير ذلك لاحقاً"
+  },
+  "ZsYhvh": {
+    "defaultMessage": "Zaps هي مدفوعات خاطفة يتم نشرها على موقع nostr كإيصالات."
   },
   "Zse7yG": {
-    "defaultMessage": "Raid target"
+    "defaultMessage": "هدف المداهمة"
+  },
+  "aB/rH0": {
+    "defaultMessage": "{m}ح {ago}",
+    "description": "Number of minute(s) relative to now"
   },
   "acrOoz": {
-    "defaultMessage": "Continue"
+    "defaultMessage": "تابع"
   },
   "aqjZxs": {
-    "defaultMessage": "Raid!"
+    "defaultMessage": "غارة"
+  },
+  "bD/ZwY": {
+    "defaultMessage": "تحرير البطاقات"
+  },
+  "bbUGS7": {
+    "defaultMessage": "إعدادات البث الموصى بها"
+  },
+  "bdH+0f": {
+    "defaultMessage": "Balance History"
   },
   "bfvyfs": {
-    "defaultMessage": "Anon"
+    "defaultMessage": "أنون"
+  },
+  "c3LlRO": {
+    "defaultMessage": "{n}كيلوبايت"
   },
   "cPIKU2": {
-    "defaultMessage": "Following"
+    "defaultMessage": "ما يلي"
+  },
+  "ccXLVi": {
+    "defaultMessage": "الفئة"
+  },
+  "cg1VJ2": {
+    "defaultMessage": "توصيل المحفظة"
+  },
+  "cntHHJ": {
+    "defaultMessage": "يتيح لك ذلك إعادة توجيه البث إلى منصات أخرى للوصول إلى جمهور أوسع."
   },
   "cvAsEh": {
-    "defaultMessage": "Streamed on {date}"
+    "defaultMessage": "تم البث على {date}"
   },
   "cyR7Kh": {
-    "defaultMessage": "Back"
+    "defaultMessage": "رجوع"
   },
   "d5zWyh": {
-    "defaultMessage": "Test voice"
+    "defaultMessage": "اختبار الصوت"
   },
   "dOQCL8": {
-    "defaultMessage": "Display name"
+    "defaultMessage": "اسم العرض"
   },
   "dVD/AR": {
-    "defaultMessage": "Top Zappers"
+    "defaultMessage": "أفضل الصاعقين"
+  },
+  "dkUMIH": {
+    "defaultMessage": "مقطع من {name}"
+  },
+  "e011kf": {
+    "defaultMessage": "الأسئلة الشائعة",
+    "description": "Title: FAQ page"
   },
   "ebmhes": {
-    "defaultMessage": "Nostr Extension"
+    "defaultMessage": "ملحق نوستر"
   },
   "f6biFA": {
-    "defaultMessage": "Oh, and you have {n} sats of free streaming on us! 💜"
+    "defaultMessage": "أوه، ولديك {n} سات من البث المجاني علينا! 💜"
   },
   "fBI91o": {
-    "defaultMessage": "Zap"
-  },
-  "fc2iho": {
-    "defaultMessage": "Add File"
+    "defaultMessage": "زاب"
   },
   "feZ/kG": {
-    "defaultMessage": "Login with Private Key (insecure)"
+    "defaultMessage": "تسجيل الدخول باستخدام المفتاح الخاص (غير آمن)"
+  },
+  "g5pX+a": {
+    "defaultMessage": "نبذة عن"
+  },
+  "gQxxlw": {
+    "defaultMessage": "اسم الهدف"
+  },
+  "gt65Gg": {
+    "defaultMessage": "تشجع أهداف البث المشاهدين على دعم القائمين على البث عبر التبرعات."
   },
   "gzsn7k": {
-    "defaultMessage": "{n} messages"
+    "defaultMessage": "{n} الرسائل"
   },
-  "hGQqkW": {
-    "defaultMessage": "Schedule"
+  "h6NRY6": {
+    "defaultMessage": "No Thanks!"
+  },
+  "h9mX2/": {
+    "defaultMessage": "إذا كنت تستخدم استضافة tunestr.io الداخلية الخاصة بنا (الأرخص والأسهل)، انسخ عنوان URL للبث ومفتاح البث إلى إعدادات OBS الخاصة بك وستكون جاهزًا للعمل."
   },
   "hMzcSq": {
-    "defaultMessage": "Messages"
+    "defaultMessage": "الرسائل"
   },
   "heyxZL": {
-    "defaultMessage": "Enable text to speech"
+    "defaultMessage": "تمكين تحويل النص إلى كلام"
   },
   "hpl4BP": {
-    "defaultMessage": "Chat Widget"
+    "defaultMessage": "أداة الدردشة"
   },
   "hzSNj4": {
-    "defaultMessage": "Dashboard"
+    "defaultMessage": "لوحة التحكم"
+  },
+  "iKlloU": {
+    "defaultMessage": "الخوادم المقترحة"
   },
   "ieGrWo": {
-    "defaultMessage": "Follow"
+    "defaultMessage": "اتبع"
+  },
+  "ieKb+k": {
+    "defaultMessage": "ما هي تكلفة البث؟"
+  },
+  "ipTKP3": {
+    "defaultMessage": "الدردشة المنبثقة"
   },
   "itPgxd": {
-    "defaultMessage": "Profile"
+    "defaultMessage": "الملف الشخصي"
   },
   "izWS4J": {
-    "defaultMessage": "Unfollow"
+    "defaultMessage": "إلغاء المتابعة"
   },
   "j/jueq": {
-    "defaultMessage": "Raiding {name}"
+    "defaultMessage": "الإغارة {name}"
+  },
+  "jDDeA0": {
+    "defaultMessage": "عنوانك طويل جدًا، يرجى التأكد من أنه أقل من {n} سطر."
   },
   "jJLRgo": {
-    "defaultMessage": "Publish Clip"
-  },
-  "jctiUc": {
-    "defaultMessage": "Highest Viewers"
+    "defaultMessage": "نشر المقطع"
   },
   "jgOqxt": {
-    "defaultMessage": "Widgets"
+    "defaultMessage": "الأدوات"
   },
   "jkAQj5": {
-    "defaultMessage": "Stream Ended"
+    "defaultMessage": "انتهى البث"
   },
   "jr4+vD": {
-    "defaultMessage": "Markdown"
+    "defaultMessage": "تخفيض السعر"
   },
   "jvo0vs": {
-    "defaultMessage": "Save"
+    "defaultMessage": "الحفظ"
   },
   "k21gTS": {
-    "defaultMessage": "e.g. about me"
+    "defaultMessage": "على سبيل المثال عني"
+  },
+  "kAEQyV": {
+    "defaultMessage": "حسناً"
+  },
+  "kGjqZ4": {
+    "defaultMessage": "أحدث السراويل القصيرة"
+  },
+  "kQAf2d": {
+    "defaultMessage": "اختر"
+  },
+  "kc5EOy": {
+    "defaultMessage": "اسم المستخدم طويل جداً"
+  },
+  "khJ51Q": {
+    "defaultMessage": "تدفق الأرباح"
   },
   "kp0NPF": {
-    "defaultMessage": "Planned"
+    "defaultMessage": "مخطط"
+  },
+  "lXbG97": {
+    "defaultMessage": "معظم اللافتات التي يتم بثها"
   },
   "lZpRMR": {
-    "defaultMessage": "Check here if this stream contains nudity or pornographic content."
+    "defaultMessage": "تحقق هنا إذا كان هذا البث يحتوي على محتوى إباحي أو عري."
   },
   "ljmS5P": {
-    "defaultMessage": "Endpoint"
+    "defaultMessage": "نقطة النهاية"
   },
   "miQKuZ": {
-    "defaultMessage": "Stream Time"
+    "defaultMessage": "وقت البث"
   },
   "mnJYBQ": {
-    "defaultMessage": "Voice"
+    "defaultMessage": "الصوت"
   },
-  "mtNGwh": {
-    "defaultMessage": "A short description of the content"
+  "mrwfXX": {
+    "defaultMessage": "الأسهم"
+  },
+  "msjwph": {
+    "defaultMessage": "الفاصل الزمني للإطار الرئيسي"
+  },
+  "n19IQE": {
+    "defaultMessage": "الحجم الموصى به: 1920 × 1080 (16:9)"
+  },
+  "n8k1SG": {
+    "defaultMessage": "{n}ميغابايت"
   },
   "nBCvvJ": {
-    "defaultMessage": "Topup"
+    "defaultMessage": "تعبئة الرصيد"
   },
   "nOaArs": {
-    "defaultMessage": "Setup Profile"
+    "defaultMessage": "ملف تعريف الإعداد"
   },
   "nwA8Os": {
-    "defaultMessage": "Add card"
-  },
-  "o8pHw3": {
-    "defaultMessage": "AUTO"
+    "defaultMessage": "إضافة بطاقة"
   },
   "oHPB8Q": {
-    "defaultMessage": "Zap {name}"
+    "defaultMessage": "زاب {name}"
   },
   "oZrFyI": {
-    "defaultMessage": "Stream type should be HLS"
+    "defaultMessage": "يجب أن يكون نوع الدفق HLS"
+  },
+  "p4N05H": {
+    "defaultMessage": "التحميل"
+  },
+  "pOeEMx": {
+    "defaultMessage": "إضافة خادم"
+  },
+  "pxF+t0": {
+    "defaultMessage": "مشهور"
   },
   "q+zTWM": {
-    "defaultMessage": "<s>{person}</s> zapped <s>{amount}</s> sats"
+    "defaultMessage": "<s>{person}</s> انطلق <s>{amount}</s> ساتس"
+  },
+  "q9ryv4": {
+    "defaultMessage": "عنوان URL لصورة الغلاف (اختياري)"
+  },
+  "qx6bv2": {
+    "defaultMessage": "هدف الدفق (اختياري)"
   },
   "r2Jjms": {
-    "defaultMessage": "Log In"
+    "defaultMessage": "تسجيل الدخول"
   },
-  "rELDbB": {
-    "defaultMessage": "Refresh"
+  "rJqhFR": {
+    "defaultMessage": "إعداد الدفق"
   },
   "rWBFZA": {
-    "defaultMessage": "Sexually explicit material ahead!"
-  },
-  "rbrahO": {
-    "defaultMessage": "Close"
-  },
-  "rfC1Zq": {
-    "defaultMessage": "Save card"
+    "defaultMessage": "مواد جنسية صريحة في الأمام!"
   },
   "rgsbu9": {
-    "defaultMessage": "Current Viewers"
+    "defaultMessage": "المشاهدون الحاليون"
+  },
+  "rleUgy": {
+    "defaultMessage": "تحميل.."
+  },
+  "s+ORFl": {
+    "defaultMessage": "{m}د {ago}",
+    "description": "Number of day(s) relative to now"
   },
   "s5ksS7": {
-    "defaultMessage": "Image Link"
+    "defaultMessage": "رابط الصورة"
   },
   "s7V+5p": {
-    "defaultMessage": "Confirm your age"
+    "defaultMessage": "تأكد من عمرك"
   },
   "sInm1h": {
-    "defaultMessage": "Zap message"
+    "defaultMessage": "رسالة Zap"
+  },
+  "sj6WAe": {
+    "defaultMessage": "انقر على زر \"البث\" في الزاوية اليمنى العليا"
+  },
+  "syEQFE": {
+    "defaultMessage": "النشر"
   },
   "tG1ST3": {
-    "defaultMessage": "Incoming Zap"
+    "defaultMessage": "زاب واردة"
   },
   "tM6fNW": {
-    "defaultMessage": "Amazing! Continue.."
+    "defaultMessage": "مدهش! ..أكمل"
+  },
+  "tNtB9I": {
+    "defaultMessage": "الاسم",
+    "description": "Config name column header"
+  },
+  "tTgdmx": {
+    "defaultMessage": "{n,selectordinal,one{@ #st دقيقة} two{#nd دقيقة} few{#rd دقيقة} other{#th دقيقة}}"
+  },
+  "tVCC9m": {
+    "defaultMessage": "Sats هي وحدات صغيرة من البيتكوين. يُشار إلى إرسال ساتس على tunestr.io باسم \"zapping\" أو zaps."
   },
   "thsiMl": {
-    "defaultMessage": "terms and conditions"
+    "defaultMessage": "الشروط والأحكام"
+  },
+  "twCRVi": {
+    "defaultMessage": "الفن"
   },
   "tzMNF3": {
-    "defaultMessage": "Status"
+    "defaultMessage": "الحالة"
   },
   "u6uD94": {
-    "defaultMessage": "Create an Account"
+    "defaultMessage": "إنشاء حساب"
   },
   "uYw2LD": {
-    "defaultMessage": "Stream"
+    "defaultMessage": "الدفق"
+  },
+  "ug01Mk": {
+    "defaultMessage": "Time"
+  },
+  "uksRSi": {
+    "defaultMessage": "أحدث الفيديوهات"
+  },
+  "vP4dFa": {
+    "defaultMessage": "تفضل بزيارة {link} للحصول على بعض سلع tunestr.io الرائعة!"
   },
   "vrTOHJ": {
-    "defaultMessage": "{amount} sats"
+    "defaultMessage": "{amount} ساتس"
+  },
+  "w+2Vw7": {
+    "defaultMessage": "السراويل القصيرة"
   },
   "w0Xm2F": {
-    "defaultMessage": "Start typing"
+    "defaultMessage": "ابدأ الكتابة"
+  },
+  "w3btjR": {
+    "defaultMessage": "القمار"
   },
   "wCIL7o": {
-    "defaultMessage": "Broadcast on Nostr"
+    "defaultMessage": "البث على Nostr"
+  },
+  "wCgTu5": {
+    "defaultMessage": "التعليقات"
   },
   "wEQDC6": {
-    "defaultMessage": "Edit"
+    "defaultMessage": "تحرير"
   },
   "wMKVFz": {
-    "defaultMessage": "Select voice..."
+    "defaultMessage": "حدد الصوت..."
   },
-  "wOy57k": {
-    "defaultMessage": "Add stream goal"
+  "wRGjPp": {
+    "defaultMessage": "يحفظ امتداد nostr ببساطة مفاتيحك حتى تتمكن من تسجيل الدخول بأمان دون الحاجة إلى إعادة إدخالها في كل مرة. يستخدم Tunestr الامتداد لتخويل الإجراءات نيابةً عنك دون الحاجة إلى رؤية معلومات مفتاحك الرئيسية. هذا له ميزة كبيرة على الاضطرار إلى الثقة في أن المواقع الإلكترونية تتعامل مع بيانات اعتمادك بأمان."
   },
-  "wzWWzV": {
-    "defaultMessage": "Top zappers"
+  "wTwfnv": {
+    "defaultMessage": "عنوان nostr غير صالح"
+  },
+  "we4Lby": {
+    "defaultMessage": "معلومات"
   },
   "x82IOl": {
-    "defaultMessage": "Mute"
+    "defaultMessage": "كتم الصوت"
+  },
+  "xhQMeQ": {
+    "defaultMessage": "Expires"
+  },
+  "xi3sgh": {
+    "defaultMessage": "كيف يمكنني الحصول على المزيد من الإشعاعات؟"
+  },
+  "xmcVZ0": {
+    "defaultMessage": "بحث"
   },
   "y867Vs": {
-    "defaultMessage": "Volume"
+    "defaultMessage": "الحجم"
+  },
+  "y8ogtp": {
+    "defaultMessage": "{m}w {ago}",
+    "description": "Number of week(s) relative to now"
+  },
+  "yLxIgl": {
+    "defaultMessage": "المقاطع"
+  },
+  "yR0V+W": {
+    "defaultMessage": "لبدء البث على tunestr.io، اتبع الخطوات التالية:"
+  },
+  "yj8NrY": {
+    "defaultMessage": "المشبك"
   },
   "yzKwBQ": {
-    "defaultMessage": "eg. nsec1xyz"
+    "defaultMessage": "على سبيل المثال. nsec1xyz"
+  },
+  "z2qCcJ": {
+    "defaultMessage": "الحد الأقصى لمعدل البت للفيديو"
+  },
+  "zEYkgY": {
+    "defaultMessage": "تحدث"
+  },
+  "zSYDJP": {
+    "defaultMessage": "لدي مضيف البث الخاص بي"
   },
   "zVDHAu": {
-    "defaultMessage": "Zap Alert"
+    "defaultMessage": "تنبيه Zap Alert"
   }
 }

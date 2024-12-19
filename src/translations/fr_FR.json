@@ -9,22 +9,37 @@
     "defaultMessage": "En direct"
   },
   "+vVZ/G": {
-    "defaultMessage": "Se connecter"
+    "defaultMessage": "Connecter"
+  },
+  "+y6JUK": {
+    "defaultMessage": "Raids"
   },
   "/0TOL5": {
     "defaultMessage": "Montant"
   },
+  "/563b0": {
+    "defaultMessage": "Bilan : {n} sats"
+  },
   "/EvlqN": {
     "defaultMessage": "Extension nostr signataire"
   },
-  "/GCoTA": {
-    "defaultMessage": "Effacer"
+  "/JkXBo": {
+    "defaultMessage": "Extrait de {title}"
+  },
+  "/Jp9pC": {
+    "defaultMessage": "Total : {amount} sats"
+  },
+  "/aFYQ5": {
+    "defaultMessage": "Transfert de flux (optionnel)"
+  },
+  "/w4RM6": {
+    "defaultMessage": "IRL"
+  },
+  "01iNut": {
+    "defaultMessage": "L'adresse Nostr ne vous appartient pas"
   },
   "04lmFi": {
     "defaultMessage": "Enregistrer la clé"
-  },
-  "0GfNiL": {
-    "defaultMessage": "Objectifs de Zap du Stream"
   },
   "0VV/sK": {
     "defaultMessage": "Objectif"
@@ -32,8 +47,14 @@
   "0hNxBy": {
     "defaultMessage": "Démarrage"
   },
+  "0rVLjV": {
+    "defaultMessage": "Pas encore de flux"
+  },
   "1EYCdR": {
     "defaultMessage": "Mots-clés"
+  },
+  "1LBny5": {
+    "defaultMessage": "Arrêtée"
   },
   "1q4BO/": {
     "defaultMessage": "URL non valide"
@@ -43,6 +64,15 @@
   },
   "2/2yg+": {
     "defaultMessage": "Ajouter"
+  },
+  "2lVQYF": {
+    "defaultMessage": "...plus"
+  },
+  "2ukA4d": {
+    "defaultMessage": "{n} heures"
+  },
+  "2wdFaB": {
+    "defaultMessage": "Flux de fin"
   },
   "37mth/": {
     "defaultMessage": "Téléspectateurs"
@@ -56,8 +86,20 @@
   "3df560": {
     "defaultMessage": "Se connecter avec une clé privée"
   },
+  "3kbIhS": {
+    "defaultMessage": "Sans titre"
+  },
+  "3yk8fB": {
+    "defaultMessage": "Portefeuille"
+  },
   "47FYwb": {
     "defaultMessage": "Annuler"
+  },
+  "4RhY4O": {
+    "defaultMessage": "Exemple de réglages dans OBS (Apple M1 Mac)"
+  },
+  "4XfMux": {
+    "defaultMessage": "Vidéos"
   },
   "4iBdw1": {
     "defaultMessage": "Raid"
@@ -68,17 +110,26 @@
   "4l6vz1": {
     "defaultMessage": "Copier"
   },
-  "4uI538": {
-    "defaultMessage": "Résolutions"
-  },
   "50+/JW": {
     "defaultMessage": "La clé de flux est nécessaire"
+  },
+  "58DXVG": {
+    "defaultMessage": "Pour commencer, récupérez votre clé de streaming auprès de la plateforme vers laquelle vous souhaitez transférer."
   },
   "5JcXdV": {
     "defaultMessage": "Créer un Compte"
   },
+  "5L4ati": {
+    "defaultMessage": "Zap from"
+  },
+  "5LXWMX": {
+    "defaultMessage": "Nouvel objectif"
+  },
   "5QYdPU": {
     "defaultMessage": "Heure de Début"
+  },
+  "5Wwopw": {
+    "defaultMessage": "Tarification"
   },
   "5kx+2v": {
     "defaultMessage": "Url du serveur"
@@ -86,8 +137,14 @@
   "5tM0VD": {
     "defaultMessage": "Le flux a démarré"
   },
+  "5vMmmR": {
+    "defaultMessage": "Les noms d'utilisateur ne sont pas uniques sur Nostr. L'adresse de nostr est votre adresse unique lisible par l'homme, qui vous est propre lors de votre inscription."
+  },
   "69hmpj": {
     "defaultMessage": "Raid sur {name}"
+  },
+  "6PK5Jy": {
+    "defaultMessage": "Past Stream"
   },
   "6Z2pvJ": {
     "defaultMessage": "Fournisseurs de Stream"
@@ -98,20 +155,56 @@
   "7+bCC1": {
     "defaultMessage": "L'url du flux doit commencer par rtmp://"
   },
+  "74PejI": {
+    "defaultMessage": "Principaux téléspectateurs"
+  },
   "79lLl+": {
     "defaultMessage": "Musique"
   },
   "7UOvbT": {
     "defaultMessage": "Hors ligne"
   },
+  "89UZph": {
+    "defaultMessage": "Configurez votre logiciel de diffusion en continu"
+  },
   "8YT6ja": {
     "defaultMessage": "Insérer un texte pour parler"
+  },
+  "8aAwpp": {
+    "defaultMessage": "Pour l'hébergement manuel, tout ce dont vous avez besoin est l'URL HLS pour le champ Stream URL. Vous devriez pouvoir la trouver dans votre configuration d'hébergement."
+  },
+  "8xVdjn": {
+    "defaultMessage": "Codec vidéo"
   },
   "9WRlF4": {
     "defaultMessage": "Envoyer"
   },
+  "9ZoFpI": {
+    "defaultMessage": "Supprimer le fichier"
+  },
   "9a9+ww": {
     "defaultMessage": "Titre"
+  },
+  "9pMqYs": {
+    "defaultMessage": "Nostr Adresse"
+  },
+  "9rmSgv": {
+    "defaultMessage": "OBS (Open Broadcaster Software) est un logiciel libre et gratuit pour l'enregistrement vidéo et la diffusion en direct sur Windows, Mac et Linux. Il s'agit d'un choix populaire parmi les diffuseurs en continu. Vous devrez l'installer pour capturer votre vidéo, votre audio et tout ce que vous souhaitez ajouter à votre flux. Une fois installé et configuré selon vos préférences, ajoutez votre URL de streaming et votre clé de streaming à OBS à partir des paramètres de streaming pour établir une connexion avec tunestr.io."
+  },
+  "A1zT+z": {
+    "defaultMessage": "Résultats de la recherche : {term}"
+  },
+  "A7K3S+": {
+    "defaultMessage": "Account Setup"
+  },
+  "ALdW69": {
+    "defaultMessage": "Note de {name}"
+  },
+  "ASKb16": {
+    "defaultMessage": "A description of the stream"
+  },
+  "AYIR/J": {
+    "defaultMessage": "Supprimer l'image"
   },
   "Atr2p4": {
     "defaultMessage": "Contenu NSFW"
@@ -119,23 +212,35 @@
   "AukrPM": {
     "defaultMessage": "Aucune donnée sur les spectateurs n'est disponible"
   },
+  "Axo/o5": {
+    "defaultMessage": "Science et Technologie"
+  },
   "AyGauy": {
     "defaultMessage": "Se Connecter"
   },
   "BD0vyn": {
     "defaultMessage": "{name} a créé un clip"
   },
-  "BGxpTN": {
-    "defaultMessage": "Chat du Stream"
+  "Bd1yEX": {
+    "defaultMessage": "Nouvel objectif pour les cours d'eau"
   },
   "Bep/gA": {
     "defaultMessage": "Clé privée"
   },
+  "BzQPM+": {
+    "defaultMessage": "Destination"
+  },
   "C81/uG": {
     "defaultMessage": "Se déconnecter"
   },
+  "CTgA2G": {
+    "defaultMessage": "Créez un nouveau compte si vous n'en avez pas déjà un."
+  },
   "CsCUYo": {
     "defaultMessage": "{n} sats"
+  },
+  "CsS/fy": {
+    "defaultMessage": "{estimate} restant ({balance} sats @ {rate} sats / {unit})"
   },
   "D3idYv": {
     "defaultMessage": "Paramètres"
@@ -143,14 +248,36 @@
   "DZKuuP": {
     "defaultMessage": "Connecté en tant que"
   },
+  "DkgCAz": {
+    "defaultMessage": "Comment faire du streaming sur tunestr.io ?"
+  },
   "Dn82AL": {
     "defaultMessage": "En direct"
+  },
+  "DqmiAe": {
+    "defaultMessage": "Dont have a nostr extension? Try {nos2x}, {nostore} or {alby}"
+  },
+  "E7n6zr": {
+    "defaultMessage": "Coût du flux actuel : {amount} sats/{unit} (environ {usd}/jour pour un flux de {x}hr)"
   },
   "E9APoR": {
     "defaultMessage": "Impossible de créer l'URL du flux"
   },
   "ESyhzp": {
     "defaultMessage": "Votre commentaire pour {name}"
+  },
+  "EcglP9": {
+    "defaultMessage": "Key"
+  },
+  "FAUhZf": {
+    "defaultMessage": "Qu'est-ce que l'ESAT ?"
+  },
+  "FIDK5Y": {
+    "defaultMessage": "Les meilleurs zappeurs de tous les temps"
+  },
+  "FXepR9": {
+    "defaultMessage": "{m}mo {ago}",
+    "description": "Number of month(s) relative to now"
   },
   "FjDlus": {
     "defaultMessage": "Vous pourrez toujours le remplacer par votre propre adresse plus tard."
@@ -161,11 +288,20 @@
   "G/yZLu": {
     "defaultMessage": "Retirer"
   },
+  "G857ni": {
+    "defaultMessage": "LNURL ou facture"
+  },
   "GGaJMU": {
     "defaultMessage": "Top Chatters"
   },
-  "Gmiwnd": {
-    "defaultMessage": "Actualiser la page pour utiliser la dernière version"
+  "GSuQPh": {
+    "defaultMessage": "Lien d'événement inconnu"
+  },
+  "GSye7T": {
+    "defaultMessage": "Adresse de la foudre"
+  },
+  "GcozGF": {
+    "defaultMessage": "Adresse de l'éclair invalide"
   },
   "Gq6x9o": {
     "defaultMessage": "Bannière"
@@ -173,8 +309,17 @@
   "Gvxoji": {
     "defaultMessage": "Le nom est obligatoire"
   },
+  "GwbTAz": {
+    "defaultMessage": "Cours d'eau"
+  },
   "H/bNs9": {
     "defaultMessage": "Sauvegardez ceci et gardez-le en sécurité ! Si vous perdez cette clé, vous ne pourrez plus accéder à votre compte. Oui, c'est si grave !"
+  },
+  "H1fdc9": {
+    "defaultMessage": "Veuillez ajouter une vignette"
+  },
+  "H4hJvF": {
+    "defaultMessage": "Choisir une catégorie"
   },
   "H5+NAX": {
     "defaultMessage": "Solde"
@@ -182,11 +327,26 @@
   "HAlOn1": {
     "defaultMessage": "Nom"
   },
-  "I/TubD": {
-    "defaultMessage": "Sélectionnez un objectif..."
+  "HDgXO/": {
+    "defaultMessage": "tunestr.io est une plateforme open source alimentée par le protocole nostr. Il n'y a pas d'entreprises ou de fonds géants disponibles pour fournir du streaming gratuit."
+  },
+  "HsgeUk": {
+    "defaultMessage": "Venez voir mon stream sur tunestr.io ! {link}"
+  },
+  "Ht231k": {
+    "defaultMessage": "Transfert"
+  },
+  "HvUhXt": {
+    "defaultMessage": "Téléchargement vers les serveurs {n}"
   },
   "I1kjHI": {
     "defaultMessage": "Supporte {markdown}"
+  },
+  "I2AKfn": {
+    "defaultMessage": "Jeux"
+  },
+  "IDqXmC": {
+    "defaultMessage": "Liste des serveurs de médias"
   },
   "IJDKz3": {
     "defaultMessage": "Montant du Zap en {currency}"
@@ -194,11 +354,23 @@
   "INlWvJ": {
     "defaultMessage": "OU"
   },
+  "IPXhUW": {
+    "defaultMessage": "Résumé du dernier volet"
+  },
+  "IqcyS0": {
+    "defaultMessage": "Qu'est-ce qu'une extension nostr ?"
+  },
   "J/+m9y": {
     "defaultMessage": "Durée du flux {duration} mins"
   },
-  "JEsxDw": {
-    "defaultMessage": "Envoi..."
+  "JCIgkj": {
+    "defaultMessage": "Nom d'utilisateur"
+  },
+  "JO0kq9": {
+    "defaultMessage": "Modifier les infos de la diffusion"
+  },
+  "JkLHGw": {
+    "defaultMessage": "Site web"
   },
   "Jq3FDz": {
     "defaultMessage": "Contenu"
@@ -209,11 +381,35 @@
   "K7AkdL": {
     "defaultMessage": "Montrer"
   },
+  "KH2ayq": {
+    "defaultMessage": "Télécharger la vidéo"
+  },
   "KkIL3s": {
     "defaultMessage": "Non, j'ai moins de 18 ans"
   },
+  "KtrGU6": {
+    "defaultMessage": "Si vous avez déjà un compte, vous pouvez utiliser une extension nostr pour vous connecter. Si vous utilisez déjà une extension nostr, vous serez automatiquement connecté. Si vous n'avez pas d'extension nostr, vous pouvez utiliser nos2x ou Alby."
+  },
+  "KxfKnW": {
+    "defaultMessage": "Retirer des fonds"
+  },
+  "LEmxc8": {
+    "defaultMessage": "Zap Goals"
+  },
+  "LUvSJB": {
+    "defaultMessage": "tunestr.io est gratuit jusqu'à 2 heures d'hébergement en haute qualité et jusqu'à 8 heures en qualité \"source\". Ensuite, vous avez la possibilité de streamer 5 sats par minute ou 10 sats par minute en fonction de la qualité choisie. Si vous n'utilisez pas tunestr.io pour l'hébergement, le prix dépendra du fournisseur de streaming que vous aurez choisi."
+  },
+  "Le+99Z": {
+    "defaultMessage": "Les streamers paient une petite contribution pour couvrir nos frais de fonctionnement. Nous offrons aux nouveaux streamers un crédit de {amount} sats (environ {time_estimate} de streaming) pour commencer !"
+  },
+  "Lg2ye2": {
+    "defaultMessage": "Tunestr est une plateforme de streaming d'un nouveau genre qui vous permet de gagner des bitcoins (sats) dès que vous commencez à diffuser ! Les spectateurs peuvent donner des pourboires aux streamers pour le montant de leur choix. Les pourboires sont instantanément déposés dans votre portefeuille bitcoin (lightning). tunestr.io ne touche jamais à vos gains !"
+  },
   "LknBsU": {
     "defaultMessage": "Clé de stream"
+  },
+  "LxSJOb": {
+    "defaultMessage": "Accéder au tableau de bord"
   },
   "MTHO1W": {
     "defaultMessage": "Raid de départ"
@@ -221,8 +417,20 @@
   "My6HwN": {
     "defaultMessage": "Ok, c'est sûr"
   },
+  "NTpJIm": {
+    "defaultMessage": "Activer l'enregistrement"
+  },
+  "NnHu0L": {
+    "defaultMessage": "Veuillez télécharger au moins 1 vidéo"
+  },
+  "Ntjkqd": {
+    "defaultMessage": "ou"
+  },
   "O2Cy6m": {
     "defaultMessage": "Oui, j'ai plus de 18 ans"
+  },
+  "O7AeYh": {
+    "defaultMessage": "Description..."
   },
   "OEW7yJ": {
     "defaultMessage": "Zaps"
@@ -230,20 +438,55 @@
   "OKhRC6": {
     "defaultMessage": "Partager"
   },
-  "OWgHbg": {
-    "defaultMessage": "Modifier la carte"
+  "ORGv1Q": {
+    "defaultMessage": "Created"
+  },
+  "OadZli": {
+    "defaultMessage": "Gérer les serveurs"
+  },
+  "ObZZEz": {
+    "defaultMessage": "Pas encore de clips"
+  },
+  "OkXMLE": {
+    "defaultMessage": "Débit binaire audio maximal"
+  },
+  "OumUwz": {
+    "defaultMessage": "{m}s {ago}",
+    "description": "Number of second(s) relative to now"
   },
   "Oxqtyf": {
     "defaultMessage": "Nous vous avons branché avec un portefeuille Lightning afin que vous puissiez être payé par les spectateurs dès maintenant!"
   },
-  "PA0ej4": {
-    "defaultMessage": "Créer un clip"
+  "PDA8V2": {
+    "defaultMessage": "{m}h {ago}",
+    "description": "Number of hour(s) relative to now"
+  },
+  "PHE60k": {
+    "defaultMessage": "Ne rien indiquer si vous ne souhaitez pas fixer d'objectifs."
+  },
+  "PUymyQ": {
+    "defaultMessage": "Venez découvrir {name} stream sur tunestr.io ! {link}"
+  },
+  "PXAur5": {
+    "defaultMessage": "Se retirer"
+  },
+  "Pc+tM3": {
+    "defaultMessage": "Générer"
   },
   "Pe0ogR": {
     "defaultMessage": "Thème"
   },
+  "PySFxG": {
+    "defaultMessage": "Choisir le fichier."
+  },
   "Q3au2v": {
     "defaultMessage": "À propos de {estimate}"
+  },
+  "Q8Qw5B": {
+    "defaultMessage": "Description"
+  },
+  "QNvtaq": {
+    "defaultMessage": "Partager sur X"
   },
   "QRHNuF": {
     "defaultMessage": "Qu'allons-nous streamer aujourd'hui ?"
@@ -260,8 +503,14 @@
   "Qe1MJu": {
     "defaultMessage": "{name} avec {amount}"
   },
-  "RJ2VxG": {
-    "defaultMessage": "Une nouvelle version a été détectée"
+  "Qf0ugr": {
+    "defaultMessage": "Vous avez plusieurs possibilités : utiliser notre hébergement interne ou votre propre hébergement (tel que Cloudflare)."
+  },
+  "R72je0": {
+    "defaultMessage": "Titre du flux"
+  },
+  "RGYBjE": {
+    "defaultMessage": "Vignette"
   },
   "RJOmzk": {
     "defaultMessage": "J'ai lu et j'accepte les {terms} de {provider}."
@@ -278,14 +527,30 @@
   "RtYNX5": {
     "defaultMessage": "Utilisateurs du chat"
   },
+  "S39ba6": {
+    "defaultMessage": "Qu'est-ce que l'OBS ?"
+  },
+  "SC2nJT": {
+    "defaultMessage": "Codec audio"
+  },
+  "TDUfVk": {
+    "defaultMessage": "Commencé"
+  },
   "TP/cMX": {
     "defaultMessage": "Terminé"
   },
-  "TaTRKo": {
-    "defaultMessage": "Commencer la Diffusion"
+  "TcDwEB": {
+    "defaultMessage": "Stream Keys"
   },
   "TwyMau": {
     "defaultMessage": "Compte"
+  },
+  "UCDS65": {
+    "defaultMessage": "il y a",
+    "description": "Relative time, ie. 1s ago"
+  },
+  "UGFYV8": {
+    "defaultMessage": "Bienvenue sur tunestr.io !"
   },
   "UJBFYK": {
     "defaultMessage": "Ajouter Carte"
@@ -293,45 +558,98 @@
   "UfSot5": {
     "defaultMessage": "Streams passés"
   },
+  "Uo/DWG": {
+    "defaultMessage": "Trop long"
+  },
   "VA/Z1S": {
     "defaultMessage": "Cacher"
   },
-  "Vn2WiP": {
-    "defaultMessage": "Get Stream Key"
+  "VDOpia": {
+    "defaultMessage": "Que sont les zaps ?"
+  },
+  "VKb1MS": {
+    "defaultMessage": "Catégories"
   },
   "W7DNWx": {
     "defaultMessage": "Transfert de flux"
   },
+  "W7IRLs": {
+    "defaultMessage": "Votre titre est trop court"
+  },
   "W9355R": {
     "defaultMessage": "Retirer sourdine"
+  },
+  "WVJZ0U": {
+    "defaultMessage": "Valeur",
+    "description": "Config value column header"
+  },
+  "WcZM+B": {
+    "defaultMessage": "Liste des fichiers"
+  },
+  "Wp4l7+": {
+    "defaultMessage": "Plus de vidéos"
+  },
+  "WsjXrZ": {
+    "defaultMessage": "Cliquez sur Connexion"
   },
   "X2PZ7D": {
     "defaultMessage": "Créer un objectif"
   },
+  "XIvYvF": {
+    "defaultMessage": "Échec de l'obtention de la facture"
+  },
+  "XMGfiA": {
+    "defaultMessage": "Clips récents"
+  },
   "XgWvGA": {
     "defaultMessage": "Réactions"
   },
+  "XmQZr5": {
+    "defaultMessage": "No keys"
+  },
+  "Xq2sb0": {
+    "defaultMessage": "Pour passer en direct, copiez et collez l'URL de votre serveur et la clé de streaming ci-dessous dans les paramètres de votre logiciel de streaming et appuyez sur \"Start Streaming\". Nous recommandons <a>OBS</a>."
+  },
   "Y0DXJb": {
-    "defaultMessage": "Recording URL"
+    "defaultMessage": "URL d'enregistrement"
   },
   "YPh5Nq": {
     "defaultMessage": "@ {rate}",
     "description": "Showing zap amount in USD @ rate"
   },
-  "YagVIe": {
-    "defaultMessage": "{n}p"
+  "YjhNaf": {
+    "defaultMessage": "Créer un flux"
   },
   "YwzT/0": {
-    "defaultMessage": "Clip title"
+    "defaultMessage": "Titre du clip"
+  },
+  "YyXVHf": {
+    "defaultMessage": "Projet clair"
   },
   "Z8ZOEY": {
     "defaultMessage": "Cette méthode n'est pas sécurisée. Nous vous recommandons d'utiliser un {nostrlink}"
   },
+  "ZXp0z1": {
+    "defaultMessage": "Caractéristiques"
+  },
+  "ZaNcK4": {
+    "defaultMessage": "Pas encore d'objectifs"
+  },
+  "ZcgtZo": {
+    "defaultMessage": "Nous avons dressé une liste d'échanges faciles à utiliser qui vous permettront d'acheter une petite quantité de bitcoins (sats) et de les transférer vers le portefeuille de votre choix."
+  },
   "ZmqxZs": {
     "defaultMessage": "Vous pourrez modifier cela ultérieurement"
   },
+  "ZsYhvh": {
+    "defaultMessage": "Les Zaps sont des paiements éclairs, qui sont publiés sur nostr en tant que reçus."
+  },
   "Zse7yG": {
     "defaultMessage": "Cible du raid"
+  },
+  "aB/rH0": {
+    "defaultMessage": "{m}h {ago}",
+    "description": "Number of minute(s) relative to now"
   },
   "acrOoz": {
     "defaultMessage": "Continuer"
@@ -339,11 +657,32 @@
   "aqjZxs": {
     "defaultMessage": "Raid !"
   },
+  "bD/ZwY": {
+    "defaultMessage": "Cartes d'édition"
+  },
+  "bbUGS7": {
+    "defaultMessage": "Paramètres de flux recommandés"
+  },
+  "bdH+0f": {
+    "defaultMessage": "Balance History"
+  },
   "bfvyfs": {
     "defaultMessage": "Anon"
   },
+  "c3LlRO": {
+    "defaultMessage": "{n}KiB"
+  },
   "cPIKU2": {
     "defaultMessage": "Abonnements"
+  },
+  "ccXLVi": {
+    "defaultMessage": "Catégorie"
+  },
+  "cg1VJ2": {
+    "defaultMessage": "Connecter le portefeuille"
+  },
+  "cntHHJ": {
+    "defaultMessage": "Cela vous permet de transférer votre flux vers d'autres plateformes afin d'atteindre un public plus large."
   },
   "cvAsEh": {
     "defaultMessage": "Diffusé le {date}"
@@ -360,6 +699,13 @@
   "dVD/AR": {
     "defaultMessage": "Top Zappeurs"
   },
+  "dkUMIH": {
+    "defaultMessage": "Clip de {name}"
+  },
+  "e011kf": {
+    "defaultMessage": "FAQ",
+    "description": "Title: FAQ page"
+  },
   "ebmhes": {
     "defaultMessage": "Extension Nostr"
   },
@@ -369,17 +715,26 @@
   "fBI91o": {
     "defaultMessage": "Zap"
   },
-  "fc2iho": {
-    "defaultMessage": "Ajouter un Fichier"
-  },
   "feZ/kG": {
     "defaultMessage": "Se connecter avec une Clé Privée (non sécurisé)"
+  },
+  "g5pX+a": {
+    "defaultMessage": "A propos de"
+  },
+  "gQxxlw": {
+    "defaultMessage": "Nom de l'objectif"
+  },
+  "gt65Gg": {
+    "defaultMessage": "Les objectifs de diffusion encouragent les spectateurs à soutenir les diffuseurs par le biais de dons."
   },
   "gzsn7k": {
     "defaultMessage": "{n} messages"
   },
-  "hGQqkW": {
-    "defaultMessage": "Planning"
+  "h6NRY6": {
+    "defaultMessage": "No Thanks!"
+  },
+  "h9mX2/": {
+    "defaultMessage": "Si vous utilisez notre hébergement interne tunestr.io (le moins cher et le plus simple), copiez l'URL et la clé de votre flux dans vos paramètres OBS et vous devriez être prêt."
   },
   "hMzcSq": {
     "defaultMessage": "Messages"
@@ -393,8 +748,17 @@
   "hzSNj4": {
     "defaultMessage": "Tableau de bord"
   },
+  "iKlloU": {
+    "defaultMessage": "Serveurs suggérés"
+  },
   "ieGrWo": {
     "defaultMessage": "Suivre"
+  },
+  "ieKb+k": {
+    "defaultMessage": "Quel est le coût de la diffusion en continu ?"
+  },
+  "ipTKP3": {
+    "defaultMessage": "Chat Popout"
   },
   "itPgxd": {
     "defaultMessage": "Profil"
@@ -405,11 +769,11 @@
   "j/jueq": {
     "defaultMessage": "Raid {name}"
   },
-  "jJLRgo": {
-    "defaultMessage": "Publish Clip"
+  "jDDeA0": {
+    "defaultMessage": "Votre titre est très long, veillez à ce qu'il soit inférieur à {n} chars."
   },
-  "jctiUc": {
-    "defaultMessage": "Le plus grand nombre de téléspectateurs"
+  "jJLRgo": {
+    "defaultMessage": "Publier le clip"
   },
   "jgOqxt": {
     "defaultMessage": "Widgets"
@@ -426,8 +790,26 @@
   "k21gTS": {
     "defaultMessage": "par ex. à propos de moi"
   },
+  "kAEQyV": {
+    "defaultMessage": "OK"
+  },
+  "kGjqZ4": {
+    "defaultMessage": "Derniers courts métrages"
+  },
+  "kQAf2d": {
+    "defaultMessage": "Sélectionner"
+  },
+  "kc5EOy": {
+    "defaultMessage": "Le nom d'utilisateur est trop long"
+  },
+  "khJ51Q": {
+    "defaultMessage": "Revenus des flux"
+  },
   "kp0NPF": {
     "defaultMessage": "Planifié"
+  },
+  "lXbG97": {
+    "defaultMessage": "Les Streamers les plus zappés"
   },
   "lZpRMR": {
     "defaultMessage": "Vérifiez ici si ce flux contient de la nudité ou du contenu pornographique."
@@ -441,8 +823,17 @@
   "mnJYBQ": {
     "defaultMessage": "Voix"
   },
-  "mtNGwh": {
-    "defaultMessage": "Une courte description du contenu"
+  "mrwfXX": {
+    "defaultMessage": "Actions"
+  },
+  "msjwph": {
+    "defaultMessage": "Intervalle entre les images clés"
+  },
+  "n19IQE": {
+    "defaultMessage": "Taille recommandée : 1920x1080 (16:9)"
+  },
+  "n8k1SG": {
+    "defaultMessage": "{n}Mio"
   },
   "nBCvvJ": {
     "defaultMessage": "Recharger"
@@ -453,35 +844,48 @@
   "nwA8Os": {
     "defaultMessage": "Ajouter carte"
   },
-  "o8pHw3": {
-    "defaultMessage": "AUTO"
-  },
   "oHPB8Q": {
     "defaultMessage": "Zap {name}"
   },
   "oZrFyI": {
     "defaultMessage": "Le type de stream doit être HLS"
   },
+  "p4N05H": {
+    "defaultMessage": "Importer"
+  },
+  "pOeEMx": {
+    "defaultMessage": "Ajouter un serveur"
+  },
+  "pxF+t0": {
+    "defaultMessage": "Populaire"
+  },
   "q+zTWM": {
     "defaultMessage": "<s>{person}</s> zapped <s>{amount}</s> sats"
+  },
+  "q9ryv4": {
+    "defaultMessage": "URL de l'image de couverture (facultatif)"
+  },
+  "qx6bv2": {
+    "defaultMessage": "Objectif du cours d'eau (facultatif)"
   },
   "r2Jjms": {
     "defaultMessage": "Se connecter"
   },
-  "rELDbB": {
-    "defaultMessage": "Rafraîchir"
+  "rJqhFR": {
+    "defaultMessage": "Configuration du flux"
   },
   "rWBFZA": {
     "defaultMessage": "Matériel sexuellement explicite à venir !"
   },
-  "rbrahO": {
-    "defaultMessage": "Fermer"
-  },
-  "rfC1Zq": {
-    "defaultMessage": "Enregistrez la carte"
-  },
   "rgsbu9": {
     "defaultMessage": "Spectateurs actuels"
+  },
+  "rleUgy": {
+    "defaultMessage": "Téléchargement ."
+  },
+  "s+ORFl": {
+    "defaultMessage": "{m}d {ago}",
+    "description": "Number of day(s) relative to now"
   },
   "s5ksS7": {
     "defaultMessage": "Lien de l'image"
@@ -492,14 +896,33 @@
   "sInm1h": {
     "defaultMessage": "Message Zap"
   },
+  "sj6WAe": {
+    "defaultMessage": "Cliquez sur le bouton \"Stream\" dans le coin supérieur droit."
+  },
+  "syEQFE": {
+    "defaultMessage": "Publier"
+  },
   "tG1ST3": {
     "defaultMessage": "Zap entrant"
   },
   "tM6fNW": {
     "defaultMessage": "Incroyable! Continuez.."
   },
+  "tNtB9I": {
+    "defaultMessage": "Nom",
+    "description": "Config name column header"
+  },
+  "tTgdmx": {
+    "defaultMessage": "{n,selectordinal,one{@ #st min} two{@ #nd min} few{@ #rd min} other{@ #th min}}"
+  },
+  "tVCC9m": {
+    "defaultMessage": "Les Sats sont de petites unités de Bitcoin. L'envoi de sats sur tunestr.io est appelé \" zapping \" ou \" zaps \"."
+  },
   "thsiMl": {
     "defaultMessage": "termes et conditions"
+  },
+  "twCRVi": {
+    "defaultMessage": "L'art"
   },
   "tzMNF3": {
     "defaultMessage": "Statut"
@@ -510,14 +933,32 @@
   "uYw2LD": {
     "defaultMessage": "Stream"
   },
+  "ug01Mk": {
+    "defaultMessage": "Time"
+  },
+  "uksRSi": {
+    "defaultMessage": "Dernières vidéos"
+  },
+  "vP4dFa": {
+    "defaultMessage": "Rendez-vous sur {link} pour obtenir des produits dérivés de tunestr.io !"
+  },
   "vrTOHJ": {
     "defaultMessage": "{amount} sats"
+  },
+  "w+2Vw7": {
+    "defaultMessage": "Short"
   },
   "w0Xm2F": {
     "defaultMessage": "Commencer à écrire"
   },
+  "w3btjR": {
+    "defaultMessage": "Jeux d'argent"
+  },
   "wCIL7o": {
     "defaultMessage": "Diffuser sur Nostr"
+  },
+  "wCgTu5": {
+    "defaultMessage": "Commentaires"
   },
   "wEQDC6": {
     "defaultMessage": "Modifier"
@@ -525,20 +966,54 @@
   "wMKVFz": {
     "defaultMessage": "Sélectionner la voix..."
   },
-  "wOy57k": {
-    "defaultMessage": "Ajouter un objectif de stream"
+  "wRGjPp": {
+    "defaultMessage": "L'extension nostr enregistre simplement vos clés afin que vous puissiez vous connecter en toute sécurité sans avoir à les saisir à nouveau à chaque fois. Tunestr utilise l'extension pour autoriser des actions en votre nom sans jamais voir vos informations clés. Cela présente un avantage considérable par rapport au fait de devoir faire confiance aux sites web pour gérer vos informations d'identification en toute sécurité."
   },
-  "wzWWzV": {
-    "defaultMessage": "Top Zappeurs"
+  "wTwfnv": {
+    "defaultMessage": "Adresse nostr invalide"
+  },
+  "we4Lby": {
+    "defaultMessage": "Info"
   },
   "x82IOl": {
     "defaultMessage": "Muet"
   },
+  "xhQMeQ": {
+    "defaultMessage": "Expires"
+  },
+  "xi3sgh": {
+    "defaultMessage": "Comment obtenir plus de résultats ?"
+  },
+  "xmcVZ0": {
+    "defaultMessage": "Recherche"
+  },
   "y867Vs": {
     "defaultMessage": "Volume"
   },
+  "y8ogtp": {
+    "defaultMessage": "{m}w {ago}",
+    "description": "Number of week(s) relative to now"
+  },
+  "yLxIgl": {
+    "defaultMessage": "Clips"
+  },
+  "yR0V+W": {
+    "defaultMessage": "Pour commencer à diffuser en continu sur tunestr.io, suivez les étapes suivantes :"
+  },
+  "yj8NrY": {
+    "defaultMessage": "Clip"
+  },
   "yzKwBQ": {
     "defaultMessage": "eg. nsec1xyz"
+  },
+  "z2qCcJ": {
+    "defaultMessage": "Débit binaire vidéo maximal"
+  },
+  "zEYkgY": {
+    "defaultMessage": "Parler"
+  },
+  "zSYDJP": {
+    "defaultMessage": "J'ai mon propre hébergeur de flux"
   },
   "zVDHAu": {
     "defaultMessage": "Alerte Zap"

@@ -1,8 +1,7 @@
 import type { ReactNode } from "react";
-import { NostrLink } from "./nostr-link";
-import { MediaURL } from "./collapsible";
+import { ExternalLink } from "./external-link";
 
-const FileExtensionRegex = /\.([\w]+)$/i;
+//const FileExtensionRegex = /\.([\w]+)$/i;
 
 interface HyperTextProps {
   link: string;
@@ -10,7 +9,7 @@ interface HyperTextProps {
 }
 
 export function HyperText({ link, children }: HyperTextProps) {
-  try {
+  /*try {
     const url = new URL(link);
     const extension = FileExtensionRegex.test(url.pathname.toLowerCase()) && RegExp.$1;
 
@@ -22,20 +21,12 @@ export function HyperText({ link, children }: HyperTextProps) {
         case "png":
         case "bmp":
         case "webp": {
-          return (
-            <MediaURL url={url}>
-              <img src={url.toString()} alt={url.toString()} style={{ objectFit: "contain" }} />
-            </MediaURL>
-          );
+          return <img src={url.toString()} alt={url.toString()} style={{ objectFit: "contain" }} />;
         }
         case "wav":
         case "mp3":
         case "ogg": {
-          return (
-            <MediaURL url={url}>
-              <audio key={url.toString()} src={url.toString()} controls />;
-            </MediaURL>
-          );
+          return <audio key={url.toString()} src={url.toString()} controls />;
         }
         case "mp4":
         case "mov":
@@ -43,29 +34,17 @@ export function HyperText({ link, children }: HyperTextProps) {
         case "avi":
         case "m4v":
         case "webm": {
-          return (
-            <MediaURL url={url}>
-              <video key={url.toString()} src={url.toString()} controls />
-            </MediaURL>
-          );
+          return <video key={url.toString()} src={url.toString()} controls />;
         }
         default:
-          return <a href={url.toString()}>{children || url.toString()}</a>;
+          return <ExternalLink href={url.toString()}>{children || url.toString()}</ExternalLink>;
       }
-    } else if (url.protocol === "nostr:" || url.protocol === "web+nostr:") {
-      return <NostrLink link={link} />;
     } else {
-      <a href={link} target="_blank" rel="noreferrer">
-        {children}
-      </a>;
+      return <ExternalLink href={link}>{children}</ExternalLink>;
     }
   } catch (error) {
     console.error(error);
     // Ignore the error.
-  }
-  return (
-    <a href={link} target="_blank" rel="noreferrer">
-      {children}
-    </a>
-  );
+  }*/
+  return <ExternalLink href={link}>{children}</ExternalLink>;
 }

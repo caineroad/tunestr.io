@@ -61,7 +61,7 @@
 
 .one-line:before,
 .one-line:after {
-  background-color: #292146;
+  @apply bg-layer-2;
 }
 
 ::-webkit-scrollbar {

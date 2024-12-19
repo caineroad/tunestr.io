@@ -6,18 +6,23 @@ import { vitePluginVersionMark } from "vite-plugin-version-mark";
 
 export default defineConfig({
   plugins: [
-    react(),
+    react({
+      babel: {
+        configFile: true,
+      },
+    }),
     VitePWA({
       strategies: "injectManifest",
       srcDir: "src",
       filename: "service-worker.ts",
+      registerType: "autoUpdate",
       devOptions: {
         enabled: false,
         type: "module",
       },
     }),
     vitePluginVersionMark({
-      name: "zap.stream",
+      name: "tunestr.io",
       ifGitSHA: true,
       command: "git describe --always --tags",
       ifMeta: false,
@@ -28,9 +33,13 @@ export default defineConfig({
       filename: "build/stats.html",
     }),
   ],
+  assetsInclude: ["**/*.md", "**/*.wasm"],
   build: {
     outDir: "build",
     sourcemap: true,
+  },
+  worker: {
+    format: "es",
   },
   clearScreen: false,
   resolve: {
@@ -40,7 +49,5 @@ export default defineConfig({
   },
   define: {
     global: {},
-    __XXX: process.env["__XXX"] || JSON.stringify(false),
-    __XXX_HOST: JSON.stringify("https://xxzap.com")
   },
 });

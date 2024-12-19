@@ -1,21 +1,20 @@
 import { base64 } from "@scure/base";
-import {
-  StreamProvider,
-  StreamProviderEndpoint,
-  StreamProviderInfo,
-  StreamProviderStreamInfo,
-  StreamProviders,
-} from ".";
+import { StreamProvider, StreamProviderEndpoint, StreamProviders } from ".";
 import { EventKind, EventPublisher, NostrEvent, SystemInterface } from "@snort/system";
-import { Login } from "@/index";
+import { Login } from "@/login";
 import { getPublisher } from "@/login";
 import { extractStreamInfo } from "@/utils";
-import { StreamState } from "@/const";
+import { appendDedupe, unixNow } from "@snort/shared";
+import { TimeSync } from "@/time-sync";
 
 export class NostrStreamProvider implements StreamProvider {
   #publisher?: EventPublisher;
 
-  constructor(readonly name: string, readonly url: string, pub?: EventPublisher) {
+  constructor(
+    readonly name: string,
+    readonly url: string,
+    pub?: EventPublisher,
+  ) {
     if (!url.endsWith("/")) {
       this.url = `${url}/`;
     }
@@ -31,9 +30,6 @@ export class NostrStreamProvider implements StreamProvider {
     return {
       type: StreamProviders.NostrType,
       name: this.name,
-      state: StreamState.Planned,
-      viewers: 0,
-      streamInfo: rsp.event,
       balance: rsp.balance,
       tosAccepted: rsp.tos?.accepted,
       tosLink: rsp.tos?.link,
@@ -48,7 +44,7 @@ export class NostrStreamProvider implements StreamProvider {
         } as StreamProviderEndpoint;
       }),
       forwards: rsp.forwards,
-    } as StreamProviderInfo;
+    };
   }
 
   createConfig() {
@@ -59,20 +55,40 @@ export class NostrStreamProvider implements StreamProvider {
   }
 
   async updateStreamInfo(_: SystemInterface, ev: NostrEvent): Promise<void> {
-    const { title, summary, image, tags, contentWarning, goal } = extractStreamInfo(ev);
+    const { title, summary, image, tags, contentWarning, goal, gameId, id } = extractStreamInfo(ev);
     await this.#getJson("PATCH", "event", {
+      id,
       title,
       summary,
       image,
-      tags,
+      tags: appendDedupe(tags, gameId ? [gameId] : undefined),
       content_warning: contentWarning,
       goal,
     });
   }
 
+  async updateStream(props: {
+    id: string;
+    title?: string;
+    summary?: string;
+    image?: string;
+    tags?: Array<string>;
+    content_warning?: string;
+    goal?: string;
+  }): Promise<void> {
+    await this.#getJson("PATCH", "event", props);
+  }
+
   async topup(amount: number): Promise<string> {
     const rsp = await this.#getJson<TopUpResponse>("GET", `topup?amount=${amount}`);
     return rsp.pr;
+  }
+
+  async withdraw(invoice: string) {
+    return await this.#getJson<{ fee: number; preimage: string; error?: string }>(
+      "POST",
+      `withdraw?invoice=${invoice}`,
+    );
   }
 
   async acceptTos(): Promise<void> {
@@ -124,6 +140,21 @@ export class NostrStreamProvider implements StreamProvider {
     return `${this.url}clip/${id}/${clipId}`;
   }
 
+  async history(page = 0, pageSize = 20) {
+    return await this.#getJson<BalanceHistoryResult>("GET", `history?page=${page}&pageSize=${pageSize}`);
+  }
+
+  async streamKeys(page = 0, pageSize = 20) {
+    return await this.#getJson<StreamKeysResult>("GET", `keys?page=${page}&pageSize=${pageSize}`);
+  }
+
+  async createStreamKey(expires?: undefined) {
+    return await this.#getJson<{ key: string; event: NostrEvent }>("POST", "keys", {
+      event: { title: "New stream key, who dis" },
+      expires,
+    });
+  }
+
   async #getJson<T>(method: "GET" | "POST" | "PATCH" | "DELETE", path: string, body?: unknown): Promise<T> {
     const pub = (() => {
       if (this.#publisher) {
@@ -137,7 +168,12 @@ export class NostrStreamProvider implements StreamProvider {
 
     const u = `${this.url}${path}`;
     const token = await pub.generic(eb => {
-      return eb.kind(EventKind.HttpAuthentication).content("").tag(["u", u]).tag(["method", method]);
+      return eb
+        .kind(EventKind.HttpAuthentication)
+        .content("")
+        .tag(["u", u])
+        .tag(["method", method])
+        .createdAt(unixNow() + Math.floor(TimeSync / 1000));
     });
     const rsp = await fetch(u, {
       method,
@@ -157,7 +193,6 @@ export class NostrStreamProvider implements StreamProvider {
 
 interface AccountResponse {
   balance: number;
-  event?: StreamProviderStreamInfo;
   endpoints: Array<IngestEndpoint>;
   tos?: {
     accepted: boolean;
@@ -184,4 +219,27 @@ interface IngestEndpoint {
 
 interface TopUpResponse {
   pr: string;
+}
+
+export interface BalanceHistoryResult {
+  items: Array<{
+    created: number;
+    type: number;
+    amount: number;
+    desc?: string;
+  }>;
+  page: number;
+  pageSize: number;
+}
+
+export interface StreamKeysResult {
+  items: Array<{
+    id: string;
+    created: number;
+    key: string;
+    expires?: number;
+    stream?: NostrEvent;
+  }>;
+  page: number;
+  pageSize: number;
 }

@@ -11,20 +11,35 @@
   "+vVZ/G": {
     "defaultMessage": "连接"
   },
+  "+y6JUK": {
+    "defaultMessage": "突袭"
+  },
   "/0TOL5": {
     "defaultMessage": "金额"
+  },
+  "/563b0": {
+    "defaultMessage": "余额： {n} 聪"
   },
   "/EvlqN": {
     "defaultMessage": "nostr 签名扩展"
   },
-  "/GCoTA": {
-    "defaultMessage": "清除"
+  "/JkXBo": {
+    "defaultMessage": "剪辑自 {title}"
+  },
+  "/Jp9pC": {
+    "defaultMessage": "总计： {amount} sats"
+  },
+  "/aFYQ5": {
+    "defaultMessage": "数据流转发（可选）"
+  },
+  "/w4RM6": {
+    "defaultMessage": "IRL"
+  },
+  "01iNut": {
+    "defaultMessage": "Nostr 地址不属于您"
   },
   "04lmFi": {
     "defaultMessage": "保存密钥"
-  },
-  "0GfNiL": {
-    "defaultMessage": "直播流打闪目标"
   },
   "0VV/sK": {
     "defaultMessage": "目标"
@@ -32,8 +47,14 @@
   "0hNxBy": {
     "defaultMessage": "开始"
   },
+  "0rVLjV": {
+    "defaultMessage": "尚无流媒体"
+  },
   "1EYCdR": {
     "defaultMessage": "标签"
+  },
+  "1LBny5": {
+    "defaultMessage": "已停止"
   },
   "1q4BO/": {
     "defaultMessage": "不是有效的 URL"
@@ -43,6 +64,15 @@
   },
   "2/2yg+": {
     "defaultMessage": "添加"
+  },
+  "2lVQYF": {
+    "defaultMessage": "...更多"
+  },
+  "2ukA4d": {
+    "defaultMessage": "{n} 小时"
+  },
+  "2wdFaB": {
+    "defaultMessage": "结束直播"
   },
   "37mth/": {
     "defaultMessage": "观众"
@@ -56,8 +86,20 @@
   "3df560": {
     "defaultMessage": "使用私钥登录"
   },
+  "3kbIhS": {
+    "defaultMessage": "无标题"
+  },
+  "3yk8fB": {
+    "defaultMessage": "钱包"
+  },
   "47FYwb": {
     "defaultMessage": "取消"
+  },
+  "4RhY4O": {
+    "defaultMessage": "OBS 中的设置示例（Apple M1 Mac）"
+  },
+  "4XfMux": {
+    "defaultMessage": "视频"
   },
   "4iBdw1": {
     "defaultMessage": "突袭"
@@ -68,17 +110,26 @@
   "4l6vz1": {
     "defaultMessage": "复制"
   },
-  "4uI538": {
-    "defaultMessage": "分辨率"
-  },
   "50+/JW": {
     "defaultMessage": "需要直播流密钥"
+  },
+  "58DXVG": {
+    "defaultMessage": "要开始使用，请从您希望转发的平台获取流密钥。"
   },
   "5JcXdV": {
     "defaultMessage": "创建帐户"
   },
+  "5L4ati": {
+    "defaultMessage": "打闪来自"
+  },
+  "5LXWMX": {
+    "defaultMessage": "新目标"
+  },
   "5QYdPU": {
     "defaultMessage": "开始时间"
+  },
+  "5Wwopw": {
+    "defaultMessage": "定价"
   },
   "5kx+2v": {
     "defaultMessage": "服务器 URL"
@@ -86,8 +137,14 @@
   "5tM0VD": {
     "defaultMessage": "直播已开始"
   },
+  "5vMmmR": {
+    "defaultMessage": "用户名在Nostr上不是唯一的。Nostr地址是您注册时独有的人类可读地址。"
+  },
   "69hmpj": {
     "defaultMessage": "来自 {name}的突袭"
+  },
+  "6PK5Jy": {
+    "defaultMessage": "过去的直播"
   },
   "6Z2pvJ": {
     "defaultMessage": "直播流來源"
@@ -98,20 +155,56 @@
   "7+bCC1": {
     "defaultMessage": "直播流 URL 必须以 rtmp:// 开头"
   },
+  "74PejI": {
+    "defaultMessage": "热门观众"
+  },
   "79lLl+": {
     "defaultMessage": "音乐"
   },
   "7UOvbT": {
     "defaultMessage": "离线"
   },
+  "89UZph": {
+    "defaultMessage": "配置流媒体软件"
+  },
   "8YT6ja": {
     "defaultMessage": "输入要转为语音的文本"
+  },
+  "8aAwpp": {
+    "defaultMessage": "对于手动托管，您所需要的只是流 URL 字段中的 HLS URL。您可以在托管设置中找到它。"
+  },
+  "8xVdjn": {
+    "defaultMessage": "视频编解码器"
   },
   "9WRlF4": {
     "defaultMessage": "发送"
   },
+  "9ZoFpI": {
+    "defaultMessage": "删除文件"
+  },
   "9a9+ww": {
     "defaultMessage": "标题"
+  },
+  "9pMqYs": {
+    "defaultMessage": "地址"
+  },
+  "9rmSgv": {
+    "defaultMessage": "OBS（Open Broadcaster Software）是一款免费开源软件，用于在 Windows、Mac 和 Linux 上进行视频录制和直播。它深受流媒体用户的欢迎。您需要安装该软件来捕捉视频、音频和其他任何您想添加到流媒体中的内容。安装并按偏好配置后，将流媒体设置中的流 URL 和流媒体密钥添加到 OBS，与 tunestr.io 建立连接。"
+  },
+  "A1zT+z": {
+    "defaultMessage": "搜索结果： {term}"
+  },
+  "A7K3S+": {
+    "defaultMessage": "账户设置"
+  },
+  "ALdW69": {
+    "defaultMessage": "{name}的说明"
+  },
+  "ASKb16": {
+    "defaultMessage": "A description of the stream"
+  },
+  "AYIR/J": {
+    "defaultMessage": "移除图像"
   },
   "Atr2p4": {
     "defaultMessage": "NSFW 内容"
@@ -119,23 +212,35 @@
   "AukrPM": {
     "defaultMessage": "没有可用的观看用户数据"
   },
+  "Axo/o5": {
+    "defaultMessage": "科学与技术"
+  },
   "AyGauy": {
     "defaultMessage": "登录"
   },
   "BD0vyn": {
     "defaultMessage": "{name} 创建了一个剪辑"
   },
-  "BGxpTN": {
-    "defaultMessage": "直播流聊天室"
+  "Bd1yEX": {
+    "defaultMessage": "新溪流目标"
   },
   "Bep/gA": {
     "defaultMessage": "私钥"
   },
+  "BzQPM+": {
+    "defaultMessage": "目的地"
+  },
   "C81/uG": {
     "defaultMessage": "登出"
   },
+  "CTgA2G": {
+    "defaultMessage": "如果还没有账户，请创建一个新账户。"
+  },
   "CsCUYo": {
     "defaultMessage": "{n} 聪"
+  },
+  "CsS/fy": {
+    "defaultMessage": "{estimate} 剩余 ({balance} sats @ {rate} sats / {unit})"
   },
   "D3idYv": {
     "defaultMessage": "设置"
@@ -143,14 +248,36 @@
   "DZKuuP": {
     "defaultMessage": "已登录为"
   },
+  "DkgCAz": {
+    "defaultMessage": "如何在 tunestr.io 上进行流媒体传输？"
+  },
   "Dn82AL": {
     "defaultMessage": "在线"
+  },
+  "DqmiAe": {
+    "defaultMessage": "没有 nostr 扩展？请尝试 {nos2x}, {nostore} 或 {alby}"
+  },
+  "E7n6zr": {
+    "defaultMessage": "目前的流量成本： {amount} 周六/{unit} （ {x}小时流量约 {usd}/天）。"
   },
   "E9APoR": {
     "defaultMessage": "无法创建流 URL"
   },
   "ESyhzp": {
     "defaultMessage": "給 {name} 的留言"
+  },
+  "EcglP9": {
+    "defaultMessage": "密钥"
+  },
+  "FAUhZf": {
+    "defaultMessage": "什么是 Sats？"
+  },
+  "FIDK5Y": {
+    "defaultMessage": "历史上最受欢迎的 Zappers"
+  },
+  "FXepR9": {
+    "defaultMessage": "{m}月 {ago}",
+    "description": "Number of month(s) relative to now"
   },
   "FjDlus": {
     "defaultMessage": "你始终可以用自己的地址替换它。"
@@ -161,11 +288,20 @@
   "G/yZLu": {
     "defaultMessage": "移除"
   },
+  "G857ni": {
+    "defaultMessage": "LNURL 或发票"
+  },
   "GGaJMU": {
     "defaultMessage": "热门聊天室"
   },
-  "Gmiwnd": {
-    "defaultMessage": "刷新页面以使用最新版本"
+  "GSuQPh": {
+    "defaultMessage": "未知事件链接"
+  },
+  "GSye7T": {
+    "defaultMessage": "闪电地址"
+  },
+  "GcozGF": {
+    "defaultMessage": "无效的闪电地址"
   },
   "Gq6x9o": {
     "defaultMessage": "封面图像"
@@ -173,8 +309,17 @@
   "Gvxoji": {
     "defaultMessage": "必须填写姓名"
   },
+  "GwbTAz": {
+    "defaultMessage": "溪流"
+  },
   "H/bNs9": {
     "defaultMessage": "请将它安全保存！如果你丢失了此密钥，你将无法无法再次访问你的帐户。对，很严肃！"
+  },
+  "H1fdc9": {
+    "defaultMessage": "请添加缩略图"
+  },
+  "H4hJvF": {
+    "defaultMessage": "选择一个分类"
   },
   "H5+NAX": {
     "defaultMessage": "余额"
@@ -182,11 +327,26 @@
   "HAlOn1": {
     "defaultMessage": "名称"
   },
-  "I/TubD": {
-    "defaultMessage": "选择目标..."
+  "HDgXO/": {
+    "defaultMessage": "tunestr.io 是一个由 nostr 协议支持的开源平台。没有巨型公司或巨型基金可以提供免费流媒体服务。"
+  },
+  "HsgeUk": {
+    "defaultMessage": "来 tunestr.io 上看看我的视频流吧！ {link}"
+  },
+  "Ht231k": {
+    "defaultMessage": "转发"
+  },
+  "HvUhXt": {
+    "defaultMessage": "上传至 {n} 服务器"
   },
   "I1kjHI": {
     "defaultMessage": "支持 {markdown}"
+  },
+  "I2AKfn": {
+    "defaultMessage": "游戏"
+  },
+  "IDqXmC": {
+    "defaultMessage": "媒体服务器列表"
   },
   "IJDKz3": {
     "defaultMessage": "打闪金额{currency}"
@@ -194,11 +354,23 @@
   "INlWvJ": {
     "defaultMessage": "或"
   },
+  "IPXhUW": {
+    "defaultMessage": "末流摘要"
+  },
+  "IqcyS0": {
+    "defaultMessage": "什么是 nostr 扩展名？"
+  },
   "J/+m9y": {
     "defaultMessage": "直播时长 {duration} 分钟"
   },
-  "JEsxDw": {
-    "defaultMessage": "正在上传..."
+  "JCIgkj": {
+    "defaultMessage": "用户名"
+  },
+  "JO0kq9": {
+    "defaultMessage": "编辑流媒体信息"
+  },
+  "JkLHGw": {
+    "defaultMessage": "网站"
   },
   "Jq3FDz": {
     "defaultMessage": "内容"
@@ -209,11 +381,35 @@
   "K7AkdL": {
     "defaultMessage": "显示"
   },
+  "KH2ayq": {
+    "defaultMessage": "上传视频"
+  },
   "KkIL3s": {
     "defaultMessage": "不，我未满18岁"
   },
+  "KtrGU6": {
+    "defaultMessage": "如果你已经有一个账户，可以使用 nostr 扩展登录。如果你已经使用了 nostr 扩展，你将自动登录。如果没有设置 nostr 扩展，可以使用 nos2x 或 Alby。"
+  },
+  "KxfKnW": {
+    "defaultMessage": "提取资金"
+  },
+  "LEmxc8": {
+    "defaultMessage": "斩获目标"
+  },
+  "LUvSJB": {
+    "defaultMessage": "tunestr.io 最多可免费提供 2 小时的高质量托管和最多 8 小时的 \"源 \"质量托管。之后，您可以根据您选择的质量，选择每分钟 5 sats 或每分钟 10 sats 的流媒体。如果您不使用 tunestr.io 托管，价格将取决于您选择的流媒体提供商。"
+  },
+  "Le+99Z": {
+    "defaultMessage": "串流者只需支付少量费用，以支付我们的运营成本。我们为新的串流者提供 {amount} sats（约合 {time_estimate} 串流）的信用额度，供其开始使用！"
+  },
+  "Lg2ye2": {
+    "defaultMessage": "Tunestr 是一种新型流媒体平台，让您在开始流媒体播放时就能赚取比特币（Sats）！观众可以选择给流媒体任何金额的小费。小费会立即存入您的比特币（闪电）钱包。Tunestr.io 绝不会动用您的收入！"
+  },
   "LknBsU": {
     "defaultMessage": "直播流密钥"
+  },
+  "LxSJOb": {
+    "defaultMessage": "前往仪表板"
   },
   "MTHO1W": {
     "defaultMessage": "开始突袭"
@@ -221,8 +417,20 @@
   "My6HwN": {
     "defaultMessage": "好，是安全的"
   },
+  "NTpJIm": {
+    "defaultMessage": "启用录音"
+  },
+  "NnHu0L": {
+    "defaultMessage": "请上传至少 1 个视频"
+  },
+  "Ntjkqd": {
+    "defaultMessage": "或"
+  },
   "O2Cy6m": {
     "defaultMessage": "是的，我已满18岁"
+  },
+  "O7AeYh": {
+    "defaultMessage": "描述..."
   },
   "OEW7yJ": {
     "defaultMessage": "打闪"
@@ -230,20 +438,55 @@
   "OKhRC6": {
     "defaultMessage": "分享"
   },
-  "OWgHbg": {
-    "defaultMessage": "编辑卡片"
+  "ORGv1Q": {
+    "defaultMessage": "已创建"
+  },
+  "OadZli": {
+    "defaultMessage": "管理服务器"
+  },
+  "ObZZEz": {
+    "defaultMessage": "暂无片段"
+  },
+  "OkXMLE": {
+    "defaultMessage": "最大音频比特率"
+  },
+  "OumUwz": {
+    "defaultMessage": "{m}秒 {ago}",
+    "description": "Number of second(s) relative to now"
   },
   "Oxqtyf": {
     "defaultMessage": "我们已经为你设置了一个闪电钱包，因此你立即可以开始收取观众的付款！"
   },
-  "PA0ej4": {
-    "defaultMessage": "创建剪辑"
+  "PDA8V2": {
+    "defaultMessage": "{m}h {ago}",
+    "description": "Number of hour(s) relative to now"
+  },
+  "PHE60k": {
+    "defaultMessage": "如果你不想设置任何目标，请留空。"
+  },
+  "PUymyQ": {
+    "defaultMessage": "请访问 {name} stream on tunestr.io！ {link}"
+  },
+  "PXAur5": {
+    "defaultMessage": "提款"
+  },
+  "Pc+tM3": {
+    "defaultMessage": "生成"
   },
   "Pe0ogR": {
     "defaultMessage": "主题"
   },
+  "PySFxG": {
+    "defaultMessage": "选择文件。"
+  },
   "Q3au2v": {
     "defaultMessage": "大约{estimate}"
+  },
+  "Q8Qw5B": {
+    "defaultMessage": "描述"
+  },
+  "QNvtaq": {
+    "defaultMessage": "在 X 上分享"
   },
   "QRHNuF": {
     "defaultMessage": "我们今天直播些什么？"
@@ -260,8 +503,14 @@
   "Qe1MJu": {
     "defaultMessage": "{amount}來自{name}"
   },
-  "RJ2VxG": {
-    "defaultMessage": "检测到新版本"
+  "Qf0ugr": {
+    "defaultMessage": "您可以选择使用我们的内部主机或您自己的主机（如 Cloudflare）。"
+  },
+  "R72je0": {
+    "defaultMessage": "直播标题"
+  },
+  "RGYBjE": {
+    "defaultMessage": "缩略图"
   },
   "RJOmzk": {
     "defaultMessage": "我已阅读并同意{provider}的{terms}。"
@@ -278,14 +527,30 @@
   "RtYNX5": {
     "defaultMessage": "聊天用户"
   },
+  "S39ba6": {
+    "defaultMessage": "什么是 OBS？"
+  },
+  "SC2nJT": {
+    "defaultMessage": "音频编解码器"
+  },
+  "TDUfVk": {
+    "defaultMessage": "已开始"
+  },
   "TP/cMX": {
     "defaultMessage": "已结束"
   },
-  "TaTRKo": {
-    "defaultMessage": "开始直播"
+  "TcDwEB": {
+    "defaultMessage": "直播流密钥"
   },
   "TwyMau": {
     "defaultMessage": "帐户"
+  },
+  "UCDS65": {
+    "defaultMessage": "前",
+    "description": "Relative time, ie. 1s ago"
+  },
+  "UGFYV8": {
+    "defaultMessage": "欢迎访问 tunestr.io！"
   },
   "UJBFYK": {
     "defaultMessage": "添加卡片"
@@ -293,23 +558,57 @@
   "UfSot5": {
     "defaultMessage": "过去的直播"
   },
+  "Uo/DWG": {
+    "defaultMessage": "关于时间过长"
+  },
   "VA/Z1S": {
     "defaultMessage": "隐藏"
   },
-  "Vn2WiP": {
-    "defaultMessage": "获取直播流密钥"
+  "VDOpia": {
+    "defaultMessage": "什么是电击？"
+  },
+  "VKb1MS": {
+    "defaultMessage": "类别"
   },
   "W7DNWx": {
     "defaultMessage": "直播流转发"
   },
+  "W7IRLs": {
+    "defaultMessage": "你的标题太短了"
+  },
   "W9355R": {
     "defaultMessage": "解除静音"
+  },
+  "WVJZ0U": {
+    "defaultMessage": "价值",
+    "description": "Config value column header"
+  },
+  "WcZM+B": {
+    "defaultMessage": "文件列表"
+  },
+  "Wp4l7+": {
+    "defaultMessage": "更多视频"
+  },
+  "WsjXrZ": {
+    "defaultMessage": "点击登录"
   },
   "X2PZ7D": {
     "defaultMessage": "创建目标"
   },
+  "XIvYvF": {
+    "defaultMessage": "获取发票失败"
+  },
+  "XMGfiA": {
+    "defaultMessage": "最新剪辑"
+  },
   "XgWvGA": {
     "defaultMessage": "反应"
+  },
+  "XmQZr5": {
+    "defaultMessage": "没有密钥"
+  },
+  "Xq2sb0": {
+    "defaultMessage": "要进行直播，请将下面的服务器 URL 和流媒体密钥复制并粘贴到流媒体软件设置中，然后按 \"开始流媒体\"。我们推荐使用<a>OBS</a>。"
   },
   "Y0DXJb": {
     "defaultMessage": "录影 URL"
@@ -318,20 +617,39 @@
     "defaultMessage": "@ {rate}",
     "description": "Showing zap amount in USD @ rate"
   },
-  "YagVIe": {
-    "defaultMessage": "{n}p"
+  "YjhNaf": {
+    "defaultMessage": "创建流"
   },
   "YwzT/0": {
     "defaultMessage": "剪辑标题"
   },
+  "YyXVHf": {
+    "defaultMessage": "清空草稿"
+  },
   "Z8ZOEY": {
     "defaultMessage": "这个方式不安全。我们建议使用{nostrlink}"
+  },
+  "ZXp0z1": {
+    "defaultMessage": "特点"
+  },
+  "ZaNcK4": {
+    "defaultMessage": "尚无目标"
+  },
+  "ZcgtZo": {
+    "defaultMessage": "我们整理了一份简单易用的交易所清单，您可以通过这些交易所购买少量比特币 (sats)，并将其转移到您选择的钱包中。"
   },
   "ZmqxZs": {
     "defaultMessage": "你可以稍后更改它"
   },
+  "ZsYhvh": {
+    "defaultMessage": "Zaps 是闪电付款，作为收据在 nostr 上公布。"
+  },
   "Zse7yG": {
     "defaultMessage": "突袭目标"
+  },
+  "aB/rH0": {
+    "defaultMessage": "{m}h {ago}",
+    "description": "Number of minute(s) relative to now"
   },
   "acrOoz": {
     "defaultMessage": "继续"
@@ -339,11 +657,32 @@
   "aqjZxs": {
     "defaultMessage": "突袭"
   },
+  "bD/ZwY": {
+    "defaultMessage": "编辑卡"
+  },
+  "bbUGS7": {
+    "defaultMessage": "推荐的流媒体设置"
+  },
+  "bdH+0f": {
+    "defaultMessage": "余额历史"
+  },
   "bfvyfs": {
     "defaultMessage": "匿名"
   },
+  "c3LlRO": {
+    "defaultMessage": "{n}KiB"
+  },
   "cPIKU2": {
     "defaultMessage": "已关注"
+  },
+  "ccXLVi": {
+    "defaultMessage": "类别"
+  },
+  "cg1VJ2": {
+    "defaultMessage": "连接钱包"
+  },
+  "cntHHJ": {
+    "defaultMessage": "这样，您就可以将您的信息流转发到其他平台，让更多人看到您的信息。"
   },
   "cvAsEh": {
     "defaultMessage": "已于{date}直播"
@@ -360,6 +699,13 @@
   "dVD/AR": {
     "defaultMessage": "最高打闪用户"
   },
+  "dkUMIH": {
+    "defaultMessage": "剪辑： {name}"
+  },
+  "e011kf": {
+    "defaultMessage": "常见问题",
+    "description": "Title: FAQ page"
+  },
   "ebmhes": {
     "defaultMessage": "Nostr 扩展"
   },
@@ -369,17 +715,26 @@
   "fBI91o": {
     "defaultMessage": "打闪"
   },
-  "fc2iho": {
-    "defaultMessage": "新增文件"
-  },
   "feZ/kG": {
     "defaultMessage": "使用私钥登录 (不安全)"
+  },
+  "g5pX+a": {
+    "defaultMessage": "关于"
+  },
+  "gQxxlw": {
+    "defaultMessage": "目标名称"
+  },
+  "gt65Gg": {
+    "defaultMessage": "流目标鼓励观众通过捐款支持流媒体。"
   },
   "gzsn7k": {
     "defaultMessage": "{n} 信息"
   },
-  "hGQqkW": {
-    "defaultMessage": "时间表"
+  "h6NRY6": {
+    "defaultMessage": "No Thanks!"
+  },
+  "h9mX2/": {
+    "defaultMessage": "如果您使用我们内部的 tunestr.io 托管（最便宜、最简单），请将您的流 URL 和流密钥复制到您的 OBS 设置中，然后就可以使用了。"
   },
   "hMzcSq": {
     "defaultMessage": "信息"
@@ -393,8 +748,17 @@
   "hzSNj4": {
     "defaultMessage": "仪表板"
   },
+  "iKlloU": {
+    "defaultMessage": "推荐的服务器"
+  },
   "ieGrWo": {
     "defaultMessage": "关注"
+  },
+  "ieKb+k": {
+    "defaultMessage": "流媒体的成本是多少？"
+  },
+  "ipTKP3": {
+    "defaultMessage": "聊天弹出窗口"
   },
   "itPgxd": {
     "defaultMessage": "个人档案"
@@ -405,11 +769,11 @@
   "j/jueq": {
     "defaultMessage": "突袭 {name}"
   },
+  "jDDeA0": {
+    "defaultMessage": "你的标题很长，请确保少于 {n} 字符。"
+  },
   "jJLRgo": {
     "defaultMessage": "剪辑片段"
-  },
-  "jctiUc": {
-    "defaultMessage": "最高收视率"
   },
   "jgOqxt": {
     "defaultMessage": "小工具"
@@ -426,8 +790,26 @@
   "k21gTS": {
     "defaultMessage": "例如：关于我"
   },
+  "kAEQyV": {
+    "defaultMessage": "OK"
+  },
+  "kGjqZ4": {
+    "defaultMessage": "最新短裤"
+  },
+  "kQAf2d": {
+    "defaultMessage": "选择"
+  },
+  "kc5EOy": {
+    "defaultMessage": "用户名太长"
+  },
+  "khJ51Q": {
+    "defaultMessage": "收入流"
+  },
   "kp0NPF": {
     "defaultMessage": "已计划"
+  },
+  "lXbG97": {
+    "defaultMessage": "最多的溪流"
   },
   "lZpRMR": {
     "defaultMessage": "如果该流含有裸体或色情内容，请选择此选项。"
@@ -441,8 +823,17 @@
   "mnJYBQ": {
     "defaultMessage": "语音"
   },
-  "mtNGwh": {
-    "defaultMessage": "内容的简短描述"
+  "mrwfXX": {
+    "defaultMessage": "股份"
+  },
+  "msjwph": {
+    "defaultMessage": "关键帧间隔"
+  },
+  "n19IQE": {
+    "defaultMessage": "建议尺寸：1920x1080（16:9）"
+  },
+  "n8k1SG": {
+    "defaultMessage": "{n}米字节"
   },
   "nBCvvJ": {
     "defaultMessage": "充值"
@@ -453,35 +844,48 @@
   "nwA8Os": {
     "defaultMessage": "添加卡片"
   },
-  "o8pHw3": {
-    "defaultMessage": "自动"
-  },
   "oHPB8Q": {
     "defaultMessage": "打闪 {name}"
   },
   "oZrFyI": {
     "defaultMessage": "直播流类型应该是 HLS"
   },
+  "p4N05H": {
+    "defaultMessage": "上传"
+  },
+  "pOeEMx": {
+    "defaultMessage": "添加服务器"
+  },
+  "pxF+t0": {
+    "defaultMessage": "热门"
+  },
   "q+zTWM": {
     "defaultMessage": "<s>{person}</s> 打闪了 <s>{amount}</s> 聪"
+  },
+  "q9ryv4": {
+    "defaultMessage": "封面图片 URL（可选）"
+  },
+  "qx6bv2": {
+    "defaultMessage": "溪流目标（可选）"
   },
   "r2Jjms": {
     "defaultMessage": "登录"
   },
-  "rELDbB": {
-    "defaultMessage": "刷新"
+  "rJqhFR": {
+    "defaultMessage": "数据流设置"
   },
   "rWBFZA": {
     "defaultMessage": "前方有色情内容！"
   },
-  "rbrahO": {
-    "defaultMessage": "关闭"
-  },
-  "rfC1Zq": {
-    "defaultMessage": "保存卡片"
-  },
   "rgsbu9": {
     "defaultMessage": "当前观看用户"
+  },
+  "rleUgy": {
+    "defaultMessage": "正在上传.."
+  },
+  "s+ORFl": {
+    "defaultMessage": "{m}d {ago}",
+    "description": "Number of day(s) relative to now"
   },
   "s5ksS7": {
     "defaultMessage": "图像链接"
@@ -492,14 +896,33 @@
   "sInm1h": {
     "defaultMessage": "打闪消息"
   },
+  "sj6WAe": {
+    "defaultMessage": "点击右上角的 \"流 \"按钮"
+  },
+  "syEQFE": {
+    "defaultMessage": "发布"
+  },
   "tG1ST3": {
     "defaultMessage": "传入打闪"
   },
   "tM6fNW": {
     "defaultMessage": "太棒了！继续.."
   },
+  "tNtB9I": {
+    "defaultMessage": "名称",
+    "description": "Config name column header"
+  },
+  "tTgdmx": {
+    "defaultMessage": "{n,selectordinal,one{@ #st min} two{@ #nd min} few{@ #rd min} other{@ #th min}}"
+  },
+  "tVCC9m": {
+    "defaultMessage": "Sats 是比特币的小单位。在 tunestr.io 上发送比特币被称为 \"zapping \"或 \"zaps\"。"
+  },
   "thsiMl": {
     "defaultMessage": "使用条款"
+  },
+  "twCRVi": {
+    "defaultMessage": "艺术"
   },
   "tzMNF3": {
     "defaultMessage": "状态"
@@ -510,14 +933,32 @@
   "uYw2LD": {
     "defaultMessage": "直播流"
   },
+  "ug01Mk": {
+    "defaultMessage": "时间"
+  },
+  "uksRSi": {
+    "defaultMessage": "最新视频"
+  },
+  "vP4dFa": {
+    "defaultMessage": "请访问 {link} ，获取 Tunestr.io 的精美商品！"
+  },
   "vrTOHJ": {
     "defaultMessage": "{amount} 聪"
+  },
+  "w+2Vw7": {
+    "defaultMessage": "短裤"
   },
   "w0Xm2F": {
     "defaultMessage": "开始键入"
   },
+  "w3btjR": {
+    "defaultMessage": "赌博"
+  },
   "wCIL7o": {
     "defaultMessage": "在 Nostr 上广播"
+  },
+  "wCgTu5": {
+    "defaultMessage": "评论"
   },
   "wEQDC6": {
     "defaultMessage": "编辑"
@@ -525,20 +966,54 @@
   "wMKVFz": {
     "defaultMessage": "选择语音..."
   },
-  "wOy57k": {
-    "defaultMessage": "添加直播目标"
+  "wRGjPp": {
+    "defaultMessage": "nostr 扩展只需保存你的密钥，这样你就可以安全登录，而不必每次都重新输入。Tunestr 使用该扩展代表你授权操作，而不会看到你的密钥信息。这比相信网站会安全处理你的凭据更有优势。"
   },
-  "wzWWzV": {
-    "defaultMessage": "最高打闪用户"
+  "wTwfnv": {
+    "defaultMessage": "无效的 nostr 地址"
+  },
+  "we4Lby": {
+    "defaultMessage": "信息"
   },
   "x82IOl": {
     "defaultMessage": "静音"
   },
+  "xhQMeQ": {
+    "defaultMessage": "有效期"
+  },
+  "xi3sgh": {
+    "defaultMessage": "我怎样才能获得更多 Sats？"
+  },
+  "xmcVZ0": {
+    "defaultMessage": "搜索"
+  },
   "y867Vs": {
     "defaultMessage": "音量"
   },
+  "y8ogtp": {
+    "defaultMessage": "{m}w {ago}",
+    "description": "Number of week(s) relative to now"
+  },
+  "yLxIgl": {
+    "defaultMessage": "剪辑"
+  },
+  "yR0V+W": {
+    "defaultMessage": "要在 tunestr.io 上开始串流，请按照以下步骤操作："
+  },
+  "yj8NrY": {
+    "defaultMessage": "剪辑"
+  },
   "yzKwBQ": {
     "defaultMessage": "例如 nsec1xyz"
+  },
+  "z2qCcJ": {
+    "defaultMessage": "最大视频比特率"
+  },
+  "zEYkgY": {
+    "defaultMessage": "谈话"
+  },
+  "zSYDJP": {
+    "defaultMessage": "我有自己的流媒体主机"
   },
   "zVDHAu": {
     "defaultMessage": "打闪提示"

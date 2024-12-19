@@ -9,22 +9,37 @@
     "defaultMessage": "Live nu"
   },
   "+vVZ/G": {
-    "defaultMessage": "Forbind"
+    "defaultMessage": "Opret forbindelse"
+  },
+  "+y6JUK": {
+    "defaultMessage": "Razziaer"
   },
   "/0TOL5": {
     "defaultMessage": "Beløb"
   },
+  "/563b0": {
+    "defaultMessage": "Balance: {n} sats"
+  },
   "/EvlqN": {
     "defaultMessage": "nostr signer extension"
   },
-  "/GCoTA": {
-    "defaultMessage": "Klar"
+  "/JkXBo": {
+    "defaultMessage": "Klip fra {title}"
+  },
+  "/Jp9pC": {
+    "defaultMessage": "I alt: {amount} sats"
+  },
+  "/aFYQ5": {
+    "defaultMessage": "Stream Forwarding (valgfrit)"
+  },
+  "/w4RM6": {
+    "defaultMessage": "IRL"
+  },
+  "01iNut": {
+    "defaultMessage": "Nostr-adressen tilhører ikke dig"
   },
   "04lmFi": {
     "defaultMessage": "Gem nøgle"
-  },
-  "0GfNiL": {
-    "defaultMessage": "Stream Zap-mål"
   },
   "0VV/sK": {
     "defaultMessage": "Mål"
@@ -32,8 +47,14 @@
   "0hNxBy": {
     "defaultMessage": "Starts"
   },
+  "0rVLjV": {
+    "defaultMessage": "Ingen streams endnu"
+  },
   "1EYCdR": {
     "defaultMessage": "Mærker"
+  },
+  "1LBny5": {
+    "defaultMessage": "Stoppet"
   },
   "1q4BO/": {
     "defaultMessage": "Ikke en gyldig URL"
@@ -43,6 +64,15 @@
   },
   "2/2yg+": {
     "defaultMessage": "Tilføj"
+  },
+  "2lVQYF": {
+    "defaultMessage": "...mere"
+  },
+  "2ukA4d": {
+    "defaultMessage": "{n} timer"
+  },
+  "2wdFaB": {
+    "defaultMessage": "Slutstrøm"
   },
   "37mth/": {
     "defaultMessage": "Seere"
@@ -56,8 +86,20 @@
   "3df560": {
     "defaultMessage": "Log ind med privat nøgle"
   },
+  "3kbIhS": {
+    "defaultMessage": "Uden titel"
+  },
+  "3yk8fB": {
+    "defaultMessage": "Tegnebog"
+  },
   "47FYwb": {
     "defaultMessage": "Annuller"
+  },
+  "4RhY4O": {
+    "defaultMessage": "Eksempel på indstillinger i OBS (Apple M1 Mac)"
+  },
+  "4XfMux": {
+    "defaultMessage": "Videoer"
   },
   "4iBdw1": {
     "defaultMessage": "Razzia"
@@ -68,17 +110,26 @@
   "4l6vz1": {
     "defaultMessage": "Kopi"
   },
-  "4uI538": {
-    "defaultMessage": "Beslutninger"
-  },
   "50+/JW": {
     "defaultMessage": "Stream Key er påkrævet"
+  },
+  "58DXVG": {
+    "defaultMessage": "For at komme i gang skal du hente din stream-nøgle fra den platform, du ønsker at videresende til."
   },
   "5JcXdV": {
     "defaultMessage": "Opret konto"
   },
+  "5L4ati": {
+    "defaultMessage": "Zap from"
+  },
+  "5LXWMX": {
+    "defaultMessage": "Nyt mål"
+  },
   "5QYdPU": {
     "defaultMessage": "Starttidspunkt"
+  },
+  "5Wwopw": {
+    "defaultMessage": "Prisfastsættelse"
   },
   "5kx+2v": {
     "defaultMessage": "Server-URL"
@@ -86,8 +137,14 @@
   "5tM0VD": {
     "defaultMessage": "Stream i gang"
   },
+  "5vMmmR": {
+    "defaultMessage": "Brugernavne er ikke unikke på Nostr. Nostr-adressen er din unikke menneskeligt læsbare adresse, som er unik for dig ved registrering."
+  },
   "69hmpj": {
     "defaultMessage": "Angreb fra {name}"
+  },
+  "6PK5Jy": {
+    "defaultMessage": "Past Stream"
   },
   "6Z2pvJ": {
     "defaultMessage": "Strømudbydere"
@@ -98,20 +155,56 @@
   "7+bCC1": {
     "defaultMessage": "Stream url skal starte med rtmp://"
   },
+  "74PejI": {
+    "defaultMessage": "De bedste seere"
+  },
   "79lLl+": {
     "defaultMessage": "Musik"
   },
   "7UOvbT": {
     "defaultMessage": "Offline"
   },
+  "89UZph": {
+    "defaultMessage": "Konfigurer din streamingsoftware"
+  },
   "8YT6ja": {
     "defaultMessage": "Indsæt tekst for at tale"
+  },
+  "8aAwpp": {
+    "defaultMessage": "Til manuel hosting skal du blot bruge HLS-URL'en i feltet Stream URL. Du bør kunne finde den i din hostingopsætning."
+  },
+  "8xVdjn": {
+    "defaultMessage": "Video-codec"
   },
   "9WRlF4": {
     "defaultMessage": "Send"
   },
+  "9ZoFpI": {
+    "defaultMessage": "Slet filen"
+  },
   "9a9+ww": {
     "defaultMessage": "Titel"
+  },
+  "9pMqYs": {
+    "defaultMessage": "Nostr-adresse"
+  },
+  "9rmSgv": {
+    "defaultMessage": "OBS (Open Broadcaster Software) er en gratis open source-software til videooptagelse og livestreaming på Windows, Mac og Linux. Det er et populært valg blandt streamere. Du skal installere det for at optage din video, lyd og alt andet, du gerne vil føje til din stream. Når det er installeret og konfigureret efter dine præferencer, skal du tilføje din Stream URL og Stream Key fra Stream-indstillingerne til OBS for at oprette forbindelse til tunestr.io."
+  },
+  "A1zT+z": {
+    "defaultMessage": "Søgeresultater: {term}"
+  },
+  "A7K3S+": {
+    "defaultMessage": "Account Setup"
+  },
+  "ALdW69": {
+    "defaultMessage": "Note fra {name}"
+  },
+  "ASKb16": {
+    "defaultMessage": "A description of the stream"
+  },
+  "AYIR/J": {
+    "defaultMessage": "Fjern billede"
   },
   "Atr2p4": {
     "defaultMessage": "NSFW-indhold"
@@ -119,23 +212,35 @@
   "AukrPM": {
     "defaultMessage": "Ingen tilgængelige data for seere"
   },
+  "Axo/o5": {
+    "defaultMessage": "Videnskab og teknologi"
+  },
   "AyGauy": {
     "defaultMessage": "Login"
   },
   "BD0vyn": {
     "defaultMessage": "{name} oprettet et klip"
   },
-  "BGxpTN": {
-    "defaultMessage": "Stream Chat"
+  "Bd1yEX": {
+    "defaultMessage": "Nyt mål for vandløb"
   },
   "Bep/gA": {
     "defaultMessage": "Privat nøgle"
   },
+  "BzQPM+": {
+    "defaultMessage": "Destination"
+  },
   "C81/uG": {
     "defaultMessage": "Log ud"
   },
+  "CTgA2G": {
+    "defaultMessage": "Opret en ny konto, hvis du ikke allerede har en."
+  },
   "CsCUYo": {
     "defaultMessage": "{n} sats"
+  },
+  "CsS/fy": {
+    "defaultMessage": "{estimate} resterende ({balance} sats @ {rate} sats / {unit})"
   },
   "D3idYv": {
     "defaultMessage": "Indstillinger"
@@ -143,14 +248,36 @@
   "DZKuuP": {
     "defaultMessage": "Logget ind som"
   },
+  "DkgCAz": {
+    "defaultMessage": "Hvordan streamer jeg på tunestr.io?"
+  },
   "Dn82AL": {
     "defaultMessage": "Levende"
+  },
+  "DqmiAe": {
+    "defaultMessage": "Dont have a nostr extension? Try {nos2x}, {nostore} or {alby}"
+  },
+  "E7n6zr": {
+    "defaultMessage": "Nuværende strømomkostninger: {amount} sats/{unit} (ca. {usd}/dag for en {x}timers strøm)"
   },
   "E9APoR": {
     "defaultMessage": "Kunne ikke oprette stream-URL"
   },
   "ESyhzp": {
     "defaultMessage": "Din kommentar til {name}"
+  },
+  "EcglP9": {
+    "defaultMessage": "Key"
+  },
+  "FAUhZf": {
+    "defaultMessage": "Hvad er sats?"
+  },
+  "FIDK5Y": {
+    "defaultMessage": "Alle tiders bedste zappere"
+  },
+  "FXepR9": {
+    "defaultMessage": "{m}mo {ago}",
+    "description": "Number of month(s) relative to now"
   },
   "FjDlus": {
     "defaultMessage": "Du kan altid erstatte den med din egen adresse senere."
@@ -161,11 +288,20 @@
   "G/yZLu": {
     "defaultMessage": "Fjern"
   },
+  "G857ni": {
+    "defaultMessage": "LNURL eller faktura"
+  },
   "GGaJMU": {
     "defaultMessage": "De bedste chattere"
   },
-  "Gmiwnd": {
-    "defaultMessage": "Opdater siden for at bruge den nyeste version"
+  "GSuQPh": {
+    "defaultMessage": "Ukendt link til begivenhed"
+  },
+  "GSye7T": {
+    "defaultMessage": "Lynets adresse"
+  },
+  "GcozGF": {
+    "defaultMessage": "Ugyldig lynadresse"
   },
   "Gq6x9o": {
     "defaultMessage": "Forsidebillede"
@@ -173,8 +309,17 @@
   "Gvxoji": {
     "defaultMessage": "Navn er påkrævet"
   },
+  "GwbTAz": {
+    "defaultMessage": "Vandløb"
+  },
   "H/bNs9": {
     "defaultMessage": "Gem denne og opbevar den sikkert! Hvis du mister denne nøgle, vil du aldrig kunne få adgang til din konto igen. Jep, så alvorligt er det!"
+  },
+  "H1fdc9": {
+    "defaultMessage": "Tilføj venligst et miniaturebillede"
+  },
+  "H4hJvF": {
+    "defaultMessage": "Vælg en kategori"
   },
   "H5+NAX": {
     "defaultMessage": "Balance"
@@ -182,11 +327,26 @@
   "HAlOn1": {
     "defaultMessage": "Navn"
   },
-  "I/TubD": {
-    "defaultMessage": "Vælg et mål..."
+  "HDgXO/": {
+    "defaultMessage": "tunestr.io er en open source-platform, der drives af nostr-protokollen. Der er ingen store virksomheder eller store fonde til rådighed til at levere gratis streaming."
+  },
+  "HsgeUk": {
+    "defaultMessage": "Kom og se min stream på tunestr.io! {link}"
+  },
+  "Ht231k": {
+    "defaultMessage": "Videresendelse"
+  },
+  "HvUhXt": {
+    "defaultMessage": "Upload til {n} servere"
   },
   "I1kjHI": {
     "defaultMessage": "Understøtter {markdown}"
+  },
+  "I2AKfn": {
+    "defaultMessage": "Spil"
+  },
+  "IDqXmC": {
+    "defaultMessage": "Liste over medieservere"
   },
   "IJDKz3": {
     "defaultMessage": "Zap beløb i {currency}"
@@ -194,11 +354,23 @@
   "INlWvJ": {
     "defaultMessage": "ELLER"
   },
+  "IPXhUW": {
+    "defaultMessage": "Oversigt over sidste strøm"
+  },
+  "IqcyS0": {
+    "defaultMessage": "Hvad er en nostr-udvidelse?"
+  },
   "J/+m9y": {
     "defaultMessage": "Streamens varighed {duration} mins"
   },
-  "JEsxDw": {
-    "defaultMessage": "Uploading..."
+  "JCIgkj": {
+    "defaultMessage": "Brugernavn"
+  },
+  "JO0kq9": {
+    "defaultMessage": "Rediger stream-info"
+  },
+  "JkLHGw": {
+    "defaultMessage": "Hjemmeside"
   },
   "Jq3FDz": {
     "defaultMessage": "Indhold"
@@ -209,11 +381,35 @@
   "K7AkdL": {
     "defaultMessage": "Vis"
   },
+  "KH2ayq": {
+    "defaultMessage": "Upload video"
+  },
   "KkIL3s": {
     "defaultMessage": "Nej, jeg er under 18"
   },
+  "KtrGU6": {
+    "defaultMessage": "Hvis du allerede har en konto, kan du bruge en nostr-udvidelse til at logge ind. Hvis du allerede bruger en nostr-udvidelse, vil du automatisk blive logget ind. Hvis du ikke har oprettet en nostr-udvidelse, kan du bruge nos2x eller Alby."
+  },
+  "KxfKnW": {
+    "defaultMessage": "Træk penge ud"
+  },
+  "LEmxc8": {
+    "defaultMessage": "Zap Mål"
+  },
+  "LUvSJB": {
+    "defaultMessage": "tunestr.io er gratis i op til 2 timers hosting i høj kvalitet og op til 8 timer i \"source\"-kvalitet. Derefter har du mulighed for at streame for 5 sats pr. minut eller 10 sats pr. minut afhængigt af din valgte kvalitet. Hvis du ikke bruger tunestr.io til at hoste, vil prisen afhænge af din valgte streamingudbyder."
+  },
+  "Le+99Z": {
+    "defaultMessage": "Streamere betaler et lille gebyr for at dække vores driftsomkostninger. Vi giver nye streamere en kredit på {amount} sats (ca. {time_estimate} streaming) for at komme i gang!"
+  },
+  "Lg2ye2": {
+    "defaultMessage": "Tunestr er en ny slags streamingplatform, der giver dig mulighed for at tjene bitcoin (sats) i det øjeblik, du begynder at streame! Seerne kan give streamere et hvilket som helst beløb i drikkepenge. Drikkepengene sættes øjeblikkeligt ind på din bitcoin-tegnebog (lightning). tunestr.io rører aldrig din indtjening!"
+  },
   "LknBsU": {
     "defaultMessage": "Stream-nøgle"
+  },
+  "LxSJOb": {
+    "defaultMessage": "Gå til Dashboard"
   },
   "MTHO1W": {
     "defaultMessage": "Start Raid"
@@ -221,8 +417,20 @@
   "My6HwN": {
     "defaultMessage": "Okay, det er sikkert"
   },
+  "NTpJIm": {
+    "defaultMessage": "Aktivér optagelse"
+  },
+  "NnHu0L": {
+    "defaultMessage": "Upload venligst mindst 1 video"
+  },
+  "Ntjkqd": {
+    "defaultMessage": "eller"
+  },
   "O2Cy6m": {
     "defaultMessage": "Ja, jeg er over 18 år"
+  },
+  "O7AeYh": {
+    "defaultMessage": "Beskrivelse."
   },
   "OEW7yJ": {
     "defaultMessage": "Zaps"
@@ -230,20 +438,55 @@
   "OKhRC6": {
     "defaultMessage": "Del"
   },
-  "OWgHbg": {
-    "defaultMessage": "Rediger kort"
+  "ORGv1Q": {
+    "defaultMessage": "Created"
+  },
+  "OadZli": {
+    "defaultMessage": "Administrer servere"
+  },
+  "ObZZEz": {
+    "defaultMessage": "Ingen klip endnu"
+  },
+  "OkXMLE": {
+    "defaultMessage": "Maks. lydbitrate"
+  },
+  "OumUwz": {
+    "defaultMessage": "{m}s {ago}",
+    "description": "Number of second(s) relative to now"
   },
   "Oxqtyf": {
     "defaultMessage": "Vi har udstyret dig med en lightning wallet, så du kan blive betalt af seerne med det samme!"
   },
-  "PA0ej4": {
-    "defaultMessage": "Opret klip"
+  "PDA8V2": {
+    "defaultMessage": "{m}h {ago}",
+    "description": "Number of hour(s) relative to now"
+  },
+  "PHE60k": {
+    "defaultMessage": "Lad feltet stå tomt, hvis du ikke ønsker at opstille mål."
+  },
+  "PUymyQ": {
+    "defaultMessage": "Kom og tjek {name} stream på tunestr.io! {link}"
+  },
+  "PXAur5": {
+    "defaultMessage": "Træk dig tilbage"
+  },
+  "Pc+tM3": {
+    "defaultMessage": "Generer"
   },
   "Pe0ogR": {
     "defaultMessage": "Tema"
   },
+  "PySFxG": {
+    "defaultMessage": "Vælg en fil."
+  },
   "Q3au2v": {
     "defaultMessage": "Om {estimate}"
+  },
+  "Q8Qw5B": {
+    "defaultMessage": "Beskrivelse"
+  },
+  "QNvtaq": {
+    "defaultMessage": "Del på X"
   },
   "QRHNuF": {
     "defaultMessage": "Hvad damper vi i dag?"
@@ -260,8 +503,14 @@
   "Qe1MJu": {
     "defaultMessage": "{name} med {amount}"
   },
-  "RJ2VxG": {
-    "defaultMessage": "En ny version er blevet opdaget"
+  "Qf0ugr": {
+    "defaultMessage": "Her har du et par muligheder: Brug vores interne hosting eller din egen (f.eks. Cloudflare)."
+  },
+  "R72je0": {
+    "defaultMessage": "Titel på stream"
+  },
+  "RGYBjE": {
+    "defaultMessage": "Miniaturebillede"
   },
   "RJOmzk": {
     "defaultMessage": "Jeg har læst og er enig i {provider}' s {terms}."
@@ -278,14 +527,30 @@
   "RtYNX5": {
     "defaultMessage": "Chat-brugere"
   },
+  "S39ba6": {
+    "defaultMessage": "Hvad er OBS?"
+  },
+  "SC2nJT": {
+    "defaultMessage": "Audio Codec"
+  },
+  "TDUfVk": {
+    "defaultMessage": "Påbegyndt"
+  },
   "TP/cMX": {
     "defaultMessage": "Afsluttet"
   },
-  "TaTRKo": {
-    "defaultMessage": "Start strøm"
+  "TcDwEB": {
+    "defaultMessage": "Stream Keys"
   },
   "TwyMau": {
     "defaultMessage": "Konto"
+  },
+  "UCDS65": {
+    "defaultMessage": "for længe siden",
+    "description": "Relative time, ie. 1s ago"
+  },
+  "UGFYV8": {
+    "defaultMessage": "Velkommen til tunestr.io!"
   },
   "UJBFYK": {
     "defaultMessage": "Tilføj kort"
@@ -293,45 +558,98 @@
   "UfSot5": {
     "defaultMessage": "Tidligere strømme"
   },
+  "Uo/DWG": {
+    "defaultMessage": "Om for lang tid"
+  },
   "VA/Z1S": {
     "defaultMessage": "Skjul"
   },
-  "Vn2WiP": {
-    "defaultMessage": "Get Stream Key"
+  "VDOpia": {
+    "defaultMessage": "Hvad er zaps?"
+  },
+  "VKb1MS": {
+    "defaultMessage": "Kategorier"
   },
   "W7DNWx": {
     "defaultMessage": "Videresendelse af strøm"
   },
+  "W7IRLs": {
+    "defaultMessage": "Din titel er for kort"
+  },
   "W9355R": {
     "defaultMessage": "Slå lyden fra"
+  },
+  "WVJZ0U": {
+    "defaultMessage": "Værdi",
+    "description": "Config value column header"
+  },
+  "WcZM+B": {
+    "defaultMessage": "Fil-liste"
+  },
+  "Wp4l7+": {
+    "defaultMessage": "Flere videoer"
+  },
+  "WsjXrZ": {
+    "defaultMessage": "Klik på Log ind"
   },
   "X2PZ7D": {
     "defaultMessage": "Opret mål"
   },
+  "XIvYvF": {
+    "defaultMessage": "Kunne ikke hente faktura"
+  },
+  "XMGfiA": {
+    "defaultMessage": "Seneste klip"
+  },
   "XgWvGA": {
     "defaultMessage": "Reaktioner"
   },
+  "XmQZr5": {
+    "defaultMessage": "No keys"
+  },
+  "Xq2sb0": {
+    "defaultMessage": "For at gå live skal du kopiere og indsætte din server-URL og stream-nøgle nedenfor i indstillingerne for din streamingsoftware og trykke på \"Start streaming\". Vi anbefaler <a>OBS</a>."
+  },
   "Y0DXJb": {
-    "defaultMessage": "Recording URL"
+    "defaultMessage": "Optagelses-URL"
   },
   "YPh5Nq": {
     "defaultMessage": "@ {rate}",
     "description": "Showing zap amount in USD @ rate"
   },
-  "YagVIe": {
-    "defaultMessage": "{n}p"
+  "YjhNaf": {
+    "defaultMessage": "Opret strøm"
   },
   "YwzT/0": {
-    "defaultMessage": "Clip title"
+    "defaultMessage": "Titel på klip"
+  },
+  "YyXVHf": {
+    "defaultMessage": "Klart udkast"
   },
   "Z8ZOEY": {
     "defaultMessage": "Denne metode er usikker. Vi anbefaler at bruge en {nostrlink}"
   },
+  "ZXp0z1": {
+    "defaultMessage": "Funktioner"
+  },
+  "ZaNcK4": {
+    "defaultMessage": "Ingen mål endnu"
+  },
+  "ZcgtZo": {
+    "defaultMessage": "Vi har sammensat en liste over brugervenlige børser, der giver dig mulighed for at købe en lille mængde bitcoin (sats) og overføre dem til din valgte wallet."
+  },
   "ZmqxZs": {
     "defaultMessage": "Du kan ændre dette senere"
   },
+  "ZsYhvh": {
+    "defaultMessage": "Zaps er lynbetalinger, der offentliggøres på nostr som kvitteringer."
+  },
   "Zse7yG": {
     "defaultMessage": "Mål for razzia"
+  },
+  "aB/rH0": {
+    "defaultMessage": "{m}h {ago}",
+    "description": "Number of minute(s) relative to now"
   },
   "acrOoz": {
     "defaultMessage": "Fortsæt"
@@ -339,11 +657,32 @@
   "aqjZxs": {
     "defaultMessage": "Razzia!"
   },
+  "bD/ZwY": {
+    "defaultMessage": "Rediger kort"
+  },
+  "bbUGS7": {
+    "defaultMessage": "Anbefalede indstillinger for stream"
+  },
+  "bdH+0f": {
+    "defaultMessage": "Balance History"
+  },
   "bfvyfs": {
     "defaultMessage": "Anon"
   },
+  "c3LlRO": {
+    "defaultMessage": "{n}KiB"
+  },
   "cPIKU2": {
     "defaultMessage": "Følgende"
+  },
+  "ccXLVi": {
+    "defaultMessage": "Kategori"
+  },
+  "cg1VJ2": {
+    "defaultMessage": "Forbind tegnebog"
+  },
+  "cntHHJ": {
+    "defaultMessage": "Det giver dig mulighed for at videresende din stream til andre platforme for at nå ud til et bredere publikum."
   },
   "cvAsEh": {
     "defaultMessage": "Streamet på {date}"
@@ -360,6 +699,13 @@
   "dVD/AR": {
     "defaultMessage": "De bedste zappere"
   },
+  "dkUMIH": {
+    "defaultMessage": "Klip af {name}"
+  },
+  "e011kf": {
+    "defaultMessage": "OFTE STILLEDE SPØRGSMÅL",
+    "description": "Title: FAQ page"
+  },
   "ebmhes": {
     "defaultMessage": "Nostr-forlængelse"
   },
@@ -369,17 +715,26 @@
   "fBI91o": {
     "defaultMessage": "Zap"
   },
-  "fc2iho": {
-    "defaultMessage": "Tilføj fil"
-  },
   "feZ/kG": {
     "defaultMessage": "Login med privat nøgle (usikkert)"
+  },
+  "g5pX+a": {
+    "defaultMessage": "Om"
+  },
+  "gQxxlw": {
+    "defaultMessage": "Målets navn"
+  },
+  "gt65Gg": {
+    "defaultMessage": "Stream goals opfordrer seerne til at støtte streamere via donationer."
   },
   "gzsn7k": {
     "defaultMessage": "{n} meddelelser"
   },
-  "hGQqkW": {
-    "defaultMessage": "Tidsplan"
+  "h6NRY6": {
+    "defaultMessage": "No Thanks!"
+  },
+  "h9mX2/": {
+    "defaultMessage": "Hvis du bruger vores egen tunestr.io-hosting (billigst og nemmest), skal du kopiere din stream-URL og stream-nøgle til dine OBS-indstillinger, og så skulle du være klar til at gå i gang."
   },
   "hMzcSq": {
     "defaultMessage": "Beskeder"
@@ -393,8 +748,17 @@
   "hzSNj4": {
     "defaultMessage": "Dashboard"
   },
+  "iKlloU": {
+    "defaultMessage": "Foreslåede tjenere"
+  },
   "ieGrWo": {
     "defaultMessage": "Følg efter"
+  },
+  "ieKb+k": {
+    "defaultMessage": "Hvad koster det at streame?"
+  },
+  "ipTKP3": {
+    "defaultMessage": "Chat-popout"
   },
   "itPgxd": {
     "defaultMessage": "Profil"
@@ -405,11 +769,11 @@
   "j/jueq": {
     "defaultMessage": "Razzia {name}"
   },
-  "jJLRgo": {
-    "defaultMessage": "Publish Clip"
+  "jDDeA0": {
+    "defaultMessage": "Din titel er meget lang, sørg for, at den er mindre end {n} tegn."
   },
-  "jctiUc": {
-    "defaultMessage": "Flest seere"
+  "jJLRgo": {
+    "defaultMessage": "Udgiv klip"
   },
   "jgOqxt": {
     "defaultMessage": "Widgets"
@@ -426,8 +790,26 @@
   "k21gTS": {
     "defaultMessage": "f.eks. om mig"
   },
+  "kAEQyV": {
+    "defaultMessage": "OK"
+  },
+  "kGjqZ4": {
+    "defaultMessage": "Nyeste shorts"
+  },
+  "kQAf2d": {
+    "defaultMessage": "Vælg"
+  },
+  "kc5EOy": {
+    "defaultMessage": "Brugernavnet er for langt"
+  },
+  "khJ51Q": {
+    "defaultMessage": "Stream indtjening"
+  },
   "kp0NPF": {
     "defaultMessage": "Planlagt"
+  },
+  "lXbG97": {
+    "defaultMessage": "De fleste zappede streamere"
   },
   "lZpRMR": {
     "defaultMessage": "Tjek her, om denne stream indeholder nøgenhed eller pornografisk indhold."
@@ -441,8 +823,17 @@
   "mnJYBQ": {
     "defaultMessage": "Stemme"
   },
-  "mtNGwh": {
-    "defaultMessage": "En kort beskrivelse af indholdet"
+  "mrwfXX": {
+    "defaultMessage": "Aktier"
+  },
+  "msjwph": {
+    "defaultMessage": "Keyframe-interval"
+  },
+  "n19IQE": {
+    "defaultMessage": "Anbefalet størrelse: 1920x1080 (16:9)"
+  },
+  "n8k1SG": {
+    "defaultMessage": "{n}MiB"
   },
   "nBCvvJ": {
     "defaultMessage": "Topup"
@@ -453,35 +844,48 @@
   "nwA8Os": {
     "defaultMessage": "Tilføj kort"
   },
-  "o8pHw3": {
-    "defaultMessage": "AUTO"
-  },
   "oHPB8Q": {
     "defaultMessage": "Zap {name}"
   },
   "oZrFyI": {
     "defaultMessage": "Stream-typen skal være HLS"
   },
+  "p4N05H": {
+    "defaultMessage": "Upload"
+  },
+  "pOeEMx": {
+    "defaultMessage": "Tilføj server"
+  },
+  "pxF+t0": {
+    "defaultMessage": "Populær"
+  },
   "q+zTWM": {
     "defaultMessage": "<s>{person}</s> zappet <s>{amount}</s> sats"
+  },
+  "q9ryv4": {
+    "defaultMessage": "URL til forsidebillede (valgfrit)"
+  },
+  "qx6bv2": {
+    "defaultMessage": "Mål for vandløb (valgfrit)"
   },
   "r2Jjms": {
     "defaultMessage": "Log ind"
   },
-  "rELDbB": {
-    "defaultMessage": "Opdatering"
+  "rJqhFR": {
+    "defaultMessage": "Opsætning af stream"
   },
   "rWBFZA": {
     "defaultMessage": "Seksuelt eksplicit materiale forude!"
   },
-  "rbrahO": {
-    "defaultMessage": "Luk"
-  },
-  "rfC1Zq": {
-    "defaultMessage": "Gem kort"
-  },
   "rgsbu9": {
     "defaultMessage": "Nuværende seere"
+  },
+  "rleUgy": {
+    "defaultMessage": "Upload..."
+  },
+  "s+ORFl": {
+    "defaultMessage": "{m}d {ago}",
+    "description": "Number of day(s) relative to now"
   },
   "s5ksS7": {
     "defaultMessage": "Link til billede"
@@ -492,14 +896,33 @@
   "sInm1h": {
     "defaultMessage": "Zap-besked"
   },
+  "sj6WAe": {
+    "defaultMessage": "Klik på knappen \"Stream\" i øverste højre hjørne."
+  },
+  "syEQFE": {
+    "defaultMessage": "Udgiv"
+  },
   "tG1ST3": {
     "defaultMessage": "Indkommende Zap"
   },
   "tM6fNW": {
     "defaultMessage": "Fantastisk! Fortsæt..."
   },
+  "tNtB9I": {
+    "defaultMessage": "Navn",
+    "description": "Config name column header"
+  },
+  "tTgdmx": {
+    "defaultMessage": "{n,selectordinal,one{@ #st min} two{@ #nd min} few{@ #rd min} other{@ #th min}}"
+  },
+  "tVCC9m": {
+    "defaultMessage": "Sats er små enheder af Bitcoin. At sende sats på tunestr.io kaldes at \"zappe\" eller zappe."
+  },
   "thsiMl": {
     "defaultMessage": "vilkår og betingelser"
+  },
+  "twCRVi": {
+    "defaultMessage": "Kunst"
   },
   "tzMNF3": {
     "defaultMessage": "Status"
@@ -510,14 +933,32 @@
   "uYw2LD": {
     "defaultMessage": "Strøm"
   },
+  "ug01Mk": {
+    "defaultMessage": "Time"
+  },
+  "uksRSi": {
+    "defaultMessage": "Seneste videoer"
+  },
+  "vP4dFa": {
+    "defaultMessage": "Besøg {link} for at få noget lækkert tunestr.io-merchandise!"
+  },
   "vrTOHJ": {
     "defaultMessage": "{amount} sats"
+  },
+  "w+2Vw7": {
+    "defaultMessage": "Shorts"
   },
   "w0Xm2F": {
     "defaultMessage": "Begynd at skrive"
   },
+  "w3btjR": {
+    "defaultMessage": "Spil"
+  },
   "wCIL7o": {
     "defaultMessage": "Udsendt på Nostr"
+  },
+  "wCgTu5": {
+    "defaultMessage": "Kommentarer"
   },
   "wEQDC6": {
     "defaultMessage": "Rediger"
@@ -525,20 +966,54 @@
   "wMKVFz": {
     "defaultMessage": "Vælg stemme..."
   },
-  "wOy57k": {
-    "defaultMessage": "Tilføj mål for strøm"
+  "wRGjPp": {
+    "defaultMessage": "En nostr-udvidelse gemmer simpelthen dine nøgler, så du sikkert kan logge ind uden at skulle indtaste dem igen hver gang. Tunestr bruger udvidelsen til at godkende handlinger på dine vegne uden nogensinde at se dine nøgleoplysninger. Det er en stor fordel i forhold til at skulle stole på, at hjemmesider håndterer dine legitimationsoplysninger sikkert."
   },
-  "wzWWzV": {
-    "defaultMessage": "De bedste zappere"
+  "wTwfnv": {
+    "defaultMessage": "Ugyldig nostr-adresse"
+  },
+  "we4Lby": {
+    "defaultMessage": "Info"
   },
   "x82IOl": {
     "defaultMessage": "Lydløs"
   },
+  "xhQMeQ": {
+    "defaultMessage": "Expires"
+  },
+  "xi3sgh": {
+    "defaultMessage": "Hvordan får jeg flere sats?"
+  },
+  "xmcVZ0": {
+    "defaultMessage": "Søgning"
+  },
   "y867Vs": {
     "defaultMessage": "Volumen"
   },
+  "y8ogtp": {
+    "defaultMessage": "{m}w {ago}",
+    "description": "Number of week(s) relative to now"
+  },
+  "yLxIgl": {
+    "defaultMessage": "Klip"
+  },
+  "yR0V+W": {
+    "defaultMessage": "Følg disse trin for at starte streaming på tunestr.io:"
+  },
+  "yj8NrY": {
+    "defaultMessage": "Klip"
+  },
   "yzKwBQ": {
     "defaultMessage": "f.eks. nsec1xyz"
+  },
+  "z2qCcJ": {
+    "defaultMessage": "Maks. videobitrate"
+  },
+  "zEYkgY": {
+    "defaultMessage": "Snak"
+  },
+  "zSYDJP": {
+    "defaultMessage": "Jeg har min egen streamhost"
   },
   "zVDHAu": {
     "defaultMessage": "Zap-alarm"

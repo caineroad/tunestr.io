@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 
-import { NoteCollection, ReplaceableNoteStore, RequestBuilder, TaggedNostrEvent } from "@snort/system";
+import { RequestBuilder, TaggedNostrEvent } from "@snort/system";
 import { useRequestBuilder } from "@snort/system-react";
 
 import { CARD, USER_CARDS } from "@/const";
@@ -16,7 +16,6 @@ export function useUserCards(pubkey: string, userCards: Array<string[]>, leaveOp
   }, [userCards]);
 
   const subRelated = useMemo(() => {
-    if (!pubkey) return null;
     const splitted = related.map(t => t[1].split(":"));
     const authors = splitted
       .map(s => s.at(1))
@@ -28,12 +27,15 @@ export function useUserCards(pubkey: string, userCards: Array<string[]>, leaveOp
       .map(s => s as string);
 
     const rb = new RequestBuilder(`cards:${pubkey}`);
-    rb.withOptions({ leaveOpen }).withFilter().kinds([CARD]).authors(authors).tag("d", identifiers);
+
+    if (pubkey) {
+      rb.withOptions({ leaveOpen }).withFilter().kinds([CARD]).authors(authors).tag("d", identifiers);
+    }
 
     return rb;
   }, [pubkey, related]);
 
-  const { data } = useRequestBuilder(NoteCollection, subRelated);
+  const data = useRequestBuilder(subRelated);
 
   const cards = useMemo(() => {
     return related
@@ -51,29 +53,30 @@ export function useUserCards(pubkey: string, userCards: Array<string[]>, leaveOp
 
 export function useCards(pubkey?: string, leaveOpen = false): TaggedNostrEvent[] {
   const sub = useMemo(() => {
-    if (!pubkey) return null;
-    const b = new RequestBuilder(`user-cards:${pubkey?.slice(0, 12)}`);
-    b.withOptions({
-      leaveOpen,
-    })
-      .withFilter()
-      .authors([pubkey])
-      .kinds([USER_CARDS]);
+    const b = new RequestBuilder(`user-cards:${pubkey}`);
+
+    if (pubkey) {
+      b.withOptions({
+        leaveOpen,
+      })
+        .withFilter()
+        .authors([pubkey])
+        .kinds([USER_CARDS]);
+    }
     return b;
   }, [pubkey, leaveOpen]);
 
-  const { data: userCards } = useRequestBuilder(ReplaceableNoteStore, sub);
+  const userCards = useRequestBuilder(sub);
 
   const related = useMemo(() => {
     // filtering to only show CARD kinds for now, but in the future we could link and render anything
-    if (userCards) {
-      return userCards.tags.filter(t => t.at(0) === "a" && t.at(1)?.startsWith(`${CARD}:`));
+    if (userCards.length > 0) {
+      return userCards[0].tags.filter(t => t.at(0) === "a" && t.at(1)?.startsWith(`${CARD}:`));
     }
     return [];
   }, [userCards]);
 
   const subRelated = useMemo(() => {
-    if (!pubkey) return null;
     const splitted = related.map(t => t[1].split(":"));
     const authors = splitted
       .map(s => s.at(1))
@@ -85,12 +88,15 @@ export function useCards(pubkey?: string, leaveOpen = false): TaggedNostrEvent[]
       .map(s => s as string);
 
     const rb = new RequestBuilder(`cards:${pubkey}`);
-    rb.withOptions({ leaveOpen }).withFilter().kinds([CARD]).authors(authors).tag("d", identifiers);
+
+    if (pubkey) {
+      rb.withOptions({ leaveOpen }).withFilter().kinds([CARD]).authors(authors).tag("d", identifiers);
+    }
 
     return rb;
   }, [pubkey, related]);
 
-  const { data } = useRequestBuilder(NoteCollection, subRelated);
+  const data = useRequestBuilder(subRelated);
   const cardEvents = data ?? [];
 
   const cards = useMemo(() => {
