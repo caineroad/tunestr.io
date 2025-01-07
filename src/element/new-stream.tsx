@@ -1,20 +1,19 @@
-import "./new-stream.css";
-import * as Dialog from "@radix-ui/react-dialog";
-import { useContext, useEffect, useState } from "react";
+import { ReactNode, useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { unwrap } from "@snort/shared";
 import { FormattedMessage } from "react-intl";
 import { SnortContext } from "@snort/system-react";
 
 import { Icon } from "./icon";
-import { useStreamProvider } from "@/hooks/stream-provider";
+import { getCurrentStreamProvider, useStreamProvider } from "@/hooks/stream-provider";
 import { NostrStreamProvider, StreamProvider, StreamProviders } from "@/providers";
 import { StreamEditor, StreamEditorProps } from "./stream-editor";
-import { eventLink, findTag } from "@/utils";
-import { NostrProviderDialog } from "./nostr-provider-dialog";
-import AsyncButton from "./async-button";
+import { eventLink } from "@/utils";
+import NostrProviderDialog from "@/element/provider/nostr";
+import { DefaultButton } from "./buttons";
+import Pill from "./pill";
+import Modal from "./modal";
 
-function NewStream({ ev, onFinish }: Omit<StreamEditorProps, "onFinish"> & { onFinish: () => void }) {
+export function NewStream({ ev, onFinish }: Omit<StreamEditorProps, "onFinish"> & { onFinish: () => void }) {
   const system = useContext(SnortContext);
   const providers = useStreamProvider();
   const [currentProvider, setCurrentProvider] = useState<StreamProvider>();
@@ -22,11 +21,9 @@ function NewStream({ ev, onFinish }: Omit<StreamEditorProps, "onFinish"> & { onF
 
   useEffect(() => {
     if (!currentProvider) {
-      setCurrentProvider(
-        ev !== undefined ? unwrap(providers.find(a => a.name.toLowerCase() === "manual")) : providers.at(0)
-      );
+      setCurrentProvider(getCurrentStreamProvider(ev));
     }
-  }, [providers, currentProvider]);
+  }, [ev, providers, currentProvider]);
 
   function providerDialog() {
     if (!currentProvider) return;
@@ -38,14 +35,10 @@ function NewStream({ ev, onFinish }: Omit<StreamEditorProps, "onFinish"> & { onF
             onFinish={ex => {
               currentProvider.updateStreamInfo(system, ex);
               if (!ev) {
-                if (findTag(ex, "content-warning") && __XXX_HOST && __XXX === false) {
-                  location.href = `${__XXX_HOST}/${eventLink(ex)}`;
-                } else {
-                  navigate(`/${eventLink(ex)}`, {
-                    state: ex,
-                  });
-                  onFinish?.();
-                }
+                navigate(`/${eventLink(ex)}`, {
+                  state: ex,
+                });
+                onFinish?.();
               } else {
                 onFinish?.();
               }
@@ -56,24 +49,16 @@ function NewStream({ ev, onFinish }: Omit<StreamEditorProps, "onFinish"> & { onF
       }
       case StreamProviders.NostrType: {
         return (
-          <>
-            <AsyncButton
-              className="btn btn-secondary"
-              onClick={() => {
-                navigate("/settings");
-                onFinish?.();
-              }}>
-              <FormattedMessage defaultMessage="Get Stream Key" id="Vn2WiP" />
-            </AsyncButton>
-            <NostrProviderDialog
-              provider={currentProvider as NostrStreamProvider}
-              onFinish={onFinish}
-              ev={ev}
-              showEndpoints={false}
-              showEditor={true}
-              showForwards={false}
-            />
-          </>
+          <NostrProviderDialog
+            provider={currentProvider as NostrStreamProvider}
+            onFinish={onFinish}
+            ev={ev}
+            showEndpoints={false}
+            showEditor={true}
+            showForwards={false}
+            showBalanceHistory={false}
+            showStreamKeys={false}
+          />
         );
       }
       case StreamProviders.Owncast: {
@@ -84,53 +69,50 @@ function NewStream({ ev, onFinish }: Omit<StreamEditorProps, "onFinish"> & { onF
 
   return (
     <>
-      <p>
-        <FormattedMessage defaultMessage="Stream Providers" id="6Z2pvJ" />
-      </p>
-      <div className="flex gap-2">
-        {providers.map(v => (
-          <span className={`pill${v === currentProvider ? " active" : ""}`} onClick={() => setCurrentProvider(v)}>
-            {v.name}
-          </span>
-        ))}
-      </div>
-      {providerDialog()}
+      {!ev && (
+        <>
+          <FormattedMessage defaultMessage="Stream Providers" id="6Z2pvJ" />
+          <div className="flex gap-2">
+            {providers.map(v => (
+              <Pill className={`${v === currentProvider ? " text-bold" : ""}`} onClick={() => setCurrentProvider(v)}>
+                {v.name}
+              </Pill>
+            ))}
+          </div>
+        </>
+      )}
+      <div className="flex flex-col gap-4">{providerDialog()}</div>
     </>
   );
 }
 
 interface NewStreamDialogProps {
-  text?: string;
+  text?: ReactNode;
   btnClassName?: string;
 }
 
-export function NewStreamDialog(props: NewStreamDialogProps & StreamEditorProps) {
+export function NewStreamDialog({ text, btnClassName, ...props }: NewStreamDialogProps & StreamEditorProps) {
   const [open, setOpen] = useState(false);
   return (
-    <Dialog.Root open={open} onOpenChange={setOpen}>
-      <Dialog.Trigger asChild>
-        <AsyncButton className={props.btnClassName}>
-          {props.text && props.text}
-          {!props.text && (
-            <>
-              <span className="max-xl:hidden">
-                <FormattedMessage defaultMessage="Stream" id="uYw2LD" />
-              </span>
-              <Icon name="signal" />
-            </>
-          )}
-        </AsyncButton>
-      </Dialog.Trigger>
-      <Dialog.Portal>
-        <Dialog.Overlay className="dialog-overlay" />
-        <Dialog.Content className="dialog-content">
-          <div className="content-inner">
-            <div className="new-stream">
-              <NewStream {...props} onFinish={() => setOpen(false)} />
-            </div>
+    <>
+      <DefaultButton className={btnClassName} onClick={() => setOpen(true)}>
+        {text && text}
+        {!text && (
+          <>
+            <span className="max-xl:hidden">
+              <FormattedMessage defaultMessage="Stream" id="uYw2LD" />
+            </span>
+            <Icon name="signal" />
+          </>
+        )}
+      </DefaultButton>
+      {open && (
+        <Modal id="new-stream" onClose={() => setOpen(false)}>
+          <div className="new-stream">
+            <NewStream {...props} onFinish={() => setOpen(false)} />
           </div>
-        </Dialog.Content>
-      </Dialog.Portal>
-    </Dialog.Root>
+        </Modal>
+      )}
+    </>
   );
 }

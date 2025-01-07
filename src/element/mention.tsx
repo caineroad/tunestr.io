@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useUserProfile } from "@snort/system-react";
+import { profileLink } from "@/utils";
 import { hexToBech32 } from "@snort/shared";
 
 interface MentionProps {
@@ -9,10 +10,9 @@ interface MentionProps {
 
 export function Mention({ pubkey }: MentionProps) {
   const user = useUserProfile(pubkey);
-  const npub = hexToBech32("npub", pubkey);
   return (
-    <Link to={`/p/${npub}`} className="text-primary">
-      {user?.name || pubkey}
+    <Link to={profileLink(user, pubkey)} className="text-primary">
+      {user?.name || hexToBech32("npub", pubkey).slice(0, 12)}
     </Link>
   );
 }

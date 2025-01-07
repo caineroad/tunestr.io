@@ -9,22 +9,37 @@
     "defaultMessage": "Живите сейчас"
   },
   "+vVZ/G": {
-    "defaultMessage": "Подключить"
+    "defaultMessage": "Подключайтесь"
+  },
+  "+y6JUK": {
+    "defaultMessage": "Рейды"
   },
   "/0TOL5": {
     "defaultMessage": "Количество"
   },
+  "/563b0": {
+    "defaultMessage": "Равновесие: {n} sats"
+  },
   "/EvlqN": {
     "defaultMessage": "Расширение для подписи nostr"
   },
-  "/GCoTA": {
-    "defaultMessage": "Сбросить"
+  "/JkXBo": {
+    "defaultMessage": "Клип с сайта {title}"
+  },
+  "/Jp9pC": {
+    "defaultMessage": "Всего: {amount} sats"
+  },
+  "/aFYQ5": {
+    "defaultMessage": "Переадресация потоков (опционально)"
+  },
+  "/w4RM6": {
+    "defaultMessage": "IRL"
+  },
+  "01iNut": {
+    "defaultMessage": "Адрес Nostr не принадлежит вам"
   },
   "04lmFi": {
     "defaultMessage": "Сохранить ключ"
-  },
-  "0GfNiL": {
-    "defaultMessage": "Зап-цели трансляции"
   },
   "0VV/sK": {
     "defaultMessage": "Цель"
@@ -32,8 +47,14 @@
   "0hNxBy": {
     "defaultMessage": "Начало"
   },
+  "0rVLjV": {
+    "defaultMessage": "Потоков пока нет"
+  },
   "1EYCdR": {
     "defaultMessage": "Теги"
+  },
+  "1LBny5": {
+    "defaultMessage": "Остановлено"
   },
   "1q4BO/": {
     "defaultMessage": "Недействительный URL"
@@ -43,6 +64,15 @@
   },
   "2/2yg+": {
     "defaultMessage": "Добавить"
+  },
+  "2lVQYF": {
+    "defaultMessage": "...подробнее"
+  },
+  "2ukA4d": {
+    "defaultMessage": "{n} часы"
+  },
+  "2wdFaB": {
+    "defaultMessage": "Конечный поток"
   },
   "37mth/": {
     "defaultMessage": "Зрители"
@@ -56,8 +86,20 @@
   "3df560": {
     "defaultMessage": "Войти с приватным ключом"
   },
+  "3kbIhS": {
+    "defaultMessage": "Без названия"
+  },
+  "3yk8fB": {
+    "defaultMessage": "Кошелек"
+  },
   "47FYwb": {
     "defaultMessage": "Отменить"
+  },
+  "4RhY4O": {
+    "defaultMessage": "Пример настроек в OBS (Apple M1 Mac)"
+  },
+  "4XfMux": {
+    "defaultMessage": "Видео"
   },
   "4iBdw1": {
     "defaultMessage": "Рейд"
@@ -68,17 +110,26 @@
   "4l6vz1": {
     "defaultMessage": "Копировать"
   },
-  "4uI538": {
-    "defaultMessage": "Расширения"
-  },
   "50+/JW": {
     "defaultMessage": "Требуется ключ потока"
+  },
+  "58DXVG": {
+    "defaultMessage": "Чтобы начать работу, возьмите ключ потока с платформы, на которую вы хотите переслать данные."
   },
   "5JcXdV": {
     "defaultMessage": "Создать аккаунт"
   },
+  "5L4ati": {
+    "defaultMessage": "Zap from"
+  },
+  "5LXWMX": {
+    "defaultMessage": "Новая цель"
+  },
   "5QYdPU": {
     "defaultMessage": "Время начала"
+  },
+  "5Wwopw": {
+    "defaultMessage": "Ценообразование"
   },
   "5kx+2v": {
     "defaultMessage": "URL сервера"
@@ -86,8 +137,14 @@
   "5tM0VD": {
     "defaultMessage": "Начало потока"
   },
+  "5vMmmR": {
+    "defaultMessage": "Имена пользователей на Nostr не являются уникальными. Адрес nostr - это ваш уникальный человекочитаемый адрес, который присваивается вам при регистрации."
+  },
   "69hmpj": {
     "defaultMessage": "Рейд с сайта {name}"
+  },
+  "6PK5Jy": {
+    "defaultMessage": "Past Stream"
   },
   "6Z2pvJ": {
     "defaultMessage": "Стрим-провайдеры"
@@ -98,20 +155,56 @@
   "7+bCC1": {
     "defaultMessage": "url потока должен начинаться с rtmp://"
   },
+  "74PejI": {
+    "defaultMessage": "Лучшие зрители"
+  },
   "79lLl+": {
     "defaultMessage": "Музыка"
   },
   "7UOvbT": {
     "defaultMessage": "Offline"
   },
+  "89UZph": {
+    "defaultMessage": "Настройте программное обеспечение для потокового вещания"
+  },
   "8YT6ja": {
     "defaultMessage": "Вставка текста для выступления"
+  },
+  "8aAwpp": {
+    "defaultMessage": "Для ручного хостинга все, что вам нужно, - это HLS URL для поля Stream URL. Вы должны найти его в настройках хостинга."
+  },
+  "8xVdjn": {
+    "defaultMessage": "Видеокодек"
   },
   "9WRlF4": {
     "defaultMessage": "Отправить"
   },
+  "9ZoFpI": {
+    "defaultMessage": "Удалить файл"
+  },
   "9a9+ww": {
     "defaultMessage": "Название"
+  },
+  "9pMqYs": {
+    "defaultMessage": "Адрес Ностр"
+  },
+  "9rmSgv": {
+    "defaultMessage": "OBS (Open Broadcaster Software) - это бесплатное программное обеспечение с открытым исходным кодом для записи видео и прямых трансляций под Windows, Mac и Linux. Это популярный выбор среди стримеров. Вам нужно будет установить его, чтобы записывать видео, аудио и все остальное, что вы хотите добавить в свой поток. После установки и настройки добавьте URL-адрес стрима и ключ стрима из настроек стрима в OBS, чтобы создать соединение с tunestr.io."
+  },
+  "A1zT+z": {
+    "defaultMessage": "Результаты поиска: {term}"
+  },
+  "A7K3S+": {
+    "defaultMessage": "Account Setup"
+  },
+  "ALdW69": {
+    "defaultMessage": "Заметка на сайте {name}"
+  },
+  "ASKb16": {
+    "defaultMessage": "A description of the stream"
+  },
+  "AYIR/J": {
+    "defaultMessage": "Удалить изображение"
   },
   "Atr2p4": {
     "defaultMessage": "NSFW контент"
@@ -119,23 +212,35 @@
   "AukrPM": {
     "defaultMessage": "Данные по просмотру отсутствуют"
   },
+  "Axo/o5": {
+    "defaultMessage": "Наука и техника"
+  },
   "AyGauy": {
     "defaultMessage": "Логин"
   },
   "BD0vyn": {
     "defaultMessage": "{name} создал клип"
   },
-  "BGxpTN": {
-    "defaultMessage": "Чат стрима"
+  "Bd1yEX": {
+    "defaultMessage": "Цель нового потока"
   },
   "Bep/gA": {
     "defaultMessage": "Приватный ключ"
   },
+  "BzQPM+": {
+    "defaultMessage": "Пункт назначения"
+  },
   "C81/uG": {
     "defaultMessage": "Выйти"
   },
+  "CTgA2G": {
+    "defaultMessage": "Создайте новую учетную запись, если у вас ее еще нет."
+  },
   "CsCUYo": {
     "defaultMessage": "{n} sats"
+  },
+  "CsS/fy": {
+    "defaultMessage": "{estimate} остаток ({balance} sats @ {rate} sats / {unit})"
   },
   "D3idYv": {
     "defaultMessage": "Настройки"
@@ -143,14 +248,36 @@
   "DZKuuP": {
     "defaultMessage": "Авторизованы как"
   },
+  "DkgCAz": {
+    "defaultMessage": "Как сделать потоковую передачу на tunestr.io?"
+  },
   "Dn82AL": {
     "defaultMessage": "Прямой эфир"
+  },
+  "DqmiAe": {
+    "defaultMessage": "Dont have a nostr extension? Try {nos2x}, {nostore} or {alby}"
+  },
+  "E7n6zr": {
+    "defaultMessage": "Текущая стоимость потока: {amount} сат/{unit} (около {usd}/день для {x}часового потока)."
   },
   "E9APoR": {
     "defaultMessage": "Не удалось создать URL-адрес потока"
   },
   "ESyhzp": {
     "defaultMessage": "Ваш комментарий к {name}"
+  },
+  "EcglP9": {
+    "defaultMessage": "Key"
+  },
+  "FAUhZf": {
+    "defaultMessage": "Что такое саты?"
+  },
+  "FIDK5Y": {
+    "defaultMessage": "Самые лучшие загрузчики за все время"
+  },
+  "FXepR9": {
+    "defaultMessage": "{m}мо {ago}",
+    "description": "Number of month(s) relative to now"
   },
   "FjDlus": {
     "defaultMessage": "Можно заменить своим адресом позже."
@@ -161,11 +288,20 @@
   "G/yZLu": {
     "defaultMessage": "Удалить"
   },
+  "G857ni": {
+    "defaultMessage": "LNURL или счет-фактура"
+  },
   "GGaJMU": {
     "defaultMessage": "Лучшие чаты"
   },
-  "Gmiwnd": {
-    "defaultMessage": "Обновите страницу, чтобы использовать последнюю версию"
+  "GSuQPh": {
+    "defaultMessage": "Ссылка на неизвестное событие"
+  },
+  "GSye7T": {
+    "defaultMessage": "Адрес молнии"
+  },
+  "GcozGF": {
+    "defaultMessage": "Неверный адрес молнии"
   },
   "Gq6x9o": {
     "defaultMessage": "Обложка"
@@ -173,8 +309,17 @@
   "Gvxoji": {
     "defaultMessage": "Имя обязательно"
   },
+  "GwbTAz": {
+    "defaultMessage": "Потоки"
+  },
   "H/bNs9": {
     "defaultMessage": "Сохраните этот ключ и храните его в безопасности! Если вы его потеряете, вы не сможете снова войти в свою учетную запись. Да, все настолько серьезно!"
+  },
+  "H1fdc9": {
+    "defaultMessage": "Пожалуйста, добавьте миниатюру"
+  },
+  "H4hJvF": {
+    "defaultMessage": "Выберите категорию"
   },
   "H5+NAX": {
     "defaultMessage": "Баланс"
@@ -182,11 +327,26 @@
   "HAlOn1": {
     "defaultMessage": "Название"
   },
-  "I/TubD": {
-    "defaultMessage": "Выберите цель..."
+  "HDgXO/": {
+    "defaultMessage": "tunestr.io - это платформа с открытым исходным кодом, работающая на основе протокола nostr. Здесь нет ни гигантских корпораций, ни гигантских фондов для обеспечения бесплатного потокового вещания."
+  },
+  "HsgeUk": {
+    "defaultMessage": "Загляните в мой поток на tunestr.io! {link}"
+  },
+  "Ht231k": {
+    "defaultMessage": "Переадресация"
+  },
+  "HvUhXt": {
+    "defaultMessage": "Загрузка на серверы {n}"
   },
   "I1kjHI": {
     "defaultMessage": "Поддерживает {markdown}"
+  },
+  "I2AKfn": {
+    "defaultMessage": "Игровые"
+  },
+  "IDqXmC": {
+    "defaultMessage": "Список медиасерверов"
   },
   "IJDKz3": {
     "defaultMessage": "Сумма запа в {currency}"
@@ -194,11 +354,23 @@
   "INlWvJ": {
     "defaultMessage": "ИЛИ"
   },
+  "IPXhUW": {
+    "defaultMessage": "Сводка по последнему потоку"
+  },
+  "IqcyS0": {
+    "defaultMessage": "Что такое расширение ноздрей?"
+  },
   "J/+m9y": {
     "defaultMessage": "Продолжительность потока {duration} мин."
   },
-  "JEsxDw": {
-    "defaultMessage": "Загрузка..."
+  "JCIgkj": {
+    "defaultMessage": "Имя пользователя"
+  },
+  "JO0kq9": {
+    "defaultMessage": "Редактировать информацию о потоке"
+  },
+  "JkLHGw": {
+    "defaultMessage": "Сайт"
   },
   "Jq3FDz": {
     "defaultMessage": "Контент"
@@ -209,11 +381,35 @@
   "K7AkdL": {
     "defaultMessage": "Показать"
   },
+  "KH2ayq": {
+    "defaultMessage": "Загрузить видео"
+  },
   "KkIL3s": {
     "defaultMessage": "Нет, я моложе 18 лет"
   },
+  "KtrGU6": {
+    "defaultMessage": "Если у вас уже есть аккаунт, вы можете использовать расширение nostr для входа в систему. Если вы уже используете расширение nostr, вы автоматически войдете в систему. Если у вас не настроено расширение nostr, вы можете использовать nos2x или Alby."
+  },
+  "KxfKnW": {
+    "defaultMessage": "Вывести средства"
+  },
+  "LEmxc8": {
+    "defaultMessage": "Цели"
+  },
+  "LUvSJB": {
+    "defaultMessage": "tunestr.io предоставляет бесплатно до 2 часов хостинга в высоком качестве и до 8 часов в качестве \"исходника\". После этого у вас есть возможность транслировать 5 сатов в минуту или 10 сатов в минуту в зависимости от выбранного вами качества. Если вы не используете tunestr.io для хостинга, цены будут зависеть от выбранного вами провайдера потокового вещания."
+  },
+  "Le+99Z": {
+    "defaultMessage": "Стримеры платят небольшую плату, чтобы покрыть наши текущие расходы. Новым стримерам мы даем кредит в размере {amount} сатов (около {time_estimate} стриминга), чтобы начать!"
+  },
+  "Lg2ye2": {
+    "defaultMessage": "Tunestr - это новый вид стриминговой платформы, которая позволяет зарабатывать биткоины (саты) в тот момент, когда вы начинаете стримить! Зрители могут давать стримерам чаевые в любом количестве. Чаевые мгновенно перечисляются на ваш биткоин-кошелек (lightning). tunestr.io никогда не прикоснется к вашим доходам!"
+  },
   "LknBsU": {
     "defaultMessage": "Ключ стрима"
+  },
+  "LxSJOb": {
+    "defaultMessage": "Перейти к панели управления"
   },
   "MTHO1W": {
     "defaultMessage": "Стартовый рейд"
@@ -221,8 +417,20 @@
   "My6HwN": {
     "defaultMessage": "Ок, безопасно"
   },
+  "NTpJIm": {
+    "defaultMessage": "Включить запись"
+  },
+  "NnHu0L": {
+    "defaultMessage": "Пожалуйста, загрузите хотя бы 1 видео"
+  },
+  "Ntjkqd": {
+    "defaultMessage": "или"
+  },
   "O2Cy6m": {
     "defaultMessage": "Да, я старше 18 лет"
+  },
+  "O7AeYh": {
+    "defaultMessage": "Описание..."
   },
   "OEW7yJ": {
     "defaultMessage": "Запы"
@@ -230,20 +438,55 @@
   "OKhRC6": {
     "defaultMessage": "Поделиться"
   },
-  "OWgHbg": {
-    "defaultMessage": "Редактировать карточку"
+  "ORGv1Q": {
+    "defaultMessage": "Created"
+  },
+  "OadZli": {
+    "defaultMessage": "Управление серверами"
+  },
+  "ObZZEz": {
+    "defaultMessage": "Клипов пока нет"
+  },
+  "OkXMLE": {
+    "defaultMessage": "Максимальный битрейт аудио"
+  },
+  "OumUwz": {
+    "defaultMessage": "{m} {ago}",
+    "description": "Number of second(s) relative to now"
   },
   "Oxqtyf": {
     "defaultMessage": "Мы подключили вас с помощью лайтнинг-кошелька, чтобы вы уже сейчас могли получать средства от зрителей!"
   },
-  "PA0ej4": {
-    "defaultMessage": "Создать клип"
+  "PDA8V2": {
+    "defaultMessage": "{m}h {ago}",
+    "description": "Number of hour(s) relative to now"
+  },
+  "PHE60k": {
+    "defaultMessage": "Оставьте пустым, если вы не хотите устанавливать никаких целей."
+  },
+  "PUymyQ": {
+    "defaultMessage": "Загляните на {name} stream на tunestr.io! {link}"
+  },
+  "PXAur5": {
+    "defaultMessage": "Вывести"
+  },
+  "Pc+tM3": {
+    "defaultMessage": "Создать"
   },
   "Pe0ogR": {
     "defaultMessage": "Тема"
   },
+  "PySFxG": {
+    "defaultMessage": "Выберите файл."
+  },
   "Q3au2v": {
     "defaultMessage": "Примерно {estimate}"
+  },
+  "Q8Qw5B": {
+    "defaultMessage": "Описание"
+  },
+  "QNvtaq": {
+    "defaultMessage": "Поделиться на X"
   },
   "QRHNuF": {
     "defaultMessage": "Что будем транслировать сегодня?"
@@ -260,8 +503,14 @@
   "Qe1MJu": {
     "defaultMessage": "{name} с {amount}"
   },
-  "RJ2VxG": {
-    "defaultMessage": "Обнаружена новая версия"
+  "Qf0ugr": {
+    "defaultMessage": "Здесь у вас есть несколько вариантов: использовать наш собственный хостинг или свой собственный (например, Cloudflare)."
+  },
+  "R72je0": {
+    "defaultMessage": "Название потока"
+  },
+  "RGYBjE": {
+    "defaultMessage": "Миниатюра"
   },
   "RJOmzk": {
     "defaultMessage": "Я прочитал и согласен с {provider} {terms}."
@@ -278,14 +527,30 @@
   "RtYNX5": {
     "defaultMessage": "Пользователи чата"
   },
+  "S39ba6": {
+    "defaultMessage": "Что такое OBS?"
+  },
+  "SC2nJT": {
+    "defaultMessage": "Аудиокодек"
+  },
+  "TDUfVk": {
+    "defaultMessage": "Начало"
+  },
   "TP/cMX": {
     "defaultMessage": "Завершено"
   },
-  "TaTRKo": {
-    "defaultMessage": "Начать трансляцию"
+  "TcDwEB": {
+    "defaultMessage": "Stream Keys"
   },
   "TwyMau": {
     "defaultMessage": "Аккаунт"
+  },
+  "UCDS65": {
+    "defaultMessage": "назад",
+    "description": "Relative time, ie. 1s ago"
+  },
+  "UGFYV8": {
+    "defaultMessage": "Добро пожаловать на сайт tunestr.io!"
   },
   "UJBFYK": {
     "defaultMessage": "Добавить карточку"
@@ -293,45 +558,98 @@
   "UfSot5": {
     "defaultMessage": "Предыдущие трансляции"
   },
+  "Uo/DWG": {
+    "defaultMessage": "Слишком долго"
+  },
   "VA/Z1S": {
     "defaultMessage": "Скрыть"
   },
-  "Vn2WiP": {
-    "defaultMessage": "Get Stream Key"
+  "VDOpia": {
+    "defaultMessage": "Что такое запы?"
+  },
+  "VKb1MS": {
+    "defaultMessage": "Категории"
   },
   "W7DNWx": {
     "defaultMessage": "Переадресация потоков"
   },
+  "W7IRLs": {
+    "defaultMessage": "Ваш заголовок слишком короткий"
+  },
   "W9355R": {
     "defaultMessage": "Включить уведомления"
+  },
+  "WVJZ0U": {
+    "defaultMessage": "Значение",
+    "description": "Config value column header"
+  },
+  "WcZM+B": {
+    "defaultMessage": "Список файлов"
+  },
+  "Wp4l7+": {
+    "defaultMessage": "Другие видео"
+  },
+  "WsjXrZ": {
+    "defaultMessage": "Нажмите на кнопку Войти"
   },
   "X2PZ7D": {
     "defaultMessage": "Установить цель"
   },
+  "XIvYvF": {
+    "defaultMessage": "Не удалось получить счет-фактуру"
+  },
+  "XMGfiA": {
+    "defaultMessage": "Последние клипы"
+  },
   "XgWvGA": {
     "defaultMessage": "Отклики"
   },
+  "XmQZr5": {
+    "defaultMessage": "No keys"
+  },
+  "Xq2sb0": {
+    "defaultMessage": "Чтобы начать прямой эфир, скопируйте и вставьте URL-адрес вашего сервера и ключ потока в настройки вашего программного обеспечения для стриминга и нажмите \"Начать стриминг\". Мы рекомендуем <a>OBS</a>."
+  },
   "Y0DXJb": {
-    "defaultMessage": "Recording URL"
+    "defaultMessage": "URL-адрес записи"
   },
   "YPh5Nq": {
     "defaultMessage": "@ {rate}",
     "description": "Showing zap amount in USD @ rate"
   },
-  "YagVIe": {
-    "defaultMessage": "{n}p"
+  "YjhNaf": {
+    "defaultMessage": "Создать поток"
   },
   "YwzT/0": {
-    "defaultMessage": "Clip title"
+    "defaultMessage": "Название клипа"
+  },
+  "YyXVHf": {
+    "defaultMessage": "Чистый проект"
   },
   "Z8ZOEY": {
     "defaultMessage": "Этот метод небезопасен. Мы рекомендуем использовать {nostrlink}"
   },
+  "ZXp0z1": {
+    "defaultMessage": "Характеристики"
+  },
+  "ZaNcK4": {
+    "defaultMessage": "Целей пока нет"
+  },
+  "ZcgtZo": {
+    "defaultMessage": "Мы собрали список простых в использовании бирж, которые позволят вам купить небольшое количество биткоинов (сатов) и перевести их на выбранный вами кошелек."
+  },
   "ZmqxZs": {
     "defaultMessage": "Вы сможете изменить эту настройку позже"
   },
+  "ZsYhvh": {
+    "defaultMessage": "Zaps - это молниеносные платежи, которые публикуются на nostr в виде квитанций."
+  },
   "Zse7yG": {
     "defaultMessage": "Цель рейда"
+  },
+  "aB/rH0": {
+    "defaultMessage": "{m}h {ago}",
+    "description": "Number of minute(s) relative to now"
   },
   "acrOoz": {
     "defaultMessage": "Продолжить"
@@ -339,11 +657,32 @@
   "aqjZxs": {
     "defaultMessage": "Рейд!"
   },
+  "bD/ZwY": {
+    "defaultMessage": "Редактировать карты"
+  },
+  "bbUGS7": {
+    "defaultMessage": "Рекомендуемые настройки потока"
+  },
+  "bdH+0f": {
+    "defaultMessage": "Balance History"
+  },
   "bfvyfs": {
     "defaultMessage": "Анон"
   },
+  "c3LlRO": {
+    "defaultMessage": "{n}КиБ"
+  },
   "cPIKU2": {
     "defaultMessage": "Подписки"
+  },
+  "ccXLVi": {
+    "defaultMessage": "Категория"
+  },
+  "cg1VJ2": {
+    "defaultMessage": "Подключить кошелек"
+  },
+  "cntHHJ": {
+    "defaultMessage": "Это позволит вам перенаправить свой поток на другие платформы, чтобы охватить более широкую аудиторию."
   },
   "cvAsEh": {
     "defaultMessage": "Трансляция проведена {date}"
@@ -360,6 +699,13 @@
   "dVD/AR": {
     "defaultMessage": "Топ поддержавших"
   },
+  "dkUMIH": {
+    "defaultMessage": "Клип: {name}"
+  },
+  "e011kf": {
+    "defaultMessage": "ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ",
+    "description": "Title: FAQ page"
+  },
   "ebmhes": {
     "defaultMessage": "Nostr расширение"
   },
@@ -369,17 +715,26 @@
   "fBI91o": {
     "defaultMessage": "Зап"
   },
-  "fc2iho": {
-    "defaultMessage": "Добавить файл"
-  },
   "feZ/kG": {
     "defaultMessage": "Войти с помощью приватного ключа (небезопасно)"
+  },
+  "g5pX+a": {
+    "defaultMessage": "О сайте"
+  },
+  "gQxxlw": {
+    "defaultMessage": "Название цели"
+  },
+  "gt65Gg": {
+    "defaultMessage": "Цели стримов побуждают зрителей поддерживать стримеров с помощью пожертвований."
   },
   "gzsn7k": {
     "defaultMessage": "{n} сообщения"
   },
-  "hGQqkW": {
-    "defaultMessage": "Запланировать"
+  "h6NRY6": {
+    "defaultMessage": "No Thanks!"
+  },
+  "h9mX2/": {
+    "defaultMessage": "Если вы используете наш собственный хостинг tunestr.io (самый дешевый и простой), скопируйте URL-адрес вашего потока и ключ потока в настройки OBS, и все будет готово."
   },
   "hMzcSq": {
     "defaultMessage": "Сообщения"
@@ -393,8 +748,17 @@
   "hzSNj4": {
     "defaultMessage": "Приборная панель"
   },
+  "iKlloU": {
+    "defaultMessage": "Предлагаемые сервиторы"
+  },
   "ieGrWo": {
     "defaultMessage": "Подписаться"
+  },
+  "ieKb+k": {
+    "defaultMessage": "Сколько стоит потоковое вещание?"
+  },
+  "ipTKP3": {
+    "defaultMessage": "Всплывающее окно чата"
   },
   "itPgxd": {
     "defaultMessage": "Профиль"
@@ -405,11 +769,11 @@
   "j/jueq": {
     "defaultMessage": "Рейд {name}"
   },
-  "jJLRgo": {
-    "defaultMessage": "Publish Clip"
+  "jDDeA0": {
+    "defaultMessage": "Ваш заголовок очень длинный, пожалуйста, убедитесь, что он не превышает {n} символов."
   },
-  "jctiUc": {
-    "defaultMessage": "Наибольшее количество зрителей"
+  "jJLRgo": {
+    "defaultMessage": "Опубликовать клип"
   },
   "jgOqxt": {
     "defaultMessage": "Виджеты"
@@ -426,8 +790,26 @@
   "k21gTS": {
     "defaultMessage": "например, обо мне"
   },
+  "kAEQyV": {
+    "defaultMessage": "OK"
+  },
+  "kGjqZ4": {
+    "defaultMessage": "Последние шорты"
+  },
+  "kQAf2d": {
+    "defaultMessage": "Выберите"
+  },
+  "kc5EOy": {
+    "defaultMessage": "Имя пользователя слишком длинное"
+  },
+  "khJ51Q": {
+    "defaultMessage": "Потоковый заработок"
+  },
   "kp0NPF": {
     "defaultMessage": "Запланировано"
+  },
+  "lXbG97": {
+    "defaultMessage": "Самые прыткие стримеры"
   },
   "lZpRMR": {
     "defaultMessage": "Поставьте галочку, если в этом стриме содержится нагота или порнографический контент."
@@ -441,8 +823,17 @@
   "mnJYBQ": {
     "defaultMessage": "Голос"
   },
-  "mtNGwh": {
-    "defaultMessage": "Краткое описание контента"
+  "mrwfXX": {
+    "defaultMessage": "Акции"
+  },
+  "msjwph": {
+    "defaultMessage": "Интервал между ключевыми кадрами"
+  },
+  "n19IQE": {
+    "defaultMessage": "Рекомендуемый размер: 1920x1080 (16:9)"
+  },
+  "n8k1SG": {
+    "defaultMessage": "{n}MiB"
   },
   "nBCvvJ": {
     "defaultMessage": "Пополнить"
@@ -453,35 +844,48 @@
   "nwA8Os": {
     "defaultMessage": "Добавить карточку"
   },
-  "o8pHw3": {
-    "defaultMessage": "АВТО"
-  },
   "oHPB8Q": {
     "defaultMessage": "Запнуть ({name}"
   },
   "oZrFyI": {
     "defaultMessage": "Тип потока должен быть HLS"
   },
+  "p4N05H": {
+    "defaultMessage": "Загрузить"
+  },
+  "pOeEMx": {
+    "defaultMessage": "Добавить сервер"
+  },
+  "pxF+t0": {
+    "defaultMessage": "Популярные"
+  },
   "q+zTWM": {
     "defaultMessage": "<s>{person}</s> zapped <s>{amount}</s> sats"
+  },
+  "q9ryv4": {
+    "defaultMessage": "URL-адрес изображения обложки (необязательно)"
+  },
+  "qx6bv2": {
+    "defaultMessage": "Цель потока (необязательно)"
   },
   "r2Jjms": {
     "defaultMessage": "Войти"
   },
-  "rELDbB": {
-    "defaultMessage": "Обновить"
+  "rJqhFR": {
+    "defaultMessage": "Настройка потока"
   },
   "rWBFZA": {
     "defaultMessage": "Сексуально откровенный материал!"
   },
-  "rbrahO": {
-    "defaultMessage": "Закрыть"
-  },
-  "rfC1Zq": {
-    "defaultMessage": "Сохранить карточку"
-  },
   "rgsbu9": {
     "defaultMessage": "Текущие зрители"
+  },
+  "rleUgy": {
+    "defaultMessage": "Загрузка..."
+  },
+  "s+ORFl": {
+    "defaultMessage": "{m}d {ago}",
+    "description": "Number of day(s) relative to now"
   },
   "s5ksS7": {
     "defaultMessage": "Ссылка на изображение"
@@ -492,14 +896,33 @@
   "sInm1h": {
     "defaultMessage": "Сообщение Zap"
   },
+  "sj6WAe": {
+    "defaultMessage": "Нажмите кнопку \"Поток\" в правом верхнем углу"
+  },
+  "syEQFE": {
+    "defaultMessage": "Опубликовать"
+  },
   "tG1ST3": {
     "defaultMessage": "Входящий Зап"
   },
   "tM6fNW": {
     "defaultMessage": "Отлично! Продолжаем.."
   },
+  "tNtB9I": {
+    "defaultMessage": "Имя",
+    "description": "Config name column header"
+  },
+  "tTgdmx": {
+    "defaultMessage": "{n,selectordinal,one{@ #st min} two{@ #nd min} few{@ #rd min} other{@ #th min}}"
+  },
+  "tVCC9m": {
+    "defaultMessage": "Саты - это небольшие единицы биткоина. Отправка сатов на tunestr.io называется \"zapping\" или zaps."
+  },
   "thsiMl": {
     "defaultMessage": "Условия использования"
+  },
+  "twCRVi": {
+    "defaultMessage": "Искусство"
   },
   "tzMNF3": {
     "defaultMessage": "Статус"
@@ -510,14 +933,32 @@
   "uYw2LD": {
     "defaultMessage": "Стрим"
   },
+  "ug01Mk": {
+    "defaultMessage": "Time"
+  },
+  "uksRSi": {
+    "defaultMessage": "Последние видео"
+  },
+  "vP4dFa": {
+    "defaultMessage": "Посетите сайт {link} , чтобы получить отличные товары от tunestr.io!"
+  },
   "vrTOHJ": {
     "defaultMessage": "{amount} сат"
+  },
+  "w+2Vw7": {
+    "defaultMessage": "Шорты"
   },
   "w0Xm2F": {
     "defaultMessage": "Начните печатать"
   },
+  "w3btjR": {
+    "defaultMessage": "Азартные игры"
+  },
   "wCIL7o": {
     "defaultMessage": "Транслировать на Nostr"
+  },
+  "wCgTu5": {
+    "defaultMessage": "Комментарии"
   },
   "wEQDC6": {
     "defaultMessage": "Редактировать"
@@ -525,20 +966,54 @@
   "wMKVFz": {
     "defaultMessage": "Выберите голос..."
   },
-  "wOy57k": {
-    "defaultMessage": "Добавить цели стрима"
+  "wRGjPp": {
+    "defaultMessage": "Расширение nostr просто сохраняет ваши ключи, чтобы вы могли безопасно войти в систему без необходимости каждый раз вводить их заново. Tunestr использует расширение для авторизации действий от вашего имени, никогда не видя информацию о вашем ключе. Это дает значительное преимущество по сравнению с необходимостью доверять веб-сайтам, которые безопасно обрабатывают ваши учетные данные."
   },
-  "wzWWzV": {
-    "defaultMessage": "Топ поддержавших"
+  "wTwfnv": {
+    "defaultMessage": "Неверный ностровый адрес"
+  },
+  "we4Lby": {
+    "defaultMessage": "Информация"
   },
   "x82IOl": {
     "defaultMessage": "Заглушить"
   },
+  "xhQMeQ": {
+    "defaultMessage": "Expires"
+  },
+  "xi3sgh": {
+    "defaultMessage": "Как получить больше баллов?"
+  },
+  "xmcVZ0": {
+    "defaultMessage": "Поиск"
+  },
   "y867Vs": {
     "defaultMessage": "Объем"
   },
+  "y8ogtp": {
+    "defaultMessage": "{m}w {ago}",
+    "description": "Number of week(s) relative to now"
+  },
+  "yLxIgl": {
+    "defaultMessage": "Клипы"
+  },
+  "yR0V+W": {
+    "defaultMessage": "Чтобы начать потоковое вещание на tunestr.io, выполните следующие действия:"
+  },
+  "yj8NrY": {
+    "defaultMessage": "Клипса"
+  },
   "yzKwBQ": {
     "defaultMessage": "например, nsec1xyz"
+  },
+  "z2qCcJ": {
+    "defaultMessage": "Максимальный битрейт видео"
+  },
+  "zEYkgY": {
+    "defaultMessage": "Поговорите"
+  },
+  "zSYDJP": {
+    "defaultMessage": "У меня есть свой собственный потоковый хост."
   },
   "zVDHAu": {
     "defaultMessage": "Оповещение о запе"

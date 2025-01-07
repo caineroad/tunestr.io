@@ -6,43 +6,73 @@
     "defaultMessage": "Hakuna barua pepe, uzuri tu!"
   },
   "+sdKx8": {
-    "defaultMessage": "Ishi sasa"
+    "defaultMessage": "Sasa moja kwa moja"
   },
   "+vVZ/G": {
     "defaultMessage": "Unganisha"
   },
+  "+y6JUK": {
+    "defaultMessage": "Uvamizi"
+  },
   "/0TOL5": {
     "defaultMessage": "Kiasi"
   },
-  "/EvlqN": {
-    "defaultMessage": "nostr signer ugani"
+  "/563b0": {
+    "defaultMessage": "Baki: {n} sats"
   },
-  "/GCoTA": {
-    "defaultMessage": "Futa"
+  "/EvlqN": {
+    "defaultMessage": "Kiongeza cha Saini ya Nostr"
+  },
+  "/JkXBo": {
+    "defaultMessage": "Clip kutoka {title}"
+  },
+  "/Jp9pC": {
+    "defaultMessage": "Jumla: {amount} Sats"
+  },
+  "/aFYQ5": {
+    "defaultMessage": "Usambazaji wa Mtiririko (si lazima)"
+  },
+  "/w4RM6": {
+    "defaultMessage": "Katika Maisha Halisi"
+  },
+  "01iNut": {
+    "defaultMessage": "Anwani ya Nostr haikuhusu wewe"
   },
   "04lmFi": {
-    "defaultMessage": "Okoa ufunguo"
-  },
-  "0GfNiL": {
-    "defaultMessage": "Tiririsha Malengo ya Zap"
+    "defaultMessage": "Hifadhi ufunguo"
   },
   "0VV/sK": {
     "defaultMessage": "Lengo"
   },
   "0hNxBy": {
-    "defaultMessage": "Huanza"
+    "defaultMessage": "Anza"
+  },
+  "0rVLjV": {
+    "defaultMessage": "Hakuna mitiririko bado"
   },
   "1EYCdR": {
-    "defaultMessage": "Vitambulisho"
+    "defaultMessage": "Vidokezo"
+  },
+  "1LBny5": {
+    "defaultMessage": "Imesimamishwa"
   },
   "1q4BO/": {
-    "defaultMessage": "Sio URL halali"
+    "defaultMessage": "URL Isiyo Halali"
   },
   "1qsXCO": {
-    "defaultMessage": "eg. jina@pochi.com"
+    "defaultMessage": "k.m. jina@pochi.com"
   },
   "2/2yg+": {
     "defaultMessage": "Ongeza"
+  },
+  "2lVQYF": {
+    "defaultMessage": "...mengi"
+  },
+  "2ukA4d": {
+    "defaultMessage": "masaa {n}"
+  },
+  "2wdFaB": {
+    "defaultMessage": "Maliza Kutiririsha"
   },
   "37mth/": {
     "defaultMessage": "Watazamaji"
@@ -51,178 +81,356 @@
     "defaultMessage": "Zap!"
   },
   "3adEeb": {
-    "defaultMessage": "{n} watazamaji"
+    "defaultMessage": "{n} Watazamaji"
   },
   "3df560": {
-    "defaultMessage": "Ingia kwa kutumia ufunguo wa faragha"
+    "defaultMessage": "Ingia kwa kutumia Ufunguo Binafsi"
+  },
+  "3kbIhS": {
+    "defaultMessage": "Haina jina"
+  },
+  "3yk8fB": {
+    "defaultMessage": "Pochi"
   },
   "47FYwb": {
     "defaultMessage": "Ghairi"
+  },
+  "4RhY4O": {
+    "defaultMessage": "Mifano ya Mipangilio katika OBS (Apple M1 Mac)"
+  },
+  "4XfMux": {
+    "defaultMessage": "Video"
   },
   "4iBdw1": {
     "defaultMessage": "Uvamizi"
   },
   "4l69eO": {
-    "defaultMessage": "Hmm, anwani yako ya umeme inaonekana si sahihi"
+    "defaultMessage": "Hmm, anwani yako ya Lightning inaonekana sio sahihi"
   },
   "4l6vz1": {
-    "defaultMessage": "Nakala"
-  },
-  "4uI538": {
-    "defaultMessage": "Maazimio"
+    "defaultMessage": "Nakili"
   },
   "50+/JW": {
-    "defaultMessage": "Ufunguo wa Kutiririsha unahitajika"
+    "defaultMessage": "Ufunguo wa Mtiririko unahitajika"
+  },
+  "58DXVG": {
+    "defaultMessage": "Ili kuanza, nyakua ufunguo wako wa mtiririko kutoka kwa jukwaa ambalo ungependa kusambaza."
   },
   "5JcXdV": {
-    "defaultMessage": "Tengeneza akaunti"
+    "defaultMessage": "Unda Akaunti"
+  },
+  "5L4ati": {
+    "defaultMessage": "Zap kutoka"
+  },
+  "5LXWMX": {
+    "defaultMessage": "Lengo Jipya"
   },
   "5QYdPU": {
-    "defaultMessage": "Wakati wa kuanza"
+    "defaultMessage": "Wakati wa Kuanza"
+  },
+  "5Wwopw": {
+    "defaultMessage": "Bei"
   },
   "5kx+2v": {
-    "defaultMessage": "Url ya seva"
+    "defaultMessage": "URL ya Seva"
   },
   "5tM0VD": {
-    "defaultMessage": "Utiririshaji Umeanza"
+    "defaultMessage": "Mtiririko Umekuwa"
+  },
+  "5vMmmR": {
+    "defaultMessage": "Watumiaji hawako pekee kwenye Nostr. Anwani ya Nostr ni anwani yako ya kipekee inayoweza kusomwa na binadamu ambayo ni ya kipekee kwako baada ya usajili."
   },
   "69hmpj": {
     "defaultMessage": "Uvamizi kutoka kwa {name}"
   },
+  "6PK5Jy": {
+    "defaultMessage": "Mtiririko Uliopita"
+  },
   "6Z2pvJ": {
-    "defaultMessage": "Watoa huduma za mkondo"
+    "defaultMessage": "Watoa Huduma wa Mtiririko"
   },
   "6pr6hJ": {
-    "defaultMessage": "Kiasi cha chini cha maandishi hadi hotuba"
+    "defaultMessage": "Kiasi cha Chini cha Matini kwa Hotuba"
   },
   "7+bCC1": {
-    "defaultMessage": "Url ya mtiririko lazima ianze na rtmp://"
+    "defaultMessage": "URL ya Mtiririko lazima ianze na rtmp://"
+  },
+  "74PejI": {
+    "defaultMessage": "Watazamaji Maarufu"
   },
   "79lLl+": {
     "defaultMessage": "Muziki"
   },
   "7UOvbT": {
-    "defaultMessage": "Nje ya mtandao"
+    "defaultMessage": "Nje ya Mtandao"
+  },
+  "89UZph": {
+    "defaultMessage": "Sanidi programu yako ya utiririshaji"
   },
   "8YT6ja": {
-    "defaultMessage": "Ingiza maandishi ili kuzungumza"
+    "defaultMessage": "Weka Matini ya Kuzungumza"
+  },
+  "8aAwpp": {
+    "defaultMessage": "Kwa kuhudhuria kwa mikono yote unahitaji URL ya HLS kwa uga wa URL wa Mtiririko. Unapaswa kuweza kupata hii kwenye usanidi wako wa kukaribisha."
+  },
+  "8xVdjn": {
+    "defaultMessage": "Codec ya Video"
   },
   "9WRlF4": {
     "defaultMessage": "Tuma"
   },
+  "9ZoFpI": {
+    "defaultMessage": "Futa faili"
+  },
   "9a9+ww": {
     "defaultMessage": "Kichwa"
+  },
+  "9pMqYs": {
+    "defaultMessage": "Anwani ya Nostr"
+  },
+  "9rmSgv": {
+    "defaultMessage": "OBS (Open Broadcaster Software) ni programu huru na ya chanzo wazi kwa kurekodi video na kutiririsha moja kwa moja kwenye Windows, Mac na Linux. Ni chaguo maarufu kwa watumiaji wa mitiririko. Utahitaji hii kuchukua video yako, sauti na chochote kingine unachotaka kuongeza kwenye mtiririko wako. Baada ya kusakinishwa na kusanidiwa kulingana na upendeleo, ongeza URL yako ya Mtiririko na Ufunguo wa Mtiririko kutoka kwa Mipangilio ya Mtiririko kwa OBS ili kuanzisha uhusiano na tunestr.io."
+  },
+  "A1zT+z": {
+    "defaultMessage": "Matokeo ya Utafutaji: {term}"
+  },
+  "A7K3S+": {
+    "defaultMessage": "Kuweka Akaunti"
+  },
+  "ALdW69": {
+    "defaultMessage": "Angalizo la {name}"
+  },
+  "ASKb16": {
+    "defaultMessage": "A description of the stream"
+  },
+  "AYIR/J": {
+    "defaultMessage": "Remove Image"
   },
   "Atr2p4": {
     "defaultMessage": "Maudhui ya NSFW"
   },
   "AukrPM": {
-    "defaultMessage": "Hakuna data ya mtazamaji inayopatikana"
+    "defaultMessage": "Hakuna Data ya Watazamaji Inapatikana"
+  },
+  "Axo/o5": {
+    "defaultMessage": "Sayansi na Teknolojia"
   },
   "AyGauy": {
     "defaultMessage": "Ingia"
   },
   "BD0vyn": {
-    "defaultMessage": "{name} aliunda klipu"
+    "defaultMessage": "{name} ameunda clip"
   },
-  "BGxpTN": {
-    "defaultMessage": "Mkondo Gumzo"
+  "Bd1yEX": {
+    "defaultMessage": "New Stream Goal"
   },
   "Bep/gA": {
-    "defaultMessage": "Ufunguo wa kibinafsi"
+    "defaultMessage": "Ufunguo wa Kibinafsi"
+  },
+  "BzQPM+": {
+    "defaultMessage": "Destination"
   },
   "C81/uG": {
-    "defaultMessage": "Toka nje"
+    "defaultMessage": "Toka"
+  },
+  "CTgA2G": {
+    "defaultMessage": "Unda akaunti mpya ikiwa huna moja bado."
   },
   "CsCUYo": {
-    "defaultMessage": "{n} ameketi"
+    "defaultMessage": "{n} Sats"
+  },
+  "CsS/fy": {
+    "defaultMessage": "{estimate} remaining ({balance} sats @ {rate} sats / {unit})"
   },
   "D3idYv": {
     "defaultMessage": "Mipangilio"
   },
   "DZKuuP": {
-    "defaultMessage": "Imeingia kama"
+    "defaultMessage": "Ingia kama"
+  },
+  "DkgCAz": {
+    "defaultMessage": "Ninawezaje kutiririsha kwenye tunestr.io?"
   },
   "Dn82AL": {
     "defaultMessage": "Moja kwa moja"
   },
+  "DqmiAe": {
+    "defaultMessage": "Dont have a nostr extension? Try {nos2x}, {nostore} or {alby}"
+  },
+  "E7n6zr": {
+    "defaultMessage": "Current stream cost: {amount} sats/{unit} (about {usd}/day for a {x}hr stream)"
+  },
   "E9APoR": {
-    "defaultMessage": "Haikuweza kuunda URL ya mtiririko"
+    "defaultMessage": "URL ya Mtiririko haikuweza kuundwa"
   },
   "ESyhzp": {
-    "defaultMessage": "Maoni yako ya {name}"
+    "defaultMessage": "Maoni yako kwa {name}"
+  },
+  "EcglP9": {
+    "defaultMessage": "Key"
+  },
+  "FAUhZf": {
+    "defaultMessage": "Sats ni nini?"
+  },
+  "FIDK5Y": {
+    "defaultMessage": "Wakati Wote Mkuu wa Zapper"
+  },
+  "FXepR9": {
+    "defaultMessage": "{m}mo {ago}",
+    "description": "Number of month(s) relative to now"
   },
   "FjDlus": {
     "defaultMessage": "Unaweza kubadilisha na kuweka anwani yako mwenyewe baadaye."
   },
   "Fodi9+": {
-    "defaultMessage": "Lipwe na watazamaji"
+    "defaultMessage": "Lipwa na Watazamaji"
   },
   "G/yZLu": {
     "defaultMessage": "Ondoa"
   },
-  "GGaJMU": {
-    "defaultMessage": "Wapiga Soga Maarufu"
+  "G857ni": {
+    "defaultMessage": "LNURL or invoice"
   },
-  "Gmiwnd": {
-    "defaultMessage": "Onyesha upya ukurasa ili kutumia toleo jipya zaidi"
+  "GGaJMU": {
+    "defaultMessage": "Wachati Bora"
+  },
+  "GSuQPh": {
+    "defaultMessage": "Unknown event link"
+  },
+  "GSye7T": {
+    "defaultMessage": "Anwani ya Lightning"
+  },
+  "GcozGF": {
+    "defaultMessage": "Anwani ya Lightning isiyo halali"
   },
   "Gq6x9o": {
-    "defaultMessage": "Picha ya Jalada"
+    "defaultMessage": "Picha ya Kichwa"
   },
   "Gvxoji": {
-    "defaultMessage": "Jina linahitajika"
+    "defaultMessage": "Jina ni la lazima"
+  },
+  "GwbTAz": {
+    "defaultMessage": "Streams"
   },
   "H/bNs9": {
-    "defaultMessage": "Hifadhi hii na ihifadhi salama! Ukipoteza ufunguo huu, hutaweza kufikia akaunti yako tena. Ndio, ni mbaya sana!"
+    "defaultMessage": "Hifadhi hii na uhifadhi salama! Ukikipoteza, hautaweza kamwe kufikia akaunti yako. Ndiyo, ni jambo kubwa sana!"
+  },
+  "H1fdc9": {
+    "defaultMessage": "Please add a thumbnail"
+  },
+  "H4hJvF": {
+    "defaultMessage": "Choose a category"
   },
   "H5+NAX": {
-    "defaultMessage": "Mizani"
+    "defaultMessage": "Salio"
   },
   "HAlOn1": {
     "defaultMessage": "Jina"
   },
-  "I/TubD": {
-    "defaultMessage": "Chagua lengo..."
+  "HDgXO/": {
+    "defaultMessage": "tunestr.io is an open source platform powered by the nostr protocol. There are no giant corporations or giant funds available to provide free streaming."
+  },
+  "HsgeUk": {
+    "defaultMessage": "Njoo uangalie mtiririko wangu kwenye tunestr.io! {link}"
+  },
+  "Ht231k": {
+    "defaultMessage": "Forwarding"
+  },
+  "HvUhXt": {
+    "defaultMessage": "Uploading to {n} servers"
   },
   "I1kjHI": {
-    "defaultMessage": "Inaauni {markdown}"
+    "defaultMessage": "Inasaidia {markdown}"
+  },
+  "I2AKfn": {
+    "defaultMessage": "Michezo ya Kubahatisha"
+  },
+  "IDqXmC": {
+    "defaultMessage": "Media Server List"
   },
   "IJDKz3": {
-    "defaultMessage": "Kiasi cha Zap kwa {currency}"
+    "defaultMessage": "Kiasi cha Zap katika {currency}"
   },
   "INlWvJ": {
     "defaultMessage": "AU"
   },
-  "J/+m9y": {
-    "defaultMessage": "Muda wa Kutiririsha dak {duration}"
+  "IPXhUW": {
+    "defaultMessage": "Last Stream Summary"
   },
-  "JEsxDw": {
-    "defaultMessage": "Inapakia..."
+  "IqcyS0": {
+    "defaultMessage": "Ni nini Nostr-Erweiterung?"
+  },
+  "J/+m9y": {
+    "defaultMessage": "Muda wa Mtiririko {duration} Min."
+  },
+  "JCIgkj": {
+    "defaultMessage": "Jina la Mtumiaji"
+  },
+  "JO0kq9": {
+    "defaultMessage": "Hariri Taarifa ya Mtiririko"
+  },
+  "JkLHGw": {
+    "defaultMessage": "Tovuti"
   },
   "Jq3FDz": {
-    "defaultMessage": "Maudhui"
+    "defaultMessage": "Yaliyomo"
   },
   "K3r6DQ": {
-    "defaultMessage": "Futa"
+    "defaultMessage": "Ondoa"
   },
   "K7AkdL": {
     "defaultMessage": "Onyesha"
   },
+  "KH2ayq": {
+    "defaultMessage": "Upload Video"
+  },
   "KkIL3s": {
-    "defaultMessage": "Hapana, mimi ni chini ya miaka 18"
+    "defaultMessage": "Hapana, mimi ni chini ya umri wa miaka 18"
+  },
+  "KtrGU6": {
+    "defaultMessage": "Ikiwa tayari una akaunti, unaweza kutumia kipanuzi cha Nostr kujiandikisha. Ikiwa tayari unatumia kipanuzi cha Nostr, utaingia kiotomatiki. Ikiwa bado haujaiweka kipanuzi cha Nostr, unaweza kutumia nos2x au Alby."
+  },
+  "KxfKnW": {
+    "defaultMessage": "Withdraw funds"
+  },
+  "LEmxc8": {
+    "defaultMessage": "Malengo ya Zap"
+  },
+  "LUvSJB": {
+    "defaultMessage": "Kukaribisha kwa tunestr.io ni bure kwa hadi masaa 2 kwa ubora wa juu na hadi masaa 8 kwa ubora wa \"Chanzo\". Baada ya hapo, unaweza kutiririsha kwa Sats 5 kwa dakika au Sats 10 kwa dakika, kulingana na ubora uliochagua. Ikiwa hautumii tunestr.io kwa kukaribisha, bei itategemea mtoa huduma wa mtiririko uliochagua."
+  },
+  "Le+99Z": {
+    "defaultMessage": "Streamers pay a small fee to cover our running costs. We give new streamers a credit of {amount} sats (about {time_estimate} of streaming) to get started!"
+  },
+  "Lg2ye2": {
+    "defaultMessage": "Tunestr is a new kind of streaming platform that allows you to earn bitcoin (sats) the moment you start streaming! Viewers can tip streamers any amount they choose. The tips are instantly deposited to your bitcoin (lightning) wallet. tunestr.io never touches your earnings!"
   },
   "LknBsU": {
-    "defaultMessage": "Ufunguo wa Kutiririsha"
+    "defaultMessage": "Ufunguo wa Mtiririko"
+  },
+  "LxSJOb": {
+    "defaultMessage": "Go to Dashboard"
   },
   "MTHO1W": {
-    "defaultMessage": "Anza Uvamizi"
+    "defaultMessage": "Anza Raid"
   },
   "My6HwN": {
-    "defaultMessage": "Sawa, ni salama"
+    "defaultMessage": "Sawa, imehifadhiwa"
+  },
+  "NTpJIm": {
+    "defaultMessage": "Enable Recording"
+  },
+  "NnHu0L": {
+    "defaultMessage": "Please upload at least 1 video"
+  },
+  "Ntjkqd": {
+    "defaultMessage": "or"
   },
   "O2Cy6m": {
-    "defaultMessage": "Ndiyo, nina zaidi ya miaka 18"
+    "defaultMessage": "Ndiyo, mimi ni zaidi ya miaka 18"
+  },
+  "O7AeYh": {
+    "defaultMessage": "Description.."
   },
   "OEW7yJ": {
     "defaultMessage": "Zaps"
@@ -230,108 +438,218 @@
   "OKhRC6": {
     "defaultMessage": "Shiriki"
   },
-  "OWgHbg": {
-    "defaultMessage": "Hariri kadi"
+  "ORGv1Q": {
+    "defaultMessage": "Created"
+  },
+  "OadZli": {
+    "defaultMessage": "Manage Servers"
+  },
+  "ObZZEz": {
+    "defaultMessage": "Hakuna Clips Bado"
+  },
+  "OkXMLE": {
+    "defaultMessage": "Kiwango cha Juu cha Bitrate ya Sauti"
+  },
+  "OumUwz": {
+    "defaultMessage": "{m}s {ago}",
+    "description": "Number of second(s) relative to now"
   },
   "Oxqtyf": {
-    "defaultMessage": "Tulikuunganisha na pochi ya umeme ili uweze kulipwa na watazamaji mara moja!"
+    "defaultMessage": "Tumekupa mkoba wa Lightning, ili uweze kulipwa moja kwa moja na watazamaji!"
   },
-  "PA0ej4": {
-    "defaultMessage": "Tengeneza Klipu"
+  "PDA8V2": {
+    "defaultMessage": "{m}h {ago}",
+    "description": "Number of hour(s) relative to now"
+  },
+  "PHE60k": {
+    "defaultMessage": "Leave blank if you do not wish to set up any goals."
+  },
+  "PUymyQ": {
+    "defaultMessage": "Njoo uangalie mtiririko wa {name} kwenye tunestr.io! {link}"
+  },
+  "PXAur5": {
+    "defaultMessage": "Withdraw"
+  },
+  "Pc+tM3": {
+    "defaultMessage": "Generate"
   },
   "Pe0ogR": {
-    "defaultMessage": "Mandhari"
+    "defaultMessage": "Muonekano"
+  },
+  "PySFxG": {
+    "defaultMessage": "Choose file."
   },
   "Q3au2v": {
-    "defaultMessage": "Kuhusu {estimate}"
+    "defaultMessage": "Karibu {estimate}"
+  },
+  "Q8Qw5B": {
+    "defaultMessage": "Description"
+  },
+  "QNvtaq": {
+    "defaultMessage": "Shiriki kwa X"
   },
   "QRHNuF": {
-    "defaultMessage": "Tunapika nini leo?"
+    "defaultMessage": "Tuna-tiririsha nini leo?"
   },
   "QRRCp0": {
-    "defaultMessage": "Tiririsha URL"
+    "defaultMessage": "URL ya Mtiririko"
   },
   "QWlMq9": {
-    "defaultMessage": "Kitufe cha kutiririsha"
+    "defaultMessage": "Ufunguo wa Mtiririko"
   },
   "QceMQZ": {
     "defaultMessage": "Lengo: {amount}"
   },
   "Qe1MJu": {
-    "defaultMessage": "{name} pamoja na {amount}"
+    "defaultMessage": "{name} na {amount}"
   },
-  "RJ2VxG": {
-    "defaultMessage": "Toleo jipya limegunduliwa"
+  "Qf0ugr": {
+    "defaultMessage": "Hapa una chaguo kadhaa: Unaweza kutumia Hosting yetu ya ndani au yako mwenyewe (kama vile Cloudflare)."
+  },
+  "R72je0": {
+    "defaultMessage": "Stream Title"
+  },
+  "RGYBjE": {
+    "defaultMessage": "Thumbnail"
   },
   "RJOmzk": {
-    "defaultMessage": "Nimesoma na kukubaliana na {terms} ya {provider}."
+    "defaultMessage": "Nimesoma {terms} za {provider} na ninaafiki."
   },
   "RS6smY": {
-    "defaultMessage": "Ujumbe wa uvamizi"
+    "defaultMessage": "Ujumbe wa Raid"
   },
   "RXQdxR": {
-    "defaultMessage": "Tafadhali ingia ili kuandika ujumbe!"
+    "defaultMessage": "Tafadhali ingia ili uweze kutuma ujumbe!"
   },
   "RrCui3": {
-    "defaultMessage": "Muhtasari"
+    "defaultMessage": "Maelezo Mafupi"
   },
   "RtYNX5": {
-    "defaultMessage": "Watumiaji wa Gumzo"
+    "defaultMessage": "Mtumiaji wa Mazungumzo"
+  },
+  "S39ba6": {
+    "defaultMessage": "OBS ni nini?"
+  },
+  "SC2nJT": {
+    "defaultMessage": "Codec ya Sauti"
+  },
+  "TDUfVk": {
+    "defaultMessage": "Started"
   },
   "TP/cMX": {
-    "defaultMessage": "Imeisha"
+    "defaultMessage": "Imemalizika"
   },
-  "TaTRKo": {
-    "defaultMessage": "Anza Kutiririsha"
+  "TcDwEB": {
+    "defaultMessage": "Stream Keys"
   },
   "TwyMau": {
     "defaultMessage": "Akaunti"
+  },
+  "UCDS65": {
+    "defaultMessage": "ago",
+    "description": "Relative time, ie. 1s ago"
+  },
+  "UGFYV8": {
+    "defaultMessage": "Karibu kwenye tunestr.io!"
   },
   "UJBFYK": {
     "defaultMessage": "Ongeza Kadi"
   },
   "UfSot5": {
-    "defaultMessage": "Mitiririko ya Zamani"
+    "defaultMessage": "Mizunguko Iliyopita"
+  },
+  "Uo/DWG": {
+    "defaultMessage": "Maelezo ni marefu sana"
   },
   "VA/Z1S": {
     "defaultMessage": "Ficha"
   },
-  "Vn2WiP": {
-    "defaultMessage": "Pata Ufunguo wa Kutiririsha"
+  "VDOpia": {
+    "defaultMessage": "Zaps ni nini?"
+  },
+  "VKb1MS": {
+    "defaultMessage": "Jamii"
   },
   "W7DNWx": {
-    "defaultMessage": "Usambazaji wa Mtiririko"
+    "defaultMessage": "Mwongozo wa Mtiririko"
+  },
+  "W7IRLs": {
+    "defaultMessage": "Your title is too short"
   },
   "W9355R": {
-    "defaultMessage": "Rejesha"
+    "defaultMessage": "Suzu Sauti"
+  },
+  "WVJZ0U": {
+    "defaultMessage": "Thamani",
+    "description": "Config value column header"
+  },
+  "WcZM+B": {
+    "defaultMessage": "File List"
+  },
+  "Wp4l7+": {
+    "defaultMessage": "More Videos"
+  },
+  "WsjXrZ": {
+    "defaultMessage": "Bonyeza Ingia"
   },
   "X2PZ7D": {
     "defaultMessage": "Tengeneza Lengo"
   },
+  "XIvYvF": {
+    "defaultMessage": "Failed to get invoice"
+  },
+  "XMGfiA": {
+    "defaultMessage": "Clips Mpya"
+  },
   "XgWvGA": {
-    "defaultMessage": "Miitikio"
+    "defaultMessage": "Majibu"
+  },
+  "XmQZr5": {
+    "defaultMessage": "No keys"
+  },
+  "Xq2sb0": {
+    "defaultMessage": "To go live, copy and paste your Server URL and Stream Key below into your streaming software settings and press 'Start Streaming'. We recommend <a>OBS</a>."
   },
   "Y0DXJb": {
-    "defaultMessage": "URL ya kurekodi"
+    "defaultMessage": "URL ya Kurekodi"
   },
   "YPh5Nq": {
-    "defaultMessage": "@ {rate}",
+    "defaultMessage": "@ {kiwango}",
     "description": "Showing zap amount in USD @ rate"
   },
-  "YagVIe": {
-    "defaultMessage": "{n}p"
+  "YjhNaf": {
+    "defaultMessage": "Create Stream"
   },
   "YwzT/0": {
-    "defaultMessage": "Kichwa cha klipu"
+    "defaultMessage": "Kichwa cha Clip"
+  },
+  "YyXVHf": {
+    "defaultMessage": "Clear Draft"
   },
   "Z8ZOEY": {
-    "defaultMessage": "Njia hii haina usalama. Tunapendekeza utumie {nostrlink}"
+    "defaultMessage": "Mbinu hii ni hatari. Tunapendekeza kutumia {nostrlink} badala yake."
+  },
+  "ZXp0z1": {
+    "defaultMessage": "Vipengele"
+  },
+  "ZaNcK4": {
+    "defaultMessage": "Hatujaona Malengo Bado"
+  },
+  "ZcgtZo": {
+    "defaultMessage": "Tumekusanya orodha ya kubadilishana rahisi kutumia ambayo itakuruhusu kununua kiasi kidogo cha Bitcoin (Sats) na kuhamisha kwenye pochi yako unayopenda."
   },
   "ZmqxZs": {
     "defaultMessage": "Unaweza kubadilisha hii baadaye"
   },
+  "ZsYhvh": {
+    "defaultMessage": "Zaps ni malipo ya Lightning ambayo hutolewa kama ushahidi kwenye Nostr."
+  },
   "Zse7yG": {
-    "defaultMessage": "Lengo la uvamizi"
+    "defaultMessage": "Mpokeaji wa Raid"
+  },
+  "aB/rH0": {
+    "defaultMessage": "{m}h {ago}",
+    "description": "Number of minute(s) relative to now"
   },
   "acrOoz": {
     "defaultMessage": "Endelea"
@@ -339,83 +657,129 @@
   "aqjZxs": {
     "defaultMessage": "Uvamizi!"
   },
+  "bD/ZwY": {
+    "defaultMessage": "Hariri Kadi"
+  },
+  "bbUGS7": {
+    "defaultMessage": "Mipangilio Iliyopendekezwa ya Mtiririko"
+  },
+  "bdH+0f": {
+    "defaultMessage": "Balance History"
+  },
   "bfvyfs": {
     "defaultMessage": "Anon"
   },
+  "c3LlRO": {
+    "defaultMessage": "{n}KiB"
+  },
   "cPIKU2": {
-    "defaultMessage": "Kufuatia"
+    "defaultMessage": "Ninamfuata"
+  },
+  "ccXLVi": {
+    "defaultMessage": "Jamii"
+  },
+  "cg1VJ2": {
+    "defaultMessage": "Connect Wallet"
+  },
+  "cntHHJ": {
+    "defaultMessage": "This allows you to forward your stream to other platforms to reach a wider audience."
   },
   "cvAsEh": {
-    "defaultMessage": "Ilitiririshwa mnamo {date}"
+    "defaultMessage": "Iliyotangazwa mnamo {date}"
   },
   "cyR7Kh": {
     "defaultMessage": "Rudi"
   },
   "d5zWyh": {
-    "defaultMessage": "Jaribu sauti"
+    "defaultMessage": "Jaribu Sauti"
   },
   "dOQCL8": {
-    "defaultMessage": "Jina la kuonyesha"
+    "defaultMessage": "Jina la Onyesho"
   },
   "dVD/AR": {
-    "defaultMessage": "Zappers za Juu"
+    "defaultMessage": "Zapper Bora"
+  },
+  "dkUMIH": {
+    "defaultMessage": "Clip kutoka kwa {name}"
+  },
+  "e011kf": {
+    "defaultMessage": "Maswali Yanayoulizwa Sana",
+    "description": "Title: FAQ page"
   },
   "ebmhes": {
-    "defaultMessage": "Ugani wa Nostr"
+    "defaultMessage": "Upanuzi wa Nostr"
   },
   "f6biFA": {
-    "defaultMessage": "Lo, na una {n} safu za utiririshaji bila malipo kwa ajili yetu! 💜"
+    "defaultMessage": "Oh, na unayo {n} sats za utiririshaji wa bure kutoka kwetu! 💜"
   },
   "fBI91o": {
     "defaultMessage": "Zap"
   },
-  "fc2iho": {
-    "defaultMessage": "Ongeza Faili"
-  },
   "feZ/kG": {
-    "defaultMessage": "Ingia kwa kutumia Ufunguo wa Faragha (si salama)"
+    "defaultMessage": "Ingia kwa kutumia Ufunguo wa Binafsi (hatari)"
+  },
+  "g5pX+a": {
+    "defaultMessage": "Kuhusu"
+  },
+  "gQxxlw": {
+    "defaultMessage": "Goal Name"
+  },
+  "gt65Gg": {
+    "defaultMessage": "Stream goals encourage viewers to support streamers via donations."
   },
   "gzsn7k": {
-    "defaultMessage": "{n} ujumbe"
+    "defaultMessage": "{n} Ujumbe"
   },
-  "hGQqkW": {
-    "defaultMessage": "Schedule"
+  "h6NRY6": {
+    "defaultMessage": "No Thanks!"
+  },
+  "h9mX2/": {
+    "defaultMessage": "Ikiwa unatumia Hosting yetu ya ndani ya tunestr.io (bei rahisi na rahisi zaidi), nakili URL yako ya Mtiririko na Ufunguo wako wa Mtiririko kwenye mipangilio yako ya OBS na utakuwa tayari kuanza."
   },
   "hMzcSq": {
-    "defaultMessage": "Ujumbe"
+    "defaultMessage": "Ujumbe wa Mazungumzo"
   },
   "heyxZL": {
-    "defaultMessage": "Washa maandishi hadi usemi"
+    "defaultMessage": "Washa Utoleaji wa Maandishi"
   },
   "hpl4BP": {
-    "defaultMessage": "Wijeti ya Soga"
+    "defaultMessage": "Wijeti ya Mazungumzo"
   },
   "hzSNj4": {
-    "defaultMessage": "Dashibodi"
+    "defaultMessage": "Dashboard"
+  },
+  "iKlloU": {
+    "defaultMessage": "Suggested Servers"
   },
   "ieGrWo": {
     "defaultMessage": "Fuata"
   },
+  "ieKb+k": {
+    "defaultMessage": "Kiasi gani cha Utiririshaji kinagharimu?"
+  },
+  "ipTKP3": {
+    "defaultMessage": "Chat Popout"
+  },
   "itPgxd": {
-    "defaultMessage": "Wasifu"
+    "defaultMessage": "Profaili"
   },
   "izWS4J": {
-    "defaultMessage": "Acha kufuata"
+    "defaultMessage": "Usifuatilie"
   },
   "j/jueq": {
-    "defaultMessage": "Kuvamia {name}"
+    "defaultMessage": "{name} anakaribia"
+  },
+  "jDDeA0": {
+    "defaultMessage": "Your title is very long, please make sure its less than {n} chars."
   },
   "jJLRgo": {
-    "defaultMessage": "Chapisha Klipu"
-  },
-  "jctiUc": {
-    "defaultMessage": "Watazamaji wa Juu"
+    "defaultMessage": "Chapisha Clip"
   },
   "jgOqxt": {
-    "defaultMessage": "Wijeti"
+    "defaultMessage": "Vidude"
   },
   "jkAQj5": {
-    "defaultMessage": "Utiririshaji Umeisha"
+    "defaultMessage": "Mtiririko Umeisha"
   },
   "jr4+vD": {
     "defaultMessage": "Alama"
@@ -426,121 +790,232 @@
   "k21gTS": {
     "defaultMessage": "k.m. kuhusu mimi"
   },
+  "kAEQyV": {
+    "defaultMessage": "OK"
+  },
+  "kGjqZ4": {
+    "defaultMessage": "Latest Shorts"
+  },
+  "kQAf2d": {
+    "defaultMessage": "Select"
+  },
+  "kc5EOy": {
+    "defaultMessage": "Jina la mtumiaji ni refu sana"
+  },
+  "khJ51Q": {
+    "defaultMessage": "Stream Earnings"
+  },
   "kp0NPF": {
     "defaultMessage": "Imepangwa"
   },
+  "lXbG97": {
+    "defaultMessage": "Most Zapped Streamers"
+  },
   "lZpRMR": {
-    "defaultMessage": "Angalia hapa ikiwa mtiririko huu una maudhui ya uchi au ponografia."
+    "defaultMessage": "Tia alama hapa, ikiwa mtiririko huu una uchi au maudhui ya ngono."
   },
   "ljmS5P": {
-    "defaultMessage": "Mwisho"
+    "defaultMessage": "Hatua ya mwisho"
   },
   "miQKuZ": {
-    "defaultMessage": "Muda wa Kutiririsha"
+    "defaultMessage": "Muda wa Mtiririko"
   },
   "mnJYBQ": {
     "defaultMessage": "Sauti"
   },
-  "mtNGwh": {
-    "defaultMessage": "Maelezo mafupi ya yaliyomo"
+  "mrwfXX": {
+    "defaultMessage": "Kushiriki"
+  },
+  "msjwph": {
+    "defaultMessage": "Kipindi cha Picha Msingi"
+  },
+  "n19IQE": {
+    "defaultMessage": "Recommended size: 1920x1080 (16:9)"
+  },
+  "n8k1SG": {
+    "defaultMessage": "{n}MiB"
   },
   "nBCvvJ": {
-    "defaultMessage": "Kuongeza"
+    "defaultMessage": "Jaza"
   },
   "nOaArs": {
-    "defaultMessage": "Sanidi Wasifu"
+    "defaultMessage": "Sanidi Profaili"
   },
   "nwA8Os": {
-    "defaultMessage": "Ongeza kadi"
-  },
-  "o8pHw3": {
-    "defaultMessage": "AUTO"
+    "defaultMessage": "Ongeza Kadi"
   },
   "oHPB8Q": {
     "defaultMessage": "Zap {name}"
   },
   "oZrFyI": {
-    "defaultMessage": "Aina ya mtiririko inapaswa kuwa HLS"
+    "defaultMessage": "Aina ya Mtiririko inapaswa kuwa HLS"
+  },
+  "p4N05H": {
+    "defaultMessage": "Pakia"
+  },
+  "pOeEMx": {
+    "defaultMessage": "Add server"
+  },
+  "pxF+t0": {
+    "defaultMessage": "Popular"
   },
   "q+zTWM": {
-    "defaultMessage": "<s>{person}</s> zapped <s>{amount}</s> sats"
+    "defaultMessage": "<s>{person}</s> amezapisha <s>{amount}</s> sats"
+  },
+  "q9ryv4": {
+    "defaultMessage": "Cover image URL (optional)"
+  },
+  "qx6bv2": {
+    "defaultMessage": "Stream Goal (optional)"
   },
   "r2Jjms": {
     "defaultMessage": "Ingia"
   },
-  "rELDbB": {
-    "defaultMessage": "Onyesha upya"
+  "rJqhFR": {
+    "defaultMessage": "Stream Setup"
   },
   "rWBFZA": {
-    "defaultMessage": "Nyenzo za ngono wazi mbele yako!"
-  },
-  "rbrahO": {
-    "defaultMessage": "Funga"
-  },
-  "rfC1Zq": {
-    "defaultMessage": "Hifadhi kadi"
+    "defaultMessage": "Nyenzo za Ngono Inakuja!"
   },
   "rgsbu9": {
-    "defaultMessage": "Watazamaji wa Sasa"
+    "defaultMessage": "Watazamaji Sasa"
+  },
+  "rleUgy": {
+    "defaultMessage": "Uploading.."
+  },
+  "s+ORFl": {
+    "defaultMessage": "{m}d {ago}",
+    "description": "Number of day(s) relative to now"
   },
   "s5ksS7": {
     "defaultMessage": "Kiungo cha Picha"
   },
   "s7V+5p": {
-    "defaultMessage": "Thibitisha umri wako"
+    "defaultMessage": "Thibitisha Umri Wako"
   },
   "sInm1h": {
-    "defaultMessage": "Zap ujumbe"
+    "defaultMessage": "Ujumbe wa Zap"
+  },
+  "sj6WAe": {
+    "defaultMessage": "Bonyeza kitufe cha \"Mtiririko\" kwenye kona ya juu kulia"
+  },
+  "syEQFE": {
+    "defaultMessage": "Publish"
   },
   "tG1ST3": {
-    "defaultMessage": "Zap inayoingia"
+    "defaultMessage": "Zap Kuingia"
   },
   "tM6fNW": {
-    "defaultMessage": "Inashangaza! Endelea.."
+    "defaultMessage": "Safi! Endelea..."
+  },
+  "tNtB9I": {
+    "defaultMessage": "Jina",
+    "description": "Config name column header"
+  },
+  "tTgdmx": {
+    "defaultMessage": "{n,selectordinal,one{@ #. Min.} two{@ #. Min.} few{@ #. Min.} other{@ #. Min.}}"
+  },
+  "tVCC9m": {
+    "defaultMessage": "Sats ni vitengo vidogo vya Bitcoin. Kutuma sats kwenye tunestr.io kunajulikana kama \"Zapping\" au Zaps."
   },
   "thsiMl": {
-    "defaultMessage": "sheria na Masharti"
+    "defaultMessage": "Sheria na Masharti"
+  },
+  "twCRVi": {
+    "defaultMessage": "Sanaa"
   },
   "tzMNF3": {
     "defaultMessage": "Hali"
   },
   "u6uD94": {
-    "defaultMessage": "Fungua Akaunti"
+    "defaultMessage": "Tengeneza Akaunti"
   },
   "uYw2LD": {
-    "defaultMessage": "Tiririsha"
+    "defaultMessage": "Mtiririko"
+  },
+  "ug01Mk": {
+    "defaultMessage": "Time"
+  },
+  "uksRSi": {
+    "defaultMessage": "Latest Videos"
+  },
+  "vP4dFa": {
+    "defaultMessage": "Visit {link} to get some sweet tunestr.io merch!"
   },
   "vrTOHJ": {
     "defaultMessage": "{amount} sats"
   },
+  "w+2Vw7": {
+    "defaultMessage": "Shorts"
+  },
   "w0Xm2F": {
-    "defaultMessage": "Anza kuandika"
+    "defaultMessage": "Anza kuingiza maandishi"
+  },
+  "w3btjR": {
+    "defaultMessage": "Kamari"
   },
   "wCIL7o": {
     "defaultMessage": "Tangaza kwenye Nostr"
+  },
+  "wCgTu5": {
+    "defaultMessage": "Comments"
   },
   "wEQDC6": {
     "defaultMessage": "Hariri"
   },
   "wMKVFz": {
-    "defaultMessage": "Chagua sauti..."
+    "defaultMessage": "Chagua Sauti..."
   },
-  "wOy57k": {
-    "defaultMessage": "Ongeza lengo la mtiririko"
+  "wRGjPp": {
+    "defaultMessage": "Nostr Extension hifadhi tu funguo zako ili uweze kuingia kwa usalama bila kuziingiza kila wakati. Tunestr hutumia kifaa hiki cha kuongeza vitendo kwa niaba yako bila kuona kamwe habari zako za funguo. Hii ina faida kuu ya kutokuwa na imani kwako kuwa tovuti zitashughulikia data yako ya kuingia kwa usalama."
   },
-  "wzWWzV": {
-    "defaultMessage": "Zappers wa juu"
+  "wTwfnv": {
+    "defaultMessage": "Anwani ya Nostr Batili"
+  },
+  "we4Lby": {
+    "defaultMessage": "Info"
   },
   "x82IOl": {
-    "defaultMessage": "Nyamazisha"
+    "defaultMessage": "Weka kimya"
+  },
+  "xhQMeQ": {
+    "defaultMessage": "Expires"
+  },
+  "xi3sgh": {
+    "defaultMessage": "Ninawezaje Kupata Zaidi Sats?"
+  },
+  "xmcVZ0": {
+    "defaultMessage": "Tafuta"
   },
   "y867Vs": {
-    "defaultMessage": "Kiasi"
+    "defaultMessage": "Sauti"
+  },
+  "y8ogtp": {
+    "defaultMessage": "{m}w {ago}",
+    "description": "Number of week(s) relative to now"
+  },
+  "yLxIgl": {
+    "defaultMessage": "Vipande"
+  },
+  "yR0V+W": {
+    "defaultMessage": "Ili kuanza kutiririsha kwenye tunestr.io, fuata hatua hizi:"
+  },
+  "yj8NrY": {
+    "defaultMessage": "Clip"
   },
   "yzKwBQ": {
-    "defaultMessage": "eg. nsec1xyz"
+    "defaultMessage": "k.m. nsec1xyz"
+  },
+  "z2qCcJ": {
+    "defaultMessage": "Kiasi cha Juu cha Bitrate ya Video"
+  },
+  "zEYkgY": {
+    "defaultMessage": "Kizazi cha Picha Msingi"
+  },
+  "zSYDJP": {
+    "defaultMessage": "I have my own stream host"
   },
   "zVDHAu": {
-    "defaultMessage": "Tahadhari ya Zap"
+    "defaultMessage": "Zap Onyo"
   }
 }

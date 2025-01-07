@@ -1,9 +1,8 @@
 import "./async-button.css";
 import { forwardRef, useState } from "react";
 import Spinner from "./spinner";
-import classNames from "classnames";
 
-interface AsyncButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface AsyncButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   disabled?: boolean;
   onClick?: (e: React.MouseEvent) => Promise<void> | void;
   children?: React.ReactNode;
@@ -13,25 +12,25 @@ const AsyncButton = forwardRef<HTMLButtonElement, AsyncButtonProps>((props: Asyn
   const [loading, setLoading] = useState<boolean>(false);
 
   async function handle(e: React.MouseEvent) {
-    e.stopPropagation();
-    if (loading || props.disabled) return;
-    setLoading(true);
-    try {
-      if (props.onClick) {
-        await props.onClick(e);
+    if (props.onClick) {
+      e.stopPropagation();
+      if (loading || props.disabled) return;
+      setLoading(true);
+      try {
+        if (props.onClick) {
+          await props.onClick(e);
+        }
+      } catch (e) {
+        console.error(e);
+        throw e;
+      } finally {
+        setLoading(false);
       }
-    } finally {
-      setLoading(false);
     }
   }
 
   return (
-    <button
-      ref={ref}
-      disabled={loading || props.disabled}
-      {...props}
-      onClick={handle}
-      className={classNames("px-3 py-2 bg-gray-2 rounded-xl", props.className)}>
+    <button ref={ref} disabled={loading || props.disabled} {...props} onClick={handle} className={props.className}>
       <span
         style={{ visibility: loading ? "hidden" : "visible" }}
         className="whitespace-nowrap flex gap-2 items-center justify-center">

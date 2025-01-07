@@ -9,22 +9,37 @@
     "defaultMessage": "Live now"
   },
   "+vVZ/G": {
-    "defaultMessage": "সংযুক্ত হোন"
+    "defaultMessage": "Connect"
+  },
+  "+y6JUK": {
+    "defaultMessage": "Raids"
   },
   "/0TOL5": {
     "defaultMessage": "পরিমাণ"
   },
+  "/563b0": {
+    "defaultMessage": "Balance: {n} sats"
+  },
   "/EvlqN": {
     "defaultMessage": "নস্টারে স্বাক্ষরকারীর এক্সটেনশন"
   },
-  "/GCoTA": {
-    "defaultMessage": "পরিষ্কার"
+  "/JkXBo": {
+    "defaultMessage": "Clip from {title}"
+  },
+  "/Jp9pC": {
+    "defaultMessage": "Total: {amount} sats"
+  },
+  "/aFYQ5": {
+    "defaultMessage": "Stream Forwarding (optional)"
+  },
+  "/w4RM6": {
+    "defaultMessage": "IRL"
+  },
+  "01iNut": {
+    "defaultMessage": "Nostr address does not belong to you"
   },
   "04lmFi": {
     "defaultMessage": "চাবি সংরক্ষণ করুন"
-  },
-  "0GfNiL": {
-    "defaultMessage": "Stream Zap লক্ষ্য ও উদ্দেশ্য"
   },
   "0VV/sK": {
     "defaultMessage": "লক্ষ্য ও উদ্দেশ্য"
@@ -32,8 +47,14 @@
   "0hNxBy": {
     "defaultMessage": "Starts"
   },
+  "0rVLjV": {
+    "defaultMessage": "No streams yet"
+  },
   "1EYCdR": {
     "defaultMessage": "ট্যাগগুলি"
+  },
+  "1LBny5": {
+    "defaultMessage": "Stopped"
   },
   "1q4BO/": {
     "defaultMessage": "Not a valid URL"
@@ -43,6 +64,15 @@
   },
   "2/2yg+": {
     "defaultMessage": "যুক্ত করুন"
+  },
+  "2lVQYF": {
+    "defaultMessage": "...more"
+  },
+  "2ukA4d": {
+    "defaultMessage": "{n} hours"
+  },
+  "2wdFaB": {
+    "defaultMessage": "End Stream"
   },
   "37mth/": {
     "defaultMessage": "Viewers"
@@ -56,8 +86,20 @@
   "3df560": {
     "defaultMessage": "ব্যক্তিগত-চাবি দিয়ে লগইন করুন"
   },
+  "3kbIhS": {
+    "defaultMessage": "Untitled"
+  },
+  "3yk8fB": {
+    "defaultMessage": "Wallet"
+  },
   "47FYwb": {
     "defaultMessage": "বাতিল করুন"
+  },
+  "4RhY4O": {
+    "defaultMessage": "Example settings in OBS (Apple M1 Mac)"
+  },
+  "4XfMux": {
+    "defaultMessage": "Videos"
   },
   "4iBdw1": {
     "defaultMessage": "Raid"
@@ -68,17 +110,26 @@
   "4l6vz1": {
     "defaultMessage": "প্রতিলিপি তৈরি করুন"
   },
-  "4uI538": {
-    "defaultMessage": "রেজোলিউশন"
-  },
   "50+/JW": {
     "defaultMessage": "Stream Key is required"
+  },
+  "58DXVG": {
+    "defaultMessage": "To get started, grab your stream key from the platform you wish to forward to."
   },
   "5JcXdV": {
     "defaultMessage": "অ্যাকাউন্ট তৈরি করুন"
   },
+  "5L4ati": {
+    "defaultMessage": "Zap from"
+  },
+  "5LXWMX": {
+    "defaultMessage": "New Goal"
+  },
   "5QYdPU": {
     "defaultMessage": "সময় শুরু করুন"
+  },
+  "5Wwopw": {
+    "defaultMessage": "Pricing"
   },
   "5kx+2v": {
     "defaultMessage": "সার্ভারের Url"
@@ -86,8 +137,14 @@
   "5tM0VD": {
     "defaultMessage": "Stream Started"
   },
+  "5vMmmR": {
+    "defaultMessage": "Usernames are not unique on Nostr. The nostr address is your unique human-readable address that is unique to you upon registration."
+  },
   "69hmpj": {
     "defaultMessage": "Raid from {name}"
+  },
+  "6PK5Jy": {
+    "defaultMessage": "Past Stream"
   },
   "6Z2pvJ": {
     "defaultMessage": "স্ট্রিম প্রদানকারীরা"
@@ -98,20 +155,56 @@
   "7+bCC1": {
     "defaultMessage": "Stream url must start with rtmp://"
   },
+  "74PejI": {
+    "defaultMessage": "Top Viewers"
+  },
   "79lLl+": {
     "defaultMessage": "Music"
   },
   "7UOvbT": {
     "defaultMessage": "Offline"
   },
+  "89UZph": {
+    "defaultMessage": "Configure your streaming software"
+  },
   "8YT6ja": {
     "defaultMessage": "পড়ার জন্য মূলপাঠ সন্নিবেশ করুন"
+  },
+  "8aAwpp": {
+    "defaultMessage": "For manual hosting all you need is the HLS URL for the Stream URL field. You should be ale to find this in your hosting setup."
+  },
+  "8xVdjn": {
+    "defaultMessage": "Video Codec"
   },
   "9WRlF4": {
     "defaultMessage": "পাঠান"
   },
+  "9ZoFpI": {
+    "defaultMessage": "Delete file"
+  },
   "9a9+ww": {
     "defaultMessage": "শিরোনাম"
+  },
+  "9pMqYs": {
+    "defaultMessage": "Nostr Address"
+  },
+  "9rmSgv": {
+    "defaultMessage": "OBS (Open Broadcaster Software) is a free and open source software for video recording and live streaming on Windows, Mac and Linux. It is a popular choice with streamers. You'll need to install this to capture your video, audio and anything else you'd like to add to your stream. Once installed and configured to preference, add your Stream URL and Stream Key from the Stream settings to OBS to form a connection with tunestr.io."
+  },
+  "A1zT+z": {
+    "defaultMessage": "Search results: {term}"
+  },
+  "A7K3S+": {
+    "defaultMessage": "Account Setup"
+  },
+  "ALdW69": {
+    "defaultMessage": "Note by {name}"
+  },
+  "ASKb16": {
+    "defaultMessage": "A description of the stream"
+  },
+  "AYIR/J": {
+    "defaultMessage": "Remove Image"
   },
   "Atr2p4": {
     "defaultMessage": "NSFW আধেয়"
@@ -119,23 +212,35 @@
   "AukrPM": {
     "defaultMessage": "দর্শকদের কোনো তথ্য সংগ্রহে নেই"
   },
+  "Axo/o5": {
+    "defaultMessage": "Science & Technology"
+  },
   "AyGauy": {
     "defaultMessage": "লগইন করুন"
   },
   "BD0vyn": {
     "defaultMessage": "{name} created a clip"
   },
-  "BGxpTN": {
-    "defaultMessage": "চ্যাট স্ট্রিম করুন"
+  "Bd1yEX": {
+    "defaultMessage": "New Stream Goal"
   },
   "Bep/gA": {
     "defaultMessage": "ব্যক্তিগত চাবি"
   },
+  "BzQPM+": {
+    "defaultMessage": "Destination"
+  },
   "C81/uG": {
     "defaultMessage": "লগ আউট করুন"
   },
+  "CTgA2G": {
+    "defaultMessage": "Create a new account if you don't have one already."
+  },
   "CsCUYo": {
     "defaultMessage": "{n} sats"
+  },
+  "CsS/fy": {
+    "defaultMessage": "{estimate} remaining ({balance} sats @ {rate} sats / {unit})"
   },
   "D3idYv": {
     "defaultMessage": "সেটিংস"
@@ -143,14 +248,36 @@
   "DZKuuP": {
     "defaultMessage": "যে অ্যাকাউন্টে লগইন করা আছে"
   },
+  "DkgCAz": {
+    "defaultMessage": "How do i stream on tunestr.io?"
+  },
   "Dn82AL": {
     "defaultMessage": "সরাসরি সম্প্রচার"
+  },
+  "DqmiAe": {
+    "defaultMessage": "Dont have a nostr extension? Try {nos2x}, {nostore} or {alby}"
+  },
+  "E7n6zr": {
+    "defaultMessage": "Current stream cost: {amount} sats/{unit} (about {usd}/day for a {x}hr stream)"
   },
   "E9APoR": {
     "defaultMessage": "Could not create stream URL"
   },
   "ESyhzp": {
     "defaultMessage": "{name} এর উদ্দেশে আপনার মন্তব্য"
+  },
+  "EcglP9": {
+    "defaultMessage": "Key"
+  },
+  "FAUhZf": {
+    "defaultMessage": "What are sats?"
+  },
+  "FIDK5Y": {
+    "defaultMessage": "All Time Top Zappers"
+  },
+  "FXepR9": {
+    "defaultMessage": "{m}mo {ago}",
+    "description": "Number of month(s) relative to now"
   },
   "FjDlus": {
     "defaultMessage": "আপনি পরে সর্বদাই এটাকে নিজের ঠিকানা দিয়ে প্রতিস্থাপন করতে পারবেন।"
@@ -161,11 +288,20 @@
   "G/yZLu": {
     "defaultMessage": "অপসারণ করুন"
   },
+  "G857ni": {
+    "defaultMessage": "LNURL or invoice"
+  },
   "GGaJMU": {
     "defaultMessage": "Top Chatters"
   },
-  "Gmiwnd": {
-    "defaultMessage": "Refresh the page to use the latest version"
+  "GSuQPh": {
+    "defaultMessage": "Unknown event link"
+  },
+  "GSye7T": {
+    "defaultMessage": "Lightning Address"
+  },
+  "GcozGF": {
+    "defaultMessage": "Invalid lightning address"
   },
   "Gq6x9o": {
     "defaultMessage": "কভারের ছবি"
@@ -173,8 +309,17 @@
   "Gvxoji": {
     "defaultMessage": "Name is required"
   },
+  "GwbTAz": {
+    "defaultMessage": "Streams"
+  },
   "H/bNs9": {
     "defaultMessage": "এটি সংরক্ষণ করুন এবং নিরাপদে রাখুন! আপনি যদি এই চাবিটি হারিয়ে ফেলেন, তাহলে আপনি আর কখনো আপনার অ্যাকাউন্টে প্রবেশ করতে পারবেন না৷ হ্যাঁ, এটা অত্যন্ত গুরুত্বপূর্ণ!"
+  },
+  "H1fdc9": {
+    "defaultMessage": "Please add a thumbnail"
+  },
+  "H4hJvF": {
+    "defaultMessage": "Choose a category"
   },
   "H5+NAX": {
     "defaultMessage": "জমাখরচ"
@@ -182,11 +327,26 @@
   "HAlOn1": {
     "defaultMessage": "নাম"
   },
-  "I/TubD": {
-    "defaultMessage": "একটি লক্ষ্য নির্বাচন করুন..."
+  "HDgXO/": {
+    "defaultMessage": "tunestr.io is an open source platform powered by the nostr protocol. There are no giant corporations or giant funds available to provide free streaming."
+  },
+  "HsgeUk": {
+    "defaultMessage": "Come check out my stream on tunestr.io! {link}"
+  },
+  "Ht231k": {
+    "defaultMessage": "Forwarding"
+  },
+  "HvUhXt": {
+    "defaultMessage": "Uploading to {n} servers"
   },
   "I1kjHI": {
     "defaultMessage": "{markdown} সাপোর্ট করে"
+  },
+  "I2AKfn": {
+    "defaultMessage": "Gaming"
+  },
+  "IDqXmC": {
+    "defaultMessage": "Media Server List"
   },
   "IJDKz3": {
     "defaultMessage": "{currency} পরিমাণ জ্যাপ"
@@ -194,11 +354,23 @@
   "INlWvJ": {
     "defaultMessage": "OR"
   },
+  "IPXhUW": {
+    "defaultMessage": "Last Stream Summary"
+  },
+  "IqcyS0": {
+    "defaultMessage": "What is a nostr extension?"
+  },
   "J/+m9y": {
     "defaultMessage": "Stream Duration {duration} mins"
   },
-  "JEsxDw": {
-    "defaultMessage": "আপলোড করা হচ্ছে..."
+  "JCIgkj": {
+    "defaultMessage": "Username"
+  },
+  "JO0kq9": {
+    "defaultMessage": "Edit Stream Info"
+  },
+  "JkLHGw": {
+    "defaultMessage": "Website"
   },
   "Jq3FDz": {
     "defaultMessage": "আধেয়"
@@ -209,11 +381,35 @@
   "K7AkdL": {
     "defaultMessage": "দেখান"
   },
+  "KH2ayq": {
+    "defaultMessage": "Upload Video"
+  },
   "KkIL3s": {
     "defaultMessage": "না, আমি ১৮ বছরের নিচে"
   },
+  "KtrGU6": {
+    "defaultMessage": "If you already have an account, you can use a nostr extension to log in. If you already use a nostr extension, you will be automatically logged in. If you don't have a nostr extension set up, you can use nos2x or Alby."
+  },
+  "KxfKnW": {
+    "defaultMessage": "Withdraw funds"
+  },
+  "LEmxc8": {
+    "defaultMessage": "Zap Goals"
+  },
+  "LUvSJB": {
+    "defaultMessage": "tunestr.io is free up to 2 hours of hosting at high quality and up to 8 hours of “source” quality. After that you have an option to stream for 5 sats per minute or 10 sats per minute depending on your chosen quality. If you do not use tunestr.io to host, pricing will depend on your chosen streaming provider."
+  },
+  "Le+99Z": {
+    "defaultMessage": "Streamers pay a small fee to cover our running costs. We give new streamers a credit of {amount} sats (about {time_estimate} of streaming) to get started!"
+  },
+  "Lg2ye2": {
+    "defaultMessage": "Tunestr is a new kind of streaming platform that allows you to earn bitcoin (sats) the moment you start streaming! Viewers can tip streamers any amount they choose. The tips are instantly deposited to your bitcoin (lightning) wallet. tunestr.io never touches your earnings!"
+  },
   "LknBsU": {
     "defaultMessage": "চাবি স্ট্রিম করুন"
+  },
+  "LxSJOb": {
+    "defaultMessage": "Go to Dashboard"
   },
   "MTHO1W": {
     "defaultMessage": "Start Raid"
@@ -221,8 +417,20 @@
   "My6HwN": {
     "defaultMessage": "ঠিক আছে, এটা নিরাপদ"
   },
+  "NTpJIm": {
+    "defaultMessage": "Enable Recording"
+  },
+  "NnHu0L": {
+    "defaultMessage": "Please upload at least 1 video"
+  },
+  "Ntjkqd": {
+    "defaultMessage": "or"
+  },
   "O2Cy6m": {
     "defaultMessage": "হ্যাঁ, আমি ১৮ বছরের উর্ধ্বে"
+  },
+  "O7AeYh": {
+    "defaultMessage": "Description.."
   },
   "OEW7yJ": {
     "defaultMessage": "জ্যাপস"
@@ -230,20 +438,55 @@
   "OKhRC6": {
     "defaultMessage": "শেয়ার করুন"
   },
-  "OWgHbg": {
-    "defaultMessage": "কার্ড সম্পাদনা করুন"
+  "ORGv1Q": {
+    "defaultMessage": "Created"
+  },
+  "OadZli": {
+    "defaultMessage": "Manage Servers"
+  },
+  "ObZZEz": {
+    "defaultMessage": "No clips yet"
+  },
+  "OkXMLE": {
+    "defaultMessage": "Max Audio Bitrate"
+  },
+  "OumUwz": {
+    "defaultMessage": "{m}s {ago}",
+    "description": "Number of second(s) relative to now"
   },
   "Oxqtyf": {
     "defaultMessage": "আমরা আপনাকে একটি বিজলি ওয়ালেটের ব্যবস্থা করে দিয়েছি যাতে আপনি দর্শকদের কাছ থেকে তৎক্ষণাৎ পারিশ্রমিক নিতে পারেন!"
   },
-  "PA0ej4": {
-    "defaultMessage": "Create Clip"
+  "PDA8V2": {
+    "defaultMessage": "{m}h {ago}",
+    "description": "Number of hour(s) relative to now"
+  },
+  "PHE60k": {
+    "defaultMessage": "Leave blank if you do not wish to set up any goals."
+  },
+  "PUymyQ": {
+    "defaultMessage": "Come check out {name} stream on tunestr.io! {link}"
+  },
+  "PXAur5": {
+    "defaultMessage": "Withdraw"
+  },
+  "Pc+tM3": {
+    "defaultMessage": "Generate"
   },
   "Pe0ogR": {
     "defaultMessage": "Theme"
   },
+  "PySFxG": {
+    "defaultMessage": "Choose file."
+  },
   "Q3au2v": {
     "defaultMessage": "প্রায় {estimate}"
+  },
+  "Q8Qw5B": {
+    "defaultMessage": "Description"
+  },
+  "QNvtaq": {
+    "defaultMessage": "Share on X"
   },
   "QRHNuF": {
     "defaultMessage": "আজকে আমরা কী স্ট্রিম করছি?"
@@ -260,8 +503,14 @@
   "Qe1MJu": {
     "defaultMessage": "{name} দ্বারা {amount}"
   },
-  "RJ2VxG": {
-    "defaultMessage": "A new version has been detected"
+  "Qf0ugr": {
+    "defaultMessage": "Here you have a few options, using our in-house hosting, or your own (such as Cloudflare)."
+  },
+  "R72je0": {
+    "defaultMessage": "Stream Title"
+  },
+  "RGYBjE": {
+    "defaultMessage": "Thumbnail"
   },
   "RJOmzk": {
     "defaultMessage": "আমি {provider} এর {terms} পড়েছি এবং এর সাথে সহমত প্রকাশ করছি।"
@@ -278,14 +527,30 @@
   "RtYNX5": {
     "defaultMessage": "Chat Users"
   },
+  "S39ba6": {
+    "defaultMessage": "What is OBS?"
+  },
+  "SC2nJT": {
+    "defaultMessage": "Audio Codec"
+  },
+  "TDUfVk": {
+    "defaultMessage": "Started"
+  },
   "TP/cMX": {
     "defaultMessage": "শেষ হয়েছে"
   },
-  "TaTRKo": {
-    "defaultMessage": "স্ট্রিম শুরু করুন"
+  "TcDwEB": {
+    "defaultMessage": "Stream Keys"
   },
   "TwyMau": {
     "defaultMessage": "অ্যাকাউন্ট"
+  },
+  "UCDS65": {
+    "defaultMessage": "ago",
+    "description": "Relative time, ie. 1s ago"
+  },
+  "UGFYV8": {
+    "defaultMessage": "Welcome to tunestr.io!"
   },
   "UJBFYK": {
     "defaultMessage": "কার্ড যুক্ত করুন"
@@ -293,23 +558,57 @@
   "UfSot5": {
     "defaultMessage": "বিগত স্ট্রিমগুলি"
   },
+  "Uo/DWG": {
+    "defaultMessage": "About too long"
+  },
   "VA/Z1S": {
     "defaultMessage": "লুকান"
   },
-  "Vn2WiP": {
-    "defaultMessage": "Get Stream Key"
+  "VDOpia": {
+    "defaultMessage": "What are zaps?"
+  },
+  "VKb1MS": {
+    "defaultMessage": "Categories"
   },
   "W7DNWx": {
     "defaultMessage": "Stream Forwarding"
   },
+  "W7IRLs": {
+    "defaultMessage": "Your title is too short"
+  },
   "W9355R": {
     "defaultMessage": "আনমিউট করুন"
+  },
+  "WVJZ0U": {
+    "defaultMessage": "Value",
+    "description": "Config value column header"
+  },
+  "WcZM+B": {
+    "defaultMessage": "File List"
+  },
+  "Wp4l7+": {
+    "defaultMessage": "More Videos"
+  },
+  "WsjXrZ": {
+    "defaultMessage": "Click on Log In"
   },
   "X2PZ7D": {
     "defaultMessage": "লক্ষ্য নির্ধারণ করুন"
   },
+  "XIvYvF": {
+    "defaultMessage": "Failed to get invoice"
+  },
+  "XMGfiA": {
+    "defaultMessage": "Recent Clips"
+  },
   "XgWvGA": {
     "defaultMessage": "Reactions"
+  },
+  "XmQZr5": {
+    "defaultMessage": "No keys"
+  },
+  "Xq2sb0": {
+    "defaultMessage": "To go live, copy and paste your Server URL and Stream Key below into your streaming software settings and press 'Start Streaming'. We recommend <a>OBS</a>."
   },
   "Y0DXJb": {
     "defaultMessage": "Recording URL"
@@ -318,20 +617,39 @@
     "defaultMessage": "@ {rate}",
     "description": "Showing zap amount in USD @ rate"
   },
-  "YagVIe": {
-    "defaultMessage": "{n}p"
+  "YjhNaf": {
+    "defaultMessage": "Create Stream"
   },
   "YwzT/0": {
     "defaultMessage": "Clip title"
   },
+  "YyXVHf": {
+    "defaultMessage": "Clear Draft"
+  },
   "Z8ZOEY": {
     "defaultMessage": "এই পদ্ধতিটি নিরাপদ নয়। আমরা একটি {nostrlink} ব্যবহারের পরামর্শ দিচ্ছি।"
+  },
+  "ZXp0z1": {
+    "defaultMessage": "Features"
+  },
+  "ZaNcK4": {
+    "defaultMessage": "No goals yet"
+  },
+  "ZcgtZo": {
+    "defaultMessage": "We've put together a list of easy-to-use exchanges that will allow you to buy a small amount of bitcoin (sats) and to transfer them to your wallet of choice."
   },
   "ZmqxZs": {
     "defaultMessage": "আপনি এটি পরে পরিবর্তন করতে পারবেন"
   },
+  "ZsYhvh": {
+    "defaultMessage": "Zaps are lightning payments, which are published on nostr as receipts."
+  },
   "Zse7yG": {
     "defaultMessage": "Raid target"
+  },
+  "aB/rH0": {
+    "defaultMessage": "{m}h {ago}",
+    "description": "Number of minute(s) relative to now"
   },
   "acrOoz": {
     "defaultMessage": "চালিয়ে যান"
@@ -339,11 +657,32 @@
   "aqjZxs": {
     "defaultMessage": "Raid!"
   },
+  "bD/ZwY": {
+    "defaultMessage": "Edit Cards"
+  },
+  "bbUGS7": {
+    "defaultMessage": "Recommended Stream Settings"
+  },
+  "bdH+0f": {
+    "defaultMessage": "Balance History"
+  },
   "bfvyfs": {
     "defaultMessage": "Anon"
   },
+  "c3LlRO": {
+    "defaultMessage": "{n}KiB"
+  },
   "cPIKU2": {
     "defaultMessage": "অনুসরণ করা হচ্ছে"
+  },
+  "ccXLVi": {
+    "defaultMessage": "Category"
+  },
+  "cg1VJ2": {
+    "defaultMessage": "Connect Wallet"
+  },
+  "cntHHJ": {
+    "defaultMessage": "This allows you to forward your stream to other platforms to reach a wider audience."
   },
   "cvAsEh": {
     "defaultMessage": "{date} তারিখে স্ট্রিম করা হয়েছে"
@@ -360,6 +699,13 @@
   "dVD/AR": {
     "defaultMessage": "শীর্ষ জ্যাপ প্রদানকারী"
   },
+  "dkUMIH": {
+    "defaultMessage": "Clip by {name}"
+  },
+  "e011kf": {
+    "defaultMessage": "FAQ",
+    "description": "Title: FAQ page"
+  },
   "ebmhes": {
     "defaultMessage": "নস্টার এক্সটেনশন"
   },
@@ -369,17 +715,26 @@
   "fBI91o": {
     "defaultMessage": "জ্যাপ"
   },
-  "fc2iho": {
-    "defaultMessage": "ফাইল যুক্ত করুন"
-  },
   "feZ/kG": {
     "defaultMessage": "ব্যক্তিগত চাবি দিয়ে লগ ইন করুন (অনিরাপদ)"
+  },
+  "g5pX+a": {
+    "defaultMessage": "About"
+  },
+  "gQxxlw": {
+    "defaultMessage": "Goal Name"
+  },
+  "gt65Gg": {
+    "defaultMessage": "Stream goals encourage viewers to support streamers via donations."
   },
   "gzsn7k": {
     "defaultMessage": "{n} messages"
   },
-  "hGQqkW": {
-    "defaultMessage": "সময়সূচী"
+  "h6NRY6": {
+    "defaultMessage": "No Thanks!"
+  },
+  "h9mX2/": {
+    "defaultMessage": "If you use our in-house tunestr.io hosting (cheapest and easiest), copy your stream URL and Stream Key to your OBS settings and you should be good to go."
   },
   "hMzcSq": {
     "defaultMessage": "Messages"
@@ -393,8 +748,17 @@
   "hzSNj4": {
     "defaultMessage": "Dashboard"
   },
+  "iKlloU": {
+    "defaultMessage": "Suggested Servers"
+  },
   "ieGrWo": {
     "defaultMessage": "অনুসরণ করুন"
+  },
+  "ieKb+k": {
+    "defaultMessage": "What does it cost to stream?"
+  },
+  "ipTKP3": {
+    "defaultMessage": "Chat Popout"
   },
   "itPgxd": {
     "defaultMessage": "প্রোফাইল"
@@ -405,11 +769,11 @@
   "j/jueq": {
     "defaultMessage": "Raiding {name}"
   },
+  "jDDeA0": {
+    "defaultMessage": "Your title is very long, please make sure its less than {n} chars."
+  },
   "jJLRgo": {
     "defaultMessage": "Publish Clip"
-  },
-  "jctiUc": {
-    "defaultMessage": "Highest Viewers"
   },
   "jgOqxt": {
     "defaultMessage": "Widgets"
@@ -426,8 +790,26 @@
   "k21gTS": {
     "defaultMessage": "যেমন: আমার সম্পর্কে"
   },
+  "kAEQyV": {
+    "defaultMessage": "OK"
+  },
+  "kGjqZ4": {
+    "defaultMessage": "Latest Shorts"
+  },
+  "kQAf2d": {
+    "defaultMessage": "Select"
+  },
+  "kc5EOy": {
+    "defaultMessage": "Username is too long"
+  },
+  "khJ51Q": {
+    "defaultMessage": "Stream Earnings"
+  },
   "kp0NPF": {
     "defaultMessage": "পরিকল্পিত"
+  },
+  "lXbG97": {
+    "defaultMessage": "Most Zapped Streamers"
   },
   "lZpRMR": {
     "defaultMessage": "এই স্ট্রিমটিতে নগ্নতা বা পর্নোগ্রাফিক আধেয় আছে কিনা তা এখানে পরীক্ষা করুন।"
@@ -441,8 +823,17 @@
   "mnJYBQ": {
     "defaultMessage": "কণ্ঠস্বর"
   },
-  "mtNGwh": {
-    "defaultMessage": "বিষয়বস্তুর একটি সংক্ষিপ্ত বিবরণ"
+  "mrwfXX": {
+    "defaultMessage": "Shares"
+  },
+  "msjwph": {
+    "defaultMessage": "Keyframe Interval"
+  },
+  "n19IQE": {
+    "defaultMessage": "Recommended size: 1920x1080 (16:9)"
+  },
+  "n8k1SG": {
+    "defaultMessage": "{n}MiB"
   },
   "nBCvvJ": {
     "defaultMessage": "টপআপ"
@@ -453,35 +844,48 @@
   "nwA8Os": {
     "defaultMessage": "কার্ড যুক্ত করুন"
   },
-  "o8pHw3": {
-    "defaultMessage": "AUTO"
-  },
   "oHPB8Q": {
     "defaultMessage": "জ্যাপ {name}"
   },
   "oZrFyI": {
     "defaultMessage": "স্ট্রিমের ধরন HLS হওয়া উচিত"
   },
+  "p4N05H": {
+    "defaultMessage": "Upload"
+  },
+  "pOeEMx": {
+    "defaultMessage": "Add server"
+  },
+  "pxF+t0": {
+    "defaultMessage": "Popular"
+  },
   "q+zTWM": {
     "defaultMessage": "<s>{person}</s> zapped <s>{amount}</s> sats"
+  },
+  "q9ryv4": {
+    "defaultMessage": "Cover image URL (optional)"
+  },
+  "qx6bv2": {
+    "defaultMessage": "Stream Goal (optional)"
   },
   "r2Jjms": {
     "defaultMessage": "লগ ইন করুন"
   },
-  "rELDbB": {
-    "defaultMessage": "Refresh"
+  "rJqhFR": {
+    "defaultMessage": "Stream Setup"
   },
   "rWBFZA": {
     "defaultMessage": "সামনে যৌনতাপূর্ণ উপাদান রয়েছে!"
   },
-  "rbrahO": {
-    "defaultMessage": "বন্ধ করুন"
-  },
-  "rfC1Zq": {
-    "defaultMessage": "কার্ড সংরক্ষণ করুন"
-  },
   "rgsbu9": {
     "defaultMessage": "বর্তমান দর্শক"
+  },
+  "rleUgy": {
+    "defaultMessage": "Uploading.."
+  },
+  "s+ORFl": {
+    "defaultMessage": "{m}d {ago}",
+    "description": "Number of day(s) relative to now"
   },
   "s5ksS7": {
     "defaultMessage": "ছবির লিংক"
@@ -492,14 +896,33 @@
   "sInm1h": {
     "defaultMessage": "জ্যাপ-বার্তা"
   },
+  "sj6WAe": {
+    "defaultMessage": "Click the “Stream” button in the top right corner"
+  },
+  "syEQFE": {
+    "defaultMessage": "Publish"
+  },
   "tG1ST3": {
     "defaultMessage": "আসন্ন জ্যাপ"
   },
   "tM6fNW": {
     "defaultMessage": "দারুণ! চালিয়ে যান.."
   },
+  "tNtB9I": {
+    "defaultMessage": "Name",
+    "description": "Config name column header"
+  },
+  "tTgdmx": {
+    "defaultMessage": "{n,selectordinal,one{@ #st min} two{@ #nd min} few{@ #rd min} other{@ #th min}}"
+  },
+  "tVCC9m": {
+    "defaultMessage": "Sats are small units of Bitcoin. Sending sats on tunestr.io is referred to as “zapping” or zaps."
+  },
   "thsiMl": {
     "defaultMessage": "শর্তাবলী"
+  },
+  "twCRVi": {
+    "defaultMessage": "Art"
   },
   "tzMNF3": {
     "defaultMessage": "স্ট্যাটাস"
@@ -510,14 +933,32 @@
   "uYw2LD": {
     "defaultMessage": "স্ট্রিম"
   },
+  "ug01Mk": {
+    "defaultMessage": "Time"
+  },
+  "uksRSi": {
+    "defaultMessage": "Latest Videos"
+  },
+  "vP4dFa": {
+    "defaultMessage": "Visit {link} to get some sweet tunestr.io merch!"
+  },
   "vrTOHJ": {
     "defaultMessage": "{amount} পরিমাণ স্যাট"
+  },
+  "w+2Vw7": {
+    "defaultMessage": "Shorts"
   },
   "w0Xm2F": {
     "defaultMessage": "লেখা শুরু করুন"
   },
+  "w3btjR": {
+    "defaultMessage": "Gambling"
+  },
   "wCIL7o": {
     "defaultMessage": "নস্টারে সম্প্রচার করুন"
+  },
+  "wCgTu5": {
+    "defaultMessage": "Comments"
   },
   "wEQDC6": {
     "defaultMessage": "সম্পাদনা"
@@ -525,20 +966,54 @@
   "wMKVFz": {
     "defaultMessage": "কণ্ঠস্বর নির্বাচন করুন..."
   },
-  "wOy57k": {
-    "defaultMessage": "স্ট্রিমের লক্ষ্য সংযুক্ত করুন"
+  "wRGjPp": {
+    "defaultMessage": "A nostr extension simply saves your keys so you can safely log in without having to re-enter them every time. Tunestr uses the extension to authorize actions on your behalf without ever seeing your key information. This has a significant advantage over having to trust that websites handle your credentials safely."
   },
-  "wzWWzV": {
-    "defaultMessage": "শীর্ষ জ্যাপ প্রদানকারী"
+  "wTwfnv": {
+    "defaultMessage": "Invalid nostr address"
+  },
+  "we4Lby": {
+    "defaultMessage": "Info"
   },
   "x82IOl": {
     "defaultMessage": "নিঃশব্দ করুন"
   },
+  "xhQMeQ": {
+    "defaultMessage": "Expires"
+  },
+  "xi3sgh": {
+    "defaultMessage": "How do i get more sats?"
+  },
+  "xmcVZ0": {
+    "defaultMessage": "Search"
+  },
   "y867Vs": {
     "defaultMessage": "ভলিউম"
   },
+  "y8ogtp": {
+    "defaultMessage": "{m}w {ago}",
+    "description": "Number of week(s) relative to now"
+  },
+  "yLxIgl": {
+    "defaultMessage": "Clips"
+  },
+  "yR0V+W": {
+    "defaultMessage": "To start streaming on tunestr.io, follow these steps:"
+  },
+  "yj8NrY": {
+    "defaultMessage": "Clip"
+  },
   "yzKwBQ": {
     "defaultMessage": "যেমন: nsec1xyz"
+  },
+  "z2qCcJ": {
+    "defaultMessage": "Max Video Bitrate"
+  },
+  "zEYkgY": {
+    "defaultMessage": "Talk"
+  },
+  "zSYDJP": {
+    "defaultMessage": "I have my own stream host"
   },
   "zVDHAu": {
     "defaultMessage": "জ্যাপ অ্যালার্ট"

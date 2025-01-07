@@ -1,122 +1,20 @@
-import "./stream-page.css";
 import { NostrLink, TaggedNostrEvent } from "@snort/system";
-import { useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { NostrEvent } from "@snort/system";
-import { SnortContext, useUserProfile } from "@snort/system-react";
-import { FormattedMessage } from "react-intl";
-import { Suspense, lazy, useContext } from "react";
+import { Suspense, lazy } from "react";
+import { useMediaQuery } from "usehooks-ts";
 
-const LiveVideoPlayer = lazy(() => import("@/element/live-video-player"));
-import { extractStreamInfo, findTag, getEventFromLocationState, getHost } from "@/utils";
-import { Profile, getName } from "@/element/profile";
-import { LiveChat } from "@/element/live-chat";
-import AsyncButton from "@/element/async-button";
-import { useLogin } from "@/hooks/login";
+const LiveVideoPlayer = lazy(() => import("@/element/stream/live-video-player"));
+import { extractStreamInfo, getHost } from "@/utils";
+import { LiveChat } from "@/element/chat/live-chat";
 import { useZapGoal } from "@/hooks/goals";
-import { SendZapsDialog } from "@/element/send-zap";
-import { NewStreamDialog } from "@/element/new-stream";
-import { Tags } from "@/element/tags";
-import { StatePill } from "@/element/state-pill";
 import { StreamCards } from "@/element/stream-cards";
-import { formatSats } from "@/number";
-import { StreamTimer } from "@/element/stream-time";
-import { ShareMenu } from "@/element/share-menu";
-import { ContentWarningOverlay, isContentWarningAccepted } from "@/element/content-warning";
+import { ContentWarningOverlay, useContentWarning } from "@/element/nsfw";
 import { useCurrentStreamFeed } from "@/hooks/current-stream-feed";
-import { useStreamLink } from "@/hooks/stream-link";
-import { FollowButton } from "@/element/follow-button";
-import { ClipButton } from "@/element/clip-button";
-import { StreamState } from "@/const";
-import { NotificationsButton } from "@/element/notifications-button";
+import { LIVE_STREAM, StreamState } from "@/const";
+import { StreamInfo } from "@/element/stream/stream-info";
+import { StreamContextProvider } from "@/element/stream/stream-state";
 
-function ProfileInfo({ ev, goal }: { ev?: TaggedNostrEvent; goal?: TaggedNostrEvent }) {
-  const system = useContext(SnortContext);
-  const login = useLogin();
-  const navigate = useNavigate();
-  const host = getHost(ev);
-  const profile = useUserProfile(host);
-  const zapTarget = profile?.lud16 ?? profile?.lud06;
-
-  const { status, participants, title, summary, service } = extractStreamInfo(ev);
-  const isMine = ev?.pubkey === login?.pubkey;
-
-  async function deleteStream() {
-    const pub = login?.publisher();
-    if (pub && ev) {
-      const evDelete = await pub.delete(ev.id);
-      console.debug(evDelete);
-      await system.BroadcastEvent(evDelete);
-      navigate("/");
-    }
-  }
-
-  const viewers = Number(participants ?? "0");
-  return (
-    <>
-      <div className="flex gap-2 max-lg:px-2 max-xl:flex-col">
-        <div className="grow flex flex-col gap-2 max-xl:hidden">
-          <h1>{title}</h1>
-          <p>{summary}</p>
-          <div className="tags">
-            <StatePill state={status as StreamState} />
-            <span className="pill bg-indigo-950">
-              <FormattedMessage defaultMessage="{n} viewers" id="3adEeb" values={{ n: formatSats(viewers) }} />
-            </span>
-            {status === StreamState.Live && (
-              <span className="pill bg-indigo-950">
-                <StreamTimer ev={ev} />
-              </span>
-            )}
-            {ev && <Tags ev={ev} />}
-          </div>
-          {isMine && (
-            <div className="actions">
-              {ev && <NewStreamDialog text="Edit" ev={ev} btnClassName="btn rounded-xl" />}
-              <AsyncButton type="button" className="btn btn-warning" onClick={deleteStream}>
-                <FormattedMessage defaultMessage="Delete" id="K3r6DQ" />
-              </AsyncButton>
-            </div>
-          )}
-        </div>
-        <div className="flex justify-between sm:gap-4 max-sm:gap-2 nowrap max-md:flex-col lg:items-center">
-          <Profile pubkey={host ?? ""} />
-          <div className="flex gap-2">
-            <FollowButton pubkey={host} hideWhenFollowing={true} />
-            {ev && (
-              <>
-                <ShareMenu ev={ev} />
-                <ClipButton ev={ev} />
-                {service && <NotificationsButton host={host} service={service} />}
-                {zapTarget && (
-                  <SendZapsDialog
-                    lnurl={zapTarget}
-                    pubkey={host}
-                    aTag={`${ev.kind}:${ev.pubkey}:${findTag(ev, "d")}`}
-                    eTag={goal?.id}
-                    targetName={getName(ev.pubkey, profile)}
-                  />
-                )}
-              </>
-            )}
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
-
-export function StreamPageHandler() {
-  const location = useLocation();
-  const evPreload = getEventFromLocationState(location.state);
-  const link = useStreamLink();
-
-  if (link) {
-    return <StreamPage link={link} evPreload={evPreload} />;
-  }
-}
-
-export function StreamPage({ link, evPreload }: { evPreload?: NostrEvent; link: NostrLink }) {
+export function StreamPage({ link, evPreload }: { evPreload?: TaggedNostrEvent; link: NostrLink }) {
   const ev = useCurrentStreamFeed(link, true, evPreload);
   const host = getHost(ev);
   const evLink = ev ? NostrLink.fromEvent(ev) : undefined;
@@ -132,8 +30,10 @@ export function StreamPage({ link, evPreload }: { evPreload?: NostrEvent; link: 
     goal: goalTag,
   } = extractStreamInfo(ev);
   const goal = useZapGoal(goalTag);
+  const isDesktop = useMediaQuery("(min-width: 1280px)");
+  const isGrownUp = useContentWarning();
 
-  if (contentWarning && !isContentWarningAccepted()) {
+  if (contentWarning && !isGrownUp) {
     return <ContentWarningOverlay />;
   }
 
@@ -143,36 +43,45 @@ export function StreamPage({ link, evPreload }: { evPreload?: NostrEvent; link: 
     ...(tags ?? []),
   ].join(", ");
   return (
-    <div className="stream-page full-page-height">
-      <Helmet>
-        <title>{`${title} - Tunestr`}</title>
-        <meta name="description" content={descriptionContent} />
-        <meta property="og:url" content={`https://${window.location.host}/${link.encode()}`} />
-        <meta property="og:type" content="video" />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={descriptionContent} />
-        <meta property="og:image" content={image ?? ""} />
-      </Helmet>
-      <div className="video-content">
-        <Suspense>
-          <LiveVideoPlayer
-            title={title}
-            stream={status === StreamState.Live ? stream : recording}
-            poster={image}
-            status={status}
-          />
-        </Suspense>
-        <ProfileInfo ev={ev} goal={goal} />
-        <StreamCards host={host} />
+    <StreamContextProvider link={link}>
+      <div className="xl:grid xl:grid-cols-[auto_450px] 2xl:xl:grid-cols-[auto_500px] max-xl:flex max-xl:flex-col xl:gap-4 max-xl:gap-1 h-full">
+        <Helmet>
+          <title>{`${title ?? "Untitled"} - tunestr.io`}</title>
+          <meta name="description" content={descriptionContent} />
+          <meta property="og:url" content={`https://${window.location.host}/${link.encode()}`} />
+          <meta property="og:type" content="video" />
+          <meta property="og:title" content={title ?? "Untitled"} />
+          <meta property="og:description" content={descriptionContent} />
+          <meta property="og:image" content={image ?? ""} />
+        </Helmet>
+        <div className="flex flex-col gap-2 xl:overflow-y-auto scrollbar-hidden">
+          <Suspense>
+            {ev?.kind === LIVE_STREAM && evLink && (
+              <LiveVideoPlayer
+                title={title}
+                stream={status === StreamState.Live ? stream : recording}
+                poster={image}
+                status={status}
+                link={evLink}
+                className="max-xl:max-h-[30vh] xl:w-full xl:max-h-[85dvh] mx-auto"
+              />
+            )}
+          </Suspense>
+          <div className="lg:px-5 max-lg:px-2">
+            <StreamInfo ev={ev as TaggedNostrEvent} goal={goal} />
+            {isDesktop && <StreamCards host={host} />}
+          </div>
+        </div>
+        <LiveChat
+          link={evLink ?? link}
+          ev={ev}
+          goal={goal}
+          canWrite={status === StreamState.Live}
+          adjustLayout={!isDesktop}
+          showGoal={true}
+          className="min-h-0 xl:border xl:border-layer-2 xl:rounded-xl xl:p-3 max-xl:px-2 h-inherit"
+        />
       </div>
-      <LiveChat
-        link={evLink ?? link}
-        ev={ev}
-        goal={goal}
-        options={{
-          canWrite: status === StreamState.Live,
-        }}
-      />
-    </div>
+    </StreamContextProvider>
   );
 }

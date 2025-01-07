@@ -1,0 +1,116 @@
+.fullscreen-exclusive {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: #0a0a0a;
+}
+
+.age-check {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.age-check::after {
+  content: " ";
+  background: url("/zap-stream.svg") no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: calc(100vw - 40px);
+  height: calc(100vh - 40px);
+  z-index: -1;
+  opacity: 0.02;
+}
+
+.tnum {
+  font-feature-settings: "tnum";
+}
+
+.fi {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  background-size: cover;
+}
+.fi:before {
+  content: "\00a0";
+}
+
+/* [DefaultLocale, "de-DE", "es-ES", "th-TH", "nl-NL", "ja-JP", "fa-IR", "sw-KE", "sv-SE"]; */
+.fi-us {
+  background-image: url("flag-icons/flags/1x1/us.svg");
+}
+.fi-de {
+  background-image: url("flag-icons/flags/1x1/de.svg");
+}
+.fi-es {
+  background-image: url("flag-icons/flags/1x1/es.svg");
+}
+.fi-th {
+  background-image: url("flag-icons/flags/1x1/th.svg");
+}
+.fi-nl {
+  background-image: url("flag-icons/flags/1x1/nl.svg");
+}
+.fi-jp {
+  background-image: url("flag-icons/flags/1x1/jp.svg");
+}
+.fi-ir {
+  background-image: url("flag-icons/flags/1x1/ir.svg");
+}
+.fi-ke {
+  background-image: url("flag-icons/flags/1x1/ke.svg");
+}
+.fi-se {
+  background-image: url("flag-icons/flags/1x1/se.svg");
+}
+.fi-bg {
+  background-image: url("flag-icons/flags/1x1/bg.svg");
+}
+.fi-bd {
+  background-image: url("flag-icons/flags/1x1/bd.svg");
+}
+.fi-cn {
+  background-image: url("flag-icons/flags/1x1/cn.svg");
+}
+.fi-tw {
+  background-image: url("flag-icons/flags/1x1/tw.svg");
+}
+.fi-fi {
+  background-image: url("flag-icons/flags/1x1/fi.svg");
+}
+.fi-fr {
+  background-image: url("flag-icons/flags/1x1/fr.svg");
+}
+.fi-br {
+  background-image: url("flag-icons/flags/1x1/br.svg");
+}
+.fi-ru {
+  background-image: url("flag-icons/flags/1x1/ru.svg");
+}
+.fi-sa {
+  background-image: url("flag-icons/flags/1x1/sa.svg");
+}
+.fi-it {
+  background-image: url("flag-icons/flags/1x1/it.svg");
+}
+.fi-kr {
+  background-image: url("flag-icons/flags/1x1/kr.svg");
+}
+.fi-dk {
+  background-image: url("flag-icons/flags/1x1/dk.svg");
+}
+.fi-hu {
+  background-image: url("flag-icons/flags/1x1/hu.svg");
+}

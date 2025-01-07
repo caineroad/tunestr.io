@@ -5,87 +5,140 @@ import "./index.css";
 
 import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
-import { NostrSystem } from "@snort/system";
+import { EventBuilder, NostrSystem } from "@snort/system";
 import { SnortContext } from "@snort/system-react";
-import { SnortSystemDb } from "@snort/system-web";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { unixNowMs } from "@snort/shared";
 
 import { RootPage } from "@/pages/root";
 import { TagPage } from "@/pages/tag";
 import { LayoutPage } from "@/pages/layout";
 import { ProfilePage } from "@/pages/profile-page";
-import { StreamPageHandler } from "@/pages/stream-page";
 import { ChatPopout } from "@/pages/chat-popout";
-import { LoginStore } from "@/login";
-import { StreamProvidersPage } from "@/pages/providers";
 import { defaultRelays } from "@/const";
 import { CatchAllRoutePage } from "@/pages/catch-all";
-import { SettingsPage } from "@/pages/settings-page";
-import { register } from "@/serviceWorker";
 import { IntlProvider } from "@/intl";
 import { WidgetsPage } from "@/pages/widgets";
 import { AlertsPage } from "@/pages/alerts";
 import { StreamSummaryPage } from "@/pages/summary";
+import { EmbededPage } from "./pages/embed";
+import { WasmOptimizer, WasmPath, wasmInit } from "./wasm";
 const DashboardPage = lazy(() => import("./pages/dashboard"));
+import { syncClock } from "./time-sync";
+import SettingsPage from "./pages/settings";
+import AccountSettingsTab from "./pages/settings/account";
+import SearchPage from "./pages/search";
+import ProfileSettings from "./pages/settings/profile";
+import CategoryPage from "./pages/category";
+import { WorkerRelayInterface } from "@snort/worker-relay";
+import WorkerVite from "@snort/worker-relay/src/worker?worker";
+import FaqPage from "./pages/faq";
+import DashboardIntroStep1 from "./pages/dashboard/intro/step1";
+import DashboardIntroStep2 from "./pages/dashboard/intro/step2";
+import DashboardIntroStep3 from "./pages/dashboard/intro/step3";
+import DashboardIntroStep4 from "./pages/dashboard/intro/step4";
+import DashboardIntroFinal from "./pages/dashboard/intro/final";
+import { LayoutContextProvider } from "./pages/layout/context";
+import { VideosPage } from "./pages/videos";
+import { LinkHandler } from "./pages/link-handler";
+import { UploadPage } from "./pages/upload";
+import { DebugPage } from "./pages/debug";
+import { ShortsPage } from "./pages/shorts";
+import { StreamsPage } from "./pages/streams";
 
-const db = new SnortSystemDb();
+const hasWasm = "WebAssembly" in globalThis;
+const workerRelay = new WorkerRelayInterface(
+  import.meta.env.DEV ? new URL("@snort/worker-relay/dist/esm/worker.mjs", import.meta.url) : new WorkerVite(),
+);
+EventBuilder.ClientTag = ["client", "tunestr.io", __TUNESTR_IO_VERSION__];
 const System = new NostrSystem({
-  db,
-  checkSigs: false,
+  optimizer: hasWasm ? WasmOptimizer : undefined,
+  cachingRelay: workerRelay,
 });
-export const Login = new LoginStore();
-
-register();
+System.on("event", (_, ev) => {
+  workerRelay.event(ev);
+});
 
 Object.entries(defaultRelays).forEach(params => {
   const [relay, settings] = params;
   System.ConnectToRelay(relay, settings);
 });
 
-export let TimeSync = 0;
+let hasInit = false;
+async function doInit() {
+  if (hasInit) return;
+  hasInit = true;
+  if (hasWasm) {
+    await wasmInit(WasmPath);
+  }
+  try {
+    await workerRelay.init({
+      databasePath: "relay.db",
+      insertBatchSize: 100,
+    });
+  } catch (e) {
+    console.error(e);
+  }
+  await System.Init();
+  syncClock();
+}
 
 const router = createBrowserRouter([
   {
     element: <LayoutPage />,
     loader: async () => {
-      db.ready = await db.isAvailable();
-      await System.Init();
-      try {
-        const req = await fetch("https://api.zap.stream/api/time");
-        const nowAtServer = (await req.json()).time as number;
-        const now = unixNowMs();
-        TimeSync = now - nowAtServer;
-        console.debug("Time clock sync", TimeSync);
-      } catch {
-        // ignore
-      }
+      await doInit();
       return null;
     },
     children: [
       {
+        path: "/debug",
+        element: <DebugPage />,
+      },
+      {
         path: "/",
         element: <RootPage />,
+      },
+      {
+        path: "/streams",
+        element: <StreamsPage />,
+      },
+      {
+        path: "/videos",
+        element: <VideosPage />,
+      },
+      {
+        path: "/shorts",
+        element: <ShortsPage />,
+      },
+      {
+        path: "/upload",
+        element: <UploadPage />,
       },
       {
         path: "/t/:tag",
         element: <TagPage />,
       },
       {
-        path: "/p/:npub",
+        path: "/p/:id",
         element: <ProfilePage />,
       },
       {
         path: "/:id",
-        element: <StreamPageHandler />,
-      },
-      {
-        path: "/providers/:id?",
-        element: <StreamProvidersPage />,
+        element: <LinkHandler />,
       },
       {
         path: "/settings",
         element: <SettingsPage />,
+        children: [
+          {
+            path: "",
+            element: <AccountSettingsTab />,
+          },
+          {
+            path: "profile",
+            element: <ProfileSettings />,
+          },
+        ],
       },
       {
         path: "/widgets",
@@ -96,12 +149,44 @@ const router = createBrowserRouter([
         element: <StreamSummaryPage />,
       },
       {
-        path: "/dashboard",
+        path: "/dashboard/:id?",
         element: (
           <Suspense>
             <DashboardPage />
           </Suspense>
         ),
+      },
+      {
+        path: "/dashboard/step-1",
+        element: <DashboardIntroStep1 />,
+      },
+      {
+        path: "/dashboard/step-2",
+        element: <DashboardIntroStep2 />,
+      },
+      {
+        path: "/dashboard/step-3",
+        element: <DashboardIntroStep3 />,
+      },
+      {
+        path: "/dashboard/step-4",
+        element: <DashboardIntroStep4 />,
+      },
+      {
+        path: "/dashboard/final",
+        element: <DashboardIntroFinal />,
+      },
+      {
+        path: "/search/:term?",
+        element: <SearchPage />,
+      },
+      {
+        path: "/category/:id?",
+        element: <CategoryPage />,
+      },
+      {
+        path: "/faq",
+        element: <FaqPage />,
       },
       {
         path: "*",
@@ -113,8 +198,7 @@ const router = createBrowserRouter([
     path: "/chat/:id",
     element: <ChatPopout />,
     loader: async () => {
-      db.ready = await db.isAvailable();
-      await System.Init();
+      await doInit();
       return null;
     },
   },
@@ -122,8 +206,15 @@ const router = createBrowserRouter([
     path: "/alert/:id/:type",
     element: <AlertsPage />,
     loader: async () => {
-      db.ready = await db.isAvailable();
-      await System.Init();
+      await doInit();
+      return null;
+    },
+  },
+  {
+    path: "/embed/:id",
+    element: <EmbededPage />,
+    loader: async () => {
+      await doInit();
       return null;
     },
   },
@@ -133,8 +224,10 @@ root.render(
   <React.StrictMode>
     <SnortContext.Provider value={System}>
       <IntlProvider>
-        <RouterProvider router={router} />
+        <LayoutContextProvider>
+          <RouterProvider router={router} />
+        </LayoutContextProvider>
       </IntlProvider>
     </SnortContext.Provider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );

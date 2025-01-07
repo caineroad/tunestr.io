@@ -1,98 +1,59 @@
-import "./file-uploader.css";
-import type { ChangeEvent } from "react";
-import { VoidApi } from "@void-cat/api";
-import { useState } from "react";
 import { FormattedMessage } from "react-intl";
-import AsyncButton from "./async-button";
-
-const voidCatHost = "https://void.cat";
-const fileExtensionRegex = /\.([\w]{1,7})$/i;
-const voidCatApi = new VoidApi(voidCatHost);
-
-type UploadResult = {
-  url?: string;
-  error?: string;
-};
-
-async function voidCatUpload(file: File): Promise<UploadResult> {
-  const uploader = voidCatApi.getUploader(file);
-
-  const rsp = await uploader.upload({
-    "V-Strip-Metadata": "true",
-  });
-  if (rsp.ok) {
-    let ext = file.name.match(fileExtensionRegex);
-    if (rsp.file?.metadata?.mimeType === "image/webp") {
-      ext = ["", "webp"];
-    }
-    const resultUrl = rsp.file?.metadata?.url ?? `${voidCatHost}/d/${rsp.file?.id}${ext ? `.${ext[1]}` : ""}`;
-
-    const ret = {
-      url: resultUrl,
-    } as UploadResult;
-
-    return ret;
-  } else {
-    return {
-      error: rsp.errorMessage,
-    };
-  }
-}
+import { Layer2Button } from "./buttons";
+import { openFile } from "@/utils";
+import { Icon } from "./icon";
+import { useMediaServerList } from "@/hooks/media-servers";
+import { Nip96Server } from "@/service/upload/nip96";
+import { useLogin } from "@/hooks/login";
+import { ReactNode } from "react";
+import { EventPublisher } from "@snort/system";
 
 interface FileUploaderProps {
-  defaultImage?: string;
-  onClear(): void;
-  onFileUpload(url: string): void;
+  onResult(url: string | undefined): void;
+  onError(e: string | Error): void;
+  children?: ReactNode;
+  className?: string;
+  publisher?: EventPublisher;
 }
 
-export function FileUploader({ defaultImage, onClear, onFileUpload }: FileUploaderProps) {
-  const [img, setImg] = useState<string>(defaultImage ?? "");
-  const [isUploading, setIsUploading] = useState(false);
+export function FileUploader({ onResult, onError, children, className, publisher }: FileUploaderProps) {
+  const servers = useMediaServerList();
+  const pub = publisher ?? useLogin()?.publisher?.();
 
-  async function onFileChange(ev: ChangeEvent<HTMLInputElement>) {
-    const file = ev.target.files && ev.target.files[0];
-    if (file) {
+  async function uploadFile(e: React.MouseEvent) {
+    e.stopPropagation();
+    const file = await openFile();
+    if (file && pub) {
       try {
-        setIsUploading(true);
-        const upload = await voidCatUpload(file);
+        const server = new Nip96Server(servers.servers[0], pub);
+        const upload = await server.upload(file, file.name);
         if (upload.url) {
-          setImg(upload.url);
-          onFileUpload(upload.url);
+          onResult(upload.url);
         }
         if (upload.error) {
-          console.error(upload.error);
+          onError(upload.error);
         }
       } catch (error) {
-        console.error(error);
-      } finally {
-        setIsUploading(false);
+        if (error instanceof Error) {
+          onError(error);
+        } else {
+          onError(new Error("Unknown error"));
+        }
       }
     }
   }
 
-  function clearImage() {
-    setImg("");
-    onClear();
-  }
-
-  return (
-    <div className="file-uploader-container">
-      <label className="file-uploader">
-        <input type="file" onChange={onFileChange} />
-        {isUploading ? (
-          <FormattedMessage defaultMessage="Uploading..." id="JEsxDw" />
-        ) : (
-          <FormattedMessage defaultMessage="Add File" id="fc2iho" />
-        )}
-      </label>
-      <div className="file-uploader-preview">
-        {img?.length > 0 && (
-          <AsyncButton className="btn btn-primary clear-button" onClick={clearImage}>
-            <FormattedMessage defaultMessage="Clear" id="/GCoTA" />
-          </AsyncButton>
-        )}
-        {img && <img className="image-preview" src={img} />}
+  if (children) {
+    return (
+      <div onClick={uploadFile} className={className}>
+        {children}
       </div>
-    </div>
+    );
+  }
+  return (
+    <Layer2Button onClick={uploadFile} className={className}>
+      <FormattedMessage defaultMessage="Upload" />
+      <Icon name="upload" size={14} />
+    </Layer2Button>
   );
 }

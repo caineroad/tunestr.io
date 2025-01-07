@@ -1,0 +1,39 @@
+.rta {
+  display: flex;
+}
+.rta__textarea {
+  resize: none !important;
+}
+.rta__list {
+  border: none;
+}
+.rta__item:not(:last-child) {
+  border: none;
+}
+.rta__entity--selected .emoji-item {
+  text-decoration: none;
+}
+
+.emoji-item,
+.user-item {
+  color: white;
+  @apply bg-layer-2;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.emoji-item:hover,
+.user-item:hover {
+  @apply text-layer-2;
+  background: white;
+}
+
+.user-image {
+  width: 21px;
+  height: 21px;
+  border-radius: 100%;
+}
