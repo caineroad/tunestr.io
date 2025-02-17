@@ -1,4 +1,4 @@
-import { VIDEO_KIND } from "@/const";
+import { OLD_VIDEO_KIND, VIDEO_KIND } from "@/const";
 import VideoGrid from "@/element/video-grid";
 import { findTag, getHost } from "@/utils";
 import { NostrLink, RequestBuilder } from "@snort/system";
@@ -13,7 +13,7 @@ export function VideosPage() {
   const publishers = JSON.parse(import.meta.env.VITE_SINGLE_PUBLISHER);
 
   const rb = new RequestBuilder("videos");
-  rb.withFilter().kinds([VIDEO_KIND]).authors(publishers);
+  rb.withFilter().kinds([VIDEO_KIND, OLD_VIDEO_KIND]);
 
   const videos = useRequestBuilder(rb);
 
@@ -24,8 +24,8 @@ export function VideosPage() {
       return (login?.state?.muted.length ?? 0) === 0 || !login?.state?.muted.some(a => a.equals(link));
     })
     .sort((a, b) => {
-      const pubA = findTag(a, "published_at");
-      const pubB = findTag(b, "published_at");
+      const pubA = findTag(a, "published_at") ?? a.created_at;
+      const pubB = findTag(b, "published_at") ?? b.created_at;
       return Number(pubA) > Number(pubB) ? -1 : 1;
     });
 
