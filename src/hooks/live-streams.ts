@@ -1,23 +1,32 @@
 import { useMemo } from "react";
 import { RequestBuilder } from "@snort/system";
 import { useRequestBuilder } from "@snort/system-react";
-import { LIVE_STREAM } from "@/const";
+import { LIVE_STREAM, WHITELIST } from "@/const";
 
 export function useStreamsFeed(tag?: string) {
   const liveStreamKinds = [LIVE_STREAM];
-  const publishers = JSON.parse(import.meta.env.VITE_SINGLE_PUBLISHER);
   const rb = useMemo(() => {
     const rb = new RequestBuilder(tag ? `streams:${tag}` : "streams");
     rb.withOptions({
       leaveOpen: true,
     });
-    if (import.meta.env.VITE_SINGLE_PUBLISHER) {
+    if (WHITELIST) {
       if (tag) {
-        rb.withFilter().kinds(liveStreamKinds).tag("t", [tag]).authors(publishers);
-        rb.withFilter().kinds(liveStreamKinds).tag("t", [tag]).tag("p", publishers);
+        rb.withFilter()
+          .kinds(liveStreamKinds)
+          .tag("t", [tag])
+          .authors(WHITELIST);
+        rb.withFilter()
+          .kinds(liveStreamKinds)
+          .tag("t", [tag])
+          .tag("p", WHITELIST);
       } else {
-        rb.withFilter().kinds(liveStreamKinds).authors(publishers);
-        rb.withFilter().kinds(liveStreamKinds).tag("p", publishers);
+        rb.withFilter()
+          .kinds(liveStreamKinds)
+          .authors(WHITELIST);
+        rb.withFilter()
+          .kinds(liveStreamKinds)
+          .tag("p", WHITELIST);
       }
     } else {
       if (tag) {

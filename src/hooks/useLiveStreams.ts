@@ -1,4 +1,4 @@
-import { DAY, LIVE_STREAM, StreamState } from "@/const";
+import { DAY, LIVE_STREAM, StreamState, WHITELIST } from "@/const";
 import { findTag, getHost } from "@/utils";
 import { unixNow } from "@snort/shared";
 import { NostrEvent, TaggedNostrEvent } from "@snort/system";
@@ -15,14 +15,11 @@ export function useSortedStreams(feed: Array<TaggedNostrEvent>, oldest?: number)
     return bStart > aStart ? 1 : -1;
   }
 
-  const publishers = JSON.parse(import.meta.env.VITE_SINGLE_PUBLISHER);
   const feedSorted = useMemo(() => {
     if (feed) {
-      return (
-        feed
-          // .filter(a => a.created_at > (oldest ?? unixNow() - 7 * DAY))
-          .filter(a => publishers.includes(getHost(a)))
-      );
+      return feed
+        //.filter(a => a.created_at > (oldest ?? unixNow() - 7 * DAY))
+        .filter(a => !WHITELIST || WHITELIST.includes(getHost(a)));
     }
     return [];
   }, [feed]);
