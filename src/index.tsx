@@ -2,7 +2,6 @@ import "@szhsin/react-menu/dist/index.css";
 import "./index.css";
 //import "./fonts/outfit/outfit.css";
 
-
 import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import { EventBuilder, NostrSystem } from "@snort/system";

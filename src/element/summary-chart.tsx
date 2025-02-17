@@ -88,8 +88,8 @@ export default function StreamSummary({ link, preload }: { link: NostrLink; prel
   const { title, summary, status, starts } = extractStreamInfo(ev);
 
   const Day = 60 * 60 * 24;
-  const startTime = starts ? Number(starts) : ev?.created_at ?? unixNow();
-  const endTime = status === StreamState.Live ? unixNow() : ev?.created_at ?? unixNow();
+  const startTime = starts ? Number(starts) : (ev?.created_at ?? unixNow());
+  const endTime = status === StreamState.Live ? unixNow() : (ev?.created_at ?? unixNow());
 
   const streamLength = endTime - startTime;
   const windowSize = streamLength > Day ? Day : 60 * 10;

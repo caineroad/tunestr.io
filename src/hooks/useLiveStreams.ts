@@ -18,9 +18,11 @@ export function useSortedStreams(feed: Array<TaggedNostrEvent>, oldest?: number)
   const publishers = JSON.parse(import.meta.env.VITE_SINGLE_PUBLISHER);
   const feedSorted = useMemo(() => {
     if (feed) {
-      return feed
-        // .filter(a => a.created_at > (oldest ?? unixNow() - 7 * DAY))
-        .filter(a => publishers.includes(getHost(a)));
+      return (
+        feed
+          // .filter(a => a.created_at > (oldest ?? unixNow() - 7 * DAY))
+          .filter(a => publishers.includes(getHost(a)))
+      );
     }
     return [];
   }, [feed]);

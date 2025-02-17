@@ -57,7 +57,7 @@ export function HeaderNav() {
 
     return (
       <div className="flex gap-2 items-center pr-4 py-1">
-        {(publishers.includes(login.pubkey)) && (
+        {publishers.includes(login.pubkey) && (
           <Menu
             menuClassName="ctx-menu"
             menuButton={

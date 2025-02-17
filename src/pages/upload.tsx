@@ -494,7 +494,7 @@ export function UploadPage() {
                     `${url.protocol}//${url.host}/`,
                     f,
                     meta,
-                    meta.mimeType?.startsWith("image/") ?? false ? "thumb" : "video",
+                    (meta.mimeType?.startsWith("image/") ?? false) ? "thumb" : "video",
                   );
                 }
               });

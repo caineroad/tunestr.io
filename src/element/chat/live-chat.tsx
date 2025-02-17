@@ -261,7 +261,7 @@ export function ChatZap({ zap }: { zap: ParsedZap }) {
             s: c => <span className="text-zap">{c}</span>,
             person: (
               <Profile
-                pubkey={zap.anonZap ? "anon" : zap.sender ?? ""}
+                pubkey={zap.anonZap ? "anon" : (zap.sender ?? "")}
                 options={{
                   showAvatar: !zap.anonZap,
                 }}

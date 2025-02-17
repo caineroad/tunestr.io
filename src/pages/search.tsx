@@ -19,7 +19,12 @@ export default function SearchPage() {
   const sub = useMemo(() => {
     const rb = new RequestBuilder(`search:${term}`);
     if (term) {
-      rb.withFilter().relay(SearchRelays).kinds([EventKind.LiveEvent, VIDEO_KIND]).authors(publishers).search(term).limit(50);
+      rb.withFilter()
+        .relay(SearchRelays)
+        .kinds([EventKind.LiveEvent, VIDEO_KIND])
+        .authors(publishers)
+        .search(term)
+        .limit(50);
     }
     return rb;
   }, [term]);

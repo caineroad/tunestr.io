@@ -56,6 +56,9 @@
   "1LBny5": {
     "defaultMessage": "Stopped"
   },
+  "1bTsnV": {
+    "defaultMessage": "To start streaming on tunestr.io, follow these steps:"
+  },
   "1q4BO/": {
     "defaultMessage": "Not a valid URL"
   },
@@ -164,6 +167,9 @@
   "7UOvbT": {
     "defaultMessage": "Offline"
   },
+  "7zsN1U": {
+    "defaultMessage": "How do i stream on tunestr.io?"
+  },
   "89UZph": {
     "defaultMessage": "Configure your streaming software"
   },
@@ -188,9 +194,6 @@
   "9pMqYs": {
     "defaultMessage": "Nostr Address"
   },
-  "9rmSgv": {
-    "defaultMessage": "OBS (Open Broadcaster Software) is a free and open source software for video recording and live streaming on Windows, Mac and Linux. It is a popular choice with streamers. You'll need to install this to capture your video, audio and anything else you'd like to add to your stream. Once installed and configured to preference, add your Stream URL and Stream Key from the Stream settings to OBS to form a connection with tunestr.io."
-  },
   "A1zT+z": {
     "defaultMessage": "Search results: {term}"
   },
@@ -211,9 +214,6 @@
   },
   "AukrPM": {
     "defaultMessage": "No viewer data available"
-  },
-  "Axo/o5": {
-    "defaultMessage": "Science & Technology"
   },
   "AyGauy": {
     "defaultMessage": "Login"
@@ -251,9 +251,6 @@
   "DZKuuP": {
     "defaultMessage": "Logged in as"
   },
-  "DkgCAz": {
-    "defaultMessage": "How do i stream on tunestr.io?"
-  },
   "Dn82AL": {
     "defaultMessage": "Live"
   },
@@ -284,6 +281,9 @@
   },
   "FjDlus": {
     "defaultMessage": "You can always replace it with your own address later."
+  },
+  "FmGm7T": {
+    "defaultMessage": "Tunestr is a new kind of streaming platform that allows you to earn bitcoin (sats) the moment you start streaming! Viewers can tip streamers any amount they choose. The tips are instantly deposited to your bitcoin (lightning) wallet. tunestr.io never touches your earnings!"
   },
   "Fodi9+": {
     "defaultMessage": "Get paid by viewers"
@@ -329,9 +329,6 @@
   },
   "HAlOn1": {
     "defaultMessage": "Name"
-  },
-  "HDgXO/": {
-    "defaultMessage": "tunestr.io is an open source platform powered by the nostr protocol. There are no giant corporations or giant funds available to provide free streaming."
   },
   "HsgeUk": {
     "defaultMessage": "Come check out my stream on tunestr.io! {link}"
@@ -399,14 +396,8 @@
   "LEmxc8": {
     "defaultMessage": "Zap Goals"
   },
-  "LUvSJB": {
-    "defaultMessage": "tunestr.io is free up to 2 hours of hosting at high quality and up to 8 hours of “source” quality. After that you have an option to stream for 5 sats per minute or 10 sats per minute depending on your chosen quality. If you do not use tunestr.io to host, pricing will depend on your chosen streaming provider."
-  },
   "Le+99Z": {
     "defaultMessage": "Streamers pay a small fee to cover our running costs. We give new streamers a credit of {amount} sats (about {time_estimate} of streaming) to get started!"
-  },
-  "Lg2ye2": {
-    "defaultMessage": "Tunestr is a new kind of streaming platform that allows you to earn bitcoin (sats) the moment you start streaming! Viewers can tip streamers any amount they choose. The tips are instantly deposited to your bitcoin (lightning) wallet. tunestr.io never touches your earnings!"
   },
   "LknBsU": {
     "defaultMessage": "Stream Key"
@@ -524,6 +515,9 @@
   "RXQdxR": {
     "defaultMessage": "Please login to write messages!"
   },
+  "Rp2edA": {
+    "defaultMessage": "OBS (Open Broadcaster Software) is a free and open source software for video recording and live streaming on Windows, Mac and Linux. It is a popular choice with streamers. You'll need to install this to capture your video, audio and anything else you'd like to add to your stream. Once installed and configured to preference, add your Stream URL and Stream Key from the Stream settings to OBS to form a connection with tunestr.io."
+  },
   "RrCui3": {
     "defaultMessage": "Summary"
   },
@@ -555,9 +549,6 @@
     "defaultMessage": "ago",
     "description": "Relative time, ie. 1s ago"
   },
-  "UGFYV8": {
-    "defaultMessage": "Welcome to tunestr.io!"
-  },
   "UJBFYK": {
     "defaultMessage": "Add Card"
   },
@@ -575,6 +566,12 @@
   },
   "VKb1MS": {
     "defaultMessage": "Categories"
+  },
+  "VZ4rgk": {
+    "defaultMessage": "Sats are small units of Bitcoin. Sending sats on tunestr.io is referred to as “zapping” or zaps."
+  },
+  "W5eSI2": {
+    "defaultMessage": "Welcome to tunestr.io!"
   },
   "W7DNWx": {
     "defaultMessage": "Stream Forwarding"
@@ -666,6 +663,9 @@
   "aqjZxs": {
     "defaultMessage": "Raid!"
   },
+  "b/FQBM": {
+    "defaultMessage": "A nostr extension simply saves your keys so you can safely log in without having to re-enter them every time. Tunestr uses the extension to authorize actions on your behalf without ever seeing your key information. This has a significant advantage over having to trust that websites handle your credentials safely."
+  },
   "bD/ZwY": {
     "defaultMessage": "Edit Cards"
   },
@@ -680,6 +680,9 @@
   },
   "c3LlRO": {
     "defaultMessage": "{n}KiB"
+  },
+  "cIIZeG": {
+    "defaultMessage": "tunestr.io is free up to 2 hours of hosting at high quality and up to 8 hours of “source” quality. After that you have an option to stream for 5 sats per minute or 10 sats per minute depending on your chosen quality. If you do not use tunestr.io to host, pricing will depend on your chosen streaming provider."
   },
   "cPIKU2": {
     "defaultMessage": "Following"
@@ -744,9 +747,6 @@
   },
   "h6NRY6": {
     "defaultMessage": "No Thanks!"
-  },
-  "h9mX2/": {
-    "defaultMessage": "If you use our in-house tunestr.io hosting (cheapest and easiest), copy your stream URL and Stream Key to your OBS settings and you should be good to go."
   },
   "hMzcSq": {
     "defaultMessage": "Messages"
@@ -850,6 +850,9 @@
   "nBCvvJ": {
     "defaultMessage": "Topup"
   },
+  "nJRWZ5": {
+    "defaultMessage": "tunestr.io is an open source platform powered by the nostr protocol. There are no giant corporations or giant funds available to provide free streaming."
+  },
   "nOaArs": {
     "defaultMessage": "Setup Profile"
   },
@@ -927,14 +930,8 @@
   "tTgdmx": {
     "defaultMessage": "{n,selectordinal,one{@ #st min} two{@ #nd min} few{@ #rd min} other{@ #th min}}"
   },
-  "tVCC9m": {
-    "defaultMessage": "Sats are small units of Bitcoin. Sending sats on tunestr.io is referred to as “zapping” or zaps."
-  },
   "thsiMl": {
     "defaultMessage": "terms and conditions"
-  },
-  "twCRVi": {
-    "defaultMessage": "Art"
   },
   "tzMNF3": {
     "defaultMessage": "Status"
@@ -951,8 +948,8 @@
   "uksRSi": {
     "defaultMessage": "Latest Videos"
   },
-  "vP4dFa": {
-    "defaultMessage": "Visit {link} to get some sweet tunestr.io merch!"
+  "va2raa": {
+    "defaultMessage": "If you use our in-house tunestr.io hosting (cheapest and easiest), copy your stream URL and Stream Key to your OBS settings and you should be good to go."
   },
   "vaZKTn": {
     "defaultMessage": "Add more content"
@@ -966,9 +963,6 @@
   "w0Xm2F": {
     "defaultMessage": "Start typing"
   },
-  "w3btjR": {
-    "defaultMessage": "Gambling"
-  },
   "wCIL7o": {
     "defaultMessage": "Broadcast on Nostr"
   },
@@ -980,9 +974,6 @@
   },
   "wMKVFz": {
     "defaultMessage": "Select voice..."
-  },
-  "wRGjPp": {
-    "defaultMessage": "A nostr extension simply saves your keys so you can safely log in without having to re-enter them every time. Tunestr uses the extension to authorize actions on your behalf without ever seeing your key information. This has a significant advantage over having to trust that websites handle your credentials safely."
   },
   "wTwfnv": {
     "defaultMessage": "Invalid nostr address"
@@ -1011,9 +1002,6 @@
   },
   "yLxIgl": {
     "defaultMessage": "Clips"
-  },
-  "yR0V+W": {
-    "defaultMessage": "To start streaming on tunestr.io, follow these steps:"
   },
   "yj8NrY": {
     "defaultMessage": "Clip"

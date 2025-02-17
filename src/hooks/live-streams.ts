@@ -13,21 +13,11 @@ export function useStreamsFeed(tag?: string) {
     });
     if (import.meta.env.VITE_SINGLE_PUBLISHER) {
       if (tag) {
-        rb.withFilter()
-          .kinds(liveStreamKinds)
-          .tag("t", [tag])
-          .authors(publishers);
-        rb.withFilter()
-          .kinds(liveStreamKinds)
-          .tag("t", [tag])
-          .tag("p", publishers);
+        rb.withFilter().kinds(liveStreamKinds).tag("t", [tag]).authors(publishers);
+        rb.withFilter().kinds(liveStreamKinds).tag("t", [tag]).tag("p", publishers);
       } else {
-        rb.withFilter()
-          .kinds(liveStreamKinds)
-          .authors(publishers);
-        rb.withFilter()
-          .kinds(liveStreamKinds)
-          .tag("p", publishers);
+        rb.withFilter().kinds(liveStreamKinds).authors(publishers);
+        rb.withFilter().kinds(liveStreamKinds).tag("p", publishers);
       }
     } else {
       if (tag) {

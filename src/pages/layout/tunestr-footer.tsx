@@ -1,5 +1,4 @@
 export function TunestrFooter() {
-
   const columns = [
     {
       title: "ESSENTIALS",

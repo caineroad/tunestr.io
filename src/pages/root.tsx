@@ -14,7 +14,7 @@ export function RootPage() {
 
   return (
     <div className="flex flex-col gap-6 grow">
-      <TunestrMission/>
+      <TunestrMission />
       <div className="min-w-0 overflow-x-scroll scrollbar-hidden">
         <div className="flex gap-4 ">
           {AllCategories.filter(a => a.priority === 0).map(a => (

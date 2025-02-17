@@ -57,7 +57,7 @@ export function Profile({
     <>
       {showAvatar && <Avatar user={pLoaded} pubkey={pubkey} className={avatarClassname} size={avatarSize ?? 24} />}
       {icon}
-      {showName && <span>{isAnon ? options?.overrideName ?? "Anon" : getName(pubkey, pLoaded)}</span>}
+      {showName && <span>{isAnon ? (options?.overrideName ?? "Anon") : getName(pubkey, pLoaded)}</span>}
     </>
   );
 
