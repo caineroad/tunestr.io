@@ -1,4 +1,4 @@
-import { OLD_VIDEO_KIND, VIDEO_KIND } from "@/const";
+import { OLD_VIDEO_KIND, VIDEO_KIND, WHITELIST } from "@/const";
 import VideoGrid from "@/element/video-grid";
 import { findTag, getHost } from "@/utils";
 import { NostrLink, RequestBuilder } from "@snort/system";
@@ -9,11 +9,8 @@ import { useLogin } from "@/hooks/login";
 
 export function VideosPage() {
   const login = useLogin();
-
-  const publishers = JSON.parse(import.meta.env.VITE_SINGLE_PUBLISHER);
-
   const rb = new RequestBuilder("videos");
-  rb.withFilter().kinds([VIDEO_KIND, OLD_VIDEO_KIND]);
+  rb.withFilter().kinds([VIDEO_KIND, OLD_VIDEO_KIND]).authors(WHITELIST);
 
   const videos = useRequestBuilder(rb);
 

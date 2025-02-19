@@ -17,9 +17,11 @@ export function useSortedStreams(feed: Array<TaggedNostrEvent>, oldest?: number)
 
   const feedSorted = useMemo(() => {
     if (feed) {
-      return feed
-        //.filter(a => a.created_at > (oldest ?? unixNow() - 7 * DAY))
-        .filter(a => !WHITELIST || WHITELIST.includes(getHost(a)));
+      return (
+        feed
+          //.filter(a => a.created_at > (oldest ?? unixNow() - 7 * DAY))
+          .filter(a => !WHITELIST || WHITELIST.includes(getHost(a)))
+      );
     }
     return [];
   }, [feed]);

@@ -1,4 +1,4 @@
-import { VIDEO_KIND } from "@/const";
+import { VIDEO_KIND, WHITELIST } from "@/const";
 import { Icon } from "@/element/icon";
 import VideoGridSorted from "@/element/video-grid-sorted";
 import { EventKind, RequestBuilder } from "@snort/system";
@@ -14,7 +14,6 @@ export default function SearchPage() {
   const { formatMessage } = useIntl();
   const navigate = useNavigate();
   const [search, setSearch] = useState(term ?? "");
-  const publishers = JSON.parse(import.meta.env.VITE_SINGLE_PUBLISHER);
 
   const sub = useMemo(() => {
     const rb = new RequestBuilder(`search:${term}`);
@@ -22,7 +21,7 @@ export default function SearchPage() {
       rb.withFilter()
         .relay(SearchRelays)
         .kinds([EventKind.LiveEvent, VIDEO_KIND])
-        .authors(publishers)
+        .authors(WHITELIST)
         .search(term)
         .limit(50);
     }

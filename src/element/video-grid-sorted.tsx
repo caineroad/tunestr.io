@@ -10,7 +10,7 @@ import { CategoryTile } from "./category/category-tile";
 import { Link } from "react-router-dom";
 import Pill from "./pill";
 import { CategoryZaps } from "./category/zaps";
-import { StreamState, VIDEO_KIND } from "@/const";
+import { StreamState, VIDEO_KIND, WHITELIST } from "@/const";
 import { useRecentClips } from "@/hooks/clips";
 import { ClipTile } from "./stream/clip-tile";
 
@@ -36,8 +36,7 @@ export default function VideoGridSorted({
   const login = useLogin();
   const mutedHosts = login?.state?.muted ?? [];
   // const follows = login?.state?.follows ?? [];
-  const follows = JSON.parse(import.meta.env.VITE_SINGLE_PUBLISHER);
-  const followsHost = (ev: NostrEvent) => follows?.includes(getHost(ev));
+  const followsHost = (ev: NostrEvent) => WHITELIST?.includes(getHost(ev)) ?? false;
 
   const filteredStreams = evs.filter(a => !mutedHosts.includes(NostrLink.publicKey(getHost(a))));
   const { live, planned, ended } = useSortedStreams(filteredStreams, showAll ? 0 : undefined);

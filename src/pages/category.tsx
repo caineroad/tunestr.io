@@ -13,6 +13,7 @@ import GamingImage from "@/images/gaming.jpeg";
 import MusicImage from "@/images/music.jpeg";
 import TalkImage from "@/images/talk.jpeg";
 import ArtImage from "@/images/art.jpeg";
+import { WHITELIST } from "@/const";
 
 export const AllCategories = [
   {
@@ -47,14 +48,13 @@ export const AllCategories = [
 export default function Category() {
   const params = useParams();
   const id = params.id ?? AllCategories[0].id;
-  const publishers = JSON.parse(import.meta.env.VITE_SINGLE_PUBLISHER);
 
   const sub = useMemo(() => {
     const cat = AllCategories.find(a => a.id === id);
     const rb = new RequestBuilder(`category:${id}`);
     rb.withFilter()
       .kinds([EventKind.LiveEvent])
-      .authors(publishers)
+      .authors(WHITELIST)
       .tag("t", cat?.tags ?? [id]);
 
     return rb;

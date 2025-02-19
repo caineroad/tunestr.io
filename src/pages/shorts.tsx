@@ -1,4 +1,4 @@
-import { OLD_SHORTS_KIND, SHORTS_KIND } from "@/const";
+import { OLD_SHORTS_KIND, SHORTS_KIND, WHITELIST } from "@/const";
 import VideoGrid from "@/element/video-grid";
 import { VideoTile } from "@/element/video/video-tile";
 import { findTag } from "@/utils";
@@ -7,10 +7,8 @@ import { useRequestBuilder } from "@snort/system-react";
 import { FormattedMessage } from "react-intl";
 
 export function ShortsPage() {
-  const publishers = JSON.parse(import.meta.env.VITE_SINGLE_PUBLISHER);
-
   const rb = new RequestBuilder("shorts");
-  rb.withFilter().kinds([SHORTS_KIND, OLD_SHORTS_KIND]);
+  rb.withFilter().kinds([SHORTS_KIND, OLD_SHORTS_KIND]).authors(WHITELIST);
 
   const videos = useRequestBuilder(rb);
   const sorted = videos.sort((a, b) => {
