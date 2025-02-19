@@ -1,4 +1,3 @@
-import { isHex } from "@snort/shared";
 import { EventKind, parseNostrLink } from "@snort/system";
 
 export const LIVE_STREAM = 30_311 as EventKind;
@@ -39,17 +38,15 @@ export const DefaultProviderUrl = "https://api.zap.stream/api/nostr";
 //export const DefaultProviderUrl = "http://localhost:5295/api/nostr";
 
 function loadWhitelist() {
-  if (import.meta.env.VITE_SINGLE_PUBLISHER !== undefined) {
-    const list = import.meta.env.VITE_SINGLE_PUBLISHER as string | undefined;
-    if (list) {
-      return list.split(",").map(a => {
-        if (!a.startsWith("npub")) {
-          return a;
-        } else {
-          return parseNostrLink(a).id;
-        }
-      });
-    }
+  const list = import.meta.env.VITE_SINGLE_PUBLISHER as string | undefined;
+  if (list) {
+    return JSON.parse(list).map(a => {
+      if (!a.startsWith("npub")) {
+        return a;
+      } else {
+        return parseNostrLink(a).id;
+      }
+    });
   }
   return undefined;
 }
