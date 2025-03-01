@@ -151,7 +151,6 @@ export function HeaderNav() {
         <Link to="/">
           <img src="/logo.svg" width={130} />
         </Link>
-        <small>100% of zaps to tunestr are passed on to the artist on stage when received</small>
       </div>
       <div className="flex items-center gap-3">
         <SearchBar />
