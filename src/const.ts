@@ -53,4 +53,10 @@ function loadWhitelist() {
   return undefined;
 }
 
+function loadFeaturedVideos() {
+  const list = import.meta.env.VITE_FEATURED_VIDEOS as string | undefined;
+  return list?.split(",").map(a => parseNostrLink(a).id);
+}
+
 export const WHITELIST: Array<string> | undefined = loadWhitelist();
+export const FEATURED_VIDEOS: Array<string> | undefined = loadFeaturedVideos();

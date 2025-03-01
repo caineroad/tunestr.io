@@ -9,11 +9,31 @@ import useImgProxy from "@/hooks/img-proxy";
 import { Bitcoin, Radio, Users, DollarSign, Music } from "lucide-react";
 import TunestrMission from "@/element/tunestr-mission";
 
+import { StreamState, DAY, WHITELIST, FEATURED_VIDEOS } from "@/const";
+import { findTag, getHost } from "@/utils";
+import { unixNow } from "@snort/shared";
+
 export function RootPage() {
   const streams = useStreamsFeed();
 
+  const live = streams
+    .filter(a => findTag(a, "status") !== StreamState.Ended);
+
+  const ended = streams
+    .filter(a => findTag(a, "status") === StreamState.Ended)
+    .filter(a => !FEATURED_VIDEOS || FEATURED_VIDEOS?.includes(findTag(a, "d")));
+
   return (
     <div className="flex flex-col gap-6 grow">
+      <div className="-mt-4">
+        <VideoGridSorted
+          evs={live}
+          showPlanned={true}
+          showEnded={false}
+          showPopular={false}
+          showRecentClips={false}
+        />
+      </div>
       <TunestrMission />
       <div className="min-w-0 overflow-x-scroll scrollbar-hidden">
         <div className="flex gap-4 ">
@@ -22,7 +42,12 @@ export function RootPage() {
           ))}
         </div>
       </div>
-      <VideoGridSorted evs={streams} showEnded={true} showPopular={false} showRecentClips={false} />
+      <VideoGridSorted
+        evs={ended}
+        showEnded={true}
+        showPopular={false}
+        showRecentClips={false}
+      />
     </div>
   );
 }
