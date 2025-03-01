@@ -62,7 +62,7 @@ export default function VideoGridSorted({
   return (
     <div className="flex flex-col gap-6">
       {hasFollowingLive && (
-        <GridSection header={<FormattedMessage defaultMessage="Following" id="cPIKU2" />} items={following} />
+        <GridSection header={<FormattedMessage defaultMessage="Live" id="Dn82AL" />} items={following} />
       )}
       {!hasFollowingLive && (
         <VideoGrid>
