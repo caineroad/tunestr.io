@@ -35,13 +35,6 @@ export function RootPage() {
         />
       </div>
       <TunestrMission />
-      <div className="min-w-0 overflow-x-scroll scrollbar-hidden">
-        <div className="flex gap-4 ">
-          {AllCategories.filter(a => a.priority === 0).map(a => (
-            <CategoryLink key={a.id} name={a.name} id={a.id} icon={a.icon} />
-          ))}
-        </div>
-      </div>
       <VideoGridSorted
         evs={ended}
         showEnded={true}
