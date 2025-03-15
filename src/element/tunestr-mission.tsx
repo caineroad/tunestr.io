@@ -32,7 +32,7 @@ export default function TunestrMission() {
   ];
 
   return (
-    <div class="homepage">
+    <div className="homepage">
       <div className="flex flex-col items-center justify-center min-h-screen">
         <img src="/tunestr-logo-t.png" alt="Logo" className="w-48 h-48" />
         <h1 className="mt-8 text-4xl font-bold text-center">
