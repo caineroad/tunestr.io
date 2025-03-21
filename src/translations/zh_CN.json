@@ -2,6 +2,75 @@
   "contactUs": {
     "defaultMessage": "联系我们"
   },
+  "independentMusic": {
+    "defaultMessage": "独立音乐"
+  },
+  "independentMoney": {
+    "defaultMessage": "独立资金"
+  },
+  "forIndependentArtists": {
+    "defaultMessage": "为独立艺术家"
+  },
+  "generateExtraRevenue": {
+    "defaultMessage": "在您的现场表演中产生额外收入"
+  },
+  "discoverNewWay": {
+    "defaultMessage": "探索一种新的社交媒体方式"
+  },
+  "engagePassionateFanBase": {
+    "defaultMessage": "在线吸引热情的新粉丝群体"
+  },
+  "findBiggestFans": {
+    "defaultMessage": "找出谁是您最大的粉丝并直接与他们联系"
+  },
+  "learnMonetizationStrategy": {
+    "defaultMessage": "了解创作者的新变现策略"
+  },
+  "forIndependentVenues": {
+    "defaultMessage": "为独立场地"
+  },
+  "differentiateYourself": {
+    "defaultMessage": "向巡演艺术家展示您的独特之处"
+  },
+  "promoteVenue": {
+    "defaultMessage": "向更广泛的受众推广您的场地和活动"
+  },
+  "createInteractiveConcert": {
+    "defaultMessage": "在线创建新的互动音乐会体验"
+  },
+  "streamShowsMinimalEffort": {
+    "defaultMessage": "以最小的努力进行超出传统流媒体的表演直播"
+  },
+  "keepTouringEconomics": {
+    "defaultMessage": "帮助保持巡演经济的健康发展"
+  },
+  "forIndependentFans": {
+    "defaultMessage": "为独立音乐粉丝"
+  },
+  "proveToFavoriteArtists": {
+    "defaultMessage": "向您喜爱的艺术家证明您是他们的头号支持者"
+  },
+  "giveLiveFeedback": {
+    "defaultMessage": "在表演时提供实时反馈并直接向艺人付款"
+  },
+  "connectWithFans": {
+    "defaultMessage": "在表演期间与其他粉丝互动"
+  },
+  "joinNewCommunity": {
+    "defaultMessage": "加入一个您不是产品的新社交媒体社区"
+  },
+  "keepMusicCommunity": {
+    "defaultMessage": "保持独立音乐社区的繁荣发展"
+  },
+  "footerEssentials": {
+    "defaultMessage": "基本要素"
+  },
+  "footerThanks": {
+    "defaultMessage": "感谢"
+  },
+  "footerArtists": {
+    "defaultMessage": "艺术家"
+  },
   "+0zv6g": {
     "defaultMessage": "图像"
   },

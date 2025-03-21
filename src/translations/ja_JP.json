@@ -2,6 +2,75 @@
   "contactUs": {
     "defaultMessage": "お問い合わせ"
   },
+  "independentMusic": {
+    "defaultMessage": "インディペンデント音楽"
+  },
+  "independentMoney": {
+    "defaultMessage": "インディペンデントマネー"
+  },
+  "forIndependentArtists": {
+    "defaultMessage": "インディペンデントアーティストのために"
+  },
+  "generateExtraRevenue": {
+    "defaultMessage": "ライブパフォーマンスで追加収入を生み出す"
+  },
+  "discoverNewWay": {
+    "defaultMessage": "ソーシャルメディアへの新しいアプローチを発見する"
+  },
+  "engagePassionateFanBase": {
+    "defaultMessage": "オンラインで情熱的な新しいファン層と交流する"
+  },
+  "findBiggestFans": {
+    "defaultMessage": "最大のファンを見つけて直接つながる"
+  },
+  "learnMonetizationStrategy": {
+    "defaultMessage": "クリエイター向けの新しい収益化戦略について学ぶ"
+  },
+  "forIndependentVenues": {
+    "defaultMessage": "インディペンデント会場のために"
+  },
+  "differentiateYourself": {
+    "defaultMessage": "ツアーアーティストに対して自分を差別化する"
+  },
+  "promoteVenue": {
+    "defaultMessage": "より広い観客に会場とイベントを宣伝する"
+  },
+  "createInteractiveConcert": {
+    "defaultMessage": "オンラインで新しいインタラクティブなコンサート体験を作る"
+  },
+  "streamShowsMinimalEffort": {
+    "defaultMessage": "従来のストリーミングを超えて最小限の労力でショーを配信する"
+  },
+  "keepTouringEconomics": {
+    "defaultMessage": "ツアーの経済を健全に保つのを助ける"
+  },
+  "forIndependentFans": {
+    "defaultMessage": "インディペンデント音楽ファンのために"
+  },
+  "proveToFavoriteArtists": {
+    "defaultMessage": "お気に入りのアーティストにあなたが彼らの一番のサポーターであることを証明する"
+  },
+  "giveLiveFeedback": {
+    "defaultMessage": "パフォーマンス中にライブフィードバックを与え、エンターテイナーに直接支払う"
+  },
+  "connectWithFans": {
+    "defaultMessage": "ショー中に他のファンとつながる"
+  },
+  "joinNewCommunity": {
+    "defaultMessage": "あなたが商品ではない新しいソーシャルメディアコミュニティに参加する"
+  },
+  "keepMusicCommunity": {
+    "defaultMessage": "インディペンデント音楽コミュニティの繁栄を維持する"
+  },
+  "footerEssentials": {
+    "defaultMessage": "必須事項"
+  },
+  "footerThanks": {
+    "defaultMessage": "謝辞"
+  },
+  "footerArtists": {
+    "defaultMessage": "アーティスト"
+  },
   "+0zv6g": {
     "defaultMessage": "画像"
   },

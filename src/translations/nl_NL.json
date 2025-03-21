@@ -2,6 +2,75 @@
   "contactUs": {
     "defaultMessage": "Neem contact op"
   },
+  "independentMusic": {
+    "defaultMessage": "onafhankelijke muziek"
+  },
+  "independentMoney": {
+    "defaultMessage": "onafhankelijk geld"
+  },
+  "forIndependentArtists": {
+    "defaultMessage": "voor onafhankelijke artiesten"
+  },
+  "generateExtraRevenue": {
+    "defaultMessage": "genereer extra inkomsten bij je live optredens"
+  },
+  "discoverNewWay": {
+    "defaultMessage": "ontdek een nieuwe manier om sociale media te benaderen"
+  },
+  "engagePassionateFanBase": {
+    "defaultMessage": "betrek een gepassioneerde, nieuwe fanbase online"
+  },
+  "findBiggestFans": {
+    "defaultMessage": "ontdek wie je grootste fans zijn en maak direct contact met hen"
+  },
+  "learnMonetizationStrategy": {
+    "defaultMessage": "leer over een nieuwe monetisatiestrategie voor makers"
+  },
+  "forIndependentVenues": {
+    "defaultMessage": "voor onafhankelijke locaties"
+  },
+  "differentiateYourself": {
+    "defaultMessage": "onderscheid jezelf voor tourende artiesten"
+  },
+  "promoteVenue": {
+    "defaultMessage": "promoot je locatie en evenement voor een breder publiek"
+  },
+  "createInteractiveConcert": {
+    "defaultMessage": "creëer een nieuwe, interactieve concertervaring online"
+  },
+  "streamShowsMinimalEffort": {
+    "defaultMessage": "stream shows met minimale inspanning voorbij traditionele streaming"
+  },
+  "keepTouringEconomics": {
+    "defaultMessage": "help de economie van het touren gezond te houden"
+  },
+  "forIndependentFans": {
+    "defaultMessage": "voor onafhankelijke muziekfans"
+  },
+  "proveToFavoriteArtists": {
+    "defaultMessage": "bewijs aan je favoriete artiesten dat je hun #1 supporter bent"
+  },
+  "giveLiveFeedback": {
+    "defaultMessage": "geef live feedback en betaal artiesten direct tijdens hun optreden"
+  },
+  "connectWithFans": {
+    "defaultMessage": "verbind met andere fans tijdens de show"
+  },
+  "joinNewCommunity": {
+    "defaultMessage": "word lid van een nieuwe social media gemeenschap waar jij niet het product bent"
+  },
+  "keepMusicCommunity": {
+    "defaultMessage": "houd de onafhankelijke muziekgemeenschap bloeiend"
+  },
+  "footerEssentials": {
+    "defaultMessage": "ESSENTIEEL"
+  },
+  "footerThanks": {
+    "defaultMessage": "BEDANKT"
+  },
+  "footerArtists": {
+    "defaultMessage": "ARTIESTEN"
+  },
   "+0zv6g": {
     "defaultMessage": "Afbeelding"
   },

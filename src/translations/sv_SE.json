@@ -2,6 +2,75 @@
   "contactUs": {
     "defaultMessage": "Kontakta oss"
   },
+  "independentMusic": {
+    "defaultMessage": "oberoende musik"
+  },
+  "independentMoney": {
+    "defaultMessage": "oberoende pengar"
+  },
+  "forIndependentArtists": {
+    "defaultMessage": "för oberoende artister"
+  },
+  "generateExtraRevenue": {
+    "defaultMessage": "generera extra intäkter från dina liveshower"
+  },
+  "discoverNewWay": {
+    "defaultMessage": "upptäck ett nytt sätt att använda sociala medier"
+  },
+  "engagePassionateFanBase": {
+    "defaultMessage": "engagera en ny, passionerad fanbas online"
+  },
+  "findBiggestFans": {
+    "defaultMessage": "ta reda på vilka dina största fans är och koppla direkt till dem"
+  },
+  "learnMonetizationStrategy": {
+    "defaultMessage": "lär dig om en ny monetiseringsstrategi för kreatörer"
+  },
+  "forIndependentVenues": {
+    "defaultMessage": "för oberoende spelställen"
+  },
+  "differentiateYourself": {
+    "defaultMessage": "särskilj dig för turnerande artister"
+  },
+  "promoteVenue": {
+    "defaultMessage": "marknadsför ditt spelställe och evenemang till en bredare publik"
+  },
+  "createInteractiveConcert": {
+    "defaultMessage": "skapa en ny interaktiv konsertupplevelse online"
+  },
+  "streamShowsMinimalEffort": {
+    "defaultMessage": "streama dina shower med minimal ansträngning, bortom traditionell streaming"
+  },
+  "keepTouringEconomics": {
+    "defaultMessage": "hjälp till att hålla turnéekonomin frisk"
+  },
+  "forIndependentFans": {
+    "defaultMessage": "för fans av oberoende musik"
+  },
+  "proveToFavoriteArtists": {
+    "defaultMessage": "bevisa för dina favoritartister att du är deras största supporter"
+  },
+  "giveLiveFeedback": {
+    "defaultMessage": "ge livefeedback under framträdanden och betala underhållare direkt"
+  },
+  "connectWithFans": {
+    "defaultMessage": "anslut med andra fans under shower"
+  },
+  "joinNewCommunity": {
+    "defaultMessage": "gå med i en ny social mediagemenskap där du inte är produkten"
+  },
+  "keepMusicCommunity": {
+    "defaultMessage": "hjälp till att hålla den oberoende musikgemenskapen blomstrande"
+  },
+  "footerEssentials": {
+    "defaultMessage": "VIKTIGT"
+  },
+  "footerThanks": {
+    "defaultMessage": "TACK"
+  },
+  "footerArtists": {
+    "defaultMessage": "ARTISTER"
+  },
   "+0zv6g": {
     "defaultMessage": "Bild"
   },

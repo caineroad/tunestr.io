@@ -2,6 +2,75 @@
   "contactUs": {
     "defaultMessage": "Связаться с нами"
   },
+  "independentMusic": {
+    "defaultMessage": "независимая музыка"
+  },
+  "independentMoney": {
+    "defaultMessage": "независимые деньги"
+  },
+  "forIndependentArtists": {
+    "defaultMessage": "для независимых артистов"
+  },
+  "generateExtraRevenue": {
+    "defaultMessage": "создавайте дополнительный доход от ваших живых выступлений"
+  },
+  "discoverNewWay": {
+    "defaultMessage": "откройте новый подход к социальным сетям"
+  },
+  "engagePassionateFanBase": {
+    "defaultMessage": "привлекайте новую, увлеченную базу фанатов онлайн"
+  },
+  "findBiggestFans": {
+    "defaultMessage": "найдите своих самых больших фанатов и свяжитесь с ними напрямую"
+  },
+  "learnMonetizationStrategy": {
+    "defaultMessage": "узнайте о новой стратегии монетизации для создателей"
+  },
+  "forIndependentVenues": {
+    "defaultMessage": "для независимых площадок"
+  },
+  "differentiateYourself": {
+    "defaultMessage": "выделитесь для гастролирующих артистов"
+  },
+  "promoteVenue": {
+    "defaultMessage": "продвигайте свою площадку и мероприятия более широкой аудитории"
+  },
+  "createInteractiveConcert": {
+    "defaultMessage": "создайте новый интерактивный концертный опыт онлайн"
+  },
+  "streamShowsMinimalEffort": {
+    "defaultMessage": "транслируйте свои шоу с минимальными усилиями, выходя за рамки традиционного стриминга"
+  },
+  "keepTouringEconomics": {
+    "defaultMessage": "помогайте поддерживать здоровую экономику гастролей"
+  },
+  "forIndependentFans": {
+    "defaultMessage": "для фанатов независимой музыки"
+  },
+  "proveToFavoriteArtists": {
+    "defaultMessage": "докажите своим любимым артистам, что вы их самый большой сторонник"
+  },
+  "giveLiveFeedback": {
+    "defaultMessage": "давайте обратную связь в прямом эфире во время выступлений и платите исполнителям напрямую"
+  },
+  "connectWithFans": {
+    "defaultMessage": "свяжитесь с другими фанатами во время шоу"
+  },
+  "joinNewCommunity": {
+    "defaultMessage": "присоединяйтесь к новому сообществу социальных сетей, где вы не являетесь продуктом"
+  },
+  "keepMusicCommunity": {
+    "defaultMessage": "помогайте поддерживать процветание независимого музыкального сообщества"
+  },
+  "footerEssentials": {
+    "defaultMessage": "ОСНОВНОЕ"
+  },
+  "footerThanks": {
+    "defaultMessage": "БЛАГОДАРНОСТИ"
+  },
+  "footerArtists": {
+    "defaultMessage": "АРТИСТЫ"
+  },
   "+0zv6g": {
     "defaultMessage": "Изображение"
   },

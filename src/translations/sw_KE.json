@@ -2,6 +2,75 @@
   "contactUs": {
     "defaultMessage": "Wasiliana Nasi"
   },
+  "independentMusic": {
+    "defaultMessage": "muziki huru"
+  },
+  "independentMoney": {
+    "defaultMessage": "fedha huru"
+  },
+  "forIndependentArtists": {
+    "defaultMessage": "kwa wasanii huru"
+  },
+  "generateExtraRevenue": {
+    "defaultMessage": "tengeneza mapato ya ziada kwenye maonyesho yako ya moja kwa moja"
+  },
+  "discoverNewWay": {
+    "defaultMessage": "gundua njia mpya ya kutumia mitandao ya kijamii"
+  },
+  "engagePassionateFanBase": {
+    "defaultMessage": "shiriki na wafuasi wapya wenye shauku mtandaoni"
+  },
+  "findBiggestFans": {
+    "defaultMessage": "tafuta mashabiki wako wakubwa na kuunganishwa nao moja kwa moja"
+  },
+  "learnMonetizationStrategy": {
+    "defaultMessage": "jifunze kuhusu mkakati mpya wa kupata fedha kwa waundaji"
+  },
+  "forIndependentVenues": {
+    "defaultMessage": "kwa vituo huru"
+  },
+  "differentiateYourself": {
+    "defaultMessage": "jitofautishe kwa wasanii wanaofanya ziara"
+  },
+  "promoteVenue": {
+    "defaultMessage": "tangaza kituo chako na matukio kwa watazamaji wengi zaidi"
+  },
+  "createInteractiveConcert": {
+    "defaultMessage": "unda uzoefu mpya wa tamasha shirikishi mtandaoni"
+  },
+  "streamShowsMinimalEffort": {
+    "defaultMessage": "rusha maonyesho yako moja kwa moja kwa juhudi kidogo, zaidi ya uenezaji wa kimapokezi"
+  },
+  "keepTouringEconomics": {
+    "defaultMessage": "saidia kudumisha uchumi wa ziara uwe mzuri"
+  },
+  "forIndependentFans": {
+    "defaultMessage": "kwa mashabiki wa muziki huru"
+  },
+  "proveToFavoriteArtists": {
+    "defaultMessage": "thibitisha kwa wasanii wako unaowapendelea kuwa wewe ndiye msaidizi wao mkubwa zaidi"
+  },
+  "giveLiveFeedback": {
+    "defaultMessage": "toa maoni ya moja kwa moja wakati wa maonyesho na ulipe burudani moja kwa moja"
+  },
+  "connectWithFans": {
+    "defaultMessage": "unganisha na mashabiki wengine wakati wa maonyesho"
+  },
+  "joinNewCommunity": {
+    "defaultMessage": "jiunge na jumuiya mpya ya mitandao ya kijamii ambapo wewe si bidhaa"
+  },
+  "keepMusicCommunity": {
+    "defaultMessage": "saidia kudumisha jumuiya ya muziki huru istawi"
+  },
+  "footerEssentials": {
+    "defaultMessage": "MUHIMU"
+  },
+  "footerThanks": {
+    "defaultMessage": "ASANTE"
+  },
+  "footerArtists": {
+    "defaultMessage": "WASANII"
+  },
   "+0zv6g": {
     "defaultMessage": "Picha"
   },

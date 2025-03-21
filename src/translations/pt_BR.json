@@ -2,6 +2,75 @@
   "contactUs": {
     "defaultMessage": "Entre em contato"
   },
+  "independentMusic": {
+    "defaultMessage": "música independente"
+  },
+  "independentMoney": {
+    "defaultMessage": "dinheiro independente"
+  },
+  "forIndependentArtists": {
+    "defaultMessage": "para artistas independentes"
+  },
+  "generateExtraRevenue": {
+    "defaultMessage": "gere receita extra em suas apresentações ao vivo"
+  },
+  "discoverNewWay": {
+    "defaultMessage": "descubra uma nova maneira de abordar as mídias sociais"
+  },
+  "engagePassionateFanBase": {
+    "defaultMessage": "engaje uma base de fãs nova e apaixonada online"
+  },
+  "findBiggestFans": {
+    "defaultMessage": "descubra quem são seus maiores fãs e conecte-se diretamente com eles"
+  },
+  "learnMonetizationStrategy": {
+    "defaultMessage": "aprenda sobre uma nova estratégia de monetização para criadores"
+  },
+  "forIndependentVenues": {
+    "defaultMessage": "para locais independentes"
+  },
+  "differentiateYourself": {
+    "defaultMessage": "diferencie-se para artistas em turnê"
+  },
+  "promoteVenue": {
+    "defaultMessage": "promova seu local e eventos para um público mais amplo"
+  },
+  "createInteractiveConcert": {
+    "defaultMessage": "crie uma nova experiência interativa de concerto online"
+  },
+  "streamShowsMinimalEffort": {
+    "defaultMessage": "transmita seus shows com esforço mínimo, além do streaming tradicional"
+  },
+  "keepTouringEconomics": {
+    "defaultMessage": "ajude a manter saudável a economia de turnês"
+  },
+  "forIndependentFans": {
+    "defaultMessage": "para fãs de música independente"
+  },
+  "proveToFavoriteArtists": {
+    "defaultMessage": "prove aos seus artistas favoritos que você é o maior apoiador deles"
+  },
+  "giveLiveFeedback": {
+    "defaultMessage": "dê feedback ao vivo durante as apresentações e pague diretamente aos artistas"
+  },
+  "connectWithFans": {
+    "defaultMessage": "conecte-se com outros fãs durante os shows"
+  },
+  "joinNewCommunity": {
+    "defaultMessage": "junte-se a uma nova comunidade de mídia social onde você não é o produto"
+  },
+  "keepMusicCommunity": {
+    "defaultMessage": "ajude a manter próspera a comunidade musical independente"
+  },
+  "footerEssentials": {
+    "defaultMessage": "ESSENCIAIS"
+  },
+  "footerThanks": {
+    "defaultMessage": "AGRADECIMENTOS"
+  },
+  "footerArtists": {
+    "defaultMessage": "ARTISTAS"
+  },
   "+0zv6g": {
     "defaultMessage": "Imagem"
   },

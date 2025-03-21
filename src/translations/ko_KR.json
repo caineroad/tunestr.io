@@ -2,6 +2,75 @@
   "contactUs": {
     "defaultMessage": "문의하기"
   },
+  "independentMusic": {
+    "defaultMessage": "독립 음악"
+  },
+  "independentMoney": {
+    "defaultMessage": "독립 자금"
+  },
+  "forIndependentArtists": {
+    "defaultMessage": "독립 아티스트를 위해"
+  },
+  "generateExtraRevenue": {
+    "defaultMessage": "라이브 공연에서 추가 수입 창출하기"
+  },
+  "discoverNewWay": {
+    "defaultMessage": "소셜 미디어에 접근하는 새로운 방법 발견하기"
+  },
+  "engagePassionateFanBase": {
+    "defaultMessage": "온라인에서 열정적인 새 팬층과 교류하기"
+  },
+  "findBiggestFans": {
+    "defaultMessage": "가장 큰 팬이 누구인지 찾아 직접 연결하기"
+  },
+  "learnMonetizationStrategy": {
+    "defaultMessage": "창작자를 위한 새로운 수익화 전략 배우기"
+  },
+  "forIndependentVenues": {
+    "defaultMessage": "독립 공연장을 위해"
+  },
+  "differentiateYourself": {
+    "defaultMessage": "투어 아티스트들에게 차별화된 가치 제공하기"
+  },
+  "promoteVenue": {
+    "defaultMessage": "더 넓은 관객에게 공연장과 이벤트 홍보하기"
+  },
+  "createInteractiveConcert": {
+    "defaultMessage": "온라인에서 새로운 인터랙티브 콘서트 경험 만들기"
+  },
+  "streamShowsMinimalEffort": {
+    "defaultMessage": "기존 스트리밍 너머 최소한의 노력으로 공연 스트리밍하기"
+  },
+  "keepTouringEconomics": {
+    "defaultMessage": "투어링 경제를 건강하게 유지하는 데 도움 주기"
+  },
+  "forIndependentFans": {
+    "defaultMessage": "독립 음악 팬을 위해"
+  },
+  "proveToFavoriteArtists": {
+    "defaultMessage": "좋아하는 아티스트에게 당신이 그들의 최고 지지자임을 증명하기"
+  },
+  "giveLiveFeedback": {
+    "defaultMessage": "공연 중 실시간 피드백을 제공하고 엔터테이너에게 직접 지불하기"
+  },
+  "connectWithFans": {
+    "defaultMessage": "공연 중 다른 팬들과 연결하기"
+  },
+  "joinNewCommunity": {
+    "defaultMessage": "당신이 상품이 아닌 새로운 소셜 미디어 커뮤니티에 참여하기"
+  },
+  "keepMusicCommunity": {
+    "defaultMessage": "독립 음악 커뮤니티가 번창하도록 유지하기"
+  },
+  "footerEssentials": {
+    "defaultMessage": "필수 항목"
+  },
+  "footerThanks": {
+    "defaultMessage": "감사의 말"
+  },
+  "footerArtists": {
+    "defaultMessage": "아티스트"
+  },
   "+0zv6g": {
     "defaultMessage": "이미지"
   },

@@ -2,6 +2,75 @@
   "contactUs": {
     "defaultMessage": "যোগাযোগ করুন"
   },
+  "independentMusic": {
+    "defaultMessage": "স্বাধীন সঙ্গীত"
+  },
+  "independentMoney": {
+    "defaultMessage": "স্বাধীন অর্থ"
+  },
+  "forIndependentArtists": {
+    "defaultMessage": "স্বাধীন শিল্পীদের জন্য"
+  },
+  "generateExtraRevenue": {
+    "defaultMessage": "আপনার লাইভ পারফরম্যান্সে অতিরিক্ত আয় উৎপন্ন করুন"
+  },
+  "discoverNewWay": {
+    "defaultMessage": "সোশ্যাল মিডিয়ার একটি নতুন পদ্ধতি আবিষ্কার করুন"
+  },
+  "engagePassionateFanBase": {
+    "defaultMessage": "অনলাইনে একটি আবেগপূর্ণ, নতুন ফ্যান বেস জড়িত করুন"
+  },
+  "findBiggestFans": {
+    "defaultMessage": "আপনার সবচেয়ে বড় ভক্তরা কারা তা খুঁজে বের করুন এবং তাদের সাথে সরাসরি সংযোগ করুন"
+  },
+  "learnMonetizationStrategy": {
+    "defaultMessage": "সৃষ্টিকর্তাদের জন্য একটি নতুন মুদ্রায়ন কৌশল সম্পর্কে জানুন"
+  },
+  "forIndependentVenues": {
+    "defaultMessage": "স্বাধীন ভেন্যুগুলির জন্য"
+  },
+  "differentiateYourself": {
+    "defaultMessage": "সফরকারী শিল্পীদের জন্য নিজেকে আলাদা করুন"
+  },
+  "promoteVenue": {
+    "defaultMessage": "বৃহত্তর দর্শকদের কাছে আপনার ভেন্যু এবং ইভেন্টগুলি প্রচার করুন"
+  },
+  "createInteractiveConcert": {
+    "defaultMessage": "অনলাইনে একটি নতুন ইন্টারঅ্যাকটিভ কনসার্ট অভিজ্ঞতা তৈরি করুন"
+  },
+  "streamShowsMinimalEffort": {
+    "defaultMessage": "ঐতিহ্যগত স্ট্রিমিং-এর চেয়ে, সর্বনিম্ন প্রচেষ্টায় আপনার শোগুলি স্ট্রিম করুন"
+  },
+  "keepTouringEconomics": {
+    "defaultMessage": "সফর অর্থনীতি স্বাস্থ্যকর রাখতে সাহায্য করুন"
+  },
+  "forIndependentFans": {
+    "defaultMessage": "স্বাধীন সংগীত ভক্তদের জন্য"
+  },
+  "proveToFavoriteArtists": {
+    "defaultMessage": "আপনার প্রিয় শিল্পীদের প্রমাণ করুন যে আপনি তাদের সবচেয়ে বড় সমর্থক"
+  },
+  "giveLiveFeedback": {
+    "defaultMessage": "পারফরম্যান্সের সময় লাইভ প্রতিক্রিয়া দিন এবং বিনোদনকারীদের সরাসরি অর্থ দিন"
+  },
+  "connectWithFans": {
+    "defaultMessage": "শো চলাকালীন অন্যান্য ভক্তদের সাথে সংযোগ করুন"
+  },
+  "joinNewCommunity": {
+    "defaultMessage": "একটি নতুন সোশ্যাল মিডিয়া কমিউনিটিতে যোগ দিন যেখানে আপনি পণ্য নন"
+  },
+  "keepMusicCommunity": {
+    "defaultMessage": "স্বাধীন সংগীত কমিউনিটিকে সমৃদ্ধ রাখতে সাহায্য করুন"
+  },
+  "footerEssentials": {
+    "defaultMessage": "অপরিহার্য"
+  },
+  "footerThanks": {
+    "defaultMessage": "ধন্যবাদ"
+  },
+  "footerArtists": {
+    "defaultMessage": "শিল্পীরা"
+  },
   "+0zv6g": {
     "defaultMessage": "ছবি"
   },

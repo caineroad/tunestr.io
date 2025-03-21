@@ -2,6 +2,75 @@
   "contactUs": {
     "defaultMessage": "Kapcsolat"
   },
+  "independentMusic": {
+    "defaultMessage": "független zene"
+  },
+  "independentMoney": {
+    "defaultMessage": "független pénz"
+  },
+  "forIndependentArtists": {
+    "defaultMessage": "független művészeknek"
+  },
+  "generateExtraRevenue": {
+    "defaultMessage": "teremtsen extra bevételt élő fellépéseiből"
+  },
+  "discoverNewWay": {
+    "defaultMessage": "fedezzen fel új megközelítést a közösségi médiához"
+  },
+  "engagePassionateFanBase": {
+    "defaultMessage": "vonjon be egy új, lelkes rajongói bázist online"
+  },
+  "findBiggestFans": {
+    "defaultMessage": "találja meg legnagyobb rajongóit és kapcsolódjon közvetlenül hozzájuk"
+  },
+  "learnMonetizationStrategy": {
+    "defaultMessage": "ismerjen meg egy új monetizálási stratégiát alkotók számára"
+  },
+  "forIndependentVenues": {
+    "defaultMessage": "független helyszíneknek"
+  },
+  "differentiateYourself": {
+    "defaultMessage": "különböztesse meg magát a turnézó művészek számára"
+  },
+  "promoteVenue": {
+    "defaultMessage": "népszerűsítse helyszínét és eseményeit szélesebb közönség számára"
+  },
+  "createInteractiveConcert": {
+    "defaultMessage": "hozzon létre új interaktív koncertélményt online"
+  },
+  "streamShowsMinimalEffort": {
+    "defaultMessage": "közvetítse műsorait minimális erőfeszítéssel, túlmutatva a hagyományos streamelésen"
+  },
+  "keepTouringEconomics": {
+    "defaultMessage": "segítsen fenntartani a turnézás gazdaságának egészségét"
+  },
+  "forIndependentFans": {
+    "defaultMessage": "független zenerajongóknak"
+  },
+  "proveToFavoriteArtists": {
+    "defaultMessage": "bizonyítsa kedvenc művészeinek, hogy Ön a legnagyobb támogatójuk"
+  },
+  "giveLiveFeedback": {
+    "defaultMessage": "adjon élő visszajelzést az előadások során és fizessen közvetlenül az előadóknak"
+  },
+  "connectWithFans": {
+    "defaultMessage": "kapcsolódjon más rajongókkal a műsorok során"
+  },
+  "joinNewCommunity": {
+    "defaultMessage": "csatlakozzon egy új közösségi média közösséghez, ahol Ön nem a termék"
+  },
+  "keepMusicCommunity": {
+    "defaultMessage": "segítsen fenntartani a független zenei közösség virágzását"
+  },
+  "footerEssentials": {
+    "defaultMessage": "ALAPVETŐK"
+  },
+  "footerThanks": {
+    "defaultMessage": "KÖSZÖNET"
+  },
+  "footerArtists": {
+    "defaultMessage": "MŰVÉSZEK"
+  },
   "+0zv6g": {
     "defaultMessage": "Kép"
   },

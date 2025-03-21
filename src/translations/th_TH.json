@@ -2,6 +2,75 @@
   "contactUs": {
     "defaultMessage": "ติดต่อเรา"
   },
+  "independentMusic": {
+    "defaultMessage": "ดนตรีอิสระ"
+  },
+  "independentMoney": {
+    "defaultMessage": "เงินอิสระ"
+  },
+  "forIndependentArtists": {
+    "defaultMessage": "สำหรับศิลปินอิสระ"
+  },
+  "generateExtraRevenue": {
+    "defaultMessage": "สร้างรายได้เพิ่มเติมจากการแสดงสดของคุณ"
+  },
+  "discoverNewWay": {
+    "defaultMessage": "ค้นพบวิธีใหม่ในการเข้าถึงโซเชียลมีเดีย"
+  },
+  "engagePassionateFanBase": {
+    "defaultMessage": "สร้างความผูกพันกับฐานแฟนคลับใหม่ที่มีความหลงใหลออนไลน์"
+  },
+  "findBiggestFans": {
+    "defaultMessage": "ค้นหาแฟนคลับที่ยิ่งใหญ่ที่สุดของคุณและเชื่อมต่อกับพวกเขาโดยตรง"
+  },
+  "learnMonetizationStrategy": {
+    "defaultMessage": "เรียนรู้กลยุทธ์การสร้างรายได้ใหม่สำหรับผู้สร้างสรรค์"
+  },
+  "forIndependentVenues": {
+    "defaultMessage": "สำหรับสถานที่จัดแสดงอิสระ"
+  },
+  "differentiateYourself": {
+    "defaultMessage": "สร้างความแตกต่างให้กับศิลปินที่กำลังทัวร์"
+  },
+  "promoteVenue": {
+    "defaultMessage": "โปรโมทสถานที่จัดงานและกิจกรรมของคุณให้กับผู้ชมในวงกว้าง"
+  },
+  "createInteractiveConcert": {
+    "defaultMessage": "สร้างประสบการณ์คอนเสิร์ตแบบโต้ตอบใหม่ออนไลน์"
+  },
+  "streamShowsMinimalEffort": {
+    "defaultMessage": "สตรีมการแสดงของคุณด้วยความพยายามน้อยที่สุด เหนือกว่าการสตรีมมิ่งแบบดั้งเดิม"
+  },
+  "keepTouringEconomics": {
+    "defaultMessage": "ช่วยรักษาเศรษฐกิจการทัวร์ให้แข็งแรง"
+  },
+  "forIndependentFans": {
+    "defaultMessage": "สำหรับแฟนเพลงอิสระ"
+  },
+  "proveToFavoriteArtists": {
+    "defaultMessage": "พิสูจน์ให้ศิลปินที่คุณชื่นชอบเห็นว่าคุณคือผู้สนับสนุนที่ยิ่งใหญ่ที่สุดของพวกเขา"
+  },
+  "giveLiveFeedback": {
+    "defaultMessage": "ให้ข้อเสนอแนะสดระหว่างการแสดงและจ่ายเงินให้กับนักแสดงโดยตรง"
+  },
+  "connectWithFans": {
+    "defaultMessage": "เชื่อมต่อกับแฟนคนอื่นๆระหว่างการแสดง"
+  },
+  "joinNewCommunity": {
+    "defaultMessage": "เข้าร่วมชุมชนโซเชียลมีเดียใหม่ที่คุณไม่ใช่ผลิตภัณฑ์"
+  },
+  "keepMusicCommunity": {
+    "defaultMessage": "ช่วยรักษาชุมชนดนตรีอิสระให้เติบโต"
+  },
+  "footerEssentials": {
+    "defaultMessage": "สิ่งจำเป็น"
+  },
+  "footerThanks": {
+    "defaultMessage": "ขอบคุณ"
+  },
+  "footerArtists": {
+    "defaultMessage": "ศิลปิน"
+  },
   "+0zv6g": {
     "defaultMessage": "ภาพ"
   },

@@ -2,6 +2,75 @@
   "contactUs": {
     "defaultMessage": "Ota yhteyttä"
   },
+  "independentMusic": {
+    "defaultMessage": "itsenäinen musiikki"
+  },
+  "independentMoney": {
+    "defaultMessage": "itsenäinen raha"
+  },
+  "forIndependentArtists": {
+    "defaultMessage": "itsenäisille artisteille"
+  },
+  "generateExtraRevenue": {
+    "defaultMessage": "tuota lisätuloja live-esiintymisistäsi"
+  },
+  "discoverNewWay": {
+    "defaultMessage": "löydä uusi tapa lähestyä sosiaalista mediaa"
+  },
+  "engagePassionateFanBase": {
+    "defaultMessage": "tavoita innostunut uusi fanipohja verkossa"
+  },
+  "findBiggestFans": {
+    "defaultMessage": "löydä suurimmat fanisi ja ole yhteydessä heihin suoraan"
+  },
+  "learnMonetizationStrategy": {
+    "defaultMessage": "opi uusi ansaintastrategia sisällöntuottajille"
+  },
+  "forIndependentVenues": {
+    "defaultMessage": "itsenäisille tapahtumapaikoille"
+  },
+  "differentiateYourself": {
+    "defaultMessage": "erotu kiertueartistien silmissä"
+  },
+  "promoteVenue": {
+    "defaultMessage": "markkinoi tapahtumapaikkaa ja tapahtumia laajemmalle yleisölle"
+  },
+  "createInteractiveConcert": {
+    "defaultMessage": "luo uusi vuorovaikutteinen konserttielämys verkossa"
+  },
+  "streamShowsMinimalEffort": {
+    "defaultMessage": "lähetä esityksiäsi minimaalisella vaivalla, perinteisen striimauksen yli"
+  },
+  "keepTouringEconomics": {
+    "defaultMessage": "auta pitämään kiertuetalous terveenä"
+  },
+  "forIndependentFans": {
+    "defaultMessage": "itsenäisen musiikin faneille"
+  },
+  "proveToFavoriteArtists": {
+    "defaultMessage": "todista suosikkiartisteillesi olevasi heidän suurin tukijansa"
+  },
+  "giveLiveFeedback": {
+    "defaultMessage": "anna live-palautetta esityksen aikana ja maksa suoraan esiintyjille"
+  },
+  "connectWithFans": {
+    "defaultMessage": "verkostoidu muiden fanien kanssa esitysten aikana"
+  },
+  "joinNewCommunity": {
+    "defaultMessage": "liity uuteen sosiaalisen median yhteisöön, jossa et ole tuote"
+  },
+  "keepMusicCommunity": {
+    "defaultMessage": "auta pitämään itsenäinen musiikkiyhteisö kukoistavana"
+  },
+  "footerEssentials": {
+    "defaultMessage": "OLENNAISET"
+  },
+  "footerThanks": {
+    "defaultMessage": "KIITOKSET"
+  },
+  "footerArtists": {
+    "defaultMessage": "ARTISTIT"
+  },
   "+0zv6g": {
     "defaultMessage": "Kuva"
   },

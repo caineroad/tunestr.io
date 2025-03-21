@@ -1,14 +1,16 @@
+import { FormattedMessage } from "react-intl";
+
 export function TunestrFooter() {
   const columns = [
     {
-      title: "ESSENTIALS",
+      titleId: "footerEssentials",
       items: [
         { name: "VALUE FOR VALUE", url: "https://value4value.info" },
         { name: "PROTOCOL", url: "https://nostr.com" },
       ],
     },
     {
-      title: "THANKS",
+      titleId: "footerThanks",
       items: [
         { name: "SANTOS", url: "https://santos.lol/" },
         { name: "KIERAN", url: "https://njump.me/npub1v0lxxxxutpvrelsksy8cdhgfux9l6a42hsj2qzquu2zk7vc9qnkszrqj49" },
@@ -19,7 +21,7 @@ export function TunestrFooter() {
       ],
     },
     {
-      title: "ARTISTS",
+      titleId: "footerArtists",
       items: [
         { name: "AINSLEY COSTELLO", url: "https://ainsleycostello.com/" },
         { name: "TIP-NZ", url: "https://www.tipnz.com/" },
@@ -39,7 +41,26 @@ export function TunestrFooter() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {columns.map((column, index) => (
             <div key={index} className="space-y-4">
-              <h2 className="text-2xl font-bold">{column.title}</h2>
+              <h2 className="text-2xl font-bold">
+                {column.titleId === "footerEssentials" && (
+                  <FormattedMessage
+                    id="footerEssentials"
+                    defaultMessage="ESSENTIALS"
+                  />
+                )}
+                {column.titleId === "footerThanks" && (
+                  <FormattedMessage
+                    id="footerThanks"
+                    defaultMessage="THANKS"
+                  />
+                )}
+                {column.titleId === "footerArtists" && (
+                  <FormattedMessage
+                    id="footerArtists"
+                    defaultMessage="ARTISTS"
+                  />
+                )}
+              </h2>
               <ul className="space-y-2">
                 {column.items.map((item, itemIndex) => (
                   <li key={itemIndex} className="text-lg">
