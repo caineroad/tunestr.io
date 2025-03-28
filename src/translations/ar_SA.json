@@ -1,4 +1,76 @@
 {
+  "contactUs": {
+    "defaultMessage": "اتصل بنا"
+  },
+  "independentMusic": {
+    "defaultMessage": "موسيقى مستقلة"
+  },
+  "independentMoney": {
+    "defaultMessage": "أموال مستقلة"
+  },
+  "forIndependentArtists": {
+    "defaultMessage": "للفنانين المستقلين"
+  },
+  "generateExtraRevenue": {
+    "defaultMessage": "توليد دخل إضافي من عروضك الحية"
+  },
+  "discoverNewWay": {
+    "defaultMessage": "اكتشف طريقة جديدة للتعامل مع وسائل التواصل الاجتماعي"
+  },
+  "engagePassionateFanBase": {
+    "defaultMessage": "التفاعل مع قاعدة جديدة من المعجبين المتحمسين عبر الإنترنت"
+  },
+  "findBiggestFans": {
+    "defaultMessage": "اكتشف من هم أكبر معجبيك وتواصل معهم مباشرة"
+  },
+  "learnMonetizationStrategy": {
+    "defaultMessage": "تعلم حول استراتيجية تحقيق الدخل الجديدة للمبدعين"
+  },
+  "forIndependentVenues": {
+    "defaultMessage": "للأماكن المستقلة"
+  },
+  "differentiateYourself": {
+    "defaultMessage": "تميز نفسك للفنانين الجوالين"
+  },
+  "promoteVenue": {
+    "defaultMessage": "روّج لمكانك وفعالياتك لجمهور أوسع"
+  },
+  "createInteractiveConcert": {
+    "defaultMessage": "إنشاء تجربة حفلات موسيقية تفاعلية جديدة عبر الإنترنت"
+  },
+  "streamShowsMinimalEffort": {
+    "defaultMessage": "بث عروضك بأقل جهد، متجاوزًا البث التقليدي"
+  },
+  "keepTouringEconomics": {
+    "defaultMessage": "المساعدة في الحفاظ على صحة اقتصاد الجولات"
+  },
+  "forIndependentFans": {
+    "defaultMessage": "لمحبي الموسيقى المستقلة"
+  },
+  "proveToFavoriteArtists": {
+    "defaultMessage": "أثبت لفنانيك المفضلين أنك أكبر داعم لهم"
+  },
+  "giveLiveFeedback": {
+    "defaultMessage": "قدّم تعليقات مباشرة أثناء العروض وادفع مباشرةً للفنانين"
+  },
+  "connectWithFans": {
+    "defaultMessage": "تواصل مع المعجبين الآخرين أثناء العروض"
+  },
+  "joinNewCommunity": {
+    "defaultMessage": "انضم إلى مجتمع جديد للتواصل الاجتماعي حيث لست السلعة"
+  },
+  "keepMusicCommunity": {
+    "defaultMessage": "المساعدة في الحفاظ على ازدهار مجتمع الموسيقى المستقلة"
+  },
+  "footerEssentials": {
+    "defaultMessage": "الأساسيات"
+  },
+  "footerThanks": {
+    "defaultMessage": "شكراً"
+  },
+  "footerArtists": {
+    "defaultMessage": "الفنانون"
+  },
   "+0zv6g": {
     "defaultMessage": "صورة"
   },

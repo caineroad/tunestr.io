@@ -1,4 +1,76 @@
 {
+  "contactUs": {
+    "defaultMessage": "تماس با ما"
+  },
+  "independentMusic": {
+    "defaultMessage": "موسیقی مستقل"
+  },
+  "independentMoney": {
+    "defaultMessage": "پول مستقل"
+  },
+  "forIndependentArtists": {
+    "defaultMessage": "برای هنرمندان مستقل"
+  },
+  "generateExtraRevenue": {
+    "defaultMessage": "از اجراهای زنده خود درآمد اضافی کسب کنید"
+  },
+  "discoverNewWay": {
+    "defaultMessage": "روش جدیدی برای رویکرد به رسانه‌های اجتماعی کشف کنید"
+  },
+  "engagePassionateFanBase": {
+    "defaultMessage": "با پایگاه طرفداران جدید و پرشور به صورت آنلاین ارتباط برقرار کنید"
+  },
+  "findBiggestFans": {
+    "defaultMessage": "بزرگترین طرفداران خود را پیدا کنید و مستقیماً با آنها ارتباط برقرار کنید"
+  },
+  "learnMonetizationStrategy": {
+    "defaultMessage": "درباره استراتژی جدید کسب درآمد برای سازندگان یاد بگیرید"
+  },
+  "forIndependentVenues": {
+    "defaultMessage": "برای مکان‌های مستقل"
+  },
+  "differentiateYourself": {
+    "defaultMessage": "خود را برای هنرمندان تور متمایز کنید"
+  },
+  "promoteVenue": {
+    "defaultMessage": "مکان و رویدادهای خود را برای مخاطبان گسترده‌تر تبلیغ کنید"
+  },
+  "createInteractiveConcert": {
+    "defaultMessage": "تجربه جدید کنسرت تعاملی آنلاین ایجاد کنید"
+  },
+  "streamShowsMinimalEffort": {
+    "defaultMessage": "نمایش‌های خود را با حداقل تلاش، فراتر از استریمینگ سنتی پخش کنید"
+  },
+  "keepTouringEconomics": {
+    "defaultMessage": "به حفظ سلامت اقتصاد تور کمک کنید"
+  },
+  "forIndependentFans": {
+    "defaultMessage": "برای طرفداران موسیقی مستقل"
+  },
+  "proveToFavoriteArtists": {
+    "defaultMessage": "به هنرمندان محبوب خود ثابت کنید که بزرگترین حامی آنها هستید"
+  },
+  "giveLiveFeedback": {
+    "defaultMessage": "در طول اجرا بازخورد زنده ارائه دهید و مستقیماً به سرگرم‌کنندگان پرداخت کنید"
+  },
+  "connectWithFans": {
+    "defaultMessage": "در طول نمایش‌ها با سایر طرفداران ارتباط برقرار کنید"
+  },
+  "joinNewCommunity": {
+    "defaultMessage": "به جامعه جدید رسانه‌های اجتماعی بپیوندید که در آن شما محصول نیستید"
+  },
+  "keepMusicCommunity": {
+    "defaultMessage": "به حفظ رونق جامعه موسیقی مستقل کمک کنید"
+  },
+  "footerEssentials": {
+    "defaultMessage": "ضروریات"
+  },
+  "footerThanks": {
+    "defaultMessage": "تشکر"
+  },
+  "footerArtists": {
+    "defaultMessage": "هنرمندان"
+  },
   "+0zv6g": {
     "defaultMessage": "تصویر"
   },

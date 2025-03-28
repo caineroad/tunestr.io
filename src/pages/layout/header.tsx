@@ -132,6 +132,14 @@ export function HeaderNav() {
     );
   }
 
+  function tunestrContactUs() {
+    return (
+      <a href="mailto:v4v@tunestr.io" className="text-primary hover:text-primary-hover font-medium px-2 uppercase whitespace-nowrap">
+        <FormattedMessage defaultMessage="Contact us" id="contactUs" />
+      </a>
+    )
+  }
+
   if (!layoutState.showHeader) return;
   return (
     <div className="flex justify-between items-center gap-4">
@@ -151,10 +159,10 @@ export function HeaderNav() {
         <Link to="/">
           <img src="/logo.svg" width={130} />
         </Link>
-        <small>100% of zaps to tunestr are passed on to the artist on stage when received</small>
       </div>
       <div className="flex items-center gap-3">
         <SearchBar />
+        {tunestrContactUs()}
         {langSelector()}
         {loggedIn()}
         {loggedOut()}

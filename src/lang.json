@@ -1,4 +1,7 @@
 {
+  "contactUs": {
+    "defaultMessage": "Contact us"
+  },
   "+0zv6g": {
     "defaultMessage": "Image"
   },
@@ -483,7 +486,7 @@
     "defaultMessage": "Share on X"
   },
   "QRHNuF": {
-    "defaultMessage": "What are we steaming today?"
+    "defaultMessage": "What are we streaming today?"
   },
   "QRRCp0": {
     "defaultMessage": "Stream URL"

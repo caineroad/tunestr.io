@@ -1,20 +1,17 @@
 import { useStreamsFeed } from "@/hooks/live-streams";
-import CategoryLink from "@/element/category/category-link";
 import VideoGridSorted from "@/element/video-grid-sorted";
-import { AllCategories } from "./category";
+import { getTagValues } from "@/utils";
+import { findTag, getHost } from "@/utils";
+import { TUNESTR_ID } from "@/tunestr-const";
 
 export function StreamsPage() {
-  const streams = useStreamsFeed();
+  const streams = useStreamsFeed().filter(a =>
+    getHost(a) === TUNESTR_ID ||
+    getTagValues(a.tags, 't').some(t => t.toLowerCase() === 'music')
+  );
 
   return (
     <div className="flex flex-col gap-6 p-4 min-w-0">
-      <div className="min-w-0 overflow-x-scroll scrollbar-hidden">
-        <div className="flex gap-4 ">
-          {AllCategories.filter(a => a.priority === 0).map(a => (
-            <CategoryLink key={a.id} name={a.name} id={a.id} icon={a.icon} />
-          ))}
-        </div>
-      </div>
       <VideoGridSorted evs={streams} showEnded={true} showPopular={false} showRecentClips={false} />
     </div>
   );
