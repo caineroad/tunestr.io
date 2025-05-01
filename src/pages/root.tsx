@@ -17,7 +17,7 @@ export function RootPage() {
   const streams = useStreamsFeed();
 
   const live = streams
-    .filter(a => findTag(a, "status") !== StreamState.Ended);
+    .filter(a => findTag(a, "status") === StreamState.Live);
 
   const ended = streams
     .filter(a => findTag(a, "status") === StreamState.Ended)
@@ -28,7 +28,7 @@ export function RootPage() {
       <div className="-mt-4">
         <VideoGridSorted
           evs={live}
-          showPlanned={true}
+          showPlanned={false}
           showEnded={false}
           showPopular={false}
           showRecentClips={false}
