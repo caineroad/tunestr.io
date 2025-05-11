@@ -34,7 +34,7 @@ export function useSortedStreams(feed: Array<TaggedNostrEvent>, oldest?: number)
   }
 
   const live = feedSorted
-    .filter(a => a.created_at > (oldest ?? unixNow() - 7 * DAY))
+    .filter(a => findTag(a, "starts") <= unixNow() && findTag(a, "starts") > (unixNow() - DAY))
     .filter(a => {
       try {
         return findTag(a, "status") === StreamState.Live && canPlayEvent(a);
