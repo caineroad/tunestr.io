@@ -224,7 +224,16 @@ export default function DashboardForLink({ link }: { link: NostrLink }) {
               <div className="bg-layer-1 rounded-xl aspect-video flex items-center justify-center uppercase text-warning font-semibold">
                 <FormattedMessage defaultMessage="Offline" />
               </div>
-              <NewStreamDialog ev={streamEvent} text={<FormattedMessage defaultMessage="Edit Stream Info" />} />
+              <div className="flex items-center gap-3">
+                <NewStreamDialog text={<FormattedMessage defaultMessage="New Stream" />} />
+                {streamEvent && (
+                  <NewStreamDialog
+                    ev={streamEvent}
+                    btnClassName="bg-transparent text-sm text-layer-5 underline underline-offset-2 px-1 py-0"
+                    text={<FormattedMessage defaultMessage="Edit Previous Stream" />}
+                  />
+                )}
+              </div>
               <div className="flex flex-col gap-4">
                 <h3>
                   <FormattedMessage defaultMessage="Stream Setup" />

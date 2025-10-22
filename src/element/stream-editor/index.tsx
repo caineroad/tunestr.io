@@ -5,7 +5,7 @@ import { unixNow } from "@snort/shared";
 import { FormattedMessage, useIntl } from "react-intl";
 import { SnortContext } from "@snort/system-react";
 
-import { extractStreamInfo, findTag } from "@/utils";
+import { extractStreamInfo, findTag, extractGameTag, sortStreamTags } from "@/utils";
 import { useLogin } from "@/hooks/login";
 import { GOAL, StreamState, defaultRelays } from "@/const";
 import { DefaultButton } from "@/element/buttons";
@@ -29,9 +29,18 @@ export interface StreamEditorProps {
     canSetTags?: boolean;
     canSetContentWarning?: boolean;
   };
+  initial?: {
+    title?: string;
+    summary?: string;
+    image?: string;
+    stream?: string;
+    tags?: string[];
+    contentWarning?: boolean;
+    goal?: string;
+  };
 }
 
-export function StreamEditor({ ev, onFinish, options }: StreamEditorProps) {
+export function StreamEditor({ ev, onFinish, options, initial }: StreamEditorProps) {
   const [title, setTitle] = useState("");
   const [summary, setSummary] = useState("");
   const [image, setImage] = useState("");
@@ -53,23 +62,47 @@ export function StreamEditor({ ev, onFinish, options }: StreamEditorProps) {
   const system = useContext(SnortContext);
 
   useEffect(() => {
-    const { gameInfo, gameId, title, summary, image, stream, status, starts, tags, contentWarning, goal, recording } =
-      extractStreamInfo(ev);
-    setTitle(title ?? "");
-    setSummary(summary ?? "");
-    setImage(image ?? "");
-    setStream(stream ?? "");
-    setStatus(status ?? StreamState.Live);
-    setRecording(recording ?? "");
-    setStart(starts);
-    setTags(tags ?? []);
-    setContentWarning(contentWarning !== undefined);
-    setGoal(goal);
-    setGameId(gameId);
-    if (gameInfo) {
-      setGame(gameInfo);
-    } else if (gameId) {
-      new GameDatabase().getGame(gameId).then(setGame);
+    if (ev) {
+      const { gameInfo, gameId, title, summary, image, stream, status, starts, tags, contentWarning, goal, recording } =
+        extractStreamInfo(ev);
+      setTitle(title ?? "");
+      setSummary(summary ?? "");
+      setImage(image ?? "");
+      setStream(stream ?? "");
+      setStatus(status ?? StreamState.Live);
+      setRecording(recording ?? "");
+      setStart(starts);
+      setTags(tags ?? []);
+      setContentWarning(contentWarning !== undefined);
+      setGoal(goal);
+      setGameId(gameId);
+      if (gameInfo) {
+        setGame(gameInfo);
+      } else if (gameId) {
+        new GameDatabase().getGame(gameId).then(setGame);
+      }
+    } else if (initial) {
+      setTitle(initial.title ?? "");
+      setSummary(initial.summary ?? "");
+      setImage(initial.image ?? "");
+      setStream(initial.stream ?? "");
+      setStatus(StreamState.Live);
+      setRecording("");
+      setStart(undefined);
+      setTags(initial.tags ?? []);
+      setContentWarning(Boolean(initial.contentWarning));
+      setGoal(initial.goal);
+      // Derive category/game from tags if available
+      const { prefixedTags } = sortStreamTags(initial.tags ?? []);
+      const { gameInfo, gameId } = extractGameTag(prefixedTags);
+      setGameId(gameId);
+      if (gameInfo) {
+        setGame(gameInfo);
+      } else if (gameId) {
+        new GameDatabase().getGame(gameId).then(setGame);
+      }
+    } else {
+      setStatus(StreamState.Live);
     }
   }, []);
 
@@ -77,14 +110,16 @@ export function StreamEditor({ ev, onFinish, options }: StreamEditorProps) {
     if (title.length < 2) {
       return false;
     }
-    if (stream.length < 5 || !stream.match(/^https?:\/\/.*\.m3u8?$/i)) {
-      return false;
+    if (options?.canSetStream ?? true) {
+      if (stream.length < 5 || !stream.match(/^https?:\/\/.*\.m3u8?$/i)) {
+        return false;
+      }
     }
     if (image.length > 0 && !image.match(/^https?:\/\//i)) {
       return false;
     }
     return true;
-  }, [title, image, stream]);
+  }, [title, image, stream, options?.canSetStream]);
 
   useEffect(() => {
     setIsValid(ev !== undefined || validate());

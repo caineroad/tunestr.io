@@ -233,6 +233,16 @@ export default function NostrProviderDialog({
           others.onFinish?.(ex);
         }}
         ev={others.ev}
+        initial={
+          others.ev
+            ? undefined
+            : {
+                image: info.streamInfo?.image,
+                tags: info.streamInfo?.tags,
+                contentWarning: Boolean(info.streamInfo?.content_warning),
+                goal: info.streamInfo?.goal,
+              }
+        }
         options={{
           canSetStream: false,
           canSetStatus: false,
