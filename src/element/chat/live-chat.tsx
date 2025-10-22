@@ -23,8 +23,7 @@ import { findTag, getHost, getTagValues, uniqBy } from "@/utils";
 import { TopZappers } from "../top-zappers";
 import { Link, useNavigate } from "react-router-dom";
 import classNames from "classnames";
-import { useStream } from "../stream/stream-state";
-import { useLayout } from "@/pages/layout/context";
+// removed adjustLayout-related layout/stream context
 
 function BadgeAward({ ev }: { ev: NostrEvent }) {
   const badge = findTag(ev, "a") ?? "";
@@ -50,7 +49,6 @@ export function LiveChat({
   goal,
   canWrite,
   showTopZappers,
-  adjustLayout,
   showGoal,
   showScrollbar,
   height,
@@ -62,7 +60,6 @@ export function LiveChat({
   goal?: NostrEvent;
   canWrite?: boolean;
   showTopZappers?: boolean;
-  adjustLayout?: boolean;
   showGoal?: boolean;
   showScrollbar?: boolean;
   height?: number;
@@ -100,8 +97,7 @@ export function LiveChat({
   const allEmojiPacks = useMemo(() => {
     return uniqBy(userEmojiPacks.concat(channelEmojiPacks), packId);
   }, [userEmojiPacks, channelEmojiPacks]);
-  const streamContext = useStream();
-  const layoutContext = useLayout();
+  // removed stream/layout context usage
 
   const reactions = useEventReactions(link, feed);
   const events = useMemo(() => {
@@ -119,34 +115,7 @@ export function LiveChat({
       .sort((a, b) => b.created_at - a.created_at);
   }, [feed, awards]);
 
-  useEffect(() => {
-    const resetLayout = () => {
-      if (streamContext.showDetails || !adjustLayout) {
-        streamContext.update(c => {
-          c.showDetails = !adjustLayout;
-          return { ...c };
-        });
-      }
-      if (!layoutContext.showHeader) {
-        layoutContext.update(c => {
-          c.showHeader = true;
-          return { ...c };
-        });
-      }
-    };
-
-    if (adjustLayout) {
-      layoutContext.update(c => {
-        c.showHeader = false;
-        return { ...c };
-      });
-      return () => {
-        resetLayout();
-      };
-    } else {
-      resetLayout();
-    }
-  }, [adjustLayout]);
+  // removed adjustLayout effect
 
   const filteredEvents = useMemo(() => {
     return events.filter(e => {
@@ -160,22 +129,7 @@ export function LiveChat({
 
   return (
     <div className={classNames("flex flex-col gap-1", className)} style={height ? { height: `${height}px` } : {}}>
-      {adjustLayout && (
-        <div
-          className="min-h-2 my-2"
-          onClick={() => {
-            streamContext.update(c => {
-              c.showDetails = !c.showDetails;
-              return { ...c };
-            });
-            layoutContext.update(c => {
-              c.showHeader = !streamContext.showDetails;
-              return { ...c };
-            });
-          }}>
-          <div className="h-2 bg-layer-3 rounded-full w-10 mx-auto"></div>
-        </div>
-      )}
+      {/* removed mobile adjustLayout toggle bar */}
       {(showTopZappers ?? true) && reactions.zaps.length > 0 && (
         <div>
           <div className="flex gap-1 overflow-x-auto scrollbar-hidden">

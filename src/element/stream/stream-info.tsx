@@ -4,10 +4,11 @@ import { formatSats } from "@/number";
 import { getHost, extractStreamInfo, findTag } from "@/utils";
 import { NostrLink, TaggedNostrEvent } from "@snort/system";
 import { SnortContext, useUserProfile } from "@snort/system-react";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { Link, useNavigate } from "react-router-dom";
-import { Layer2Button, WarningButton } from "../buttons";
+import { DefaultButton, Layer2Button, WarningButton } from "../buttons";
+import { useMediaQuery } from "usehooks-ts";
 import { FollowButton } from "../follow-button";
 import GameInfoCard from "../game-info";
 import { NewStreamDialog } from "../new-stream";
@@ -19,7 +20,6 @@ import { ShareMenu } from "../share-menu";
 import { StatePill } from "../state-pill";
 import { StreamTimer } from "./stream-time";
 import { Tags } from "../tags";
-import { useStream } from "./stream-state";
 import { StreamSummary } from "./summary";
 
 export function StreamInfo({ ev, goal }: { ev?: TaggedNostrEvent; goal?: TaggedNostrEvent }) {
@@ -29,7 +29,8 @@ export function StreamInfo({ ev, goal }: { ev?: TaggedNostrEvent; goal?: TaggedN
   const host = getHost(ev);
   const profile = useUserProfile(host);
   const zapTarget = profile?.lud16 ?? profile?.lud06;
-  const streamContext = useStream();
+  const isDesktop = useMediaQuery("(min-width: 1280px)");
+  const [showSummary, setShowSummary] = useState(isDesktop);
 
   const { status, participants, title, summary, service, gameId, gameInfo } = extractStreamInfo(ev);
   const isMine = ev?.pubkey === login?.pubkey || host === login?.pubkey;
@@ -43,8 +44,6 @@ export function StreamInfo({ ev, goal }: { ev?: TaggedNostrEvent; goal?: TaggedN
       navigate("/");
     }
   }
-
-  if (!streamContext.showDetails) return;
 
   return (
     <>
@@ -63,9 +62,9 @@ export function StreamInfo({ ev, goal }: { ev?: TaggedNostrEvent; goal?: TaggedN
                 </div>
               )}
             </div>
-            <div className="flex gap-2">
+            <div className="flex gap-2 items-stretch justify-between">
               {ev && (
-                <>
+                <div className="flex gap-2">
                   <ShareMenu ev={ev} />
                   {service && <NotificationsButton host={host} service={service} />}
                   {zapTarget && (
@@ -77,7 +76,17 @@ export function StreamInfo({ ev, goal }: { ev?: TaggedNostrEvent; goal?: TaggedN
                       targetName={getName(ev.pubkey, profile)}
                     />
                   )}
-                </>
+                </div>
+              )}
+              {/* Mobile-only Details toggle */}
+              {summary && (
+                <DefaultButton className="xl:hidden" onClick={() => setShowSummary(v => !v)}>
+                  {!isDesktop && showSummary ? (
+                    <FormattedMessage defaultMessage="Hide Details" />
+                  ) : (
+                    <FormattedMessage defaultMessage="Show Details" />
+                  )}
+                </DefaultButton>
               )}
             </div>
           </div>
@@ -100,7 +109,7 @@ export function StreamInfo({ ev, goal }: { ev?: TaggedNostrEvent; goal?: TaggedN
             )}
             {ev && <Tags ev={ev} />}
           </div>
-          {summary && <StreamSummary text={summary} />}
+          {summary && (isDesktop || showSummary) && <StreamSummary text={summary} />}
           {ev && isMine && (
             <div className="flex gap-2">
               <NewStreamDialog text={<FormattedMessage defaultMessage="Edit" />} ev={ev} />

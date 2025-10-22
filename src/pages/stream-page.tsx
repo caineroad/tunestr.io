@@ -77,7 +77,6 @@ export function StreamPage({ link, evPreload }: { evPreload?: TaggedNostrEvent; 
           ev={ev}
           goal={goal}
           canWrite={status === StreamState.Live}
-          adjustLayout={!isDesktop}
           showGoal={true}
           className="min-h-0 xl:border xl:border-layer-2 xl:rounded-xl xl:p-3 max-xl:px-2 h-inherit"
         />
