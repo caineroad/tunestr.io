@@ -3,7 +3,7 @@ import { FormattedMessage } from "react-intl";
 import { EventKind, NostrEvent, NostrLink, NostrPrefix, ParsedZap, TaggedNostrEvent } from "@snort/system";
 import { useEventFeed, useEventReactions, useReactions, useUserProfile } from "@snort/system-react";
 import { dedupe, removeUndefined, sanitizeRelayUrl, unixNow, unwrap } from "@snort/shared";
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { Icon } from "../icon";
 import Spinner from "../spinner";
@@ -23,6 +23,7 @@ import { findTag, getHost, getTagValues, uniqBy } from "@/utils";
 import { TopZappers } from "../top-zappers";
 import { Link, useNavigate } from "react-router-dom";
 import classNames from "classnames";
+import { DefaultButton } from "../buttons";
 // removed adjustLayout-related layout/stream context
 
 function BadgeAward({ ev }: { ev: NostrEvent }) {
@@ -126,71 +127,187 @@ export function LiveChat({
       );
     });
   }, [events, login?.state?.version, hostMutedPubkeys]);
+  const [activeTab, setActiveTab] = useState<"chat" | "zaps">("chat");
 
   return (
     <div className={classNames("flex flex-col gap-1", className)} style={height ? { height: `${height}px` } : {}}>
       {/* removed mobile adjustLayout toggle bar */}
-      {(showTopZappers ?? true) && reactions.zaps.length > 0 && (
-        <div>
-          <div className="flex gap-1 overflow-x-auto scrollbar-hidden">
-            <TopZappers zaps={reactions.zaps} className="border border-violet-700 rounded-full py-1 px-2" />
+      {(showTopZappers ?? true) ? (
+        <>
+          <div className="flex gap-2 w-full" style={{ marginTop: "1em" }}>
+            {activeTab === "chat" ? (
+              <DefaultButton
+                onClick={() => setActiveTab("chat")}
+                className="grow text-center"
+                style={{ borderRadius: "9999px 9999px 0 0" }}
+              >
+                Live Chat
+              </DefaultButton>
+            ) : (
+              <button
+                type="button"
+                onClick={() => setActiveTab("chat")}
+                className="grow px-3 xl:py-2 max-xl:py-[6px] font-semibold leading-none text-white/70 hover:text-white text-center"
+                style={{ borderRadius: "9999px 9999px 0 0", background: "transparent" }}
+              >
+                Live Chat
+              </button>
+            )}
+            {activeTab === "zaps" ? (
+              <DefaultButton
+                onClick={() => setActiveTab("zaps")}
+                className="grow text-center"
+                style={{ borderRadius: "9999px 9999px 0 0" }}
+              >
+                Top Zaps
+              </DefaultButton>
+            ) : (
+              <button
+                type="button"
+                onClick={() => setActiveTab("zaps")}
+                className="grow px-3 xl:py-2 max-xl:py-[6px] font-semibold leading-none text-white/70 hover:text-white text-center"
+                style={{ borderRadius: "9999px 9999px 0 0", background: "transparent" }}
+              >
+                Top Zaps
+              </button>
+            )}
           </div>
-        </div>
-      )}
-      {(showGoal ?? true) && goal && <Goal ev={goal} />}
-      <div
-        className={classNames("flex flex-col-reverse grow gap-2 overflow-y-auto", {
-          "scrollbar-hidden": !(showScrollbar ?? true),
-        })}>
-        {filteredEvents.map(a => {
-          switch (a.kind) {
-            case -1:
-            case -2: {
-              return (
-                <b
-                  className="border px-3 py-2 text-center border-layer-2 rounded-xl bg-primary uppercase"
-                  key={`${a.kind}-${a.created_at}`}>
-                  {a.kind === -1 ? (
-                    <FormattedMessage defaultMessage="Stream Started" id="5tM0VD" />
-                  ) : (
-                    <FormattedMessage defaultMessage="Stream Ended" id="jkAQj5" />
-                  )}
-                </b>
-              );
-            }
-            case EventKind.BadgeAward: {
-              return <BadgeAward ev={a} key={a.id} />;
-            }
-            case LIVE_STREAM_CHAT: {
-              return <ChatMessage badges={awards} emojiPacks={allEmojiPacks} streamer={host} ev={a} key={a.id} />;
-            }
-            case LIVE_STREAM_RAID: {
-              return <ChatRaid ev={a} link={link} key={a.id} autoRaid={autoRaid} />;
-            }
-            case LIVE_STREAM_CLIP: {
-              return <ChatClip ev={a} key={a.id} />;
-            }
-            case EventKind.ZapReceipt: {
-              const zap = reactions.zaps.find(b => b.id === a.id && b.receiver === host);
-              if (zap) {
-                return <ChatZap zap={zap} key={a.id} />;
-              }
-            }
-          }
-          return null;
-        })}
-        {feed.length === 0 && <Spinner />}
-      </div>
-      {(canWrite ?? true) && (
-        <div className="flex gap-2 border-t py-2 border-layer-1">
-          {login ? (
-            <WriteMessage emojiPacks={allEmojiPacks} link={link} relays={relays} />
+
+          {activeTab === "chat" ? (
+            <div
+              className={classNames("flex flex-col-reverse grow gap-2 overflow-y-auto", {
+                "scrollbar-hidden": !(showScrollbar ?? true),
+              })}>
+              {filteredEvents.map(a => {
+                switch (a.kind) {
+                  case -1:
+                  case -2: {
+                    return (
+                      <b
+                        className="border px-3 py-2 text-center border-layer-2 rounded-xl bg-primary uppercase"
+                        key={`${a.kind}-${a.created_at}`}>
+                        {a.kind === -1 ? (
+                          <FormattedMessage defaultMessage="Stream Started" id="5tM0VD" />
+                        ) : (
+                          <FormattedMessage defaultMessage="Stream Ended" id="jkAQj5" />
+                        )}
+                      </b>
+                    );
+                  }
+                  case EventKind.BadgeAward: {
+                    return <BadgeAward ev={a} key={a.id} />;
+                  }
+                  case LIVE_STREAM_CHAT: {
+                    return <ChatMessage badges={awards} emojiPacks={allEmojiPacks} streamer={host} ev={a} key={a.id} />;
+                  }
+                  case LIVE_STREAM_RAID: {
+                    return <ChatRaid ev={a} link={link} key={a.id} autoRaid={autoRaid} />;
+                  }
+                  case LIVE_STREAM_CLIP: {
+                    return <ChatClip ev={a} key={a.id} />;
+                  }
+                  case EventKind.ZapReceipt: {
+                    const zap = reactions.zaps.find(b => b.id === a.id && b.receiver === host);
+                    if (zap) {
+                      return <ChatZap zap={zap} key={a.id} />;
+                    }
+                  }
+                }
+                return null;
+              })}
+              {feed.length === 0 && <Spinner />}
+            </div>
           ) : (
-            <p>
-              <FormattedMessage defaultMessage="Please login to write messages!" id="RXQdxR" />
-            </p>
+            <div
+              className={classNames("flex flex-col grow gap-2 overflow-y-auto", {
+                "scrollbar-hidden": !(showScrollbar ?? true),
+              })}>
+              <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-1">
+                  <TopZappers
+                    zaps={reactions.zaps}
+                    className="border border-violet-700 rounded-full py-1 px-2"
+                    showName={true}
+                  />
+                </div>
+                {reactions.zaps.length === 0 && (
+                  <p className="text-center opacity-60">No zaps yet for this stream.</p>
+                )}
+                {(showGoal ?? true) && goal && <Goal ev={goal} />}
+              </div>
+            </div>
           )}
-        </div>
+
+          {(canWrite ?? true) && (
+            <div className="flex gap-2 border-t py-2 border-layer-1">
+              {login ? (
+                <WriteMessage emojiPacks={allEmojiPacks} link={link} relays={relays} />
+              ) : (
+                <p>
+                  <FormattedMessage defaultMessage="Please login to write messages!" id="RXQdxR" />
+                </p>
+              )}
+            </div>
+          )}
+        </>
+      ) : (
+        <>
+          {(showGoal ?? true) && goal && <Goal ev={goal} />}
+          <div
+            className={classNames("flex flex-col-reverse grow gap-2 overflow-y-auto", {
+              "scrollbar-hidden": !(showScrollbar ?? true),
+            })}>
+            {filteredEvents.map(a => {
+              switch (a.kind) {
+                case -1:
+                case -2: {
+                  return (
+                    <b
+                      className="border px-3 py-2 text-center border-layer-2 rounded-xl bg-primary uppercase"
+                      key={`${a.kind}-${a.created_at}`}>
+                      {a.kind === -1 ? (
+                        <FormattedMessage defaultMessage="Stream Started" id="5tM0VD" />
+                      ) : (
+                        <FormattedMessage defaultMessage="Stream Ended" id="jkAQj5" />
+                      )}
+                    </b>
+                  );
+                }
+                case EventKind.BadgeAward: {
+                  return <BadgeAward ev={a} key={a.id} />;
+                }
+                case LIVE_STREAM_CHAT: {
+                  return <ChatMessage badges={awards} emojiPacks={allEmojiPacks} streamer={host} ev={a} key={a.id} />;
+                }
+                case LIVE_STREAM_RAID: {
+                  return <ChatRaid ev={a} link={link} key={a.id} autoRaid={autoRaid} />;
+                }
+                case LIVE_STREAM_CLIP: {
+                  return <ChatClip ev={a} key={a.id} />;
+                }
+                case EventKind.ZapReceipt: {
+                  const zap = reactions.zaps.find(b => b.id === a.id && b.receiver === host);
+                  if (zap) {
+                    return <ChatZap zap={zap} key={a.id} />;
+                  }
+                }
+              }
+              return null;
+            })}
+            {feed.length === 0 && <Spinner />}
+          </div>
+          {(canWrite ?? true) && (
+            <div className="flex gap-2 border-t py-2 border-layer-1">
+              {login ? (
+                <WriteMessage emojiPacks={allEmojiPacks} link={link} relays={relays} />
+              ) : (
+                <p>
+                  <FormattedMessage defaultMessage="Please login to write messages!" id="RXQdxR" />
+                </p>
+              )}
+            </div>
+          )}
+        </>
       )}
     </div>
   );
