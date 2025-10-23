@@ -112,12 +112,11 @@ export default function DashboardForLink({ link }: { link: NostrLink }) {
 
   return (
     <div
-      className={classNames("grid gap-2 h-[calc(100dvh-52px)] w-full", {
-        "grid-cols-3": status === StreamState.Live,
-        "grid-cols-[20%_80%]": status === StreamState.Ended || status === undefined,
-        "grid-cols-[40%_60%]": status === StreamState.Planned,
+      className={classNames("grid gap-2 w-full grid-cols-1 md:h-[calc(100dvh-52px)]", {
+        "md:grid-cols-3": status === StreamState.Live,
+        "md:grid-cols-[40%_60%]": status === StreamState.Ended || status === undefined || status === StreamState.Planned,
       })}>
-      <div className="min-h-0 h-full grid grid-rows-[min-content_auto] gap-2">
+      <div className="min-w-0 min-h-0 md:h-full grid grid-rows-[min-content_auto] gap-2">
         <DashboardCard className="flex flex-col gap-4">
           <div className="flex justify-between items-center">
             <h3>
@@ -138,7 +137,7 @@ export default function DashboardForLink({ link }: { link: NostrLink }) {
                 muted={true}
                 className="w-full"
               />
-              <div className="flex gap-4">
+              <div className="flex gap-4 flex-wrap">
                 <DashboardStatsCard
                   name={<FormattedMessage defaultMessage="Stream Time" />}
                   value={<StreamTimer ev={streamEvent} />}
@@ -171,7 +170,7 @@ export default function DashboardForLink({ link }: { link: NostrLink }) {
                   />
                 </div>
               )}
-              <div className="grid gap-2 grid-cols-3">
+              <div className="grid gap-2 grid-cols-1 sm:grid-cols-3">
                 <DashboardRaidButton link={streamLink} />
                 <NewStreamDialog ev={streamEvent} text={<FormattedMessage defaultMessage="Edit Stream Info" />} />
                 <DashboardSettingsButton ev={streamEvent} />
@@ -189,7 +188,7 @@ export default function DashboardForLink({ link }: { link: NostrLink }) {
                 muted={true}
                 className="w-full"
               />
-              <div className="grid gap-2 grid-cols-3">
+              <div className="grid gap-2 grid-cols-1 sm:grid-cols-3">
                 <DashboardRaidButton link={streamLink} />
                 <NewStreamDialog ev={streamEvent} text={<FormattedMessage defaultMessage="Edit Stream Info" />} />
                 <WarningButton
@@ -261,7 +260,7 @@ export default function DashboardForLink({ link }: { link: NostrLink }) {
             <h3>
               <FormattedMessage defaultMessage="Chat Users" />
             </h3>
-            <div className="h-[calc(100%-4rem)] overflow-y-auto">
+            <div className="md:h-[calc(100%-4rem)] overflow-y-auto">
               <DashboardChatList feed={feed} />
             </div>
           </DashboardCard>
@@ -281,7 +280,7 @@ export default function DashboardForLink({ link }: { link: NostrLink }) {
       {streamLink && status === StreamState.Live && (
         <>
           <DashboardZapColumn ev={streamEvent!} link={streamLink} feed={feed} />
-          <div className="border border-layer-2 rounded-xl px-4 py-3 flex flex-col gap-2 min-h-0">
+          <div className="border border-layer-2 rounded-xl px-4 py-3 flex flex-col gap-2 min-h-0 min-w-0">
             <Layer1Button
               onClick={() => {
                 window.open(
@@ -293,7 +292,7 @@ export default function DashboardForLink({ link }: { link: NostrLink }) {
               <Icon name="link" size={24} />
               <FormattedMessage defaultMessage="Chat Popout" />
             </Layer1Button>
-            <LiveChat link={streamLink} ev={streamEvent} className="grow min-h-0" />
+            <LiveChat link={streamLink} ev={streamEvent} className="md:grow min-h-0" />
           </div>
         </>
       )}

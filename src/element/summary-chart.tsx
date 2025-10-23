@@ -239,7 +239,7 @@ export default function StreamSummary({ link, preload }: { link: NostrLink; prel
         </BarChart>
       </ResponsiveContainer>
 
-      <div className="grid gap-2 grid-cols-3">
+      <div className="grid gap-2 lg:grid-cols-3">
         <div className="bg-layer-1 rounded-xl px-4 py-3 flex-1 flex flex-col gap-2">
           <h3>
             <FormattedMessage defaultMessage="Top Chatters" id="GGaJMU" />
@@ -320,7 +320,7 @@ export default function StreamSummary({ link, preload }: { link: NostrLink; prel
           </div>
         </div>
       </div>
-      <div className="grid gap-2 grid-cols-2">
+      <div className="grid gap-2 lg:grid-cols-2">
         <div className="bg-layer-1 rounded-xl px-4 py-3 flex-1 flex flex-col gap-2">
           <h3>
             <FormattedMessage defaultMessage="Shares" id="mrwfXX" />
