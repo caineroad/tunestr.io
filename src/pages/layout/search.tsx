@@ -2,15 +2,16 @@ import { Icon } from "@/element/icon";
 import { useState } from "react";
 import { useIntl } from "react-intl";
 import { useParams, useNavigate } from "react-router-dom";
+import classNames from "classnames";
 
-export function SearchBar() {
+export function SearchBar({ className, autoFocus }: { className?: string; autoFocus?: boolean }) {
   const { term } = useParams();
   const { formatMessage } = useIntl();
   const navigate = useNavigate();
   const [search, setSearch] = useState(term ?? "");
 
   return (
-    <div className="pr-4 h-fit flex items-center rounded-full px-3 py-1 border border-layer-2 max-xl:min-w-0">
+    <div className={classNames("pr-4 h-fit flex items-center rounded-full px-3 py-1 border border-layer-2 max-xl:min-w-0", className)}>
       <input
         type="text"
         className="reset bg-transparent"
@@ -19,6 +20,7 @@ export function SearchBar() {
         })}
         value={search}
         onChange={e => setSearch(e.target.value)}
+        autoFocus={autoFocus}
         onKeyDown={e => {
           if (e.key === "Enter") {
             navigate(`/search/${encodeURIComponent(search)}`);
