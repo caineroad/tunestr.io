@@ -38,9 +38,10 @@ export interface StreamEditorProps {
     contentWarning?: boolean;
     goal?: string;
   };
+  extraTags?: Array<[string, string]>;
 }
 
-export function StreamEditor({ ev, onFinish, options, initial }: StreamEditorProps) {
+export function StreamEditor({ ev, onFinish, options, initial, extraTags }: StreamEditorProps) {
   const [title, setTitle] = useState("");
   const [summary, setSummary] = useState("");
   const [image, setImage] = useState("");
@@ -63,23 +64,35 @@ export function StreamEditor({ ev, onFinish, options, initial }: StreamEditorPro
 
   useEffect(() => {
     if (ev) {
-      const { gameInfo, gameId, title, summary, image, stream, status, starts, tags, contentWarning, goal, recording } =
-        extractStreamInfo(ev);
-      setTitle(title ?? "");
-      setSummary(summary ?? "");
-      setImage(image ?? "");
-      setStream(stream ?? "");
-      setStatus(status ?? StreamState.Live);
-      setRecording(recording ?? "");
-      setStart(starts);
-      setTags(tags ?? []);
-      setContentWarning(contentWarning !== undefined);
-      setGoal(goal);
-      setGameId(gameId);
-      if (gameInfo) {
-        setGame(gameInfo);
-      } else if (gameId) {
-        new GameDatabase().getGame(gameId).then(setGame);
+      const {
+        gameInfo: evGameInfo,
+        gameId: evGameId,
+        title: evTitle,
+        summary: evSummary,
+        image: evImage,
+        stream: evStream,
+        status: evStatus,
+        starts: evStarts,
+        tags: evTags,
+        contentWarning: evContentWarning,
+        goal: evGoal,
+        recording: evRecording,
+      } = extractStreamInfo(ev);
+      setTitle(evTitle ?? initial?.title ?? "");
+      setSummary(evSummary ?? initial?.summary ?? "");
+      setImage(evImage ?? initial?.image ?? "");
+      setStream(evStream ?? initial?.stream ?? "");
+      setStatus(evStatus ?? StreamState.Live);
+      setRecording(evRecording ?? "");
+      setStart(evStarts);
+      setTags(evTags ?? initial?.tags ?? []);
+      setContentWarning(Boolean(evContentWarning ?? initial?.contentWarning));
+      setGoal(evGoal ?? initial?.goal);
+      setGameId(evGameId);
+      if (evGameInfo) {
+        setGame(evGameInfo);
+      } else if (evGameId) {
+        new GameDatabase().getGame(evGameId).then(setGame);
       }
     } else if (initial) {
       setTitle(initial.title ?? "");
@@ -104,7 +117,7 @@ export function StreamEditor({ ev, onFinish, options, initial }: StreamEditorPro
     } else {
       setStatus(StreamState.Live);
     }
-  }, []);
+  }, [ev, initial]);
 
   const validate = useCallback(() => {
     if (title.length < 2) {
@@ -172,6 +185,11 @@ export function StreamEditor({ ev, onFinish, options, initial }: StreamEditorPro
         }
         if (gameId) {
           eb.tag(["t", gameId]);
+        }
+        if (extraTags && Array.isArray(extraTags)) {
+          for (const [k, v] of extraTags) {
+            eb.tag([k, v]);
+          }
         }
         return eb;
       });
@@ -241,7 +259,7 @@ export function StreamEditor({ ev, onFinish, options, initial }: StreamEditorPro
                 type="datetime-local"
                 value={`${startsDate.getFullYear().toString().padStart(4, "0")}-${(startsDate.getMonth() + 1).toString().padStart(2, "0")}-${startsDate.getDate().toString().padStart(2, "0")}T${startsDate.getHours().toString().padStart(2, "0")}:${startsDate.getMinutes().toString().padStart(2, "0")}`}
                 onChange={e => {
-                  setStart((new Date(e.target.value) / 1000).toString());
+                  setStart((new Date(e.target.value).getTime() / 1000).toString());
                 }}
               />
             </StreamInput>

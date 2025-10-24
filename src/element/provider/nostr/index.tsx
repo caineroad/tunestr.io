@@ -228,24 +228,27 @@ export default function NostrProviderDialog({
 
     return (
       <StreamEditor
-        onFinish={ex => {
-          provider.updateStreamInfo(system, ex);
+        onFinish={async ex => {
+          // Broadcast the updated event so the dashboard immediately sees updated tags (e.g. 'service')
+          await system.BroadcastEvent(ex);
+          // Update provider-side stream info
+          await provider.updateStreamInfo(system, ex);
+          // Close modal / propagate
           others.onFinish?.(ex);
         }}
         ev={others.ev}
-        initial={
-          others.ev
-            ? undefined
-            : {
-                image: info.streamInfo?.image,
-                tags: info.streamInfo?.tags,
-                contentWarning: Boolean(info.streamInfo?.content_warning),
-                goal: info.streamInfo?.goal,
-              }
-        }
+        extraTags={[["service", provider.url]]}
+        initial={{
+          title: info.streamInfo?.title,
+          summary: info.streamInfo?.summary,
+          image: info.streamInfo?.image,
+          tags: info.streamInfo?.tags,
+          contentWarning: Boolean(info.streamInfo?.content_warning),
+          goal: info.streamInfo?.goal,
+        }}
         options={{
           canSetStream: false,
-          canSetStatus: false,
+          canSetStatus: true,
         }}
       />
     );

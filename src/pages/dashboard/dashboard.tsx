@@ -32,6 +32,7 @@ import ForwardingModal from "./forwarding";
 import BalanceHistoryModal from "./balance-history";
 import Modal from "@/element/modal";
 import { AcceptTos } from "./tos";
+import EndAllStreamsButton from "@/element/stream/endallstreams";
 const StreamSummary = lazy(() => import("@/element/summary-chart"));
 
 export default function DashboardForLink({ link }: { link: NostrLink }) {
@@ -225,13 +226,14 @@ export default function DashboardForLink({ link }: { link: NostrLink }) {
               </div>
               <div className="flex items-center gap-3">
                 <NewStreamDialog text={<FormattedMessage defaultMessage="New Stream" />} />
-                {streamEvent && (
+                {streamEvent && streamLink && (
                   <NewStreamDialog
                     ev={streamEvent}
                     btnClassName="bg-transparent text-sm text-layer-5 underline underline-offset-2 px-1 py-0"
-                    text={<FormattedMessage defaultMessage="Edit Previous Stream" />}
+                    text={<FormattedMessage defaultMessage="Edit Last Stream" />}
                   />
                 )}
+                <EndAllStreamsButton />
               </div>
               <div className="flex flex-col gap-4">
                 <h3>
