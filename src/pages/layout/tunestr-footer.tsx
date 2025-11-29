@@ -17,7 +17,7 @@ export function TunestrFooter() {
         { name: "KARNAGE", url: "https://njump.me/npub1r0rs5q2gk0e3dk3nlc7gnu378ec6cnlenqp8a3cjhyzu6f8k5sgs4sq9ac" },
         { name: "HODLBOD", url: "https://njump.me/npub1jlrs53pkdfjnts29kveljul2sm0actt6n8dxrrzqcersttvcuv3qdjynqn" },
         { name: "NABISMOPRIME", url: "https://njump.me/npub1g5pm4gf8hh7skp2rsnw9h2pvkr32sdnuhkcx9yte7qxmrg6v4txqqudjqv" },
-        { name: "SHAWN (YAEGER)", url: "https://shawnyeager.com/" },
+        { name: "SHAWN (YEAGER)", url: "https://shawnyeager.com/" },
       ],
     },
     {
@@ -27,8 +27,6 @@ export function TunestrFooter() {
         { name: "TIP-NZ", url: "https://www.tipnz.com/" },
         { name: "SARA JADE", url: "https://sarajademusic.com/" },
         { name: "JOE MARTIN", url: "https://www.joemartinmusic.com/" },
-        { name: "12 RODS", url: "https://www.12rods.site/" },
-        { name: "MELLOW CASSETTE", url: "https://mellowcassette.bandcamp.com/" },
         { name: "DJ VALERIE B", url: "https://www.djvalerieblove.com/" },
         { name: "YOU?", url: "mailto:v4v@tunestr.io" },
       ],
