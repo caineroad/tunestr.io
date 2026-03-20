@@ -23,10 +23,11 @@ export default function Flyout({
         : `translate(${show ? "0" : "calc(-1 * var(--flyout-w))"},0)`,
   } as CSSProperties;
 
+  if (!show) return null;
+
   return createPortal(
     <div
       className={classNames("absolute z-20 top-0 overflow-hidden", {
-        "pointer-events-none": !show,
         "right-0": side === "right",
         "left-0": side === "left",
       })}>

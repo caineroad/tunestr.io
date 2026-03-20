@@ -11,10 +11,7 @@ export function LeftNav() {
 
   function hideAfterMobileNav() {
     if (isDesktop) return;
-    layout.update(c => {
-      c.leftNavExpand = false;
-      return { ...c };
-    });
+    layout.update(c => ({ ...c, leftNavExpand: false }));
   }
 
   if (layout.leftNav === false) return;
@@ -72,10 +69,7 @@ export function LeftNav() {
         side="left"
         show={layout.leftNavExpand}
         onClose={() => {
-          layout.update(c => {
-            c.leftNavExpand = false;
-            return { ...c };
-          });
+          layout.update(c => ({ ...c, leftNavExpand: false }));
         }}>
         {navInner()}
       </Flyout>

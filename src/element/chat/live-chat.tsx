@@ -135,24 +135,15 @@ export function LiveChat({
   useEffect(() => {
     const resetLayout = () => {
       if (streamContext.showDetails || !adjustLayout) {
-        streamContext.update(c => {
-          c.showDetails = !adjustLayout;
-          return { ...c };
-        });
+        streamContext.update(c => ({ ...c, showDetails: !adjustLayout }));
       }
       if (!layoutContext.showHeader) {
-        layoutContext.update(c => {
-          c.showHeader = true;
-          return { ...c };
-        });
+        layoutContext.update(c => ({ ...c, showHeader: true }));
       }
     };
 
     if (adjustLayout) {
-      layoutContext.update(c => {
-        c.showHeader = false;
-        return { ...c };
-      });
+      layoutContext.update(c => ({ ...c, showHeader: false }));
       return () => {
         resetLayout();
       };
@@ -177,14 +168,8 @@ export function LiveChat({
         <div
           className="min-h-2 my-2"
           onClick={() => {
-            streamContext.update(c => {
-              c.showDetails = !c.showDetails;
-              return { ...c };
-            });
-            layoutContext.update(c => {
-              c.showHeader = !streamContext.showDetails;
-              return { ...c };
-            });
+            streamContext.update(c => ({ ...c, showDetails: !c.showDetails }));
+            layoutContext.update(c => ({ ...c, showHeader: !streamContext.showDetails }));
           }}>
           <div className="h-2 bg-layer-3 rounded-full w-10 mx-auto"></div>
         </div>

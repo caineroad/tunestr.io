@@ -136,10 +136,10 @@ export function HeaderNav() {
             type="button"
             className="cursor-pointer hover:bg-neutral-800 rounded-xl"
             onClick={() => {
-              layoutState.update(c => {
-                c.leftNavExpand = !c.leftNavExpand;
-                return { ...c };
-              });
+              layoutState.update(c => ({
+                ...c,
+                leftNavExpand: !c.leftNavExpand,
+              }));
             }}
           >
             <Icon name="hamburger" size={20} className="m-2" />
