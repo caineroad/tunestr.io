@@ -43,10 +43,17 @@ export function LeftNav() {
             </span>
           )}
         </NavLinkIcon>
-        <NavLinkIcon name="grid" route="/category" className="flex gap-2 items-center" onClick={hideAfterMobileNav}>
+        <NavLinkIcon name="signal" route="/events" className="flex gap-2 items-center" onClick={hideAfterMobileNav}>
           {expandLabels && (
             <span className="pr-3">
-              <FormattedMessage defaultMessage="Categories" />
+              <FormattedMessage defaultMessage="Events" />
+            </span>
+          )}
+        </NavLinkIcon>
+        <NavLinkIcon name="message" route="/social" className="flex gap-2 items-center" onClick={hideAfterMobileNav}>
+          {expandLabels && (
+            <span className="pr-3">
+              <FormattedMessage defaultMessage="Social" />
             </span>
           )}
         </NavLinkIcon>

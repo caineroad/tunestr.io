@@ -26,8 +26,8 @@ import { syncClock } from "./time-sync";
 import SettingsPage from "./pages/settings";
 import AccountSettingsTab from "./pages/settings/account";
 import SearchPage from "./pages/search";
+import SocialPage from "./pages/social";
 import ProfileSettings from "./pages/settings/profile";
-import CategoryPage from "./pages/category";
 import { WorkerRelayInterface } from "@snort/worker-relay";
 import WorkerVite from "@snort/worker-relay/src/worker?worker";
 //import MarkdownPage from "./pages/md-page";
@@ -44,7 +44,7 @@ import { DebugPage } from "./pages/debug";
 import { ShortsPage } from "./pages/shorts";
 import { StreamsPage } from "./pages/streams";
 import AboutPage from "./pages/about";
-
+import EventsPage from "./pages/events";
 import { TosPage } from "./pages/tos";
 import { Login } from "./login";
 import { HelmetProvider } from "@dr.pogodin/react-helmet";
@@ -199,12 +199,16 @@ const router = createBrowserRouter([
         element: <SearchPage />,
       },
       {
-        path: "/category/:id?",
-        element: <CategoryPage />,
-      },
-      {
         path: "/about",
         element: <AboutPage />,
+      },
+      {
+        path: "/events",
+        element: <EventsPage />,
+      },
+      {
+        path: "/social",
+        element: <SocialPage />,
       },
       {
         path: "/tos",
