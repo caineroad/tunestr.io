@@ -113,6 +113,9 @@
   "37mth/": {
     "defaultMessage": "Viewers"
   },
+  "3F/1IR": {
+    "defaultMessage": "Add your lightning address so fans can zap you directly while you perform!"
+  },
   "3HwrQo": {
     "defaultMessage": "Zap!"
   },
@@ -145,6 +148,9 @@
   },
   "4l6vz1": {
     "defaultMessage": "Copy"
+  },
+  "4vAEzH": {
+    "defaultMessage": "You can update this anytime in your profile settings."
   },
   "50+/JW": {
     "defaultMessage": "Stream Key is required"
@@ -332,9 +338,6 @@
   "FXepR9": {
     "defaultMessage": "{m}mo {ago}",
     "description": "Number of month(s) relative to now"
-  },
-  "FjDlus": {
-    "defaultMessage": "You can always replace it with your own address later."
   },
   "Fodi9+": {
     "defaultMessage": "Get paid by viewers"
@@ -543,9 +546,6 @@
   "OumUwz": {
     "defaultMessage": "{m}s {ago}",
     "description": "Number of second(s) relative to now"
-  },
-  "Oxqtyf": {
-    "defaultMessage": "We hooked you up with a lightning wallet so you can get paid by viewers right away!"
   },
   "P7ewf2": {
     "defaultMessage": "censorship resistant"
