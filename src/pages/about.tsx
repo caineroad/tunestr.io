@@ -273,7 +273,7 @@ export default function AboutPage() {
               <FormattedMessage defaultMessage="learn more about nostr:" />
             </p>
             <ul className="space-y-2">
-              <li><ResourceLink href="https://nostr.com">nostr.com</ResourceLink></li>
+              <li><ResourceLink href="https://nostr.org">nostr.org</ResourceLink></li>
               <li><ResourceLink href="https://nostr.how">nostr.how — guides & tutorials</ResourceLink></li>
               <li><ResourceLink href="https://www.nostrapps.com/">nostrapps.com — discover nostr apps</ResourceLink></li>
             </ul>
@@ -436,31 +436,6 @@ export default function AboutPage() {
         </div>
       </SectionCard>
 
-      {/* Bottom CTA */}
-      <div className="text-center py-8">
-        <h2 className="text-3xl font-bold mb-4">
-          <FormattedMessage defaultMessage="ready to join the revolution?" />
-        </h2>
-        <p className="text-layer-5 text-lg mb-6">
-          <FormattedMessage
-            defaultMessage="independent music deserves independent money."
-          />
-        </p>
-        {/* biome-ignore lint/a11y/useValidAnchor: obfuscated mailto */}
-        <a
-          href="#contact"
-          data-e="djR2QHR1bmVzdHIuaW8="
-          onClick={e => {
-            e.preventDefault();
-            const addr = atob((e.currentTarget as HTMLAnchorElement).dataset.e || "");
-            if (addr) window.location.href = `mailto:${addr}`;
-          }}
-          className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-primary text-layer-0 font-bold text-lg hover:brightness-110 transition-all"
-        >
-          <Zap className="w-5 h-5" />
-          <FormattedMessage defaultMessage="get in touch" />
-        </a>
-      </div>
     </div>
   );
 }
