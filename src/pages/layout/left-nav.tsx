@@ -73,7 +73,7 @@ export function LeftNav() {
         show={layout.leftNavExpand}
         onClose={() => {
           layout.update(c => {
-            c.leftNavExpand = !c.leftNavExpand;
+            c.leftNavExpand = false;
             return { ...c };
           });
         }}>
