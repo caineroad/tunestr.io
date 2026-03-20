@@ -153,7 +153,7 @@ export class NostrStreamProvider {
     this.#wsConnection = new WebSocket(wsUrl);
 
     this.#wsConnection.onopen = async () => {
-      console.log("Provider WebSocket connected");
+      console.debug("Provider WebSocket connected");
 
       // Send NIP-98 authentication using existing auth flow
       try {
@@ -186,7 +186,7 @@ export class NostrStreamProvider {
         // Handle different message types based on admin API
         switch (data.type) {
           case "AuthResponse":
-            console.log("WebSocket authenticated, subscribing to streams");
+            console.debug("WebSocket authenticated, subscribing to streams");
             this.#isAuthenticated = true;
             // After successful auth, subscribe to any pending streams
             this.#subscribeToPendingStreams();
@@ -216,7 +216,7 @@ export class NostrStreamProvider {
     };
 
     this.#wsConnection.onclose = event => {
-      console.log("Provider WebSocket disconnected");
+      console.debug("Provider WebSocket disconnected");
       // Auto-reconnect after 5 seconds if not a manual close
       if (event.code !== 1000) {
         setTimeout(() => {

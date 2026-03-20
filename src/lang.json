@@ -5,6 +5,9 @@
   "+AcVD+": {
     "defaultMessage": "No emails, just awesomeness!"
   },
+  "+lRY2n": {
+    "defaultMessage": "zap your favorite artists! hit the zap button during a performance to send sats directly to the musician on stage."
+  },
   "+sdKx8": {
     "defaultMessage": "Live now"
   },
@@ -13,6 +16,9 @@
   },
   "+y6JUK": {
     "defaultMessage": "Raids"
+  },
+  "//CEVv": {
+    "defaultMessage": "get in touch"
   },
   "/0TOL5": {
     "defaultMessage": "Amount"
@@ -32,8 +38,14 @@
   "/aFYQ5": {
     "defaultMessage": "Stream Forwarding (optional)"
   },
+  "/b4Sqy": {
+    "defaultMessage": "a musician sets up their stream with OBS and goes live on tunestr. the performance is broadcast to anyone in the world — no paywall, no gatekeepers."
+  },
   "/w4RM6": {
     "defaultMessage": "IRL"
+  },
+  "008WfZ": {
+    "defaultMessage": "stop giving 30-50% of your earnings to platforms that don't care about your art. on tunestr, every tip from every fan goes straight to your wallet."
   },
   "01iNut": {
     "defaultMessage": "Nostr address does not belong to you"
@@ -47,14 +59,32 @@
   "0hNxBy": {
     "defaultMessage": "Starts"
   },
+  "0kaErs": {
+    "defaultMessage": "getting started as a musician"
+  },
+  "0mmd1x": {
+    "defaultMessage": "relays"
+  },
   "0rVLjV": {
     "defaultMessage": "No streams yet"
+  },
+  "0uLxD4": {
+    "defaultMessage": "put your stage on the world stage."
+  },
+  "1/CDGR": {
+    "defaultMessage": "keys"
+  },
+  "13gIDc": {
+    "defaultMessage": "set up a lightning wallet to send zaps — Alby's browser extension makes it seamless. fund it with a small amount of bitcoin."
   },
   "1EYCdR": {
     "defaultMessage": "Tags"
   },
   "1LBny5": {
     "defaultMessage": "Stopped"
+  },
+  "1T5M1L": {
+    "defaultMessage": "no platform fees, ever"
   },
   "1q4BO/": {
     "defaultMessage": "Not a valid URL"
@@ -64,6 +94,9 @@
   },
   "2/2yg+": {
     "defaultMessage": "Add"
+  },
+  "24w57A": {
+    "defaultMessage": "learn more about nostr:"
   },
   "29gmtd": {
     "defaultMessage": "Error: {error}"
@@ -95,6 +128,9 @@
   "3yk8fB": {
     "defaultMessage": "Wallet"
   },
+  "4+wTXq": {
+    "defaultMessage": "no deplatforming"
+  },
   "47FYwb": {
     "defaultMessage": "Cancel"
   },
@@ -116,6 +152,9 @@
   "58DXVG": {
     "defaultMessage": "To get started, grab your stream key from the platform you wish to forward to."
   },
+  "5HqEXx": {
+    "defaultMessage": "zap what it's worth"
+  },
   "5JcXdV": {
     "defaultMessage": "Create Account"
   },
@@ -136,6 +175,9 @@
   },
   "5vMmmR": {
     "defaultMessage": "Usernames are not unique on Nostr. The nostr address is your unique human-readable address that is unique to you upon registration."
+  },
+  "67kKdC": {
+    "defaultMessage": "nostr key manager for chrome"
   },
   "69hmpj": {
     "defaultMessage": "Raid from {name}"
@@ -167,11 +209,20 @@
   "7UOvbT": {
     "defaultMessage": "Offline"
   },
+  "82Alfz": {
+    "defaultMessage": "pay what you feel, when you feel it"
+  },
   "89UZph": {
     "defaultMessage": "Configure your streaming software"
   },
   "8YT6ja": {
     "defaultMessage": "Insert text to speak"
+  },
+  "94YD1g": {
+    "defaultMessage": "what is tunestr?"
+  },
+  "9Od8km": {
+    "defaultMessage": "recent streams"
   },
   "9WRlF4": {
     "defaultMessage": "Send"
@@ -206,9 +257,6 @@
   "AukrPM": {
     "defaultMessage": "No viewer data available"
   },
-  "Axo/o5": {
-    "defaultMessage": "Science & Technology"
-  },
   "AyGauy": {
     "defaultMessage": "Login"
   },
@@ -224,6 +272,12 @@
   "Bep/gA": {
     "defaultMessage": "Private key"
   },
+  "BlBv/K": {
+    "defaultMessage": "reach out to get on tunestr — email"
+  },
+  "BxcDLm": {
+    "defaultMessage": "real artists. real venues. real fans. real money."
+  },
   "BzQPM+": {
     "defaultMessage": "Destination"
   },
@@ -235,6 +289,9 @@
   },
   "CsS/fy": {
     "defaultMessage": "{estimate} remaining ({balance} sats @ {rate} sats / {unit})"
+  },
+  "D/qUR8": {
+    "defaultMessage": "web-based bitcoin & lightning wallet"
   },
   "D3idYv": {
     "defaultMessage": "Settings"
@@ -248,6 +305,9 @@
   "DqmiAe": {
     "defaultMessage": "Dont have a nostr extension? Try {nos2x}, {nostore} or {alby}"
   },
+  "Dw2YjZ": {
+    "defaultMessage": "servers that pass messages around. your data isn't locked in one place — it's distributed across many relays. if one goes down, others still have your data."
+  },
   "E9APoR": {
     "defaultMessage": "Could not create stream URL"
   },
@@ -259,6 +319,12 @@
   },
   "EcglP9": {
     "defaultMessage": "Key"
+  },
+  "F7Vf2g": {
+    "defaultMessage": "web, iOS, Android"
+  },
+  "FGz9YM": {
+    "defaultMessage": "you own your audience"
   },
   "FIDK5Y": {
     "defaultMessage": "All Time Top Zappers"
@@ -273,6 +339,9 @@
   "Fodi9+": {
     "defaultMessage": "Get paid by viewers"
   },
+  "FrXeQJ": {
+    "defaultMessage": "what is nostr?"
+  },
   "G/yZLu": {
     "defaultMessage": "Remove"
   },
@@ -281,6 +350,9 @@
   },
   "GGaJMU": {
     "defaultMessage": "Top Chatters"
+  },
+  "GNMLxS": {
+    "defaultMessage": "artist gets paid"
   },
   "GSuQPh": {
     "defaultMessage": "Unknown event link"
@@ -316,10 +388,13 @@
     "defaultMessage": "Name"
   },
   "HsgeUk": {
-    "defaultMessage": "Come check out my stream on zap.stream! {link}"
+    "defaultMessage": "Come check out my stream on tunestr.io! {link}"
   },
   "Ht231k": {
     "defaultMessage": "Forwarding"
+  },
+  "HujhbM": {
+    "defaultMessage": "nostr (Notes and Other Stuff Transmitted by Relays) is a simple, open protocol for decentralized social networking. no company owns it. no one can shut it down. your identity and your followers belong to you."
   },
   "HvUhXt": {
     "defaultMessage": "Uploading to {n} servers"
@@ -342,6 +417,9 @@
   "IPXhUW": {
     "defaultMessage": "Last Stream Summary"
   },
+  "ItcHoU": {
+    "defaultMessage": "how it works"
+  },
   "J+dIsA": {
     "defaultMessage": "Subscriptions"
   },
@@ -353,6 +431,9 @@
   },
   "JO0kq9": {
     "defaultMessage": "Edit Stream Info"
+  },
+  "JRp5FK": {
+    "defaultMessage": "create a nostr identity — sign up through any nostr client, or use the login button right here on tunestr."
   },
   "JkLHGw": {
     "defaultMessage": "Website"
@@ -372,17 +453,23 @@
   "KkIL3s": {
     "defaultMessage": "No, I am under 18"
   },
+  "Kn18zy": {
+    "defaultMessage": "live now"
+  },
   "KxfKnW": {
     "defaultMessage": "Withdraw funds"
   },
   "LEmxc8": {
     "defaultMessage": "Zap Goals"
   },
-  "Lg2ye2": {
-    "defaultMessage": "ZapStream is a new kind of streaming platform that allows you to earn bitcoin (sats) the moment you start streaming! Viewers can tip streamers any amount they choose. The tips are instantly deposited to your bitcoin (lightning) wallet. zap.stream never touches your earnings!"
+  "LbZgj6": {
+    "defaultMessage": "go live and start earning! your fans can zap you directly while you perform."
   },
   "LknBsU": {
     "defaultMessage": "Stream Key"
+  },
+  "LuTidv": {
+    "defaultMessage": "learn more about bitcoin:"
   },
   "LxSJOb": {
     "defaultMessage": "Go to Dashboard"
@@ -401,6 +488,15 @@
   },
   "My6HwN": {
     "defaultMessage": "Ok, it's safe"
+  },
+  "N6iLqM": {
+    "defaultMessage": "viewers watch for free. when the music moves them, they send bitcoin tips called 'zaps' — instantly, from anywhere on earth. 100 sats, 10,000 sats, whatever feels right."
+  },
+  "NEs72a": {
+    "defaultMessage": "see all photos"
+  },
+  "NKKQS5": {
+    "defaultMessage": "support the music you love. directly."
   },
   "NTpJIm": {
     "defaultMessage": "Enable Recording"
@@ -423,6 +519,12 @@
   "OKhRC6": {
     "defaultMessage": "Share"
   },
+  "ONlclC": {
+    "defaultMessage": "lightning + nostr in one extension"
+  },
+  "OQDKnx": {
+    "defaultMessage": "iOS"
+  },
   "ORGv1Q": {
     "defaultMessage": "Created"
   },
@@ -435,12 +537,18 @@
   "OnllN2": {
     "defaultMessage": "Choose your preferred streaming provider. Each provider may have different pricing, features, and terms of service."
   },
+  "OpK9+X": {
+    "defaultMessage": "lightning payments sent through nostr. when a fan zaps an artist during a stream, the bitcoin arrives instantly in the artist's wallet."
+  },
   "OumUwz": {
     "defaultMessage": "{m}s {ago}",
     "description": "Number of second(s) relative to now"
   },
   "Oxqtyf": {
     "defaultMessage": "We hooked you up with a lightning wallet so you can get paid by viewers right away!"
+  },
+  "P7ewf2": {
+    "defaultMessage": "censorship resistant"
   },
   "PDA8V2": {
     "defaultMessage": "{m}h {ago}",
@@ -456,10 +564,13 @@
     "defaultMessage": "Leave blank if you do not wish to set up any goals."
   },
   "PUymyQ": {
-    "defaultMessage": "Come check out {name} stream on zap.stream! {link}"
+    "defaultMessage": "Come check out {name} stream on tunestr.io! {link}"
   },
   "PXAur5": {
     "defaultMessage": "Withdraw"
+  },
+  "PZYt8S": {
+    "defaultMessage": "the tunestr model is simple: everything is free to watch. if the music moves you, give value back. no subscriptions. no ads. no paywalls. just artists and fans, connected directly."
   },
   "Pc+tM3": {
     "defaultMessage": "Generate"
@@ -482,11 +593,17 @@
   "Q8Qw5B": {
     "defaultMessage": "Description"
   },
+  "QJb1pY": {
+    "defaultMessage": "watch a stream"
+  },
   "QNvtaq": {
     "defaultMessage": "Share on X"
   },
   "QRRCp0": {
     "defaultMessage": "Stream URL"
+  },
+  "QVYFkC": {
+    "defaultMessage": "ready to join the revolution?"
   },
   "QWlMq9": {
     "defaultMessage": "Stream key"
@@ -497,6 +614,15 @@
   "Qe1MJu": {
     "defaultMessage": "{name} with {amount}"
   },
+  "QjD5Ta": {
+    "defaultMessage": "getting started as a fan"
+  },
+  "QnA9/o": {
+    "defaultMessage": "give touring artists a reason to choose your venue. live streaming on tunestr turns every show into a global event — and gives artists an extra revenue stream they can't get anywhere else."
+  },
+  "QsUtq6": {
+    "defaultMessage": "recommended nostr clients:"
+  },
   "R72je0": {
     "defaultMessage": "Stream Title"
   },
@@ -505,6 +631,9 @@
   },
   "RJOmzk": {
     "defaultMessage": "I have read and agree with {provider}''s {terms}."
+  },
+  "RPY63z": {
+    "defaultMessage": "apply to stream"
   },
   "RS6smY": {
     "defaultMessage": "Raid Message"
@@ -518,8 +647,20 @@
   "RtYNX5": {
     "defaultMessage": "Chat Users"
   },
+  "S6VfUK": {
+    "defaultMessage": "about tunestr"
+  },
+  "SaPXpm": {
+    "defaultMessage": "recommended lightning wallets:"
+  },
+  "SftOII": {
+    "defaultMessage": "for fans"
+  },
   "Sjo1P4": {
     "defaultMessage": "Custom"
+  },
+  "T4OLEc": {
+    "defaultMessage": "bitcoin is digital money that works without banks. it's open, global, and anyone can use it. think of it like digital cash — you can send it to anyone in the world, instantly."
   },
   "TDUfVk": {
     "defaultMessage": "Started"
@@ -530,15 +671,18 @@
   "TcDwEB": {
     "defaultMessage": "Stream Keys"
   },
+  "Tpte5O": {
+    "defaultMessage": "value for value"
+  },
   "TwyMau": {
     "defaultMessage": "Account"
+  },
+  "U0TKHv": {
+    "defaultMessage": "whether you're an artist, a venue, or a fan — tunestr is where live music meets the future of money. come be part of it."
   },
   "UCDS65": {
     "defaultMessage": "ago",
     "description": "Relative time, ie. 1s ago"
-  },
-  "UGFYV8": {
-    "defaultMessage": "Welcome to zap.stream!"
   },
   "UJBFYK": {
     "defaultMessage": "Add Card"
@@ -546,14 +690,26 @@
   "UfSot5": {
     "defaultMessage": "Past Streams"
   },
+  "Ul8hxC": {
+    "defaultMessage": "tunestr connects artists and fans through the power of bitcoin's lightning network. no sign-up fees. no monthly subscriptions. no catch."
+  },
   "Uo/DWG": {
     "defaultMessage": "About too long"
   },
   "VA/Z1S": {
     "defaultMessage": "Hide"
   },
+  "VE9zfw": {
+    "defaultMessage": "a layer on top of bitcoin that makes payments instant and nearly free. this is what powers zaps on tunestr."
+  },
   "VKb1MS": {
     "defaultMessage": "Categories"
+  },
+  "VThwOz": {
+    "defaultMessage": "sats"
+  },
+  "W5eSI2": {
+    "defaultMessage": "Welcome to tunestr.io!"
   },
   "W7DNWx": {
     "defaultMessage": "Stream Forwarding"
@@ -561,14 +717,14 @@
   "W7IRLs": {
     "defaultMessage": "Your title is too short"
   },
-  "W8nHSd": {
-    "defaultMessage": "FAQ"
-  },
   "W9355R": {
     "defaultMessage": "Unmute"
   },
   "WcZM+B": {
     "defaultMessage": "File List"
+  },
+  "WkCnGu": {
+    "defaultMessage": "artist goes live"
   },
   "Wp4l7+": {
     "defaultMessage": "More Videos"
@@ -594,12 +750,18 @@
   "Xq2sb0": {
     "defaultMessage": "To go live, copy and paste your Server URL and Stream Key below into your streaming software settings and press 'Start Streaming'. We recommend <a>OBS</a>."
   },
+  "Xuz4jV": {
+    "defaultMessage": "tunestr is a live music streaming platform built on nostr — a decentralized, open protocol. unlike twitch or youtube, there is no company in the middle taking a cut of your earnings or deciding who gets seen."
+  },
   "Y0DXJb": {
     "defaultMessage": "Recording URL"
   },
   "YPh5Nq": {
     "defaultMessage": "@ {rate}",
     "description": "Showing zap amount in USD @ rate"
+  },
+  "YVShN+": {
+    "defaultMessage": "independent music deserves independent money."
   },
   "YjhNaf": {
     "defaultMessage": "Create Stream"
@@ -613,6 +775,9 @@
   "Z8ZOEY": {
     "defaultMessage": "This method is insecure. We recommend using a {nostrlink}"
   },
+  "ZC3fio": {
+    "defaultMessage": "live music streaming powered by bitcoin and nostr — where artists get paid directly by fans, with no middlemen."
+  },
   "ZDsjr1": {
     "defaultMessage": "{platform} channel name.."
   },
@@ -625,11 +790,17 @@
   "Zfr//4": {
     "defaultMessage": "No duration provided, please try another upload server."
   },
+  "Zg8+Jb": {
+    "defaultMessage": "free to watch"
+  },
   "ZmqxZs": {
     "defaultMessage": "You can change this later"
   },
   "Zse7yG": {
     "defaultMessage": "Raid target"
+  },
+  "ZwW0pD": {
+    "defaultMessage": "lightning wallet with nostr integration"
   },
   "a9rL24": {
     "defaultMessage": "Recommended by:"
@@ -649,6 +820,9 @@
   },
   "bD/ZwY": {
     "defaultMessage": "Edit Cards"
+  },
+  "bOCqWW": {
+    "defaultMessage": "simple, self-custodial lightning wallet"
   },
   "bdH+0f": {
     "defaultMessage": "Balance History"
@@ -683,11 +857,20 @@
   "d5zWyh": {
     "defaultMessage": "Test voice"
   },
+  "dC+InZ": {
+    "defaultMessage": "watch live"
+  },
+  "dO+D5a": {
+    "defaultMessage": "on tunestr, this means fans can watch any stream for free. if the music moves them, they send sats directly to the artist while they perform. the artist gets 100% — tunestr takes nothing."
+  },
   "dOQCL8": {
     "defaultMessage": "Display name"
   },
   "dVD/AR": {
     "defaultMessage": "Top Zappers"
+  },
+  "dgNELR": {
+    "defaultMessage": "artists get 100%"
   },
   "dkUMIH": {
     "defaultMessage": "Clip by {name}"
@@ -695,15 +878,14 @@
   "dqGkI+": {
     "defaultMessage": "Video durations vary too much, are you sure each variant is the same video?"
   },
-  "e011kf": {
-    "defaultMessage": "FAQ",
-    "description": "Title: FAQ page"
-  },
   "ebmhes": {
     "defaultMessage": "Nostr Extension"
   },
   "edoPyO": {
     "defaultMessage": "Link accounts"
+  },
+  "ennhd4": {
+    "defaultMessage": "start streaming"
   },
   "f6biFA": {
     "defaultMessage": "Oh, and you have {n} sats of free streaming on us! 💜"
@@ -720,8 +902,17 @@
   "g5pX+a": {
     "defaultMessage": "About"
   },
+  "gBKQPg": {
+    "defaultMessage": "zaps"
+  },
+  "gFWxE1": {
+    "defaultMessage": "the vibe"
+  },
   "gJFhNJ": {
     "defaultMessage": "What are we streaming today?"
+  },
+  "gQ7kPU": {
+    "defaultMessage": "Android"
   },
   "gQxxlw": {
     "defaultMessage": "Goal Name"
@@ -731,6 +922,9 @@
   },
   "gt65Gg": {
     "defaultMessage": "Stream goals encourage viewers to support streamers via donations."
+  },
+  "gzTPV0": {
+    "defaultMessage": "learn more about bitcoin, nostr, and value for value"
   },
   "gzsn7k": {
     "defaultMessage": "{n} messages"
@@ -750,6 +944,9 @@
   "heyxZL": {
     "defaultMessage": "Enable text to speech"
   },
+  "hjQW16": {
+    "defaultMessage": "what is bitcoin?"
+  },
   "hpl4BP": {
     "defaultMessage": "Chat Widget"
   },
@@ -758,6 +955,9 @@
   },
   "iKlloU": {
     "defaultMessage": "Suggested Servers"
+  },
+  "iY/jy0": {
+    "defaultMessage": "direct payments"
   },
   "ibcWy5": {
     "defaultMessage": "TOS Status"
@@ -771,6 +971,9 @@
   "itPgxd": {
     "defaultMessage": "Profile"
   },
+  "ixBwxq": {
+    "defaultMessage": "your music. your fans. your money."
+  },
   "izWS4J": {
     "defaultMessage": "Unfollow"
   },
@@ -782,6 +985,9 @@
   },
   "jJLRgo": {
     "defaultMessage": "Publish Clip"
+  },
+  "jR+ERT": {
+    "defaultMessage": "no algorithms"
   },
   "jgOqxt": {
     "defaultMessage": "Widgets"
@@ -813,6 +1019,9 @@
   "kQAf2d": {
     "defaultMessage": "Select"
   },
+  "kTP9n8": {
+    "defaultMessage": "why tunestr?"
+  },
   "kc5EOy": {
     "defaultMessage": "Username is too long"
   },
@@ -824,6 +1033,9 @@
   },
   "krCxp0": {
     "defaultMessage": "{provider} chat {channel} connected!"
+  },
+  "lXSsQ2": {
+    "defaultMessage": "on tunestr, your money goes to the artist — not to a corporation. zap your favorite musicians while they're performing and watch the tips roll in live. this is what it feels like to actually support independent music."
   },
   "lXbG97": {
     "defaultMessage": "Most Zapped Streamers"
@@ -846,8 +1058,14 @@
   "mrwfXX": {
     "defaultMessage": "Shares"
   },
+  "mzf67P": {
+    "defaultMessage": "for venues"
+  },
   "n0cU4E": {
     "defaultMessage": "Recommend"
+  },
+  "n0uF0d": {
+    "defaultMessage": "value for value (v4v) is a simple idea: content is free to consume. if you enjoy it, you give value back — whatever it's worth to you. no subscriptions, no paywalls, no ads."
   },
   "n19IQE": {
     "defaultMessage": "Recommended size: 1920x1080 (16:9)"
@@ -860,6 +1078,12 @@
   },
   "nOaArs": {
     "defaultMessage": "Setup Profile"
+  },
+  "nVZ61O": {
+    "defaultMessage": "key concepts:"
+  },
+  "nk7cF5": {
+    "defaultMessage": "no subscriptions or paywalls"
   },
   "nwA8Os": {
     "defaultMessage": "Add card"
@@ -897,9 +1121,11 @@
   "nwc-title": {
     "defaultMessage": "Nostr Wallet Connect (NWC)"
   },
-  "nz/Sq9": {
-    "defaultMessage": "Privacy Policy",
-    "description": "Title: Privacy Policy"
+  "o5vS6P": {
+    "defaultMessage": "no platform cut"
+  },
+  "oE7eAg": {
+    "defaultMessage": "the smallest unit of bitcoin (like cents to dollars). 100 million sats = 1 bitcoin. most tips on tunestr are in sats."
   },
   "oHPB8Q": {
     "defaultMessage": "Zap {name}"
@@ -910,17 +1136,41 @@
   "oZrFyI": {
     "defaultMessage": "Stream type should be HLS"
   },
+  "oaJKw3": {
+    "defaultMessage": "what is value for value?"
+  },
+  "oiP+Gd": {
+    "defaultMessage": "for musicians"
+  },
+  "oy+2YR": {
+    "defaultMessage": "browse live streams and watch for free — no account required to watch, but you'll need one to chat and zap."
+  },
   "p4N05H": {
     "defaultMessage": "Upload"
   },
+  "pHbU/T": {
+    "defaultMessage": "set up OBS (or your preferred streaming software) with your stream key from the tunestr dashboard."
+  },
   "pOeEMx": {
     "defaultMessage": "Add server"
+  },
+  "pTgemB": {
+    "defaultMessage": "the live music streaming platform where artists get paid directly by fans. no middlemen. no platform fees. just bitcoin, lightning fast."
+  },
+  "pqAWAF": {
+    "defaultMessage": "every sat goes directly to the artist's bitcoin wallet. no 30% platform cut. no waiting 90 days for a check. no minimum payout. instant, direct, yours."
   },
   "pxF+t0": {
     "defaultMessage": "Popular"
   },
   "q9ryv4": {
     "defaultMessage": "Cover image URL (optional)"
+  },
+  "qexApG": {
+    "defaultMessage": "when fans send you bitcoin tips (called 'zaps'), the money goes directly to you — instantly, globally, with no fees to the platform. your audience, your music, your money."
+  },
+  "qhyukZ": {
+    "defaultMessage": "and we'll get you set up with a NIP-05 identity and streaming access."
   },
   "qx6bv2": {
     "defaultMessage": "Stream Goal (optional)"
@@ -983,14 +1233,17 @@
   "thsiMl": {
     "defaultMessage": "terms and conditions"
   },
-  "twCRVi": {
-    "defaultMessage": "Art"
-  },
   "tzMNF3": {
     "defaultMessage": "Status"
   },
+  "u/A4hg": {
+    "defaultMessage": "fans zap sats"
+  },
   "u6uD94": {
     "defaultMessage": "Create an Account"
+  },
+  "u9cZs3": {
+    "defaultMessage": "lightning network"
   },
   "uGywK9": {
     "defaultMessage": "<s>{person}</s> zapped <a>{amount}</a>"
@@ -998,14 +1251,29 @@
   "uYw2LD": {
     "defaultMessage": "Stream"
   },
+  "ueRksQ": {
+    "defaultMessage": "your identity on nostr. you have a public key (like a username that works everywhere) and a private key (like a password — never share it). there's no sign-up form, no email required."
+  },
   "ug01Mk": {
     "defaultMessage": "Time"
   },
   "uksRSi": {
     "defaultMessage": "Latest Videos"
   },
+  "ulUHVQ": {
+    "defaultMessage": "a human-readable identity like you@tunestr.io. it's like a verified badge, but decentralized. tunestr artists get their own NIP-05 identity."
+  },
+  "uzhqFB": {
+    "defaultMessage": "create a nostr identity — use any nostr client (Ditto, Primal, Damus, Amethyst) to generate your keys, or use a browser extension like Soapbox Signer or Alby."
+  },
+  "vL63oU": {
+    "defaultMessage": "browser extensions:"
+  },
   "vaZKTn": {
     "defaultMessage": "Add more content"
+  },
+  "vb8spb": {
+    "defaultMessage": "show less"
   },
   "vrTOHJ": {
     "defaultMessage": "{amount} sats"
@@ -1015,9 +1283,6 @@
   },
   "w0Xm2F": {
     "defaultMessage": "Start typing"
-  },
-  "w3btjR": {
-    "defaultMessage": "Gambling"
   },
   "wCIL7o": {
     "defaultMessage": "Broadcast on Nostr"
@@ -1034,11 +1299,17 @@
   "wTwfnv": {
     "defaultMessage": "Invalid nostr address"
   },
+  "wbtvCf": {
+    "defaultMessage": "tunestr.io is a live music streaming platform that allows you to earn bitcoin (sats) the moment you start streaming! Viewers can tip artists any amount they choose. The tips are instantly deposited to your bitcoin (lightning) wallet. tunestr.io never touches your earnings!"
+  },
   "wc9wE6": {
     "defaultMessage": "Price Range"
   },
   "we4Lby": {
     "defaultMessage": "Info"
+  },
+  "x+OYPx": {
+    "defaultMessage": "set up a lightning wallet to receive zaps — Phoenix and Alby are great options. connect it to your nostr profile."
   },
   "x82IOl": {
     "defaultMessage": "Mute"
@@ -1048,6 +1319,9 @@
   },
   "xmcVZ0": {
     "defaultMessage": "Search"
+  },
+  "y+rY/m": {
+    "defaultMessage": "web"
   },
   "y867Vs": {
     "defaultMessage": "Volume"
@@ -1065,6 +1339,9 @@
   "yzKwBQ": {
     "defaultMessage": "eg. nsec1xyz"
   },
+  "zEJaHa": {
+    "defaultMessage": "browser extension for lightning & nostr"
+  },
   "zEYkgY": {
     "defaultMessage": "Talk"
   },
@@ -1076,6 +1353,9 @@
   },
   "zVDHAu": {
     "defaultMessage": "Zap Alert"
+  },
+  "zl+PQE": {
+    "defaultMessage": "learn about bitcoin & nostr"
   },
   "zyHFaA": {
     "defaultMessage": "Login with {provider}"

@@ -12,6 +12,8 @@ import { TunestrFooter } from "./tunestr-footer";
 import { SnortContext, TraceTimelineOverlay } from "@snort/system-react";
 import { EventKind } from "@snort/system";
 import { USER_CARDS } from "@/const";
+import { ZapStrikeOverlay } from "@/element/zap-strike";
+import "@/element/zap-strike.css";
 
 export function LayoutPage() {
   const location = useLocation();
@@ -68,6 +70,7 @@ export function LayoutPage() {
       </div>
       <TunestrFooter />
       <TraceTimelineOverlay isOpen={trace} onClose={() => setTrace(false)} />
+      <ZapStrikeOverlay />
     </div>
   );
 }

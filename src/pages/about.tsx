@@ -86,6 +86,7 @@ export default function AboutPage() {
             <ChevronUp className="w-6 h-6" />
           </button>
         )}
+        {/* biome-ignore lint/a11y/useValidAnchor: obfuscated mailto */}
         <a
           href="#contact"
           aria-label="Contact us"
@@ -97,7 +98,7 @@ export default function AboutPage() {
           }}
           className="w-12 h-12 flex items-center justify-center rounded-full border border-primary bg-layer-1 text-primary hover:bg-primary hover:text-layer-0 transition-colors shadow-lg"
         >
-          <svg width={22} height={22} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+          <svg width={22} height={22} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" role="img" aria-label="Email">
             <rect width="20" height="16" x="2" y="4" rx="2" />
             <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
           </svg>
@@ -108,12 +109,11 @@ export default function AboutPage() {
       <div className="text-center mb-4">
         <img src="/tunestr-logo-t.png" alt="tunestr" className="w-24 h-24 mx-auto mb-6" />
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          <FormattedMessage defaultMessage="about tunestr" id="aboutTunestr" />
+          <FormattedMessage defaultMessage="about tunestr" />
         </h1>
         <p className="text-xl text-layer-5 max-w-2xl mx-auto">
           <FormattedMessage
             defaultMessage="live music streaming powered by bitcoin and nostr — where artists get paid directly by fans, with no middlemen."
-            id="aboutSubtitle"
           />
         </p>
       </div>
@@ -121,47 +121,45 @@ export default function AboutPage() {
       {/* What is tunestr */}
       <SectionCard
         icon={<Music className="w-6 h-6 text-primary" />}
-        title={<FormattedMessage defaultMessage="what is tunestr?" id="whatIsTunestr" />}
+        title={<FormattedMessage defaultMessage="what is tunestr?" />}
       >
         <div className="space-y-4 text-lg text-layer-5">
           <p>
             <FormattedMessage
               defaultMessage="tunestr is a live music streaming platform built on nostr — a decentralized, open protocol. unlike twitch or youtube, there is no company in the middle taking a cut of your earnings or deciding who gets seen."
-              id="whatIsTunestr1"
             />
           </p>
           <p>
             <FormattedMessage
               defaultMessage="when fans send you bitcoin tips (called 'zaps'), the money goes directly to you — instantly, globally, with no fees to the platform. your audience, your music, your money."
-              id="whatIsTunestr2"
             />
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
             <div className="bg-layer-2 rounded-xl p-4 text-center">
               <Shield className="w-8 h-8 text-primary mx-auto mb-2" />
               <p className="font-semibold text-white">
-                <FormattedMessage defaultMessage="censorship resistant" id="censorshipResistant" />
+                <FormattedMessage defaultMessage="censorship resistant" />
               </p>
               <p className="text-sm mt-1">
-                <FormattedMessage defaultMessage="no deplatforming" id="noDeplatforming" />
+                <FormattedMessage defaultMessage="no deplatforming" />
               </p>
             </div>
             <div className="bg-layer-2 rounded-xl p-4 text-center">
               <Wallet className="w-8 h-8 text-primary mx-auto mb-2" />
               <p className="font-semibold text-white">
-                <FormattedMessage defaultMessage="direct payments" id="directPayments" />
+                <FormattedMessage defaultMessage="direct payments" />
               </p>
               <p className="text-sm mt-1">
-                <FormattedMessage defaultMessage="no platform cut" id="noPlatformCut" />
+                <FormattedMessage defaultMessage="no platform cut" />
               </p>
             </div>
             <div className="bg-layer-2 rounded-xl p-4 text-center">
               <Users className="w-8 h-8 text-primary mx-auto mb-2" />
               <p className="font-semibold text-white">
-                <FormattedMessage defaultMessage="you own your audience" id="ownYourAudience" />
+                <FormattedMessage defaultMessage="you own your audience" />
               </p>
               <p className="text-sm mt-1">
-                <FormattedMessage defaultMessage="no algorithms" id="noAlgorithms" />
+                <FormattedMessage defaultMessage="no algorithms" />
               </p>
             </div>
           </div>
@@ -171,50 +169,46 @@ export default function AboutPage() {
       {/* What is Bitcoin */}
       <SectionCard
         icon={<Bitcoin className="w-6 h-6 text-primary" />}
-        title={<FormattedMessage defaultMessage="what is bitcoin?" id="whatIsBitcoin" />}
+        title={<FormattedMessage defaultMessage="what is bitcoin?" />}
       >
         <div className="space-y-4 text-lg text-layer-5">
           <p>
             <FormattedMessage
               defaultMessage="bitcoin is digital money that works without banks. it's open, global, and anyone can use it. think of it like digital cash — you can send it to anyone in the world, instantly."
-              id="whatIsBitcoin1"
             />
           </p>
           <div className="bg-layer-2 rounded-xl p-5 space-y-3">
             <p className="font-semibold text-white">
-              <FormattedMessage defaultMessage="key concepts:" id="btcKeyConcepts" />
+              <FormattedMessage defaultMessage="key concepts:" />
             </p>
             <p>
               <span className="text-primary font-semibold">
-                <FormattedMessage defaultMessage="sats" id="sats" />
+                <FormattedMessage defaultMessage="sats" />
               </span>{" "}
               — <FormattedMessage
                 defaultMessage="the smallest unit of bitcoin (like cents to dollars). 100 million sats = 1 bitcoin. most tips on tunestr are in sats."
-                id="satsExplainer"
               />
             </p>
             <p>
               <span className="text-primary font-semibold">
-                <FormattedMessage defaultMessage="lightning network" id="lightningNetwork" />
+                <FormattedMessage defaultMessage="lightning network" />
               </span>{" "}
               — <FormattedMessage
                 defaultMessage="a layer on top of bitcoin that makes payments instant and nearly free. this is what powers zaps on tunestr."
-                id="lightningExplainer"
               />
             </p>
             <p>
               <span className="text-primary font-semibold">
-                <FormattedMessage defaultMessage="zaps" id="zaps" />
+                <FormattedMessage defaultMessage="zaps" />
               </span>{" "}
               — <FormattedMessage
                 defaultMessage="lightning payments sent through nostr. when a fan zaps an artist during a stream, the bitcoin arrives instantly in the artist's wallet."
-                id="zapsExplainer"
               />
             </p>
           </div>
           <div className="mt-4">
             <p className="font-semibold text-white mb-3">
-              <FormattedMessage defaultMessage="learn more about bitcoin:" id="learnMoreBtc" />
+              <FormattedMessage defaultMessage="learn more about bitcoin:" />
             </p>
             <ul className="space-y-2">
               <li><ResourceLink href="https://bitcoin.org">bitcoin.org</ResourceLink></li>
@@ -224,13 +218,13 @@ export default function AboutPage() {
           </div>
           <div className="mt-4">
             <p className="font-semibold text-white mb-3">
-              <FormattedMessage defaultMessage="recommended lightning wallets:" id="recommendedWallets" />
+              <FormattedMessage defaultMessage="recommended lightning wallets:" />
             </p>
             <ul className="space-y-2">
-              <li><ResourceLink href="https://phoenix.acinq.co/">Phoenix</ResourceLink> — <span className="text-sm"><FormattedMessage defaultMessage="simple, self-custodial lightning wallet" id="phoenixDesc" /></span></li>
-              <li><ResourceLink href="https://getalby.com/">Alby</ResourceLink> — <span className="text-sm"><FormattedMessage defaultMessage="browser extension for lightning & nostr" id="albyDesc" /></span></li>
-              <li><ResourceLink href="https://coinos.io/">Coinos</ResourceLink> — <span className="text-sm"><FormattedMessage defaultMessage="web-based bitcoin & lightning wallet" id="coinosDesc" /></span></li>
-              <li><ResourceLink href="https://rizful.com/">Rizful</ResourceLink> — <span className="text-sm"><FormattedMessage defaultMessage="lightning wallet with nostr integration" id="rizfulDesc" /></span></li>
+              <li><ResourceLink href="https://phoenix.acinq.co/">Phoenix</ResourceLink> — <span className="text-sm"><FormattedMessage defaultMessage="simple, self-custodial lightning wallet" /></span></li>
+              <li><ResourceLink href="https://getalby.com/">Alby</ResourceLink> — <span className="text-sm"><FormattedMessage defaultMessage="browser extension for lightning & nostr" /></span></li>
+              <li><ResourceLink href="https://coinos.io/">Coinos</ResourceLink> — <span className="text-sm"><FormattedMessage defaultMessage="web-based bitcoin & lightning wallet" /></span></li>
+              <li><ResourceLink href="https://rizful.com/">Rizful</ResourceLink> — <span className="text-sm"><FormattedMessage defaultMessage="lightning wallet with nostr integration" /></span></li>
             </ul>
           </div>
         </div>
@@ -239,48 +233,44 @@ export default function AboutPage() {
       {/* What is Nostr */}
       <SectionCard
         icon={<Globe className="w-6 h-6 text-primary" />}
-        title={<FormattedMessage defaultMessage="what is nostr?" id="whatIsNostr" />}
+        title={<FormattedMessage defaultMessage="what is nostr?" />}
       >
         <div className="space-y-4 text-lg text-layer-5">
           <p>
             <FormattedMessage
               defaultMessage="nostr (Notes and Other Stuff Transmitted by Relays) is a simple, open protocol for decentralized social networking. no company owns it. no one can shut it down. your identity and your followers belong to you."
-              id="whatIsNostr1"
             />
           </p>
           <div className="bg-layer-2 rounded-xl p-5 space-y-3">
             <p className="font-semibold text-white">
-              <FormattedMessage defaultMessage="key concepts:" id="nostrKeyConcepts" />
+              <FormattedMessage defaultMessage="key concepts:" />
             </p>
             <p>
               <span className="text-primary font-semibold">
-                <FormattedMessage defaultMessage="keys" id="keys" />
+                <FormattedMessage defaultMessage="keys" />
               </span>{" "}
               — <FormattedMessage
                 defaultMessage="your identity on nostr. you have a public key (like a username that works everywhere) and a private key (like a password — never share it). there's no sign-up form, no email required."
-                id="keysExplainer"
               />
             </p>
             <p>
               <span className="text-primary font-semibold">
-                <FormattedMessage defaultMessage="relays" id="relays" />
+                <FormattedMessage defaultMessage="relays" />
               </span>{" "}
               — <FormattedMessage
                 defaultMessage="servers that pass messages around. your data isn't locked in one place — it's distributed across many relays. if one goes down, others still have your data."
-                id="relaysExplainer"
               />
             </p>
             <p>
               <span className="text-primary font-semibold">NIP-05</span>{" "}
               — <FormattedMessage
                 defaultMessage="a human-readable identity like you@tunestr.io. it's like a verified badge, but decentralized. tunestr artists get their own NIP-05 identity."
-                id="nip05Explainer"
               />
             </p>
           </div>
           <div className="mt-4">
             <p className="font-semibold text-white mb-3">
-              <FormattedMessage defaultMessage="learn more about nostr:" id="learnMoreNostr" />
+              <FormattedMessage defaultMessage="learn more about nostr:" />
             </p>
             <ul className="space-y-2">
               <li><ResourceLink href="https://nostr.com">nostr.com</ResourceLink></li>
@@ -290,22 +280,22 @@ export default function AboutPage() {
           </div>
           <div className="mt-4">
             <p className="font-semibold text-white mb-3">
-              <FormattedMessage defaultMessage="recommended nostr clients:" id="recommendedClients" />
+              <FormattedMessage defaultMessage="recommended nostr clients:" />
             </p>
             <ul className="space-y-2">
-              <li><ResourceLink href="https://ditto.pub/">Ditto</ResourceLink> — <span className="text-sm"><FormattedMessage defaultMessage="web" id="ditto" /></span></li>
-              <li><ResourceLink href="https://primal.net/">Primal</ResourceLink> — <span className="text-sm"><FormattedMessage defaultMessage="web, iOS, Android" id="primal" /></span></li>
-              <li><ResourceLink href="https://damus.io/">Damus</ResourceLink> — <span className="text-sm"><FormattedMessage defaultMessage="iOS" id="damus" /></span></li>
-              <li><ResourceLink href="https://www.amethyst.social/">Amethyst</ResourceLink> — <span className="text-sm"><FormattedMessage defaultMessage="Android" id="amethyst" /></span></li>
+              <li><ResourceLink href="https://ditto.pub/">Ditto</ResourceLink> — <span className="text-sm"><FormattedMessage defaultMessage="web" /></span></li>
+              <li><ResourceLink href="https://primal.net/">Primal</ResourceLink> — <span className="text-sm"><FormattedMessage defaultMessage="web, iOS, Android" /></span></li>
+              <li><ResourceLink href="https://damus.io/">Damus</ResourceLink> — <span className="text-sm"><FormattedMessage defaultMessage="iOS" /></span></li>
+              <li><ResourceLink href="https://www.amethyst.social/">Amethyst</ResourceLink> — <span className="text-sm"><FormattedMessage defaultMessage="Android" /></span></li>
             </ul>
           </div>
           <div className="mt-4">
             <p className="font-semibold text-white mb-3">
-              <FormattedMessage defaultMessage="browser extensions:" id="browserExtensions" />
+              <FormattedMessage defaultMessage="browser extensions:" />
             </p>
             <ul className="space-y-2">
-              <li><ResourceLink href="https://soapbox.pub/blog/announcing-soapbox-signer/">Soapbox Signer</ResourceLink> — <span className="text-sm"><FormattedMessage defaultMessage="nostr key manager for chrome" id="soapboxSigner" /></span></li>
-              <li><ResourceLink href="https://getalby.com/">Alby</ResourceLink> — <span className="text-sm"><FormattedMessage defaultMessage="lightning + nostr in one extension" id="albyNostr" /></span></li>
+              <li><ResourceLink href="https://soapbox.pub/blog/announcing-soapbox-signer/">Soapbox Signer</ResourceLink> — <span className="text-sm"><FormattedMessage defaultMessage="nostr key manager for chrome" /></span></li>
+              <li><ResourceLink href="https://getalby.com/">Alby</ResourceLink> — <span className="text-sm"><FormattedMessage defaultMessage="lightning + nostr in one extension" /></span></li>
             </ul>
           </div>
         </div>
@@ -314,19 +304,17 @@ export default function AboutPage() {
       {/* Value for Value */}
       <SectionCard
         icon={<Heart className="w-6 h-6 text-primary" />}
-        title={<FormattedMessage defaultMessage="what is value for value?" id="whatIsV4V" />}
+        title={<FormattedMessage defaultMessage="what is value for value?" />}
       >
         <div className="space-y-4 text-lg text-layer-5">
           <p>
             <FormattedMessage
               defaultMessage="value for value (v4v) is a simple idea: content is free to consume. if you enjoy it, you give value back — whatever it's worth to you. no subscriptions, no paywalls, no ads."
-              id="whatIsV4V1"
             />
           </p>
           <p>
             <FormattedMessage
               defaultMessage="on tunestr, this means fans can watch any stream for free. if the music moves them, they send sats directly to the artist while they perform. the artist gets 100% — tunestr takes nothing."
-              id="whatIsV4V2"
             />
           </p>
           <div className="bg-layer-2 rounded-xl p-5">
@@ -334,28 +322,28 @@ export default function AboutPage() {
               <div>
                 <Radio className="w-8 h-8 text-primary mx-auto mb-2" />
                 <p className="font-semibold text-white">
-                  <FormattedMessage defaultMessage="free to watch" id="freeToWatch" />
+                  <FormattedMessage defaultMessage="free to watch" />
                 </p>
                 <p className="text-sm mt-1">
-                  <FormattedMessage defaultMessage="no subscriptions or paywalls" id="noSubs" />
+                  <FormattedMessage defaultMessage="no subscriptions or paywalls" />
                 </p>
               </div>
               <div>
                 <Zap className="w-8 h-8 text-primary mx-auto mb-2" />
                 <p className="font-semibold text-white">
-                  <FormattedMessage defaultMessage="zap what it's worth" id="zapWorth" />
+                  <FormattedMessage defaultMessage="zap what it's worth" />
                 </p>
                 <p className="text-sm mt-1">
-                  <FormattedMessage defaultMessage="pay what you feel, when you feel it" id="payFeel" />
+                  <FormattedMessage defaultMessage="pay what you feel, when you feel it" />
                 </p>
               </div>
               <div>
                 <Music className="w-8 h-8 text-primary mx-auto mb-2" />
                 <p className="font-semibold text-white">
-                  <FormattedMessage defaultMessage="artists get 100%" id="artists100" />
+                  <FormattedMessage defaultMessage="artists get 100%" />
                 </p>
                 <p className="text-sm mt-1">
-                  <FormattedMessage defaultMessage="no platform fees, ever" id="noFees" />
+                  <FormattedMessage defaultMessage="no platform fees, ever" />
                 </p>
               </div>
             </div>
@@ -370,27 +358,25 @@ export default function AboutPage() {
       {/* Getting Started — Musicians */}
       <SectionCard
         icon={<Radio className="w-6 h-6 text-primary" />}
-        title={<FormattedMessage defaultMessage="getting started as a musician" id="gettingStartedMusician" />}
+        title={<FormattedMessage defaultMessage="getting started as a musician" />}
       >
         <div className="space-y-5 text-lg text-layer-5">
           <StepItem number={1}>
             <FormattedMessage
               defaultMessage="create a nostr identity — use any nostr client (Ditto, Primal, Damus, Amethyst) to generate your keys, or use a browser extension like Soapbox Signer or Alby."
-              id="musicianStep1"
             />
           </StepItem>
           <StepItem number={2}>
             <FormattedMessage
               defaultMessage="set up a lightning wallet to receive zaps — Phoenix and Alby are great options. connect it to your nostr profile."
-              id="musicianStep2"
             />
           </StepItem>
           <StepItem number={3}>
             <span>
               <FormattedMessage
                 defaultMessage="reach out to get on tunestr — email"
-                id="musicianStep3a"
               />{" "}
+              {/* biome-ignore lint/a11y/useValidAnchor: obfuscated mailto */}
               <a
                 href="#contact"
                 data-e="djR2QHR1bmVzdHIuaW8="
@@ -405,20 +391,17 @@ export default function AboutPage() {
               </a>{" "}
               <FormattedMessage
                 defaultMessage="and we'll get you set up with a NIP-05 identity and streaming access."
-                id="musicianStep3b"
               />
             </span>
           </StepItem>
           <StepItem number={4}>
             <FormattedMessage
               defaultMessage="set up OBS (or your preferred streaming software) with your stream key from the tunestr dashboard."
-              id="musicianStep4"
             />
           </StepItem>
           <StepItem number={5}>
             <FormattedMessage
               defaultMessage="go live and start earning! your fans can zap you directly while you perform."
-              id="musicianStep5"
             />
           </StepItem>
         </div>
@@ -427,31 +410,27 @@ export default function AboutPage() {
       {/* Getting Started — Fans */}
       <SectionCard
         icon={<Users className="w-6 h-6 text-primary" />}
-        title={<FormattedMessage defaultMessage="getting started as a fan" id="gettingStartedFan" />}
+        title={<FormattedMessage defaultMessage="getting started as a fan" />}
       >
         <div className="space-y-5 text-lg text-layer-5">
           <StepItem number={1}>
             <FormattedMessage
               defaultMessage="create a nostr identity — sign up through any nostr client, or use the login button right here on tunestr."
-              id="fanStep1"
             />
           </StepItem>
           <StepItem number={2}>
             <FormattedMessage
               defaultMessage="set up a lightning wallet to send zaps — Alby's browser extension makes it seamless. fund it with a small amount of bitcoin."
-              id="fanStep2"
             />
           </StepItem>
           <StepItem number={3}>
             <FormattedMessage
               defaultMessage="browse live streams and watch for free — no account required to watch, but you'll need one to chat and zap."
-              id="fanStep3"
             />
           </StepItem>
           <StepItem number={4}>
             <FormattedMessage
               defaultMessage="zap your favorite artists! hit the zap button during a performance to send sats directly to the musician on stage."
-              id="fanStep4"
             />
           </StepItem>
         </div>
@@ -460,14 +439,14 @@ export default function AboutPage() {
       {/* Bottom CTA */}
       <div className="text-center py-8">
         <h2 className="text-3xl font-bold mb-4">
-          <FormattedMessage defaultMessage="ready to join the revolution?" id="readyToJoin" />
+          <FormattedMessage defaultMessage="ready to join the revolution?" />
         </h2>
         <p className="text-layer-5 text-lg mb-6">
           <FormattedMessage
             defaultMessage="independent music deserves independent money."
-            id="aboutBottomCta"
           />
         </p>
+        {/* biome-ignore lint/a11y/useValidAnchor: obfuscated mailto */}
         <a
           href="#contact"
           data-e="djR2QHR1bmVzdHIuaW8="
@@ -479,7 +458,7 @@ export default function AboutPage() {
           className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-primary text-layer-0 font-bold text-lg hover:brightness-110 transition-all"
         >
           <Zap className="w-5 h-5" />
-          <FormattedMessage defaultMessage="get in touch" id="getInTouch" />
+          <FormattedMessage defaultMessage="get in touch" />
         </a>
       </div>
     </div>

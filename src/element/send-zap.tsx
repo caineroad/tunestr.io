@@ -18,6 +18,7 @@ import { useUserProfile } from "@snort/system-react";
 import { getHost } from "@/utils";
 import { getName } from "./profile";
 import { useWallet } from "@/hooks/wallet";
+import { triggerZapStrike } from "./zap-strike";
 
 export interface LNURLLike {
   get name(): string;
@@ -107,6 +108,7 @@ export function SendZaps({ lnurl, pubkey, aTag, eTag, targetName, onFinish, onTa
     if (wallet) {
       try {
         await wallet.payInvoice(invoice.pr);
+        triggerZapStrike();
         onFinish();
       } catch (_error) {
         setInvoice(invoice.pr);

@@ -59,7 +59,7 @@ export default function LiveVideoPlayer({ title, stream, status, poster, link, .
       /* @ts-expect-error Web Componenet */
       return <hls-video {...props} slot="media" src={stream} playsInline={true} autoPlay={true} ref={playerRef} config={{
         lowLatencyMode: true,
-        debug: true
+        debug: false
       }} />;
     } else if (stream?.startsWith("moq://")) {
       return <Suspense>

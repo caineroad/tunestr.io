@@ -2,7 +2,6 @@ import { useStreamsFeed } from "@/hooks/live-streams";
 import VideoGridSorted from "@/element/video-grid-sorted";
 import { FormattedMessage } from "react-intl";
 import { Link } from "react-router";
-import { Icon } from "@/element/icon";
 import { useCallback, useEffect, useState } from "react";
 import {
   Radio, Music, Users, Zap, Heart, DollarSign,
@@ -37,6 +36,7 @@ const photos = [
 
 function ContactButton({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return (
+    // biome-ignore lint/a11y/useValidAnchor: obfuscated mailto link
     <a
       href="#contact"
       aria-label="Contact us"
@@ -109,7 +109,7 @@ export function RootPage() {
           </button>
         )}
         <ContactButton className="w-12 h-12 flex items-center justify-center rounded-full border border-primary bg-layer-1 text-primary hover:bg-primary hover:text-layer-0 transition-colors shadow-lg">
-          <svg width={22} height={22} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+          <svg width={22} height={22} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" role="img" aria-label="Email">
             <rect width="20" height="16" x="2" y="4" rx="2" />
             <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
           </svg>
@@ -125,7 +125,7 @@ export function RootPage() {
               <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500" />
             </span>
             <span className="text-sm font-bold uppercase tracking-wider text-red-400">
-              <FormattedMessage defaultMessage="live now" id="liveNow" />
+              <FormattedMessage defaultMessage="live now" />
             </span>
           </div>
           <VideoGridSorted
@@ -156,20 +156,19 @@ export function RootPage() {
           <p className="mt-8 text-xl md:text-2xl text-layer-5 text-center max-w-3xl leading-relaxed">
             <FormattedMessage
               defaultMessage="the live music streaming platform where artists get paid directly by fans. no middlemen. no platform fees. just bitcoin, lightning fast."
-              id="heroSubtitleV2"
             />
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-10">
             <ContactButton className="inline-flex items-center justify-center gap-3 px-10 py-5 rounded-2xl bg-primary text-layer-0 font-bold text-lg hover:brightness-110 transition-all shadow-lg shadow-primary/25">
               <Zap className="w-5 h-5" />
-              <FormattedMessage defaultMessage="start streaming" id="startStreaming" />
+              <FormattedMessage defaultMessage="start streaming" />
             </ContactButton>
             <Link
               to="/streams"
               className="inline-flex items-center justify-center gap-3 px-10 py-5 rounded-2xl border-2 border-layer-3 text-white font-bold text-lg hover:border-primary hover:text-primary transition-colors"
             >
               <Radio className="w-5 h-5" />
-              <FormattedMessage defaultMessage="watch live" id="watchLive" />
+              <FormattedMessage defaultMessage="watch live" />
             </Link>
           </div>
         </div>
@@ -179,12 +178,11 @@ export function RootPage() {
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            <FormattedMessage defaultMessage="how it works" id="howItWorks" />
+            <FormattedMessage defaultMessage="how it works" />
           </h2>
           <p className="text-center text-layer-5 text-lg mb-16 max-w-2xl mx-auto">
             <FormattedMessage
               defaultMessage="tunestr connects artists and fans through the power of bitcoin's lightning network. no sign-up fees. no monthly subscriptions. no catch."
-              id="howItWorksSubtitle"
             />
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -192,12 +190,11 @@ export function RootPage() {
               <div className="absolute -top-5 left-8 bg-primary text-layer-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">1</div>
               <Tv className="w-10 h-10 text-primary mb-4 mt-2" />
               <h3 className="text-xl font-bold mb-3">
-                <FormattedMessage defaultMessage="artist goes live" id="step1Title" />
+                <FormattedMessage defaultMessage="artist goes live" />
               </h3>
               <p className="text-layer-5 leading-relaxed">
                 <FormattedMessage
                   defaultMessage="a musician sets up their stream with OBS and goes live on tunestr. the performance is broadcast to anyone in the world — no paywall, no gatekeepers."
-                  id="step1Desc"
                 />
               </p>
             </div>
@@ -205,12 +202,11 @@ export function RootPage() {
               <div className="absolute -top-5 left-8 bg-primary text-layer-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">2</div>
               <Zap className="w-10 h-10 text-primary mb-4 mt-2" />
               <h3 className="text-xl font-bold mb-3">
-                <FormattedMessage defaultMessage="fans zap sats" id="step2Title" />
+                <FormattedMessage defaultMessage="fans zap sats" />
               </h3>
               <p className="text-layer-5 leading-relaxed">
                 <FormattedMessage
                   defaultMessage="viewers watch for free. when the music moves them, they send bitcoin tips called 'zaps' — instantly, from anywhere on earth. 100 sats, 10,000 sats, whatever feels right."
-                  id="step2Desc"
                 />
               </p>
             </div>
@@ -218,12 +214,11 @@ export function RootPage() {
               <div className="absolute -top-5 left-8 bg-primary text-layer-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">3</div>
               <Wallet className="w-10 h-10 text-primary mb-4 mt-2" />
               <h3 className="text-xl font-bold mb-3">
-                <FormattedMessage defaultMessage="artist gets paid" id="step3Title" />
+                <FormattedMessage defaultMessage="artist gets paid" />
               </h3>
               <p className="text-layer-5 leading-relaxed">
                 <FormattedMessage
                   defaultMessage="every sat goes directly to the artist's bitcoin wallet. no 30% platform cut. no waiting 90 days for a check. no minimum payout. instant, direct, yours."
-                  id="step3Desc"
                 />
               </p>
             </div>
@@ -235,7 +230,7 @@ export function RootPage() {
       <section className="py-20 px-4 bg-layer-1/50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-            <FormattedMessage defaultMessage="why tunestr?" id="whyTunestr" />
+            <FormattedMessage defaultMessage="why tunestr?" />
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -263,18 +258,16 @@ export function RootPage() {
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 text-primary text-sm font-semibold mb-6">
                 <Mic className="w-4 h-4" />
-                <FormattedMessage defaultMessage="for musicians" id="forMusicians" />
+                <FormattedMessage defaultMessage="for musicians" />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
                 <FormattedMessage
                   defaultMessage="your music. your fans. your money."
-                  id="artistHeadline"
                 />
               </h2>
               <p className="text-layer-5 text-lg mb-8 leading-relaxed">
                 <FormattedMessage
                   defaultMessage="stop giving 30-50% of your earnings to platforms that don't care about your art. on tunestr, every tip from every fan goes straight to your wallet."
-                  id="artistDesc"
                 />
               </p>
               <div className="space-y-4">
@@ -295,7 +288,7 @@ export function RootPage() {
               </div>
               <div className="mt-8">
                 <ContactButton className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-primary text-layer-0 font-bold hover:brightness-110 transition-all">
-                  <FormattedMessage defaultMessage="apply to stream" id="applyToStream" />
+                  <FormattedMessage defaultMessage="apply to stream" />
                   <ArrowRight className="w-4 h-4" />
                 </ContactButton>
               </div>
@@ -343,18 +336,16 @@ export function RootPage() {
             <div className="order-1 lg:order-2">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 text-primary text-sm font-semibold mb-6">
                 <Building2 className="w-4 h-4" />
-                <FormattedMessage defaultMessage="for venues" id="forVenues" />
+                <FormattedMessage defaultMessage="for venues" />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
                 <FormattedMessage
                   defaultMessage="put your stage on the world stage."
-                  id="venueHeadline"
                 />
               </h2>
               <p className="text-layer-5 text-lg mb-8 leading-relaxed">
                 <FormattedMessage
                   defaultMessage="give touring artists a reason to choose your venue. live streaming on tunestr turns every show into a global event — and gives artists an extra revenue stream they can't get anywhere else."
-                  id="venueDesc"
                 />
               </p>
               <div className="space-y-4">
@@ -385,18 +376,16 @@ export function RootPage() {
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 text-primary text-sm font-semibold mb-6">
                 <Heart className="w-4 h-4" />
-                <FormattedMessage defaultMessage="for fans" id="forFans" />
+                <FormattedMessage defaultMessage="for fans" />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
                 <FormattedMessage
                   defaultMessage="support the music you love. directly."
-                  id="fanHeadline"
                 />
               </h2>
               <p className="text-layer-5 text-lg mb-8 leading-relaxed">
                 <FormattedMessage
                   defaultMessage="on tunestr, your money goes to the artist — not to a corporation. zap your favorite musicians while they're performing and watch the tips roll in live. this is what it feels like to actually support independent music."
-                  id="fanDesc"
                 />
               </p>
               <div className="space-y-4">
@@ -420,7 +409,7 @@ export function RootPage() {
                   to="/streams"
                   className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border-2 border-primary text-primary font-bold hover:bg-primary hover:text-layer-0 transition-colors"
                 >
-                  <FormattedMessage defaultMessage="watch a stream" id="watchAStream" />
+                  <FormattedMessage defaultMessage="watch a stream" />
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -443,12 +432,11 @@ export function RootPage() {
             <Heart className="w-10 h-10" />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            <FormattedMessage defaultMessage="value for value" id="v4vTitle" />
+            <FormattedMessage defaultMessage="value for value" />
           </h2>
           <p className="text-xl text-layer-5 mb-8 leading-relaxed max-w-2xl mx-auto">
             <FormattedMessage
               defaultMessage="the tunestr model is simple: everything is free to watch. if the music moves you, give value back. no subscriptions. no ads. no paywalls. just artists and fans, connected directly."
-              id="v4vDesc"
             />
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12">
@@ -470,7 +458,7 @@ export function RootPage() {
           </div>
           <div className="mt-10">
             <Link to="/about" className="text-primary hover:underline font-semibold inline-flex items-center gap-2">
-              <FormattedMessage defaultMessage="learn more about bitcoin, nostr, and value for value" id="learnMoreV4V" />
+              <FormattedMessage defaultMessage="learn more about bitcoin, nostr, and value for value" />
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -481,12 +469,11 @@ export function RootPage() {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            <FormattedMessage defaultMessage="the vibe" id="theVibe" />
+            <FormattedMessage defaultMessage="the vibe" />
           </h2>
           <p className="text-center text-layer-5 text-lg mb-12">
             <FormattedMessage
               defaultMessage="real artists. real venues. real fans. real money."
-              id="gallerySubtitle"
             />
           </p>
           <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
@@ -509,6 +496,8 @@ export function RootPage() {
 
           {/* Lightbox */}
           {lightboxIndex !== null && (
+            // biome-ignore lint/a11y/noStaticElementInteractions: lightbox backdrop dismiss
+            // biome-ignore lint/a11y/useKeyWithClickEvents: keyboard handled via useEffect
             <div
               className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
               onClick={() => setLightboxIndex(null)}
@@ -534,6 +523,7 @@ export function RootPage() {
               >
                 <ChevronRight className="w-10 h-10" />
               </button>
+              {/* biome-ignore lint/a11y/useKeyWithClickEvents: keyboard handled via useEffect */}
               <img
                 src={photos[lightboxIndex].src}
                 alt={photos[lightboxIndex].alt}
@@ -548,13 +538,14 @@ export function RootPage() {
           {photos.length > 8 && (
             <div className="flex justify-center mt-10">
               <button
+                type="button"
                 onClick={() => setGalleryExpanded(!galleryExpanded)}
                 className="px-8 py-3 rounded-xl border border-layer-3 text-layer-5 hover:border-primary hover:text-primary transition-colors font-semibold"
               >
                 {galleryExpanded ? (
-                  <FormattedMessage defaultMessage="show less" id="showLess" />
+                  <FormattedMessage defaultMessage="show less" />
                 ) : (
-                  <FormattedMessage defaultMessage="see all photos" id="seeAllPhotos" />
+                  <FormattedMessage defaultMessage="see all photos" />
                 )}
               </button>
             </div>
@@ -569,25 +560,23 @@ export function RootPage() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
             <FormattedMessage
               defaultMessage="independent music deserves independent money."
-              id="finalCtaHeadline"
             />
           </h2>
           <p className="text-xl text-layer-5 mb-10 leading-relaxed">
             <FormattedMessage
               defaultMessage="whether you're an artist, a venue, or a fan — tunestr is where live music meets the future of money. come be part of it."
-              id="finalCtaDesc"
             />
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <ContactButton className="inline-flex items-center justify-center gap-3 px-10 py-5 rounded-2xl bg-primary text-layer-0 font-bold text-lg hover:brightness-110 transition-all shadow-lg shadow-primary/25">
               <Zap className="w-5 h-5" />
-              <FormattedMessage defaultMessage="get in touch" id="getInTouch" />
+              <FormattedMessage defaultMessage="get in touch" />
             </ContactButton>
             <Link
               to="/about"
               className="inline-flex items-center justify-center gap-3 px-10 py-5 rounded-2xl border-2 border-layer-3 text-white font-bold text-lg hover:border-primary hover:text-primary transition-colors"
             >
-              <FormattedMessage defaultMessage="learn about bitcoin & nostr" id="learnBtcNostr" />
+              <FormattedMessage defaultMessage="learn about bitcoin & nostr" />
             </Link>
           </div>
         </div>
@@ -598,7 +587,7 @@ export function RootPage() {
         <section className="py-12 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-2xl font-bold mb-6">
-              <FormattedMessage defaultMessage="recent streams" id="recentStreams" />
+              <FormattedMessage defaultMessage="recent streams" />
             </h2>
             <VideoGridSorted
               evs={ended}

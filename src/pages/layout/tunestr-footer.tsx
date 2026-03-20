@@ -1,4 +1,3 @@
-import { FormattedMessage } from "react-intl";
 import { Link } from "react-router";
 import { Zap, Heart, Music } from "lucide-react";
 
@@ -18,11 +17,9 @@ export function TunestrFooter() {
             <img src="/tunestr-logo-t.png" alt="tunestr" className="w-16 h-16 mb-4" />
             <p className="text-xl font-bold mb-2">independent music + independent money</p>
             <p className="text-layer-5 mb-6 max-w-md">
-              <FormattedMessage
-                defaultMessage="live music streaming powered by bitcoin. artists get paid directly."
-                id="footerTagline"
-              />
+              live music streaming powered by bitcoin. artists get paid directly.
             </p>
+            {/* biome-ignore lint/a11y/useValidAnchor: obfuscated mailto */}
             <a
               href="#contact"
               data-e="djR2QHR1bmVzdHIuaW8="
@@ -34,7 +31,7 @@ export function TunestrFooter() {
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-layer-0 font-bold hover:brightness-110 transition-all"
             >
               <Zap className="w-4 h-4" />
-              <FormattedMessage defaultMessage="get in touch" id="footerCta" />
+              get in touch
             </a>
           </div>
 
@@ -43,7 +40,7 @@ export function TunestrFooter() {
             {/* Essentials */}
             <div>
               <h3 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">
-                <FormattedMessage id="footerEssentials" defaultMessage="Essentials" />
+                Essentials
               </h3>
               <ul className="space-y-3">
                 <li>
@@ -75,7 +72,7 @@ export function TunestrFooter() {
             <div>
               <h3 className="text-sm font-bold uppercase tracking-widest text-primary mb-4 inline-flex items-center gap-2">
                 <Music className="w-4 h-4" />
-                <FormattedMessage id="footerArtists" defaultMessage="Artists" />
+                Artists
               </h3>
               <ul className="space-y-3">
                 {[
@@ -91,6 +88,7 @@ export function TunestrFooter() {
                   </li>
                 ))}
                 <li>
+                  {/* biome-ignore lint/a11y/useValidAnchor: obfuscated mailto */}
                   <a
                     href="#contact"
                     data-e="djR2QHR1bmVzdHIuaW8="
@@ -111,7 +109,7 @@ export function TunestrFooter() {
             <div>
               <h3 className="text-sm font-bold uppercase tracking-widest text-primary mb-4 inline-flex items-center gap-2">
                 <Heart className="w-4 h-4" />
-                <FormattedMessage id="footerThanks" defaultMessage="Thanks" />
+                Thanks
               </h3>
               <ul className="space-y-3">
                 {[
