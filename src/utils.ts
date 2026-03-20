@@ -43,7 +43,7 @@ export function getHost(ev: NostrEvent) {
 }
 
 export function profileLink(meta: CachedMetadata | undefined, pubkey: string | NostrLink) {
-  if (meta?.nip05?.endsWith("@zap.stream")) {
+  if (meta?.nip05?.endsWith("@zap.stream") || meta?.nip05?.endsWith("@tunestr.io")) {
     const [name] = meta.nip05.split("@");
     return `/p/${name}`;
   }

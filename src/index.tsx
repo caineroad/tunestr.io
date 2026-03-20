@@ -1,6 +1,6 @@
 import "@szhsin/react-menu/dist/index.css";
 import "./index.css";
-import "./fonts/outfit/outfit.css";
+//import "./fonts/outfit/outfit.css";
 
 import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
@@ -30,7 +30,7 @@ import ProfileSettings from "./pages/settings/profile";
 import CategoryPage from "./pages/category";
 import { WorkerRelayInterface } from "@snort/worker-relay";
 import WorkerVite from "@snort/worker-relay/src/worker?worker";
-import MarkdownPage from "./pages/md-page";
+//import MarkdownPage from "./pages/md-page";
 import DashboardIntroStep1 from "./pages/dashboard/intro/step1";
 import DashboardIntroStep2 from "./pages/dashboard/intro/step2";
 import DashboardIntroStep3 from "./pages/dashboard/intro/step3";
@@ -42,8 +42,9 @@ import { LinkHandler } from "./pages/link-handler";
 import { UploadPage } from "./pages/upload";
 import { DebugPage } from "./pages/debug";
 import { ShortsPage } from "./pages/shorts";
-import { DownloadAppPage } from "./pages/download";
-import ProvidersPage from "./pages/providers";
+import { StreamsPage } from "./pages/streams";
+import AboutPage from "./pages/about";
+
 import { TosPage } from "./pages/tos";
 import { Login } from "./login";
 import { HelmetProvider } from "@dr.pogodin/react-helmet";
@@ -56,7 +57,7 @@ const workerRelay = new WorkerRelayInterface(
   import.meta.env.DEV ? new URL("@snort/worker-relay/dist/esm/worker.mjs", import.meta.url) : new WorkerVite(),
 );
 console.debug(`WASM config: has=${hasWasm}, use_worker_relay=${useWorkerRelay}`);
-EventBuilder.ClientTag = ["client", "zap.stream", __ZAP_STREAM_VERSION__];
+EventBuilder.ClientTag = ["client", "tunestr.io", __TUNESTR_IO_VERSION__];
 export const System = new NostrSystem({
   optimizer: hasWasm ? WasmOptimizer : undefined, // use optimizer always when WASM is available
   cachingRelay: useWorkerRelay ? workerRelay : undefined,
@@ -112,16 +113,12 @@ const router = createBrowserRouter([
         element: <DebugPage />,
       },
       {
-        path: "/app",
-        element: <DownloadAppPage />,
-      },
-      {
         path: "/",
         element: <RootPage />,
       },
       {
         path: "/streams",
-        element: <RootPage />,
+        element: <StreamsPage />,
       },
       {
         path: "/videos",
@@ -206,16 +203,8 @@ const router = createBrowserRouter([
         element: <CategoryPage />,
       },
       {
-        path: "/faq",
-        element: <MarkdownPage dTag="faq-en" title={<FormattedMessage defaultMessage="FAQ" description="Title: FAQ page" />} />,
-      },
-      {
-        path: "/privacy-youtube-widget",
-        element: <MarkdownPage dTag="pp-yt-widget" title={<FormattedMessage defaultMessage="Privacy Policy" description="Title: Privacy Policy" />} />,
-      },
-      {
-        path: "/providers",
-        element: <ProvidersPage />,
+        path: "/about",
+        element: <AboutPage />,
       },
       {
         path: "/tos",

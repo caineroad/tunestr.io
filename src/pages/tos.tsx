@@ -2,12 +2,12 @@ export function TosPage() {
   return (
     <div className="flex flex-col gap-6 grow">
       <h1>Terms of Service</h1>
-      <h2>Applies to zap.stream provided streaming providers</h2>
+      <h2>Applies to tunestr.io provided streaming providers</h2>
       <p>
         <strong>Effective Date:</strong> 2023-07-06
       </p>
       <p>
-        Welcome to zap.stream! By using our streaming service, you agree to the following Terms of Service ("Terms").
+        Welcome to tunestr.io! By using our streaming service, you agree to the following Terms of Service ("Terms").
         Please read them carefully.
       </p>
       <ol className="list-disc">
@@ -28,7 +28,7 @@ export function TosPage() {
           these Terms.
         </li>
         <li>
-          <b>Disclaimer:</b> The zap.stream service is provided "as is" without any warranties.
+          <b>Disclaimer:</b> The tunestr.io service is provided "as is" without any warranties.
         </li>
         <li>
           <b>Limitation of Liability:</b> We shall not be liable for any damages arising from your use of the service.
@@ -42,14 +42,14 @@ export function TosPage() {
           constitutes acceptance of the modified Terms.
         </li>
         <li>
-          <b>Entire Agreement:</b> These Terms constitute the entire agreement between you and zap.stream.
+          <b>Entire Agreement:</b> These Terms constitute the entire agreement between you and tunestr.io.
         </li>
       </ol>
       <p>
-        If you have any questions or concerns, please contact us at <a href="mailto:info@zap.stream">info@zap.stream</a>
+        If you have any questions or concerns, please contact us at <a href="mailto:v4v@tunestr.io">v4v@tunestr.io</a>
         .
       </p>
-      <p>By using zap.stream, you agree to abide by these Terms of Service.</p>
+      <p>By using tunestr.io, you agree to abide by these Terms of Service.</p>
       <p>Enjoy your streaming experience!</p>
     </div>
   );

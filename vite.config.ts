@@ -22,7 +22,7 @@ export default defineConfig({
       },
     }),
     vitePluginVersionMark({
-      name: "zap.stream",
+      name: "tunestr.io",
       ifGitSHA: true,
       command: "git describe --always --tags",
       ifMeta: false,
@@ -40,6 +40,9 @@ export default defineConfig({
   },
   worker: {
     format: "es",
+  },
+  optimizeDeps: {
+    exclude: ["@kixelated/hang", "@kixelated/hang-ui", "@kixelated/moq", "@kixelated/moq-clock", "@kixelated/moq-token", "@kixelated/signals"],
   },
   clearScreen: false,
   resolve: {

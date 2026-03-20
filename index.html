@@ -4,50 +4,57 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#090129" />
 
   <!-- Primary Meta Tags -->
-  <title>zap.stream - Nostr Live Streaming</title>
-  <meta name="title" content="zap.stream - Nostr Live Streaming" />
+  <title>tunestr.io - Independent Music Live Streaming</title>
+  <meta name="title" content="tunestr.io - Independent Music Live Streaming" />
   <meta name="description"
-    content="Nostr live streaming powered by Bitcoin lightning. Stream freely with Bitcoin payments, no censorship, open source." />
-  <meta name="author" content="zap.stream" />
+    content="Live music streaming powered by Bitcoin lightning. Independent artists get paid directly by fans — no middlemen, no platform fees." />
+  <meta name="author" content="tunestr.io" />
   <meta name="robots" content="index, follow" />
   <meta name="keywords"
-    content="nostr, streaming, twitch.tv, twitch, trovo, kick, tik-tok, live, bitcoin, sats, lightning, freedom, censorship, resistance, open, source, gaming, chatting, IRL, e-sports, electronic sports, live streaming, decentralized streaming" />
+    content="nostr, streaming, live music, bitcoin, sats, lightning, value for value, independent music, independent artists, live streaming, decentralized streaming, zaps" />
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://zap.stream" />
+  <link rel="canonical" href="https://tunestr.io" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://zap.stream" />
-  <meta property="og:title" content="zap.stream - Nostr Live Streaming" />
+  <meta property="og:url" content="https://tunestr.io" />
+  <meta property="og:title" content="tunestr.io - Independent Music Live Streaming" />
   <meta property="og:description"
-    content="Nostr live streaming powered by Bitcoin lightning. Stream freely with Bitcoin payments, no censorship, open source." />
-  <meta property="og:image" content="https://zap.stream/logo.png" />
-  <meta property="og:image:alt" content="zap.stream logo" />
-  <meta property="og:site_name" content="zap.stream" />
+    content="Live music streaming powered by Bitcoin lightning. Independent artists get paid directly by fans — no middlemen, no platform fees." />
+  <meta property="og:image" content="https://tunestr.io/logo.png" />
+  <meta property="og:image:alt" content="tunestr.io logo" />
+  <meta property="og:site_name" content="tunestr.io" />
   <meta property="og:locale" content="en_US" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://zap.stream" />
-  <meta name="twitter:title" content="zap.stream - Nostr Live Streaming" />
+  <meta name="twitter:url" content="https://tunestr.io" />
+  <meta name="twitter:title" content="tunestr.io - Independent Music Live Streaming" />
   <meta name="twitter:description"
-    content="Nostr live streaming powered by Bitcoin lightning. Stream freely with Bitcoin payments, no censorship, open source." />
-  <meta name="twitter:image" content="https://zap.stream/logo.png" />
-  <meta name="twitter:image:alt" content="zap.stream logo" />
+    content="Live music streaming powered by Bitcoin lightning. Independent artists get paid directly by fans — no middlemen, no platform fees." />
+  <meta name="twitter:image" content="https://tunestr.io/logo.png" />
+  <meta name="twitter:image:alt" content="tunestr.io logo" />
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/logo_32.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/logo.png" />
   <link rel="manifest" href="/manifest.json" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17854661671"></script>
-  <script type="module" src="/src/gtm.ts"></script>
 </head>
 
 <body>
+  <script>
+    if (typeof crypto !== 'undefined' && !crypto.randomUUID) {
+      crypto.randomUUID = function() {
+        return '10000000-1000-4000-8000-100000000000'.replace(/[018]/g, function(c) {
+          return (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16);
+        });
+      };
+    }
+  </script>
   <div id="root"></div>
   <script type="module" src="/src/index.tsx"></script>
 </body>

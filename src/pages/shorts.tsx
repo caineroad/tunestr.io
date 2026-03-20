@@ -1,4 +1,4 @@
-import { OLD_SHORTS_KIND, SHORTS_KIND } from "@/const";
+import { OLD_SHORTS_KIND, SHORTS_KIND, WHITELIST } from "@/const";
 import VideoGrid from "@/element/video-grid";
 import { VideoTile } from "@/element/video/video-tile";
 import { findTag, getHost } from "@/utils";
@@ -15,7 +15,10 @@ export function ShortsPage() {
 
   const rb = useMemo(() => {
     const rb = new RequestBuilder("shorts");
-    rb.withFilter().kinds([SHORTS_KIND, OLD_SHORTS_KIND]).limit(100);
+    const f = rb.withFilter().kinds([SHORTS_KIND, OLD_SHORTS_KIND]).limit(100);
+    if (WHITELIST) {
+      f.authors(WHITELIST);
+    }
     return rb;
   }, []);
 
@@ -24,6 +27,7 @@ export function ShortsPage() {
   const sorted = videos
     .filter(a => {
       const host = getHost(a);
+      if (WHITELIST && !WHITELIST.includes(host)) return false;
       const link = NostrLink.publicKey(host);
       return (login?.state?.muted.length ?? 0) === 0 || !login?.state?.muted.some(a => a.equals(link));
     })

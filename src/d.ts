@@ -2,7 +2,7 @@
 /// <reference types="@webbtc/webln-types" />
 /// <reference types="vite/client" />
 
-declare const __ZAP_STREAM_VERSION__: string;
+declare const __TUNESTR_IO_VERSION__: string;
 
 declare module "*.md" {
   const value: string;

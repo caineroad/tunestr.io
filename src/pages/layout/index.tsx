@@ -8,6 +8,7 @@ import { useLogin } from "@/hooks/login";
 import { trackEvent } from "@/utils";
 import { HeaderNav } from "./header";
 import { LeftNav } from "./left-nav";
+import { TunestrFooter } from "./tunestr-footer";
 import { SnortContext, TraceTimelineOverlay } from "@snort/system-react";
 import { EventKind } from "@snort/system";
 import { USER_CARDS } from "@/const";
@@ -57,7 +58,7 @@ export function LayoutPage() {
   return (
     <div style={styles}>
       <Helmet>
-        <title>Home - zap.stream</title>
+        <title>tunestr.io - Independent Music Live Streaming</title>
       </Helmet>
 
       <HeaderNav />
@@ -65,6 +66,7 @@ export function LayoutPage() {
         <LeftNav />
         <Outlet />
       </div>
+      <TunestrFooter />
       <TraceTimelineOverlay isOpen={trace} onClose={() => setTrace(false)} />
     </div>
   );

@@ -58,7 +58,19 @@ function loadWhitelist() {
 
 export const WHITELIST: Array<string> | undefined = loadWhitelist();
 
-export const NIP5_DOMAIN: string = import.meta.env.VITE_NIP5_DOMAIN || "zap.stream";
+function loadFeaturedVideos() {
+  if (import.meta.env.VITE_FEATURED_VIDEOS !== undefined) {
+    const list = import.meta.env.VITE_FEATURED_VIDEOS as string | undefined;
+    if (list) {
+      return list.split(",");
+    }
+  }
+  return undefined;
+}
+
+export const FEATURED_VIDEOS: Array<string> | undefined = loadFeaturedVideos();
+
+export const NIP5_DOMAIN: string = import.meta.env.VITE_NIP5_DOMAIN || "tunestr.io";
 
 // Pubkeys allowed to use "host" tag
 export const P_TAG_HOST_WHITELIST = [

@@ -35,14 +35,14 @@ export default function DashboardIntro() {
   return (
     <div className="flex flex-col gap-4 mx-auto xl:w-1/3 lg:w-1/2 bg-layer-1 rounded-xl border border-layer-2 p-6">
       <h1>
-        <FormattedMessage defaultMessage="Welcome to zap.stream!" />
+        <FormattedMessage defaultMessage="Welcome to tunestr.io!" />
       </h1>
       <div className="flex gap-4">
         <div>
           <ZapGlow />
         </div>
         <p className="text-layer-5">
-          <FormattedMessage defaultMessage="ZapStream is a new kind of streaming platform that allows you to earn bitcoin (sats) the moment you start streaming! Viewers can tip streamers any amount they choose. The tips are instantly deposited to your bitcoin (lightning) wallet. zap.stream never touches your earnings!" />
+          <FormattedMessage defaultMessage="tunestr.io is a live music streaming platform that allows you to earn bitcoin (sats) the moment you start streaming! Viewers can tip artists any amount they choose. The tips are instantly deposited to your bitcoin (lightning) wallet. tunestr.io never touches your earnings!" />
         </p>
       </div>
       <h3>

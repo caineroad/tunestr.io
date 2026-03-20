@@ -23,7 +23,7 @@ export function ShareMenu({ ev }: { ev: NostrEvent }) {
 
   const defaultMyMsg = formatMessage(
     {
-      defaultMessage: "Come check out my stream on zap.stream!\n\n{link}\n\n",
+      defaultMessage: "Come check out my stream on tunestr.io!\n\n{link}\n\n",
       id: "HsgeUk",
     },
     {
@@ -32,7 +32,7 @@ export function ShareMenu({ ev }: { ev: NostrEvent }) {
   );
   const defaultHostMsg = formatMessage(
     {
-      defaultMessage: "Come check out {name} stream on zap.stream!\n\n{link}",
+      defaultMessage: "Come check out {name} stream on tunestr.io!\n\n{link}",
       id: "PUymyQ",
     },
     {
@@ -77,7 +77,7 @@ export function ShareMenu({ ev }: { ev: NostrEvent }) {
         <MenuItem
           onClick={() => {
             window.open(
-              `https://twitter.com/intent/tweet?text=${encodeURIComponent(message)}&via=zap_stream`,
+              `https://twitter.com/intent/tweet?text=${encodeURIComponent(message)}&via=tunestr_io`,
               "_blank",
             );
           }}>

@@ -58,7 +58,7 @@ export default function AccountWithdrawl({
       try {
         const lnurl = new LNURL(addr);
         await lnurl.load();
-        const rsp = await lnurl.getInvoice(amount, "Withdrawal from zap.stream");
+        const rsp = await lnurl.getInvoice(amount, "Withdrawal from tunestr.io");
         if (rsp.pr) {
           invoice = rsp.pr;
         } else {

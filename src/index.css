@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  font-family: "Outfit", sans-serif;
+  font-family: "Inter var", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: white;
@@ -15,8 +15,8 @@ body {
 
 :root {
   --header-height: 48px;
-  --primary: #f838d9;
-  --secondary: #34d2fe;
+  --primary: #e1a500;
+  --secondary: #e1a500;
   --zap: #ff8d2b;
   --success: green;
   --surface: #222;
@@ -105,7 +105,7 @@ select:not(.reset) {
   font-weight: 700;
   line-height: 20px;
   border-radius: 12px;
-  background: #434343;
+  background: #2b1e5e;
   padding: 12px 0px;
   color: white;
   display: flex;
@@ -119,7 +119,7 @@ select:not(.reset) {
 }
 
 .ctx-menu li:hover {
-  background: #505050;
+  background-color: #352670;
 }
 
 .szh-menu__item--hover {

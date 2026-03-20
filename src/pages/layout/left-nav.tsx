@@ -53,6 +53,13 @@ export function LeftNav() {
             </span>
           )}
         </NavLinkIcon>
+        <NavLinkIcon name="book" route="/about" className="flex gap-2 items-center" onClick={hideAfterMobileNav}>
+          {expandLabels && (
+            <span className="pr-3">
+              <FormattedMessage defaultMessage="About" />
+            </span>
+          )}
+        </NavLinkIcon>
       </div>
     );
   }

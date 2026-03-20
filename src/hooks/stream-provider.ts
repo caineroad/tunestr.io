@@ -17,7 +17,7 @@ export interface StreamProviderConfig {
 }
 
 const DEFAULT_CONFIG: StreamProviderConfig = {
-  name: "zap.stream",
+  name: "tunestr.io",
   url: "https://api-core.zap.stream/api/v1",
   pubkey: ZAP_STREAM_PUBKEY,
   recommendations: [],

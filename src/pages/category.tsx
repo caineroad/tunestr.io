@@ -7,12 +7,11 @@ import { useRequestBuilder } from "@snort/system-react";
 import { useMemo } from "react";
 import { FormattedMessage } from "react-intl";
 import { useParams } from "react-router";
+import { WHITELIST } from "@/const";
 
 import IRLImage from "@/images/irl.jpeg";
-import GamingImage from "@/images/gaming.jpeg";
 import MusicImage from "@/images/music.jpeg";
 import TalkImage from "@/images/talk.jpeg";
-import ArtImage from "@/images/art.jpeg";
 
 export const AllCategories = [
   {
@@ -23,15 +22,6 @@ export const AllCategories = [
     priority: 0,
     className: "bg-category-gradient-1",
     cover: IRLImage,
-  },
-  {
-    id: "gaming",
-    name: <FormattedMessage defaultMessage="Gaming" />,
-    icon: "gaming-pad",
-    tags: ["gaming"],
-    priority: 0,
-    className: "bg-category-gradient-2",
-    cover: GamingImage,
   },
   {
     id: "music",
@@ -51,31 +41,6 @@ export const AllCategories = [
     className: "bg-category-gradient-4",
     cover: TalkImage,
   },
-  {
-    id: "art",
-    name: <FormattedMessage defaultMessage="Art" />,
-    icon: "art",
-    tags: ["art"],
-    priority: 0,
-    className: "bg-category-gradient-5",
-    cover: ArtImage,
-  },
-  {
-    id: "gambling",
-    name: <FormattedMessage defaultMessage="Gambling" />,
-    icon: "dice",
-    tags: ["gambling", "casino", "slots"],
-    priority: 1,
-    className: "bg-category-gradient-6",
-  },
-  {
-    id: "science-and-technology",
-    name: <FormattedMessage defaultMessage="Science & Technology" />,
-    icon: "dice",
-    tags: ["science", "technology"],
-    priority: 1,
-    className: "bg-category-gradient-7",
-  },
 ];
 
 export default function Category() {
@@ -85,9 +50,12 @@ export default function Category() {
   const sub = useMemo(() => {
     const cat = AllCategories.find(a => a.id === id);
     const rb = new RequestBuilder(`category:${id}`);
-    rb.withFilter()
+    const f = rb.withFilter()
       .kinds([EventKind.LiveEvent])
       .tag("t", cat?.tags ?? [id]);
+    if (WHITELIST) {
+      f.authors(WHITELIST);
+    }
     return rb;
   }, [id]);
 

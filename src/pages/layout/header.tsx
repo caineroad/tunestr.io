@@ -25,6 +25,7 @@ export function HeaderNav() {
   const { lang, setLang } = useLang();
   const country = lang.split(/[-_]/i)[1]?.toLowerCase();
   const layoutState = useLayout();
+  const [showSearch, setShowSearch] = useState(false);
 
   function langSelector() {
     return (
@@ -32,7 +33,7 @@ export function HeaderNav() {
         menuClassName="ctx-menu"
         menuButton={
           <div className="flex gap-2 items-center">
-            {country && <div className={`fi fi-${country}`}></div>}
+            {/* {country && <div className={`fi fi-${country}`}></div>} */}
             <div className="uppercase pointer">
               <b>{lang.includes("-") ? lang.split("-")[0] : lang}</b>
             </div>
@@ -56,24 +57,6 @@ export function HeaderNav() {
 
     return (
       <div className="flex gap-2 items-center pr-4 py-1">
-        {(!WHITELIST || WHITELIST.includes(login.pubkey)) && (
-          <Menu
-            menuClassName="ctx-menu"
-            menuButton={
-              <IconButton iconName="plus-circle" iconSize={20} className="px-3 py-2 hover:bg-layer-1 rounded-xl" />
-            }
-            align="end"
-            gap={5}>
-            <MenuItem onClick={() => navigate("/upload")}>
-              <Icon name="upload" size={24} />
-              <FormattedMessage defaultMessage="Upload" />
-            </MenuItem>
-            <MenuItem onClick={() => navigate("/dashboard")}>
-              <Icon name="signal" size={24} />
-              <FormattedMessage defaultMessage="Dashboard" />
-            </MenuItem>
-          </Menu>
-        )}
         <Menu
           menuClassName="ctx-menu"
           menuButton={
@@ -102,18 +85,23 @@ export function HeaderNav() {
             <Icon name="widget" size={24} />
             <FormattedMessage defaultMessage="Widgets" />
           </MenuItem>
-          <MenuItem onClick={() => navigate("/faq")}>
-            <Icon name="link" size={24} />
-            <FormattedMessage defaultMessage="FAQ" />
-          </MenuItem>
-          <MenuItem onClick={() => window.open("https://discord.gg/Wtg6NVDdbT")}>
-            <Icon name="link" size={24} />
-            Discord
-          </MenuItem>
           <MenuItem onClick={() => Login.logout()}>
             <Icon name="logout" size={24} />
             <FormattedMessage defaultMessage="Logout" />
           </MenuItem>
+          {(!WHITELIST || WHITELIST.includes(login.pubkey)) && (
+            <>
+            <hr/>
+            <MenuItem onClick={() => navigate("/upload")}>
+              <Icon name="upload" size={24} />
+              <FormattedMessage defaultMessage="Upload" />
+            </MenuItem>
+            <MenuItem onClick={() => navigate("/dashboard")}>
+              <Icon name="signal" size={24} />
+              <FormattedMessage defaultMessage="Dashboard" />
+            </MenuItem>
+            </>
+          )}
         </Menu>
       </div>
     );
@@ -140,8 +128,29 @@ export function HeaderNav() {
     );
   }
 
+  function tunestrContactUs() {
+    return (
+      <div className="fixed right-0 bottom-0 p-1 pt-3 mb-1 mr-1 border border-primary rounded-full bg-layer-1">
+      <a
+        href="#contact"
+        aria-label="Contact us"
+        rel="nofollow noopener noreferrer"
+        data-e="djR2QHR1bmVzdHIuaW8="
+        onClick={e => {
+          e.preventDefault();
+          const addr = atob((e.currentTarget as HTMLAnchorElement).dataset.e || "");
+          if (addr) window.location.href = `mailto:${addr}`;
+        }}
+        className="text-primary hover:text-primary-hover font-medium px-2 uppercase whitespace-nowrap inline-flex items-center gap-2">
+        <Icon name="envelope" size={32} />
+      </a>
+      </div>
+    )
+  }
+
   if (!layoutState.showHeader) return;
   return (
+    <>
     <div className="flex justify-between items-center gap-4">
       <div className="flex gap-4 items-center m-2">
         {layoutState.leftNav && (
@@ -157,15 +166,29 @@ export function HeaderNav() {
           />
         )}
         <Link to="/">
-          <Logo width={33} />
+          <img src="/logo.svg" width={130} />
         </Link>
       </div>
-      <SearchBar />
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-4">
+        <div className="hidden md:block">
+          <SearchBar />
+        </div>
+        <IconButton
+          iconName="search"
+          iconSize={20}
+          className="md:hidden rounded-xl w-10 h-10"
+          onClick={() => setShowSearch(s => !s)}
+        />
         {langSelector()}
         {loggedIn()}
         {loggedOut()}
       </div>
     </div>
+    {showSearch && (
+      <div className="md:hidden px-3 pb-2">
+        <SearchBar className="w-full" autoFocus />
+      </div>
+    )}
+    </>
   );
 }
