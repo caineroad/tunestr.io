@@ -13,7 +13,7 @@ import { useLogin } from "@/hooks/login";
 import { useState } from "react";
 import { Profile } from "@/element/profile";
 import { SearchBar } from "./search";
-import { NavLinkIcon } from "./nav-icon";
+
 import { useLayout } from "./context";
 import { WHITELIST } from "@/const";
 
@@ -132,16 +132,18 @@ export function HeaderNav() {
     <div className="flex justify-between items-center gap-4">
       <div className="flex gap-4 items-center m-2">
         {layoutState.leftNav && (
-          <NavLinkIcon
-            name="hamburger"
-            className="!opacity-100"
+          <button
+            type="button"
+            className="cursor-pointer hover:bg-neutral-800 rounded-xl"
             onClick={() => {
               layoutState.update(c => {
                 c.leftNavExpand = !c.leftNavExpand;
                 return { ...c };
               });
             }}
-          />
+          >
+            <Icon name="hamburger" size={20} className="m-2" />
+          </button>
         )}
         <Link to="/">
           <img src="/logo.svg" width={130} alt="tunestr.io" />
