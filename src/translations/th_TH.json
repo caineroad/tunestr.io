@@ -1,76 +1,4 @@
 {
-  "contactUs": {
-    "defaultMessage": "ติดต่อเรา"
-  },
-  "independentMusic": {
-    "defaultMessage": "ดนตรีอิสระ"
-  },
-  "independentMoney": {
-    "defaultMessage": "เงินอิสระ"
-  },
-  "forIndependentArtists": {
-    "defaultMessage": "สำหรับศิลปินอิสระ"
-  },
-  "generateExtraRevenue": {
-    "defaultMessage": "สร้างรายได้เพิ่มเติมจากการแสดงสดของคุณ"
-  },
-  "discoverNewWay": {
-    "defaultMessage": "ค้นพบวิธีใหม่ในการเข้าถึงโซเชียลมีเดีย"
-  },
-  "engagePassionateFanBase": {
-    "defaultMessage": "สร้างความผูกพันกับฐานแฟนคลับใหม่ที่มีความหลงใหลออนไลน์"
-  },
-  "findBiggestFans": {
-    "defaultMessage": "ค้นหาแฟนคลับที่ยิ่งใหญ่ที่สุดของคุณและเชื่อมต่อกับพวกเขาโดยตรง"
-  },
-  "learnMonetizationStrategy": {
-    "defaultMessage": "เรียนรู้กลยุทธ์การสร้างรายได้ใหม่สำหรับผู้สร้างสรรค์"
-  },
-  "forIndependentVenues": {
-    "defaultMessage": "สำหรับสถานที่จัดแสดงอิสระ"
-  },
-  "differentiateYourself": {
-    "defaultMessage": "สร้างความแตกต่างให้กับศิลปินที่กำลังทัวร์"
-  },
-  "promoteVenue": {
-    "defaultMessage": "โปรโมทสถานที่จัดงานและกิจกรรมของคุณให้กับผู้ชมในวงกว้าง"
-  },
-  "createInteractiveConcert": {
-    "defaultMessage": "สร้างประสบการณ์คอนเสิร์ตแบบโต้ตอบใหม่ออนไลน์"
-  },
-  "streamShowsMinimalEffort": {
-    "defaultMessage": "สตรีมการแสดงของคุณด้วยความพยายามน้อยที่สุด เหนือกว่าการสตรีมมิ่งแบบดั้งเดิม"
-  },
-  "keepTouringEconomics": {
-    "defaultMessage": "ช่วยรักษาเศรษฐกิจการทัวร์ให้แข็งแรง"
-  },
-  "forIndependentFans": {
-    "defaultMessage": "สำหรับแฟนเพลงอิสระ"
-  },
-  "proveToFavoriteArtists": {
-    "defaultMessage": "พิสูจน์ให้ศิลปินที่คุณชื่นชอบเห็นว่าคุณคือผู้สนับสนุนที่ยิ่งใหญ่ที่สุดของพวกเขา"
-  },
-  "giveLiveFeedback": {
-    "defaultMessage": "ให้ข้อเสนอแนะสดระหว่างการแสดงและจ่ายเงินให้กับนักแสดงโดยตรง"
-  },
-  "connectWithFans": {
-    "defaultMessage": "เชื่อมต่อกับแฟนคนอื่นๆระหว่างการแสดง"
-  },
-  "joinNewCommunity": {
-    "defaultMessage": "เข้าร่วมชุมชนโซเชียลมีเดียใหม่ที่คุณไม่ใช่ผลิตภัณฑ์"
-  },
-  "keepMusicCommunity": {
-    "defaultMessage": "ช่วยรักษาชุมชนดนตรีอิสระให้เติบโต"
-  },
-  "footerEssentials": {
-    "defaultMessage": "สิ่งจำเป็น"
-  },
-  "footerThanks": {
-    "defaultMessage": "ขอบคุณ"
-  },
-  "footerArtists": {
-    "defaultMessage": "ศิลปิน"
-  },
   "+0zv6g": {
     "defaultMessage": "ภาพ"
   },
@@ -261,7 +189,7 @@
     "defaultMessage": "Nostr address"
   },
   "9rmSgv": {
-    "defaultMessage": "OBS (Open Broadcaster Software) เป็นซอฟต์แวร์โอเพ่นซอร์สฟรีสำหรับการบันทึกวิดีโอและการสตรีมสดบน Windows, Mac และ Linux เป็นตัวเลือกที่นิยมของเหล่าสตรีมเมอร์ คุณจะต้องติดตั้งสิ่งนี้เพื่อจับภาพวิดีโอ เสียง และสิ่งอื่นๆ ที่คุณต้องการเพิ่มลงในสตรีมของคุณ เมื่อติดตั้งและกำหนดค่าตามต้องการแล้ว ให้เพิ่ม URL สตรีมและคีย์สตรีมของคุณจากการตั้งค่าสตรีมไปที่ OBS เพื่อสร้างการเชื่อมต่อกับ tunestr.io"
+    "defaultMessage": "OBS (Open Broadcaster Software) เป็นซอฟต์แวร์โอเพ่นซอร์สฟรีสำหรับการบันทึกวิดีโอและการสตรีมสดบน Windows, Mac และ Linux เป็นตัวเลือกที่นิยมของเหล่าสตรีมเมอร์ คุณจะต้องติดตั้งสิ่งนี้เพื่อจับภาพวิดีโอ เสียง และสิ่งอื่นๆ ที่คุณต้องการเพิ่มลงในสตรีมของคุณ เมื่อติดตั้งและกำหนดค่าตามต้องการแล้ว ให้เพิ่ม URL สตรีมและคีย์สตรีมของคุณจากการตั้งค่าสตรีมไปที่ OBS เพื่อสร้างการเชื่อมต่อกับ zap.stream"
   },
   "A1zT+z": {
     "defaultMessage": "ผลลัพธ์การค้นหา"
@@ -321,7 +249,7 @@
     "defaultMessage": "เข้าสู่ระบบในฐานะ"
   },
   "DkgCAz": {
-    "defaultMessage": "จะ stream บน tunestr.io ยังไงดี?"
+    "defaultMessage": "จะ stream บน zap.stream ยังไงดี?"
   },
   "Dn82AL": {
     "defaultMessage": "ถ่ายทอดสด"
@@ -400,10 +328,10 @@
     "defaultMessage": "ชื่อ"
   },
   "HDgXO/": {
-    "defaultMessage": "tunestr.io is an open source platform powered by the nostr protocol. There are no giant corporations or giant funds available to provide free streaming."
+    "defaultMessage": "zap.stream is an open source platform powered by the nostr protocol. There are no giant corporations or giant funds available to provide free streaming."
   },
   "HsgeUk": {
-    "defaultMessage": "ตอนนี้ฉัน stream อยู่บน tunestr.io นะ! {link}"
+    "defaultMessage": "ตอนนี้ฉัน stream อยู่บน zap.stream นะ! {link}"
   },
   "Ht231k": {
     "defaultMessage": "การเผยแพร่"
@@ -469,13 +397,13 @@
     "defaultMessage": "ยอด Zap ที่อยากได้"
   },
   "LUvSJB": {
-    "defaultMessage": "คุณสามารถใช้ tunestr.io เป็น host สำหรับการ stream ได้ฟรีด้วยวีดิโอคุณภาพสูงเป็นเวลา 2 ชั่วโมง และ stream ได้สูงสุดถึง 8 ชั่วโมงโดยคุณภาพของวีดิโอหลังจากนั้นจะขึ้นอยู่กับกับอุปกรณ์ของคุณ หลังจากนั้นคุณจะสามารถ stream ได้โดยมีค่าใช้จ่ายในอัตรา 5 sats ต่อนาที หรือ 10 sats ต่อนาที ตามคุณภาพของการ stream ที่คุณต้องการ หากคุณ stream ผ่าน tunestr.io แต่ไม่ได้ใช้ tunestr.io ในการ host ค่าใช้จ่ายในการ stream นั้นจะขึ้นอยู่กับผู้ให้บริการ stream ที่คุณใช้"
+    "defaultMessage": "คุณสามารถใช้ zap.stream เป็น host สำหรับการ stream ได้ฟรีด้วยวีดิโอคุณภาพสูงเป็นเวลา 2 ชั่วโมง และ stream ได้สูงสุดถึง 8 ชั่วโมงโดยคุณภาพของวีดิโอหลังจากนั้นจะขึ้นอยู่กับกับอุปกรณ์ของคุณ หลังจากนั้นคุณจะสามารถ stream ได้โดยมีค่าใช้จ่ายในอัตรา 5 sats ต่อนาที หรือ 10 sats ต่อนาที ตามคุณภาพของการ stream ที่คุณต้องการ หากคุณ stream ผ่าน zap.stream แต่ไม่ได้ใช้ zap.stream ในการ host ค่าใช้จ่ายในการ stream นั้นจะขึ้นอยู่กับผู้ให้บริการ stream ที่คุณใช้"
   },
   "Le+99Z": {
     "defaultMessage": "Streamers pay a small fee to cover our running costs. We give new streamers a credit of {amount} sats (about {time_estimate} of streaming) to get started!"
   },
   "Lg2ye2": {
-    "defaultMessage": "Tunestr is a new kind of streaming platform that allows you to earn bitcoin (sats) the moment you start streaming! Viewers can tip streamers any amount they choose. The tips are instantly deposited to your bitcoin (lightning) wallet. tunestr.io never touches your earnings!"
+    "defaultMessage": "ZapStream is a new kind of streaming platform that allows you to earn bitcoin (sats) the moment you start streaming! Viewers can tip streamers any amount they choose. The tips are instantly deposited to your bitcoin (lightning) wallet. zap.stream never touches your earnings!"
   },
   "LknBsU": {
     "defaultMessage": "Stream Key"
@@ -537,7 +465,7 @@
     "defaultMessage": "เว้นว่างไว้หากคุณไม่ต้องการกำหนดเป้าหมาย"
   },
   "PUymyQ": {
-    "defaultMessage": "ตอนนี้ {name} stream อยู่บน tunestr.io นะ! {link}"
+    "defaultMessage": "ตอนนี้ {name} stream อยู่บน zap.stream นะ! {link}"
   },
   "PXAur5": {
     "defaultMessage": "ถอนเงิน"
@@ -622,7 +550,7 @@
     "description": "Relative time, ie. 1s ago"
   },
   "UGFYV8": {
-    "defaultMessage": "ยินดีต้อนรับสู่ tunestr.io จ้า"
+    "defaultMessage": "ยินดีต้อนรับสู่ zap.stream จ้า"
   },
   "UJBFYK": {
     "defaultMessage": "เพิ่มการ์ด"
@@ -806,7 +734,7 @@
     "defaultMessage": "No Thanks!"
   },
   "h9mX2/": {
-    "defaultMessage": "หากคุณใช้โฮสติ้ง tunestr.io ของเรา (ถูกที่สุดและง่ายที่สุด) ให้คัดลอก URL สตรีมและคีย์สตรีมของคุณไปที่การตั้งค่า OBS เท่านี้คุณก็พร้อมแล้ว"
+    "defaultMessage": "หากคุณใช้โฮสติ้ง zap.stream ของเรา (ถูกที่สุดและง่ายที่สุด) ให้คัดลอก URL สตรีมและคีย์สตรีมของคุณไปที่การตั้งค่า OBS เท่านี้คุณก็พร้อมแล้ว"
   },
   "hMzcSq": {
     "defaultMessage": "ข้อความ"
@@ -988,7 +916,7 @@
     "defaultMessage": "{n,selectordinal,one{@ #st min} two{@ #nd min} few{@ #rd min} other{@ #th min}}"
   },
   "tVCC9m": {
-    "defaultMessage": "Sats เป็นหน่วยเล็กๆ ของ Bitcoin การส่ง sats บน tunestr.io เรียกว่า \"zapping\" หรือ zaps"
+    "defaultMessage": "Sats เป็นหน่วยเล็กๆ ของ Bitcoin การส่ง sats บน zap.stream เรียกว่า \"zapping\" หรือ zaps"
   },
   "thsiMl": {
     "defaultMessage": "ข้อตกลงและเงื่อนไข"
@@ -1012,7 +940,7 @@
     "defaultMessage": "Latest Videos"
   },
   "vP4dFa": {
-    "defaultMessage": "Visit {link} to get some sweet tunestr.io merch!"
+    "defaultMessage": "Visit {link} to get some sweet zap.stream merch!"
   },
   "vrTOHJ": {
     "defaultMessage": "{amount} sats"
@@ -1039,7 +967,7 @@
     "defaultMessage": "เลือกเสียง.."
   },
   "wRGjPp": {
-    "defaultMessage": "ส่วนขยาย Nostr จะบันทึกคีย์ของคุณเพื่อให้คุณสามารถเข้าสู่ระบบได้อย่างปลอดภัยโดยไม่ต้องป้อนใหม่ทุกครั้ง. Tunestr ใช้ส่วนขยายเพื่ออนุญาตการดำเนินการในชื่อของคุณโดยไม่เคยเห็นข้อมูลสำคัญของคุณ. นี่เป็นข้อได้เปรียบที่สำคัญมากกว่าการต้องไว้ใจว่าเว็บไซต์จะจัดการข้อมูลส่วนตัวของคุณได้อย่างปลอดภัย"
+    "defaultMessage": "ส่วนขยาย Nostr จะบันทึกคีย์ของคุณเพื่อให้คุณสามารถเข้าสู่ระบบได้อย่างปลอดภัยโดยไม่ต้องป้อนใหม่ทุกครั้ง. ZapStream ใช้ส่วนขยายเพื่ออนุญาตการดำเนินการในชื่อของคุณโดยไม่เคยเห็นข้อมูลสำคัญของคุณ. นี่เป็นข้อได้เปรียบที่สำคัญมากกว่าการต้องไว้ใจว่าเว็บไซต์จะจัดการข้อมูลส่วนตัวของคุณได้อย่างปลอดภัย"
   },
   "wTwfnv": {
     "defaultMessage": "ที่อยู่ Nostr ไม่ถูกต้อง"
@@ -1070,7 +998,7 @@
     "defaultMessage": "คลิป"
   },
   "yR0V+W": {
-    "defaultMessage": "หากต้องการเริ่มการสตรีมบน tunestr.io,ให้ทำตามขั้นตอนเหล่านี้:"
+    "defaultMessage": "หากต้องการเริ่มการสตรีมบน zap.stream,ให้ทำตามขั้นตอนเหล่านี้:"
   },
   "yj8NrY": {
     "defaultMessage": "Clip"

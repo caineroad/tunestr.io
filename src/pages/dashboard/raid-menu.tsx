@@ -1,11 +1,11 @@
 import { useStreamsFeed } from "@/hooks/live-streams";
 import { getHost } from "@/utils";
-import { dedupe, unwrap } from "@snort/shared";
+import { dedupe } from "@snort/shared";
 import { FormattedMessage } from "react-intl";
 import { Profile } from "../../element/profile";
 import { useLogin } from "@/hooks/login";
 import { useContext, useState } from "react";
-import { NostrLink, parseNostrLink } from "@snort/system";
+import { LinkScope, Nip10, NostrLink, parseNostrLink } from "@snort/system";
 import { SnortContext } from "@snort/system-react";
 import { LIVE_STREAM_RAID } from "@/const";
 import { DefaultButton } from "../../element/buttons";
@@ -29,8 +29,8 @@ export function DashboardRaidMenu({ link, onClose }: { link: NostrLink; onClose:
       const ev = await pub.generic(eb => {
         return eb
           .kind(LIVE_STREAM_RAID)
-          .tag(unwrap(link.toEventTag("root")))
-          .tag(unwrap(parseNostrLink(raiding).toEventTag("mention")))
+          .tag(Nip10.linkToTag(link, LinkScope.Root))
+          .tag(Nip10.linkToTag(parseNostrLink(raiding), LinkScope.Mention))
           .content(msg);
       });
 
@@ -67,17 +67,13 @@ export function DashboardRaidMenu({ link, onClose }: { link: NostrLink; onClose:
         <p className="text-layer-4 uppercase font-semibold text-sm">
           <FormattedMessage defaultMessage="Raid target" id="Zse7yG" />
         </p>
-        <div className="paper">
-          <input type="text" placeholder="naddr.." value={raiding} onChange={e => setRaiding(e.target.value)} />
-        </div>
+        <input type="text" placeholder="naddr.." value={raiding} onChange={e => setRaiding(e.target.value)} />
       </div>
       <div className="flex flex-col gap-1">
         <p className="text-layer-4 uppercase font-semibold text-sm">
           <FormattedMessage defaultMessage="Raid Message" id="RS6smY" />
         </p>
-        <div className="paper">
-          <input type="text" value={msg} onChange={e => setMsg(e.target.value)} />
-        </div>
+        <input type="text" value={msg} onChange={e => setMsg(e.target.value)} />
       </div>
       <DefaultButton onClick={raid}>
         <FormattedMessage defaultMessage="Raid!" id="aqjZxs" />

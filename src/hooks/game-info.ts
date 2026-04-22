@@ -1,5 +1,5 @@
 import { AllCategories } from "@/pages/category";
-import GameDatabase, { GameInfo } from "@/service/game-database";
+import GameDatabase, { type GameInfo } from "@/service/game-database";
 import { useEffect, useState } from "react";
 
 export default function useGameInfo(gameId?: string, gameInfo?: GameInfo) {
@@ -15,9 +15,9 @@ export default function useGameInfo(gameId?: string, gameInfo?: GameInfo) {
             ...ix,
             id: `internal:${ix.id}`,
             name: ix.name,
-            genres: ix.tags,
+            genres: ix.tags.map((v, i) => ({ id: i, name: v })),
             className: ix.className,
-            cover: ix.cover,
+            cover: ix.cover ? { id: 0, image_id: "", url: ix.cover } : undefined
           });
         }
       } else {

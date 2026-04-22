@@ -1,8 +1,9 @@
-import { DAY, LIVE_STREAM, StreamState, WHITELIST } from "@/const";
-import { findTag, getHost } from "@/utils";
-import { unixNow } from "@snort/shared";
-import { NostrEvent, TaggedNostrEvent } from "@snort/system";
-import { useMemo } from "react";
+import { DAY, N94_LIVE_STREAM, StreamState, WHITELIST } from "@/const";
+import { canPlayEvent, findTag, getHost } from "@/utils";
+import { unixNow, NostrPrefix } from "@snort/shared";
+import { EventKind, type NostrEvent, NostrLink, RequestBuilder, type TaggedNostrEvent } from "@snort/system";
+import { SnortContext, useRequestBuilder } from "@snort/system-react";
+import { useContext, useMemo } from "react";
 
 export function useSortedStreams(feed: Array<TaggedNostrEvent>, oldest?: number) {
   function sortCreatedAt(a: NostrEvent, b: NostrEvent) {
@@ -18,37 +19,40 @@ export function useSortedStreams(feed: Array<TaggedNostrEvent>, oldest?: number)
   const feedSorted = useMemo(() => {
     if (feed) {
       return feed
-        // .filter(a => a.created_at > (oldest ?? unixNow() - 7 * DAY))
+        .filter(a => a.created_at > (oldest ?? unixNow() - 7 * DAY))
+        .filter(a => canPlayEvent(a))
         .filter(a => !WHITELIST || WHITELIST.includes(getHost(a)));
     }
     return [];
   }, [feed]);
 
-  function canPlayEvent(ev: NostrEvent) {
-    if (ev.kind === LIVE_STREAM) {
-      const isHls = ev.tags.some(a => a[0] === "streaming" && a[1].includes(".m3u8"));
-      const isN94 = ev.tags.some(a => a[0] === "streaming" && a[1] == "nip94");
-      return isHls || isN94;
-    }
-    return false;
-  }
-
   const live = feedSorted
-    .filter(a => findTag(a, "starts") <= unixNow() && findTag(a, "starts") > (unixNow() - DAY))
     .filter(a => {
       try {
-        return findTag(a, "status") === StreamState.Live && canPlayEvent(a);
+        return findTag(a, "status") === StreamState.Live || a.kind === N94_LIVE_STREAM;
       } catch {
         return false;
       }
     })
     .sort(sortStarts);
 
-  const planned = feedSorted
-    .filter(a => a.created_at > (oldest ?? unixNow() - 7 * DAY))
-    .filter(a => findTag(a, "status") === StreamState.Planned)
-    .sort(sortStarts);
+  // Load deletion requests for live events to clear cache relay
+  const system = useContext(SnortContext);
+  if (system.config.cachingRelay) {
+    const rbDeletes = new RequestBuilder("stream-deletes");
+    const links = useMemo(() => live.map(a => NostrLink.fromEvent(a)), [live]);
+    const aDeletes = links.filter(a => a.type === NostrPrefix.Address);
+    if (aDeletes.length > 0) {
+      rbDeletes.withFilter().replyToLink(aDeletes).kinds([EventKind.Deletion]);
+    }
+    const eDeletes = links.filter(a => a.type === NostrPrefix.Event);
+    if (eDeletes.length > 0) {
+      rbDeletes.withFilter().replyToLink(eDeletes).kinds([EventKind.Deletion]);
+    }
+    useRequestBuilder(rbDeletes);
+  }
 
+  const planned = feedSorted.filter(a => findTag(a, "status") === StreamState.Planned).sort(sortStarts);
   const ended = feedSorted
     .filter(a => {
       const hasEnded = findTag(a, "status") === StreamState.Ended;
@@ -56,6 +60,5 @@ export function useSortedStreams(feed: Array<TaggedNostrEvent>, oldest?: number)
       return hasEnded && recording?.length > 0;
     })
     .sort(sortCreatedAt);
-
   return { live, planned, ended };
 }

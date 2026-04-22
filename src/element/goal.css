@@ -19,7 +19,7 @@
 .progress-root {
   position: relative;
   overflow: hidden;
-  background: #3d2c79;
+  background: #222;
   border-radius: 1000px;
   height: 12px;
 
@@ -53,7 +53,7 @@
   width: 40px;
   height: 40px;
   border-radius: 100%;
-  background: #3d2c79;
+  background: #222;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,5 +71,5 @@
 }
 
 .goal .goal-unfinished {
-  color: #ffffff5c;
+  color: #ffffff33;
 }

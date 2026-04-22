@@ -1,7 +1,7 @@
 import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
 import { defineConfig } from "vite";
-import { visualizer } from "rollup-plugin-visualizer";
+//import { visualizer } from "rollup-plugin-visualizer";
 import { vitePluginVersionMark } from "vite-plugin-version-mark";
 
 export default defineConfig({
@@ -27,11 +27,11 @@ export default defineConfig({
       command: "git describe --always --tags",
       ifMeta: false,
     }),
-    visualizer({
-      open: true,
-      gzipSize: true,
-      filename: "build/stats.html",
-    }),
+    // visualizer({
+    //   open: true,
+    //   gzipSize: true,
+    //   filename: "build/stats.html",
+    // }),
   ],
   assetsInclude: ["**/*.md", "**/*.wasm"],
   build: {
@@ -40,6 +40,9 @@ export default defineConfig({
   },
   worker: {
     format: "es",
+  },
+  optimizeDeps: {
+    exclude: ["@kixelated/hang", "@kixelated/hang-ui", "@kixelated/moq", "@kixelated/moq-clock", "@kixelated/moq-token", "@kixelated/signals"],
   },
   clearScreen: false,
   resolve: {

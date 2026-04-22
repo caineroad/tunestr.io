@@ -11,21 +11,20 @@ import LoginWallet2x from "../login-wallet@2x.jpg";
 
 import { useContext, useState } from "react";
 import { FormattedMessage, FormattedNumber, useIntl } from "react-intl";
-import { EventPublisher, PrivateKeySigner, UserMetadata } from "@snort/system";
-import { schnorr } from "@noble/curves/secp256k1";
-import { bytesToHex } from "@noble/curves/abstract/utils";
-import { LNURL, bech32ToHex, getPublicKey, hexToBech32, isHex } from "@snort/shared";
+import { EventPublisher, PrivateKeySigner, type UserMetadata } from "@snort/system";
+import { LNURL, bech32ToHex, hexToBech32, isHex } from "@snort/shared";
 import { SnortContext } from "@snort/system-react";
 
 import { Login, LoginType } from "@/login";
 import { Icon } from "./icon";
 import Copy from "./copy";
-import { DefaultProvider, StreamProviderInfo } from "@/providers";
-import { NostrStreamProvider } from "@/providers/zsz";
+import { type AccountResponse, NostrStreamProvider } from "@/providers/zsz";
 import { DefaultButton, Layer1Button } from "./buttons";
 import { ExternalLink } from "./external-link";
 import { FileUploader } from "./file-uploader";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
+import { useStreamProvider } from "@/hooks/stream-provider";
+import { gtag } from "@/gtm";
 
 enum Stage {
   Login = 0,
@@ -41,11 +40,12 @@ export function LoginSignup({ close }: { close: () => void }) {
   const [stage, setStage] = useState(Stage.Login);
   const [username, setUsername] = useState("");
   const [lnAddress, setLnAddress] = useState("");
-  const [providerInfo, setProviderInfo] = useState<StreamProviderInfo>();
+  const [providerInfo, setProviderInfo] = useState<AccountResponse>();
   const [avatar, setAvatar] = useState("");
   const [key, setNewKey] = useState("");
   const { formatMessage } = useIntl();
   const hasNostrExtension = "nostr" in window && window.nostr;
+  const { config } = useStreamProvider();
 
   function doLoginNsec() {
     try {
@@ -78,19 +78,23 @@ export function LoginSignup({ close }: { close: () => void }) {
   }
 
   function createAccount() {
-    const newKey = bytesToHex(schnorr.utils.randomPrivateKey());
-    setNewKey(newKey);
-    setLnAddress(`${getPublicKey(newKey)}@${window.location.host}`);
+    const signer = PrivateKeySigner.random();
+    setNewKey(signer.privateKey);
+    setLnAddress("");
     setStage(Stage.Details);
   }
 
   function loginWithKey() {
     Login.loginWithPrivateKey(key);
+    gtag('event', 'conversion', {
+      'send_to': 'AW-17854661671/Rr6ECM36090bEKeI4sFC'
+    });
+
     close();
   }
 
   async function setupProfile() {
-    const px = new NostrStreamProvider(DefaultProvider.name, DefaultProvider.url, EventPublisher.privateKey(key));
+    const px = new NostrStreamProvider(config.name, config.url, EventPublisher.privateKey(key));
     const info = await px.info();
     setProviderInfo(info);
 
@@ -99,25 +103,27 @@ export function LoginSignup({ close }: { close: () => void }) {
 
   async function saveProfile() {
     try {
-      // validate LN addreess
-      try {
-        const lnurl = new LNURL(lnAddress);
-        await lnurl.load();
-      } catch {
-        if (!lnAddress.includes("localhost") && import.meta.env.DEV) {
-          throw new Error(
-            formatMessage({
-              defaultMessage: "Hmm, your lightning address looks wrong",
-              id: "4l69eO",
-            }),
-          );
+      // validate LN address if provided
+      if (lnAddress) {
+        try {
+          const lnurl = new LNURL(lnAddress);
+          await lnurl.load();
+        } catch {
+          if (!lnAddress.includes("localhost") && import.meta.env.DEV) {
+            throw new Error(
+              formatMessage({
+                defaultMessage: "Hmm, your lightning address looks wrong",
+                id: "4l69eO",
+              }),
+            );
+          }
         }
       }
       const pub = EventPublisher.privateKey(key);
       const profile = {
         name: username,
         picture: avatar,
-        lud16: lnAddress,
+        ...(lnAddress ? { lud16: lnAddress } : {}),
       } as UserMetadata;
 
       const ev = await pub.metadata(profile);
@@ -142,7 +148,10 @@ export function LoginSignup({ close }: { close: () => void }) {
         publisher={new EventPublisher(signer, signer.getPubKey())}
         onResult={e => setAvatar(e ?? "")}
         onError={e => setError(e.toString())}
-        className="absolute flex items-center justify-center w-full h-full hover:opacity-30 opacity-0 transition bg-black cursor-pointer">
+        className="absolute flex items-center justify-center w-full h-full hover:opacity-30 opacity-0 transition bg-black cursor-pointer"
+        imageWidth={512}
+        imageHeight={512}
+      >
         <Icon name="camera-plus" />
       </FileUploader>
     );
@@ -170,33 +179,31 @@ export function LoginSignup({ close }: { close: () => void }) {
                 <FormattedMessage defaultMessage="Nostr Extension" id="ebmhes" />
               </DefaultButton>
               {!hasNostrExtension && (
-                <>
-                  <small className="cursor-pointer">
-                    <FormattedMessage
-                      defaultMessage="Dont have a nostr extension? Try {nos2x}, {nostore} or {alby}"
-                      values={{
-                        nos2x: (
-                          <Link
-                            className="underline"
-                            target="_blank"
-                            to="https://chrome.google.com/webstore/detail/nos2x/kpgefcfmnafjgpblomihpgmejjdanjjp">
-                            Nos2X
-                          </Link>
-                        ),
-                        nostore: (
-                          <Link className="underline" target="_blank" to="">
-                            Nostore
-                          </Link>
-                        ),
-                        alby: (
-                          <Link className="underline" target="_blank" to="">
-                            Alby
-                          </Link>
-                        ),
-                      }}
-                    />
-                  </small>
-                </>
+                <small className="cursor-pointer">
+                  <FormattedMessage
+                    defaultMessage="Dont have a nostr extension? Try {nos2x}, {nostore} or {alby}"
+                    values={{
+                      nos2x: (
+                        <Link
+                          className="underline"
+                          target="_blank"
+                          to="https://chrome.google.com/webstore/detail/nos2x/kpgefcfmnafjgpblomihpgmejjdanjjp">
+                          Nos2X
+                        </Link>
+                      ),
+                      nostore: (
+                        <Link className="underline" target="_blank" to="">
+                          Nostore
+                        </Link>
+                      ),
+                      alby: (
+                        <Link className="underline" target="_blank" to="">
+                          Alby
+                        </Link>
+                      ),
+                    }}
+                  />
+                </small>
               )}
             </div>
             <DefaultButton onClick={() => setStage(Stage.LoginInput)}>
@@ -262,7 +269,7 @@ export function LoginSignup({ close }: { close: () => void }) {
               <FormattedMessage defaultMessage="Setup Profile" />
             </h2>
             <div className="relative mx-auto w-[100px] h-[100px] rounded-full overflow-hidden bg-layer-3">
-              {avatar && <img className="absolute object-fit w-full h-full" src={avatar} />}
+              {avatar && <img className="absolute object-cover object-center w-full h-full" src={avatar} />}
               {imageUploadSection()}
             </div>
             <input
@@ -293,9 +300,9 @@ export function LoginSignup({ close }: { close: () => void }) {
               <FormattedMessage defaultMessage="Get paid by viewers" />
             </h2>
             <p>
-              <FormattedMessage defaultMessage="We hooked you up with a lightning wallet so you can get paid by viewers right away!" />
+              <FormattedMessage defaultMessage="Add your lightning address so fans can zap you directly while you perform!" />
             </p>
-            {providerInfo?.balance && (
+            {providerInfo?.balance !== undefined && providerInfo.balance > 0 && (
               <p>
                 <FormattedMessage
                   defaultMessage="Oh, and you have {n} sats of free streaming on us! 💜"
@@ -312,12 +319,12 @@ export function LoginSignup({ close }: { close: () => void }) {
               onChange={e => setLnAddress(e.target.value)}
             />
             <small>
-              <FormattedMessage defaultMessage="You can always replace it with your own address later." />
+              <FormattedMessage defaultMessage="You can update this anytime in your profile settings." />
             </small>
             {error && <b className="error">{error}</b>}
-            <AsyncButton type="button" className="btn btn-primary rounded-xl w-full" onClick={saveProfile}>
-              <FormattedMessage defaultMessage="Amazing! Continue.." id="tM6fNW" />
-            </AsyncButton>
+            <DefaultButton onClick={saveProfile}>
+              <FormattedMessage defaultMessage="Amazing! Continue.." />
+            </DefaultButton>
           </div>
         </>
       );

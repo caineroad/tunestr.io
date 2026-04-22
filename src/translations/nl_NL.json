@@ -1,76 +1,4 @@
 {
-  "contactUs": {
-    "defaultMessage": "Neem contact op"
-  },
-  "independentMusic": {
-    "defaultMessage": "onafhankelijke muziek"
-  },
-  "independentMoney": {
-    "defaultMessage": "onafhankelijk geld"
-  },
-  "forIndependentArtists": {
-    "defaultMessage": "voor onafhankelijke artiesten"
-  },
-  "generateExtraRevenue": {
-    "defaultMessage": "genereer extra inkomsten bij je live optredens"
-  },
-  "discoverNewWay": {
-    "defaultMessage": "ontdek een nieuwe manier om sociale media te benaderen"
-  },
-  "engagePassionateFanBase": {
-    "defaultMessage": "betrek een gepassioneerde, nieuwe fanbase online"
-  },
-  "findBiggestFans": {
-    "defaultMessage": "ontdek wie je grootste fans zijn en maak direct contact met hen"
-  },
-  "learnMonetizationStrategy": {
-    "defaultMessage": "leer over een nieuwe monetisatiestrategie voor makers"
-  },
-  "forIndependentVenues": {
-    "defaultMessage": "voor onafhankelijke locaties"
-  },
-  "differentiateYourself": {
-    "defaultMessage": "onderscheid jezelf voor tourende artiesten"
-  },
-  "promoteVenue": {
-    "defaultMessage": "promoot je locatie en evenement voor een breder publiek"
-  },
-  "createInteractiveConcert": {
-    "defaultMessage": "creëer een nieuwe, interactieve concertervaring online"
-  },
-  "streamShowsMinimalEffort": {
-    "defaultMessage": "stream shows met minimale inspanning voorbij traditionele streaming"
-  },
-  "keepTouringEconomics": {
-    "defaultMessage": "help de economie van het touren gezond te houden"
-  },
-  "forIndependentFans": {
-    "defaultMessage": "voor onafhankelijke muziekfans"
-  },
-  "proveToFavoriteArtists": {
-    "defaultMessage": "bewijs aan je favoriete artiesten dat je hun #1 supporter bent"
-  },
-  "giveLiveFeedback": {
-    "defaultMessage": "geef live feedback en betaal artiesten direct tijdens hun optreden"
-  },
-  "connectWithFans": {
-    "defaultMessage": "verbind met andere fans tijdens de show"
-  },
-  "joinNewCommunity": {
-    "defaultMessage": "word lid van een nieuwe social media gemeenschap waar jij niet het product bent"
-  },
-  "keepMusicCommunity": {
-    "defaultMessage": "houd de onafhankelijke muziekgemeenschap bloeiend"
-  },
-  "footerEssentials": {
-    "defaultMessage": "ESSENTIEEL"
-  },
-  "footerThanks": {
-    "defaultMessage": "BEDANKT"
-  },
-  "footerArtists": {
-    "defaultMessage": "ARTIESTEN"
-  },
   "+0zv6g": {
     "defaultMessage": "Afbeelding"
   },
@@ -261,7 +189,7 @@
     "defaultMessage": "Nostr Adres"
   },
   "9rmSgv": {
-    "defaultMessage": "OBS (Open Broadcaster Software) is gratis en open source software voor video-opname en live streaming op Windows, Mac en Linux. Het is een populaire keuze onder streamers. Je moet dit installeren om je video, audio en al het andere dat je aan je stream wilt toevoegen op te nemen. Eenmaal geïnstalleerd en geconfigureerd naar voorkeur, voeg je je Stream URL en Stream Key van de Stream instellingen toe aan OBS om een verbinding te maken met tunestr.io."
+    "defaultMessage": "OBS (Open Broadcaster Software) is gratis en open source software voor video-opname en live streaming op Windows, Mac en Linux. Het is een populaire keuze onder streamers. Je moet dit installeren om je video, audio en al het andere dat je aan je stream wilt toevoegen op te nemen. Eenmaal geïnstalleerd en geconfigureerd naar voorkeur, voeg je je Stream URL en Stream Key van de Stream instellingen toe aan OBS om een verbinding te maken met zap.stream."
   },
   "A1zT+z": {
     "defaultMessage": "Zoekresultaten: {term}"
@@ -321,7 +249,7 @@
     "defaultMessage": "Aangemeld als"
   },
   "DkgCAz": {
-    "defaultMessage": "Hoe stream ik op tunestr.io?"
+    "defaultMessage": "Hoe stream ik op zap.stream?"
   },
   "Dn82AL": {
     "defaultMessage": "Live"
@@ -400,10 +328,10 @@
     "defaultMessage": "Naam"
   },
   "HDgXO/": {
-    "defaultMessage": "tunestr.io is een open source platform aangedreven door het nostr-protocol. Er zijn geen gigantische bedrijven of gigantische fondsen beschikbaar om gratis streaming aan te bieden."
+    "defaultMessage": "zap.stream is een open source platform aangedreven door het nostr-protocol. Er zijn geen gigantische bedrijven of gigantische fondsen beschikbaar om gratis streaming aan te bieden."
   },
   "HsgeUk": {
-    "defaultMessage": "Kom mijn stream bekijken op tunestr.io! {link}"
+    "defaultMessage": "Kom mijn stream bekijken op zap.stream! {link}"
   },
   "Ht231k": {
     "defaultMessage": "Doorsturen"
@@ -469,13 +397,13 @@
     "defaultMessage": "Zap Doelen"
   },
   "LUvSJB": {
-    "defaultMessage": "tunestr.io is gratis tot 2 uur hosting op hoge kwaliteit en tot 8 uur \"bron\"-kwaliteit. Daarna heb je een optie om te streamen voor 5 sats per minuut of 10 sats per minuut, afhankelijk van de gekozen kwaliteit. Als je tunestr.io niet gebruikt om te hosten, hangt de prijs af van de streamingprovider van je keuze."
+    "defaultMessage": "zap.stream is gratis tot 2 uur hosting op hoge kwaliteit en tot 8 uur \"bron\"-kwaliteit. Daarna heb je een optie om te streamen voor 5 sats per minuut of 10 sats per minuut, afhankelijk van de gekozen kwaliteit. Als je zap.stream niet gebruikt om te hosten, hangt de prijs af van de streamingprovider van je keuze."
   },
   "Le+99Z": {
     "defaultMessage": "Streamers betalen een kleine vergoeding om onze bedrijfskosten te dekken. We geven nieuwe streamers een tegoed van {amount} sats (ongeveer {time_estimate} streaming) om te beginnen!"
   },
   "Lg2ye2": {
-    "defaultMessage": "Tunestr is een nieuw soort streamingplatform waarmee je bitcoin (sats) kunt verdienen op het moment dat je begint met streamen! Kijkers kunnen streamers elk bedrag fooien. De fooien worden direct in je bitcoin (lightning) portemonnee gestort. tunestr.io raakt je verdiensten nooit aan!"
+    "defaultMessage": "ZapStream is een nieuw soort streamingplatform waarmee je bitcoin (sats) kunt verdienen op het moment dat je begint met streamen! Kijkers kunnen streamers elk bedrag fooien. De fooien worden direct in je bitcoin (lightning) portemonnee gestort. zap.stream raakt je verdiensten nooit aan!"
   },
   "LknBsU": {
     "defaultMessage": "Stream Sleutel"
@@ -537,7 +465,7 @@
     "defaultMessage": "Laat leeg als u geen doelen wilt instellen."
   },
   "PUymyQ": {
-    "defaultMessage": "Kom kijken naar {name} stream op tunestr.io! {link}"
+    "defaultMessage": "Kom kijken naar {name} stream op zap.stream! {link}"
   },
   "PXAur5": {
     "defaultMessage": "Intrekken"
@@ -622,7 +550,7 @@
     "description": "Relative time, ie. 1s ago"
   },
   "UGFYV8": {
-    "defaultMessage": "Welkom bij tunestr.io!"
+    "defaultMessage": "Welkom bij zap.stream!"
   },
   "UJBFYK": {
     "defaultMessage": "Kaart Toevoegen"
@@ -806,7 +734,7 @@
     "defaultMessage": "No Thanks!"
   },
   "h9mX2/": {
-    "defaultMessage": "Als je onze in-house tunestr.io hosting gebruikt (goedkoopste en makkelijkste), kopieer dan je stream URL en Stream Key naar je OBS instellingen en je zou aan de slag moeten kunnen."
+    "defaultMessage": "Als je onze in-house zap.stream hosting gebruikt (goedkoopste en makkelijkste), kopieer dan je stream URL en Stream Key naar je OBS instellingen en je zou aan de slag moeten kunnen."
   },
   "hMzcSq": {
     "defaultMessage": "Berichten"
@@ -988,7 +916,7 @@
     "defaultMessage": "{n,selectordinal,one{@ #st min} two{@ #nd min} few{@ #rd min} other{@ #th min}}"
   },
   "tVCC9m": {
-    "defaultMessage": "Sats zijn kleine Bitcoin-eenheden. Het versturen van sats op tunestr.io wordt \"zappen\" of zappen genoemd."
+    "defaultMessage": "Sats zijn kleine Bitcoin-eenheden. Het versturen van sats op zap.stream wordt \"zappen\" of zappen genoemd."
   },
   "thsiMl": {
     "defaultMessage": "algemene voorwaarden"
@@ -1012,7 +940,7 @@
     "defaultMessage": "Nieuwste video's"
   },
   "vP4dFa": {
-    "defaultMessage": "Ga naar {link} en koop wat leuke tunestr.io merch!"
+    "defaultMessage": "Ga naar {link} en koop wat leuke zap.stream merch!"
   },
   "vrTOHJ": {
     "defaultMessage": "{amount} sats"
@@ -1039,7 +967,7 @@
     "defaultMessage": "Selecteer stem..."
   },
   "wRGjPp": {
-    "defaultMessage": "Een nostr-extensie slaat gewoon je sleutels op, zodat je veilig kunt inloggen zonder dat je ze elke keer opnieuw hoeft in te voeren. Tunestr gebruikt de extensie om acties namens jou te autoriseren zonder ooit je sleutelgegevens te zien. Dit heeft een groot voordeel ten opzichte van het vertrouwen dat websites veilig met je gegevens omgaan."
+    "defaultMessage": "Een nostr-extensie slaat gewoon je sleutels op, zodat je veilig kunt inloggen zonder dat je ze elke keer opnieuw hoeft in te voeren. ZapStream gebruikt de extensie om acties namens jou te autoriseren zonder ooit je sleutelgegevens te zien. Dit heeft een groot voordeel ten opzichte van het vertrouwen dat websites veilig met je gegevens omgaan."
   },
   "wTwfnv": {
     "defaultMessage": "Ongeldig nostr-adres"
@@ -1070,7 +998,7 @@
     "defaultMessage": "Clips"
   },
   "yR0V+W": {
-    "defaultMessage": "Volg deze stappen om te beginnen met streamen op tunestr.io:"
+    "defaultMessage": "Volg deze stappen om te beginnen met streamen op zap.stream:"
   },
   "yj8NrY": {
     "defaultMessage": "Clip"

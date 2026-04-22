@@ -1,9 +1,9 @@
 import "./live-chat.css";
 import { FormattedMessage } from "react-intl";
-import { EventKind, NostrEvent, NostrLink, NostrPrefix, ParsedZap, TaggedNostrEvent } from "@snort/system";
-import { useEventFeed, useEventReactions, useReactions, useUserProfile } from "@snort/system-react";
-import { dedupe, removeUndefined, sanitizeRelayUrl, unixNow, unwrap } from "@snort/shared";
-import { useEffect, useMemo, useState } from "react";
+import { EventKind, type NostrEvent, NostrLink, type ParsedZap, type TaggedNostrEvent } from "@snort/system";
+import { useEventFeed, useEventReactions, useUserProfile } from "@snort/system-react";
+import { removeUndefined, unixNow, unwrap, NostrPrefix } from "@snort/shared";
+import { useEffect, useMemo } from "react";
 
 import { Icon } from "../icon";
 import Spinner from "../spinner";
@@ -17,14 +17,19 @@ import useEmoji, { packId } from "@/hooks/emoji";
 import { useMutedPubkeys } from "@/hooks/lists";
 import { useBadgeAwards } from "@/hooks/badges";
 import { useLogin } from "@/hooks/login";
-import { formatSats } from "@/number";
+import { formatZapAmount } from "@/number";
 import { LIVE_STREAM_CHAT, LIVE_STREAM_CLIP, LIVE_STREAM_RAID, WEEK } from "@/const";
 import { findTag, getHost, getTagValues, uniqBy } from "@/utils";
 import { TopZappers } from "../top-zappers";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router";
 import classNames from "classnames";
-import { DefaultButton } from "../buttons";
-// removed adjustLayout-related layout/stream context
+import { useStream } from "../stream/stream-state";
+import { useLayout } from "@/pages/layout/context";
+import { TwitchChatMessage } from "./twitch";
+import { useLegacyChatFeed } from "@/hooks/legacy-chat";
+import type { ExternalChatEvent } from "@/service/chat/types";
+import { YoutubeChatMessage } from "./youtube";
+import { KickChatMessage } from "./kick";
 
 function BadgeAward({ ev }: { ev: NostrEvent }) {
   const badge = findTag(ev, "a") ?? "";
@@ -45,51 +50,42 @@ function BadgeAward({ ev }: { ev: NostrEvent }) {
 }
 
 export function LiveChat({
-  link,
-  ev,
-  goal,
   canWrite,
   showTopZappers,
+  adjustLayout,
   showGoal,
   showScrollbar,
   height,
   className,
   autoRaid,
+  showBadges
 }: {
-  link: NostrLink;
-  ev?: NostrEvent;
-  goal?: NostrEvent;
   canWrite?: boolean;
   showTopZappers?: boolean;
+  adjustLayout?: boolean;
   showGoal?: boolean;
   showScrollbar?: boolean;
   height?: number;
   className?: string;
   autoRaid?: boolean;
+  showBadges?: boolean;
 }) {
-  const relays = dedupe(
-    removeUndefined(ev?.tags.filter(a => a[0] === "relays").map(a => sanitizeRelayUrl(a[1])) ?? []),
-  );
-  const host = getHost(ev);
-  const feed = useReactions(
-    `live:${link?.id}:${link?.author}:reactions`,
-    goal ? [link, NostrLink.fromEvent(goal)] : [link],
-    rb => {
-      if (link) {
-        rb.withFilter()
-          .kinds([LIVE_STREAM_CHAT, LIVE_STREAM_RAID, LIVE_STREAM_CLIP])
-          .replyToLink([link])
-          .relay(relays)
-          .limit(200);
-      }
-    },
-    true,
-  );
+  const streamContext = useStream();
   const login = useLogin();
+  const layoutContext = useLayout();
+
+  // Use data from context
+  const link = streamContext.link!;
+  const feed = streamContext.feed;
+  const goal = streamContext.goal;
+  const event = streamContext.event;
+  const relays = streamContext.relays;
+
+  const host = event ? getHost(event) : undefined;
   const started = useMemo(() => {
-    const starts = findTag(ev, "starts");
+    const starts = findTag(event, "starts");
     return starts ? Number(starts) : unixNow() - WEEK;
-  }, [ev]);
+  }, [event]);
   const { awards } = useBadgeAwards(host);
 
   const hostMutedPubkeys = useMutedPubkeys(host, true);
@@ -98,25 +94,63 @@ export function LiveChat({
   const allEmojiPacks = useMemo(() => {
     return uniqBy(userEmojiPacks.concat(channelEmojiPacks), packId);
   }, [userEmojiPacks, channelEmojiPacks]);
-  // removed stream/layout context usage
 
   const reactions = useEventReactions(link, feed);
+  const legacyChat = useLegacyChatFeed({ enable: host === login?.pubkey });
   const events = useMemo(() => {
     const extra = [];
-    const starts = findTag(ev, "starts");
+    const starts = findTag(event, "starts");
     if (starts) {
       extra.push({ kind: -1, created_at: Number(starts) } as TaggedNostrEvent);
     }
-    const ends = findTag(ev, "ends");
+    const ends = findTag(event, "ends");
     if (ends) {
       extra.push({ kind: -2, created_at: Number(ends) } as TaggedNostrEvent);
+    }
+    for (const tc of legacyChat.events) {
+      extra.push({
+        kind: -3,
+        id: tc.id,
+        created_at: tc.created_at,
+        chat: tc
+      } as unknown as TaggedNostrEvent)
+    }
+    const twInfo = legacyChat.twitch?.getInfo();
+    if (twInfo?.connected) {
+      extra.push({ kind: -4, created_at: twInfo.connected, pubkey: twInfo.name, sig: twInfo.provider_name } as TaggedNostrEvent);
+    }
+    const ytInfo = legacyChat.youtube?.getInfo();
+    if (ytInfo?.connected) {
+      extra.push({ kind: -4, created_at: ytInfo.connected, pubkey: ytInfo.name, sig: ytInfo.provider_name } as TaggedNostrEvent);
+    }
+    const kkInfo = legacyChat.kick?.getInfo();
+    if (kkInfo?.connected) {
+      extra.push({ kind: -4, created_at: kkInfo.connected, pubkey: kkInfo.name, sig: kkInfo.provider_name } as TaggedNostrEvent);
     }
     return removeUndefined([...feed, ...awards.map(a => a.event), ...extra])
       .filter(a => a.created_at >= started && (!ends || a.created_at <= Number(ends)))
       .sort((a, b) => b.created_at - a.created_at);
-  }, [feed, awards]);
+  }, [feed, awards, legacyChat]);
 
-  // removed adjustLayout effect
+  useEffect(() => {
+    const resetLayout = () => {
+      if (streamContext.showDetails || !adjustLayout) {
+        streamContext.update(c => ({ ...c, showDetails: !adjustLayout }));
+      }
+      if (!layoutContext.showHeader) {
+        layoutContext.update(c => ({ ...c, showHeader: true }));
+      }
+    };
+
+    if (adjustLayout) {
+      layoutContext.update(c => ({ ...c, showHeader: false }));
+      return () => {
+        resetLayout();
+      };
+    } else {
+      resetLayout();
+    }
+  }, [adjustLayout]);
 
   const filteredEvents = useMemo(() => {
     return events.filter(e => {
@@ -127,187 +161,121 @@ export function LiveChat({
       );
     });
   }, [events, login?.state?.version, hostMutedPubkeys]);
-  const [activeTab, setActiveTab] = useState<"chat" | "zaps">("chat");
 
   return (
     <div className={classNames("flex flex-col gap-1", className)} style={height ? { height: `${height}px` } : {}}>
-      {/* removed mobile adjustLayout toggle bar */}
-      {(showTopZappers ?? true) ? (
-        <>
-          <div className="flex gap-2 w-full" style={{ marginTop: "1em" }}>
-            {activeTab === "chat" ? (
-              <DefaultButton
-                onClick={() => setActiveTab("chat")}
-                className="grow text-center"
-                style={{ borderRadius: "9999px 9999px 0 0" }}
-              >
-                Live Chat
-              </DefaultButton>
-            ) : (
-              <button
-                type="button"
-                onClick={() => setActiveTab("chat")}
-                className="grow px-3 xl:py-2 max-xl:py-[6px] font-semibold leading-none text-white/70 hover:text-white text-center"
-                style={{ borderRadius: "9999px 9999px 0 0", background: "transparent" }}
-              >
-                Live Chat
-              </button>
-            )}
-            {activeTab === "zaps" ? (
-              <DefaultButton
-                onClick={() => setActiveTab("zaps")}
-                className="grow text-center"
-                style={{ borderRadius: "9999px 9999px 0 0" }}
-              >
-                Top Zaps
-              </DefaultButton>
-            ) : (
-              <button
-                type="button"
-                onClick={() => setActiveTab("zaps")}
-                className="grow px-3 xl:py-2 max-xl:py-[6px] font-semibold leading-none text-white/70 hover:text-white text-center"
-                style={{ borderRadius: "9999px 9999px 0 0", background: "transparent" }}
-              >
-                Top Zaps
-              </button>
-            )}
+      {adjustLayout && (
+        <div
+          className="min-h-2 my-2"
+          onClick={() => {
+            streamContext.update(c => ({ ...c, showDetails: !c.showDetails }));
+            layoutContext.update(c => ({ ...c, showHeader: !streamContext.showDetails }));
+          }}>
+          <div className="h-2 bg-layer-3 rounded-full w-10 mx-auto"></div>
+        </div>
+      )}
+      {(showTopZappers ?? true) && reactions.zaps.length > 0 && (
+        <div>
+          <div className="flex gap-1 overflow-x-auto scrollbar-hidden">
+            <TopZappers zaps={reactions.zaps} className="border border-layer-2 rounded-full py-1 px-2" />
           </div>
+        </div>
+      )}
+      {(showGoal ?? true) && goal && <Goal ev={goal} />}
+      <div
+        className={classNames("flex flex-col-reverse grow gap-2 overflow-y-auto", {
+          "scrollbar-hidden": !(showScrollbar ?? true),
+        })}>
+        {filteredEvents.map((a, i) => {
+          const currentDate = new Date(a.created_at * 1000).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+          const prevDate = i > 0 ? new Date(filteredEvents[i - 1].created_at * 1000).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' }) : null;
+          const showDateSeparator = prevDate && currentDate !== prevDate;
 
-          {activeTab === "chat" ? (
-            <div
-              className={classNames("flex flex-col-reverse grow gap-2 overflow-y-auto", {
-                "scrollbar-hidden": !(showScrollbar ?? true),
-              })}>
-              {filteredEvents.map(a => {
-                switch (a.kind) {
-                  case -1:
-                  case -2: {
-                    return (
-                      <b
-                        className="border px-3 py-2 text-center border-layer-2 rounded-xl bg-primary uppercase"
-                        key={`${a.kind}-${a.created_at}`}>
-                        {a.kind === -1 ? (
-                          <FormattedMessage defaultMessage="Stream Started" id="5tM0VD" />
-                        ) : (
-                          <FormattedMessage defaultMessage="Stream Ended" id="jkAQj5" />
-                        )}
-                      </b>
-                    );
+          const mapper = () => {
+            switch (a.kind) {
+              case -1:
+              case -2: {
+                return (
+                  <b
+                    className="border px-3 py-2 text-center border-layer-2 rounded-xl bg-primary uppercase"
+                    key={`${a.kind}-${a.created_at}`}>
+                    {a.kind === -1 ? (
+                      <FormattedMessage defaultMessage="Stream Started" />
+                    ) : (
+                      <FormattedMessage defaultMessage="Stream Ended" />
+                    )}
+                  </b>
+                );
+              }
+              case -3: {
+                const externalChat = "chat" in a ? a.chat as ExternalChatEvent : undefined;
+                switch (externalChat?.feed) {
+                  case "twitch": {
+                    return <TwitchChatMessage ev={externalChat} key={a.id} created_at={a.created_at} badges={legacyChat.badges} />;
                   }
-                  case EventKind.BadgeAward: {
-                    return <BadgeAward ev={a} key={a.id} />;
+                  case "youtube": {
+                    return <YoutubeChatMessage ev={externalChat} key={a.id} badges={legacyChat.badges} />;
                   }
-                  case LIVE_STREAM_CHAT: {
-                    return <ChatMessage badges={awards} emojiPacks={allEmojiPacks} streamer={host} ev={a} key={a.id} />;
+                  case "kick": {
+                    return <KickChatMessage ev={externalChat} key={a.id} badges={legacyChat.badges} />;
                   }
-                  case LIVE_STREAM_RAID: {
-                    return <ChatRaid ev={a} link={link} key={a.id} autoRaid={autoRaid} />;
-                  }
-                  case LIVE_STREAM_CLIP: {
-                    return <ChatClip ev={a} key={a.id} />;
-                  }
-                  case EventKind.ZapReceipt: {
-                    const zap = reactions.zaps.find(b => b.id === a.id && b.receiver === host);
-                    if (zap) {
-                      return <ChatZap zap={zap} key={a.id} />;
-                    }
+                  default: {
+                    return <div>{JSON.stringify(externalChat)}</div>
                   }
                 }
-                return null;
-              })}
-              {feed.length === 0 && <Spinner />}
-            </div>
-          ) : (
-            <div
-              className={classNames("flex flex-col grow gap-2 overflow-y-auto", {
-                "scrollbar-hidden": !(showScrollbar ?? true),
-              })}>
-              <div className="flex flex-col gap-2">
-                <div className="flex flex-col gap-1">
-                  <TopZappers
-                    zaps={reactions.zaps}
-                    className="border border-violet-700 rounded-full py-1 px-2"
-                    showName={true}
-                  />
+                break;
+              }
+              case -4: {
+                return <div className="text-center text-xs text-gray-500">
+                  <FormattedMessage defaultMessage="{provider} chat {channel} connected!" values={{
+                    channel: `'${a.pubkey}'`,
+                    provider: a.sig,
+                  }} />
                 </div>
-                {reactions.zaps.length === 0 && (
-                  <p className="text-center opacity-60">No zaps yet for this stream.</p>
-                )}
-                {(showGoal ?? true) && goal && <Goal ev={goal} />}
-              </div>
-            </div>
-          )}
-
-          {(canWrite ?? true) && (
-            <div className="flex gap-2 border-t py-2 border-layer-1">
-              {login ? (
-                <WriteMessage emojiPacks={allEmojiPacks} link={link} relays={relays} />
-              ) : (
-                <p>
-                  <FormattedMessage defaultMessage="Please login to write messages!" id="RXQdxR" />
-                </p>
-              )}
-            </div>
-          )}
-        </>
-      ) : (
-        <>
-          {(showGoal ?? true) && goal && <Goal ev={goal} />}
-          <div
-            className={classNames("flex flex-col-reverse grow gap-2 overflow-y-auto", {
-              "scrollbar-hidden": !(showScrollbar ?? true),
-            })}>
-            {filteredEvents.map(a => {
-              switch (a.kind) {
-                case -1:
-                case -2: {
-                  return (
-                    <b
-                      className="border px-3 py-2 text-center border-layer-2 rounded-xl bg-primary uppercase"
-                      key={`${a.kind}-${a.created_at}`}>
-                      {a.kind === -1 ? (
-                        <FormattedMessage defaultMessage="Stream Started" id="5tM0VD" />
-                      ) : (
-                        <FormattedMessage defaultMessage="Stream Ended" id="jkAQj5" />
-                      )}
-                    </b>
-                  );
-                }
-                case EventKind.BadgeAward: {
-                  return <BadgeAward ev={a} key={a.id} />;
-                }
-                case LIVE_STREAM_CHAT: {
-                  return <ChatMessage badges={awards} emojiPacks={allEmojiPacks} streamer={host} ev={a} key={a.id} />;
-                }
-                case LIVE_STREAM_RAID: {
-                  return <ChatRaid ev={a} link={link} key={a.id} autoRaid={autoRaid} />;
-                }
-                case LIVE_STREAM_CLIP: {
-                  return <ChatClip ev={a} key={a.id} />;
-                }
-                case EventKind.ZapReceipt: {
-                  const zap = reactions.zaps.find(b => b.id === a.id && b.receiver === host);
-                  if (zap) {
-                    return <ChatZap zap={zap} key={a.id} />;
-                  }
+                break;
+              }
+              case EventKind.BadgeAward: {
+                return <BadgeAward ev={a} key={a.id} />;
+              }
+              case LIVE_STREAM_CHAT: {
+                return <ChatMessage badges={(showBadges ?? true) ? awards : []} emojiPacks={allEmojiPacks} streamer={host} ev={a} key={a.id} />;
+              }
+              case LIVE_STREAM_RAID: {
+                return <ChatRaid ev={a} link={link} key={a.id} autoRaid={autoRaid} />;
+              }
+              case LIVE_STREAM_CLIP: {
+                return <ChatClip ev={a} key={a.id} />;
+              }
+              case EventKind.ZapReceipt: {
+                const zap = reactions.zaps.find(b => b.id === a.id && b.receiver === host);
+                if (zap) {
+                  return <ChatZap zap={zap} key={a.id} />;
                 }
               }
-              return null;
-            })}
-            {feed.length === 0 && <Spinner />}
-          </div>
-          {(canWrite ?? true) && (
-            <div className="flex gap-2 border-t py-2 border-layer-1">
-              {login ? (
-                <WriteMessage emojiPacks={allEmojiPacks} link={link} relays={relays} />
-              ) : (
-                <p>
-                  <FormattedMessage defaultMessage="Please login to write messages!" id="RXQdxR" />
-                </p>
-              )}
-            </div>
+            }
+          }
+
+          const mapped = mapper();
+          if (!mapped) return;
+          return <>
+            {showDateSeparator && (
+              <div className="text-center text-xs text-gray-500">{prevDate}</div>
+            )}
+            {mapped}
+          </>
+        })}
+        {feed.length === 0 && <Spinner />}
+      </div>
+      {(canWrite ?? true) && (
+        <div className="flex gap-2 border-t py-2 border-layer-1">
+          {login ? (
+            <WriteMessage emojiPacks={allEmojiPacks} link={link} relays={relays} />
+          ) : (
+            <p>
+              <FormattedMessage defaultMessage="Please login to write messages!" id="RXQdxR" />
+            </p>
           )}
-        </>
+        </div>
       )}
     </div>
   );
@@ -326,19 +294,23 @@ export function ChatZap({ zap }: { zap: ParsedZap }) {
       <div className="flex gap-1 items-center">
         <Icon name="zap-filled" className="text-zap" />
         <FormattedMessage
-          defaultMessage="<s>{person}</s> zapped <s>{amount}</s> sats"
-          id="q+zTWM"
+          defaultMessage="<s>{person}</s> zapped <a>{amount}</a>"
           values={{
             s: c => <span className="text-zap">{c}</span>,
+            a: c => <span className="text-zap">
+              <span className="text-sm">₿</span>
+              {" "}
+              {c}
+            </span>,
             person: (
               <Profile
-                pubkey={zap.anonZap ? "anon" : (zap.sender ?? "")}
+                pubkey={zap.anonZap ? "anon" : zap.sender ?? ""}
                 options={{
                   showAvatar: !zap.anonZap,
                 }}
               />
             ),
-            amount: <span className="zap-amount">{formatSats(zap.amount)}</span>,
+            amount: <span className="zap-amount">{formatZapAmount(zap.amount)}</span>,
           }}
         />
       </div>
@@ -354,7 +326,7 @@ export function ChatRaid({ link, ev, autoRaid }: { link: NostrLink; ev: TaggedNo
   const isRaiding = link.toEventTag()?.at(1) === from?.at(1);
   const otherLink = NostrLink.fromTag(unwrap(isRaiding ? to : from));
   const otherEvent = useEventFeed(otherLink);
-  const otherProfile = useUserProfile(getHost(otherEvent));
+  const otherProfile = useUserProfile(otherEvent ? getHost(otherEvent) : undefined);
 
   useEffect(() => {
     const raidDiff = Math.abs(unixNow() - ev.created_at);

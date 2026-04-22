@@ -1,4 +1,4 @@
-interface Env {}
+type Env = {}
 
 const HOST = "zap.stream";
 
@@ -11,14 +11,14 @@ export const onRequest: PagesFunction<Env> = async context => {
   );
   const nostrAddress = u.pathname.match(/^\/([a-zA-Z0-9_]+)$/i);
   const next = await context.next();
-  if (u.pathname != "/" && (isEntityPath || nostrAddress)) {
+  if (u.pathname !== "/" && (isEntityPath || nostrAddress)) {
     //console.log("Handeling path: ", u.pathname, isEntityPath, nostrAddress[1]);
     try {
       let id = u.pathname.split("/").at(-1);
       if (!isEntityPath && nostrAddress) {
         id = `${id}@${HOST}`;
       }
-      const fetchApi = `https://nostr.api.v0l.io/api/v1/opengraph/${id}?canonical=${encodeURIComponent(
+      const fetchApi = `https://nostr-rs-api.v0l.io/opengraph/${id}?canonical=${encodeURIComponent(
         `https://${HOST}/%s`,
       )}`;
       console.log("Fetching tags from: ", fetchApi);

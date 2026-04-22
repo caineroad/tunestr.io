@@ -1,76 +1,4 @@
 {
-  "contactUs": {
-    "defaultMessage": "যোগাযোগ করুন"
-  },
-  "independentMusic": {
-    "defaultMessage": "স্বাধীন সঙ্গীত"
-  },
-  "independentMoney": {
-    "defaultMessage": "স্বাধীন অর্থ"
-  },
-  "forIndependentArtists": {
-    "defaultMessage": "স্বাধীন শিল্পীদের জন্য"
-  },
-  "generateExtraRevenue": {
-    "defaultMessage": "আপনার লাইভ পারফরম্যান্সে অতিরিক্ত আয় উৎপন্ন করুন"
-  },
-  "discoverNewWay": {
-    "defaultMessage": "সোশ্যাল মিডিয়ার একটি নতুন পদ্ধতি আবিষ্কার করুন"
-  },
-  "engagePassionateFanBase": {
-    "defaultMessage": "অনলাইনে একটি আবেগপূর্ণ, নতুন ফ্যান বেস জড়িত করুন"
-  },
-  "findBiggestFans": {
-    "defaultMessage": "আপনার সবচেয়ে বড় ভক্তরা কারা তা খুঁজে বের করুন এবং তাদের সাথে সরাসরি সংযোগ করুন"
-  },
-  "learnMonetizationStrategy": {
-    "defaultMessage": "সৃষ্টিকর্তাদের জন্য একটি নতুন মুদ্রায়ন কৌশল সম্পর্কে জানুন"
-  },
-  "forIndependentVenues": {
-    "defaultMessage": "স্বাধীন ভেন্যুগুলির জন্য"
-  },
-  "differentiateYourself": {
-    "defaultMessage": "সফরকারী শিল্পীদের জন্য নিজেকে আলাদা করুন"
-  },
-  "promoteVenue": {
-    "defaultMessage": "বৃহত্তর দর্শকদের কাছে আপনার ভেন্যু এবং ইভেন্টগুলি প্রচার করুন"
-  },
-  "createInteractiveConcert": {
-    "defaultMessage": "অনলাইনে একটি নতুন ইন্টারঅ্যাকটিভ কনসার্ট অভিজ্ঞতা তৈরি করুন"
-  },
-  "streamShowsMinimalEffort": {
-    "defaultMessage": "ঐতিহ্যগত স্ট্রিমিং-এর চেয়ে, সর্বনিম্ন প্রচেষ্টায় আপনার শোগুলি স্ট্রিম করুন"
-  },
-  "keepTouringEconomics": {
-    "defaultMessage": "সফর অর্থনীতি স্বাস্থ্যকর রাখতে সাহায্য করুন"
-  },
-  "forIndependentFans": {
-    "defaultMessage": "স্বাধীন সংগীত ভক্তদের জন্য"
-  },
-  "proveToFavoriteArtists": {
-    "defaultMessage": "আপনার প্রিয় শিল্পীদের প্রমাণ করুন যে আপনি তাদের সবচেয়ে বড় সমর্থক"
-  },
-  "giveLiveFeedback": {
-    "defaultMessage": "পারফরম্যান্সের সময় লাইভ প্রতিক্রিয়া দিন এবং বিনোদনকারীদের সরাসরি অর্থ দিন"
-  },
-  "connectWithFans": {
-    "defaultMessage": "শো চলাকালীন অন্যান্য ভক্তদের সাথে সংযোগ করুন"
-  },
-  "joinNewCommunity": {
-    "defaultMessage": "একটি নতুন সোশ্যাল মিডিয়া কমিউনিটিতে যোগ দিন যেখানে আপনি পণ্য নন"
-  },
-  "keepMusicCommunity": {
-    "defaultMessage": "স্বাধীন সংগীত কমিউনিটিকে সমৃদ্ধ রাখতে সাহায্য করুন"
-  },
-  "footerEssentials": {
-    "defaultMessage": "অপরিহার্য"
-  },
-  "footerThanks": {
-    "defaultMessage": "ধন্যবাদ"
-  },
-  "footerArtists": {
-    "defaultMessage": "শিল্পীরা"
-  },
   "+0zv6g": {
     "defaultMessage": "ছবি"
   },
@@ -261,7 +189,7 @@
     "defaultMessage": "Nostr Address"
   },
   "9rmSgv": {
-    "defaultMessage": "OBS (Open Broadcaster Software) is a free and open source software for video recording and live streaming on Windows, Mac and Linux. It is a popular choice with streamers. You'll need to install this to capture your video, audio and anything else you'd like to add to your stream. Once installed and configured to preference, add your Stream URL and Stream Key from the Stream settings to OBS to form a connection with tunestr.io."
+    "defaultMessage": "OBS (Open Broadcaster Software) is a free and open source software for video recording and live streaming on Windows, Mac and Linux. It is a popular choice with streamers. You'll need to install this to capture your video, audio and anything else you'd like to add to your stream. Once installed and configured to preference, add your Stream URL and Stream Key from the Stream settings to OBS to form a connection with zap.stream."
   },
   "A1zT+z": {
     "defaultMessage": "Search results: {term}"
@@ -321,7 +249,7 @@
     "defaultMessage": "যে অ্যাকাউন্টে লগইন করা আছে"
   },
   "DkgCAz": {
-    "defaultMessage": "How do i stream on tunestr.io?"
+    "defaultMessage": "How do i stream on zap.stream?"
   },
   "Dn82AL": {
     "defaultMessage": "সরাসরি সম্প্রচার"
@@ -400,10 +328,10 @@
     "defaultMessage": "নাম"
   },
   "HDgXO/": {
-    "defaultMessage": "tunestr.io is an open source platform powered by the nostr protocol. There are no giant corporations or giant funds available to provide free streaming."
+    "defaultMessage": "zap.stream is an open source platform powered by the nostr protocol. There are no giant corporations or giant funds available to provide free streaming."
   },
   "HsgeUk": {
-    "defaultMessage": "Come check out my stream on tunestr.io! {link}"
+    "defaultMessage": "Come check out my stream on zap.stream! {link}"
   },
   "Ht231k": {
     "defaultMessage": "Forwarding"
@@ -469,13 +397,13 @@
     "defaultMessage": "Zap Goals"
   },
   "LUvSJB": {
-    "defaultMessage": "tunestr.io is free up to 2 hours of hosting at high quality and up to 8 hours of “source” quality. After that you have an option to stream for 5 sats per minute or 10 sats per minute depending on your chosen quality. If you do not use tunestr.io to host, pricing will depend on your chosen streaming provider."
+    "defaultMessage": "zap.stream is free up to 2 hours of hosting at high quality and up to 8 hours of “source” quality. After that you have an option to stream for 5 sats per minute or 10 sats per minute depending on your chosen quality. If you do not use zap.stream to host, pricing will depend on your chosen streaming provider."
   },
   "Le+99Z": {
     "defaultMessage": "Streamers pay a small fee to cover our running costs. We give new streamers a credit of {amount} sats (about {time_estimate} of streaming) to get started!"
   },
   "Lg2ye2": {
-    "defaultMessage": "Tunestr is a new kind of streaming platform that allows you to earn bitcoin (sats) the moment you start streaming! Viewers can tip streamers any amount they choose. The tips are instantly deposited to your bitcoin (lightning) wallet. tunestr.io never touches your earnings!"
+    "defaultMessage": "ZapStream is a new kind of streaming platform that allows you to earn bitcoin (sats) the moment you start streaming! Viewers can tip streamers any amount they choose. The tips are instantly deposited to your bitcoin (lightning) wallet. zap.stream never touches your earnings!"
   },
   "LknBsU": {
     "defaultMessage": "চাবি স্ট্রিম করুন"
@@ -537,7 +465,7 @@
     "defaultMessage": "Leave blank if you do not wish to set up any goals."
   },
   "PUymyQ": {
-    "defaultMessage": "Come check out {name} stream on tunestr.io! {link}"
+    "defaultMessage": "Come check out {name} stream on zap.stream! {link}"
   },
   "PXAur5": {
     "defaultMessage": "Withdraw"
@@ -622,7 +550,7 @@
     "description": "Relative time, ie. 1s ago"
   },
   "UGFYV8": {
-    "defaultMessage": "Welcome to tunestr.io!"
+    "defaultMessage": "Welcome to zap.stream!"
   },
   "UJBFYK": {
     "defaultMessage": "কার্ড যুক্ত করুন"
@@ -806,7 +734,7 @@
     "defaultMessage": "No Thanks!"
   },
   "h9mX2/": {
-    "defaultMessage": "If you use our in-house tunestr.io hosting (cheapest and easiest), copy your stream URL and Stream Key to your OBS settings and you should be good to go."
+    "defaultMessage": "If you use our in-house zap.stream hosting (cheapest and easiest), copy your stream URL and Stream Key to your OBS settings and you should be good to go."
   },
   "hMzcSq": {
     "defaultMessage": "Messages"
@@ -988,7 +916,7 @@
     "defaultMessage": "{n,selectordinal,one{@ #st min} two{@ #nd min} few{@ #rd min} other{@ #th min}}"
   },
   "tVCC9m": {
-    "defaultMessage": "Sats are small units of Bitcoin. Sending sats on tunestr.io is referred to as “zapping” or zaps."
+    "defaultMessage": "Sats are small units of Bitcoin. Sending sats on zap.stream is referred to as “zapping” or zaps."
   },
   "thsiMl": {
     "defaultMessage": "শর্তাবলী"
@@ -1012,7 +940,7 @@
     "defaultMessage": "Latest Videos"
   },
   "vP4dFa": {
-    "defaultMessage": "Visit {link} to get some sweet tunestr.io merch!"
+    "defaultMessage": "Visit {link} to get some sweet zap.stream merch!"
   },
   "vrTOHJ": {
     "defaultMessage": "{amount} পরিমাণ স্যাট"
@@ -1039,7 +967,7 @@
     "defaultMessage": "কণ্ঠস্বর নির্বাচন করুন..."
   },
   "wRGjPp": {
-    "defaultMessage": "A nostr extension simply saves your keys so you can safely log in without having to re-enter them every time. Tunestr uses the extension to authorize actions on your behalf without ever seeing your key information. This has a significant advantage over having to trust that websites handle your credentials safely."
+    "defaultMessage": "A nostr extension simply saves your keys so you can safely log in without having to re-enter them every time. ZapStream uses the extension to authorize actions on your behalf without ever seeing your key information. This has a significant advantage over having to trust that websites handle your credentials safely."
   },
   "wTwfnv": {
     "defaultMessage": "Invalid nostr address"
@@ -1070,7 +998,7 @@
     "defaultMessage": "Clips"
   },
   "yR0V+W": {
-    "defaultMessage": "To start streaming on tunestr.io, follow these steps:"
+    "defaultMessage": "To start streaming on zap.stream, follow these steps:"
   },
   "yj8NrY": {
     "defaultMessage": "Clip"

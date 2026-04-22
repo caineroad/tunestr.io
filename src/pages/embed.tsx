@@ -3,9 +3,9 @@ import LiveVideoPlayer from "@/element/stream/live-video-player";
 import { useCurrentStreamFeed } from "@/hooks/current-stream-feed";
 import { useStreamLink } from "@/hooks/stream-link";
 import { extractStreamInfo, trackEvent } from "@/utils";
-import { NostrLink } from "@snort/system";
+import type { NostrLink } from "@snort/system";
 import { Suspense, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router";
 
 export function EmbededPage() {
   const link = useStreamLink();
@@ -30,6 +30,7 @@ function EmbededPagePlayer({ link }: { link: NostrLink }) {
         <LiveVideoPlayer
           title={title}
           stream={status === StreamState.Live ? stream : recording}
+          link={link}
           poster={image}
           status={status}
           className="h-[100vh]"

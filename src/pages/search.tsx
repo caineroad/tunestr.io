@@ -1,11 +1,11 @@
-import { VIDEO_KIND, WHITELIST } from "@/const";
+import { VIDEO_KIND } from "@/const";
 import { Icon } from "@/element/icon";
 import VideoGridSorted from "@/element/video-grid-sorted";
 import { EventKind, RequestBuilder } from "@snort/system";
 import { useRequestBuilder } from "@snort/system-react";
 import { useMemo, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router";
 
 export const SearchRelays = ["wss://relay.nostr.band", "wss://search.nos.today", "wss://relay.noswhere.com"];
 
@@ -18,12 +18,7 @@ export default function SearchPage() {
   const sub = useMemo(() => {
     const rb = new RequestBuilder(`search:${term}`);
     if (term) {
-      rb.withFilter()
-        .relay(SearchRelays)
-        .kinds([EventKind.LiveEvent, VIDEO_KIND])
-        .authors(WHITELIST)
-        .search(term)
-        .limit(50);
+      rb.withFilter().relay(SearchRelays).kinds([EventKind.LiveEvent, VIDEO_KIND]).search(term).limit(50);
     }
     return rb;
   }, [term]);

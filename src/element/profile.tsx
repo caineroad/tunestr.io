@@ -1,9 +1,8 @@
 import type { ReactNode } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { useUserProfile } from "@snort/system-react";
-import { CachedMetadata, UserMetadata } from "@snort/system";
+import type { CachedMetadata, UserMetadata } from "@snort/system";
 import { hexToBech32 } from "@snort/shared";
-import { useInView } from "react-intersection-observer";
 import { Avatar } from "./avatar";
 import classNames from "classnames";
 import { profileLink } from "@/utils";
@@ -35,6 +34,7 @@ export function Profile({
   options,
   linkToProfile,
   avatarSize,
+  title,
   gap,
   profile,
 }: {
@@ -43,13 +43,13 @@ export function Profile({
   className?: string;
   avatarClassname?: string;
   options?: ProfileOptions;
+  title?: string;
   linkToProfile?: boolean;
   avatarSize?: number;
   gap?: number;
   profile?: CachedMetadata;
 }) {
-  const { inView, ref } = useInView({ triggerOnce: true });
-  const pLoaded = useUserProfile(inView && !profile ? pubkey : undefined) ?? profile;
+  const pLoaded = useUserProfile(!profile ? pubkey : undefined) ?? profile;
   const showAvatar = options?.showAvatar ?? true;
   const showName = options?.showName ?? true;
   const isAnon = pubkey === "anon";
@@ -57,17 +57,17 @@ export function Profile({
     <>
       {showAvatar && <Avatar user={pLoaded} pubkey={pubkey} className={avatarClassname} size={avatarSize ?? 24} />}
       {icon}
-      {showName && <span>{isAnon ? (options?.overrideName ?? "Anon") : getName(pubkey, pLoaded)}</span>}
+      {showName && <span>{isAnon ? options?.overrideName ?? "Anon" : getName(pubkey, pLoaded)}</span>}
     </>
   );
 
   const cls = classNames("flex items-center align-bottom font-medium", `gap-${gap ?? 2}`, className);
   return isAnon || linkToProfile === false ? (
-    <div className={cls} ref={ref}>
+    <div className={cls} title={title}>
       {content}
     </div>
   ) : (
-    <Link to={profileLink(pLoaded, pubkey)} className={cls} ref={ref}>
+    <Link to={profileLink(pLoaded, pubkey)} className={cls} title={title}>
       {content}
     </Link>
   );

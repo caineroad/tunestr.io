@@ -1,76 +1,4 @@
 {
-  "contactUs": {
-    "defaultMessage": "联系我们"
-  },
-  "independentMusic": {
-    "defaultMessage": "独立音乐"
-  },
-  "independentMoney": {
-    "defaultMessage": "独立资金"
-  },
-  "forIndependentArtists": {
-    "defaultMessage": "为独立艺术家"
-  },
-  "generateExtraRevenue": {
-    "defaultMessage": "在您的现场表演中产生额外收入"
-  },
-  "discoverNewWay": {
-    "defaultMessage": "探索一种新的社交媒体方式"
-  },
-  "engagePassionateFanBase": {
-    "defaultMessage": "在线吸引热情的新粉丝群体"
-  },
-  "findBiggestFans": {
-    "defaultMessage": "找出谁是您最大的粉丝并直接与他们联系"
-  },
-  "learnMonetizationStrategy": {
-    "defaultMessage": "了解创作者的新变现策略"
-  },
-  "forIndependentVenues": {
-    "defaultMessage": "为独立场地"
-  },
-  "differentiateYourself": {
-    "defaultMessage": "向巡演艺术家展示您的独特之处"
-  },
-  "promoteVenue": {
-    "defaultMessage": "向更广泛的受众推广您的场地和活动"
-  },
-  "createInteractiveConcert": {
-    "defaultMessage": "在线创建新的互动音乐会体验"
-  },
-  "streamShowsMinimalEffort": {
-    "defaultMessage": "以最小的努力进行超出传统流媒体的表演直播"
-  },
-  "keepTouringEconomics": {
-    "defaultMessage": "帮助保持巡演经济的健康发展"
-  },
-  "forIndependentFans": {
-    "defaultMessage": "为独立音乐粉丝"
-  },
-  "proveToFavoriteArtists": {
-    "defaultMessage": "向您喜爱的艺术家证明您是他们的头号支持者"
-  },
-  "giveLiveFeedback": {
-    "defaultMessage": "在表演时提供实时反馈并直接向艺人付款"
-  },
-  "connectWithFans": {
-    "defaultMessage": "在表演期间与其他粉丝互动"
-  },
-  "joinNewCommunity": {
-    "defaultMessage": "加入一个您不是产品的新社交媒体社区"
-  },
-  "keepMusicCommunity": {
-    "defaultMessage": "保持独立音乐社区的繁荣发展"
-  },
-  "footerEssentials": {
-    "defaultMessage": "基本要素"
-  },
-  "footerThanks": {
-    "defaultMessage": "感谢"
-  },
-  "footerArtists": {
-    "defaultMessage": "艺术家"
-  },
   "+0zv6g": {
     "defaultMessage": "图像"
   },
@@ -261,7 +189,7 @@
     "defaultMessage": "地址"
   },
   "9rmSgv": {
-    "defaultMessage": "OBS（Open Broadcaster Software）是一款免费开源软件，用于在 Windows、Mac 和 Linux 上进行视频录制和直播。它深受流媒体用户的欢迎。您需要安装该软件来捕捉视频、音频和其他任何您想添加到流媒体中的内容。安装并按偏好配置后，将流媒体设置中的流 URL 和流媒体密钥添加到 OBS，与 tunestr.io 建立连接。"
+    "defaultMessage": "OBS（Open Broadcaster Software）是一款免费开源软件，用于在 Windows、Mac 和 Linux 上进行视频录制和直播。它深受流媒体用户的欢迎。您需要安装该软件来捕捉视频、音频和其他任何您想添加到流媒体中的内容。安装并按偏好配置后，将流媒体设置中的流 URL 和流媒体密钥添加到 OBS，与 zap.stream 建立连接。"
   },
   "A1zT+z": {
     "defaultMessage": "搜索结果： {term}"
@@ -321,7 +249,7 @@
     "defaultMessage": "已登录为"
   },
   "DkgCAz": {
-    "defaultMessage": "如何在 tunestr.io 上进行流媒体传输？"
+    "defaultMessage": "如何在 zap.stream 上进行流媒体传输？"
   },
   "Dn82AL": {
     "defaultMessage": "在线"
@@ -400,10 +328,10 @@
     "defaultMessage": "名称"
   },
   "HDgXO/": {
-    "defaultMessage": "tunestr.io 是一个由 nostr 协议支持的开源平台。没有巨型公司或巨型基金可以提供免费流媒体服务。"
+    "defaultMessage": "zap.stream 是一个由 nostr 协议支持的开源平台。没有巨型公司或巨型基金可以提供免费流媒体服务。"
   },
   "HsgeUk": {
-    "defaultMessage": "来 tunestr.io 上看看我的视频流吧！ {link}"
+    "defaultMessage": "来 zap.stream 上看看我的视频流吧！ {link}"
   },
   "Ht231k": {
     "defaultMessage": "转发"
@@ -469,13 +397,13 @@
     "defaultMessage": "斩获目标"
   },
   "LUvSJB": {
-    "defaultMessage": "tunestr.io 最多可免费提供 2 小时的高质量托管和最多 8 小时的 \"源 \"质量托管。之后，您可以根据您选择的质量，选择每分钟 5 sats 或每分钟 10 sats 的流媒体。如果您不使用 tunestr.io 托管，价格将取决于您选择的流媒体提供商。"
+    "defaultMessage": "zap.stream 最多可免费提供 2 小时的高质量托管和最多 8 小时的 \"源 \"质量托管。之后，您可以根据您选择的质量，选择每分钟 5 sats 或每分钟 10 sats 的流媒体。如果您不使用 zap.stream 托管，价格将取决于您选择的流媒体提供商。"
   },
   "Le+99Z": {
     "defaultMessage": "串流者只需支付少量费用，以支付我们的运营成本。我们为新的串流者提供 {amount} sats（约合 {time_estimate} 串流）的信用额度，供其开始使用！"
   },
   "Lg2ye2": {
-    "defaultMessage": "Tunestr 是一种新型流媒体平台，让您在开始流媒体播放时就能赚取比特币（Sats）！观众可以选择给流媒体任何金额的小费。小费会立即存入您的比特币（闪电）钱包。Tunestr.io 绝不会动用您的收入！"
+    "defaultMessage": "ZapStream 是一种新型流媒体平台，让您在开始流媒体播放时就能赚取比特币（Sats）！观众可以选择给流媒体任何金额的小费。小费会立即存入您的比特币（闪电）钱包。Zap.stream 绝不会动用您的收入！"
   },
   "LknBsU": {
     "defaultMessage": "直播流密钥"
@@ -537,7 +465,7 @@
     "defaultMessage": "如果你不想设置任何目标，请留空。"
   },
   "PUymyQ": {
-    "defaultMessage": "请访问 {name} stream on tunestr.io！ {link}"
+    "defaultMessage": "请访问 {name} stream on zap.stream！ {link}"
   },
   "PXAur5": {
     "defaultMessage": "提款"
@@ -622,7 +550,7 @@
     "description": "Relative time, ie. 1s ago"
   },
   "UGFYV8": {
-    "defaultMessage": "欢迎访问 tunestr.io！"
+    "defaultMessage": "欢迎访问 zap.stream！"
   },
   "UJBFYK": {
     "defaultMessage": "添加卡片"
@@ -806,7 +734,7 @@
     "defaultMessage": "No Thanks!"
   },
   "h9mX2/": {
-    "defaultMessage": "如果您使用我们内部的 tunestr.io 托管（最便宜、最简单），请将您的流 URL 和流密钥复制到您的 OBS 设置中，然后就可以使用了。"
+    "defaultMessage": "如果您使用我们内部的 zap.stream 托管（最便宜、最简单），请将您的流 URL 和流密钥复制到您的 OBS 设置中，然后就可以使用了。"
   },
   "hMzcSq": {
     "defaultMessage": "信息"
@@ -988,7 +916,7 @@
     "defaultMessage": "{n,selectordinal,one{@ #st min} two{@ #nd min} few{@ #rd min} other{@ #th min}}"
   },
   "tVCC9m": {
-    "defaultMessage": "Sats 是比特币的小单位。在 tunestr.io 上发送比特币被称为 \"zapping \"或 \"zaps\"。"
+    "defaultMessage": "Sats 是比特币的小单位。在 zap.stream 上发送比特币被称为 \"zapping \"或 \"zaps\"。"
   },
   "thsiMl": {
     "defaultMessage": "使用条款"
@@ -1012,7 +940,7 @@
     "defaultMessage": "最新视频"
   },
   "vP4dFa": {
-    "defaultMessage": "请访问 {link} ，获取 Tunestr.io 的精美商品！"
+    "defaultMessage": "请访问 {link} ，获取 Zap.stream 的精美商品！"
   },
   "vrTOHJ": {
     "defaultMessage": "{amount} 聪"
@@ -1039,7 +967,7 @@
     "defaultMessage": "选择语音..."
   },
   "wRGjPp": {
-    "defaultMessage": "nostr 扩展只需保存你的密钥，这样你就可以安全登录，而不必每次都重新输入。Tunestr 使用该扩展代表你授权操作，而不会看到你的密钥信息。这比相信网站会安全处理你的凭据更有优势。"
+    "defaultMessage": "nostr 扩展只需保存你的密钥，这样你就可以安全登录，而不必每次都重新输入。ZapStream 使用该扩展代表你授权操作，而不会看到你的密钥信息。这比相信网站会安全处理你的凭据更有优势。"
   },
   "wTwfnv": {
     "defaultMessage": "无效的 nostr 地址"
@@ -1070,7 +998,7 @@
     "defaultMessage": "剪辑"
   },
   "yR0V+W": {
-    "defaultMessage": "要在 tunestr.io 上开始串流，请按照以下步骤操作："
+    "defaultMessage": "要在 zap.stream 上开始串流，请按照以下步骤操作："
   },
   "yj8NrY": {
     "defaultMessage": "剪辑"

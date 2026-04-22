@@ -1,33 +1,34 @@
-import BalanceTimeEstimate from "@/element/balance-time-estimate";
 import { DefaultButton } from "@/element/buttons";
 import { Icon } from "@/element/icon";
+import CapabilityPill from "@/element/capability-pill";
 import { useRates } from "@/hooks/rates";
-import { DefaultProvider, StreamProviderInfo } from "@/providers";
+import { useStreamProvider } from "@/hooks/stream-provider";
 import { useEffect, useMemo, useState } from "react";
 import { FormattedMessage, FormattedNumber } from "react-intl";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import ZapGlow from "../zap-glow";
 import { AcceptTos } from "../tos";
+import type { AccountResponse } from "@/providers";
+import { ProviderSelectorButton } from "../provider-selector";
 
 export default function DashboardIntro() {
   const navigate = useNavigate();
-  const [info, setInfo] = useState<StreamProviderInfo>();
+  const [info, setInfo] = useState<AccountResponse>();
   const [tos, setTos] = useState<boolean>(false);
-  const defaultSatsBalance = 1000;
   const exampleHours = 4;
+  const { provider: streamProvider } = useStreamProvider();
 
   const defaultEndpoint = useMemo(() => {
-    return info?.endpoints?.find(a => a.name == "Best") ?? info?.endpoints?.at(0);
+    return info?.endpoints?.find(a => a.name === "Best") ?? info?.endpoints?.at(0);
   }, [info]);
   const rate = useRates("BTCUSD");
-  const exampleCost = rate.ask * (exampleHours * (defaultEndpoint?.rate ?? 0) * 60) * 1e-8;
 
   useEffect(() => {
-    DefaultProvider.info().then(i => {
+    streamProvider.info().then(i => {
       setInfo(i);
-      setTos(Boolean(i.tosAccepted));
+      setTos(Boolean(i.tos?.accepted));
     });
-  }, []);
+  }, [streamProvider]);
 
   if (!defaultEndpoint) return;
 
@@ -41,41 +42,67 @@ export default function DashboardIntro() {
           <ZapGlow />
         </div>
         <p className="text-layer-5">
-          <FormattedMessage defaultMessage="Tunestr is a new kind of streaming platform that allows you to earn bitcoin (sats) the moment you start streaming! Viewers can tip streamers any amount they choose. The tips are instantly deposited to your bitcoin (lightning) wallet. tunestr.io never touches your earnings!" />
+          <FormattedMessage defaultMessage="tunestr.io is a live music streaming platform that allows you to earn bitcoin (sats) the moment you start streaming! Viewers can tip artists any amount they choose. The tips are instantly deposited to your bitcoin (lightning) wallet. tunestr.io never touches your earnings!" />
         </p>
       </div>
       <h3>
-        <FormattedMessage defaultMessage="Pricing" />
+        <FormattedMessage defaultMessage="Provider Endpoint Costs" />
       </h3>
       <p className="text-layer-5">
-        <FormattedMessage defaultMessage="tunestr.io is an open source platform powered by the nostr protocol. There are no giant corporations or giant funds available to provide free streaming." />
+        <FormattedMessage defaultMessage="Your current provider offers different streaming endpoints with varying costs and capabilities." />
       </p>
-      <p className="text-layer-5">
-        <FormattedMessage
-          defaultMessage="Streamers pay a small fee to cover our running costs. We give new streamers a credit of {amount} sats (about {time_estimate} of streaming) to get started!"
-          values={{
-            amount: <FormattedNumber value={defaultSatsBalance} />,
-            time_estimate: <BalanceTimeEstimate balance={defaultSatsBalance} endpoint={defaultEndpoint} />,
-          }}
-        />
-      </p>
-      <p>
-        <FormattedMessage
-          defaultMessage="Current stream cost: {amount} sats/{unit} (about {usd}/day for a {x}hr stream)"
-          values={{
-            amount: defaultEndpoint.rate,
-            unit: defaultEndpoint.unit,
-            x: exampleHours,
-            usd: <FormattedNumber value={exampleCost} style="currency" currency="USD" />,
-          }}
-        />
-      </p>
-      {!info?.tosAccepted && <AcceptTos provider={info?.name} tosLink={info?.tosLink} tos={tos} setTos={setTos} />}
+      <div className="space-y-3">
+        {info?.endpoints?.map(endpoint => {
+          const endpointCost = rate.ask * (exampleHours * endpoint.cost.rate * 60) * 1e-8;
+          return (
+            <div key={endpoint.name} className="border border-layer-2 rounded-lg p-3">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h4 className="font-semibold text-white">{endpoint.name}</h4>
+                  <p className="text-sm text-layer-5">
+                    <FormattedMessage
+                      defaultMessage="{rate} sats/{unit}"
+                      values={{
+                        rate: endpoint.cost.rate,
+                        unit: endpoint.cost.unit,
+                      }}
+                    />
+                  </p>
+                  <p className="text-xs text-layer-6">
+                    <FormattedMessage
+                      defaultMessage="~{cost}/day for {hours}hr stream"
+                      values={{
+                        cost: <FormattedNumber value={endpointCost} style="currency" currency="USD" />,
+                        hours: exampleHours,
+                      }}
+                    />
+                  </p>
+                  {endpoint.capabilities?.length > 0 && (
+                    <div className="mt-2">
+                      <div className="flex flex-wrap gap-1">
+                        {endpoint.capabilities.map(capability => (
+                          <CapabilityPill key={capability} capability={capability} />
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <div className="pt-3 border-t border-layer-2">
+        <ProviderSelectorButton />
+      </div>
+      {!info?.tos?.accepted && (
+        <AcceptTos provider={streamProvider.name} tosLink={info?.tos?.link} tos={tos} setTos={setTos} />
+      )}
       <DefaultButton
         disabled={!tos}
         onClick={async () => {
-          if (!info?.tosAccepted) {
-            await DefaultProvider.acceptTos();
+          if (!info?.tos?.accepted) {
+            await streamProvider.acceptTos();
           }
           navigate("/dashboard/step-1");
         }}>

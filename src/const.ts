@@ -1,6 +1,9 @@
-import { EventKind, parseNostrLink } from "@snort/system";
+import { type EventKind, parseNostrLink } from "@snort/system";
 
+export const ZAP_STREAM_PUBKEY = "cf45a6ba1363ad7ed213a078e710d24115ae721c9b47bd1ebf4458eaefb4c2a5";
 export const LIVE_STREAM = 30_311 as EventKind;
+export const N94_LIVE_STREAM = 1053 as EventKind;
+export const LIVE_STREAM_KINDS = [LIVE_STREAM, N94_LIVE_STREAM];
 export const LIVE_STREAM_CHAT = 1_311 as EventKind;
 export const LIVE_STREAM_RAID = 1_312 as EventKind;
 export const LIVE_STREAM_CLIP = 1_313 as EventKind;
@@ -32,17 +35,17 @@ export const defaultRelays = {
   "wss://nos.lol": { read: true, write: true },
   "wss://relay.damus.io": { read: true, write: true },
   "wss://nostr.wine": { read: true, write: true },
+  "wss://relay.primal.net": { read: true, write: true },
+  "wss://relay.fountain.fm": { read: true, write: true },
+  "wss://relay.divine.video/": { read: true, write: true },
 };
-
-export const DefaultProviderUrl = "https://api.zap.stream/api/nostr";
-//export const DefaultProviderUrl = "http://localhost:5295/api/nostr";
 
 function loadWhitelist() {
   if (import.meta.env.VITE_SINGLE_PUBLISHER !== undefined) {
     const list = import.meta.env.VITE_SINGLE_PUBLISHER as string | undefined;
     if (list) {
       return list.split(",").map(a => {
-        if (a.startsWith('npub')) {
+        if (a.startsWith("npub")) {
           return parseNostrLink(a).id;
         } else {
           return a;
@@ -53,10 +56,32 @@ function loadWhitelist() {
   return undefined;
 }
 
+export const WHITELIST: Array<string> | undefined = loadWhitelist();
+
 function loadFeaturedVideos() {
-  const list = import.meta.env.VITE_FEATURED_VIDEOS as string | undefined;
-  return list?.split(",").map(a => parseNostrLink(a).id);
+  if (import.meta.env.VITE_FEATURED_VIDEOS !== undefined) {
+    const list = import.meta.env.VITE_FEATURED_VIDEOS as string | undefined;
+    if (list) {
+      return list.split(",");
+    }
+  }
+  return undefined;
 }
 
-export const WHITELIST: Array<string> | undefined = loadWhitelist();
 export const FEATURED_VIDEOS: Array<string> | undefined = loadFeaturedVideos();
+
+export const NIP5_DOMAIN: string = import.meta.env.VITE_NIP5_DOMAIN || "tunestr.io";
+
+// Pubkeys allowed to use "host" tag
+export const P_TAG_HOST_WHITELIST = [
+  ZAP_STREAM_PUBKEY,
+  "81ee947168db2f909895dbd4f71534f4040035575f58156e9a3802d1dd467e1d", //primalstream
+  "f6a25b87f7e7bec9a691e37851b1b57a7b49fa00bb431280303002a3ebca4891", //streamstr (Grinder server)
+  "85df822a86599ffbe8143db1e1e1bf2d162fa60fc685c65515963e67cfd7499f", //shosho streaming server
+];
+
+/// API client ID for twitch chat integration
+export const TwitchApiClientId = "kirqzkkd71zdtlciwhcf2fgwvvcr8x";
+
+/// API client ID for Youtube chat integration
+export const YoutubeApiClientId = "858937139946-detts37kt2162911qjaomce02k38dqk1.apps.googleusercontent.com";

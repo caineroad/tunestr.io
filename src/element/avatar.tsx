@@ -1,7 +1,7 @@
-import { HTMLProps, useState } from "react";
+import { type HTMLProps, useState } from "react";
 import classNames from "classnames";
 import { getPlaceholder } from "@/utils";
-import { UserMetadata } from "@snort/system";
+import type { UserMetadata } from "@snort/system";
 import useImgProxy from "@/hooks/img-proxy";
 
 type AvatarProps = HTMLProps<HTMLImageElement> & { size?: number; pubkey: string; user?: UserMetadata };
@@ -12,7 +12,7 @@ export function Avatar({ pubkey, size, user, ...props }: AvatarProps) {
   return (
     <img
       {...props}
-      className={classNames("aspect-square rounded-full bg-indigo-800 object-cover", props.className)}
+      className={classNames("aspect-square rounded-full bg-layer-1 object-cover", props.className)}
       alt={user?.name}
       src={src}
       onError={() => setFailed(true)}

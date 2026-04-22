@@ -1,7 +1,7 @@
 import { Icon } from "@/element/icon";
 import classNames from "classnames";
-import { ReactNode } from "react";
-import { Link, LinkProps, useLocation } from "react-router-dom";
+import type { ReactNode } from "react";
+import { Link, type LinkProps, useLocation } from "react-router";
 
 export function NavLinkIcon({
   name,
@@ -22,7 +22,7 @@ export function NavLinkIcon({
     <Link
       to={route ?? "#"}
       onClick={onClick}
-      className={classNames("cursor-pointer hover:bg-layer-2 rounded-xl", { "opacity-50": !active }, className)}>
+      className={classNames("cursor-pointer hover:bg-neutral-800 rounded-xl", { "opacity-50": !active }, className)}>
       <Icon name={name} size={20} className="m-2" />
       {children}
     </Link>

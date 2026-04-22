@@ -1,23 +1,20 @@
-import { useLayout } from "./context";
-import { NavLinkIcon } from "./nav-icon";
-import { FormattedMessage } from "react-intl";
-import { useMediaQuery } from "usehooks-ts";
-import Flyout from "@/element/flyout";
+import { useLayout } from './context'
+import { NavLinkIcon } from './nav-icon'
+import { FormattedMessage } from 'react-intl'
+import { useMediaQuery } from 'usehooks-ts'
+import Flyout from '@/element/flyout'
 
 export function LeftNav() {
-  const layout = useLayout();
-  const isDesktop = useMediaQuery("(min-width: 1280px)");
-  const expandLabels = !isDesktop || layout.leftNavExpand;
+  const layout = useLayout()
+  const isDesktop = useMediaQuery('(min-width: 1280px)')
+  const expandLabels = !isDesktop || layout.leftNavExpand
 
   function hideAfterMobileNav() {
-    if (isDesktop) return;
-    layout.update(c => {
-      c.leftNavExpand = false;
-      return { ...c };
-    });
+    if (isDesktop) return
+    layout.update(c => ({ ...c, leftNavExpand: false }))
   }
 
-  if (layout.leftNav === false) return;
+  if (layout.leftNav === false) return
   function navInner() {
     return (
       <div className="flex flex-col gap-4 p-2">
@@ -32,7 +29,8 @@ export function LeftNav() {
           name="play-circle"
           route="/videos"
           className="flex gap-2 items-center"
-          onClick={hideAfterMobileNav}>
+          onClick={hideAfterMobileNav}
+        >
           {expandLabels && (
             <span className="pr-3">
               <FormattedMessage defaultMessage="Videos" />
@@ -46,32 +44,37 @@ export function LeftNav() {
             </span>
           )}
         </NavLinkIcon>
-        <NavLinkIcon name="grid" route="/category" className="flex gap-2 items-center" onClick={hideAfterMobileNav}>
+        <NavLinkIcon name="message" route="/social" className="flex gap-2 items-center" onClick={hideAfterMobileNav}>
           {expandLabels && (
             <span className="pr-3">
-              <FormattedMessage defaultMessage="Categories" />
+              <FormattedMessage defaultMessage="Social" />
+            </span>
+          )}
+        </NavLinkIcon>
+        <NavLinkIcon name="book" route="/about" className="flex gap-2 items-center" onClick={hideAfterMobileNav}>
+          {expandLabels && (
+            <span className="pr-3">
+              <FormattedMessage defaultMessage="About" />
             </span>
           )}
         </NavLinkIcon>
       </div>
-    );
+    )
   }
 
   if (isDesktop) {
-    return navInner();
+    return navInner()
   } else {
     return (
       <Flyout
         side="left"
         show={layout.leftNavExpand}
         onClose={() => {
-          layout.update(c => {
-            c.leftNavExpand = !c.leftNavExpand;
-            return { ...c };
-          });
-        }}>
+          layout.update(c => ({ ...c, leftNavExpand: false }))
+        }}
+      >
         {navInner()}
       </Flyout>
-    );
+    )
   }
 }

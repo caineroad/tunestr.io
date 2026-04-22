@@ -1,6 +1,7 @@
 import { SnortContext, useEventReactions, useReactions, useUserProfile } from "@snort/system-react";
-import { EventKind, NostrLink, TaggedNostrEvent } from "@snort/system";
-import React, { Suspense, lazy, useContext, useMemo, useRef, useState } from "react";
+import { EventKind, NostrLink, type TaggedNostrEvent } from "@snort/system";
+import type React from "react";
+import { Suspense, lazy, useContext, useMemo, useRef, useState } from "react";
 import { useOnClickOutside } from "usehooks-ts";
 import { dedupe } from "@snort/shared";
 import dayjs from "dayjs";
@@ -15,13 +16,13 @@ import { SendZaps } from "../send-zap";
 import { CollapsibleEvent } from "../collapsible";
 
 import { useLogin } from "@/hooks/login";
-import { formatSats } from "@/number";
+import { formatZapAmount } from "@/number";
 import type { Emoji, EmojiPack } from "@/types";
 import Pill from "../pill";
 import classNames from "classnames";
 import Modal from "../modal";
 import { ChatMenu } from "./chat-menu";
-import { BadgeAward } from "@/hooks/badges";
+import type { BadgeAward } from "@/hooks/badges";
 import AwardedChatBadge from "./chat-badge";
 
 function emojifyReaction(reaction: string) {
@@ -41,7 +42,7 @@ export function ChatMessage({
   badges,
 }: {
   ev: TaggedNostrEvent;
-  streamer: string;
+  streamer: string | undefined;
   emojiPacks: EmojiPack[];
   badges: BadgeAward[];
 }) {
@@ -67,7 +68,7 @@ export function ChatMessage({
     true,
   );
   const { zaps, reactions } = useEventReactions(link, related);
-  const emojiNames = emojiPacks.map(p => p.emojis).flat();
+  const emojiNames = emojiPacks.flatMap(p => p.emojis);
 
   const filteredReactions = useMemo(() => {
     return reactions.all.filter(a => link.isReplyToThis(a));
@@ -150,14 +151,14 @@ export function ChatMessage({
           pubkey={ev.pubkey}
         />{" "}
         <span title={dayjs(ev.created_at * 1000).format("MMM D, h:mm A")}>
-          <Text tags={ev.tags} content={ev.content} eventComponent={CollapsibleEvent} className="inline" />
+          <Text tags={ev.tags} content={ev.content} eventComponent={CollapsibleEvent} />
         </span>
         {(hasReactions || hasZaps) && (
           <div className="flex gap-1 mt-1">
             {hasZaps && (
               <Pill className="flex gap-1 items-center">
                 <Icon name="zap-filled" size={12} className="text-zap" />
-                <span className="text-xs">{formatSats(totalZaps)}</span>
+                <span className="text-xs">{formatZapAmount(totalZaps)}</span>
               </Pill>
             )}
             {dedupe(filteredReactions.map(v => emojifyReaction(v.content))).map(e => {

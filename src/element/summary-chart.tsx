@@ -3,14 +3,14 @@ import { useCurrentStreamFeed } from "@/hooks/current-stream-feed";
 import { formatSats } from "@/number";
 import { extractStreamInfo } from "@/utils";
 import { unixNow } from "@snort/shared";
-import { NostrLink, NostrEvent, ParsedZap, EventKind, TaggedNostrEvent } from "@snort/system";
+import { NostrLink, type NostrEvent, type ParsedZap, EventKind, type TaggedNostrEvent } from "@snort/system";
 import { useEventReactions, useReactions } from "@snort/system-react";
 import { useMemo } from "react";
 import { FormattedMessage, FormattedNumber, FormattedDate } from "react-intl";
 import { ResponsiveContainer, BarChart, XAxis, YAxis, Bar, Tooltip } from "recharts";
 import { Profile } from "./profile";
 import { StatePill } from "./state-pill";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { Icon } from "./icon";
 import EventReactions from "./event-reactions";
 
@@ -88,8 +88,8 @@ export default function StreamSummary({ link, preload }: { link: NostrLink; prel
   const { title, summary, status, starts } = extractStreamInfo(ev);
 
   const Day = 60 * 60 * 24;
-  const startTime = starts ? Number(starts) : (ev?.created_at ?? unixNow());
-  const endTime = status === StreamState.Live ? unixNow() : (ev?.created_at ?? unixNow());
+  const startTime = starts ? Number(starts) : ev?.created_at ?? unixNow();
+  const endTime = status === StreamState.Live ? unixNow() : ev?.created_at ?? unixNow();
 
   const streamLength = endTime - startTime;
   const windowSize = streamLength > Day ? Day : 60 * 10;
@@ -239,7 +239,7 @@ export default function StreamSummary({ link, preload }: { link: NostrLink; prel
         </BarChart>
       </ResponsiveContainer>
 
-      <div className="grid gap-2 lg:grid-cols-3">
+      <div className="grid gap-2 grid-cols-3">
         <div className="bg-layer-1 rounded-xl px-4 py-3 flex-1 flex flex-col gap-2">
           <h3>
             <FormattedMessage defaultMessage="Top Chatters" id="GGaJMU" />
@@ -320,7 +320,7 @@ export default function StreamSummary({ link, preload }: { link: NostrLink; prel
           </div>
         </div>
       </div>
-      <div className="grid gap-2 lg:grid-cols-2">
+      <div className="grid gap-2 grid-cols-2">
         <div className="bg-layer-1 rounded-xl px-4 py-3 flex-1 flex flex-col gap-2">
           <h3>
             <FormattedMessage defaultMessage="Shares" id="mrwfXX" />

@@ -1,11 +1,10 @@
-import { WHITELIST } from "@/const";
 import { EventKind, NostrLink, RequestBuilder, parseZap } from "@snort/system";
 import { useRequestBuilder } from "@snort/system-react";
 import { useMemo } from "react";
 
 export function useCategoryZaps(gameId: string) {
   const rb = new RequestBuilder(`cat-zaps:${gameId}`);
-  rb.withFilter().kinds([EventKind.LiveEvent]).tag("t", [gameId]).authors(WHITELIST);
+  rb.withFilter().kinds([EventKind.LiveEvent]).tag("t", [gameId]);
   const evs = useRequestBuilder(rb);
   const links = evs.map(a => NostrLink.fromEvent(a));
 

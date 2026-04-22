@@ -1,76 +1,4 @@
 {
-  "contactUs": {
-    "defaultMessage": "Kontakt os"
-  },
-  "independentMusic": {
-    "defaultMessage": "uafhængig musik"
-  },
-  "independentMoney": {
-    "defaultMessage": "uafhængige penge"
-  },
-  "forIndependentArtists": {
-    "defaultMessage": "for uafhængige kunstnere"
-  },
-  "generateExtraRevenue": {
-    "defaultMessage": "skab ekstra indtægter fra dine liveoptrædener"
-  },
-  "discoverNewWay": {
-    "defaultMessage": "opdag en ny tilgang til sociale medier"
-  },
-  "engagePassionateFanBase": {
-    "defaultMessage": "engager en ny, passioneret fanbase online"
-  },
-  "findBiggestFans": {
-    "defaultMessage": "find ud af, hvem dine største fans er, og forbind dig direkte med dem"
-  },
-  "learnMonetizationStrategy": {
-    "defaultMessage": "lær om en ny monetiseringsstrategi for skabere"
-  },
-  "forIndependentVenues": {
-    "defaultMessage": "for uafhængige spillesteder"
-  },
-  "differentiateYourself": {
-    "defaultMessage": "adskil dig selv for turnerende kunstnere"
-  },
-  "promoteVenue": {
-    "defaultMessage": "promover dit spillested og arrangementer til et bredere publikum"
-  },
-  "createInteractiveConcert": {
-    "defaultMessage": "skab en ny interaktiv koncertoplevelse online"
-  },
-  "streamShowsMinimalEffort": {
-    "defaultMessage": "stream dine shows med minimal indsats, ud over traditionel streaming"
-  },
-  "keepTouringEconomics": {
-    "defaultMessage": "hjælp med at holde turnéøkonomien sund"
-  },
-  "forIndependentFans": {
-    "defaultMessage": "for fans af uafhængig musik"
-  },
-  "proveToFavoriteArtists": {
-    "defaultMessage": "bevis over for dine yndlingskunstnere, at du er deres største støtte"
-  },
-  "giveLiveFeedback": {
-    "defaultMessage": "giv live-feedback under optrædener og betal underholdere direkte"
-  },
-  "connectWithFans": {
-    "defaultMessage": "forbind med andre fans under shows"
-  },
-  "joinNewCommunity": {
-    "defaultMessage": "bliv en del af et nyt socialt mediefællesskab, hvor du ikke er produktet"
-  },
-  "keepMusicCommunity": {
-    "defaultMessage": "hjælp med at holde det uafhængige musikfællesskab blomstrende"
-  },
-  "footerEssentials": {
-    "defaultMessage": "ESSENTIELLE"
-  },
-  "footerThanks": {
-    "defaultMessage": "TAK"
-  },
-  "footerArtists": {
-    "defaultMessage": "KUNSTNERE"
-  },
   "+0zv6g": {
     "defaultMessage": "Billede"
   },
@@ -261,7 +189,7 @@
     "defaultMessage": "Nostr-adresse"
   },
   "9rmSgv": {
-    "defaultMessage": "OBS (Open Broadcaster Software) er en gratis open source-software til videooptagelse og livestreaming på Windows, Mac og Linux. Det er et populært valg blandt streamere. Du skal installere det for at optage din video, lyd og alt andet, du gerne vil føje til din stream. Når det er installeret og konfigureret efter dine præferencer, skal du tilføje din Stream URL og Stream Key fra Stream-indstillingerne til OBS for at oprette forbindelse til tunestr.io."
+    "defaultMessage": "OBS (Open Broadcaster Software) er en gratis open source-software til videooptagelse og livestreaming på Windows, Mac og Linux. Det er et populært valg blandt streamere. Du skal installere det for at optage din video, lyd og alt andet, du gerne vil føje til din stream. Når det er installeret og konfigureret efter dine præferencer, skal du tilføje din Stream URL og Stream Key fra Stream-indstillingerne til OBS for at oprette forbindelse til zap.stream."
   },
   "A1zT+z": {
     "defaultMessage": "Søgeresultater: {term}"
@@ -321,7 +249,7 @@
     "defaultMessage": "Logget ind som"
   },
   "DkgCAz": {
-    "defaultMessage": "Hvordan streamer jeg på tunestr.io?"
+    "defaultMessage": "Hvordan streamer jeg på zap.stream?"
   },
   "Dn82AL": {
     "defaultMessage": "Levende"
@@ -400,10 +328,10 @@
     "defaultMessage": "Navn"
   },
   "HDgXO/": {
-    "defaultMessage": "tunestr.io er en open source-platform, der drives af nostr-protokollen. Der er ingen store virksomheder eller store fonde til rådighed til at levere gratis streaming."
+    "defaultMessage": "zap.stream er en open source-platform, der drives af nostr-protokollen. Der er ingen store virksomheder eller store fonde til rådighed til at levere gratis streaming."
   },
   "HsgeUk": {
-    "defaultMessage": "Kom og se min stream på tunestr.io! {link}"
+    "defaultMessage": "Kom og se min stream på zap.stream! {link}"
   },
   "Ht231k": {
     "defaultMessage": "Videresendelse"
@@ -469,13 +397,13 @@
     "defaultMessage": "Zap Mål"
   },
   "LUvSJB": {
-    "defaultMessage": "tunestr.io er gratis i op til 2 timers hosting i høj kvalitet og op til 8 timer i \"source\"-kvalitet. Derefter har du mulighed for at streame for 5 sats pr. minut eller 10 sats pr. minut afhængigt af din valgte kvalitet. Hvis du ikke bruger tunestr.io til at hoste, vil prisen afhænge af din valgte streamingudbyder."
+    "defaultMessage": "zap.stream er gratis i op til 2 timers hosting i høj kvalitet og op til 8 timer i \"source\"-kvalitet. Derefter har du mulighed for at streame for 5 sats pr. minut eller 10 sats pr. minut afhængigt af din valgte kvalitet. Hvis du ikke bruger zap.stream til at hoste, vil prisen afhænge af din valgte streamingudbyder."
   },
   "Le+99Z": {
     "defaultMessage": "Streamere betaler et lille gebyr for at dække vores driftsomkostninger. Vi giver nye streamere en kredit på {amount} sats (ca. {time_estimate} streaming) for at komme i gang!"
   },
   "Lg2ye2": {
-    "defaultMessage": "Tunestr er en ny slags streamingplatform, der giver dig mulighed for at tjene bitcoin (sats) i det øjeblik, du begynder at streame! Seerne kan give streamere et hvilket som helst beløb i drikkepenge. Drikkepengene sættes øjeblikkeligt ind på din bitcoin-tegnebog (lightning). tunestr.io rører aldrig din indtjening!"
+    "defaultMessage": "ZapStream er en ny slags streamingplatform, der giver dig mulighed for at tjene bitcoin (sats) i det øjeblik, du begynder at streame! Seerne kan give streamere et hvilket som helst beløb i drikkepenge. Drikkepengene sættes øjeblikkeligt ind på din bitcoin-tegnebog (lightning). zap.stream rører aldrig din indtjening!"
   },
   "LknBsU": {
     "defaultMessage": "Stream-nøgle"
@@ -537,7 +465,7 @@
     "defaultMessage": "Lad feltet stå tomt, hvis du ikke ønsker at opstille mål."
   },
   "PUymyQ": {
-    "defaultMessage": "Kom og tjek {name} stream på tunestr.io! {link}"
+    "defaultMessage": "Kom og tjek {name} stream på zap.stream! {link}"
   },
   "PXAur5": {
     "defaultMessage": "Træk dig tilbage"
@@ -622,7 +550,7 @@
     "description": "Relative time, ie. 1s ago"
   },
   "UGFYV8": {
-    "defaultMessage": "Velkommen til tunestr.io!"
+    "defaultMessage": "Velkommen til zap.stream!"
   },
   "UJBFYK": {
     "defaultMessage": "Tilføj kort"
@@ -806,7 +734,7 @@
     "defaultMessage": "No Thanks!"
   },
   "h9mX2/": {
-    "defaultMessage": "Hvis du bruger vores egen tunestr.io-hosting (billigst og nemmest), skal du kopiere din stream-URL og stream-nøgle til dine OBS-indstillinger, og så skulle du være klar til at gå i gang."
+    "defaultMessage": "Hvis du bruger vores egen zap.stream-hosting (billigst og nemmest), skal du kopiere din stream-URL og stream-nøgle til dine OBS-indstillinger, og så skulle du være klar til at gå i gang."
   },
   "hMzcSq": {
     "defaultMessage": "Beskeder"
@@ -988,7 +916,7 @@
     "defaultMessage": "{n,selectordinal,one{@ #st min} two{@ #nd min} few{@ #rd min} other{@ #th min}}"
   },
   "tVCC9m": {
-    "defaultMessage": "Sats er små enheder af Bitcoin. At sende sats på tunestr.io kaldes at \"zappe\" eller zappe."
+    "defaultMessage": "Sats er små enheder af Bitcoin. At sende sats på zap.stream kaldes at \"zappe\" eller zappe."
   },
   "thsiMl": {
     "defaultMessage": "vilkår og betingelser"
@@ -1012,7 +940,7 @@
     "defaultMessage": "Seneste videoer"
   },
   "vP4dFa": {
-    "defaultMessage": "Besøg {link} for at få noget lækkert tunestr.io-merchandise!"
+    "defaultMessage": "Besøg {link} for at få noget lækkert zap.stream-merchandise!"
   },
   "vrTOHJ": {
     "defaultMessage": "{amount} sats"
@@ -1039,7 +967,7 @@
     "defaultMessage": "Vælg stemme..."
   },
   "wRGjPp": {
-    "defaultMessage": "En nostr-udvidelse gemmer simpelthen dine nøgler, så du sikkert kan logge ind uden at skulle indtaste dem igen hver gang. Tunestr bruger udvidelsen til at godkende handlinger på dine vegne uden nogensinde at se dine nøgleoplysninger. Det er en stor fordel i forhold til at skulle stole på, at hjemmesider håndterer dine legitimationsoplysninger sikkert."
+    "defaultMessage": "En nostr-udvidelse gemmer simpelthen dine nøgler, så du sikkert kan logge ind uden at skulle indtaste dem igen hver gang. ZapStream bruger udvidelsen til at godkende handlinger på dine vegne uden nogensinde at se dine nøgleoplysninger. Det er en stor fordel i forhold til at skulle stole på, at hjemmesider håndterer dine legitimationsoplysninger sikkert."
   },
   "wTwfnv": {
     "defaultMessage": "Ugyldig nostr-adresse"
@@ -1070,7 +998,7 @@
     "defaultMessage": "Klip"
   },
   "yR0V+W": {
-    "defaultMessage": "Følg disse trin for at starte streaming på tunestr.io:"
+    "defaultMessage": "Følg disse trin for at starte streaming på zap.stream:"
   },
   "yj8NrY": {
     "defaultMessage": "Klip"

@@ -1,76 +1,4 @@
 {
-  "contactUs": {
-    "defaultMessage": "Contáctanos"
-  },
-  "independentMusic": {
-    "defaultMessage": "música independiente"
-  },
-  "independentMoney": {
-    "defaultMessage": "dinero independiente"
-  },
-  "forIndependentArtists": {
-    "defaultMessage": "para artistas independientes"
-  },
-  "generateExtraRevenue": {
-    "defaultMessage": "genera ingresos adicionales en tus actuaciones en vivo"
-  },
-  "discoverNewWay": {
-    "defaultMessage": "descubre una nueva forma de abordar las redes sociales"
-  },
-  "engagePassionateFanBase": {
-    "defaultMessage": "interactúa con una nueva base de fans apasionados en línea"
-  },
-  "findBiggestFans": {
-    "defaultMessage": "descubre quiénes son tus mayores fans y conéctate directamente con ellos"
-  },
-  "learnMonetizationStrategy": {
-    "defaultMessage": "aprende sobre una nueva estrategia de monetización para creadores"
-  },
-  "forIndependentVenues": {
-    "defaultMessage": "para locales independientes"
-  },
-  "differentiateYourself": {
-    "defaultMessage": "diferénciate para los artistas en gira"
-  },
-  "promoteVenue": {
-    "defaultMessage": "promociona tu local y evento a una audiencia más amplia"
-  },
-  "createInteractiveConcert": {
-    "defaultMessage": "crea una nueva experiencia de concierto interactiva en línea"
-  },
-  "streamShowsMinimalEffort": {
-    "defaultMessage": "transmite espectáculos con un esfuerzo mínimo más allá del streaming tradicional"
-  },
-  "keepTouringEconomics": {
-    "defaultMessage": "ayuda a mantener saludable la economía de las giras"
-  },
-  "forIndependentFans": {
-    "defaultMessage": "para fans de música independiente"
-  },
-  "proveToFavoriteArtists": {
-    "defaultMessage": "demuestra a tus artistas favoritos que eres su fan número 1"
-  },
-  "giveLiveFeedback": {
-    "defaultMessage": "proporciona feedback en vivo y paga a los artistas directamente mientras actúan"
-  },
-  "connectWithFans": {
-    "defaultMessage": "conéctate con otros fans durante el espectáculo"
-  },
-  "joinNewCommunity": {
-    "defaultMessage": "únete a una nueva comunidad de redes sociales donde tú no eres el producto"
-  },
-  "keepMusicCommunity": {
-    "defaultMessage": "ayuda a que la comunidad musical independiente siga prosperando"
-  },
-  "footerEssentials": {
-    "defaultMessage": "ESENCIALES"
-  },
-  "footerThanks": {
-    "defaultMessage": "GRACIAS"
-  },
-  "footerArtists": {
-    "defaultMessage": "ARTISTAS"
-  },
   "+0zv6g": {
     "defaultMessage": "Imagen"
   },
@@ -261,7 +189,7 @@
     "defaultMessage": "Dirección Nostr"
   },
   "9rmSgv": {
-    "defaultMessage": "OBS (Open Broadcaster Software) es un software gratuito y de código abierto para la grabación de vídeo y streaming en directo en Windows, Mac y Linux. Es una opción muy popular entre los streamers. Necesitarás instalarlo para capturar tu vídeo, audio y cualquier otra cosa que quieras añadir a tu stream. Una vez instalado y configurado según sus preferencias, añada la URL y la clave de su emisión desde los ajustes de emisión a OBS para establecer una conexión con tunestr.io."
+    "defaultMessage": "OBS (Open Broadcaster Software) es un software gratuito y de código abierto para la grabación de vídeo y streaming en directo en Windows, Mac y Linux. Es una opción muy popular entre los streamers. Necesitarás instalarlo para capturar tu vídeo, audio y cualquier otra cosa que quieras añadir a tu stream. Una vez instalado y configurado según sus preferencias, añada la URL y la clave de su emisión desde los ajustes de emisión a OBS para establecer una conexión con zap.stream."
   },
   "A1zT+z": {
     "defaultMessage": "Resultados de la búsqueda: {term}"
@@ -321,7 +249,7 @@
     "defaultMessage": "Conectado como"
   },
   "DkgCAz": {
-    "defaultMessage": "¿Cómo transmito en tunestr.io?"
+    "defaultMessage": "¿Cómo transmito en zap.stream?"
   },
   "Dn82AL": {
     "defaultMessage": "En directo"
@@ -400,10 +328,10 @@
     "defaultMessage": "Nombre"
   },
   "HDgXO/": {
-    "defaultMessage": "tunestr.io es una plataforma de código abierto impulsada por el protocolo nostr. No hay corporaciones ni fondos gigantescos disponibles para proporcionar streaming gratuito."
+    "defaultMessage": "zap.stream es una plataforma de código abierto impulsada por el protocolo nostr. No hay corporaciones ni fondos gigantescos disponibles para proporcionar streaming gratuito."
   },
   "HsgeUk": {
-    "defaultMessage": "¡Ven a ver mi stream en tunestr.io! {link}"
+    "defaultMessage": "¡Ven a ver mi stream en zap.stream! {link}"
   },
   "Ht231k": {
     "defaultMessage": "Reenvío"
@@ -469,13 +397,13 @@
     "defaultMessage": "Objetivos Zap"
   },
   "LUvSJB": {
-    "defaultMessage": "tunestr.io es gratuito hasta 2 horas de alojamiento en alta calidad y hasta 8 horas en calidad \"fuente\". Después tienes la opción de transmitir por 5 saturaciones por minuto o 10 saturaciones por minuto dependiendo de la calidad que elijas. Si no utilizas tunestr.io para alojar, el precio dependerá del proveedor de streaming que elijas."
+    "defaultMessage": "zap.stream es gratuito hasta 2 horas de alojamiento en alta calidad y hasta 8 horas en calidad \"fuente\". Después tienes la opción de transmitir por 5 saturaciones por minuto o 10 saturaciones por minuto dependiendo de la calidad que elijas. Si no utilizas zap.stream para alojar, el precio dependerá del proveedor de streaming que elijas."
   },
   "Le+99Z": {
     "defaultMessage": "Los streamers pagan una pequeña cuota para cubrir nuestros gastos de funcionamiento. A los nuevos streamers les damos un crédito de {amount} sats (aproximadamente {time_estimate} de streaming) para empezar."
   },
   "Lg2ye2": {
-    "defaultMessage": "Tunestr es un nuevo tipo de plataforma de streaming que te permite ganar bitcoin (sats) en el momento en que empiezas a retransmitir. Los espectadores pueden dar a los streamers cualquier cantidad que deseen. Las propinas se depositan instantáneamente en tu monedero bitcoin (lightning). ¡Tunestr.io nunca toca tus ganancias!"
+    "defaultMessage": "ZapStream es un nuevo tipo de plataforma de streaming que te permite ganar bitcoin (sats) en el momento en que empiezas a retransmitir. Los espectadores pueden dar a los streamers cualquier cantidad que deseen. Las propinas se depositan instantáneamente en tu monedero bitcoin (lightning). ¡Zap.stream nunca toca tus ganancias!"
   },
   "LknBsU": {
     "defaultMessage": "Clave de transmisión"
@@ -537,7 +465,7 @@
     "defaultMessage": "Déjelo en blanco si no desea establecer ningún objetivo."
   },
   "PUymyQ": {
-    "defaultMessage": "Visite {name} stream en tunestr.io. {link}"
+    "defaultMessage": "Visite {name} stream en zap.stream. {link}"
   },
   "PXAur5": {
     "defaultMessage": "Retirar"
@@ -622,7 +550,7 @@
     "description": "Relative time, ie. 1s ago"
   },
   "UGFYV8": {
-    "defaultMessage": "¡Bienvenido a tunestr.io!"
+    "defaultMessage": "¡Bienvenido a zap.stream!"
   },
   "UJBFYK": {
     "defaultMessage": "Agregar una tarjeta"
@@ -806,7 +734,7 @@
     "defaultMessage": "No Thanks!"
   },
   "h9mX2/": {
-    "defaultMessage": "Si utiliza nuestro alojamiento interno tunestr.io (el más barato y sencillo), copie la URL y la clave de transmisión en la configuración de OBS y ya puede empezar."
+    "defaultMessage": "Si utiliza nuestro alojamiento interno zap.stream (el más barato y sencillo), copie la URL y la clave de transmisión en la configuración de OBS y ya puede empezar."
   },
   "hMzcSq": {
     "defaultMessage": "Mensajes"
@@ -988,7 +916,7 @@
     "defaultMessage": "{n,selectordinal,one{@ #st min} two{@ #nd min} few{@ #rd min} other{@ #th min}}"
   },
   "tVCC9m": {
-    "defaultMessage": "Los sats son pequeñas unidades de Bitcoin. El envío de sats en tunestr.io se denomina \"zapping\" o zaps."
+    "defaultMessage": "Los sats son pequeñas unidades de Bitcoin. El envío de sats en zap.stream se denomina \"zapping\" o zaps."
   },
   "thsiMl": {
     "defaultMessage": "términos y condiciones"
@@ -1012,7 +940,7 @@
     "defaultMessage": "Últimos vídeos"
   },
   "vP4dFa": {
-    "defaultMessage": "Visita {link} para hacerte con productos de tunestr.io."
+    "defaultMessage": "Visita {link} para hacerte con productos de zap.stream."
   },
   "vrTOHJ": {
     "defaultMessage": "{amount} sats"
@@ -1039,7 +967,7 @@
     "defaultMessage": "Seleccionar voz..."
   },
   "wRGjPp": {
-    "defaultMessage": "Una extensión nostr simplemente guarda tus claves para que puedas iniciar sesión de forma segura sin tener que volver a introducirlas cada vez. Tunestr utiliza la extensión para autorizar acciones en tu nombre sin ver nunca la información de tus claves. Esto tiene una ventaja significativa sobre tener que confiar en que los sitios web manejen tus credenciales de forma segura."
+    "defaultMessage": "Una extensión nostr simplemente guarda tus claves para que puedas iniciar sesión de forma segura sin tener que volver a introducirlas cada vez. ZapStream utiliza la extensión para autorizar acciones en tu nombre sin ver nunca la información de tus claves. Esto tiene una ventaja significativa sobre tener que confiar en que los sitios web manejen tus credenciales de forma segura."
   },
   "wTwfnv": {
     "defaultMessage": "Dirección nostr no válida"
@@ -1070,7 +998,7 @@
     "defaultMessage": "Clips"
   },
   "yR0V+W": {
-    "defaultMessage": "Para empezar a retransmitir en tunestr.io, sigue estos pasos:"
+    "defaultMessage": "Para empezar a retransmitir en zap.stream, sigue estos pasos:"
   },
   "yj8NrY": {
     "defaultMessage": "Clip"

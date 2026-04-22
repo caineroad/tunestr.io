@@ -1,7 +1,7 @@
 import "./markdown.css";
 
-import { ReactNode, forwardRef, useMemo } from "react";
-import { Token, Tokens, marked } from "marked";
+import { type ReactNode, forwardRef, useMemo } from "react";
+import { type Token, type Tokens, marked } from "marked";
 import { HyperText } from "./hypertext";
 import { Text } from "./text";
 
@@ -47,11 +47,14 @@ const Markdown = forwardRef<HTMLDivElement, MarkdownProps>((props: MarkdownProps
         case "code": {
           return <pre key={ctr++}>{t.raw}</pre>;
         }
+        case "strong": {
+          return <strong>{t.tokens ? t.tokens.map(renderToken) : t.raw}</strong>
+        }
         case "br": {
           return <br key={ctr++} />;
         }
         case "hr": {
-          return <hr key={ctr++} />;
+          return <hr key={ctr++} className="bg-layer-2"/>;
         }
         case "blockquote": {
           return <blockquote key={ctr++}>{t.tokens ? t.tokens.map(renderToken) : t.raw}</blockquote>;
@@ -65,13 +68,13 @@ const Markdown = forwardRef<HTMLDivElement, MarkdownProps>((props: MarkdownProps
         }
         case "list": {
           if (t.ordered) {
-            return <ol key={ctr++}>{t.items.map(renderToken)}</ol>;
+            return <ol className="list-decimal ml-4">{(t.items as Token[]).map(renderToken)}</ol>;
           } else {
-            return <ul key={ctr++}>{t.items.map(renderToken)}</ul>;
+            return <ul className="list-disc">{(t.items as Token[]).map(renderToken)}</ul>;
           }
         }
         case "list_item": {
-          return <li key={ctr++}>{t.tokens ? t.tokens.map(renderToken) : t.raw}</li>;
+          return <li>{t.tokens ? t.tokens.map(renderToken) : t.raw}</li>;
         }
         case "em": {
           return <em key={ctr++}>{t.tokens ? t.tokens.map(renderToken) : t.raw}</em>;

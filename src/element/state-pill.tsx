@@ -1,4 +1,4 @@
-import { HTMLProps } from "react";
+import type { HTMLProps } from "react";
 import "./state-pill.css";
 import classNames from "classnames";
 import { StreamState } from "@/const";
@@ -12,7 +12,7 @@ export function StatePill({ state, ...props }: StatePillProps) {
       {...props}
       className={classNames(
         "uppercase font-white",
-        state === StreamState.Live ? "bg-primary" : "bg-indigo-950",
+        state === StreamState.Live ? "bg-primary" : "bg-layer-1",
         props.className,
       )}>
       {state}

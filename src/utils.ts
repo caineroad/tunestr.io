@@ -1,11 +1,10 @@
-import { CachedMetadata, NostrEvent, NostrLink, TaggedNostrEvent } from "@snort/system";
+import { type CachedMetadata, type NostrEvent, NostrLink, type TaggedNostrEvent } from "@snort/system";
 
 import type { Tags } from "@/types";
-import { LIVE_STREAM, StreamState } from "@/const";
-import { GameInfo } from "./service/game-database";
+import { LIVE_STREAM, LIVE_STREAM_KINDS, N94_LIVE_STREAM, P_TAG_HOST_WHITELIST, type StreamState } from "@/const";
+import type { GameInfo } from "./service/game-database";
 import { AllCategories } from "./pages/category";
-import { hexToBech32 } from "@snort/shared";
-import { StreamInfo } from "./element/stream/stream-info";
+import { NostrPrefix } from "@snort/shared";
 
 export function toAddress(e: NostrEvent): string {
   if (e.kind && e.kind >= 30000 && e.kind <= 40000) {
@@ -25,23 +24,34 @@ export function findTag(e: NostrEvent | undefined, tag: string) {
   const maybeTag = e?.tags.find(evTag => {
     return evTag[0] === tag;
   });
-  return maybeTag && maybeTag[1];
+  return maybeTag?.[1];
 }
 
 export function eventLink(ev: NostrEvent | TaggedNostrEvent) {
   return NostrLink.fromEvent(ev).encode();
 }
 
-export function getHost(ev?: NostrEvent) {
-  return ev?.tags.find(a => a[0] === "p" && a[3] === "host")?.[1] ?? ev?.pubkey ?? "";
+export function getHost(ev: NostrEvent) {
+  const isHostTagAllowed = ev.pubkey && P_TAG_HOST_WHITELIST.includes(ev.pubkey);
+  const ret =
+    ev.tags.find(a => a[0] === "p" && a.length > 3 && a[3].toLowerCase() === "host" && isHostTagAllowed)?.[1] ??
+    ev.pubkey;
+  if (!ret) {
+    throw new Error("Invalid host");
+  }
+  return ret;
 }
 
-export function profileLink(meta: CachedMetadata | undefined, pubkey: string) {
-  if (meta && meta.nip05 && meta.nip05.endsWith("@tunestr.io") && meta.isNostrAddressValid) {
+export function profileLink(meta: CachedMetadata | undefined, pubkey: string | NostrLink) {
+  if (meta?.nip05?.endsWith("@zap.stream") || meta?.nip05?.endsWith("@tunestr.io")) {
     const [name] = meta.nip05.split("@");
     return `/p/${name}`;
   }
-  return `/p/${hexToBech32("npub", pubkey)}`;
+  if (pubkey instanceof NostrLink) {
+    return `/p/${pubkey.encode(NostrPrefix.Profile)}`;
+  } else {
+    return `/p/${NostrLink.publicKey(pubkey).encode(NostrPrefix.Profile)}`;
+  }
 }
 
 export function openFile(): Promise<File | undefined> {
@@ -69,7 +79,7 @@ export function getTagValues(tags: Tags, tag: string): Array<string> {
 }
 
 export function getEventFromLocationState(state: unknown | undefined | null) {
-  return state && typeof state === "object" && "kind" in state && state.kind === LIVE_STREAM
+  return state && typeof state === "object" && "kind" in state && LIVE_STREAM_KINDS.includes(state.kind as number)
     ? (state as TaggedNostrEvent)
     : undefined;
 }
@@ -88,7 +98,7 @@ export function uniqBy<T>(vals: Array<T>, key: (x: T) => string) {
 }
 
 export function getPlaceholder(id: string) {
-  return `https://nostr.api.v0l.io/api/v1/avatar/robots/${id}.webp`;
+  return `https://nostr-rs-api.v0l.io/avatar/robots/${id}.webp`;
 }
 
 export function debounce(time: number, fn: () => void): () => void {
@@ -118,11 +128,33 @@ export interface StreamInfo {
   streams: Array<string>;
 }
 
+export function canPlayUrl(url: string) {
+  const isLocalhost = url.includes("localhost") || url.includes("127.0.0.1");
+  if(isLocalhost && window.location.hostname !== "localhost") return false;
+
+  try {
+    const u = new URL(url);
+    return u.pathname.includes(".m3u8") || u.protocol === "moq:" ;
+  } catch(_e) {
+    return false;
+  }
+}
+
+export function canPlayEvent(ev: NostrEvent) {
+  if (ev.kind === LIVE_STREAM) {
+    return ev.tags.some(a => (a[0] === "streaming" || a[0] === "recording") && canPlayUrl(a[1]));
+  }
+  return ev.kind === N94_LIVE_STREAM;
+}
+
 const gameTagFormat = /^[a-z-]+:[a-z0-9-]+$/i;
 export function extractStreamInfo(ev?: NostrEvent) {
   const ret = {
-    host: getHost(ev),
+    tags: [],
+    streams: [],
   } as StreamInfo;
+  if (!ev) return ret;
+  ret.host = getHost(ev);
   const matchTag = (tag: Array<string>, k: string, into: (v: string) => void) => {
     if (tag[0] === k) {
       into(tag[1]);
@@ -134,11 +166,13 @@ export function extractStreamInfo(ev?: NostrEvent) {
     matchTag(t, "title", v => (ret.title = v));
     matchTag(t, "summary", v => (ret.summary = v));
     matchTag(t, "image", v => (ret.image = v));
-    matchTag(t, "thumbnail", v => (ret.thumbnail = v));
+    matchTag(t, "thumb", v => (ret.thumbnail = v));
     matchTag(t, "status", v => (ret.status = v as StreamState));
     if (t[0] === "streaming") {
       ret.streams ??= [];
-      ret.streams.push(t[1]);
+      if (canPlayUrl(t[1])) {
+        ret.streams.push(t[1]);
+      }
     }
     matchTag(t, "recording", v => (ret.recording = v));
     matchTag(t, "url", v => (ret.recording = v));
@@ -156,13 +190,10 @@ export function extractStreamInfo(ev?: NostrEvent) {
   ret.gameId = gameId;
   ret.gameInfo = gameInfo;
 
-  if (ret.streams) {
-    const isN94 = ret.streams.includes("nip94");
-    if (isN94) {
-      ret.stream = "nip94";
-    } else {
-      ret.stream = ret.streams.find(a => a.includes(".m3u8"));
-    }
+  if (ev?.kind === N94_LIVE_STREAM) {
+    ret.stream = "n94";
+  } else if (ret.streams) {
+    ret.stream = ret.streams.find(a => a.includes(".m3u8")) || ret.streams.at(0);
   }
   return ret;
 }
@@ -176,7 +207,7 @@ export function sortStreamTags(tags: Array<string | Array<string>>) {
 }
 
 export function extractGameTag(tags: Array<string>) {
-  let gameInfo: GameInfo | undefined = undefined;
+  let gameInfo: GameInfo | undefined ;
   const gameId = tags.find(a => a.match(gameTagFormat));
   if (gameId?.startsWith("internal:")) {
     const internal = AllCategories.find(a => gameId === `internal:${a.id}`);

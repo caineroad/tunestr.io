@@ -1,15 +1,14 @@
 import { useLogin } from "@/hooks/login";
 import { useSortedStreams } from "@/hooks/useLiveStreams";
 import { getTagValues, getHost, extractStreamInfo } from "@/utils";
-import { NostrEvent, NostrLink, TaggedNostrEvent } from "@snort/system";
-import { ReactNode, useMemo } from "react";
+import { type NostrEvent, NostrLink, type TaggedNostrEvent } from "@snort/system";
+import { type ReactNode, useMemo } from "react";
 import { FormattedMessage } from "react-intl";
 import VideoGrid from "./video-grid";
 import { StreamTile } from "./stream/stream-tile";
 import { CategoryTile } from "./category/category-tile";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import Pill from "./pill";
-import { CategoryZaps } from "./category/zaps";
 import { StreamState, VIDEO_KIND, WHITELIST } from "@/const";
 import { useRecentClips } from "@/hooks/clips";
 import { ClipTile } from "./stream/clip-tile";
@@ -35,10 +34,17 @@ export default function VideoGridSorted({
 }: VideoGridSortedProps) {
   const login = useLogin();
   const mutedHosts = login?.state?.muted ?? [];
-  // const follows = login?.state?.follows ?? [];
-  const followsHost = (ev: NostrEvent) => WHITELIST?.includes(getHost(ev)) ?? false;
+  const follows = login?.state?.follows ?? [];
+  const followsHost = (ev: NostrEvent) => {
+    const host = getHost(ev);
+    if (WHITELIST && !WHITELIST.includes(host)) return false;
+    return follows?.includes(host);
+  };
 
-  const filteredStreams = evs.filter(a => !mutedHosts.includes(NostrLink.publicKey(getHost(a))));
+  const filteredStreams = evs.filter(a => {
+    const hostLink = NostrLink.publicKey(getHost(a));
+    return !mutedHosts.some(b => b.equals(hostLink));
+  });
   const { live, planned, ended } = useSortedStreams(filteredStreams, showAll ? 0 : undefined);
   const hashtags: Array<string> = [];
   const following = live.filter(followsHost);
@@ -59,10 +65,11 @@ export default function VideoGridSorted({
       .filter(t => t.live.length > 0);
   }, [live, hashtags]);
 
+  const videos = evs.filter(a => a.kind === VIDEO_KIND);
   return (
     <div className="flex flex-col gap-6">
       {hasFollowingLive && (
-        <GridSection header={<FormattedMessage defaultMessage="Live" id="Dn82AL" />} items={following} />
+        <GridSection header={<FormattedMessage defaultMessage="Following" id="cPIKU2" />} items={following} />
       )}
       {!hasFollowingLive && (
         <VideoGrid>
@@ -74,17 +81,14 @@ export default function VideoGridSorted({
       {liveByHashtag.map(t => (
         <GridSection header={`#${t.tag}`} items={t.live} />
       ))}
-      {showPopular && <PopularCategories items={evs} />}
-      {showVideos && (
-        <GridSection
-          header={<FormattedMessage defaultMessage="Videos" />}
-          items={evs.filter(a => a.kind === VIDEO_KIND)}
-        />
+      {showVideos && videos.length > 0 && (
+        <GridSection header={<FormattedMessage defaultMessage="Videos" />} items={videos} />
       )}
       {showRecentClips && <RecentClips />}
       {hasFollowingLive && liveNow.length > 0 && (
         <GridSection header={<FormattedMessage defaultMessage="Live" id="Dn82AL" />} items={liveNow} />
       )}
+      {showPopular && <PopularCategories items={evs} />}
       {plannedEvents.length > 0 && (showPlanned ?? true) && (
         <GridSection header={<FormattedMessage defaultMessage="Planned" id="kp0NPF" />} items={plannedEvents} />
       )}
@@ -162,7 +166,6 @@ function PopularCategories({ items }: { items: Array<TaggedNostrEvent> }) {
             className="xl:w-[180px] lg:w-[170px] max-lg:w-[calc(33.3%-0.75rem)]">
             <CategoryTile gameId={a.gameId} showFooterTitle={true}>
               <div className="flex gap-2 flex-wrap">
-                <CategoryZaps gameId={a.gameId} />
                 {a.viewers > 0 && (
                   <Pill>
                     <FormattedMessage

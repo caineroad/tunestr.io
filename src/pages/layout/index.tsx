@@ -1,28 +1,51 @@
 import "./layout.css";
 
-import { CSSProperties, useContext, useEffect } from "react";
-import { Outlet, useLocation } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { type CSSProperties, useContext, useEffect, useState } from "react";
+import { Outlet, useLocation } from "react-router";
+import { Helmet } from "@dr.pogodin/react-helmet";
 
 import { useLogin } from "@/hooks/login";
 import { trackEvent } from "@/utils";
 import { HeaderNav } from "./header";
 import { LeftNav } from "./left-nav";
-import { SnortContext } from "@snort/system-react";
+import { TunestrFooter } from "./tunestr-footer";
+import { SnortContext, TraceTimelineOverlay } from "@snort/system-react";
 import { EventKind } from "@snort/system";
 import { USER_CARDS } from "@/const";
-import { TunestrFooter } from "./tunestr-footer";
+import { ZapStrikeOverlay } from "@/element/zap-strike";
+import "@/element/zap-strike.css";
 
 export function LayoutPage() {
   const location = useLocation();
   const login = useLogin();
   const system = useContext(SnortContext);
+  const [trace, setTrace] = useState(false);
+
+  useEffect(() => {
+    const h = (e: KeyboardEvent) => {
+      const target = e.target;
+      const skipTarget = ["INPUT", "TEXTAREA"];
+      if (skipTarget.includes((target as HTMLElement)?.nodeName)) {
+        return;
+      }
+      if (e.key === "t") {
+        setTrace(t => !t);
+      }
+    };
+    window.addEventListener("keydown", h);
+    return () => {
+      window.removeEventListener("keydown", h);
+    };
+  }, []);
 
   useEffect(() => {
     if (login?.state) {
       login.state.checkIsStandardList(EventKind.EmojisList);
       login.state.checkIsStandardList(USER_CARDS);
       login.state.init(login.signer(), system);
+      if (login.pubkey) {
+        system.config.socialGraphInstance.setRoot(login.pubkey);
+      }
     }
   }, [login]);
 
@@ -37,7 +60,7 @@ export function LayoutPage() {
   return (
     <div style={styles}>
       <Helmet>
-        <title>Home - tunestr.io</title>
+        <title>tunestr.io - Independent Music Live Streaming</title>
       </Helmet>
 
       <HeaderNav />
@@ -46,6 +69,8 @@ export function LayoutPage() {
         <Outlet />
       </div>
       <TunestrFooter />
+      <TraceTimelineOverlay isOpen={trace} onClose={() => setTrace(false)} />
+      <ZapStrikeOverlay />
     </div>
   );
 }

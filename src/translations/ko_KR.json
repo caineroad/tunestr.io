@@ -1,76 +1,4 @@
 {
-  "contactUs": {
-    "defaultMessage": "문의하기"
-  },
-  "independentMusic": {
-    "defaultMessage": "독립 음악"
-  },
-  "independentMoney": {
-    "defaultMessage": "독립 자금"
-  },
-  "forIndependentArtists": {
-    "defaultMessage": "독립 아티스트를 위해"
-  },
-  "generateExtraRevenue": {
-    "defaultMessage": "라이브 공연에서 추가 수입 창출하기"
-  },
-  "discoverNewWay": {
-    "defaultMessage": "소셜 미디어에 접근하는 새로운 방법 발견하기"
-  },
-  "engagePassionateFanBase": {
-    "defaultMessage": "온라인에서 열정적인 새 팬층과 교류하기"
-  },
-  "findBiggestFans": {
-    "defaultMessage": "가장 큰 팬이 누구인지 찾아 직접 연결하기"
-  },
-  "learnMonetizationStrategy": {
-    "defaultMessage": "창작자를 위한 새로운 수익화 전략 배우기"
-  },
-  "forIndependentVenues": {
-    "defaultMessage": "독립 공연장을 위해"
-  },
-  "differentiateYourself": {
-    "defaultMessage": "투어 아티스트들에게 차별화된 가치 제공하기"
-  },
-  "promoteVenue": {
-    "defaultMessage": "더 넓은 관객에게 공연장과 이벤트 홍보하기"
-  },
-  "createInteractiveConcert": {
-    "defaultMessage": "온라인에서 새로운 인터랙티브 콘서트 경험 만들기"
-  },
-  "streamShowsMinimalEffort": {
-    "defaultMessage": "기존 스트리밍 너머 최소한의 노력으로 공연 스트리밍하기"
-  },
-  "keepTouringEconomics": {
-    "defaultMessage": "투어링 경제를 건강하게 유지하는 데 도움 주기"
-  },
-  "forIndependentFans": {
-    "defaultMessage": "독립 음악 팬을 위해"
-  },
-  "proveToFavoriteArtists": {
-    "defaultMessage": "좋아하는 아티스트에게 당신이 그들의 최고 지지자임을 증명하기"
-  },
-  "giveLiveFeedback": {
-    "defaultMessage": "공연 중 실시간 피드백을 제공하고 엔터테이너에게 직접 지불하기"
-  },
-  "connectWithFans": {
-    "defaultMessage": "공연 중 다른 팬들과 연결하기"
-  },
-  "joinNewCommunity": {
-    "defaultMessage": "당신이 상품이 아닌 새로운 소셜 미디어 커뮤니티에 참여하기"
-  },
-  "keepMusicCommunity": {
-    "defaultMessage": "독립 음악 커뮤니티가 번창하도록 유지하기"
-  },
-  "footerEssentials": {
-    "defaultMessage": "필수 항목"
-  },
-  "footerThanks": {
-    "defaultMessage": "감사의 말"
-  },
-  "footerArtists": {
-    "defaultMessage": "아티스트"
-  },
   "+0zv6g": {
     "defaultMessage": "이미지"
   },
@@ -261,7 +189,7 @@
     "defaultMessage": "노스트르 주소"
   },
   "9rmSgv": {
-    "defaultMessage": "OBS(오픈 방송사 소프트웨어)는 Windows, Mac, Linux에서 동영상 녹화 및 실시간 스트리밍을 위한 무료 오픈 소스 소프트웨어입니다. 스트리머들이 많이 사용하는 소프트웨어입니다. 동영상, 오디오 및 스트림에 추가하려는 다른 모든 것을 캡처하려면 이 소프트웨어를 설치해야 합니다. 설치하고 기본 설정에 맞게 구성한 후 스트림 설정에서 스트림 URL과 스트림 키를 OBS에 추가하여 tunestr.io과 연결합니다."
+    "defaultMessage": "OBS(오픈 방송사 소프트웨어)는 Windows, Mac, Linux에서 동영상 녹화 및 실시간 스트리밍을 위한 무료 오픈 소스 소프트웨어입니다. 스트리머들이 많이 사용하는 소프트웨어입니다. 동영상, 오디오 및 스트림에 추가하려는 다른 모든 것을 캡처하려면 이 소프트웨어를 설치해야 합니다. 설치하고 기본 설정에 맞게 구성한 후 스트림 설정에서 스트림 URL과 스트림 키를 OBS에 추가하여 zap.stream과 연결합니다."
   },
   "A1zT+z": {
     "defaultMessage": "검색 결과: {term}"
@@ -321,7 +249,7 @@
     "defaultMessage": "다음 계정으로 로그인"
   },
   "DkgCAz": {
-    "defaultMessage": "tunestr.io에서 스트리밍하려면 어떻게 하나요?"
+    "defaultMessage": "zap.stream에서 스트리밍하려면 어떻게 하나요?"
   },
   "Dn82AL": {
     "defaultMessage": "라이브"
@@ -400,10 +328,10 @@
     "defaultMessage": "이름"
   },
   "HDgXO/": {
-    "defaultMessage": "tunestr.io은 노스트르 프로토콜로 구동되는 오픈 소스 플랫폼입니다. 무료 스트리밍을 제공할 수 있는 거대 기업이나 거대 펀드가 없습니다."
+    "defaultMessage": "zap.stream은 노스트르 프로토콜로 구동되는 오픈 소스 플랫폼입니다. 무료 스트리밍을 제공할 수 있는 거대 기업이나 거대 펀드가 없습니다."
   },
   "HsgeUk": {
-    "defaultMessage": "tunestr.io에서 제 스트리밍을 확인해 보세요! {link}"
+    "defaultMessage": "zap.stream에서 제 스트리밍을 확인해 보세요! {link}"
   },
   "Ht231k": {
     "defaultMessage": "전달"
@@ -469,13 +397,13 @@
     "defaultMessage": "Zap 목표"
   },
   "LUvSJB": {
-    "defaultMessage": "tunestr.io은 고화질로 최대 2시간, '소스' 화질로 최대 8시간까지 무료로 호스팅할 수 있습니다. 그 이후에는 선택한 화질에 따라 분당 5초 또는 분당 10초 동안 스트리밍할 수 있는 옵션이 있습니다. tunestr.io을 사용하여 호스팅하지 않는 경우 가격은 선택한 스트리밍 제공업체에 따라 달라집니다."
+    "defaultMessage": "zap.stream은 고화질로 최대 2시간, '소스' 화질로 최대 8시간까지 무료로 호스팅할 수 있습니다. 그 이후에는 선택한 화질에 따라 분당 5초 또는 분당 10초 동안 스트리밍할 수 있는 옵션이 있습니다. zap.stream을 사용하여 호스팅하지 않는 경우 가격은 선택한 스트리밍 제공업체에 따라 달라집니다."
   },
   "Le+99Z": {
     "defaultMessage": "스트리머는 운영 비용을 충당하기 위해 소정의 수수료를 지불합니다. 신규 스트리머에게는 시작할 수 있는 크레딧( {amount} sats, 약 {time_estimate} 스트리밍)을 지급합니다!"
   },
   "Lg2ye2": {
-    "defaultMessage": "Tunestr은 스트리밍을 시작하는 순간 비트코인(sats)을 얻을 수 있는 새로운 종류의 스트리밍 플랫폼입니다! 시청자는 원하는 금액만큼 스트리머에게 팁을 줄 수 있습니다. 팁은 즉시 비트코인(라이트닝) 지갑에 입금됩니다. tunestr.io은 수익에 절대 손을 대지 않습니다!"
+    "defaultMessage": "ZapStream은 스트리밍을 시작하는 순간 비트코인(sats)을 얻을 수 있는 새로운 종류의 스트리밍 플랫폼입니다! 시청자는 원하는 금액만큼 스트리머에게 팁을 줄 수 있습니다. 팁은 즉시 비트코인(라이트닝) 지갑에 입금됩니다. zap.stream은 수익에 절대 손을 대지 않습니다!"
   },
   "LknBsU": {
     "defaultMessage": "스트림 키"
@@ -537,7 +465,7 @@
     "defaultMessage": "목표를 설정하지 않으려면 비워둡니다."
   },
   "PUymyQ": {
-    "defaultMessage": "tunestr.io에서 {name} 스트림을 확인하세요! {link}"
+    "defaultMessage": "zap.stream에서 {name} 스트림을 확인하세요! {link}"
   },
   "PXAur5": {
     "defaultMessage": "철회"
@@ -622,7 +550,7 @@
     "description": "Relative time, ie. 1s ago"
   },
   "UGFYV8": {
-    "defaultMessage": "tunestr.io에 오신 것을 환영합니다!"
+    "defaultMessage": "zap.stream에 오신 것을 환영합니다!"
   },
   "UJBFYK": {
     "defaultMessage": "카드 추가"
@@ -806,7 +734,7 @@
     "defaultMessage": "No Thanks!"
   },
   "h9mX2/": {
-    "defaultMessage": "가장 저렴하고 간편한 자체 tunestr.io 호스팅을 사용하는 경우 스트림 URL과 스트림 키를 OBS 설정에 복사하면 바로 사용할 수 있습니다."
+    "defaultMessage": "가장 저렴하고 간편한 자체 zap.stream 호스팅을 사용하는 경우 스트림 URL과 스트림 키를 OBS 설정에 복사하면 바로 사용할 수 있습니다."
   },
   "hMzcSq": {
     "defaultMessage": "메시지"
@@ -988,7 +916,7 @@
     "defaultMessage": "{n,selectordinal,one{@ #첫 번째 분} two{@ #두 번째 분} few{@ #세 번째 분} other{@ #세 번째 분}}"
   },
   "tVCC9m": {
-    "defaultMessage": "샛은 비트코인의 작은 단위입니다. tunestr.io에서 새트를 전송하는 것을 \"재핑\" 또는 재핑이라고 합니다."
+    "defaultMessage": "샛은 비트코인의 작은 단위입니다. zap.stream에서 새트를 전송하는 것을 \"재핑\" 또는 재핑이라고 합니다."
   },
   "thsiMl": {
     "defaultMessage": "이용 약관"
@@ -1012,7 +940,7 @@
     "defaultMessage": "최신 동영상"
   },
   "vP4dFa": {
-    "defaultMessage": "{link} 방문하여 멋진 tunestr.io 굿즈를 받으세요!"
+    "defaultMessage": "{link} 방문하여 멋진 zap.stream 굿즈를 받으세요!"
   },
   "vrTOHJ": {
     "defaultMessage": "{amount} sats"
@@ -1039,7 +967,7 @@
     "defaultMessage": "음성 선택..."
   },
   "wRGjPp": {
-    "defaultMessage": "nostr 확장 프로그램은 키를 저장하기만 하면 매번 키를 다시 입력할 필요 없이 안전하게 로그인할 수 있습니다. Tunestr은 확장 프로그램을 사용하여 사용자의 키 정보를 보지 않고도 사용자를 대신하여 작업을 승인합니다. 이는 웹사이트가 사용자의 자격 증명을 안전하게 처리한다고 믿어야 하는 것에 비해 상당한 이점이 있습니다."
+    "defaultMessage": "nostr 확장 프로그램은 키를 저장하기만 하면 매번 키를 다시 입력할 필요 없이 안전하게 로그인할 수 있습니다. ZapStream은 확장 프로그램을 사용하여 사용자의 키 정보를 보지 않고도 사용자를 대신하여 작업을 승인합니다. 이는 웹사이트가 사용자의 자격 증명을 안전하게 처리한다고 믿어야 하는 것에 비해 상당한 이점이 있습니다."
   },
   "wTwfnv": {
     "defaultMessage": "잘못된 주소"
@@ -1070,7 +998,7 @@
     "defaultMessage": "클립"
   },
   "yR0V+W": {
-    "defaultMessage": "tunestr.io에서 스트리밍을 시작하려면 다음 단계를 따르세요:"
+    "defaultMessage": "zap.stream에서 스트리밍을 시작하려면 다음 단계를 따르세요:"
   },
   "yj8NrY": {
     "defaultMessage": "클립"

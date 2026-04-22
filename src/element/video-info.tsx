@@ -11,9 +11,6 @@ import classNames from "classnames";
 import { FormattedMessage } from "react-intl";
 import { WriteMessage } from "./chat/write-message";
 import VideoComments from "./video/comments";
-import { DefaultButton } from "./buttons";
-import { useMediaQuery } from "usehooks-ts";
-import { useState } from "react";
 
 export function VideoInfo({
   showComments,
@@ -30,8 +27,6 @@ export function VideoInfo({
   const host = getHost(ctx.event);
   const profile = useUserProfile(host);
   const zapTarget = profile?.lud16 ?? profile?.lud06;
-  const isDesktop = useMediaQuery("(min-width: 1280px)");
-  const [showSummary, setShowSummary] = useState(isDesktop);
 
   return (
     <div
@@ -46,9 +41,9 @@ export function VideoInfo({
           <FollowButton pubkey={host} />
         </div>
         {/* ACTIONS */}
-        <div className="flex gap-2 items-stretch justify-between">
+        <div className="flex gap-2">
           {ev && (
-            <div className="flex gap-2">
+            <>
               {(showShare ?? true) && <ShareMenu ev={ev} />}
               {(showZap ?? true) && zapTarget && (
                 <SendZapsDialog
@@ -58,21 +53,11 @@ export function VideoInfo({
                   targetName={getName(ev.pubkey, profile)}
                 />
               )}
-            </div>
-          )}
-          {/* Mobile-only Details toggle */}
-          {ctx.video?.summary && (
-            <DefaultButton className="xl:hidden" onClick={() => setShowSummary(v => !v)}>
-              {!isDesktop && showSummary ? (
-                <FormattedMessage defaultMessage="Hide Details" />
-              ) : (
-                <FormattedMessage defaultMessage="Show Details" />
-              )}
-            </DefaultButton>
+            </>
           )}
         </div>
       </div>
-      {ctx.video?.summary && (isDesktop || showSummary) && <StreamSummary text={ctx.video.summary} />}
+      {ctx.video?.summary && <StreamSummary text={ctx.video.summary} />}
       {(showComments ?? true) && (
         <>
           <h3>

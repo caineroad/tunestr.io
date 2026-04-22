@@ -1,6 +1,6 @@
 import { DefaultButton } from "@/element/buttons";
 import Modal from "@/element/modal";
-import { NostrStreamProvider } from "@/providers";
+import type { NostrStreamProvider } from "@/providers";
 import { LNURL } from "@snort/shared";
 import { useEffect, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -16,7 +16,29 @@ export default function AccountWithdrawl({
   const [addr, setAddress] = useState("");
   const [error, setError] = useState("");
   const [amount, setAmount] = useState<number>();
+  const [withdrawalSupported, setWithdrawalSupported] = useState<boolean | null>(null);
   const { formatMessage } = useIntl();
+
+  // Check if withdrawal is supported by making a HEAD request
+  useEffect(() => {
+    const checkWithdrawalSupport = async () => {
+      try {
+        const withdrawUrl = `${provider.url}withdraw`;
+        const response = await fetch(withdrawUrl, {
+          method: "HEAD",
+        });
+
+        // If we get 200, 400, 401, 405, or 403, the endpoint exists
+        // If we get 404, the endpoint doesn't exist (not supported)
+        setWithdrawalSupported(response.status !== 404);
+      } catch (_error) {
+        // On network error, assume it's supported to avoid breaking existing functionality
+        setWithdrawalSupported(false);
+      }
+    };
+
+    checkWithdrawalSupport();
+  }, [provider.url]);
 
   useEffect(() => {
     if (addr.startsWith("lnbc") && amount !== undefined) {
@@ -67,6 +89,11 @@ export default function AccountWithdrawl({
     }
   }
 
+  // Don't render if withdrawal is not supported
+  if (!withdrawalSupported) {
+    return null;
+  }
+
   return (
     <>
       <DefaultButton onClick={() => setTopup(true)}>
@@ -92,14 +119,12 @@ export default function AccountWithdrawl({
               />
             </div>
             {amount !== undefined && (
-              <>
-                <div className="flex flex-col gap-1">
+              <div className="flex flex-col gap-1">
                   <small className="text-neutral-300">
                     <FormattedMessage defaultMessage="Amount" />
                   </small>
                   <input type="number" value={amount} onChange={e => setAmount(e.target.valueAsNumber)} />
                 </div>
-              </>
             )}
             <DefaultButton disabled={addr.length < 3} onClick={withdraw}>
               <FormattedMessage defaultMessage="Withdraw" />

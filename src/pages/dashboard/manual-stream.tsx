@@ -1,15 +1,13 @@
 import Modal from "@/element/modal";
 import { StreamEditor } from "@/element/stream-editor";
-import { ManualProvider } from "@/providers/manual";
 import { NostrLink } from "@snort/system";
 import { SnortContext } from "@snort/system-react";
 import { useContext, useState } from "react";
 import { FormattedMessage } from "react-intl";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 export default function ManualStream() {
   const [open, setOpen] = useState(false);
-  const provider = new ManualProvider();
   const system = useContext(SnortContext);
   const navigate = useNavigate();
 
@@ -23,7 +21,7 @@ export default function ManualStream() {
           <div className="flex flex-col gap-3">
             <StreamEditor
               onFinish={ex => {
-                provider.updateStreamInfo(system, ex);
+                system.BroadcastEvent(ex);
                 if (!ex) {
                   navigate(`/${NostrLink.fromEvent(ex).encode()}`, {
                     state: ex,

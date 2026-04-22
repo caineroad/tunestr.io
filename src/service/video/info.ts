@@ -1,6 +1,5 @@
-import { NostrEvent } from "@snort/system";
-import { GameInfo } from "../game-database";
-import { Nip94Tags, readNip94Tags, readNip94TagsFromIMeta } from "../upload";
+import { type Nip94Tags, type NostrEvent, readNip94Tags, readNip94TagsFromIMeta } from "@snort/system";
+import type { GameInfo } from "../game-database";
 import { getHost, sortStreamTags, extractGameTag, findTag } from "@/utils";
 
 export interface MediaPayload {
@@ -19,9 +18,10 @@ export class VideoInfo {
   gameId?: string;
   gameInfo?: GameInfo;
   publishedAt?: number;
+  private durationTag?: number;
 
   get duration() {
-    return this.media.find(m => m.duration)?.duration;
+    return this.durationTag ?? this.media.find(m => m.duration)?.duration;
   }
 
   constructor(
@@ -45,6 +45,13 @@ export class VideoInfo {
     ret.gameId = gameId;
     ret.gameInfo = gameInfo;
 
+    // HACK: if duration is not set via imeta, try to use duration tag
+    if (!ret.duration) {
+      const durTag = Number(findTag(ev, "duration"));
+      if (!Number.isNaN(durTag) && durTag > 0) {
+        ret.durationTag = durTag;
+      }
+    }
     return ret;
   }
 
@@ -95,8 +102,8 @@ export class VideoInfo {
     const best = this.media
       .filter(a => (a.image?.length ?? 0) > 0)
       .sort((a, b) => {
-        const aSize = a.dimensions![0] * a.dimensions![1];
-        const bSize = b.dimensions![0] * b.dimensions![1];
+        const aSize = (a.dimensions?.[0] ?? 0) * (a.dimensions?.[1] ?? 0);
+        const bSize = (b.dimensions?.[0] ?? 0) * (b.dimensions?.[1] ?? 0);
         return aSize > bSize ? -1 : 1;
       })
       .at(0);
@@ -104,8 +111,22 @@ export class VideoInfo {
     if (first) {
       return {
         url: first,
-        alternatives: best?.image?.filter(a => a != first) ?? [],
+        alternatives: best?.image?.filter(a => a !== first) ?? [],
       };
+    }
+  }
+
+  /**
+   * Return the aspect ratio of the media using either the video dimentions or poster dimension
+   */
+  bestAspectRatio(): number | undefined {
+    const v = this.bestVideo();
+    if (v?.dimensions) {
+      return v.dimensions[0] / v.dimensions[1];
+    }
+    const p = this.bestPoster();
+    if (p?.dimensions) {
+      return p.dimensions[0] / p.dimensions[1];
     }
   }
 }

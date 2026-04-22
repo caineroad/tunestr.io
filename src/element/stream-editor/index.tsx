@@ -1,18 +1,18 @@
 import "./index.css";
 import { useCallback, useContext, useEffect, useState } from "react";
-import { EventKind, NostrEvent } from "@snort/system";
+import { EventKind, type NostrEvent } from "@snort/system";
 import { unixNow } from "@snort/shared";
 import { FormattedMessage, useIntl } from "react-intl";
 import { SnortContext } from "@snort/system-react";
 
-import { extractStreamInfo, findTag, extractGameTag, sortStreamTags } from "@/utils";
+import { extractStreamInfo, findTag } from "@/utils";
 import { useLogin } from "@/hooks/login";
 import { GOAL, StreamState, defaultRelays } from "@/const";
 import { DefaultButton } from "@/element/buttons";
 import Pill from "@/element/pill";
 import { StreamInput } from "./input";
 import { GoalSelector } from "./goal-selector";
-import GameDatabase, { GameInfo } from "@/service/game-database";
+import GameDatabase, { type GameInfo } from "@/service/game-database";
 import CategoryInput from "./category-input";
 import { FileUploader } from "@/element/file-uploader";
 import AmountInput from "@/element/amount-input";
@@ -29,19 +29,9 @@ export interface StreamEditorProps {
     canSetTags?: boolean;
     canSetContentWarning?: boolean;
   };
-  initial?: {
-    title?: string;
-    summary?: string;
-    image?: string;
-    stream?: string;
-    tags?: string[];
-    contentWarning?: boolean;
-    goal?: string;
-  };
-  extraTags?: Array<[string, string]>;
 }
 
-export function StreamEditor({ ev, onFinish, options, initial, extraTags }: StreamEditorProps) {
+export function StreamEditor({ ev, onFinish, options }: StreamEditorProps) {
   const [title, setTitle] = useState("");
   const [summary, setSummary] = useState("");
   const [image, setImage] = useState("");
@@ -63,76 +53,39 @@ export function StreamEditor({ ev, onFinish, options, initial, extraTags }: Stre
   const system = useContext(SnortContext);
 
   useEffect(() => {
-    if (ev) {
-      const {
-        gameInfo: evGameInfo,
-        gameId: evGameId,
-        title: evTitle,
-        summary: evSummary,
-        image: evImage,
-        stream: evStream,
-        status: evStatus,
-        starts: evStarts,
-        tags: evTags,
-        contentWarning: evContentWarning,
-        goal: evGoal,
-        recording: evRecording,
-      } = extractStreamInfo(ev);
-      setTitle(evTitle ?? initial?.title ?? "");
-      setSummary(evSummary ?? initial?.summary ?? "");
-      setImage(evImage ?? initial?.image ?? "");
-      setStream(evStream ?? initial?.stream ?? "");
-      setStatus(evStatus ?? StreamState.Live);
-      setRecording(evRecording ?? "");
-      setStart(evStarts);
-      setTags(evTags ?? initial?.tags ?? []);
-      setContentWarning(Boolean(evContentWarning ?? initial?.contentWarning));
-      setGoal(evGoal ?? initial?.goal);
-      setGameId(evGameId);
-      if (evGameInfo) {
-        setGame(evGameInfo);
-      } else if (evGameId) {
-        new GameDatabase().getGame(evGameId).then(setGame);
-      }
-    } else if (initial) {
-      setTitle(initial.title ?? "");
-      setSummary(initial.summary ?? "");
-      setImage(initial.image ?? "");
-      setStream(initial.stream ?? "");
-      setStatus(StreamState.Live);
-      setRecording("");
-      setStart(undefined);
-      setTags(initial.tags ?? []);
-      setContentWarning(Boolean(initial.contentWarning));
-      setGoal(initial.goal);
-      // Derive category/game from tags if available
-      const { prefixedTags } = sortStreamTags(initial.tags ?? []);
-      const { gameInfo, gameId } = extractGameTag(prefixedTags);
-      setGameId(gameId);
-      if (gameInfo) {
-        setGame(gameInfo);
-      } else if (gameId) {
-        new GameDatabase().getGame(gameId).then(setGame);
-      }
-    } else {
-      setStatus(StreamState.Live);
+    if (!ev) return;
+    const { gameInfo, gameId, title, summary, image, stream, status, starts, tags, contentWarning, goal, recording } =
+      extractStreamInfo(ev);
+    setTitle(title ?? "");
+    setSummary(summary ?? "");
+    setImage(image ?? "");
+    setStream(stream ?? "");
+    setStatus(status ?? StreamState.Live);
+    setRecording(recording ?? "");
+    setStart(starts);
+    setTags(tags ?? []);
+    setContentWarning(contentWarning !== undefined);
+    setGoal(goal);
+    setGameId(gameId);
+    if (gameInfo) {
+      setGame(gameInfo);
+    } else if (gameId) {
+      new GameDatabase().getGame(gameId).then(setGame);
     }
-  }, [ev, initial]);
+  }, []);
 
   const validate = useCallback(() => {
     if (title.length < 2) {
       return false;
     }
-    if (options?.canSetStream ?? true) {
-      if (stream.length < 5 || !stream.match(/^https?:\/\/.*\.m3u8?$/i)) {
-        return false;
-      }
+    if ((options?.canSetStream ?? true) && (stream.length < 5 || !stream.match(/^https?:\/\/.*\.m3u8?$/i))) {
+      return false;
     }
     if (image.length > 0 && !image.match(/^https?:\/\//i)) {
       return false;
     }
     return true;
-  }, [title, image, stream, options?.canSetStream]);
+  }, [title, image, stream]);
 
   useEffect(() => {
     setIsValid(ev !== undefined || validate());
@@ -186,19 +139,14 @@ export function StreamEditor({ ev, onFinish, options, initial, extraTags }: Stre
         if (gameId) {
           eb.tag(["t", gameId]);
         }
-        if (extraTags && Array.isArray(extraTags)) {
-          for (const [k, v] of extraTags) {
-            eb.tag([k, v]);
-          }
-        }
         return eb;
       });
       console.debug(evNew);
-      onFinish && onFinish(evNew);
+      onFinish?.(evNew);
     }
   }
 
-  const startsTimestamp = Number(start ?? new Date().getTime() / 1000);
+  const startsTimestamp = Number(start ?? Date.now()/ 1000);
   const startsDate = new Date(startsTimestamp * 1000);
 
   return (

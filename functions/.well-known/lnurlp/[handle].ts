@@ -1,4 +1,4 @@
-interface Env {}
+type Env = {}
 
 interface NostrJson {
   names: Record<string, string>;
@@ -6,7 +6,7 @@ interface NostrJson {
   nip46?: Record<string, Array<string>>;
 }
 
-async function fetchNip05Pubkey(name: string, timeout = 2_000): Promise<string | undefined> {
+async function fetchNip05Pubkey(name: string, _timeout = 2_000): Promise<string | undefined> {
   if (!name) {
     return undefined;
   }
@@ -37,7 +37,7 @@ export const onRequest: PagesFunction<Env> = async context => {
     }
   }
 
-  const response = await fetch(`https://api.zap.stream/.well-known/lnurlp/${pubkey}`);
+  const response = await fetch(`https://api-core.zap.stream/.well-known/lnurlp/${pubkey}`);
   const results = await response.text();
   const responseHeaders = Object.fromEntries(response.headers.entries());
   return new Response(results, {

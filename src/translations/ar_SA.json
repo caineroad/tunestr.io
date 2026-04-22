@@ -1,76 +1,4 @@
 {
-  "contactUs": {
-    "defaultMessage": "اتصل بنا"
-  },
-  "independentMusic": {
-    "defaultMessage": "موسيقى مستقلة"
-  },
-  "independentMoney": {
-    "defaultMessage": "أموال مستقلة"
-  },
-  "forIndependentArtists": {
-    "defaultMessage": "للفنانين المستقلين"
-  },
-  "generateExtraRevenue": {
-    "defaultMessage": "توليد دخل إضافي من عروضك الحية"
-  },
-  "discoverNewWay": {
-    "defaultMessage": "اكتشف طريقة جديدة للتعامل مع وسائل التواصل الاجتماعي"
-  },
-  "engagePassionateFanBase": {
-    "defaultMessage": "التفاعل مع قاعدة جديدة من المعجبين المتحمسين عبر الإنترنت"
-  },
-  "findBiggestFans": {
-    "defaultMessage": "اكتشف من هم أكبر معجبيك وتواصل معهم مباشرة"
-  },
-  "learnMonetizationStrategy": {
-    "defaultMessage": "تعلم حول استراتيجية تحقيق الدخل الجديدة للمبدعين"
-  },
-  "forIndependentVenues": {
-    "defaultMessage": "للأماكن المستقلة"
-  },
-  "differentiateYourself": {
-    "defaultMessage": "تميز نفسك للفنانين الجوالين"
-  },
-  "promoteVenue": {
-    "defaultMessage": "روّج لمكانك وفعالياتك لجمهور أوسع"
-  },
-  "createInteractiveConcert": {
-    "defaultMessage": "إنشاء تجربة حفلات موسيقية تفاعلية جديدة عبر الإنترنت"
-  },
-  "streamShowsMinimalEffort": {
-    "defaultMessage": "بث عروضك بأقل جهد، متجاوزًا البث التقليدي"
-  },
-  "keepTouringEconomics": {
-    "defaultMessage": "المساعدة في الحفاظ على صحة اقتصاد الجولات"
-  },
-  "forIndependentFans": {
-    "defaultMessage": "لمحبي الموسيقى المستقلة"
-  },
-  "proveToFavoriteArtists": {
-    "defaultMessage": "أثبت لفنانيك المفضلين أنك أكبر داعم لهم"
-  },
-  "giveLiveFeedback": {
-    "defaultMessage": "قدّم تعليقات مباشرة أثناء العروض وادفع مباشرةً للفنانين"
-  },
-  "connectWithFans": {
-    "defaultMessage": "تواصل مع المعجبين الآخرين أثناء العروض"
-  },
-  "joinNewCommunity": {
-    "defaultMessage": "انضم إلى مجتمع جديد للتواصل الاجتماعي حيث لست السلعة"
-  },
-  "keepMusicCommunity": {
-    "defaultMessage": "المساعدة في الحفاظ على ازدهار مجتمع الموسيقى المستقلة"
-  },
-  "footerEssentials": {
-    "defaultMessage": "الأساسيات"
-  },
-  "footerThanks": {
-    "defaultMessage": "شكراً"
-  },
-  "footerArtists": {
-    "defaultMessage": "الفنانون"
-  },
   "+0zv6g": {
     "defaultMessage": "صورة"
   },
@@ -261,7 +189,7 @@
     "defaultMessage": "عنوان نوستر"
   },
   "9rmSgv": {
-    "defaultMessage": "OBS (برنامج Open Broadcaster Software) هو برنامج مجاني ومفتوح المصدر لتسجيل الفيديو والبث المباشر على أنظمة ويندوز وماك ولينكس. وهو خيار شائع لدى مشغلي البث المباشر. ستحتاج إلى تثبيته لالتقاط الفيديو والصوت وأي شيء آخر ترغب في إضافته إلى البث. بمجرد تثبيته وتهيئته حسب التفضيلات، أضف عنوان URL للبث ومفتاح البث من إعدادات البث إلى OBS لتشكيل اتصال مع tunestr.io."
+    "defaultMessage": "OBS (برنامج Open Broadcaster Software) هو برنامج مجاني ومفتوح المصدر لتسجيل الفيديو والبث المباشر على أنظمة ويندوز وماك ولينكس. وهو خيار شائع لدى مشغلي البث المباشر. ستحتاج إلى تثبيته لالتقاط الفيديو والصوت وأي شيء آخر ترغب في إضافته إلى البث. بمجرد تثبيته وتهيئته حسب التفضيلات، أضف عنوان URL للبث ومفتاح البث من إعدادات البث إلى OBS لتشكيل اتصال مع zap.stream."
   },
   "A1zT+z": {
     "defaultMessage": "نتائج البحث {term}"
@@ -321,7 +249,7 @@
     "defaultMessage": "تم تسجيل الدخول باسم"
   },
   "DkgCAz": {
-    "defaultMessage": "كيف يمكنني البث على tunestr.io؟"
+    "defaultMessage": "كيف يمكنني البث على zap.stream؟"
   },
   "Dn82AL": {
     "defaultMessage": "بث مباشر"
@@ -400,10 +328,10 @@
     "defaultMessage": "الاسم"
   },
   "HDgXO/": {
-    "defaultMessage": "tunestr.io هي منصة مفتوحة المصدر مدعومة ببروتوكول nostr. لا توجد شركات عملاقة أو صناديق عملاقة متاحة لتوفير البث المجاني."
+    "defaultMessage": "zap.stream هي منصة مفتوحة المصدر مدعومة ببروتوكول nostr. لا توجد شركات عملاقة أو صناديق عملاقة متاحة لتوفير البث المجاني."
   },
   "HsgeUk": {
-    "defaultMessage": "تعال وشاهد البث الخاص بي على tunestr.io! {link}"
+    "defaultMessage": "تعال وشاهد البث الخاص بي على zap.stream! {link}"
   },
   "Ht231k": {
     "defaultMessage": "إعادة التوجيه"
@@ -469,13 +397,13 @@
     "defaultMessage": "أهداف Zap Goals"
   },
   "LUvSJB": {
-    "defaultMessage": "tunestr.io مجاني حتى ساعتين من الاستضافة بجودة عالية وحتى 8 ساعات من جودة \"المصدر\". بعد ذلك لديك خيار للبث مقابل 5 ساعات في الدقيقة أو 10 ساعات في الدقيقة حسب الجودة التي اخترتها. إذا كنت لا تستخدم tunestr.io للاستضافة، فستعتمد الأسعار على مزود البث الذي اخترته."
+    "defaultMessage": "zap.stream مجاني حتى ساعتين من الاستضافة بجودة عالية وحتى 8 ساعات من جودة \"المصدر\". بعد ذلك لديك خيار للبث مقابل 5 ساعات في الدقيقة أو 10 ساعات في الدقيقة حسب الجودة التي اخترتها. إذا كنت لا تستخدم zap.stream للاستضافة، فستعتمد الأسعار على مزود البث الذي اخترته."
   },
   "Le+99Z": {
     "defaultMessage": "يدفع القائمون على البث رسومًا رمزية لتغطية تكاليف التشغيل. نمنح مقدمي البث الجدد رصيداً قدره {amount} سات (حوالي {time_estimate} من البث) للبدء!"
   },
   "Lg2ye2": {
-    "defaultMessage": "Tunestr هو نوع جديد من من منصات البث التي تتيح لك كسب البيتكوين (sats) في اللحظة التي تبدأ فيها البث! يمكن للمشاهدين تقديم إكرامية للمشاهدين بأي مبلغ يختارونه. ويتم إيداع الإكراميات على الفور في محفظة البيتكوين (البرق) الخاصة بك."
+    "defaultMessage": "ZapStream هو نوع جديد من من منصات البث التي تتيح لك كسب البيتكوين (sats) في اللحظة التي تبدأ فيها البث! يمكن للمشاهدين تقديم إكرامية للمشاهدين بأي مبلغ يختارونه. ويتم إيداع الإكراميات على الفور في محفظة البيتكوين (البرق) الخاصة بك."
   },
   "LknBsU": {
     "defaultMessage": "مفتاح الدفق"
@@ -537,7 +465,7 @@
     "defaultMessage": "اتركها فارغة إذا كنت لا ترغب في إعداد أي أهداف."
   },
   "PUymyQ": {
-    "defaultMessage": "تعال وشاهد البث {name} على tunestr.io! {link}"
+    "defaultMessage": "تعال وشاهد البث {name} على zap.stream! {link}"
   },
   "PXAur5": {
     "defaultMessage": "سحب"
@@ -622,7 +550,7 @@
     "description": "Relative time, ie. 1s ago"
   },
   "UGFYV8": {
-    "defaultMessage": "مرحباً بك في tunestr.io!"
+    "defaultMessage": "مرحباً بك في zap.stream!"
   },
   "UJBFYK": {
     "defaultMessage": "إضافة بطاقة"
@@ -806,7 +734,7 @@
     "defaultMessage": "No Thanks!"
   },
   "h9mX2/": {
-    "defaultMessage": "إذا كنت تستخدم استضافة tunestr.io الداخلية الخاصة بنا (الأرخص والأسهل)، انسخ عنوان URL للبث ومفتاح البث إلى إعدادات OBS الخاصة بك وستكون جاهزًا للعمل."
+    "defaultMessage": "إذا كنت تستخدم استضافة zap.stream الداخلية الخاصة بنا (الأرخص والأسهل)، انسخ عنوان URL للبث ومفتاح البث إلى إعدادات OBS الخاصة بك وستكون جاهزًا للعمل."
   },
   "hMzcSq": {
     "defaultMessage": "الرسائل"
@@ -988,7 +916,7 @@
     "defaultMessage": "{n,selectordinal,one{@ #st دقيقة} two{#nd دقيقة} few{#rd دقيقة} other{#th دقيقة}}"
   },
   "tVCC9m": {
-    "defaultMessage": "Sats هي وحدات صغيرة من البيتكوين. يُشار إلى إرسال ساتس على tunestr.io باسم \"zapping\" أو zaps."
+    "defaultMessage": "Sats هي وحدات صغيرة من البيتكوين. يُشار إلى إرسال ساتس على zap.stream باسم \"zapping\" أو zaps."
   },
   "thsiMl": {
     "defaultMessage": "الشروط والأحكام"
@@ -1012,7 +940,7 @@
     "defaultMessage": "أحدث الفيديوهات"
   },
   "vP4dFa": {
-    "defaultMessage": "تفضل بزيارة {link} للحصول على بعض سلع tunestr.io الرائعة!"
+    "defaultMessage": "تفضل بزيارة {link} للحصول على بعض سلع zap.stream الرائعة!"
   },
   "vrTOHJ": {
     "defaultMessage": "{amount} ساتس"
@@ -1039,7 +967,7 @@
     "defaultMessage": "حدد الصوت..."
   },
   "wRGjPp": {
-    "defaultMessage": "يحفظ امتداد nostr ببساطة مفاتيحك حتى تتمكن من تسجيل الدخول بأمان دون الحاجة إلى إعادة إدخالها في كل مرة. يستخدم Tunestr الامتداد لتخويل الإجراءات نيابةً عنك دون الحاجة إلى رؤية معلومات مفتاحك الرئيسية. هذا له ميزة كبيرة على الاضطرار إلى الثقة في أن المواقع الإلكترونية تتعامل مع بيانات اعتمادك بأمان."
+    "defaultMessage": "يحفظ امتداد nostr ببساطة مفاتيحك حتى تتمكن من تسجيل الدخول بأمان دون الحاجة إلى إعادة إدخالها في كل مرة. يستخدم ZapStream الامتداد لتخويل الإجراءات نيابةً عنك دون الحاجة إلى رؤية معلومات مفتاحك الرئيسية. هذا له ميزة كبيرة على الاضطرار إلى الثقة في أن المواقع الإلكترونية تتعامل مع بيانات اعتمادك بأمان."
   },
   "wTwfnv": {
     "defaultMessage": "عنوان nostr غير صالح"
@@ -1070,7 +998,7 @@
     "defaultMessage": "المقاطع"
   },
   "yR0V+W": {
-    "defaultMessage": "لبدء البث على tunestr.io، اتبع الخطوات التالية:"
+    "defaultMessage": "لبدء البث على zap.stream، اتبع الخطوات التالية:"
   },
   "yj8NrY": {
     "defaultMessage": "المشبك"

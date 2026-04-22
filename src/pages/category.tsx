@@ -6,14 +6,12 @@ import { EventKind, RequestBuilder } from "@snort/system";
 import { useRequestBuilder } from "@snort/system-react";
 import { useMemo } from "react";
 import { FormattedMessage } from "react-intl";
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router";
+import { WHITELIST } from "@/const";
 
 import IRLImage from "@/images/irl.jpeg";
-import GamingImage from "@/images/gaming.jpeg";
 import MusicImage from "@/images/music.jpeg";
 import TalkImage from "@/images/talk.jpeg";
-import ArtImage from "@/images/art.jpeg";
-import { WHITELIST } from "@/const";
 
 export const AllCategories = [
   {
@@ -31,7 +29,7 @@ export const AllCategories = [
     icon: "music",
     tags: ["music", "radio"],
     priority: 0,
-    className: "bg-category-gradient-2",
+    className: "bg-category-gradient-3",
     cover: MusicImage,
   },
   {
@@ -40,7 +38,7 @@ export const AllCategories = [
     icon: "mic",
     tags: ["talk"],
     priority: 0,
-    className: "bg-category-gradient-3",
+    className: "bg-category-gradient-4",
     cover: TalkImage,
   },
 ];
@@ -52,11 +50,12 @@ export default function Category() {
   const sub = useMemo(() => {
     const cat = AllCategories.find(a => a.id === id);
     const rb = new RequestBuilder(`category:${id}`);
-    rb.withFilter()
+    const f = rb.withFilter()
       .kinds([EventKind.LiveEvent])
-      .authors(WHITELIST)
       .tag("t", cat?.tags ?? [id]);
-
+    if (WHITELIST) {
+      f.authors(WHITELIST);
+    }
     return rb;
   }, [id]);
 

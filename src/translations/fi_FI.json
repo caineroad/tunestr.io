@@ -1,76 +1,4 @@
 {
-  "contactUs": {
-    "defaultMessage": "Ota yhteyttä"
-  },
-  "independentMusic": {
-    "defaultMessage": "itsenäinen musiikki"
-  },
-  "independentMoney": {
-    "defaultMessage": "itsenäinen raha"
-  },
-  "forIndependentArtists": {
-    "defaultMessage": "itsenäisille artisteille"
-  },
-  "generateExtraRevenue": {
-    "defaultMessage": "tuota lisätuloja live-esiintymisistäsi"
-  },
-  "discoverNewWay": {
-    "defaultMessage": "löydä uusi tapa lähestyä sosiaalista mediaa"
-  },
-  "engagePassionateFanBase": {
-    "defaultMessage": "tavoita innostunut uusi fanipohja verkossa"
-  },
-  "findBiggestFans": {
-    "defaultMessage": "löydä suurimmat fanisi ja ole yhteydessä heihin suoraan"
-  },
-  "learnMonetizationStrategy": {
-    "defaultMessage": "opi uusi ansaintastrategia sisällöntuottajille"
-  },
-  "forIndependentVenues": {
-    "defaultMessage": "itsenäisille tapahtumapaikoille"
-  },
-  "differentiateYourself": {
-    "defaultMessage": "erotu kiertueartistien silmissä"
-  },
-  "promoteVenue": {
-    "defaultMessage": "markkinoi tapahtumapaikkaa ja tapahtumia laajemmalle yleisölle"
-  },
-  "createInteractiveConcert": {
-    "defaultMessage": "luo uusi vuorovaikutteinen konserttielämys verkossa"
-  },
-  "streamShowsMinimalEffort": {
-    "defaultMessage": "lähetä esityksiäsi minimaalisella vaivalla, perinteisen striimauksen yli"
-  },
-  "keepTouringEconomics": {
-    "defaultMessage": "auta pitämään kiertuetalous terveenä"
-  },
-  "forIndependentFans": {
-    "defaultMessage": "itsenäisen musiikin faneille"
-  },
-  "proveToFavoriteArtists": {
-    "defaultMessage": "todista suosikkiartisteillesi olevasi heidän suurin tukijansa"
-  },
-  "giveLiveFeedback": {
-    "defaultMessage": "anna live-palautetta esityksen aikana ja maksa suoraan esiintyjille"
-  },
-  "connectWithFans": {
-    "defaultMessage": "verkostoidu muiden fanien kanssa esitysten aikana"
-  },
-  "joinNewCommunity": {
-    "defaultMessage": "liity uuteen sosiaalisen median yhteisöön, jossa et ole tuote"
-  },
-  "keepMusicCommunity": {
-    "defaultMessage": "auta pitämään itsenäinen musiikkiyhteisö kukoistavana"
-  },
-  "footerEssentials": {
-    "defaultMessage": "OLENNAISET"
-  },
-  "footerThanks": {
-    "defaultMessage": "KIITOKSET"
-  },
-  "footerArtists": {
-    "defaultMessage": "ARTISTIT"
-  },
   "+0zv6g": {
     "defaultMessage": "Kuva"
   },
@@ -261,7 +189,7 @@
     "defaultMessage": "Nostr Osoite"
   },
   "9rmSgv": {
-    "defaultMessage": "OBS (Open Broadcaster Software) on ilmainen ja avoimen lähdekoodin ohjelmisto videotallennukseen ja suoratoistoon Windowsissa, Macissa ja Linuxissa. Se on suosittu valinta striimaajien keskuudessa. Sinun on asennettava tämä, jotta voit tallentaa videon, äänen ja kaiken muun, mitä haluat lisätä streamiin. Kun olet asentanut ja määrittänyt haluamasi, lisää Stream URL-osoite ja Stream Key Stream-asetuksista OBS:ään muodostaaksesi yhteyden tunestr.ioiin."
+    "defaultMessage": "OBS (Open Broadcaster Software) on ilmainen ja avoimen lähdekoodin ohjelmisto videotallennukseen ja suoratoistoon Windowsissa, Macissa ja Linuxissa. Se on suosittu valinta striimaajien keskuudessa. Sinun on asennettava tämä, jotta voit tallentaa videon, äänen ja kaiken muun, mitä haluat lisätä streamiin. Kun olet asentanut ja määrittänyt haluamasi, lisää Stream URL-osoite ja Stream Key Stream-asetuksista OBS:ään muodostaaksesi yhteyden zap.streamiin."
   },
   "A1zT+z": {
     "defaultMessage": "Hakutulokset: {term}"
@@ -321,7 +249,7 @@
     "defaultMessage": "Kirjautuneena nimellä"
   },
   "DkgCAz": {
-    "defaultMessage": "Miten voin suoratoistaa tunestr.ioissa?"
+    "defaultMessage": "Miten voin suoratoistaa zap.streamissa?"
   },
   "Dn82AL": {
     "defaultMessage": "Live"
@@ -400,10 +328,10 @@
     "defaultMessage": "Nimi"
   },
   "HDgXO/": {
-    "defaultMessage": "tunestr.io on avoimen lähdekoodin alusta, joka perustuu nostr-protokollaan. Käytettävissä ei ole mitään jättiläisyhtiöitä tai jättiläisrahastoja, jotka tarjoaisivat ilmaista suoratoistoa."
+    "defaultMessage": "zap.stream on avoimen lähdekoodin alusta, joka perustuu nostr-protokollaan. Käytettävissä ei ole mitään jättiläisyhtiöitä tai jättiläisrahastoja, jotka tarjoaisivat ilmaista suoratoistoa."
   },
   "HsgeUk": {
-    "defaultMessage": "Tule katsomaan streamiani tunestr.ioiin! {link}"
+    "defaultMessage": "Tule katsomaan streamiani zap.streamiin! {link}"
   },
   "Ht231k": {
     "defaultMessage": "Edelleenlähetys"
@@ -469,13 +397,13 @@
     "defaultMessage": "Zap Tavoitteet"
   },
   "LUvSJB": {
-    "defaultMessage": "tunestr.io on ilmainen jopa 2 tuntia hosting korkealla laadulla ja jopa 8 tuntia \"lähde\" laatua. Sen jälkeen sinulla on mahdollisuus streamata 5 satsia minuutissa tai 10 satsia minuutissa valitsemastasi laadusta riippuen. Jos et käytä tunestr.ioia isännöintiin, hinnoittelu riippuu valitsemastasi suoratoistopalveluntarjoajasta."
+    "defaultMessage": "zap.stream on ilmainen jopa 2 tuntia hosting korkealla laadulla ja jopa 8 tuntia \"lähde\" laatua. Sen jälkeen sinulla on mahdollisuus streamata 5 satsia minuutissa tai 10 satsia minuutissa valitsemastasi laadusta riippuen. Jos et käytä zap.streamia isännöintiin, hinnoittelu riippuu valitsemastasi suoratoistopalveluntarjoajasta."
   },
   "Le+99Z": {
     "defaultMessage": "Streamerit maksavat pienen maksun, jolla katetaan juoksevia kulujamme. Annamme uusille striimaajille {amount} satsin (noin {time_estimate} striimausta) luottoa, jotta he pääsevät alkuun!"
   },
   "Lg2ye2": {
-    "defaultMessage": "Tunestr on uudenlainen suoratoistoalusta, jonka avulla voit ansaita bitcoinia (satsia) sillä hetkellä, kun aloitat suoratoiston! Katsojat voivat antaa striimaajille tippiä minkä tahansa valitsemansa summan. Vihjeet talletetaan välittömästi bitcoin (salama) -lompakkoosi. tunestr.io ei koskaan koske ansioihin!"
+    "defaultMessage": "ZapStream on uudenlainen suoratoistoalusta, jonka avulla voit ansaita bitcoinia (satsia) sillä hetkellä, kun aloitat suoratoiston! Katsojat voivat antaa striimaajille tippiä minkä tahansa valitsemansa summan. Vihjeet talletetaan välittömästi bitcoin (salama) -lompakkoosi. zap.stream ei koskaan koske ansioihin!"
   },
   "LknBsU": {
     "defaultMessage": "Streamin avain"
@@ -537,7 +465,7 @@
     "defaultMessage": "Jätä tyhjäksi, jos et halua asettaa mitään tavoitteita."
   },
   "PUymyQ": {
-    "defaultMessage": "Tule katsomaan {name} stream osoitteessa tunestr.io! {link}"
+    "defaultMessage": "Tule katsomaan {name} stream osoitteessa zap.stream! {link}"
   },
   "PXAur5": {
     "defaultMessage": "Peruuta"
@@ -622,7 +550,7 @@
     "description": "Relative time, ie. 1s ago"
   },
   "UGFYV8": {
-    "defaultMessage": "Tervetuloa tunestr.ioiin!"
+    "defaultMessage": "Tervetuloa zap.streamiin!"
   },
   "UJBFYK": {
     "defaultMessage": "Lisää kortti"
@@ -806,7 +734,7 @@
     "defaultMessage": "No Thanks!"
   },
   "h9mX2/": {
-    "defaultMessage": "Jos käytät sisäistä tunestr.io-hostingia (halvin ja helpoin), kopioi stream URL-osoite ja Stream Key OBS-asetuksiisi, ja sinun pitäisi olla valmis."
+    "defaultMessage": "Jos käytät sisäistä zap.stream-hostingia (halvin ja helpoin), kopioi stream URL-osoite ja Stream Key OBS-asetuksiisi, ja sinun pitäisi olla valmis."
   },
   "hMzcSq": {
     "defaultMessage": "Viestit"
@@ -988,7 +916,7 @@
     "defaultMessage": "{n,selectordinal,one{@ #st min} two{@ #nd min} few{@ #rd min} other{@ @ #th min}}"
   },
   "tVCC9m": {
-    "defaultMessage": "Satsit ovat pieniä Bitcoin-yksiköitä. Satsin lähettämistä tunestr.ioissa kutsutaan \"zappingiksi\" tai zapsiksi."
+    "defaultMessage": "Satsit ovat pieniä Bitcoin-yksiköitä. Satsin lähettämistä zap.streamissa kutsutaan \"zappingiksi\" tai zapsiksi."
   },
   "thsiMl": {
     "defaultMessage": "käyttöehdot"
@@ -1012,7 +940,7 @@
     "defaultMessage": "Uusimmat videot"
   },
   "vP4dFa": {
-    "defaultMessage": "Käy osoitteessa {link} saadaksesi makeaa tunestr.io-tavaraa!"
+    "defaultMessage": "Käy osoitteessa {link} saadaksesi makeaa zap.stream-tavaraa!"
   },
   "vrTOHJ": {
     "defaultMessage": "{amount} satsia"
@@ -1039,7 +967,7 @@
     "defaultMessage": "Valitse ääni..."
   },
   "wRGjPp": {
-    "defaultMessage": "Nostr-laajennus yksinkertaisesti tallentaa avaimesi, jotta voit turvallisesti kirjautua sisään ilman, että sinun tarvitsee syöttää niitä joka kerta uudelleen. Tunestr käyttää laajennusta valtuuttamaan toimintoja puolestasi näkemättä koskaan avaintietojasi. Tämä on merkittävä etu verrattuna siihen, että sinun pitäisi luottaa siihen, että verkkosivustot käsittelevät tunnuksiasi turvallisesti."
+    "defaultMessage": "Nostr-laajennus yksinkertaisesti tallentaa avaimesi, jotta voit turvallisesti kirjautua sisään ilman, että sinun tarvitsee syöttää niitä joka kerta uudelleen. ZapStream käyttää laajennusta valtuuttamaan toimintoja puolestasi näkemättä koskaan avaintietojasi. Tämä on merkittävä etu verrattuna siihen, että sinun pitäisi luottaa siihen, että verkkosivustot käsittelevät tunnuksiasi turvallisesti."
   },
   "wTwfnv": {
     "defaultMessage": "Virheellinen nostr-osoite"
@@ -1070,7 +998,7 @@
     "defaultMessage": "Klipsit"
   },
   "yR0V+W": {
-    "defaultMessage": "Voit aloittaa suoratoiston tunestr.ioissa noudattamalla seuraavia ohjeita:"
+    "defaultMessage": "Voit aloittaa suoratoiston zap.streamissa noudattamalla seuraavia ohjeita:"
   },
   "yj8NrY": {
     "defaultMessage": "Clip"

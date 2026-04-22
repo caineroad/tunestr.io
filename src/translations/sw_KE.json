@@ -1,76 +1,4 @@
 {
-  "contactUs": {
-    "defaultMessage": "Wasiliana Nasi"
-  },
-  "independentMusic": {
-    "defaultMessage": "muziki huru"
-  },
-  "independentMoney": {
-    "defaultMessage": "fedha huru"
-  },
-  "forIndependentArtists": {
-    "defaultMessage": "kwa wasanii huru"
-  },
-  "generateExtraRevenue": {
-    "defaultMessage": "tengeneza mapato ya ziada kwenye maonyesho yako ya moja kwa moja"
-  },
-  "discoverNewWay": {
-    "defaultMessage": "gundua njia mpya ya kutumia mitandao ya kijamii"
-  },
-  "engagePassionateFanBase": {
-    "defaultMessage": "shiriki na wafuasi wapya wenye shauku mtandaoni"
-  },
-  "findBiggestFans": {
-    "defaultMessage": "tafuta mashabiki wako wakubwa na kuunganishwa nao moja kwa moja"
-  },
-  "learnMonetizationStrategy": {
-    "defaultMessage": "jifunze kuhusu mkakati mpya wa kupata fedha kwa waundaji"
-  },
-  "forIndependentVenues": {
-    "defaultMessage": "kwa vituo huru"
-  },
-  "differentiateYourself": {
-    "defaultMessage": "jitofautishe kwa wasanii wanaofanya ziara"
-  },
-  "promoteVenue": {
-    "defaultMessage": "tangaza kituo chako na matukio kwa watazamaji wengi zaidi"
-  },
-  "createInteractiveConcert": {
-    "defaultMessage": "unda uzoefu mpya wa tamasha shirikishi mtandaoni"
-  },
-  "streamShowsMinimalEffort": {
-    "defaultMessage": "rusha maonyesho yako moja kwa moja kwa juhudi kidogo, zaidi ya uenezaji wa kimapokezi"
-  },
-  "keepTouringEconomics": {
-    "defaultMessage": "saidia kudumisha uchumi wa ziara uwe mzuri"
-  },
-  "forIndependentFans": {
-    "defaultMessage": "kwa mashabiki wa muziki huru"
-  },
-  "proveToFavoriteArtists": {
-    "defaultMessage": "thibitisha kwa wasanii wako unaowapendelea kuwa wewe ndiye msaidizi wao mkubwa zaidi"
-  },
-  "giveLiveFeedback": {
-    "defaultMessage": "toa maoni ya moja kwa moja wakati wa maonyesho na ulipe burudani moja kwa moja"
-  },
-  "connectWithFans": {
-    "defaultMessage": "unganisha na mashabiki wengine wakati wa maonyesho"
-  },
-  "joinNewCommunity": {
-    "defaultMessage": "jiunge na jumuiya mpya ya mitandao ya kijamii ambapo wewe si bidhaa"
-  },
-  "keepMusicCommunity": {
-    "defaultMessage": "saidia kudumisha jumuiya ya muziki huru istawi"
-  },
-  "footerEssentials": {
-    "defaultMessage": "MUHIMU"
-  },
-  "footerThanks": {
-    "defaultMessage": "ASANTE"
-  },
-  "footerArtists": {
-    "defaultMessage": "WASANII"
-  },
   "+0zv6g": {
     "defaultMessage": "Picha"
   },
@@ -261,7 +189,7 @@
     "defaultMessage": "Anwani ya Nostr"
   },
   "9rmSgv": {
-    "defaultMessage": "OBS (Open Broadcaster Software) ni programu huru na ya chanzo wazi kwa kurekodi video na kutiririsha moja kwa moja kwenye Windows, Mac na Linux. Ni chaguo maarufu kwa watumiaji wa mitiririko. Utahitaji hii kuchukua video yako, sauti na chochote kingine unachotaka kuongeza kwenye mtiririko wako. Baada ya kusakinishwa na kusanidiwa kulingana na upendeleo, ongeza URL yako ya Mtiririko na Ufunguo wa Mtiririko kutoka kwa Mipangilio ya Mtiririko kwa OBS ili kuanzisha uhusiano na tunestr.io."
+    "defaultMessage": "OBS (Open Broadcaster Software) ni programu huru na ya chanzo wazi kwa kurekodi video na kutiririsha moja kwa moja kwenye Windows, Mac na Linux. Ni chaguo maarufu kwa watumiaji wa mitiririko. Utahitaji hii kuchukua video yako, sauti na chochote kingine unachotaka kuongeza kwenye mtiririko wako. Baada ya kusakinishwa na kusanidiwa kulingana na upendeleo, ongeza URL yako ya Mtiririko na Ufunguo wa Mtiririko kutoka kwa Mipangilio ya Mtiririko kwa OBS ili kuanzisha uhusiano na zap.stream."
   },
   "A1zT+z": {
     "defaultMessage": "Matokeo ya Utafutaji: {term}"
@@ -321,7 +249,7 @@
     "defaultMessage": "Ingia kama"
   },
   "DkgCAz": {
-    "defaultMessage": "Ninawezaje kutiririsha kwenye tunestr.io?"
+    "defaultMessage": "Ninawezaje kutiririsha kwenye zap.stream?"
   },
   "Dn82AL": {
     "defaultMessage": "Moja kwa moja"
@@ -400,10 +328,10 @@
     "defaultMessage": "Jina"
   },
   "HDgXO/": {
-    "defaultMessage": "tunestr.io is an open source platform powered by the nostr protocol. There are no giant corporations or giant funds available to provide free streaming."
+    "defaultMessage": "zap.stream is an open source platform powered by the nostr protocol. There are no giant corporations or giant funds available to provide free streaming."
   },
   "HsgeUk": {
-    "defaultMessage": "Njoo uangalie mtiririko wangu kwenye tunestr.io! {link}"
+    "defaultMessage": "Njoo uangalie mtiririko wangu kwenye zap.stream! {link}"
   },
   "Ht231k": {
     "defaultMessage": "Forwarding"
@@ -469,13 +397,13 @@
     "defaultMessage": "Malengo ya Zap"
   },
   "LUvSJB": {
-    "defaultMessage": "Kukaribisha kwa tunestr.io ni bure kwa hadi masaa 2 kwa ubora wa juu na hadi masaa 8 kwa ubora wa \"Chanzo\". Baada ya hapo, unaweza kutiririsha kwa Sats 5 kwa dakika au Sats 10 kwa dakika, kulingana na ubora uliochagua. Ikiwa hautumii tunestr.io kwa kukaribisha, bei itategemea mtoa huduma wa mtiririko uliochagua."
+    "defaultMessage": "Kukaribisha kwa zap.stream ni bure kwa hadi masaa 2 kwa ubora wa juu na hadi masaa 8 kwa ubora wa \"Chanzo\". Baada ya hapo, unaweza kutiririsha kwa Sats 5 kwa dakika au Sats 10 kwa dakika, kulingana na ubora uliochagua. Ikiwa hautumii zap.stream kwa kukaribisha, bei itategemea mtoa huduma wa mtiririko uliochagua."
   },
   "Le+99Z": {
     "defaultMessage": "Streamers pay a small fee to cover our running costs. We give new streamers a credit of {amount} sats (about {time_estimate} of streaming) to get started!"
   },
   "Lg2ye2": {
-    "defaultMessage": "Tunestr is a new kind of streaming platform that allows you to earn bitcoin (sats) the moment you start streaming! Viewers can tip streamers any amount they choose. The tips are instantly deposited to your bitcoin (lightning) wallet. tunestr.io never touches your earnings!"
+    "defaultMessage": "ZapStream is a new kind of streaming platform that allows you to earn bitcoin (sats) the moment you start streaming! Viewers can tip streamers any amount they choose. The tips are instantly deposited to your bitcoin (lightning) wallet. zap.stream never touches your earnings!"
   },
   "LknBsU": {
     "defaultMessage": "Ufunguo wa Mtiririko"
@@ -537,7 +465,7 @@
     "defaultMessage": "Leave blank if you do not wish to set up any goals."
   },
   "PUymyQ": {
-    "defaultMessage": "Njoo uangalie mtiririko wa {name} kwenye tunestr.io! {link}"
+    "defaultMessage": "Njoo uangalie mtiririko wa {name} kwenye zap.stream! {link}"
   },
   "PXAur5": {
     "defaultMessage": "Withdraw"
@@ -622,7 +550,7 @@
     "description": "Relative time, ie. 1s ago"
   },
   "UGFYV8": {
-    "defaultMessage": "Karibu kwenye tunestr.io!"
+    "defaultMessage": "Karibu kwenye zap.stream!"
   },
   "UJBFYK": {
     "defaultMessage": "Ongeza Kadi"
@@ -806,7 +734,7 @@
     "defaultMessage": "No Thanks!"
   },
   "h9mX2/": {
-    "defaultMessage": "Ikiwa unatumia Hosting yetu ya ndani ya tunestr.io (bei rahisi na rahisi zaidi), nakili URL yako ya Mtiririko na Ufunguo wako wa Mtiririko kwenye mipangilio yako ya OBS na utakuwa tayari kuanza."
+    "defaultMessage": "Ikiwa unatumia Hosting yetu ya ndani ya zap.stream (bei rahisi na rahisi zaidi), nakili URL yako ya Mtiririko na Ufunguo wako wa Mtiririko kwenye mipangilio yako ya OBS na utakuwa tayari kuanza."
   },
   "hMzcSq": {
     "defaultMessage": "Ujumbe wa Mazungumzo"
@@ -988,7 +916,7 @@
     "defaultMessage": "{n,selectordinal,one{@ #. Min.} two{@ #. Min.} few{@ #. Min.} other{@ #. Min.}}"
   },
   "tVCC9m": {
-    "defaultMessage": "Sats ni vitengo vidogo vya Bitcoin. Kutuma sats kwenye tunestr.io kunajulikana kama \"Zapping\" au Zaps."
+    "defaultMessage": "Sats ni vitengo vidogo vya Bitcoin. Kutuma sats kwenye zap.stream kunajulikana kama \"Zapping\" au Zaps."
   },
   "thsiMl": {
     "defaultMessage": "Sheria na Masharti"
@@ -1012,7 +940,7 @@
     "defaultMessage": "Latest Videos"
   },
   "vP4dFa": {
-    "defaultMessage": "Visit {link} to get some sweet tunestr.io merch!"
+    "defaultMessage": "Visit {link} to get some sweet zap.stream merch!"
   },
   "vrTOHJ": {
     "defaultMessage": "{amount} sats"
@@ -1039,7 +967,7 @@
     "defaultMessage": "Chagua Sauti..."
   },
   "wRGjPp": {
-    "defaultMessage": "Nostr Extension hifadhi tu funguo zako ili uweze kuingia kwa usalama bila kuziingiza kila wakati. Tunestr hutumia kifaa hiki cha kuongeza vitendo kwa niaba yako bila kuona kamwe habari zako za funguo. Hii ina faida kuu ya kutokuwa na imani kwako kuwa tovuti zitashughulikia data yako ya kuingia kwa usalama."
+    "defaultMessage": "Nostr Extension hifadhi tu funguo zako ili uweze kuingia kwa usalama bila kuziingiza kila wakati. ZapStream hutumia kifaa hiki cha kuongeza vitendo kwa niaba yako bila kuona kamwe habari zako za funguo. Hii ina faida kuu ya kutokuwa na imani kwako kuwa tovuti zitashughulikia data yako ya kuingia kwa usalama."
   },
   "wTwfnv": {
     "defaultMessage": "Anwani ya Nostr Batili"
@@ -1070,7 +998,7 @@
     "defaultMessage": "Vipande"
   },
   "yR0V+W": {
-    "defaultMessage": "Ili kuanza kutiririsha kwenye tunestr.io, fuata hatua hizi:"
+    "defaultMessage": "Ili kuanza kutiririsha kwenye zap.stream, fuata hatua hizi:"
   },
   "yj8NrY": {
     "defaultMessage": "Clip"

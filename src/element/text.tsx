@@ -1,12 +1,13 @@
-import { NostrLink, NostrPrefix, ParsedFragment, transformText, tryParseNostrLink } from "@snort/system";
-import { FunctionComponent, useMemo } from "react";
-import { Link } from "react-router-dom";
+import { type NostrLink, type ParsedFragment, transformText, tryParseNostrLink } from "@snort/system";
+import { type FunctionComponent, useMemo } from "react";
+import { Link } from "react-router";
 
 import { Emoji } from "./emoji";
 import { Mention } from "./mention";
 import { HyperText } from "./hypertext";
 import { EventEmbed } from "./event-embed";
 import { SendZapsDialog } from "./send-zap";
+import { NostrPrefix } from "@snort/shared";
 
 export type EventComponent = FunctionComponent<{ link: NostrLink }>;
 
@@ -27,7 +28,13 @@ export function Text({ content, tags, eventComponent, className }: TextProps) {
     switch (f.type) {
       case "custom_emoji":
         return <Emoji name={f.content} url={f.content} key={ctr++} />;
-      case "media":
+      case "media": {
+        return (
+          <HyperText link={f.content} key={ctr++}>
+            {f.content}
+          </HyperText>
+        );
+      }
       case "link": {
         if (f.content.startsWith("nostr:")) {
           const link = tryParseNostrLink(f.content);
@@ -39,7 +46,7 @@ export function Text({ content, tags, eventComponent, className }: TextProps) {
             ) {
               return eventComponent?.({ link }) ?? <EventEmbed link={link} key={ctr++} />;
             } else {
-              return <Mention pubkey={link.id} key={ctr++} />;
+              return <Mention link={link} key={ctr++} />;
             }
           }
         }
@@ -49,8 +56,14 @@ export function Text({ content, tags, eventComponent, className }: TextProps) {
           </HyperText>
         );
       }
-      case "mention":
-        return <Mention pubkey={f.content} key={ctr++} />;
+      case "mention": {
+        const link = tryParseNostrLink(f.content);
+        if (link) {
+          return <Mention link={link} key={ctr++} />;
+        } else {
+          return f.content;
+        }
+      }
       case "hashtag":
         return (
           <Link to={`/t/${f.content}`} key={ctr++}>

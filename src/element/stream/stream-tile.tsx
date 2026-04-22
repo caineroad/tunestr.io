@@ -1,21 +1,49 @@
-import { NostrEvent, NostrLink } from "@snort/system";
+import { type NostrEvent, NostrLink } from "@snort/system";
 import { FormattedMessage } from "react-intl";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { getName } from "../profile";
 
-import { StreamState } from "@/const";
+import { N94_LIVE_STREAM, NIP5_DOMAIN, StreamState } from "@/const";
 import useImgProxy from "@/hooks/img-proxy";
 import { formatSats } from "@/number";
 import { extractStreamInfo, getHost, profileLink } from "@/utils";
 import { useUserProfile } from "@snort/system-react";
 import classNames from "classnames";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Avatar } from "../avatar";
 import Logo from "../logo";
 import { useContentWarning } from "../nsfw";
 import PillOpaque from "../pill-opaque";
 import { RelativeTime } from "../relative-time";
 import { StatePill } from "../state-pill";
+import type { NostrJson } from "@snort/shared";
+
+const nameCache = new Map<string, NostrJson>();
+async function fetchNostrAddresByPubkey(
+  pubkey: string,
+  domain: string,
+  timeout = 2_000,
+): Promise<NostrJson | undefined> {
+  if (!pubkey || !domain) {
+    return undefined;
+  }
+  const cacheKey = `${pubkey}@${domain}`;
+  if (nameCache.has(cacheKey)) {
+    return nameCache.get(cacheKey);
+  }
+  try {
+    const res = await fetch(`https://${domain}/.well-known/nostr.json?pubkey=${pubkey}`, {
+      signal: AbortSignal.timeout(timeout),
+    });
+    const ret = (await res.json()) as NostrJson;
+    nameCache.set(cacheKey, ret);
+
+    return ret;
+  } catch {
+    // ignored
+  }
+  return undefined;
+}
 
 export function StreamTile({
   ev,
@@ -32,14 +60,30 @@ export function StreamTile({
   style: "list" | "grid";
   className?: string;
 }) {
-  const { title, image, status, participants, contentWarning, recording, ends } = extractStreamInfo(ev);
+  const { title, image, thumbnail, status, participants, contentWarning, recording, ends } = extractStreamInfo(ev);
   const host = getHost(ev);
+  const link = NostrLink.fromEvent(ev);
   const hostProfile = useUserProfile(host);
   const isGrownUp = useContentWarning();
   const { proxy } = useImgProxy();
+  const [videoLink, setVideoLink] = useState(`/${link.encode()}`);
 
-  const link = NostrLink.fromEvent(ev);
-  const [hasImg, setHasImage] = useState((image?.length ?? 0) > 0 || (recording?.length ?? 0) > 0);
+  useEffect(() => {
+    if (status === StreamState.Live || ev.kind === N94_LIVE_STREAM) {
+      fetchNostrAddresByPubkey(host, NIP5_DOMAIN).then(h => {
+        if (h) {
+          const names = Object.entries(h.names);
+          if (names.length > 0) {
+            setVideoLink(`/${names[0][0]}`);
+          }
+        }
+      });
+    }
+  }, [status, videoLink]);
+
+  const [hasImg, setHasImage] = useState(
+    (image?.length ?? 0) > 0 || (thumbnail?.length ?? 0) > 0 || (recording?.length ?? 0) > 0,
+  );
   return (
     <div
       className={classNames("flex gap-2", className, {
@@ -47,7 +91,7 @@ export function StreamTile({
         "flex-row": style === "list",
       })}>
       <Link
-        to={`/${link.encode()}`}
+        to={videoLink}
         className={classNames(
           {
             "blur transition": contentWarning,
@@ -61,13 +105,13 @@ export function StreamTile({
             <img
               loading="lazy"
               className="w-full h-inherit object-cover"
-              src={proxy(image ?? recording ?? "")}
+              src={proxy(image ?? thumbnail ?? recording ?? "")}
               onError={() => {
                 setHasImage(false);
               }}
             />
           ) : (
-            <Logo className="text-white aspect-video h-inherit mx-auto text-layer-3" width={60} />
+            <Logo className="aspect-video h-inherit mx-auto text-layer-3" width={60} />
           )}
           <span className="flex flex-col justify-between absolute top-0 h-full right-2 items-end py-2">
             {showStatus && <StatePill state={status as StreamState} />}

@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import AsyncButton, { AsyncButtonProps } from "./async-button";
+import AsyncButton, { type AsyncButtonProps } from "./async-button";
 import { Icon } from "./icon";
 import classNames from "classnames";
 
@@ -14,7 +14,7 @@ export const DefaultButton = forwardRef<HTMLButtonElement, AsyncButtonProps>((pr
   return (
     <AsyncButton
       {...props}
-      className={classNames(props.className, buttonBaseClass, "bg-layer-2 text-white")}
+      className={classNames(props.className, buttonBaseClass, "bg-neutral-800 text-white")}
       ref={ref}
     />
   );

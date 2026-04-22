@@ -66,11 +66,11 @@
 
 ::-webkit-scrollbar {
   width: 10px;
-  background: transparent;
+  background: #111;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #312267;
+  background: #333;
   border-radius: 100px;
   min-height: 24px;
 }

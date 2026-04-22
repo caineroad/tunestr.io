@@ -1,14 +1,17 @@
 import { base64 } from "@scure/base";
-import { StreamProvider, StreamProviderEndpoint, StreamProviders } from ".";
-import { EventKind, EventPublisher, NostrEvent, SystemInterface } from "@snort/system";
+import { EventKind, type EventPublisher, type NostrEvent, type SystemInterface } from "@snort/system";
 import { Login } from "@/login";
 import { getPublisher } from "@/login";
 import { extractStreamInfo } from "@/utils";
 import { appendDedupe, unixNow } from "@snort/shared";
 import { TimeSync } from "@/time-sync";
 
-export class NostrStreamProvider implements StreamProvider {
+export class NostrStreamProvider {
   #publisher?: EventPublisher;
+  #wsConnection?: WebSocket;
+  #metricsCallbacks = new Map<string, (metrics: MetricsMessage) => void>();
+  #pendingStreams = new Set<string>();
+  #isAuthenticated = false;
 
   constructor(
     readonly name: string,
@@ -21,42 +24,14 @@ export class NostrStreamProvider implements StreamProvider {
     this.#publisher = pub;
   }
 
-  get type() {
-    return StreamProviders.NostrType;
-  }
-
   async info() {
     const rsp = await this.#getJson<AccountResponse>("GET", "account");
-    return {
-      type: StreamProviders.NostrType,
-      name: this.name,
-      balance: rsp.balance,
-      tosAccepted: rsp.tos?.accepted,
-      tosLink: rsp.tos?.link,
-      endpoints: rsp.endpoints.map(a => {
-        return {
-          name: a.name,
-          url: a.url,
-          key: a.key,
-          rate: a.cost.rate,
-          unit: a.cost.unit,
-          capabilities: a.capabilities,
-        } as StreamProviderEndpoint;
-      }),
-      forwards: rsp.forwards,
-    };
-  }
-
-  createConfig() {
-    return {
-      type: StreamProviders.NostrType,
-      url: this.url,
-    };
+    return rsp;
   }
 
   async updateStreamInfo(_: SystemInterface, ev: NostrEvent): Promise<void> {
     const { title, summary, image, tags, contentWarning, goal, gameId, id } = extractStreamInfo(ev);
-    await this.#getJson("PATCH", "event", {
+    const props = {
       id,
       title,
       summary,
@@ -64,19 +39,18 @@ export class NostrStreamProvider implements StreamProvider {
       tags: appendDedupe(tags, gameId ? [gameId] : undefined),
       content_warning: contentWarning,
       goal,
-    });
+    };
+    await this.updateStream(props);
   }
 
-  async updateStream(props: {
-    id: string;
-    title?: string;
-    summary?: string;
-    image?: string;
-    tags?: Array<string>;
-    content_warning?: string;
-    goal?: string;
-  }): Promise<void> {
+  async updateStream(props: StreamDetails): Promise<void> {
     await this.#getJson("PATCH", "event", props);
+
+    // also update the default stream event details
+    if (props.id) {
+      delete props.id;
+      await this.#getJson("PATCH", "event", props);
+    }
   }
 
   async topup(amount: number): Promise<string> {
@@ -94,6 +68,18 @@ export class NostrStreamProvider implements StreamProvider {
   async acceptTos(): Promise<void> {
     await this.#getJson("PATCH", "account", {
       accept_tos: true,
+    });
+  }
+
+  async configureNwc(nwcUri: string): Promise<void> {
+    await this.#getJson("PATCH", "account", {
+      nwc: nwcUri,
+    });
+  }
+
+  async removeNwc(): Promise<void> {
+    await this.#getJson("PATCH", "account", {
+      remove_nwc: true,
     });
   }
 
@@ -145,7 +131,10 @@ export class NostrStreamProvider implements StreamProvider {
   }
 
   async streamKeys(page = 0, pageSize = 20) {
-    return await this.#getJson<StreamKeysResult>("GET", `keys?page=${page}&pageSize=${pageSize}`);
+    return await this.#getJson<StreamKeysResult | Array<StreamKeyItem>>(
+      "GET",
+      `keys?page=${page}&pageSize=${pageSize}`,
+    );
   }
 
   async createStreamKey(expires?: undefined) {
@@ -153,6 +142,156 @@ export class NostrStreamProvider implements StreamProvider {
       event: { title: "New stream key, who dis" },
       expires,
     });
+  }
+
+  async connectWebSocket(): Promise<void> {
+    if (this.#wsConnection && this.#wsConnection.readyState === WebSocket.OPEN) {
+      return; // Already connected
+    }
+
+    const wsUrl = `${this.url.replace(/^https?:/, "wss:").replace(/\/$/, "")}/ws`;
+    this.#wsConnection = new WebSocket(wsUrl);
+
+    this.#wsConnection.onopen = async () => {
+      console.debug("Provider WebSocket connected");
+
+      // Send NIP-98 authentication using existing auth flow
+      try {
+        const pub = this.#getPublisher();
+        if (pub) {
+          const token = await pub.generic(eb => {
+            return eb
+              .kind(EventKind.HttpAuthentication)
+              .content("")
+              .tag(["u", wsUrl])
+              .tag(["method", "GET"])
+              .createdAt(unixNow() + Math.floor(TimeSync / 1000));
+          });
+
+          const authMessage = {
+            type: "Auth",
+            data: { token: base64.encode(new TextEncoder().encode(JSON.stringify(token))) },
+          };
+          this.#wsConnection?.send(JSON.stringify(authMessage));
+        }
+      } catch (error) {
+        console.error("Failed to authenticate WebSocket:", error);
+      }
+    };
+
+    this.#wsConnection.onmessage = event => {
+      try {
+        const data = JSON.parse(event.data);
+
+        // Handle different message types based on admin API
+        switch (data.type) {
+          case "AuthResponse":
+            console.debug("WebSocket authenticated, subscribing to streams");
+            this.#isAuthenticated = true;
+            // After successful auth, subscribe to any pending streams
+            this.#subscribeToPendingStreams();
+            // Notify callbacks about auth success
+            this.#metricsCallbacks.forEach(callback => {
+              callback(data);
+            });
+            break;
+          case "StreamMetrics":
+            // Notify all registered callbacks
+            this.#metricsCallbacks.forEach(callback => {
+              callback(data);
+            });
+            break;
+          case "Error":
+            console.error("WebSocket error:", data.error);
+            break;
+          default:
+            // Handle any other message types
+            this.#metricsCallbacks.forEach(callback => {
+              callback(data);
+            });
+        }
+      } catch (error) {
+        console.error("Failed to parse WebSocket message:", error);
+      }
+    };
+
+    this.#wsConnection.onclose = event => {
+      console.debug("Provider WebSocket disconnected");
+      // Auto-reconnect after 5 seconds if not a manual close
+      if (event.code !== 1000) {
+        setTimeout(() => {
+          this.connectWebSocket();
+        }, 5000);
+      }
+    };
+
+    this.#wsConnection.onerror = error => {
+      console.error("WebSocket error:", error);
+    };
+  }
+
+  subscribeToMetrics(streamId: string, callback: (metrics: MetricsMessage) => void): void {
+    const subscriptionKey = `metrics_${streamId}`;
+    this.#metricsCallbacks.set(subscriptionKey, callback);
+
+    // Connect if not already connected
+    this.connectWebSocket().then(() => {
+      // If authenticated, subscribe immediately, otherwise queue for later
+      if (this.#isAuthenticated && this.#wsConnection && this.#wsConnection.readyState === WebSocket.OPEN) {
+        this.#sendSubscription(streamId);
+      } else {
+        this.#pendingStreams.add(streamId);
+      }
+    });
+  }
+
+  unsubscribeFromMetrics(streamId: string): void {
+    const subscriptionKey = `metrics_${streamId}`;
+    this.#metricsCallbacks.delete(subscriptionKey);
+
+    // If no more callbacks, we could close the connection
+    if (this.#metricsCallbacks.size === 0 && this.#wsConnection) {
+      this.#wsConnection.close();
+    }
+  }
+
+  closeWebSocket(): void {
+    if (this.#wsConnection) {
+      this.#wsConnection.close();
+      this.#wsConnection = undefined;
+    }
+    this.#metricsCallbacks.clear();
+    this.#pendingStreams.clear();
+    this.#isAuthenticated = false;
+  }
+
+  #subscribeToPendingStreams(): void {
+    this.#pendingStreams.forEach(streamId => {
+      this.#sendSubscription(streamId);
+    });
+    this.#pendingStreams.clear();
+  }
+
+  #sendSubscription(streamId: string): void {
+    if (this.#wsConnection && this.#wsConnection.readyState === WebSocket.OPEN) {
+      this.#wsConnection.send(
+        JSON.stringify({
+          type: "SubscribeStream",
+          data: {
+            stream_id: streamId,
+          },
+        }),
+      );
+    }
+  }
+
+  #getPublisher(): EventPublisher | undefined {
+    if (this.#publisher) {
+      return this.#publisher;
+    } else {
+      const login = Login.snapshot();
+      return login && getPublisher(login);
+    }
   }
 
   async #getJson<T>(method: "GET" | "POST" | "PATCH" | "DELETE", path: string, body?: unknown): Promise<T> {
@@ -191,7 +330,17 @@ export class NostrStreamProvider implements StreamProvider {
   }
 }
 
-interface AccountResponse {
+export interface StreamDetails {
+  id?: string;
+  title?: string;
+  summary?: string;
+  image?: string;
+  tags?: Array<string>;
+  content_warning?: string;
+  goal?: string;
+}
+
+export interface AccountResponse {
   balance: number;
   endpoints: Array<IngestEndpoint>;
   tos?: {
@@ -199,14 +348,16 @@ interface AccountResponse {
     link: string;
   };
   forwards: Array<ForwardDest>;
+  details?: StreamDetails;
+  has_nwc?: boolean;
 }
 
-interface ForwardDest {
+export interface ForwardDest {
   id: string;
   name: string;
 }
 
-interface IngestEndpoint {
+export interface IngestEndpoint {
   name: string;
   url: string;
   key: string;
@@ -217,7 +368,7 @@ interface IngestEndpoint {
   capabilities: Array<string>;
 }
 
-interface TopUpResponse {
+export interface TopUpResponse {
   pr: string;
 }
 
@@ -232,14 +383,43 @@ export interface BalanceHistoryResult {
   pageSize: number;
 }
 
+export interface StreamKeyItem {
+  id: string;
+  created: number;
+  key: string;
+  expires?: number;
+  stream?: NostrEvent;
+}
+
 export interface StreamKeysResult {
-  items: Array<{
-    id: string;
-    created: number;
-    key: string;
-    expires?: number;
-    stream?: NostrEvent;
-  }>;
+  items: Array<StreamKeyItem>;
   page: number;
   pageSize: number;
+}
+
+export interface MetricsMessage {
+  type: "StreamMetrics" | "AuthResponse" | "Error" | string;
+  data?: {
+    stream_id?: string;
+    pubkey?: string;
+    user_id?: number;
+    started_at?: string;
+    last_segment_time?: string;
+    node_name?: string;
+    viewers?: number;
+    average_fps?: number;
+    target_fps?: number;
+    frame_count?: number;
+    endpoint_name?: string;
+    input_resolution?: string;
+    ip_address?: string;
+    ingress_name?: string;
+    endpoint_stats?: {
+      [key: string]: {
+        name: string;
+        bitrate: number;
+      };
+    };
+  };
+  error?: string;
 }
