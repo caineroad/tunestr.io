@@ -73,8 +73,12 @@ export function EndStreamButton({ event, label, confirm = true, className, onEnd
         {label ?? <FormattedMessage defaultMessage="End Stream" />}
       </WarningButton>
       {open && (
-        <Modal id="confirm-end-stream" onClose={() => setOpen(false)}>
-          <div className="flex flex-col gap-4 max-w-md">
+        <Modal
+          id="confirm-end-stream"
+          onClose={() => setOpen(false)}
+          bodyClassName="relative bg-layer-1 p-8 rounded-3xl my-auto max-w-md"
+        >
+          <div className="flex flex-col gap-4">
             <h2>
               <FormattedMessage defaultMessage="End this stream?" />
             </h2>

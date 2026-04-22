@@ -125,8 +125,8 @@ export default function DashboardForLink() {
     <div
       className={classNames('grid gap-2 h-[calc(100dvh-52px)] w-full', {
         'grid-cols-3': streamInfo?.status === StreamState.Live,
-        'grid-cols-[20%_80%]': streamInfo?.status === StreamState.Ended || streamInfo?.status === undefined,
         'grid-cols-[40%_60%]': streamInfo?.status === StreamState.Planned,
+        'grid-cols-[20%_80%]': streamInfo?.status !== StreamState.Live && streamInfo?.status !== StreamState.Planned,
       })}
     >
       <div className="min-h-0 h-full grid grid-rows-[min-content_auto] gap-2">
@@ -164,7 +164,7 @@ export default function DashboardForLink() {
                 </div>
               </>
             )}
-          {(!eventLink || streamInfo?.status === StreamState.Ended) && (
+          {(!eventLink || !streamInfo?.status || streamInfo?.status === StreamState.Ended) && (
             <>
               <div className="bg-layer-1 rounded-xl aspect-video flex items-center justify-center uppercase text-warning font-semibold">
                 <FormattedMessage defaultMessage="Offline" />
@@ -188,6 +188,11 @@ export default function DashboardForLink() {
                 </div>
                 {defaultEndpoint && <StreamKey ep={defaultEndpoint} />}
                 {!defaultEndpoint && infoError && <ProviderErrorFallback error={infoError} onRetry={retryInfo} />}
+                {!defaultEndpoint && !infoError && !info && (
+                  <p className="text-layer-5 text-sm">
+                    <FormattedMessage defaultMessage="Loading stream provider info..." />
+                  </p>
+                )}
                 {!defaultEndpoint && !infoError && info && (
                   <p className="text-layer-5 text-sm">
                     <FormattedMessage defaultMessage="No streaming endpoints are provisioned for your account on this provider yet. If TOS hasn't been accepted, do that first." />
@@ -242,7 +247,7 @@ export default function DashboardForLink() {
           </div>
         </>
       )}
-      {eventLink && streamInfo?.status === StreamState.Ended && (
+      {eventLink && (!streamInfo?.status || streamInfo?.status === StreamState.Ended) && (
         <DashboardCard className="overflow-y-auto">
           <h1>
             <FormattedMessage defaultMessage="Last Stream Summary" />

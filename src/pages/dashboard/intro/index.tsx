@@ -8,30 +8,47 @@ import { FormattedMessage, FormattedNumber } from 'react-intl'
 import { useNavigate } from 'react-router'
 import ZapGlow from '../zap-glow'
 import { AcceptTos } from '../tos'
-import type { AccountResponse } from '@/providers'
 import { ProviderSelectorButton } from '../provider-selector'
+import { useProviderInfo } from '@/hooks/use-provider-info'
+import { ProviderErrorFallback } from '@/element/provider-error-fallback'
 
 export default function DashboardIntro() {
   const navigate = useNavigate()
-  const [info, setInfo] = useState<AccountResponse>()
   const [tos, setTos] = useState<boolean>(false)
   const exampleHours = 4
   const { provider: streamProvider } = useStreamProvider()
+
+  const {
+    info,
+    error: infoError,
+    loading,
+    retry: retryInfo,
+  } = useProviderInfo(streamProvider)
+
+  useEffect(() => {
+    setTos(Boolean(info?.tos?.accepted))
+  }, [info?.tos?.accepted])
 
   const defaultEndpoint = useMemo(() => {
     return info?.endpoints?.find(a => a.name === 'Best') ?? info?.endpoints?.at(0)
   }, [info])
   const rate = useRates('BTCUSD')
 
-  useEffect(() => {
-    streamProvider
-      .info()
-      .then(i => {
-        setInfo(i)
-        setTos(Boolean(i.tos?.accepted))
-      })
-      .catch(e => console.warn('Provider info failed:', e))
-  }, [streamProvider])
+  if (loading) {
+    return (
+      <div className="flex flex-col gap-4 mx-auto xl:w-1/3 lg:w-1/2 bg-layer-1 rounded-xl border border-layer-2 p-6 items-center justify-center min-h-[200px]">
+        <FormattedMessage defaultMessage="Loading provider info…" />
+      </div>
+    )
+  }
+
+  if (infoError) {
+    return (
+      <div className="flex flex-col gap-4 mx-auto xl:w-1/3 lg:w-1/2 bg-layer-1 rounded-xl border border-layer-2 p-6">
+        <ProviderErrorFallback error={infoError} onRetry={retryInfo} />
+      </div>
+    )
+  }
 
   if (!defaultEndpoint) return
 
@@ -75,7 +92,7 @@ export default function DashboardIntro() {
                     <FormattedMessage
                       defaultMessage="~{cost}/day for {hours}hr stream"
                       values={{
-                        cost: <FormattedNumber value={endpointCost} style="currency" currency="USD" />,
+                        cost: <FormattedNumber key="cost" value={endpointCost} style="currency" currency="USD" />,
                         hours: exampleHours,
                       }}
                     />
