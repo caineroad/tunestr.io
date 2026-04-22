@@ -2,7 +2,8 @@ import { useStreamsFeed } from '@/hooks/live-streams'
 import VideoGridSorted from '@/element/video-grid-sorted'
 
 export function StreamsPage() {
-  const streams = useStreamsFeed()
+  // Show all whitelisted streams PLUS any music-tagged stream from anyone.
+  const streams = useStreamsFeed(undefined, { includeTagFromAnyone: 'music' })
 
   return (
     <div className="flex flex-col gap-6 p-4 min-w-0">
