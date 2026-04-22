@@ -1,88 +1,87 @@
-import BalanceTimeEstimate from "@/element/balance-time-estimate";
-import { NewStreamDialog } from "@/element/new-stream";
-import AccountTopup from "@/element/provider/nostr/topup";
-import LiveVideoPlayer from "@/element/stream/live-video-player";
-import { StreamTimer } from "@/element/stream/stream-time";
-import type { AccountResponse, MetricsMessage, NostrStreamProvider } from "@/providers";
-import type { NostrEvent } from "@snort/system";
-import { useState, useEffect, useMemo } from "react";
-import { FormattedMessage, FormattedNumber } from "react-intl";
-import BalanceHistoryModal from "./balance-history";
-import { DashboardRaidButton } from "./button-raid";
-import { DashboardSettingsButton } from "./button-settings";
-import { ProviderSelectorButton } from "./provider-selector";
-import { DashboardStatsCard } from "./stats-card";
-import { useStream } from "@/element/stream/stream-state";
-import { useLogin } from "@/hooks/login";
-import { LIVE_STREAM } from "@/const";
-import { CompactMetricsDisplay } from "./realtime-metrics";
+import BalanceTimeEstimate from '@/element/balance-time-estimate'
+import { NewStreamDialog } from '@/element/new-stream'
+import AccountTopup from '@/element/provider/nostr/topup'
+import LiveVideoPlayer from '@/element/stream/live-video-player'
+import { StreamTimer } from '@/element/stream/stream-time'
+import type { MetricsMessage, NostrStreamProvider } from '@/providers'
+import type { NostrEvent } from '@snort/system'
+import { useState, useEffect, useMemo } from 'react'
+import { FormattedMessage, FormattedNumber } from 'react-intl'
+import BalanceHistoryModal from './balance-history'
+import { DashboardRaidButton } from './button-raid'
+import { DashboardSettingsButton } from './button-settings'
+import { ProviderSelectorButton } from './provider-selector'
+import { DashboardStatsCard } from './stats-card'
+import { useStream } from '@/element/stream/stream-state'
+import { useLogin } from '@/hooks/login'
+import { LIVE_STREAM } from '@/const'
+import { CompactMetricsDisplay } from './realtime-metrics'
+import { EndStreamButton } from '@/element/stream/end-stream-button'
+import { useProviderInfo } from '@/hooks/use-provider-info'
+import { ProviderErrorFallback } from '@/element/provider-error-fallback'
 
 export function DashboardLiveStreamInfo({ provider }: { provider: NostrStreamProvider }) {
-  const { link, event, info: streamInfo } = useStream();
-  const login = useLogin();
-  const isMyManual = event?.pubkey === login?.pubkey;
-  const [info, setInfo] = useState<AccountResponse>();
-  const [maxParticipants, setMaxParticipants] = useState(0);
-  const [metrics, setMetrics] = useState<MetricsMessage>();
-  const id = streamInfo?.id;
+  const { link, event, info: streamInfo } = useStream()
+  const login = useLogin()
+  const isMyManual = event?.pubkey === login?.pubkey
+  const [maxParticipants, setMaxParticipants] = useState(0)
+  const [metrics, setMetrics] = useState<MetricsMessage>()
+  const id = streamInfo?.id
+
+  const {
+    info,
+    error: infoError,
+    retry: retryInfo,
+  } = useProviderInfo(provider, {
+    skip: isMyManual,
+    pollingMs: 60_000,
+  })
 
   const defaultEndpoint = useMemo(() => {
-    const metricsEndpint = metrics?.data?.endpoint_name ?? "Best";
-    return info?.endpoints?.find(a => a.name === metricsEndpint) ?? info?.endpoints?.at(0);
-  }, [info, metrics]);
-
-  useEffect(() => {
-    if (!isMyManual) {
-      provider.info().then(setInfo);
-      const t = setInterval(() => {
-        provider.info().then(setInfo);
-      }, 1000 * 60);
-      return () => {
-        clearInterval(t);
-      };
-    }
-  }, [isMyManual, provider.url]);
+    const metricsEndpint = metrics?.data?.endpoint_name ?? 'Best'
+    return info?.endpoints?.find(a => a.name === metricsEndpint) ?? info?.endpoints?.at(0)
+  }, [info, metrics])
 
   useEffect(() => {
     if (id) {
       provider.subscribeToMetrics(id, m => {
-        if (m.type === "StreamMetrics") {
-          setMetrics(m);
+        if (m.type === 'StreamMetrics') {
+          setMetrics(m)
         }
-      });
-      return () => provider.unsubscribeFromMetrics(id);
+      })
+      return () => provider.unsubscribeFromMetrics(id)
     }
-  }, [id, provider]);
+  }, [id, provider])
 
-  const participants = metrics?.data?.viewers ? metrics?.data?.viewers : Number(streamInfo?.participants);
+  const participants = metrics?.data?.viewers ? metrics?.data?.viewers : Number(streamInfo?.participants)
   useEffect(() => {
     if (participants) {
-      setMaxParticipants(v => (v < Number(participants) ? Number(participants) : v));
+      setMaxParticipants(v => (v < Number(participants) ? Number(participants) : v))
     }
-  }, [participants]);
+  }, [participants])
 
   const streamToEdit =
     event ??
     (info?.details && !isMyManual
       ? {
-          id: "",
-          pubkey: "",
+          id: '',
+          pubkey: '',
           created_at: 0,
-          sig: "",
-          content: "",
+          sig: '',
+          content: '',
           kind: LIVE_STREAM,
           tags: [
-            ["d", ""],
-            ["title", info.details.title ?? ""],
-            ["summary", info.details?.summary ?? ""],
-            ["picture", info.details.image ?? ""],
-            ["service", provider.url],
-            ...(info.details.tags?.map(t => ["t", t]) ?? []),
+            ['d', ''],
+            ['title', info.details.title ?? ''],
+            ['summary', info.details?.summary ?? ''],
+            ['picture', info.details.image ?? ''],
+            ['service', provider.url],
+            ...(info.details.tags?.map(t => ['t', t]) ?? []),
           ],
         }
-      : undefined);
+      : undefined)
 
-  if (!link) return;
+  if (!link) return
   return (
     <>
       <div className="flex justify-between items-center">
@@ -106,7 +105,7 @@ export function DashboardLiveStreamInfo({ provider }: { provider: NostrStreamPro
             <StreamTimer
               ev={
                 metrics?.data?.started_at
-                  ? ({ tags: [["starts", new Date(metrics.data?.started_at).getTime() / 1000]] } as NostrEvent)
+                  ? ({ tags: [['starts', new Date(metrics.data?.started_at).getTime() / 1000]] } as NostrEvent)
                   : event
               }
             />
@@ -116,6 +115,7 @@ export function DashboardLiveStreamInfo({ provider }: { provider: NostrStreamPro
         <DashboardStatsCard name={<FormattedMessage defaultMessage="Top Viewers" />} value={maxParticipants} />
       </div>
 
+      {!defaultEndpoint && infoError && <ProviderErrorFallback error={infoError} onRetry={retryInfo} />}
       {defaultEndpoint && (
         <div className="bg-layer-1 rounded-xl px-4 py-3 flex justify-between items-center text-layer-5">
           <div>
@@ -129,14 +129,14 @@ export function DashboardLiveStreamInfo({ provider }: { provider: NostrStreamPro
                 ),
                 balance: <FormattedNumber value={info?.balance ?? 0} />,
                 rate: defaultEndpoint.cost.rate ?? 0,
-                unit: defaultEndpoint.cost.unit ?? "min",
+                unit: defaultEndpoint.cost.unit ?? 'min',
               }}
             />
           </div>
           <AccountTopup
             provider={provider}
             onFinish={() => {
-              provider.info().then(setInfo);
+              retryInfo()
             }}
           />
         </div>
@@ -147,7 +147,8 @@ export function DashboardLiveStreamInfo({ provider }: { provider: NostrStreamPro
         <DashboardSettingsButton ev={event} provider={provider} />
         <BalanceHistoryModal provider={provider} />
         <ProviderSelectorButton />
+        {event && <EndStreamButton event={event} />}
       </div>
     </>
-  );
+  )
 }

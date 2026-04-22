@@ -1,35 +1,38 @@
-import { FormattedMessage, useIntl } from "react-intl";
-import StepHeader from "./step-header";
-import { DefaultButton } from "@/element/buttons";
-import { useStreamProvider } from "@/hooks/stream-provider";
-import { useContext, useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router";
-import { GoalSelector } from "@/element/stream-editor/goal-selector";
-import AmountInput from "@/element/amount-input";
-import { useLogin } from "@/hooks/login";
-import { GOAL, defaultRelays } from "@/const";
-import { SnortContext } from "@snort/system-react";
+import { FormattedMessage, useIntl } from 'react-intl'
+import StepHeader from './step-header'
+import { DefaultButton } from '@/element/buttons'
+import { useStreamProvider } from '@/hooks/stream-provider'
+import { useContext, useEffect, useState } from 'react'
+import { useLocation, useNavigate } from 'react-router'
+import { GoalSelector } from '@/element/stream-editor/goal-selector'
+import AmountInput from '@/element/amount-input'
+import { useLogin } from '@/hooks/login'
+import { GOAL, defaultRelays } from '@/const'
+import { SnortContext } from '@snort/system-react'
 
 export default function DashboardIntroStep4() {
-  const navigate = useNavigate();
-  const location = useLocation();
-  const [goalName, setGoalName] = useState("");
-  const [goalAmount, setGoalMount] = useState(0);
-  const [goal, setGoal] = useState<string>();
-  const { formatMessage } = useIntl();
-  const login = useLogin();
-  const system = useContext(SnortContext);
-  const { provider: streamProvider } = useStreamProvider();
+  const navigate = useNavigate()
+  const location = useLocation()
+  const [goalName, setGoalName] = useState('')
+  const [goalAmount, setGoalMount] = useState(0)
+  const [goal, setGoal] = useState<string>()
+  const { formatMessage } = useIntl()
+  const login = useLogin()
+  const system = useContext(SnortContext)
+  const { provider: streamProvider } = useStreamProvider()
 
   async function loadInfo() {
-    streamProvider.info().then(i => {
-      setGoal(i.details?.goal);
-    });
+    streamProvider
+      .info()
+      .then(i => {
+        setGoal(i.details?.goal)
+      })
+      .catch(e => console.warn('Provider info failed:', e))
   }
 
   useEffect(() => {
-    loadInfo();
-  }, []);
+    loadInfo()
+  }, [])
 
   return (
     <div className="mx-auto flex flex-col items-center md:w-[30rem] max-md:w-full max-md:px-3">
@@ -49,7 +52,7 @@ export default function DashboardIntroStep4() {
             <input
               type="text"
               placeholder={formatMessage({
-                defaultMessage: "Goal Name",
+                defaultMessage: 'Goal Name',
               })}
               value={goalName}
               onChange={e => setGoalName(e.target.value)}
@@ -59,42 +62,43 @@ export default function DashboardIntroStep4() {
         )}
         <DefaultButton
           onClick={async () => {
-            const pub = login?.publisher();
+            const pub = login?.publisher()
             if (!goal && pub && goalName && goalAmount) {
               const goalEvent = await pub.generic(eb => {
                 return eb
                   .kind(GOAL)
-                  .tag(["amount", String(goalAmount * 1000)])
-                  .tag(["relays", ...Object.keys(defaultRelays)])
-                  .content(goalName);
-              });
-              await system.BroadcastEvent(goalEvent);
+                  .tag(['amount', String(goalAmount * 1000)])
+                  .tag(['relays', ...Object.keys(defaultRelays)])
+                  .content(goalName)
+              })
+              await system.BroadcastEvent(goalEvent)
               const newState = {
                 ...location.state,
                 goal: goalEvent.id,
-              };
-              await streamProvider.updateStream(newState);
-              navigate("/dashboard/final", {
+              }
+              await streamProvider.updateStream(newState)
+              navigate('/dashboard/final', {
                 state: newState,
-              });
+              })
             } else if (goal) {
               const newState = {
                 ...location.state,
                 goal,
-              };
-              await streamProvider.updateStream(newState);
-              navigate("/dashboard/final", {
+              }
+              await streamProvider.updateStream(newState)
+              navigate('/dashboard/final', {
                 state: newState,
-              });
+              })
             } else {
-              navigate("/dashboard/final", {
+              navigate('/dashboard/final', {
                 state: location.state,
-              });
+              })
             }
-          }}>
+          }}
+        >
           <FormattedMessage defaultMessage="Continue" />
         </DefaultButton>
       </div>
     </div>
-  );
+  )
 }

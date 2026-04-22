@@ -50,6 +50,9 @@
   "04lmFi": {
     "defaultMessage": "Save Key"
   },
+  "0ITNzZ": {
+    "defaultMessage": "End this stream?"
+  },
   "0VV/sK": {
     "defaultMessage": "Goal"
   },
@@ -178,6 +181,9 @@
   },
   "5vMmmR": {
     "defaultMessage": "Usernames are not unique on Nostr. The nostr address is your unique human-readable address that is unique to you upon registration."
+  },
+  "62nsdy": {
+    "defaultMessage": "Retry"
   },
   "67kKdC": {
     "defaultMessage": "nostr key manager for chrome"
@@ -316,6 +322,9 @@
   },
   "E9APoR": {
     "defaultMessage": "Could not create stream URL"
+  },
+  "EBm1pr": {
+    "defaultMessage": "{url} responded with an error ({status}): {message}"
   },
   "ESyhzp": {
     "defaultMessage": "Your comment for {name}"
@@ -473,6 +482,9 @@
   },
   "LxSJOb": {
     "defaultMessage": "Go to Dashboard"
+  },
+  "M0V134": {
+    "defaultMessage": "Reset to default provider"
   },
   "ME2dFN": {
     "defaultMessage": "Your recommendation:"
@@ -818,6 +830,9 @@
   "aqjZxs": {
     "defaultMessage": "Raid!"
   },
+  "aurGw8": {
+    "defaultMessage": "No signer available. Please log in again."
+  },
   "axGJ3t": {
     "defaultMessage": "loading quoted post..."
   },
@@ -832,6 +847,9 @@
   },
   "bfvyfs": {
     "defaultMessage": "Anon"
+  },
+  "bvmSd7": {
+    "defaultMessage": "Couldn't reach {url}. This is usually a DNS, TLS, or connectivity problem on the provider or your network."
   },
   "c3LlRO": {
     "defaultMessage": "{n}KiB"
@@ -1049,6 +1067,9 @@
   "lZpRMR": {
     "defaultMessage": "Check here if this stream contains nudity or pornographic content."
   },
+  "lb/5wo": {
+    "defaultMessage": "Streaming provider unreachable"
+  },
   "ljmS5P": {
     "defaultMessage": "Endpoint"
   },
@@ -1090,6 +1111,9 @@
   },
   "nVZ61O": {
     "defaultMessage": "key concepts:"
+  },
+  "nZr3Wo": {
+    "defaultMessage": "This publishes a 'stream ended' update so your dashboard can return to the setup view. If your streaming software is still pushing video, your provider may republish a new live event shortly afterwards."
   },
   "nk7cF5": {
     "defaultMessage": "no subscriptions or paywalls"
@@ -1281,6 +1305,9 @@
   "vb8spb": {
     "defaultMessage": "show less"
   },
+  "veKR0s": {
+    "defaultMessage": "No streaming endpoints are provisioned for your account on this provider yet. If TOS hasn't been accepted, do that first."
+  },
   "vrTOHJ": {
     "defaultMessage": "{amount} sats"
   },
@@ -1313,6 +1340,9 @@
   },
   "we4Lby": {
     "defaultMessage": "Info"
+  },
+  "whSA06": {
+    "defaultMessage": "The request to {url} timed out. The provider may be down or your network is blocking it."
   },
   "wmP47l": {
     "defaultMessage": "a musician sets up their stream and goes live on tunestr. the performance is broadcast to anyone in the world."
