@@ -21,7 +21,6 @@ import {
   ChevronLeft,
   ChevronRight,
   ChevronUp,
-  MapPin,
 } from 'lucide-react'
 
 import { StreamState, FEATURED_VIDEOS } from '@/const'
@@ -482,55 +481,6 @@ export function RootPage() {
               <FormattedMessage defaultMessage="learn about bitcoin, nostr, and value for value" />
               <ArrowRight className="w-4 h-4" />
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== LIVE EVENTS TEASER ===== */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="bg-gradient-to-br from-layer-1 to-layer-2/50 rounded-2xl border border-layer-2 p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
-            <div className="flex-1">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 text-primary text-sm font-semibold mb-4">
-                <MapPin className="w-4 h-4" />
-                <FormattedMessage defaultMessage="live events" />
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
-                <FormattedMessage defaultMessage="from First Avenue to Antone's." />
-              </h2>
-              <p className="text-layer-5 text-lg leading-relaxed mb-6">
-                <FormattedMessage defaultMessage="tunestr has brought bitcoin-powered live streaming to legendary venues across the country. see where we've been and where we're headed next." />
-              </p>
-              <Link
-                to="/events"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border-2 border-primary text-primary font-bold hover:bg-primary hover:text-layer-0 transition-colors"
-              >
-                <FormattedMessage defaultMessage="see all events" />
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-            <div className="flex-1 grid grid-cols-2 gap-3">
-              <img
-                src="/tunestr/antones-crowd.jpg"
-                alt="Antone's crowd"
-                className="rounded-xl object-cover aspect-square w-full"
-              />
-              <img
-                src="/tunestr/launch-event-band.jpg"
-                alt="LAUNCH event"
-                className="rounded-xl object-cover aspect-square w-full"
-              />
-              <img
-                src="/tunestr/zap-leaderboard-antones.jpg"
-                alt="Zap leaderboard"
-                className="rounded-xl object-cover aspect-square w-full"
-              />
-              <img
-                src="/tunestr/sara-jade-salon.jpg"
-                alt="Sara Jade performing"
-                className="rounded-xl object-cover aspect-square w-full"
-              />
-            </div>
           </div>
         </div>
       </section>

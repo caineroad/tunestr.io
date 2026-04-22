@@ -56,14 +56,6 @@ export function TunestrFooter() {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/events"
-                    className="text-layer-5 hover:text-white transition-colors inline-flex items-center gap-2"
-                  >
-                    Events
-                  </Link>
-                </li>
-                <li>
                   <a
                     href="https://value4value.info"
                     target="_blank"

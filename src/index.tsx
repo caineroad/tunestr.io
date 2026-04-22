@@ -1,102 +1,101 @@
-import "@szhsin/react-menu/dist/index.css";
-import "./index.css";
+import '@szhsin/react-menu/dist/index.css'
+import './index.css'
 //import "./fonts/outfit/outfit.css";
 
-import React, { Suspense, lazy } from "react";
-import ReactDOM from "react-dom/client";
-import { EventBuilder, NostrSystem } from "@snort/system";
-import { SnortContext } from "@snort/system-react";
-import { RouterProvider, createBrowserRouter } from "react-router";
+import React, { Suspense, lazy } from 'react'
+import ReactDOM from 'react-dom/client'
+import { EventBuilder, NostrSystem } from '@snort/system'
+import { SnortContext } from '@snort/system-react'
+import { RouterProvider, createBrowserRouter } from 'react-router'
 
-import { RootPage } from "@/pages/root";
-import { TagPage } from "@/pages/tag";
-import { LayoutPage } from "@/pages/layout";
-import { ProfilePage } from "@/pages/profile-page";
-import { ChatPopout } from "@/pages/chat-popout";
-import { defaultRelays } from "@/const";
-import { CatchAllRoutePage } from "@/pages/catch-all";
-import { IntlProvider } from "@/intl";
-import { WidgetsPage } from "@/pages/widgets";
-import { AlertsPage } from "@/pages/alerts";
-import { StreamSummaryPage } from "@/pages/summary";
-import { EmbededPage } from "./pages/embed";
-import { WasmOptimizer, WasmPath, wasmInit } from "./wasm";
-const DashboardPage = lazy(() => import("./pages/dashboard"));
-import { syncClock } from "./time-sync";
-import SettingsPage from "./pages/settings";
-import AccountSettingsTab from "./pages/settings/account";
-import SearchPage from "./pages/search";
-import SocialPage from "./pages/social";
-import ProfileSettings from "./pages/settings/profile";
-import { WorkerRelayInterface } from "@snort/worker-relay";
-import WorkerVite from "@snort/worker-relay/src/worker?worker";
+import { RootPage } from '@/pages/root'
+import { TagPage } from '@/pages/tag'
+import { LayoutPage } from '@/pages/layout'
+import { ProfilePage } from '@/pages/profile-page'
+import { ChatPopout } from '@/pages/chat-popout'
+import { defaultRelays } from '@/const'
+import { CatchAllRoutePage } from '@/pages/catch-all'
+import { IntlProvider } from '@/intl'
+import { WidgetsPage } from '@/pages/widgets'
+import { AlertsPage } from '@/pages/alerts'
+import { StreamSummaryPage } from '@/pages/summary'
+import { EmbededPage } from './pages/embed'
+import { WasmOptimizer, WasmPath, wasmInit } from './wasm'
+const DashboardPage = lazy(() => import('./pages/dashboard'))
+import { syncClock } from './time-sync'
+import SettingsPage from './pages/settings'
+import AccountSettingsTab from './pages/settings/account'
+import SearchPage from './pages/search'
+import SocialPage from './pages/social'
+import ProfileSettings from './pages/settings/profile'
+import { WorkerRelayInterface } from '@snort/worker-relay'
+import WorkerVite from '@snort/worker-relay/src/worker?worker'
 //import MarkdownPage from "./pages/md-page";
-import DashboardIntroStep1 from "./pages/dashboard/intro/step1";
-import DashboardIntroStep2 from "./pages/dashboard/intro/step2";
-import DashboardIntroStep3 from "./pages/dashboard/intro/step3";
-import DashboardIntroStep4 from "./pages/dashboard/intro/step4";
-import DashboardIntroFinal from "./pages/dashboard/intro/final";
-import { LayoutContextProvider } from "./pages/layout/context";
-import { VideosPage } from "./pages/videos";
-import { LinkHandler } from "./pages/link-handler";
-import { UploadPage } from "./pages/upload";
-import { DebugPage } from "./pages/debug";
-import { ShortsPage } from "./pages/shorts";
-import { StreamsPage } from "./pages/streams";
-import AboutPage from "./pages/about";
-import EventsPage from "./pages/events";
-import { TosPage } from "./pages/tos";
-import { Login } from "./login";
-import { HelmetProvider } from "@dr.pogodin/react-helmet";
-import { FormattedMessage } from "react-intl";
+import DashboardIntroStep1 from './pages/dashboard/intro/step1'
+import DashboardIntroStep2 from './pages/dashboard/intro/step2'
+import DashboardIntroStep3 from './pages/dashboard/intro/step3'
+import DashboardIntroStep4 from './pages/dashboard/intro/step4'
+import DashboardIntroFinal from './pages/dashboard/intro/final'
+import { LayoutContextProvider } from './pages/layout/context'
+import { VideosPage } from './pages/videos'
+import { LinkHandler } from './pages/link-handler'
+import { UploadPage } from './pages/upload'
+import { DebugPage } from './pages/debug'
+import { ShortsPage } from './pages/shorts'
+import { StreamsPage } from './pages/streams'
+import AboutPage from './pages/about'
+import { TosPage } from './pages/tos'
+import { Login } from './login'
+import { HelmetProvider } from '@dr.pogodin/react-helmet'
+import { FormattedMessage } from 'react-intl'
 
-const hasWasm = "WebAssembly" in globalThis;
-const disableWasmForPaths = ["/chat", "/alert", "/embed"];
-const useWorkerRelay = disableWasmForPaths.every(a => !window.location.pathname.startsWith(a)) && hasWasm;
+const hasWasm = 'WebAssembly' in globalThis
+const disableWasmForPaths = ['/chat', '/alert', '/embed']
+const useWorkerRelay = disableWasmForPaths.every(a => !window.location.pathname.startsWith(a)) && hasWasm
 const workerRelay = new WorkerRelayInterface(
-  import.meta.env.DEV ? new URL("@snort/worker-relay/dist/esm/worker.mjs", import.meta.url) : new WorkerVite(),
-);
-console.debug(`WASM config: has=${hasWasm}, use_worker_relay=${useWorkerRelay}`);
-EventBuilder.ClientTag = ["client", "tunestr.io", __TUNESTR_IO_VERSION__];
+  import.meta.env.DEV ? new URL('@snort/worker-relay/dist/esm/worker.mjs', import.meta.url) : new WorkerVite(),
+)
+console.debug(`WASM config: has=${hasWasm}, use_worker_relay=${useWorkerRelay}`)
+EventBuilder.ClientTag = ['client', 'tunestr.io', __TUNESTR_IO_VERSION__]
 export const System = new NostrSystem({
   optimizer: hasWasm ? WasmOptimizer : undefined, // use optimizer always when WASM is available
   cachingRelay: useWorkerRelay ? workerRelay : undefined,
   buildFollowGraph: true,
   disableSyncModule: true,
-});
+})
 Object.entries(defaultRelays).forEach(params => {
-  const [relay, settings] = params;
-  System.ConnectToRelay(relay, settings);
-});
+  const [relay, settings] = params
+  System.ConnectToRelay(relay, settings)
+})
 
-let hasInit = false;
+let hasInit = false
 async function doInit() {
-  if (hasInit) return;
-  hasInit = true;
+  if (hasInit) return
+  hasInit = true
   if (hasWasm) {
-    await wasmInit(WasmPath);
+    await wasmInit(WasmPath)
   }
   if (useWorkerRelay) {
     try {
       await workerRelay.init({
-        databasePath: "relay.db",
+        databasePath: 'relay.db',
         insertBatchSize: 100,
-      });
+      })
       await workerRelay.configureSearchIndex({
         1311: [],
-        30311: ["title", "summary"],
-      });
+        30311: ['title', 'summary'],
+      })
     } catch (e) {
-      console.error(e);
+      console.error(e)
     }
   }
-  const login = Login.snapshot();
-  const follows = login?.state?.follows;
-  await System.Init(follows);
-  syncClock();
+  const login = Login.snapshot()
+  const follows = login?.state?.follows
+  await System.Init(follows)
+  syncClock()
 
   if (login?.pubkey) {
-    System.config.socialGraphInstance.setRoot(login.pubkey);
+    System.config.socialGraphInstance.setRoot(login.pubkey)
   }
 }
 
@@ -104,70 +103,70 @@ const router = createBrowserRouter([
   {
     element: <LayoutPage />,
     loader: async () => {
-      await doInit();
-      return null;
+      await doInit()
+      return null
     },
     children: [
       {
-        path: "/debug",
+        path: '/debug',
         element: <DebugPage />,
       },
       {
-        path: "/",
+        path: '/',
         element: <RootPage />,
       },
       {
-        path: "/streams",
+        path: '/streams',
         element: <StreamsPage />,
       },
       {
-        path: "/videos",
+        path: '/videos',
         element: <VideosPage />,
       },
       {
-        path: "/shorts",
+        path: '/shorts',
         element: <ShortsPage />,
       },
       {
-        path: "/upload",
+        path: '/upload',
         element: <UploadPage />,
       },
       {
-        path: "/t/:tag",
+        path: '/t/:tag',
         element: <TagPage />,
       },
       {
-        path: "/p/:id",
+        path: '/p/:id',
         element: <ProfilePage />,
       },
       {
-        path: "/:id",
+        path: '/:id',
         element: <LinkHandler />,
       },
       {
-        path: "/settings",
+        path: '/settings',
         element: <SettingsPage />,
         children: [
           {
-            path: "",
+            path: '',
             element: <AccountSettingsTab />,
           },
           {
-            path: "profile",
+            path: 'profile',
             element: <ProfileSettings />,
           },
         ],
       },
       {
-        path: "/widgets",
+        path: '/widgets',
         element: <WidgetsPage />,
       },
       {
-        path: "/summary/:id",
+        path: '/summary/:id',
         element: <StreamSummaryPage />,
       },
       {
-        path: "/dashboard/:id?",
+        path: '/dashboard/:id?',
         element: (
           <Suspense>
             <DashboardPage />
@@ -175,77 +174,74 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/dashboard/step-1",
+        path: '/dashboard/step-1',
         element: <DashboardIntroStep1 />,
       },
       {
-        path: "/dashboard/step-2",
+        path: '/dashboard/step-2',
         element: <DashboardIntroStep2 />,
       },
       {
-        path: "/dashboard/step-3",
+        path: '/dashboard/step-3',
         element: <DashboardIntroStep3 />,
       },
       {
-        path: "/dashboard/step-4",
+        path: '/dashboard/step-4',
         element: <DashboardIntroStep4 />,
       },
       {
-        path: "/dashboard/final",
+        path: '/dashboard/final',
         element: <DashboardIntroFinal />,
       },
       {
-        path: "/search/:term?",
+        path: '/search/:term?',
         element: <SearchPage />,
       },
       {
-        path: "/about",
+        path: '/about',
         element: <AboutPage />,
       },
+
       {
-        path: "/events",
-        element: <EventsPage />,
-      },
-      {
-        path: "/social",
+        path: '/social',
         element: <SocialPage />,
       },
       {
-        path: "/tos",
+        path: '/tos',
         element: <TosPage />,
       },
       {
-        path: "*",
+        path: '*',
         element: <CatchAllRoutePage />,
       },
     ],
   },
   {
-    path: "/chat/:id",
+    path: '/chat/:id',
     element: <ChatPopout />,
     loader: async () => {
-      await doInit();
-      return null;
+      await doInit()
+      return null
     },
   },
   {
-    path: "/alert/:id/:type",
+    path: '/alert/:id/:type',
     element: <AlertsPage />,
     loader: async () => {
-      await doInit();
-      return null;
+      await doInit()
+      return null
     },
   },
   {
-    path: "/embed/:id",
+    path: '/embed/:id',
     element: <EmbededPage />,
     loader: async () => {
-      await doInit();
-      return null;
+      await doInit()
+      return null
     },
   },
-]);
-const root = ReactDOM.createRoot(document.getElementById("root") as HTMLDivElement);
+])
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLDivElement)
 root.render(
   <React.StrictMode>
     <HelmetProvider>
@@ -258,4 +254,4 @@ root.render(
       </SnortContext>
     </HelmetProvider>
   </React.StrictMode>,
-);
+)
