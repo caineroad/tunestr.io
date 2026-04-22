@@ -142,7 +142,7 @@ export function RootPage() {
       </div>
 
       {live.length > 0 && (
-        <section className="relative">
+        <section className="relative p-4">
           <VideoGridSorted
             evs={live}
             showPlanned={false}
