@@ -1,36 +1,56 @@
-import { DefaultButton } from "@/element/buttons";
-import { Icon } from "@/element/icon";
-import CapabilityPill from "@/element/capability-pill";
-import { useRates } from "@/hooks/rates";
-import { useStreamProvider } from "@/hooks/stream-provider";
-import { useEffect, useMemo, useState } from "react";
-import { FormattedMessage, FormattedNumber } from "react-intl";
-import { useNavigate } from "react-router";
-import ZapGlow from "../zap-glow";
-import { AcceptTos } from "../tos";
-import type { AccountResponse } from "@/providers";
-import { ProviderSelectorButton } from "../provider-selector";
+import { DefaultButton } from '@/element/buttons'
+import { Icon } from '@/element/icon'
+import CapabilityPill from '@/element/capability-pill'
+import { useRates } from '@/hooks/rates'
+import { useStreamProvider } from '@/hooks/stream-provider'
+import { useEffect, useMemo, useState } from 'react'
+import { FormattedMessage, FormattedNumber } from 'react-intl'
+import { useNavigate } from 'react-router'
+import ZapGlow from '../zap-glow'
+import { AcceptTos } from '../tos'
+import { ProviderSelectorButton } from '../provider-selector'
+import { useProviderInfo } from '@/hooks/use-provider-info'
+import { ProviderErrorFallback } from '@/element/provider-error-fallback'
 
 export default function DashboardIntro() {
-  const navigate = useNavigate();
-  const [info, setInfo] = useState<AccountResponse>();
-  const [tos, setTos] = useState<boolean>(false);
-  const exampleHours = 4;
-  const { provider: streamProvider } = useStreamProvider();
+  const navigate = useNavigate()
+  const [tos, setTos] = useState<boolean>(false)
+  const exampleHours = 4
+  const { provider: streamProvider } = useStreamProvider()
 
-  const defaultEndpoint = useMemo(() => {
-    return info?.endpoints?.find(a => a.name === "Best") ?? info?.endpoints?.at(0);
-  }, [info]);
-  const rate = useRates("BTCUSD");
+  const {
+    info,
+    error: infoError,
+    loading,
+    retry: retryInfo,
+  } = useProviderInfo(streamProvider)
 
   useEffect(() => {
-    streamProvider.info().then(i => {
-      setInfo(i);
-      setTos(Boolean(i.tos?.accepted));
-    });
-  }, [streamProvider]);
+    setTos(Boolean(info?.tos?.accepted))
+  }, [info?.tos?.accepted])
 
-  if (!defaultEndpoint) return;
+  const defaultEndpoint = useMemo(() => {
+    return info?.endpoints?.find(a => a.name === 'Best') ?? info?.endpoints?.at(0)
+  }, [info])
+  const rate = useRates('BTCUSD')
+
+  if (loading) {
+    return (
+      <div className="flex flex-col gap-4 mx-auto xl:w-1/3 lg:w-1/2 bg-layer-1 rounded-xl border border-layer-2 p-6 items-center justify-center min-h-[200px]">
+        <FormattedMessage defaultMessage="Loading provider info…" />
+      </div>
+    )
+  }
+
+  if (infoError) {
+    return (
+      <div className="flex flex-col gap-4 mx-auto xl:w-1/3 lg:w-1/2 bg-layer-1 rounded-xl border border-layer-2 p-6">
+        <ProviderErrorFallback error={infoError} onRetry={retryInfo} />
+      </div>
+    )
+  }
+
+  if (!defaultEndpoint) return
 
   return (
     <div className="flex flex-col gap-4 mx-auto xl:w-1/3 lg:w-1/2 bg-layer-1 rounded-xl border border-layer-2 p-6">
@@ -53,7 +73,7 @@ export default function DashboardIntro() {
       </p>
       <div className="space-y-3">
         {info?.endpoints?.map(endpoint => {
-          const endpointCost = rate.ask * (exampleHours * endpoint.cost.rate * 60) * 1e-8;
+          const endpointCost = rate.ask * (exampleHours * endpoint.cost.rate * 60) * 1e-8
           return (
             <div key={endpoint.name} className="border border-layer-2 rounded-lg p-3">
               <div className="flex justify-between items-start">
@@ -72,7 +92,7 @@ export default function DashboardIntro() {
                     <FormattedMessage
                       defaultMessage="~{cost}/day for {hours}hr stream"
                       values={{
-                        cost: <FormattedNumber value={endpointCost} style="currency" currency="USD" />,
+                        cost: <FormattedNumber key="cost" value={endpointCost} style="currency" currency="USD" />,
                         hours: exampleHours,
                       }}
                     />
@@ -89,7 +109,7 @@ export default function DashboardIntro() {
                 </div>
               </div>
             </div>
-          );
+          )
         })}
       </div>
       <div className="pt-3 border-t border-layer-2">
@@ -102,13 +122,14 @@ export default function DashboardIntro() {
         disabled={!tos}
         onClick={async () => {
           if (!info?.tos?.accepted) {
-            await streamProvider.acceptTos();
+            await streamProvider.acceptTos()
           }
-          navigate("/dashboard/step-1");
-        }}>
+          navigate('/dashboard/step-1')
+        }}
+      >
         <FormattedMessage defaultMessage="Create Stream" />
         <Icon name="signal" />
       </DefaultButton>
     </div>
-  );
+  )
 }

@@ -1,99 +1,98 @@
-import { LiveChat } from "@/element/chat/live-chat";
-import LiveVideoPlayer from "@/element/stream/live-video-player";
-import { EventExt, type NostrEvent } from "@snort/system";
-import { SnortContext } from "@snort/system-react";
-import { Suspense, lazy, useContext, useEffect, useMemo, useState } from "react";
-import { FormattedMessage } from "react-intl";
-import { StreamState, LIVE_STREAM } from "@/const";
-import { useStream } from "@/element/stream/stream-state";
-import { DashboardRaidButton } from "./button-raid";
-import { DashboardZapColumn } from "./column-zaps";
-import { DashboardChatList } from "./chat-list";
-import { DashboardCard } from "./card";
-import { NewStreamDialog } from "@/element/new-stream";
-import { DashboardSettingsButton } from "./button-settings";
-import DashboardIntro from "./intro";
-import { useLocation, useNavigate } from "react-router";
-import StreamKey from "@/element/provider/nostr/stream-key";
-import { useStreamProvider } from "@/hooks/stream-provider";
-import { type AccountResponse, NostrStreamProvider } from "@/providers/zsz";
-import { ExternalLink } from "@/element/external-link";
-import { Layer1Button, Layer2Button, WarningButton } from "@/element/buttons";
-import { useLogin } from "@/hooks/login";
-import classNames from "classnames";
-import ManualStream from "./manual-stream";
-import { unixNow } from "@snort/shared";
-import { Icon } from "@/element/icon";
-import ForwardingModal from "./forwarding";
-import BalanceHistoryModal from "./balance-history";
-import Modal from "@/element/modal";
-import { AcceptTos } from "./tos";
-import { ProviderSelectorButton } from "./provider-selector";
-import { DashboardLiveStreamInfo } from "./live-stream-info";
-const StreamSummary = lazy(() => import("@/element/summary-chart"));
+import { LiveChat } from '@/element/chat/live-chat'
+import LiveVideoPlayer from '@/element/stream/live-video-player'
+import { Suspense, lazy, useEffect, useMemo, useState } from 'react'
+import { FormattedMessage } from 'react-intl'
+import { StreamState, LIVE_STREAM } from '@/const'
+import { useStream } from '@/element/stream/stream-state'
+import { DashboardRaidButton } from './button-raid'
+import { DashboardZapColumn } from './column-zaps'
+import { DashboardChatList } from './chat-list'
+import { DashboardCard } from './card'
+import { NewStreamDialog } from '@/element/new-stream'
+import { DashboardSettingsButton } from './button-settings'
+import DashboardIntro from './intro'
+import { useLocation, useNavigate } from 'react-router'
+import StreamKey from '@/element/provider/nostr/stream-key'
+import { useStreamProvider } from '@/hooks/stream-provider'
+import { NostrStreamProvider } from '@/providers/zsz'
+import { ExternalLink } from '@/element/external-link'
+import { Layer1Button, Layer2Button, WarningButton } from '@/element/buttons'
+import { useLogin } from '@/hooks/login'
+import classNames from 'classnames'
+import ManualStream from './manual-stream'
+import { Icon } from '@/element/icon'
+import ForwardingModal from './forwarding'
+import BalanceHistoryModal from './balance-history'
+import Modal from '@/element/modal'
+import { AcceptTos } from './tos'
+import { ProviderSelectorButton } from './provider-selector'
+import { DashboardLiveStreamInfo } from './live-stream-info'
+import { EndStreamButton } from '@/element/stream/end-stream-button'
+import { useProviderInfo } from '@/hooks/use-provider-info'
+import { ProviderErrorFallback } from '@/element/provider-error-fallback'
+const StreamSummary = lazy(() => import('@/element/summary-chart'))
 
 export default function DashboardForLink() {
-  const navigate = useNavigate();
-  const { event: streamEvent, info: streamInfo, link: eventLink } = useStream();
+  const navigate = useNavigate()
+  const { event: streamEvent, info: streamInfo, link: eventLink } = useStream()
 
-  const location = useLocation();
-  const system = useContext(SnortContext);
-  const login = useLogin();
-  const [info, setInfo] = useState<AccountResponse>();
-  const [tos, setTos] = useState(info?.tos?.accepted ?? false);
-  const [recording, setRecording] = useState(Boolean(localStorage.getItem("default-recording") ?? "true"));
-  const { provider: streamProvider } = useStreamProvider();
+  const location = useLocation()
+  const login = useLogin()
+  const [tos, setTos] = useState(false)
+  const [recording, setRecording] = useState(Boolean(localStorage.getItem('default-recording') ?? 'true'))
+  const { provider: streamProvider } = useStreamProvider()
 
-  const isMyManual = streamEvent?.pubkey === login?.pubkey;
+  const isMyManual = streamEvent?.pubkey === login?.pubkey
 
   useEffect(() => {
-    localStorage.setItem("default-recording", String(recording));
-  }, [recording]);
+    localStorage.setItem('default-recording', String(recording))
+  }, [recording])
 
   const provider = useMemo(
     () =>
       streamInfo?.status === StreamState.Live && streamInfo?.service
-        ? new NostrStreamProvider("", streamInfo?.service)
+        ? new NostrStreamProvider('', streamInfo?.service)
         : streamProvider,
     [streamInfo?.service, streamInfo?.status, streamProvider],
-  );
+  )
 
-  const defaultEndpoint = useMemo(() => {
-    const metricsEndpint = recording ? "Best" : "Good";
-    return info?.endpoints?.find(a => a.name === metricsEndpint) ?? info?.endpoints?.at(0);
-  }, [info, recording]);
+  const {
+    info,
+    error: infoError,
+    retry: retryInfo,
+  } = useProviderInfo(provider, {
+    skip: isMyManual,
+    pollingMs: 60_000,
+  })
 
   useEffect(() => {
-    if (!isMyManual) {
-      provider.info().then(setInfo);
-      const t = setInterval(() => {
-        provider.info().then(setInfo);
-      }, 1000 * 60);
-      return () => {
-        clearInterval(t);
-      };
-    }
-  }, [isMyManual, provider.url]);
+    setTos(info?.tos?.accepted ?? false)
+  }, [info?.tos?.accepted])
+
+  const defaultEndpoint = useMemo(() => {
+    const metricsEndpint = recording ? 'Best' : 'Good'
+    return info?.endpoints?.find(a => a.name === metricsEndpint) ?? info?.endpoints?.at(0)
+  }, [info, recording])
 
   function headingText() {
     switch (streamInfo?.status) {
       case StreamState.Live:
-        return <FormattedMessage defaultMessage="Started" />;
+        return <FormattedMessage defaultMessage="Started" />
       case StreamState.Ended:
-        return <FormattedMessage defaultMessage="Stopped" />;
+        return <FormattedMessage defaultMessage="Stopped" />
       case StreamState.Planned:
-        return <FormattedMessage defaultMessage="Planned" />;
+        return <FormattedMessage defaultMessage="Planned" />
     }
   }
 
   function headingDotStyle() {
     switch (streamInfo?.status) {
       case StreamState.Live:
-        return "animate-pulse bg-green-500";
+        return 'animate-pulse bg-green-500'
       case StreamState.Ended:
-        return "bg-red-500";
+        return 'bg-red-500'
       case StreamState.Planned:
-        return "bg-yellow-500";
+        return 'bg-yellow-500'
     }
   }
 
@@ -101,34 +100,35 @@ export default function DashboardForLink() {
     streamEvent ??
     (info?.details && !isMyManual
       ? {
-          id: "",
-          pubkey: login?.pubkey ?? "",
+          id: '',
+          pubkey: login?.pubkey ?? '',
           created_at: 0,
-          sig: "",
-          content: "",
+          sig: '',
+          content: '',
           kind: LIVE_STREAM,
           tags: [
-            ["d", ""],
-            ["title", info.details.title ?? ""],
-            ["summary", info.details?.summary ?? ""],
-            ["picture", info.details.image ?? ""],
-            ["service", provider.url],
-            ...(info.details.tags?.map(t => ["t", t]) ?? []),
+            ['d', ''],
+            ['title', info.details.title ?? ''],
+            ['summary', info.details?.summary ?? ''],
+            ['picture', info.details.image ?? ''],
+            ['service', provider.url],
+            ...(info.details.tags?.map(t => ['t', t]) ?? []),
           ],
         }
-      : undefined);
+      : undefined)
 
-  if (!eventLink && !location.search.includes("setupComplete=true")) {
-    return <DashboardIntro />;
+  if (!eventLink && !location.search.includes('setupComplete=true')) {
+    return <DashboardIntro />
   }
 
   return (
     <div
-      className={classNames("grid gap-2 h-[calc(100dvh-52px)] w-full", {
-        "grid-cols-3": streamInfo?.status === StreamState.Live,
-        "grid-cols-[20%_80%]": streamInfo?.status === StreamState.Ended || streamInfo?.status === undefined,
-        "grid-cols-[40%_60%]": streamInfo?.status === StreamState.Planned,
-      })}>
+      className={classNames('grid gap-2 h-[calc(100dvh-52px)] w-full', {
+        'grid-cols-3': streamInfo?.status === StreamState.Live,
+        'grid-cols-[40%_60%]': streamInfo?.status === StreamState.Planned,
+        'grid-cols-[20%_80%]': streamInfo?.status !== StreamState.Live && streamInfo?.status !== StreamState.Planned,
+      })}
+    >
       <div className="min-h-0 h-full grid grid-rows-[min-content_auto] gap-2">
         <DashboardCard className="flex flex-col gap-4">
           {eventLink && streamInfo?.status !== StreamState.Live && (
@@ -160,34 +160,11 @@ export default function DashboardForLink() {
                 <div className="grid gap-2 grid-cols-3">
                   <DashboardRaidButton link={eventLink} />
                   <NewStreamDialog ev={streamToEdit} text={<FormattedMessage defaultMessage="Edit Stream Info" />} />
-                  <WarningButton
-                    onClick={async () => {
-                      //todo: clean this up
-                      const copy = streamEvent ? ({ ...streamEvent } as NostrEvent) : undefined;
-                      const statusTag = copy?.tags.find(a => a[0] === "status");
-                      const endedTag = copy?.tags.find(a => a[0] === "ends");
-                      const pub = login?.signer();
-                      if (statusTag && copy && pub) {
-                        statusTag[1] = StreamState.Ended;
-                        if (endedTag) {
-                          endedTag[1] = String(unixNow());
-                        } else {
-                          copy.tags.push(["ends", String(unixNow())]);
-                        }
-                        copy.created_at = unixNow();
-                        copy.id = EventExt.createId(copy);
-                        const evPub = await pub.sign(copy);
-                        if (evPub) {
-                          await system.BroadcastEvent(evPub);
-                        }
-                      }
-                    }}>
-                    <FormattedMessage defaultMessage="End Stream" />
-                  </WarningButton>
+                  {streamEvent && <EndStreamButton event={streamEvent} />}
                 </div>
               </>
             )}
-          {(!eventLink || streamInfo?.status === StreamState.Ended) && (
+          {(!eventLink || !streamInfo?.status || streamInfo?.status === StreamState.Ended) && (
             <>
               <div className="bg-layer-1 rounded-xl aspect-video flex items-center justify-center uppercase text-warning font-semibold">
                 <FormattedMessage defaultMessage="Offline" />
@@ -210,6 +187,17 @@ export default function DashboardForLink() {
                   <FormattedMessage defaultMessage="Enable Recording" />
                 </div>
                 {defaultEndpoint && <StreamKey ep={defaultEndpoint} />}
+                {!defaultEndpoint && infoError && <ProviderErrorFallback error={infoError} onRetry={retryInfo} />}
+                {!defaultEndpoint && !infoError && !info && (
+                  <p className="text-layer-5 text-sm">
+                    <FormattedMessage defaultMessage="Loading stream provider info..." />
+                  </p>
+                )}
+                {!defaultEndpoint && !infoError && info && (
+                  <p className="text-layer-5 text-sm">
+                    <FormattedMessage defaultMessage="No streaming endpoints are provisioned for your account on this provider yet. If TOS hasn't been accepted, do that first." />
+                  </p>
+                )}
                 <ManualStream />
               </div>
             </>
@@ -247,10 +235,11 @@ export default function DashboardForLink() {
               onClick={() => {
                 window.open(
                   `${window.location.protocol}//${window.location.host}/chat/${eventLink.encode()}?chat=true`,
-                  "",
-                  "popup=true,width=400,height=800",
-                );
-              }}>
+                  '',
+                  'popup=true,width=400,height=800',
+                )
+              }}
+            >
               <Icon name="link" size={24} />
               <FormattedMessage defaultMessage="Chat Popout" />
             </Layer1Button>
@@ -258,15 +247,15 @@ export default function DashboardForLink() {
           </div>
         </>
       )}
-      {eventLink && streamInfo?.status === StreamState.Ended && (
+      {eventLink && (!streamInfo?.status || streamInfo?.status === StreamState.Ended) && (
         <DashboardCard className="overflow-y-auto">
-            <h1>
-              <FormattedMessage defaultMessage="Last Stream Summary" />
-            </h1>
-            <Suspense>
-              <StreamSummary link={eventLink} />
-            </Suspense>
-          </DashboardCard>
+          <h1>
+            <FormattedMessage defaultMessage="Last Stream Summary" />
+          </h1>
+          <Suspense>
+            <StreamSummary link={eventLink} />
+          </Suspense>
+        </DashboardCard>
       )}
       {eventLink && streamInfo?.status === StreamState.Planned && (
         <DashboardCard className="overflow-y-auto"></DashboardCard>
@@ -281,13 +270,14 @@ export default function DashboardForLink() {
                 disabled={!tos}
                 onClick={async () => {
                   if (tos) {
-                    await provider.acceptTos();
-                    provider.info().then(setInfo);
+                    await provider.acceptTos()
+                    await retryInfo()
                   }
-                }}>
+                }}
+              >
                 <FormattedMessage defaultMessage="Save" />
               </Layer2Button>
-              <WarningButton onClick={() => navigate("/")}>
+              <WarningButton onClick={() => navigate('/')}>
                 <FormattedMessage defaultMessage="No Thanks!" />
               </WarningButton>
             </div>
@@ -295,5 +285,5 @@ export default function DashboardForLink() {
         </Modal>
       )}
     </div>
-  );
+  )
 }
