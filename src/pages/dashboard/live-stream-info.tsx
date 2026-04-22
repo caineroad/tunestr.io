@@ -123,11 +123,11 @@ export function DashboardLiveStreamInfo({ provider }: { provider: NostrStreamPro
               defaultMessage="{estimate} remaining ({balance} sats @ {rate} sats / {unit})"
               values={{
                 estimate: (
-                  <span className="text-white">
+                  <span key="estimate" className="text-white">
                     <BalanceTimeEstimate balance={info?.balance ?? 0} endpoint={defaultEndpoint} />
                   </span>
                 ),
-                balance: <FormattedNumber value={info?.balance ?? 0} />,
+                balance: <FormattedNumber key="balance" value={info?.balance ?? 0} />,
                 rate: defaultEndpoint.cost.rate ?? 0,
                 unit: defaultEndpoint.cost.unit ?? 'min',
               }}
