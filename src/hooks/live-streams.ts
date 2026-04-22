@@ -5,17 +5,22 @@ import { LIVE_STREAM_KINDS, WHITELIST } from '@/const'
 
 export interface StreamsFeedOptions {
   /**
-   * Additional tag to pull streams for from ANY author, bypassing the whitelist.
-   * Results are OR'd with the whitelist filters at the relay query level and
-   * deduped by event ID in @snort/system.
+   * Additional tag value(s) to pull streams for from ANY author, bypassing
+   * the whitelist. Pass an array to match multiple case variants (e.g.
+   * ['music', 'Music', 'MUSIC']) — relay filters are case-sensitive.
+   * Results are OR'd with the whitelist filters at the relay query level
+   * and deduped by event ID in @snort/system.
    */
-  includeTagFromAnyone?: string
+  includeTagFromAnyone?: string | string[]
 }
 
 export function useStreamsFeed(tag?: string, options?: StreamsFeedOptions) {
   const alsoTag = options?.includeTagFromAnyone
+  const alsoTagKey = Array.isArray(alsoTag) ? alsoTag.join(',') : alsoTag
+
   const rb = useMemo(() => {
-    const rb = new RequestBuilder(`streams${tag ? `:${tag}` : ''}${alsoTag ? `+${alsoTag}` : ''}`)
+    const alsoTagValues = alsoTagKey ? alsoTagKey.split(',').filter(Boolean) : []
+    const rb = new RequestBuilder(`streams${tag ? `:${tag}` : ''}${alsoTagKey ? `+${alsoTagKey}` : ''}`)
     rb.withOptions({
       leaveOpen: true,
     })
@@ -34,11 +39,11 @@ export function useStreamsFeed(tag?: string, options?: StreamsFeedOptions) {
         rb.withFilter().kinds(LIVE_STREAM_KINDS)
       }
     }
-    if (alsoTag) {
-      rb.withFilter().kinds(LIVE_STREAM_KINDS).tag('t', [alsoTag])
+    if (alsoTagValues.length > 0) {
+      rb.withFilter().kinds(LIVE_STREAM_KINDS).tag('t', alsoTagValues)
     }
     return rb
-  }, [tag, alsoTag])
+  }, [tag, alsoTagKey])
 
   return useRequestBuilder(rb)
 }
