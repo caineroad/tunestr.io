@@ -141,18 +141,8 @@ export function RootPage() {
         </ContactButton>
       </div>
 
-      {/* ===== LIVE NOW BANNER ===== */}
       {live.length > 0 && (
-        <section className="relative">
-          <div className="absolute top-4 left-6 z-10 flex items-center gap-2">
-            <span className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75" />
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500" />
-            </span>
-            <span className="text-sm font-bold uppercase tracking-wider text-red-400">
-              <FormattedMessage defaultMessage="live now" />
-            </span>
-          </div>
+        <section className="relative p-4">
           <VideoGridSorted
             evs={live}
             showPlanned={false}
