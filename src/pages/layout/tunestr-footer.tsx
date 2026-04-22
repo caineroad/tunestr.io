@@ -1,5 +1,5 @@
-import { Link } from "react-router";
-import { Zap, Heart, Music } from "lucide-react";
+import { Link } from 'react-router'
+import { Zap, Heart, Music } from 'lucide-react'
 
 export function TunestrFooter() {
   return (
@@ -16,17 +16,15 @@ export function TunestrFooter() {
           <div className="flex flex-col items-center text-center mb-14">
             <img src="/tunestr-logo-t.png" alt="tunestr" className="w-16 h-16 mb-4" />
             <p className="text-xl font-bold mb-2">independent music + independent money</p>
-            <p className="text-layer-5 mb-6 max-w-md">
-              live music streaming powered by bitcoin. artists get paid directly.
-            </p>
+            <p className="text-layer-5 mb-6 max-w-md">live music streaming powered by bitcoin and nostr.</p>
             {/* biome-ignore lint/a11y/useValidAnchor: obfuscated mailto */}
             <a
               href="#contact"
               data-e="djR2QHR1bmVzdHIuaW8="
               onClick={e => {
-                e.preventDefault();
-                const addr = atob((e.currentTarget as HTMLAnchorElement).dataset.e || "");
-                if (addr) window.location.href = `mailto:${addr}`;
+                e.preventDefault()
+                const addr = atob((e.currentTarget as HTMLAnchorElement).dataset.e || '')
+                if (addr) window.location.href = `mailto:${addr}`
               }}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-layer-0 font-bold hover:brightness-110 transition-all"
             >
@@ -39,36 +37,61 @@ export function TunestrFooter() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 mb-14">
             {/* Essentials */}
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">
-                Essentials
-              </h3>
+              <h3 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">Essentials</h3>
               <ul className="space-y-3">
                 <li>
-                  <Link to="/about" className="text-layer-5 hover:text-white transition-colors inline-flex items-center gap-2">
+                  <Link
+                    to="/about"
+                    className="text-layer-5 hover:text-white transition-colors inline-flex items-center gap-2"
+                  >
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link to="/streams" className="text-layer-5 hover:text-white transition-colors inline-flex items-center gap-2">
+                  <Link
+                    to="/streams"
+                    className="text-layer-5 hover:text-white transition-colors inline-flex items-center gap-2"
+                  >
                     Streams
                   </Link>
                 </li>
                 <li>
-                  <Link to="/events" className="text-layer-5 hover:text-white transition-colors inline-flex items-center gap-2">
+                  <Link
+                    to="/events"
+                    className="text-layer-5 hover:text-white transition-colors inline-flex items-center gap-2"
+                  >
                     Events
                   </Link>
                 </li>
                 <li>
-                  <a href="https://value4value.info" target="_blank" rel="noopener noreferrer" className="text-layer-5 hover:text-white transition-colors inline-flex items-center gap-2">
-                    Value for Value                  </a>
+                  <a
+                    href="https://value4value.info"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-layer-5 hover:text-white transition-colors inline-flex items-center gap-2"
+                  >
+                    Value for Value{' '}
+                  </a>
                 </li>
                 <li>
-                  <a href="https://nostr.org" target="_blank" rel="noopener noreferrer" className="text-layer-5 hover:text-white transition-colors inline-flex items-center gap-2">
-                    Nostr Protocol                  </a>
+                  <a
+                    href="https://nostr.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-layer-5 hover:text-white transition-colors inline-flex items-center gap-2"
+                  >
+                    Nostr Protocol{' '}
+                  </a>
                 </li>
                 <li>
-                  <a href="https://soapbox.pub/blog/zapping-101" target="_blank" rel="noopener noreferrer" className="text-layer-5 hover:text-white transition-colors inline-flex items-center gap-2">
-                    Zapping 101                  </a>
+                  <a
+                    href="https://soapbox.pub/blog/zapping-101"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-layer-5 hover:text-white transition-colors inline-flex items-center gap-2"
+                  >
+                    Zapping 101{' '}
+                  </a>
                 </li>
               </ul>
             </div>
@@ -81,15 +104,26 @@ export function TunestrFooter() {
               </h3>
               <ul className="space-y-3">
                 {[
-                  { name: "Ainsley Costello", url: "https://ainsleycostello.com/" },
-                  { name: "Tip-NZ", url: "https://www.tipnz.com/" },
-                  { name: "Sara Jade", url: "https://sarajademusic.com/" },
-                  { name: "Joe Martin", url: "https://www.joemartinmusic.com/" },
-                  { name: "DJ Valerie B", url: "https://www.djvalerieblove.com/" },
-                ].map((artist) => (
+                  { name: 'Ainsley Costello', url: 'https://ainsleycostello.com/' },
+                  { name: 'Tip-NZ', url: 'https://www.tipnz.com/' },
+                  { name: 'Sara Jade', url: 'https://sarajademusic.com/' },
+                  { name: 'Joe Martin', url: 'https://www.joemartinmusic.com/' },
+                  { name: 'The Higher Low', url: 'https://www.thehigherlow.co/' },
+                  { name: 'Henry Invisible', url: 'https://www.henryinvisible.com' },
+                  { name: 'Scardust', url: 'https://scardust.co' },
+                  { name: 'Jessie Lark', url: 'https://jessielark.com/' },
+                  { name: 'Suzanne Santo', url: 'https://www.suzannesanto.com/' },
+                  { name: 'Roger 9000', url: 'https://www.roger9000.com/' },
+                ].map(artist => (
                   <li key={artist.name}>
-                    <a href={artist.url} target="_blank" rel="noopener noreferrer" className="text-layer-5 hover:text-white transition-colors inline-flex items-center gap-2">
-                      {artist.name}                    </a>
+                    <a
+                      href={artist.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-layer-5 hover:text-white transition-colors inline-flex items-center gap-2"
+                    >
+                      {artist.name}{' '}
+                    </a>
                   </li>
                 ))}
                 <li>
@@ -98,9 +132,9 @@ export function TunestrFooter() {
                     href="#contact"
                     data-e="djR2QHR1bmVzdHIuaW8="
                     onClick={e => {
-                      e.preventDefault();
-                      const addr = atob((e.currentTarget as HTMLAnchorElement).dataset.e || "");
-                      if (addr) window.location.href = `mailto:${addr}`;
+                      e.preventDefault()
+                      const addr = atob((e.currentTarget as HTMLAnchorElement).dataset.e || '')
+                      if (addr) window.location.href = `mailto:${addr}`
                     }}
                     className="text-primary hover:text-white transition-colors font-semibold"
                   >
@@ -118,16 +152,39 @@ export function TunestrFooter() {
               </h3>
               <ul className="space-y-3">
                 {[
-                  { name: "Santos", url: "https://santos.lol/" },
-                  { name: "Kieran", url: "https://njump.me/npub1v0lxxxxutpvrelsksy8cdhgfux9l6a42hsj2qzquu2zk7vc9qnkszrqj49" },
-                  { name: "Karnage", url: "https://njump.me/npub1r0rs5q2gk0e3dk3nlc7gnu378ec6cnlenqp8a3cjhyzu6f8k5sgs4sq9ac" },
-                  { name: "Hodlbod", url: "https://njump.me/npub1jlrs53pkdfjnts29kveljul2sm0actt6n8dxrrzqcersttvcuv3qdjynqn" },
-                  { name: "NabismoPrime", url: "https://njump.me/npub1g5pm4gf8hh7skp2rsnw9h2pvkr32sdnuhkcx9yte7qxmrg6v4txqqudjqv" },
-                  { name: "Shawn Yeager", url: "https://shawnyeager.com/" },
-                ].map((person) => (
+                  { name: 'Santos', url: 'https://santos.lol/' },
+                  {
+                    name: 'Kieran',
+                    url: 'https://njump.me/npub1v0lxxxxutpvrelsksy8cdhgfux9l6a42hsj2qzquu2zk7vc9qnkszrqj49',
+                  },
+                  {
+                    name: 'Karnage',
+                    url: 'https://njump.me/npub1r0rs5q2gk0e3dk3nlc7gnu378ec6cnlenqp8a3cjhyzu6f8k5sgs4sq9ac',
+                  },
+                  {
+                    name: 'Hodlbod',
+                    url: 'https://njump.me/npub1jlrs53pkdfjnts29kveljul2sm0actt6n8dxrrzqcersttvcuv3qdjynqn',
+                  },
+                  {
+                    name: 'NabismoPrime',
+                    url: 'https://njump.me/npub1g5pm4gf8hh7skp2rsnw9h2pvkr32sdnuhkcx9yte7qxmrg6v4txqqudjqv',
+                  },
+                  { name: 'Shawn Yeager', url: 'https://shawnyeager.com/' },
+                  { name: 'Derek Ross', url: 'https://derekross.me' },
+                  { name: 'Adam Curry', url: 'http://adam.curry.com/linkblog.html' },
+                  { name: 'Bitcoin Park', url: 'https://bitcoinpark.com' },
+                  { name: 'DJ Valerie B', url: 'https://www.djvalerieblove.com/' },
+                  { name: 'Heather Larson', url: 'https://www.destinyarchitecture.net/' },
+                ].map(person => (
                   <li key={person.name}>
-                    <a href={person.url} target="_blank" rel="noopener noreferrer" className="text-layer-5 hover:text-white transition-colors inline-flex items-center gap-2">
-                      {person.name}                    </a>
+                    <a
+                      href={person.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-layer-5 hover:text-white transition-colors inline-flex items-center gap-2"
+                    >
+                      {person.name}{' '}
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -137,14 +194,19 @@ export function TunestrFooter() {
           {/* Bottom bar */}
           <div className="pt-8 border-t border-layer-3/50 flex items-center justify-center">
             <p className="text-layer-4 text-sm">
-              built with 💜 on{" "}
-              <a href="https://nostr.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">nostr</a>
-              {" "}+{" "}
-              <a href="https://bitcoin.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">bitcoin</a>
+              powered by{' '}
+              <a
+                href="https://shakespeare.diy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                Shakespeare
+              </a>
             </p>
           </div>
         </div>
       </div>
     </footer>
-  );
+  )
 }

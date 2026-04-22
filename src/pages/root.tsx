@@ -1,40 +1,55 @@
-import { useStreamsFeed } from "@/hooks/live-streams";
-import VideoGridSorted from "@/element/video-grid-sorted";
-import { FormattedMessage } from "react-intl";
-import { Link } from "react-router";
-import { useCallback, useEffect, useState } from "react";
+import { useStreamsFeed } from '@/hooks/live-streams'
+import VideoGridSorted from '@/element/video-grid-sorted'
+import { FormattedMessage } from 'react-intl'
+import { Link } from 'react-router'
+import { useCallback, useEffect, useState } from 'react'
 import {
-  Radio, Music, Users, Zap, Heart, DollarSign,
-  ArrowRight, Tv, Globe, Shield, Wallet, Mic, Building2,
-  X, ChevronLeft, ChevronRight, ChevronUp, MapPin,
-} from "lucide-react";
+  Radio,
+  Music,
+  Users,
+  Zap,
+  Heart,
+  DollarSign,
+  ArrowRight,
+  Tv,
+  Globe,
+  Shield,
+  Wallet,
+  Mic,
+  Building2,
+  X,
+  ChevronLeft,
+  ChevronRight,
+  ChevronUp,
+  MapPin,
+} from 'lucide-react'
 
-import { StreamState, FEATURED_VIDEOS } from "@/const";
-import { findTag } from "@/utils";
+import { StreamState, FEATURED_VIDEOS } from '@/const'
+import { findTag } from '@/utils'
 
 const photos = [
-  { src: "/tunestr/antones.jpg", alt: "Boostagram Ball Live at Antone's in Austin, TX" },
-  { src: "/tunestr/pleblab-stage-duo.jpg", alt: "Live duo performing at PlebLab with tunestr zap screen" },
-  { src: "/tunestr/vinyllounge.jpg", alt: "The Vinyl Lounge in Nashville, TN" },
-  { src: "/tunestr/sara-jade-salon.jpg", alt: "Sara Jade performing at Salon of Beauty with tunestr" },
-  { src: "/tunestr/tunestr.jpg", alt: "Ainsley Costello on tunestr" },
-  { src: "/tunestr/antones-crowd.jpg", alt: "Crowd at Antone's in Austin for Boostagram Ball" },
-  { src: "/tunestr/ainsley.jpg", alt: "Ainsley Costello performing" },
-  { src: "/tunestr/grow-nostr-band.jpg", alt: "Band performing at Grow Nostr event with tunestr" },
-  { src: "/tunestr/dj-valerie-antones.jpg", alt: "DJ Valerie B performing at Antone's" },
-  { src: "/tunestr/tunestr-banner-performer.jpg", alt: "Artist performing under tunestr.io banner" },
-  { src: "/tunestr/launch-event-vocalist.jpg", alt: "Vocalist on stage at tunestr launch event" },
-  { src: "/tunestr/zap-leaderboard-antones.jpg", alt: "4.8 million sats raised — zap leaderboard at Antone's" },
-  { src: "/tunestr/grow-nostr-duo.jpg", alt: "Duo performing at Grow Nostr event" },
-  { src: "/tunestr/launch-event-band.jpg", alt: "Full band at tunestr launch event" },
-  { src: "/tunestr/dj-booth-lights.jpg", alt: "DJ booth with neon lights" },
-  { src: "/tunestr/launch-event-duo.jpg", alt: "Guitar and vocals duo at launch event with crowd filming" },
-  { src: "/tunestr/ainsley-boostagram-ball.jpg", alt: "Ainsley Costello at Boostagram Ball with 5M sats zapped" },
-  { src: "/tunestr/launch-event-zaps.jpg", alt: "367K sats zapped live during performance" },
-  { src: "/tunestr/dj-booth-duo.jpg", alt: "DJs at the booth with colorful lights" },
-];
+  { src: '/tunestr/antones.jpg', alt: "Boostagram Ball Live at Antone's in Austin, TX" },
+  { src: '/tunestr/pleblab-stage-duo.jpg', alt: 'Live duo performing at PlebLab with tunestr zap screen' },
+  { src: '/tunestr/vinyllounge.jpg', alt: 'The Vinyl Lounge in Nashville, TN' },
+  { src: '/tunestr/sara-jade-salon.jpg', alt: 'Sara Jade performing at Salon of Beauty with tunestr' },
+  { src: '/tunestr/tunestr.jpg', alt: 'Ainsley Costello on tunestr' },
+  { src: '/tunestr/antones-crowd.jpg', alt: "Crowd at Antone's in Austin for Boostagram Ball" },
+  { src: '/tunestr/ainsley.jpg', alt: 'Ainsley Costello performing' },
+  { src: '/tunestr/grow-nostr-band.jpg', alt: 'Band performing at Grow Nostr event with tunestr' },
+  { src: '/tunestr/dj-valerie-antones.jpg', alt: "DJ Valerie B performing at Antone's" },
+  { src: '/tunestr/tunestr-banner-performer.jpg', alt: 'Artist performing under tunestr.io banner' },
+  { src: '/tunestr/launch-event-vocalist.jpg', alt: 'Vocalist on stage at tunestr launch event' },
+  { src: '/tunestr/zap-leaderboard-antones.jpg', alt: "4.8 million sats raised — zap leaderboard at Antone's" },
+  { src: '/tunestr/grow-nostr-duo.jpg', alt: 'Duo performing at Grow Nostr event' },
+  { src: '/tunestr/launch-event-band.jpg', alt: 'Full band at tunestr launch event' },
+  { src: '/tunestr/dj-booth-lights.jpg', alt: 'DJ booth with neon lights' },
+  { src: '/tunestr/launch-event-duo.jpg', alt: 'Guitar and vocals duo at launch event with crowd filming' },
+  { src: '/tunestr/ainsley-boostagram-ball.jpg', alt: 'Ainsley Costello at Boostagram Ball with 5M sats zapped' },
+  { src: '/tunestr/launch-event-zaps.jpg', alt: '367K sats zapped live during performance' },
+  { src: '/tunestr/dj-booth-duo.jpg', alt: 'DJs at the booth with colorful lights' },
+]
 
-function ContactButton({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+function ContactButton({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
     // biome-ignore lint/a11y/useValidAnchor: obfuscated mailto link
     <a
@@ -42,57 +57,57 @@ function ContactButton({ children, className = "" }: { children: React.ReactNode
       aria-label="Contact us"
       data-e="djR2QHR1bmVzdHIuaW8="
       onClick={e => {
-        e.preventDefault();
-        const addr = atob((e.currentTarget as HTMLAnchorElement).dataset.e || "");
-        if (addr) window.location.href = `mailto:${addr}`;
+        e.preventDefault()
+        const addr = atob((e.currentTarget as HTMLAnchorElement).dataset.e || '')
+        if (addr) window.location.href = `mailto:${addr}`
       }}
       className={className}
     >
       {children}
     </a>
-  );
+  )
 }
 
 export function RootPage() {
-  const streams = useStreamsFeed();
-  const [galleryExpanded, setGalleryExpanded] = useState(false);
-  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
-  const [showBackToTop, setShowBackToTop] = useState(false);
+  const streams = useStreamsFeed()
+  const [galleryExpanded, setGalleryExpanded] = useState(false)
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
+  const [showBackToTop, setShowBackToTop] = useState(false)
 
   useEffect(() => {
-    const h = () => setShowBackToTop(window.scrollY > 800);
-    window.addEventListener("scroll", h, { passive: true });
-    return () => window.removeEventListener("scroll", h);
-  }, []);
+    const h = () => setShowBackToTop(window.scrollY > 800)
+    window.addEventListener('scroll', h, { passive: true })
+    return () => window.removeEventListener('scroll', h)
+  }, [])
 
   const lightboxPrev = useCallback(() => {
-    setLightboxIndex(i => (i !== null ? (i - 1 + photos.length) % photos.length : null));
-  }, []);
+    setLightboxIndex(i => (i !== null ? (i - 1 + photos.length) % photos.length : null))
+  }, [])
   const lightboxNext = useCallback(() => {
-    setLightboxIndex(i => (i !== null ? (i + 1) % photos.length : null));
-  }, []);
+    setLightboxIndex(i => (i !== null ? (i + 1) % photos.length : null))
+  }, [])
 
   useEffect(() => {
-    if (lightboxIndex === null) return;
+    if (lightboxIndex === null) return
     const h = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setLightboxIndex(null);
-      if (e.key === "ArrowLeft") lightboxPrev();
-      if (e.key === "ArrowRight") lightboxNext();
-    };
-    document.body.classList.add("scroll-lock");
-    window.addEventListener("keydown", h);
+      if (e.key === 'Escape') setLightboxIndex(null)
+      if (e.key === 'ArrowLeft') lightboxPrev()
+      if (e.key === 'ArrowRight') lightboxNext()
+    }
+    document.body.classList.add('scroll-lock')
+    window.addEventListener('keydown', h)
     return () => {
-      document.body.classList.remove("scroll-lock");
-      window.removeEventListener("keydown", h);
-    };
-  }, [lightboxIndex, lightboxPrev, lightboxNext]);
+      document.body.classList.remove('scroll-lock')
+      window.removeEventListener('keydown', h)
+    }
+  }, [lightboxIndex, lightboxPrev, lightboxNext])
 
-  const live = streams.filter(a => findTag(a, "status") === StreamState.Live);
+  const live = streams.filter(a => findTag(a, 'status') === StreamState.Live)
   const ended = streams
-    .filter(a => findTag(a, "status") === StreamState.Ended)
-    .filter(a => !FEATURED_VIDEOS || FEATURED_VIDEOS?.includes(findTag(a, "d")));
+    .filter(a => findTag(a, 'status') === StreamState.Ended)
+    .filter(a => !FEATURED_VIDEOS || FEATURED_VIDEOS?.includes(findTag(a, 'd')))
 
-  const visiblePhotos = galleryExpanded ? photos : photos.slice(0, 8);
+  const visiblePhotos = galleryExpanded ? photos : photos.slice(0, 8)
 
   return (
     <div className="flex flex-col grow">
@@ -101,7 +116,7 @@ export function RootPage() {
         {showBackToTop && (
           <button
             type="button"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="w-12 h-12 flex items-center justify-center rounded-full border border-layer-3 bg-layer-1 text-layer-5 hover:text-primary hover:border-primary transition-colors shadow-lg"
             aria-label="Back to top"
           >
@@ -109,7 +124,18 @@ export function RootPage() {
           </button>
         )}
         <ContactButton className="w-12 h-12 flex items-center justify-center rounded-full border border-primary bg-layer-1 text-primary hover:bg-primary hover:text-layer-0 transition-colors shadow-lg">
-          <svg width={22} height={22} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" role="img" aria-label="Email">
+          <svg
+            width={22}
+            height={22}
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            role="img"
+            aria-label="Email"
+          >
             <rect width="20" height="16" x="2" y="4" rx="2" />
             <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
           </svg>
@@ -150,14 +176,8 @@ export function RootPage() {
           <h1 className="mt-10 text-5xl md:text-7xl font-bold text-center leading-tight tracking-tight">
             <span className="text-primary">independent</span> music
             <br />
-            <span className="text-layer-5">+</span>{" "}
-            <span className="text-primary">independent</span> money
+            <span className="text-layer-5">+</span> <span className="text-primary">independent</span> money
           </h1>
-          <p className="mt-8 text-xl md:text-2xl text-layer-5 text-center max-w-3xl leading-relaxed">
-            <FormattedMessage
-              defaultMessage="the live music streaming platform where artists get paid directly by fans. no middlemen. no platform fees. just bitcoin, lightning fast."
-            />
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-10">
             <ContactButton className="inline-flex items-center justify-center gap-3 px-10 py-5 rounded-2xl bg-primary text-layer-0 font-bold text-lg hover:brightness-110 transition-all shadow-lg shadow-primary/25">
               <Zap className="w-5 h-5" />
@@ -181,45 +201,43 @@ export function RootPage() {
             <FormattedMessage defaultMessage="how it works" />
           </h2>
           <p className="text-center text-layer-5 text-lg mb-16 max-w-2xl mx-auto">
-            <FormattedMessage
-              defaultMessage="tunestr connects artists and fans through the power of bitcoin's lightning network. no sign-up fees. no monthly subscriptions. no catch."
-            />
+            <FormattedMessage defaultMessage="tunestr connects artists and fans through the power of free, open networks. no sign-up fees. no monthly subscriptions. no catch." />
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="relative bg-layer-1 rounded-2xl p-8 border border-layer-2 hover:border-primary/50 transition-colors group">
-              <div className="absolute -top-5 left-8 bg-primary text-layer-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">1</div>
+              <div className="absolute -top-5 left-8 bg-primary text-layer-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">
+                1
+              </div>
               <Tv className="w-10 h-10 text-primary mb-4 mt-2" />
               <h3 className="text-xl font-bold mb-3">
                 <FormattedMessage defaultMessage="artist goes live" />
               </h3>
               <p className="text-layer-5 leading-relaxed">
-                <FormattedMessage
-                  defaultMessage="a musician sets up their stream with OBS and goes live on tunestr. the performance is broadcast to anyone in the world — no paywall, no gatekeepers."
-                />
+                <FormattedMessage defaultMessage="a musician sets up their stream and goes live on tunestr. the performance is broadcast to anyone in the world." />
               </p>
             </div>
             <div className="relative bg-layer-1 rounded-2xl p-8 border border-layer-2 hover:border-primary/50 transition-colors group">
-              <div className="absolute -top-5 left-8 bg-primary text-layer-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">2</div>
+              <div className="absolute -top-5 left-8 bg-primary text-layer-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">
+                2
+              </div>
               <Zap className="w-10 h-10 text-primary mb-4 mt-2" />
               <h3 className="text-xl font-bold mb-3">
-                <FormattedMessage defaultMessage="fans zap sats" />
+                <FormattedMessage defaultMessage="fans support" />
               </h3>
               <p className="text-layer-5 leading-relaxed">
-                <FormattedMessage
-                  defaultMessage="viewers watch for free. when the music moves them, they send bitcoin tips called 'zaps' — instantly, from anywhere on earth. 100 sats, 10,000 sats, whatever feels right."
-                />
+                <FormattedMessage defaultMessage="viewers watch for free. when the music moves them, they send tips called 'zaps' — instantly, from anywhere on earth. whatever feels right." />
               </p>
             </div>
             <div className="relative bg-layer-1 rounded-2xl p-8 border border-layer-2 hover:border-primary/50 transition-colors group">
-              <div className="absolute -top-5 left-8 bg-primary text-layer-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">3</div>
+              <div className="absolute -top-5 left-8 bg-primary text-layer-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">
+                3
+              </div>
               <Wallet className="w-10 h-10 text-primary mb-4 mt-2" />
               <h3 className="text-xl font-bold mb-3">
                 <FormattedMessage defaultMessage="artist gets paid" />
               </h3>
               <p className="text-layer-5 leading-relaxed">
-                <FormattedMessage
-                  defaultMessage="every sat goes directly to the artist's bitcoin wallet. no 30% platform cut. no waiting 90 days for a check. no minimum payout. instant, direct, yours."
-                />
+                <FormattedMessage defaultMessage="every zap goes directly to the artist's bitcoin wallet. no 30% platform cut. no waiting 90 days for a check. no minimum payout. instant, direct, yours." />
               </p>
             </div>
           </div>
@@ -234,10 +252,26 @@ export function RootPage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: <DollarSign className="w-8 h-8" />, title: "0% platform fee", desc: "artists keep every single sat. we take nothing." },
-              { icon: <Zap className="w-8 h-8" />, title: "instant payments", desc: "bitcoin arrives in seconds via lightning. not weeks. not months. seconds." },
-              { icon: <Shield className="w-8 h-8" />, title: "you own your audience", desc: "built on nostr — your followers are yours. no algorithm decides who sees you." },
-              { icon: <Globe className="w-8 h-8" />, title: "global from day one", desc: "anyone with an internet connection can watch and tip. no country restrictions." },
+              {
+                icon: <DollarSign className="w-8 h-8" />,
+                title: 'no risk',
+                desc: 'artists keep what they earn. no sign-up fees or subscription needed.',
+              },
+              {
+                icon: <Zap className="w-8 h-8" />,
+                title: 'instant payments',
+                desc: 'payments arrive in seconds via the network.',
+              },
+              {
+                icon: <Shield className="w-8 h-8" />,
+                title: 'you own your audience',
+                desc: 'your followers are yours. no algorithm decides who sees you.',
+              },
+              {
+                icon: <Globe className="w-8 h-8" />,
+                title: 'new fans, new revenue',
+                desc: 'worldwide exposure to fans who want to see artists thrive through technology.',
+              },
             ].map((item, i) => (
               <div key={i} className="text-center p-6">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/15 text-primary mb-5">
@@ -261,22 +295,19 @@ export function RootPage() {
                 <FormattedMessage defaultMessage="for musicians" />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-                <FormattedMessage
-                  defaultMessage="your music. your fans. your money."
-                />
+                <FormattedMessage defaultMessage="your music. your fans. your money." />
               </h2>
               <p className="text-layer-5 text-lg mb-8 leading-relaxed">
-                <FormattedMessage
-                  defaultMessage="stop giving 30-50% of your earnings to platforms that don't care about your art. on tunestr, every tip from every fan goes straight to your wallet."
-                />
+                <FormattedMessage defaultMessage="stop giving 30-50% of your earnings to platforms that don't care about your art. on tunestr, every tip from every fan goes straight to your wallet." />
               </p>
               <div className="space-y-4">
                 {[
-                  "earn bitcoin while you perform — live, in real time",
-                  "build a fanbase that no platform can take away",
-                  "get a tunestr.io NIP-05 identity (yourname@tunestr.io)",
-                  "stream from any venue, studio, or living room with OBS",
-                  "discover which fans support you the most",
+                  'unlock a new potential revenue opportunity for your live performances',
+                  'earn in real time & receive instant feedback',
+                  'build a fanbase that no platform can take away',
+                  'get a tunestr.io identity (yourname@tunestr.io) and join the movement',
+                  'learn about a new way to approach social media monetization',
+                  'discover which fans support you the most',
                 ].map((text, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
@@ -339,22 +370,17 @@ export function RootPage() {
                 <FormattedMessage defaultMessage="for venues" />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-                <FormattedMessage
-                  defaultMessage="put your stage on the world stage."
-                />
+                <FormattedMessage defaultMessage="put your stage on the world stage." />
               </h2>
               <p className="text-layer-5 text-lg mb-8 leading-relaxed">
-                <FormattedMessage
-                  defaultMessage="give touring artists a reason to choose your venue. live streaming on tunestr turns every show into a global event — and gives artists an extra revenue stream they can't get anywhere else."
-                />
+                <FormattedMessage defaultMessage="give touring artists a reason to choose your venue. live streaming on tunestr makes a statement — and gives artists an extra revenue stream they can't get anywhere else." />
               </p>
               <div className="space-y-4">
                 {[
-                  "attract artists who want to reach a global audience",
-                  "promote your venue to fans far beyond your city",
-                  "create an interactive online concert experience",
-                  "minimal effort — just point a camera and stream",
-                  "help keep the economics of independent touring alive",
+                  'attract artists who want to remain independent',
+                  'promote your venue to fans far beyond your city',
+                  'create an interactive online concert experience',
+                  'minimal effort beyond traditional streaming setup',
                 ].map((text, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
@@ -379,22 +405,19 @@ export function RootPage() {
                 <FormattedMessage defaultMessage="for fans" />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-                <FormattedMessage
-                  defaultMessage="support the music you love. directly."
-                />
+                <FormattedMessage defaultMessage="support the music you love. directly." />
               </h2>
               <p className="text-layer-5 text-lg mb-8 leading-relaxed">
-                <FormattedMessage
-                  defaultMessage="on tunestr, your money goes to the artist — not to a corporation. zap your favorite musicians while they're performing and watch the tips roll in live. this is what it feels like to actually support independent music."
-                />
+                <FormattedMessage defaultMessage="on tunestr, your money goes to the artist — not to a corporation. zap your favorite musicians while they're performing and watch the tips roll in live. this is what it feels like to actually support independent music." />
               </p>
               <div className="space-y-4">
                 {[
-                  "watch live shows for free — no account needed",
-                  "tip artists directly with bitcoin — they get 100%",
+                  'watch live shows for free — no account needed',
+                  'tip artists directly and know they get 100%',
                   "prove you're their #1 fan on the leaderboard",
-                  "chat with other fans and the artist during the show",
+                  'chat with other fans and the artist during the show',
                   "join a community where you aren't the product",
+                  'keep the independent music community thriving',
                 ].map((text, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
@@ -435,9 +458,7 @@ export function RootPage() {
             <FormattedMessage defaultMessage="value for value" />
           </h2>
           <p className="text-xl text-layer-5 mb-8 leading-relaxed max-w-2xl mx-auto">
-            <FormattedMessage
-              defaultMessage="the tunestr model is simple: everything is free to watch. if the music moves you, give value back. no subscriptions. no ads. no paywalls. just artists and fans, connected directly."
-            />
+            <FormattedMessage defaultMessage="the tunestr model is simple: everything is free to watch. if the music moves you, give value back. no subscriptions. no paywalls. just artists and fans, connected directly." />
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12">
             <div className="bg-layer-2/50 rounded-2xl p-6 border border-layer-3">
@@ -447,18 +468,18 @@ export function RootPage() {
             </div>
             <div className="bg-layer-2/50 rounded-2xl p-6 border border-layer-3">
               <Zap className="w-8 h-8 text-zap mx-auto mb-3" />
-              <h3 className="font-bold mb-1">zap what it's worth</h3>
-              <p className="text-layer-5 text-sm">send sats when the music moves you. any amount.</p>
+              <h3 className="font-bold mb-1">pay what it's worth</h3>
+              <p className="text-layer-5 text-sm">zap when the music moves you. any amount.</p>
             </div>
             <div className="bg-layer-2/50 rounded-2xl p-6 border border-layer-3">
               <Music className="w-8 h-8 text-primary mx-auto mb-3" />
               <h3 className="font-bold mb-1">artists get 100%</h3>
-              <p className="text-layer-5 text-sm">every sat goes directly to the performer. always.</p>
+              <p className="text-layer-5 text-sm">every zap goes directly to the content streamers.</p>
             </div>
           </div>
           <div className="mt-10">
             <Link to="/about" className="text-primary hover:underline font-semibold inline-flex items-center gap-2">
-              <FormattedMessage defaultMessage="learn more about bitcoin, nostr, and value for value" />
+              <FormattedMessage defaultMessage="learn about bitcoin, nostr, and value for value" />
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -489,10 +510,26 @@ export function RootPage() {
               </Link>
             </div>
             <div className="flex-1 grid grid-cols-2 gap-3">
-              <img src="/tunestr/antones-crowd.jpg" alt="Antone's crowd" className="rounded-xl object-cover aspect-square w-full" />
-              <img src="/tunestr/launch-event-band.jpg" alt="LAUNCH event" className="rounded-xl object-cover aspect-square w-full" />
-              <img src="/tunestr/zap-leaderboard-antones.jpg" alt="Zap leaderboard" className="rounded-xl object-cover aspect-square w-full" />
-              <img src="/tunestr/sara-jade-salon.jpg" alt="Sara Jade performing" className="rounded-xl object-cover aspect-square w-full" />
+              <img
+                src="/tunestr/antones-crowd.jpg"
+                alt="Antone's crowd"
+                className="rounded-xl object-cover aspect-square w-full"
+              />
+              <img
+                src="/tunestr/launch-event-band.jpg"
+                alt="LAUNCH event"
+                className="rounded-xl object-cover aspect-square w-full"
+              />
+              <img
+                src="/tunestr/zap-leaderboard-antones.jpg"
+                alt="Zap leaderboard"
+                className="rounded-xl object-cover aspect-square w-full"
+              />
+              <img
+                src="/tunestr/sara-jade-salon.jpg"
+                alt="Sara Jade performing"
+                className="rounded-xl object-cover aspect-square w-full"
+              />
             </div>
           </div>
         </div>
@@ -505,9 +542,7 @@ export function RootPage() {
             <FormattedMessage defaultMessage="the vibe" />
           </h2>
           <p className="text-center text-layer-5 text-lg mb-12">
-            <FormattedMessage
-              defaultMessage="real artists. real venues. real fans. real money."
-            />
+            <FormattedMessage defaultMessage="real artists. real venues. real fans. real money. real independence." />
           </p>
           <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
             {visiblePhotos.map((photo, i) => (
@@ -521,7 +556,7 @@ export function RootPage() {
                   src={photo.src}
                   alt={photo.alt}
                   className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading={i < 4 ? "eager" : "lazy"}
+                  loading={i < 4 ? 'eager' : 'lazy'}
                 />
               </button>
             ))}
@@ -537,21 +572,30 @@ export function RootPage() {
             >
               <button
                 type="button"
-                onClick={e => { e.stopPropagation(); setLightboxIndex(null); }}
+                onClick={e => {
+                  e.stopPropagation()
+                  setLightboxIndex(null)
+                }}
                 className="absolute top-4 right-4 text-white/70 hover:text-white p-2 z-10"
               >
                 <X className="w-8 h-8" />
               </button>
               <button
                 type="button"
-                onClick={e => { e.stopPropagation(); lightboxPrev(); }}
+                onClick={e => {
+                  e.stopPropagation()
+                  lightboxPrev()
+                }}
                 className="absolute left-4 text-white/70 hover:text-white p-2 z-10"
               >
                 <ChevronLeft className="w-10 h-10" />
               </button>
               <button
                 type="button"
-                onClick={e => { e.stopPropagation(); lightboxNext(); }}
+                onClick={e => {
+                  e.stopPropagation()
+                  lightboxNext()
+                }}
                 className="absolute right-4 text-white/70 hover:text-white p-2 z-10"
               >
                 <ChevronRight className="w-10 h-10" />
@@ -591,14 +635,10 @@ export function RootPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-transparent pointer-events-none" />
         <div className="relative max-w-3xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-            <FormattedMessage
-              defaultMessage="independent music deserves independent money."
-            />
+            <FormattedMessage defaultMessage="independent music deserves independent money." />
           </h2>
           <p className="text-xl text-layer-5 mb-10 leading-relaxed">
-            <FormattedMessage
-              defaultMessage="whether you're an artist, a venue, or a fan — tunestr is where live music meets the future of money. come be part of it."
-            />
+            <FormattedMessage defaultMessage="whether you're an artist, a venue, or a fan — tunestr is where live music meets the future of money and social media." />
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <ContactButton className="inline-flex items-center justify-center gap-3 px-10 py-5 rounded-2xl bg-primary text-layer-0 font-bold text-lg hover:brightness-110 transition-all shadow-lg shadow-primary/25">
@@ -609,7 +649,7 @@ export function RootPage() {
               to="/about"
               className="inline-flex items-center justify-center gap-3 px-10 py-5 rounded-2xl border-2 border-layer-3 text-white font-bold text-lg hover:border-primary hover:text-primary transition-colors"
             >
-              <FormattedMessage defaultMessage="learn about bitcoin & nostr" />
+              <FormattedMessage defaultMessage="come be part of it" />
             </Link>
           </div>
         </div>
@@ -622,15 +662,10 @@ export function RootPage() {
             <h2 className="text-2xl font-bold mb-6">
               <FormattedMessage defaultMessage="recent streams" />
             </h2>
-            <VideoGridSorted
-              evs={ended}
-              showEnded={true}
-              showPopular={false}
-              showRecentClips={false}
-            />
+            <VideoGridSorted evs={ended} showEnded={true} showPopular={false} showRecentClips={false} />
           </div>
         </section>
       )}
     </div>
-  );
+  )
 }

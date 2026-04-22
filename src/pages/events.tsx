@@ -1,76 +1,76 @@
-import { useEffect, useMemo, useState } from "react";
-import { FormattedMessage } from "react-intl";
-import { Link } from "react-router";
-import { MapPin, Calendar, Music, Zap, ArrowRight, ChevronUp, Radio } from "lucide-react";
-import { useStreamsFeed } from "@/hooks/live-streams";
-import { StreamState } from "@/const";
-import { findTag } from "@/utils";
-import { StreamTile } from "@/element/stream/stream-tile";
-import VideoGrid from "@/element/video-grid";
+import { useEffect, useMemo, useState } from 'react'
+import { FormattedMessage } from 'react-intl'
+import { Link } from 'react-router'
+import { MapPin, Calendar, Music, Zap, ArrowRight, ChevronUp, Radio } from 'lucide-react'
+import { useStreamsFeed } from '@/hooks/live-streams'
+import { StreamState } from '@/const'
+import { findTag } from '@/utils'
+import { StreamTile } from '@/element/stream/stream-tile'
+import VideoGrid from '@/element/video-grid'
 
 interface EventVenue {
-  name: string;
-  city: string;
-  state: string;
-  description: string;
-  photo?: string;
-  url?: string;
+  name: string
+  city: string
+  state: string
+  description: string
+  photo?: string
+  url?: string
 }
 
 const pastEvents: EventVenue[] = [
   {
-    name: "First Avenue",
-    city: "Minneapolis",
-    state: "MN",
+    name: 'First Avenue',
+    city: 'Minneapolis',
+    state: 'MN',
     description:
-      "More than just four walls, a soundboard, and a stage — First Avenue is the epicenter of live music and entertainment in Minneapolis. Made famous by Prince and home to decades of legendary performances.",
-    url: "https://first-avenue.com",
+      'More than just four walls, a soundboard, and a stage — First Avenue is the epicenter of live music and entertainment in Minneapolis. Made famous by Prince and home to decades of legendary performances.',
+    url: 'https://first-avenue.com',
   },
   {
     name: "Antone's Nightclub",
-    city: "Austin",
-    state: "TX",
+    city: 'Austin',
+    state: 'TX',
     description:
       "An iconic blues venue in downtown Austin where B.B. King, Muddy Waters, Jimmy Reed, Ray Charles, and James Brown have all graced the stage. Antone's is where tunestr hosted the Boostagram Ball — racking up millions of sats in live zaps.",
-    photo: "/tunestr/antones.jpg",
-    url: "https://antonesnightclub.com",
+    photo: '/tunestr/antones.jpg',
+    url: 'https://antonesnightclub.com',
   },
   {
     name: "Maggie Mae's",
-    city: "Austin",
-    state: "TX",
+    city: 'Austin',
+    state: 'TX',
     description:
       "A staple of Austin's legendary 6th Street live music scene. Multiple stages, multiple vibes — and now, live-streamed to the world on tunestr.",
-    url: "https://www.maggiemaesaustin.com",
+    url: 'https://www.maggiemaesaustin.com',
   },
   {
-    name: "LAUNCH Music Conference & Festival",
-    city: "Lancaster",
-    state: "PA",
+    name: 'LAUNCH Music Conference & Festival',
+    city: 'Lancaster',
+    state: 'PA',
     description:
-      "A developing artist and industry professional conference taking place over three days and three nights biannually. LAUNCH brings together emerging talent, industry veterans, and new technology — including live streaming with bitcoin payments via tunestr.",
-    photo: "/tunestr/launch-event-duo.jpg",
-    url: "https://launchfestival.com",
+      'A developing artist and industry professional conference taking place over three days and three nights biannually. LAUNCH brings together emerging talent, industry veterans, and new technology — including live streaming with bitcoin payments via tunestr.',
+    photo: '/tunestr/launch-event-duo.jpg',
+    url: 'https://launchfestival.com',
   },
   {
-    name: "The Vinyl Lounge",
-    city: "Nashville",
-    state: "TN",
+    name: 'The Vinyl Lounge',
+    city: 'Nashville',
+    state: 'TN',
     description:
       "Nashville's hottest live music venue, bar, and nightclub. EDM, rock & roll, and everything in between — now live-streamed worldwide with tunestr and powered by bitcoin zaps.",
-    photo: "/tunestr/vinyllounge.jpg",
-    url: "https://www.thevinyloungenashville.com",
+    photo: '/tunestr/vinyllounge.jpg',
+    url: 'https://www.thevinyloungenashville.com',
   },
   {
-    name: "We All Scream",
-    city: "Las Vegas",
-    state: "NV",
+    name: 'We All Scream',
+    city: 'Las Vegas',
+    state: 'NV',
     description:
       "Downtown Vegas's ice cream-fueled dance riot. Rooftop, courtyard, and chaos. Art, DJs, sugar rush — where street party meets nightclub. Nostr's wildest event meets tunestr's live streaming.",
-    photo: "/tunestr/dj-booth-duo.jpg",
-    url: "https://www.weallscream.com",
+    photo: '/tunestr/dj-booth-duo.jpg',
+    url: 'https://www.weallscream.com',
   },
-];
+]
 
 function EventCard({ event }: { event: EventVenue }) {
   return (
@@ -106,39 +106,38 @@ function EventCard({ event }: { event: EventVenue }) {
         )}
       </div>
     </div>
-  );
+  )
 }
 
 export default function EventsPage() {
-  const [showBackToTop, setShowBackToTop] = useState(false);
-  const streams = useStreamsFeed();
+  const [showBackToTop, setShowBackToTop] = useState(false)
+  const streams = useStreamsFeed()
 
   const upcomingStreams = useMemo(() => {
-    const now = Math.floor(Date.now() / 1000);
+    const now = Math.floor(Date.now() / 1000)
     return streams
       .filter(a => {
-        const status = findTag(a, "status");
-        if (status !== StreamState.Planned) return false;
-        const starts = Number(findTag(a, "starts") ?? a.created_at);
-        return starts > now;
+        const status = findTag(a, 'status')
+        if (status !== StreamState.Planned) return false
+        const starts = Number(findTag(a, 'starts') ?? a.created_at)
+        return starts > now
       })
       .sort((a, b) => {
-        const startA = Number(findTag(a, "starts") ?? a.created_at);
-        const startB = Number(findTag(b, "starts") ?? b.created_at);
-        return startA - startB;
-      });
-  }, [streams]);
-
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+        const startA = Number(findTag(a, 'starts') ?? a.created_at)
+        const startB = Number(findTag(b, 'starts') ?? b.created_at)
+        return startA - startB
+      })
+  }, [streams])
 
   useEffect(() => {
-    const h = () => setShowBackToTop(window.scrollY > 800);
-    window.addEventListener("scroll", h, { passive: true });
-    return () => window.removeEventListener("scroll", h);
-  }, []);
+    window.scrollTo(0, 0)
+  }, [])
+
+  useEffect(() => {
+    const h = () => setShowBackToTop(window.scrollY > 800)
+    window.addEventListener('scroll', h, { passive: true })
+    return () => window.removeEventListener('scroll', h)
+  }, [])
 
   return (
     <div className="flex flex-col gap-12 max-w-6xl mx-auto px-4 md:px-8 py-8">
@@ -147,7 +146,7 @@ export default function EventsPage() {
         {showBackToTop && (
           <button
             type="button"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="w-12 h-12 flex items-center justify-center rounded-full border border-layer-3 bg-layer-1 text-layer-5 hover:text-primary hover:border-primary transition-colors shadow-lg"
             aria-label="Back to top"
           >
@@ -186,26 +185,13 @@ export default function EventsPage() {
         </div>
       )}
 
-      {/* No upcoming? Show message */}
-      {upcomingStreams.length === 0 && (
-        <div className="bg-layer-1 rounded-2xl border border-layer-2 p-8 text-center">
-          <Calendar className="w-10 h-10 text-layer-4 mx-auto mb-4" />
-          <h3 className="text-xl font-bold mb-2">
-            <FormattedMessage defaultMessage="no upcoming streams scheduled" />
-          </h3>
-          <p className="text-layer-5 max-w-md mx-auto">
-            <FormattedMessage defaultMessage="check back soon or follow tunestr artists on nostr to get notified when they go live." />
-          </p>
-        </div>
-      )}
-
       {/* Stats bar */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {[
-          { value: "17M sats", label: "zapped at our first concert" },
-          { value: "beat Spotify", label: "artists earned more in one night than 5 years streaming" },
-          { value: "album funded", label: "from one tunestr show" },
-          { value: "zero fees", label: "every sat goes to the artist" },
+          { value: '17M sats', label: 'zapped at our first concert' },
+          { value: 'beat Spotify', label: 'artists earned more in one night than 5 years streaming' },
+          { value: 'album funded', label: 'from one tunestr show' },
+          { value: 'zero fees', label: 'every sat goes to the artist' },
         ].map(stat => (
           <div key={stat.label} className="bg-layer-1 rounded-xl p-5 text-center border border-layer-2">
             <div className="text-3xl font-bold text-primary">{stat.value}</div>
@@ -234,16 +220,17 @@ export default function EventsPage() {
             </div>
             <h3 className="text-xl font-bold mb-2">your venue here?</h3>
             <p className="text-layer-5 mb-6 max-w-sm">
-              we're always looking for venues and events that want to bring bitcoin-powered live streaming to their stage.
+              we're always looking for venues and events that want to bring bitcoin-powered live streaming to their
+              stage.
             </p>
             {/* biome-ignore lint/a11y/useValidAnchor: obfuscated mailto */}
             <a
               href="#contact"
               data-e="djR2QHR1bmVzdHIuaW8="
               onClick={e => {
-                e.preventDefault();
-                const addr = atob((e.currentTarget as HTMLAnchorElement).dataset.e || "");
-                if (addr) window.location.href = `mailto:${addr}`;
+                e.preventDefault()
+                const addr = atob((e.currentTarget as HTMLAnchorElement).dataset.e || '')
+                if (addr) window.location.href = `mailto:${addr}`
               }}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-layer-0 font-bold hover:brightness-110 transition-all"
             >
@@ -275,7 +262,8 @@ export default function EventsPage() {
             </div>
             <h3 className="font-bold mb-2">fans zap from anywhere</h3>
             <p className="text-layer-5 text-sm leading-relaxed">
-              viewers at home send bitcoin tips directly to the artists while they perform. a giant leaderboard shows the zaps rolling in live.
+              viewers at home send bitcoin tips directly to the artists while they perform. a giant leaderboard shows
+              the zaps rolling in live.
             </p>
           </div>
           <div className="text-center">
@@ -284,7 +272,8 @@ export default function EventsPage() {
             </div>
             <h3 className="font-bold mb-2">the crowd goes wild</h3>
             <p className="text-layer-5 text-sm leading-relaxed">
-              the energy in the room is electric when artists see sats pouring in from fans across the globe. it's a concert experience like no other.
+              the energy in the room is electric when artists see sats pouring in from fans across the globe. it's a
+              concert experience like no other.
             </p>
           </div>
         </div>
@@ -297,15 +286,15 @@ export default function EventsPage() {
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {[
-            { src: "/tunestr/antones-crowd.jpg", alt: "Crowd at Antone's during Boostagram Ball" },
-            { src: "/tunestr/zap-leaderboard-antones.jpg", alt: "4.8 million sats on the leaderboard" },
-            { src: "/tunestr/ainsley-boostagram-ball.jpg", alt: "Ainsley Costello at Boostagram Ball" },
-            { src: "/tunestr/launch-event-band.jpg", alt: "Full band at LAUNCH Music Conference" },
-            { src: "/tunestr/launch-event-zaps.jpg", alt: "367K sats zapped live" },
-            { src: "/tunestr/pleblab-stage-duo.jpg", alt: "Live duo with zap screen" },
-            { src: "/tunestr/dj-booth-lights.jpg", alt: "DJ booth at We All Scream in Las Vegas" },
-            { src: "/tunestr/vinyllounge.jpg", alt: "The Vinyl Lounge in Nashville" },
-            { src: "/tunestr/grow-nostr-band.jpg", alt: "Band at Grow Nostr event" },
+            { src: '/tunestr/antones-crowd.jpg', alt: "Crowd at Antone's during Boostagram Ball" },
+            { src: '/tunestr/zap-leaderboard-antones.jpg', alt: '4.8 million sats on the leaderboard' },
+            { src: '/tunestr/ainsley-boostagram-ball.jpg', alt: 'Ainsley Costello at Boostagram Ball' },
+            { src: '/tunestr/launch-event-band.jpg', alt: 'Full band at LAUNCH Music Conference' },
+            { src: '/tunestr/launch-event-zaps.jpg', alt: '367K sats zapped live' },
+            { src: '/tunestr/pleblab-stage-duo.jpg', alt: 'Live duo with zap screen' },
+            { src: '/tunestr/dj-booth-lights.jpg', alt: 'DJ booth at We All Scream in Las Vegas' },
+            { src: '/tunestr/vinyllounge.jpg', alt: 'The Vinyl Lounge in Nashville' },
+            { src: '/tunestr/grow-nostr-band.jpg', alt: 'Band at Grow Nostr event' },
           ].map(photo => (
             <div key={photo.src} className="overflow-hidden rounded-xl group">
               <img
@@ -333,9 +322,9 @@ export default function EventsPage() {
             href="#contact"
             data-e="djR2QHR1bmVzdHIuaW8="
             onClick={e => {
-              e.preventDefault();
-              const addr = atob((e.currentTarget as HTMLAnchorElement).dataset.e || "");
-              if (addr) window.location.href = `mailto:${addr}`;
+              e.preventDefault()
+              const addr = atob((e.currentTarget as HTMLAnchorElement).dataset.e || '')
+              if (addr) window.location.href = `mailto:${addr}`
             }}
             className="inline-flex items-center justify-center gap-2 px-10 py-5 rounded-2xl bg-primary text-layer-0 font-bold text-lg hover:brightness-110 transition-all shadow-lg shadow-primary/25"
           >
@@ -351,5 +340,5 @@ export default function EventsPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }
