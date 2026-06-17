@@ -44,13 +44,23 @@ function loadWhitelist() {
   if (import.meta.env.VITE_SINGLE_PUBLISHER !== undefined) {
     const list = import.meta.env.VITE_SINGLE_PUBLISHER as string | undefined;
     if (list) {
-      return list.split(",").map(a => {
-        if (a.startsWith("npub")) {
-          return parseNostrLink(a).id;
-        } else {
-          return a;
-        }
-      });
+      return list
+        .split(",")
+        .map(a => a.trim())
+        .filter(a => a.length > 0)
+        .map(a => {
+          if (a.startsWith("npub")) {
+            try {
+              return parseNostrLink(a).id;
+            } catch (e) {
+              console.warn(`Skipping invalid pubkey in VITE_SINGLE_PUBLISHER: ${a}`, e);
+              return undefined;
+            }
+          } else {
+            return a;
+          }
+        })
+        .filter((a): a is string => a !== undefined);
     }
   }
   return undefined;
