@@ -212,12 +212,20 @@ export function StreamEditor({ ev, onFinish, options }: StreamEditorProps) {
               />
             </StreamInput>
           )}
-          {status === StreamState.Ended && (
-            <StreamInput label={<FormattedMessage defaultMessage="Recording URL" />}>
-              <input type="text" value={recording} onChange={e => setRecording(e.target.value)} />
-            </StreamInput>
-          )}
         </>
+      )}
+      {status === StreamState.Ended && (
+        <StreamInput label={<FormattedMessage defaultMessage="Recording URL" />}>
+          <input
+            type="text"
+            placeholder="https://"
+            value={recording}
+            onChange={e => setRecording(e.target.value)}
+          />
+          <small>
+            <FormattedMessage defaultMessage="Paste a recording URL (HLS .m3u8) to make this stream available on-demand." />
+          </small>
+        </StreamInput>
       )}
       {(options?.canSetTags ?? true) && (
         <CategoryInput
